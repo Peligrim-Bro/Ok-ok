@@ -1,5 +1,5 @@
 import { spawnSync } from 'node:child_process';
-import { readFileSync, writeFileSync, rmSync } from 'node:fs';
+import { readFileSync, writeFileSync, rmSync, copyFileSync } from 'node:fs';
 
 rmSync('site', { recursive: true, force: true });
 const unzip = spawnSync('unzip', ['-oq', 'site-source.zip', '-d', 'site'], { stdio: 'inherit' });
@@ -70,5 +70,37 @@ for (const name of ['index.html', 'admin.html']) {
   writeFileSync(path, html.replace('</head>', '<style id="ok-gloss-v72">' + css + '</style>\n</head>'));
 }
 const swPath = 'site/public/sw.js';
-writeFileSync(swPath, readFileSync(swPath, 'utf8').replace(/const CACHE = [^;]+;/, 'const CACHE = "pattayaok-20261001-v72-sculpted-buttons";'));
+writeFileSync(swPath, readFileSync(swPath, 'utf8').replace(/const CACHE = [^;]+;/, 'const CACHE = "pattayaok-20261001-v73-home-icon";'));
 console.log('PattayaOK v72: glossy buttons applied; PWA cache updated.');
+
+// Versioned home-screen artwork matches the glossy application palette.
+for (const size of [180, 192, 512]) {
+  copyFileSync(`pattayaok-icon-v73-${size}.png`, `site/public/assets/icons/icon-${size}-v73.png`);
+  copyFileSync(`pattayaok-icon-v73-${size}.png`, `site/public/assets/icons/icon-${size}.png`);
+}
+copyFileSync('pattayaok-icon-v73-180.png', 'site/public/apple-touch-icon.png');
+const manifestPath = 'site/public/manifest.json';
+const manifest = JSON.parse(readFileSync(manifestPath, 'utf8'));
+manifest.id = '/';
+manifest.icons = [192,512].map(size => ({src:`assets/icons/icon-${size}-v73.png`,sizes:`${size}x${size}`,type:'image/png',purpose:'any'}));
+writeFileSync(manifestPath, JSON.stringify(manifest,null,2));
+for (const name of ['index.html','admin.html']) {
+  const path='site/public/'+name;
+  let html=readFileSync(path,'utf8').replace(/assets\/icons\/icon-(180|192|512)\.png/g,'assets/icons/icon-$1-v73.png');
+  html=html.replace(/assets\/images\/logo-ok\.jpg/g,'assets/icons/icon-192-v73.png');
+  writeFileSync(path,html);
+}
+// A clear invitation to advertise, translated with the rest of the UI.
+const adsPath='site/public/assets/ads/ads.js';
+let ads=readFileSync(adsPath,'utf8')
+ .replaceAll('Пять объявлений Паттайи','Заяви о себе в Паттайе')
+ .replaceAll('Five Pattaya ads','Get noticed in Pattaya')
+ .replaceAll('โฆษณาพัทยา 5 รายการ','โปรโมตตัวคุณในพัทยา')
+ .replaceAll('Разместить · ${price}', 'Разместить своё объявление · ${price}');
+writeFileSync(adsPath,ads);
+for (const name of ['index.html','admin.html']) {
+ const path='site/public/'+name;
+ writeFileSync(path,readFileSync(path,'utf8').replaceAll('assets/ads/ads.js?v=71','assets/ads/ads.js?v=73'));
+}
+const sw=readFileSync(swPath,'utf8').replaceAll('assets/ads/ads.js?v=71','assets/ads/ads.js?v=73').replace('"./assets/images/logo-ok.jpg"','"./assets/images/logo-ok.jpg", "./assets/icons/icon-180-v73.png", "./assets/icons/icon-192-v73.png", "./assets/icons/icon-512-v73.png"');
+writeFileSync(swPath,sw);
