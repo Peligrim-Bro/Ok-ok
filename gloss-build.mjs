@@ -745,13 +745,12 @@ html body :is(#installNow,[data-install],[id*="install" i]).ok-install-v80{
   const q=T[LANG()],lv=1+Math.floor(s.xp/100);
   document.querySelector("#okiPetV80")?.remove();
   const el=document.createElement("div");el.id="okiPetV80";
-  el.innerHTML=`<div class="oki-card"><button class="oki-close" aria-label="Close">×</button>
-   <div class="oki-title">${q.pet}</div><div class="oki-sub">${q.sub}</div>
-   <div class="oki-face" aria-hidden="true">${s.energy<25?"😴":s.food<25?"🥺":s.mood>70?"😉":"🙂"}</div>
-   <div class="oki-level">✦ ${q.level} ${lv} · ${s.xp%100}/100 XP</div>
-   <div class="oki-stats">${[["food",q.food],["mood",q.mood],["energy",q.energy]].map(([k,n])=>`<div class="oki-stat"><span>${n}</span><div class="oki-bar"><div class="oki-fill" style="width:${Math.round(s[k])}%"></div></div><b>${Math.round(s[k])}</b></div>`).join("")}</div>
-   <div class="oki-actions"><button data-a="feed">${q.feed}</button><button data-a="play">${q.play}</button><button data-a="sleep">${q.sleep}</button></div></div>`;
-  document.body.appendChild(el);
+    el.innerHTML='<div class="oki-card"><button class="oki-close" aria-label="Close">×</button>'+
+   '<div class="oki-title">'+q.pet+'</div><div class="oki-sub">'+q.sub+'</div>'+
+   '<div class="oki-face" aria-hidden="true">'+(s.energy<25?"😴":s.food<25?"🥺":s.mood>70?"😉":"🙂")+'</div>'+
+   '<div class="oki-level">✦ '+q.level+' '+lv+' · '+(s.xp%100)+'/100 XP</div>'+
+   '<div class="oki-stats">'+[["food",q.food],["mood",q.mood],["energy",q.energy]].map(([k,n])=>'<div class="oki-stat"><span>'+n+'</span><div class="oki-bar"><div class="oki-fill" style="width:'+Math.round(s[k])+'%"></div></div><b>'+Math.round(s[k])+'</b></div>').join("")+'</div>'+
+   '<div class="oki-actions"><button data-a="feed">'+q.feed+'</button><button data-a="play">'+q.play+'</button><button data-a="sleep">'+q.sleep+'</button></div></div>';
   el.querySelector(".oki-close").onclick=()=>el.classList.remove("on");
   el.onclick=e=>{if(e.target===el)el.classList.remove("on")};
   el.querySelectorAll("[data-a]").forEach(b=>b.onclick=()=>{
