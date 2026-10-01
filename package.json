@@ -1,0 +1,9 @@
+{
+  "name": "pattayaok",
+  "private": true,
+  "version": "71.0.0",
+  "description": "PattayaOK static PWA + paid ads function",
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  }
+}
