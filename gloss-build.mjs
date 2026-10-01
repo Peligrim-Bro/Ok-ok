@@ -801,3 +801,660 @@ el.querySelector(".oki-close").onclick=()=>el.classList.remove("on");
   writeFileSync(swPath,sw80);
 }
 console.log('OK-OK v80: neon PWA identity + OKI pet enabled.');
+// === OKI LIVING v81 — добавить в конец gloss-build.mjs ===
+{
+ const okiLivingJS=String.raw`<script id="ok-v80-neon-pet-js">
+(()=>{
+ 'use strict';
+ const KEY='oki-v80', ID='okiPetV80';
+ const L={
+ ru:{
+  sub:'Маленький друг в Паттайе',
+  food:'Сытость',mood:'Настроение',energy:'Энергия',level:'Уровень',
+  feed:'🍉 Кормить',pet:'💜 Погладить',play:'⭐ Лови звёзды',
+  sleep:'🌙 Спать',wake:'☀️ Разбудить',dance:'🕺 Танцевать',
+  talk:'💬 Поболтать',gift:'🎁 Подарок дня',close:'Закрыть',
+  hello:'Привет! Погладь меня — я люблю внимание 💜',
+  fed:'Ммм, арбуз! Спасибо 🍉',
+  petted:'Ещё немного за ушком? 💜',
+  tired:'Я устал. Давай поспим?',
+  rest:'Тсс… Я восстанавливаю силы 😴',
+  awake:'Доброе утро! Я снова с тобой ☀️',
+  dancing:'Паттайя, включай музыку! 🕺',
+  gifted:'Подарок дня: +15 XP и хорошее настроение 🎁',
+  already:'Сегодня подарок уже получен. Приходи завтра 💜',
+  cooldown:'Дай мне пару секунд перевести дух 🙂',
+  goal:'Поймай 5 звёзд за 15 секунд',
+  won:'Ура! Все звёзды наши! +20 XP ✨',
+  lost:'Хорошая попытка! Сыграем ещё? ⭐',
+  talks:[
+   'Я маленький, но люблю большие приключения 🌴',
+   'Лучший план: вода, тень и немного отдыха ☀️',
+   'Вместе веселее. Заглядывай ко мне 💜',
+   'Смотри, как я умею подмигивать 😉'
+  ],
+  tip:'Коснись OKI или проведи пальцем по нему',
+  back:'Вернуться',score:'Звёзды',time:'Время'
+ },
+ en:{
+  sub:'Your little friend in Pattaya',
+  food:'Food',mood:'Mood',energy:'Energy',level:'Level',
+  feed:'🍉 Feed',pet:'💜 Pet',play:'⭐ Catch stars',
+  sleep:'🌙 Sleep',wake:'☀️ Wake up',dance:'🕺 Dance',
+  talk:'💬 Chat',gift:'🎁 Daily gift',close:'Close',
+  hello:'Hi! Give me a gentle tap 💜',
+  fed:'Yummy watermelon! Thank you 🍉',
+  petted:'A little scratch behind my ear? 💜',
+  tired:'I am tired. Let us rest.',
+  rest:'Shh… Recharging 😴',
+  awake:'Good morning! I am back ☀️',
+  dancing:'Pattaya, turn up the music! 🕺',
+  gifted:'Daily gift: +15 XP and a happy mood 🎁',
+  already:'You got today’s gift. Come back tomorrow 💜',
+  cooldown:'Give me a moment to catch my breath 🙂',
+  goal:'Catch 5 stars in 15 seconds',
+  won:'We caught them all! +20 XP ✨',
+  lost:'Nice try! Play again? ⭐',
+  talks:[
+   'Small friend, big adventures 🌴',
+   'Water, shade and a little rest ☀️',
+   'It is more fun together 💜',
+   'Watch me wink 😉'
+  ],
+  tip:'Tap OKI or gently swipe over him',
+  back:'Back',score:'Stars',time:'Time'
+ },
+ th:{
+  sub:'เพื่อนตัวน้อยของคุณในพัทยา',
+  food:'อาหาร',mood:'อารมณ์',energy:'พลัง',level:'เลเวล',
+  feed:'🍉 ให้อาหาร',pet:'💜 ลูบหัว',play:'⭐ จับดาว',
+  sleep:'🌙 นอน',wake:'☀️ ปลุก',dance:'🕺 เต้น',
+  talk:'💬 คุยกัน',gift:'🎁 ของขวัญวันนี้',close:'ปิด',
+  hello:'สวัสดี! แตะฉันเบา ๆ 💜',
+  fed:'แตงโมอร่อยมาก! ขอบคุณ 🍉',
+  petted:'ลูบหัวอีกหน่อยได้ไหม 💜',
+  tired:'เหนื่อยแล้ว พักกันเถอะ',
+  rest:'กำลังพักผ่อน 😴',
+  awake:'ตื่นแล้ว! มาเล่นกัน ☀️',
+  dancing:'มาเต้นกันเถอะ 🕺',
+  gifted:'ของขวัญวันนี้: +15 XP 🎁',
+  already:'รับของขวัญวันนี้แล้ว พรุ่งนี้มาใหม่นะ 💜',
+  cooldown:'ขอพักสักครู่ 🙂',
+  goal:'จับดาว 5 ดวงใน 15 วินาที',
+  won:'จับครบแล้ว! +20 XP ✨',
+  lost:'เก่งมาก! เล่นอีกไหม ⭐',
+  talks:[
+   'เพื่อนตัวเล็ก ชอบผจญภัย 🌴',
+   'ดื่มน้ำและพักในที่ร่มนะ ☀️',
+   'อยู่ด้วยกันสนุกกว่า 💜',
+   'ดูฉันขยิบตาสิ 😉'
+  ],
+  tip:'แตะหรือลูบ OKI เบา ๆ',
+  back:'กลับ',score:'ดาว',time:'เวลา'
+ }
+ };
+
+ const lang=()=>{
+  const l=(document.documentElement.lang||'ru').toLowerCase();
+  return l.startsWith('en')?'en':l.startsWith('th')?'th':'ru';
+ };
+ const text=()=>L[lang()];
+ const clamp=n=>Math.max(0,Math.min(100,n));
+
+ let s={
+  food:82,mood:88,energy:76,xp:0,
+  last:Date.now(),sleeping:false,gift:''
+ };
+ try{
+  const v=JSON.parse(localStorage.getItem(KEY)||'{}');
+  for(const k of ['food','mood','energy','xp','last']){
+   if(Number.isFinite(v[k])&&v[k]>=0)s[k]=v[k];
+  }
+  s.sleeping=v.sleeping===true;
+  s.gift=typeof v.gift==='string'?v.gift:'';
+ }catch{}
+
+ let modal=null,pulse=0,animationTimer=0,gameTimer=0;
+ let game=null,lastAction=0,previousFocus=null,oldOverflow='';
+
+ const save=()=>{
+  try{localStorage.setItem(KEY,JSON.stringify(s))}catch{}
+ };
+
+ const tick=()=>{
+  const now=Date.now();
+  const hours=Math.max(0,Math.min(72,(now-s.last)/36e5));
+  s.food=clamp(s.food-hours*1.2);
+  s.mood=clamp(s.mood-hours*.55);
+  s.energy=clamp(s.energy+hours*(s.sleeping?12:-.75));
+  s.last=now;
+  save();
+ };
+ tick();
+
+ const speak=message=>{
+  if(modal)modal.querySelector('.oki-speech').textContent=message;
+ };
+
+ const update=()=>{
+  if(!modal)return;
+  const q=text();
+  for(const k of ['food','mood','energy']){
+   modal.querySelector('[data-value="'+k+'"]').textContent=Math.round(s[k]);
+   const bar=modal.querySelector('[data-bar="'+k+'"]');
+   bar.style.width=s[k]+'%';
+   bar.parentElement.setAttribute('aria-valuenow',Math.round(s[k]));
+  }
+  modal.querySelector('.oki-level').textContent=
+   '✦ '+q.level+' '+(1+Math.floor(s.xp/100))+
+   ' · '+s.xp%100+'/100 XP';
+
+  const face=modal.querySelector('.oki-creature');
+  face.dataset.mood=s.sleeping?'sleep':
+   s.energy<25?'tired':
+   s.food<25?'hungry':
+   s.mood<35?'sad':'happy';
+
+  modal.querySelector('[data-action="sleep"]').textContent=
+   s.sleeping?q.wake:q.sleep;
+ };
+
+ const animate=(kind,emoji)=>{
+  if(!modal)return;
+  const face=modal.querySelector('.oki-creature');
+  face.dataset.action=kind;
+  modal.querySelector('.oki-reaction').textContent=emoji;
+  clearTimeout(animationTimer);
+  animationTimer=setTimeout(()=>{
+   if(modal){
+    face.dataset.action='';
+    modal.querySelector('.oki-reaction').textContent='';
+   }
+  },1800);
+ };
+
+ const endGame=won=>{
+  clearInterval(gameTimer);
+  gameTimer=0;
+  game=null;
+  if(!modal)return;
+  modal.querySelector('.oki-arena').hidden=true;
+  modal.querySelector('.oki-actions').hidden=false;
+  if(won){
+   s.xp+=20;
+   s.mood=clamp(s.mood+12);
+   s.energy=clamp(s.energy-6);
+   save();
+   update();
+   animate('dance','✨');
+  }
+  speak(won?text().won:text().lost);
+ };
+
+ const moveStar=()=>{
+  if(!modal||!game)return;
+  const b=modal.querySelector('.oki-star');
+  b.style.left=(12+Math.random()*65)+'%';
+  b.style.top=(12+Math.random()*57)+'%';
+  modal.querySelector('.oki-game-score').textContent=
+   text().score+': '+game.score+'/5 · '+
+   text().time+': '+game.seconds+'s';
+ };
+
+ const startGame=()=>{
+  if(game)return;
+  game={score:0,seconds:15};
+  modal.querySelector('.oki-arena').hidden=false;
+  modal.querySelector('.oki-actions').hidden=true;
+  speak(text().goal);
+  moveStar();
+  modal.querySelector('.oki-star').focus();
+  gameTimer=setInterval(()=>{
+   if(!modal)return;
+   game.seconds--;
+   if(game.seconds<=0)endGame(false);
+   else moveStar();
+  },1000);
+ };
+
+ const act=action=>{
+  if(!modal)return;
+  tick();
+  const q=text();
+
+  if(action==='back'){
+   endGame(false);
+   return;
+  }
+  if(s.sleeping&&action!=='sleep'){
+   speak(q.rest);
+   return;
+  }
+  const now=Date.now();
+  if(now-lastAction<1800){
+   speak(q.cooldown);
+   return;
+  }
+  lastAction=now;
+
+  if(action==='feed'){
+   s.food=clamp(s.food+20);
+   s.mood=clamp(s.mood+3);
+   animate('eat','🍉');
+   speak(q.fed);
+  }
+  if(action==='pet'){
+   s.mood=clamp(s.mood+8);
+   animate('love','💜');
+   speak(q.petted);
+  }
+  if(action==='sleep'){
+   s.sleeping=!s.sleeping;
+   speak(s.sleeping?q.rest:q.awake);
+   animate('rest',s.sleeping?'💤':'☀️');
+  }
+  if(action==='dance'){
+   if(s.energy<15){
+    speak(q.tired);
+    return;
+   }
+   s.energy=clamp(s.energy-4);
+   s.mood=clamp(s.mood+7);
+   animate('dance','🎵');
+   speak(q.dancing);
+  }
+  if(action==='talk'){
+   speak(q.talks[Math.floor(Math.random()*q.talks.length)]);
+   animate('wink','💬');
+  }
+  if(action==='gift'){
+   const d=new Date();
+   const day=d.getFullYear()+'-'+d.getMonth()+'-'+d.getDate();
+   if(s.gift===day){
+    speak(q.already);
+    return;
+   }
+   s.gift=day;
+   s.xp+=15;
+   s.mood=clamp(s.mood+10);
+   animate('love','🎁');
+   speak(q.gifted);
+  }
+  if(action==='play'){
+   if(s.energy<15){
+    speak(q.tired);
+    return;
+   }
+   startGame();
+  }
+  if(['feed','pet','dance'].includes(action))s.xp+=2;
+  save();
+  update();
+ };
+
+ const close=()=>{
+  clearInterval(pulse);
+  clearInterval(gameTimer);
+  clearTimeout(animationTimer);
+  pulse=gameTimer=0;
+  game=null;
+  modal?.remove();
+  modal=null;
+  document.body.style.overflow=oldOverflow;
+  previousFocus?.focus?.();
+ };
+
+ const open=()=>{
+  if(modal){
+   modal.querySelector('.oki-close').focus();
+   return;
+  }
+  tick();
+  const q=text();
+  previousFocus=document.activeElement;
+  oldOverflow=document.body.style.overflow;
+  document.body.style.overflow='hidden';
+
+  modal=document.createElement('div');
+  modal.id=ID;
+  modal.className='on oki-living';
+  modal.setAttribute('role','dialog');
+  modal.setAttribute('aria-modal','true');
+  modal.setAttribute('aria-labelledby','oki-living-title');
+
+  modal.innerHTML=
+   '<div class="oki-card">'+
+   '<button type="button" class="oki-close" aria-label="'+q.close+'">×</button>'+
+   '<div class="oki-title" id="oki-living-title">OKI</div>'+
+   '<div class="oki-sub">'+q.sub+'</div>'+
+   '<div class="oki-level"></div>'+
+   '<button type="button" class="oki-creature" data-action="pet" aria-label="'+q.pet+'">'+
+   '<span class="oki-glint"></span>'+
+   '<span class="oki-eyes"><i></i><i></i></span>'+
+   '<span class="oki-cheek left"></span>'+
+   '<span class="oki-cheek right"></span>'+
+   '<span class="oki-mouth"></span>'+
+   '<span class="oki-reaction" aria-hidden="true"></span>'+
+   '</button>'+
+   '<div class="oki-touch-tip">'+q.tip+'</div>'+
+   '<div class="oki-speech" role="status" aria-live="polite"></div>'+
+   '<div class="oki-stats">'+
+   ['food','mood','energy'].map(k=>
+    '<div class="oki-stat"><span>'+q[k]+'</span>'+
+    '<div class="oki-bar" role="progressbar" aria-label="'+q[k]+'" aria-valuemin="0" aria-valuemax="100">'+
+    '<div class="oki-fill" data-bar="'+k+'"></div></div>'+
+    '<b data-value="'+k+'"></b></div>'
+   ).join('')+
+   '</div>'+
+   '<div class="oki-actions">'+
+   ['feed','pet','play','sleep','dance','talk','gift'].map(k=>
+    '<button type="button" data-action="'+k+'">'+q[k]+'</button>'
+   ).join('')+
+   '</div>'+
+   '<div class="oki-arena" hidden>'+
+   '<div class="oki-game-score" role="status"></div>'+
+   '<button type="button" class="oki-star" aria-label="'+q.play+'">⭐</button>'+
+   '<button type="button" data-action="back" class="oki-game-back">'+q.back+'</button>'+
+   '</div></div>';
+
+  document.body.appendChild(modal);
+  modal.querySelector('.oki-close').onclick=close;
+
+  modal.addEventListener('click',e=>{
+   if(e.target===modal){
+    close();
+    return;
+   }
+   const b=e.target.closest('[data-action]');
+   if(b)act(b.dataset.action);
+  });
+
+  modal.querySelector('.oki-star').onclick=()=>{
+   if(!game)return;
+   game.score++;
+   if(game.score>=5)endGame(true);
+   else moveStar();
+  };
+
+  let start=null;
+  const face=modal.querySelector('.oki-creature');
+
+  face.addEventListener('pointerdown',e=>{
+   start={x:e.clientX,y:e.clientY};
+  });
+  face.addEventListener('pointerup',e=>{
+   if(start&&Math.hypot(e.clientX-start.x,e.clientY-start.y)>20)act('pet');
+   start=null;
+  });
+  face.addEventListener('pointermove',e=>{
+   if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+   const r=face.getBoundingClientRect();
+   face.style.setProperty('--look',
+    Math.max(-5,Math.min(5,(e.clientX-r.left-r.width/2)/15))+'px');
+  });
+  face.addEventListener('pointerleave',()=>{
+   face.style.setProperty('--look','0px');
+  });
+
+  modal.addEventListener('keydown',e=>{
+   if(e.key==='Escape'){
+    close();
+    return;
+   }
+   if(e.key==='Tab'){
+    const buttons=[...modal.querySelectorAll('button')]
+     .filter(b=>!b.closest('[hidden]'));
+    const first=buttons[0],last=buttons[buttons.length-1];
+    if(e.shiftKey&&document.activeElement===first){
+     e.preventDefault();
+     last.focus();
+    }else if(!e.shiftKey&&document.activeElement===last){
+     e.preventDefault();
+     first.focus();
+    }
+   }
+  });
+
+  update();
+  speak(s.sleeping?q.rest:q.hello);
+  modal.querySelector('.oki-close').focus();
+  pulse=setInterval(()=>{
+   tick();
+   update();
+  },15000);
+ };
+
+ const mark=()=>{
+  document.querySelectorAll('#installBtn,#installNow')
+   .forEach(b=>b.classList.add('ok-install-v80'));
+  document.querySelectorAll('nav.tab button[data-tab="game"]')
+   .forEach(b=>{
+    b.dataset.oki='1';
+    const span=b.querySelector('[data-i="navGame"]');
+    if(span&&span.textContent!=='OKI')span.textContent='OKI';
+   });
+ };
+ mark();
+
+ document.addEventListener('click',e=>{
+  const b=e.target.closest?.('nav.tab button[data-tab="game"]');
+  if(!b)return;
+  e.preventDefault();
+  e.stopImmediatePropagation();
+  open();
+ },true);
+
+ new MutationObserver(()=>{
+  mark();
+  if(modal){
+   close();
+   open();
+  }
+ }).observe(document.documentElement,{
+  attributes:true,
+  attributeFilter:['lang']
+ });
+})();
+</script>`;
+
+ const okiLivingCSS=String.raw`<style id="ok-oki-living-v81">
+#okiPetV80.oki-living .oki-card{
+ max-width:450px;padding-top:24px;
+ overscroll-behavior:contain;
+}
+.oki-living .oki-level{margin-top:10px}
+.oki-living [hidden]{display:none!important}
+
+html body .oki-living button.oki-creature{
+ display:block!important;
+ position:relative;
+ width:150px;height:150px;min-height:150px;
+ margin:16px auto 10px;
+ padding:0!important;
+ border-radius:50%!important;
+ border:1px solid #a8f9ff!important;
+ background:radial-gradient(circle at 32% 18%,
+ #ecffff,#80eafa 18%,#7975ed 48%,#c76eec 75%,#3a296e)!important;
+ box-shadow:inset 0 5px 10px #fff9,
+ inset 0 -10px 22px #190e5c,
+ 0 9px 0 #08143c,0 0 28px #28ddff55!important;
+ animation:okiBreath 3.5s ease-in-out infinite;
+ touch-action:pan-y;
+ cursor:pointer;
+ overflow:visible;
+ color:#151844!important;
+}
+.oki-glint{
+ position:absolute;left:25px;top:12px;
+ width:54px;height:24px;
+ transform:rotate(-24deg);
+ border-radius:50%;background:#fff8;
+ filter:blur(2px);pointer-events:none;
+}
+.oki-eyes{
+ position:absolute;top:58px;left:37px;
+ display:flex;gap:28px;
+ transform:translateX(var(--look,0px));
+ pointer-events:none;
+}
+.oki-eyes i{
+ display:block;width:21px;height:28px;
+ border-radius:50%;background:#181c48;
+ box-shadow:inset 5px 5px 0 -2px #fff;
+ animation:okiBlink 6s infinite;
+ transform-origin:center;
+}
+.oki-mouth{
+ position:absolute;left:59px;top:100px;
+ width:34px;height:17px;
+ border:3px solid #30305e;border-top:0;
+ border-radius:0 0 24px 24px;
+ pointer-events:none;
+}
+.oki-cheek{
+ position:absolute;top:93px;
+ width:20px;height:9px;
+ border-radius:50%;
+ background:#ff78b390;
+ pointer-events:none;
+}
+.oki-cheek.left{left:23px}
+.oki-cheek.right{right:23px}
+.oki-reaction{
+ position:absolute;right:-17px;top:-10px;
+ font-size:40px;text-shadow:none;
+ pointer-events:none;
+}
+.oki-touch-tip{
+ font-size:11px;color:#bde7ff;margin:7px 0;
+}
+.oki-speech{
+ display:grid;place-items:center;
+ min-height:58px;margin:12px 0;padding:11px;
+ border-radius:16px;color:#e9f7ff;
+ background:#ffffff0d;
+ border:1px solid #ffffff24;
+ font-size:14px;line-height:1.4;
+}
+.oki-living .oki-actions{
+ grid-template-columns:repeat(2,minmax(0,1fr));
+}
+.oki-living .oki-actions button{
+ min-height:44px;white-space:normal;
+}
+.oki-living .oki-actions button:last-child{
+ grid-column:1/-1;
+}
+.oki-creature[data-mood="sleep"] .oki-eyes i{
+ height:4px;margin-top:15px;
+ animation:none;box-shadow:none;
+}
+.oki-creature[data-mood="sleep"] .oki-mouth{
+ width:12px;height:12px;left:69px;
+ border:3px solid #30305e;border-radius:50%;
+}
+.oki-creature:is([data-mood="sad"],[data-mood="hungry"]) .oki-mouth{
+ transform:rotate(180deg);
+}
+.oki-creature[data-mood="tired"] .oki-eyes i{
+ height:14px;margin-top:8px;box-shadow:none;
+}
+.oki-creature[data-action="eat"] .oki-mouth{
+ height:22px;border-radius:50%;
+ border:0;background:#30305e;
+ animation:okiChew .35s infinite;
+}
+html body .oki-creature[data-action="dance"]{
+ animation:okiDance .4s ease-in-out 4!important;
+}
+.oki-creature[data-action="love"] .oki-cheek{
+ background:#ff599ac0;
+}
+.oki-creature[data-action="wink"] .oki-eyes i:last-child{
+ transform:scaleY(.12);animation:none;
+}
+.oki-arena{
+ position:relative;height:220px;
+ border-radius:18px;
+ background:radial-gradient(ellipse at center,#33416d,#080e29);
+ border:1px solid #7adfff55;overflow:hidden;
+}
+.oki-game-score{
+ padding:10px;color:#fff;font-size:13px;
+}
+html body .oki-arena .oki-star{
+ position:absolute;
+ width:52px;height:52px;min-height:52px;
+ border-radius:50%!important;
+ padding:0!important;font-size:26px;
+ touch-action:manipulation;
+ transition:left .15s,top .15s;
+}
+.oki-game-back{
+ position:absolute;bottom:8px;left:50%;
+ transform:translateX(-50%);font-size:12px;
+}
+@keyframes okiBlink{
+ 0%,42%,46%,100%{transform:scaleY(1)}
+ 44%{transform:scaleY(.08)}
+}
+@keyframes okiBreath{
+ 50%{transform:translateY(-5px) scale(1.025,1.01)}
+}
+@keyframes okiDance{
+ 25%{transform:rotate(-12deg) translateY(-5px)}
+ 75%{transform:rotate(12deg) translateY(-5px)}
+}
+@keyframes okiChew{
+ 50%{transform:scaleY(.4)}
+}
+@media(max-width:360px){
+ .oki-living .oki-card{padding:20px 12px 14px}
+ .oki-living .oki-stat{
+  grid-template-columns:78px 1fr 30px;
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ html body .oki-living *{
+  animation:none!important;
+  transition:none!important;
+ }
+}
+</style>`;
+
+ for(const name of ["index.html","admin.html"]){
+  const path="site/public/"+name;
+  let html=readFileSync(path,"utf8");
+
+  const oldOKI=/<script\b[^>]*id="ok-v80-neon-pet-js"[^>]*>[\s\S]*?<\/script>/;
+
+  if(!oldOKI.test(html)){
+   throw new Error("OKI script not found in "+name);
+  }
+
+  html=html.replace(oldOKI,()=>okiLivingJS);
+
+  if(!html.includes('id="ok-oki-living-v81"')){
+   html=html.replace("</head>",()=>okiLivingCSS+"\n</head>");
+  }
+
+  writeFileSync(path,html);
+ }
+
+ const swPath="site/public/sw.js";
+ const build=(
+  process.env.CF_PAGES_COMMIT_SHA||
+  process.env.COMMIT_REF||
+  String(Date.now())
+ ).slice(0,12);
+
+ writeFileSync(
+  swPath,
+  readFileSync(swPath,"utf8").replace(
+   /const\s+CACHE\s*=\s*[^;]+;/,
+   ()=>'const CACHE = "pattayaok-living-oki-'+build+'";'
+  )
+ );
+
+ console.log("OKI living update ready");
+}
