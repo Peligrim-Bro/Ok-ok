@@ -399,3 +399,177 @@ html[data-theme="light"] .ok-support-author{
 }
 console.log('PattayaOK v77: old $ donate control upgraded to premium Support Author.');
 console.log('PattayaOK v76: Supabase bridge + premium Support Author star-burst enabled.');
+/* === OK-OK v78: layout guard + compact Support Author + animated hourglass === */
+{
+  const v78CSS=String.raw`
+<style id="ok-layout-v78">
+/* Prevent controls from forcing horizontal overflow. */
+html,body{max-width:100%;overflow-x:clip}
+*,*::before,*::after{box-sizing:border-box}
+img,video,svg{max-width:100%}
+
+/* Support Author: deliberately narrower than v76. */
+html body .ok-support-author{
+  width:min(78%,420px)!important;
+  max-width:420px!important;
+  min-width:230px!important;
+  min-height:50px!important;
+  margin:12px auto 17px!important;
+  padding:11px 18px!important;
+  border-radius:18px!important;
+  flex:none!important;
+  white-space:normal!important;
+  text-align:center!important;
+  line-height:1.15!important;
+}
+@media(max-width:360px){
+  html body .ok-support-author{
+    width:82%!important;
+    min-width:0!important;
+    font-size:13px!important;
+    padding-inline:12px!important;
+  }
+}
+
+/* Compact timer: it must never stretch its row. */
+html body .ok-timer-v78{
+  width:46px!important;
+  min-width:46px!important;
+  max-width:46px!important;
+  height:46px!important;
+  min-height:46px!important;
+  padding:0!important;
+  margin:0!important;
+  border-radius:15px!important;
+  display:inline-grid!important;
+  place-items:center!important;
+  flex:0 0 46px!important;
+  overflow:visible!important;
+  line-height:1!important;
+  font-size:0!important;
+}
+.ok-timer-v78 .ok-hourglass-v78{
+  display:block;
+  font-size:24px;
+  line-height:1;
+  transform-origin:50% 50%;
+  filter:drop-shadow(0 2px 2px #1115);
+  animation:okHourglassFlip 2.8s cubic-bezier(.65,0,.35,1) infinite;
+}
+@keyframes okHourglassFlip{
+  0%,28%{transform:rotate(0deg)}
+  43%,72%{transform:rotate(180deg)}
+  87%,100%{transform:rotate(360deg)}
+}
+
+/* Navigation/layout guards. */
+html body nav.tab{
+  width:100%!important;
+  max-width:100%!important;
+  display:grid!important;
+  grid-template-columns:repeat(5,minmax(0,1fr))!important;
+  gap:5px!important;
+}
+html body nav.tab button{
+  width:auto!important;
+  min-width:0!important;
+  max-width:100%!important;
+  overflow:hidden!important;
+}
+html body nav.tab button :is(span,small){
+  max-width:100%;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+html body :is(.filters,.zones,.dock){
+  max-width:100%!important;
+}
+html body :is(.filters,.zones){
+  overflow-x:auto;
+  overscroll-behavior-inline:contain;
+  -webkit-overflow-scrolling:touch;
+}
+html body :is(.card,.panel,.glass,.install-card,.lang-card,.okad){
+  max-width:100%!important;
+}
+
+/* Long RU/EN/TH labels should wrap rather than widen the page. */
+html body :is(button,a.btn,.zones a,.zones button){
+  overflow-wrap:anywhere;
+}
+
+/* iPhone/iPad safe area. */
+html body nav.tab{
+  padding-bottom:calc(9px + env(safe-area-inset-bottom,0px))!important;
+}
+
+@media(max-width:380px){
+  html body nav.tab{gap:3px!important}
+  html body nav.tab button{padding-left:4px!important;padding-right:4px!important}
+}
+@media(prefers-reduced-motion:reduce){
+  .ok-timer-v78 .ok-hourglass-v78{animation:none!important}
+}
+</style>`;
+
+  const v78JS=String.raw`
+<script id="ok-layout-js-v78">
+(()=> {
+  const timerWords=[
+    "таймер","timer","นาฬิกาจับเวลา","จับเวลา"
+  ];
+  const looksLikeTimer=(el)=>{
+    const text=(el.textContent||"").trim().toLowerCase();
+    const id=(el.id||"").toLowerCase();
+    const cls=(typeof el.className==="string"?el.className:"").toLowerCase();
+    const aria=(el.getAttribute?.("aria-label")||"").toLowerCase();
+    const title=(el.getAttribute?.("title")||"").toLowerCase();
+    const bag=[text,id,cls,aria,title].join(" ");
+    return timerWords.some(w=>bag.includes(w)) || /\btimer\b/.test(bag);
+  };
+  const timerLabel=()=>{
+    const lang=(document.documentElement.lang||localStorage.getItem("lang")||"ru").toLowerCase();
+    return lang.startsWith("th")?"ตัวจับเวลา":lang.startsWith("en")?"Timer":"Таймер";
+  };
+  const upgradeTimer=()=>{
+    const all=[...document.querySelectorAll("button,a")];
+    const timer=all.find(el=>looksLikeTimer(el) && !el.closest(".okad"));
+    if(!timer) return;
+    timer.classList.add("ok-timer-v78");
+    timer.setAttribute("aria-label",timerLabel());
+    timer.setAttribute("title",timerLabel());
+    if(!timer.querySelector(".ok-hourglass-v78")){
+      timer.textContent="";
+      const icon=document.createElement("span");
+      icon.className="ok-hourglass-v78";
+      icon.textContent="⌛";
+      icon.setAttribute("aria-hidden","true");
+      timer.appendChild(icon);
+    }
+  };
+  upgradeTimer();
+  addEventListener("DOMContentLoaded",upgradeTimer,{once:true});
+  setTimeout(upgradeTimer,350);
+  setTimeout(upgradeTimer,1200);
+  new MutationObserver(upgradeTimer).observe(document.documentElement,{childList:true,subtree:true});
+})();
+</script>`;
+
+  for(const name of ['index.html','admin.html']){
+    const path='site/public/'+name;
+    let html=readFileSync(path,'utf8');
+    if(!html.includes('ok-layout-v78')){
+      html=html.replace('</head>',v78CSS+'\n</head>');
+      html=html.replace('</body>',v78JS+'\n</body>');
+      writeFileSync(path,html);
+    }
+  }
+
+  let sw78=readFileSync(swPath,'utf8');
+  sw78=sw78
+    .replace('v77-support-button','v78-layout-timer')
+    .replace('v76-support-supabase','v78-layout-timer')
+    .replace('v74-winking-shop','v78-layout-timer');
+  writeFileSync(swPath,sw78);
+}
+console.log('PattayaOK v78: compact support button + animated hourglass + responsive layout guards enabled.');
