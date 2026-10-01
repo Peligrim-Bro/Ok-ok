@@ -766,7 +766,7 @@ html body :is(#installNow,[data-install],[id*="install" i]).ok-install-v80{
    const bag=((el.id||"")+" "+(typeof el.className==="string"?el.className:"")+" "+(el.textContent||"")+" "+(el.getAttribute?.("aria-label")||"")).toLowerCase();
    if(/install|установ|экран домой|home screen|หน้าจอหลัก/.test(bag)){
     el.classList.add("ok-install-v80");
-    if((el.textContent||"").trim().length<28)el.textContent=T[LANG()].install;
+   if(el.textContent!==T[LANG()].install)el.textContent=T[LANG()].install;
    }
   });
  };
