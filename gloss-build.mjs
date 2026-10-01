@@ -573,3 +573,89 @@ html body nav.tab{
   writeFileSync(swPath,sw78);
 }
 console.log('PattayaOK v78: compact support button + animated hourglass + responsive layout guards enabled.');
+/* === OK-OK v79 EMERGENCY LAYOUT FIX === */
+{
+  const fixCSS=String.raw`
+<style id="ok-layout-emergency-v79">
+/* Cancel the v78 rules that changed the site's established layout. */
+html,body{max-width:none!important}
+body{overflow-x:hidden!important}
+
+/* Never convert the existing bottom navigation to grid. */
+html body nav.tab{
+  display:flex!important;
+  width:auto!important;
+  max-width:none!important;
+  grid-template-columns:none!important;
+  gap:5px!important;
+}
+html body nav.tab button{
+  width:auto!important;
+  min-width:0!important;
+  max-width:none!important;
+  flex:1 1 0!important;
+}
+
+/* Restore original scrolling/layout behavior for chips and content. */
+html body :is(.filters,.zones,.dock){
+  max-width:none!important;
+}
+html body :is(.card,.panel,.glass,.install-card,.lang-card,.okad){
+  max-width:none!important;
+}
+
+/* Support button must not consume the whole utility/header row. */
+html body .ok-support-author{
+  width:auto!important;
+  min-width:190px!important;
+  max-width:300px!important;
+  min-height:46px!important;
+  margin:0 6px!important;
+  padding:10px 15px!important;
+  flex:0 1 300px!important;
+  white-space:nowrap!important;
+  font-size:14px!important;
+  border-radius:17px!important;
+}
+@media(max-width:600px){
+  html body .ok-support-author{
+    min-width:150px!important;
+    max-width:220px!important;
+    flex-basis:220px!important;
+    font-size:12px!important;
+    padding-inline:10px!important;
+  }
+}
+
+/* Timer remains compact, but does not alter its parent layout. */
+html body .ok-timer-v78{
+  width:42px!important;
+  min-width:42px!important;
+  max-width:42px!important;
+  height:42px!important;
+  min-height:42px!important;
+  flex:0 0 42px!important;
+  margin:0 4px!important;
+  padding:0!important;
+  display:inline-grid!important;
+  place-items:center!important;
+}
+.ok-timer-v78 .ok-hourglass-v78{font-size:22px!important}
+</style>`;
+
+  for(const name of ['index.html','admin.html']){
+    const path='site/public/'+name;
+    let html=readFileSync(path,'utf8');
+    if(!html.includes('ok-layout-emergency-v79')){
+      html=html.replace('</head>',fixCSS+'\n</head>');
+      writeFileSync(path,html);
+    }
+  }
+
+  let sw79=readFileSync(swPath,'utf8');
+  sw79=sw79
+    .replace('v78-layout-timer','v79-emergency-layout')
+    .replace('v77-support-button','v79-emergency-layout');
+  writeFileSync(swPath,sw79);
+}
+console.log('PattayaOK v79: emergency layout correction applied.');
