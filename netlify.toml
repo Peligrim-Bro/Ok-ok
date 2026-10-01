@@ -1,5 +1,5 @@
 [build]
-  command = "unzip -oq site-source.zip -d site"
+  command = "node gloss-build.mjs"
   publish = "site/public"
 
 [build.environment]
