@@ -659,3 +659,145 @@ html body .ok-timer-v78{
   writeFileSync(swPath,sw79);
 }
 console.log('PattayaOK v79: emergency layout correction applied.');
+/* === OK-OK v80: NEON PWA + OKI PET === */
+{
+  // New neon home-screen icon.
+  for (const size of [180,192,512]) {
+    copyFileSync(`okok-neon-v80-${size}.png`, `site/public/assets/icons/icon-${size}-v80.png`);
+    copyFileSync(`okok-neon-v80-${size}.png`, `site/public/assets/icons/icon-${size}.png`);
+  }
+  copyFileSync('okok-neon-v80-180.png','site/public/apple-touch-icon.png');
+
+  const manifestPath='site/public/manifest.json';
+  const m=JSON.parse(readFileSync(manifestPath,'utf8'));
+  m.id='/';
+  m.name='OK-OK';
+  m.short_name='OK-OK';
+  m.icons=[192,512].map(size=>({
+    src:`assets/icons/icon-${size}-v80.png`,sizes:`${size}x${size}`,
+    type:'image/png',purpose:'any maskable'
+  }));
+  writeFileSync(manifestPath,JSON.stringify(m,null,2));
+
+  const v80CSS=String.raw`
+<style id="ok-v80-neon-pet">
+/* PWA install: compact raised neon control, isolated from layout */
+html body :is(#installNow,[data-install],[id*="install" i]).ok-install-v80{
+ position:relative!important;overflow:hidden!important;
+ border:1px solid #70eaff!important;border-radius:18px!important;
+ background:linear-gradient(145deg,#122e75,#392087 52%,#8b237f)!important;
+ box-shadow:0 5px 0 #07173f,0 9px 18px #0a0f2f88,
+ inset 0 2px 2px #fff9,0 0 18px #2adfff66!important;
+ color:#fff!important;text-shadow:0 1px 3px #07112d!important;
+}
+.ok-install-v80::after{
+ content:"";position:absolute;inset:-60% -35%;
+ background:linear-gradient(110deg,transparent 40%,#fff9 49%,transparent 58%);
+ transform:translateX(-70%);animation:okiShine 5s ease-in-out infinite;pointer-events:none
+}
+@keyframes okiShine{0%,62%{transform:translateX(-70%)}82%,100%{transform:translateX(70%)}}
+
+/* OKI overlay: self-contained, does not alter existing page grid */
+#okiPetV80{position:fixed;inset:0;z-index:2147483000;background:#06112be8;
+ backdrop-filter:blur(14px);display:none;align-items:center;justify-content:center;padding:18px}
+#okiPetV80.on{display:flex}
+.oki-card{width:min(100%,430px);max-height:88dvh;overflow:auto;position:relative;
+ border:1px solid #5fe9ff88;border-radius:30px;padding:22px 18px 18px;text-align:center;
+ background:radial-gradient(circle at 50% 5%,#943d9c66,transparent 32%),
+ linear-gradient(160deg,#0b2458ee,#11143bee 55%,#25154cee);
+ box-shadow:0 18px 55px #000b,inset 0 1px 2px #fff8,0 0 35px #21d9ff44}
+.oki-close{position:absolute!important;right:12px;top:12px;width:42px!important;height:42px!important;
+ min-width:42px!important;padding:0!important;border-radius:50%!important}
+.oki-title{font-size:26px;font-weight:900;color:#fff}.oki-sub{font-size:12px;color:#bfefff;margin-top:2px}
+.oki-face{width:148px;height:148px;margin:18px auto 14px;border-radius:50%;display:grid;place-items:center;
+ font-size:78px;background:radial-gradient(circle at 35% 25%,#fff,#77eaff 18%,#6655e9 54%,#ee43d2 80%,#14204b);
+ box-shadow:inset 0 5px 10px #fff9,inset 0 -10px 22px #190e5c,0 10px 0 #08143c,0 0 35px #28ddff88;
+ animation:okiFloat 3.1s ease-in-out infinite}
+@keyframes okiFloat{50%{transform:translateY(-7px) rotate(2deg)}}
+.oki-stats{display:grid;gap:9px;text-align:left;margin:8px 0 16px}
+.oki-stat{display:grid;grid-template-columns:82px 1fr 38px;align-items:center;gap:7px;color:#fff;font-size:12px}
+.oki-bar{height:11px;background:#060c24;border-radius:99px;overflow:hidden;border:1px solid #ffffff25}
+.oki-fill{height:100%;border-radius:inherit;background:linear-gradient(90deg,#25e8ff,#9e66ff,#ff56b6)}
+.oki-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.oki-actions button{min-width:0!important;padding:10px 5px!important;font-size:12px!important}
+.oki-level{display:inline-block;margin:0 0 10px;padding:5px 11px;border-radius:99px;color:#ffe787;
+ background:#ffcc3120;border:1px solid #ffd96b55;font-size:12px;font-weight:800}
+@media(prefers-reduced-motion:reduce){.oki-face,.ok-install-v80::after{animation:none!important}}
+</style>`;
+
+  const v80JS=String.raw`
+<script id="ok-v80-neon-pet-js">
+(()=>{
+ const LANG=()=>{const l=(document.documentElement.lang||localStorage.getItem("lang")||"ru").toLowerCase();
+   return l.startsWith("th")?"th":l.startsWith("en")?"en":"ru"};
+ const T={
+  ru:{pet:"OKI",sub:"твой маленький житель OK-OK",food:"Еда",mood:"Радость",energy:"Энергия",level:"Уровень",feed:"🍉 Кормить",play:"✨ Играть",sleep:"🌙 Спать",install:"OK-OK · На экран домой"},
+  en:{pet:"OKI",sub:"your little OK-OK companion",food:"Food",mood:"Mood",energy:"Energy",level:"Level",feed:"🍉 Feed",play:"✨ Play",sleep:"🌙 Sleep",install:"OK-OK · Add to Home"},
+  th:{pet:"OKI",sub:"เพื่อนตัวน้อยของคุณใน OK-OK",food:"อาหาร",mood:"อารมณ์",energy:"พลัง",level:"เลเวล",feed:"🍉 ให้อาหาร",play:"✨ เล่น",sleep:"🌙 นอน",install:"OK-OK · เพิ่มหน้าจอหลัก"}
+ };
+ const clamp=n=>Math.max(0,Math.min(100,n));
+ const load=()=>{try{return {...{food:82,mood:88,energy:76,xp:0,last:Date.now()},...JSON.parse(localStorage.getItem("oki-v80")||"{}")}}catch{return {food:82,mood:88,energy:76,xp:0,last:Date.now()}}};
+ let s=load();
+ const elapsed=Math.min(72,(Date.now()-(s.last||Date.now()))/36e5);
+ s.food=clamp(s.food-elapsed*1.2);s.mood=clamp(s.mood-elapsed*.55);s.energy=clamp(s.energy-elapsed*.75);s.last=Date.now();
+ const save=()=>{s.last=Date.now();localStorage.setItem("oki-v80",JSON.stringify(s))};
+ const render=()=>{
+  const q=T[LANG()],lv=1+Math.floor(s.xp/100);
+  document.querySelector("#okiPetV80")?.remove();
+  const el=document.createElement("div");el.id="okiPetV80";
+  el.innerHTML=`<div class="oki-card"><button class="oki-close" aria-label="Close">×</button>
+   <div class="oki-title">${q.pet}</div><div class="oki-sub">${q.sub}</div>
+   <div class="oki-face" aria-hidden="true">${s.energy<25?"😴":s.food<25?"🥺":s.mood>70?"😉":"🙂"}</div>
+   <div class="oki-level">✦ ${q.level} ${lv} · ${s.xp%100}/100 XP</div>
+   <div class="oki-stats">${[["food",q.food],["mood",q.mood],["energy",q.energy]].map(([k,n])=>`<div class="oki-stat"><span>${n}</span><div class="oki-bar"><div class="oki-fill" style="width:${Math.round(s[k])}%"></div></div><b>${Math.round(s[k])}</b></div>`).join("")}</div>
+   <div class="oki-actions"><button data-a="feed">${q.feed}</button><button data-a="play">${q.play}</button><button data-a="sleep">${q.sleep}</button></div></div>`;
+  document.body.appendChild(el);
+  el.querySelector(".oki-close").onclick=()=>el.classList.remove("on");
+  el.onclick=e=>{if(e.target===el)el.classList.remove("on")};
+  el.querySelectorAll("[data-a]").forEach(b=>b.onclick=()=>{
+   const a=b.dataset.a;
+   if(a==="feed"){s.food=clamp(s.food+24);s.mood=clamp(s.mood+4)}
+   if(a==="play"){s.mood=clamp(s.mood+22);s.energy=clamp(s.energy-9);s.food=clamp(s.food-5)}
+   if(a==="sleep"){s.energy=clamp(s.energy+30);s.food=clamp(s.food-4)}
+   s.xp+=8;save();render();document.querySelector("#okiPetV80").classList.add("on");
+  });
+ };
+ const install=()=>{
+  document.querySelectorAll("button,a").forEach(el=>{
+   const bag=((el.id||"")+" "+(typeof el.className==="string"?el.className:"")+" "+(el.textContent||"")+" "+(el.getAttribute?.("aria-label")||"")).toLowerCase();
+   if(/install|установ|экран домой|home screen|หน้าจอหลัก/.test(bag)){
+    el.classList.add("ok-install-v80");
+    if((el.textContent||"").trim().length<28)el.textContent=T[LANG()].install;
+   }
+  });
+ };
+ const hookGame=()=>{
+  document.querySelectorAll("button,a").forEach(el=>{
+   const bag=((el.dataset?.tab||"")+" "+(el.id||"")+" "+(el.textContent||"")+" "+(el.getAttribute?.("aria-label")||"")).toLowerCase();
+   if(/snake|змей|game|игра|เกม/.test(bag)&&!el.closest(".okad")){
+    el.dataset.oki="1";
+    const txt=(el.textContent||"").trim();
+    if(/змей|snake|игра|game|เกม/i.test(txt)) el.textContent="OKI";
+   }
+  });
+ };
+ render();install();hookGame();save();
+ document.addEventListener("click",e=>{
+   const b=e.target.closest?.("[data-oki='1']");
+   if(!b)return;
+   e.preventDefault();e.stopImmediatePropagation();
+   document.querySelector("#okiPetV80")?.classList.add("on");
+ },true);
+ new MutationObserver(()=>{install();hookGame()}).observe(document.documentElement,{childList:true,subtree:true});
+})();
+</script>`;
+  for(const name of ['index.html','admin.html']){
+    const p='site/public/'+name; let h=readFileSync(p,'utf8');
+    h=h.replace(/assets\/icons\/icon-(180|192|512)-v73\.png/g,'assets/icons/icon-$1-v80.png');
+    if(!h.includes('ok-v80-neon-pet')) h=h.replace('</head>',v80CSS+'\n</head>').replace('</body>',v80JS+'\n</body>');
+    writeFileSync(p,h);
+  }
+  let sw80=readFileSync(swPath,'utf8').replace('v79-emergency-layout','v80-neon-oki');
+  writeFileSync(swPath,sw80);
+}
+console.log('OK-OK v80: neon PWA identity + OKI pet enabled.');
