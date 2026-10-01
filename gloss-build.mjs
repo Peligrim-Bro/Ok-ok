@@ -130,3 +130,219 @@ if(!shopPattern.test(smileyHTML)) throw new Error('Shop navigation icon not foun
 smileyHTML=smileyHTML.replace(shopPattern,(_,opening)=>opening+shopIcon).replace('</head>',smileyCSS+'\n</head>');
 writeFileSync(indexPath,smileyHTML);
 writeFileSync(swPath,readFileSync(swPath,'utf8').replace('v73-home-icon','v74-winking-shop'));
+/* === OK-OK v76 ALL-IN-ONE PATCH ===
+   Add this entire block ONCE at the very end of gloss-build.mjs.
+   Includes:
+   1) Supabase community-ads bridge
+   2) premium glowing "Поддержать автора" treatment
+   3) touch/click star-burst effect
+   4) PWA cache bump
+*/
+
+// --- Supabase community ads bridge ---
+{
+  const adsBridgePath='site/public/assets/ads/ads.js';
+  let adsBridge=readFileSync(adsBridgePath,'utf8');
+  const supabaseAdsEndpoint='https://qyvahcxumjphxuykivpr.supabase.co/functions/v1/community-ads';
+
+  if(!adsBridge.includes('OKOK_SUPABASE_ADS_ENDPOINT')){
+    adsBridge += `
+;(()=>{const ENDPOINT="${supabaseAdsEndpoint}";
+window.OKOK_SUPABASE_ADS_ENDPOINT=ENDPOINT;
+window.okokLoadCommunityAds=async function(){
+  try{
+    const r=await fetch(ENDPOINT,{headers:{accept:"application/json"},cache:"no-store"});
+    if(!r.ok) throw new Error("ads_http_"+r.status);
+    const j=await r.json();
+    return Array.isArray(j?.ads)?j.ads:[];
+  }catch(e){
+    console.warn("[ok-ok] Supabase ads fallback unavailable",e);
+    return [];
+  }
+};
+})();`;
+  }
+  writeFileSync(adsBridgePath,adsBridge);
+}
+
+// --- Premium Support Author button ---
+{
+  const supportCSS=String.raw`
+<style id="ok-support-author-v76">
+:root{
+  --support-text:#fff;
+  --support-edge:#c5b8ff;
+  --support-a:#6658c9;
+  --support-b:#9b70df;
+  --support-c:#416eb9;
+}
+html[data-theme="light"]{
+  --support-text:#302452;
+  --support-edge:#a895e8;
+  --support-a:#e7e2ff;
+  --support-b:#d5c5ff;
+  --support-c:#c9e4ff;
+}
+.ok-support-author{
+  position:relative!important;
+  isolation:isolate;
+  overflow:hidden!important;
+  width:calc(100% - 28px)!important;
+  max-width:760px!important;
+  min-height:54px!important;
+  margin:12px auto 16px!important;
+  padding:13px 22px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:9px!important;
+  border-radius:20px!important;
+  border:1px solid color-mix(in srgb,var(--support-edge) 80%,white)!important;
+  color:var(--support-text)!important;
+  background:
+    radial-gradient(circle at 16% 0%,#ffffff80 0 2%,transparent 24%),
+    linear-gradient(115deg,var(--support-a),var(--support-b) 46%,var(--support-c))!important;
+  box-shadow:
+    0 5px 0 #332b6d,
+    0 11px 25px #715ed94a,
+    0 0 28px #8e79ff35,
+    inset 0 2px 2px #ffffffb5,
+    inset 0 -4px 9px #24285a66!important;
+  font-weight:850!important;
+  letter-spacing:.01em;
+  text-shadow:0 1px 2px #17132d70!important;
+  transform:translateZ(0);
+}
+html[data-theme="light"] .ok-support-author{
+  box-shadow:
+    0 5px 0 #9689c8,
+    0 11px 24px #6650aa2b,
+    0 0 25px #8d76e82d,
+    inset 0 2px 3px #fff,
+    inset 0 -4px 8px #7c70ae33!important;
+  text-shadow:0 1px 0 #fff!important;
+}
+.ok-support-author::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:-55% -35%;
+  background:linear-gradient(105deg,transparent 37%,#fff0 43%,#ffffffb5 49%,#fff0 56%,transparent 62%);
+  transform:translateX(-55%) rotate(3deg);
+  animation:okSupportShine 4.8s cubic-bezier(.45,0,.2,1) infinite;
+  pointer-events:none;
+}
+.ok-support-author::after{
+  content:"✦";
+  position:absolute;
+  right:16px;
+  top:8px;
+  color:#fff;
+  font-size:12px;
+  opacity:.72;
+  filter:drop-shadow(0 0 5px #fff);
+  animation:okSupportTwinkle 2.4s ease-in-out infinite;
+  pointer-events:none;
+}
+.ok-support-author:active{
+  transform:translateY(3px) scale(.992)!important;
+  box-shadow:
+    0 2px 0 #332b6d,
+    0 6px 16px #715ed93d,
+    0 0 32px #a78fff55,
+    inset 0 2px 5px #ffffffa8!important;
+}
+.ok-support-star{
+  position:fixed;
+  z-index:2147483646;
+  left:0;top:0;
+  width:7px;height:7px;
+  pointer-events:none;
+  color:#fff;
+  font-size:13px;
+  line-height:1;
+  text-shadow:0 0 5px #fff,0 0 11px #a58cff;
+  will-change:transform,opacity;
+  animation:okSupportBurst 720ms cubic-bezier(.1,.65,.15,1) forwards;
+}
+@keyframes okSupportShine{
+  0%,58%{transform:translateX(-65%) rotate(3deg);opacity:0}
+  64%{opacity:.85}
+  79%,100%{transform:translateX(65%) rotate(3deg);opacity:0}
+}
+@keyframes okSupportTwinkle{
+  0%,100%{transform:scale(.72) rotate(0);opacity:.35}
+  48%{transform:scale(1.35) rotate(35deg);opacity:1}
+}
+@keyframes okSupportBurst{
+  0%{transform:translate(-50%,-50%) scale(.25) rotate(0deg);opacity:1}
+  75%{opacity:.9}
+  100%{transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(var(--s)) rotate(var(--r));opacity:0}
+}
+@media(prefers-reduced-motion:reduce){
+  .ok-support-author::before,.ok-support-author::after{animation:none!important}
+  .ok-support-star{display:none!important}
+}
+</style>`;
+
+  const supportJS=String.raw`
+<script id="ok-support-author-js-v76">
+(()=> {
+  const labels=[
+    "поддержать автора","support the author","support author",
+    "поддержать проект","สนับสนุนผู้เขียน","สนับสนุน"
+  ];
+  const mark=()=>{
+    document.querySelectorAll("a,button").forEach(el=>{
+      const t=(el.textContent||"").trim().toLowerCase();
+      if(labels.some(x=>t.includes(x))) el.classList.add("ok-support-author");
+    });
+  };
+  const burst=(x,y)=>{
+    if(matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const glyphs=["✦","✧","⋆","✦","·"];
+    for(let i=0;i<18;i++){
+      const n=document.createElement("i");
+      n.className="ok-support-star";
+      n.textContent=glyphs[i%glyphs.length];
+      const a=(Math.PI*2*i/18)+(Math.random()-.5)*.32;
+      const d=32+Math.random()*72;
+      n.style.left=x+"px"; n.style.top=y+"px";
+      n.style.setProperty("--dx",(Math.cos(a)*d).toFixed(1)+"px");
+      n.style.setProperty("--dy",(Math.sin(a)*d).toFixed(1)+"px");
+      n.style.setProperty("--s",(0.65+Math.random()*1.05).toFixed(2));
+      n.style.setProperty("--r",((Math.random()-.5)*220).toFixed(0)+"deg");
+      document.body.appendChild(n);
+      setTimeout(()=>n.remove(),780);
+    }
+  };
+  mark();
+  new MutationObserver(mark).observe(document.documentElement,{childList:true,subtree:true});
+  document.addEventListener("pointerdown",e=>{
+    const b=e.target.closest?.(".ok-support-author");
+    if(!b) return;
+    burst(e.clientX,e.clientY);
+  },{passive:true});
+})();
+</script>`;
+
+  for(const name of ['index.html','admin.html']){
+    const path='site/public/'+name;
+    let html=readFileSync(path,'utf8');
+    if(!html.includes('ok-support-author-v76')){
+      html=html.replace('</head>',supportCSS+'\n</head>');
+      html=html.replace('</body>',supportJS+'\n</body>');
+      writeFileSync(path,html);
+    }
+  }
+}
+
+// --- Cache bump so iPhone/iPad receives the new UI ---
+{
+  let sw76=readFileSync(swPath,'utf8');
+  sw76=sw76
+    .replace('v74-winking-shop','v76-support-supabase')
+    .replace('v75-supabase-bridge','v76-support-supabase');
+  writeFileSync(swPath,sw76);
+}
+console.log('PattayaOK v76: Supabase bridge + premium Support Author star-burst enabled.');
