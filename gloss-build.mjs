@@ -344,5 +344,58 @@ html[data-theme="light"] .ok-support-author{
     .replace('v74-winking-shop','v76-support-supabase')
     .replace('v75-supabase-bridge','v76-support-supabase');
   writeFileSync(swPath,sw76);
+}/* === OK-OK v77: force old $ donate control into premium Support Author === */
+{
+  const supportFixJS=String.raw`
+<script id="ok-support-author-fix-v77">
+(()=> {
+  const translations={
+    ru:"Поддержать автора",
+    en:"Support the author",
+    th:"สนับสนุนผู้เขียน"
+  };
+  const getLabel=()=>{
+    const lang=(document.documentElement.lang||localStorage.getItem("lang")||"ru").toLowerCase();
+    return lang.startsWith("th")?translations.th:lang.startsWith("en")?translations.en:translations.ru;
+  };
+  const isDonate=(el)=>{
+    const t=(el.textContent||"").trim();
+    const id=(el.id||"").toLowerCase();
+    const cls=(typeof el.className==="string"?el.className:"").toLowerCase();
+    const href=(el.getAttribute?.("href")||"").toLowerCase();
+    const aria=(el.getAttribute?.("aria-label")||"").toLowerCase();
+    return t==="$" ||
+      /donat|donate|support|поддерж/.test(id+" "+cls+" "+href+" "+aria+" "+t.toLowerCase());
+  };
+  const upgrade=()=>{
+    const candidates=[...document.querySelectorAll("a,button")].filter(isDonate);
+    for(const el of candidates){
+      if(el.closest(".okad")) continue;
+      el.classList.add("ok-support-author");
+      if((el.textContent||"").trim()==="$" || (el.textContent||"").trim().length<3){
+        el.textContent="✦ "+getLabel()+" ✦";
+      }
+      el.setAttribute("aria-label",getLabel());
+    }
+  };
+  upgrade();
+  addEventListener("DOMContentLoaded",upgrade,{once:true});
+  setTimeout(upgrade,400);
+  setTimeout(upgrade,1400);
+  new MutationObserver(upgrade).observe(document.documentElement,{childList:true,subtree:true});
+})();
+</script>`;
+  const index='site/public/index.html';
+  let html=readFileSync(index,'utf8');
+  if(!html.includes('ok-support-author-fix-v77')){
+    html=html.replace('</body>',supportFixJS+'\n</body>');
+    writeFileSync(index,html);
+  }
+  let sw77=readFileSync(swPath,'utf8');
+  sw77=sw77
+    .replace('v76-support-supabase','v77-support-button')
+    .replace('v74-winking-shop','v77-support-button');
+  writeFileSync(swPath,sw77);
 }
+console.log('PattayaOK v77: old $ donate control upgraded to premium Support Author.');
 console.log('PattayaOK v76: Supabase bridge + premium Support Author star-burst enabled.');
