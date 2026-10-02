@@ -1476,5 +1476,17 @@ html body .oki-arena .oki-star{
  }
  const cacheBuild=(process.env.CF_PAGES_COMMIT_SHA||process.env.COMMIT_REF||String(Date.now())).slice(0,12);
  writeFileSync(swPath,readFileSync(swPath,'utf8').replace(/const\s+CACHE\s*=\s*[^;]+;/,()=> 'const CACHE = "pattayaok-oki-life-v88-'+cacheBuild+'";'));
- console.log('OKI Life v82 ready: RU / EN / TH, crystal-only shop; no sales.');
+console.log('OKI Life v82 ready: RU / EN / TH, crystal-only shop; no sales.');
 }
+
+// Keep the header hourglass as the single timer entry point. The compact
+// clock's full-width empty-state button was a duplicate on the home screen.
+for(const name of ['index.html','admin.html']){
+ const path='site/public/'+name;
+ const html=readFileSync(path,'utf8');
+ const duplicate=/<button\b[^>]*data-timer="1"[^>]*>[\s\S]*?<\/button>/g;
+ if(name==='index.html'&&!duplicate.test(html))throw new Error('Expected duplicate timer template missing in '+name);
+ writeFileSync(path,html.replace(duplicate,''));
+}
+writeFileSync(swPath,readFileSync(swPath,'utf8').replace('pattayaok-oki-life-v88-','pattayaok-timer-clean-v89-'));
+console.log('Timer duplicate removed; header hourglass and visa clock retained.');
