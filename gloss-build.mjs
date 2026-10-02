@@ -1490,3 +1490,4 @@ for(const name of ['index.html','admin.html']){
 }
 writeFileSync(swPath,readFileSync(swPath,'utf8').replace('pattayaok-oki-life-v88-','pattayaok-oki-reference-v90-'));
 console.log('Timer duplicate removed; header hourglass and visa clock retained.');
+await import('./scripts/apply-editorial.mjs');
