@@ -23,3 +23,7 @@ console.log('PASS: '+parsed+' inline scripts, 3D bundle, RU/EN/TH, timer, daily 
 
 // Uses only an in-memory SQLite database; no live telemetry or bot messages.
 await import('./verify-oki-analytics.mjs');
+
+new Script(readFileSync('site/public/assets/spatial/pattaya-map.js','utf8'),{filename:'travel-map.js'});
+assert(existsSync('site/public/assets/spatial/travel-map.css'),'Travel map styles missing');
+console.log('PASS: transport map script and styles');

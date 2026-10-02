@@ -1492,3 +1492,16 @@ writeFileSync(swPath,readFileSync(swPath,'utf8').replace('pattayaok-oki-life-v88
 console.log('Timer duplicate removed; header hourglass and visa clock retained.');
 await import('./scripts/apply-editorial.mjs');
 
+
+// Practical transport cards and saved places, bundled locally.
+copyFileSync('travel-map.js','site/public/assets/spatial/pattaya-map.js');
+copyFileSync('travel-map.css','site/public/assets/spatial/travel-map.css');
+for(const file of ['index.html','admin.html']){
+ const path='site/public/'+file;
+ let page=readFileSync(path,'utf8').replace(/pattaya-map\.js\?v=\d+/g,'pattaya-map.js?v=92');
+ page=page.replace('</head>','<link rel="stylesheet" href="assets/spatial/travel-map.css?v=92">\n</head>');
+ writeFileSync(path,page);
+}
+console.log('Travel map ready: ferry, UTP flights, BKK airport bus, filters and saved places.');
+const travelSW=readFileSync(swPath,'utf8').replaceAll('./assets/spatial/pattaya-map.js?v=71','./assets/spatial/pattaya-map.js?v=92').replace('const CORE = [','const CORE = ["./assets/spatial/travel-map.css?v=92",');
+writeFileSync(swPath,travelSW);
