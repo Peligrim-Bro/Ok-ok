@@ -1,4 +1,6 @@
 // OK-OK: add Telegram server routes after the existing site build.
+// Cloudflare build: node gloss-build.mjs && node telegram-build.mjs
+// Cloudflare deploy: npx wrangler deploy --config wrangler-telegram.json
 // Contains no bot token. Runtime secrets are set in Cloudflare.
 import { existsSync, writeFileSync } from "node:fs";
 if (!existsSync("site/public/index.html")) throw new Error("Run gloss-build.mjs first");
