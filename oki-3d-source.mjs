@@ -28,31 +28,32 @@ window.OKI3D={mount(host,options){
  function tube(parent,points,r,m){const curve=new THREE.CatmullRomCurve3(points.map(p=>new THREE.Vector3(...p)));const o=new THREE.Mesh(geometry(new THREE.TubeGeometry(curve,Math.max(12,points.length*9),r,8,false)),m);parent.add(o);return o;}
  function ring(parent,x,y,z,r,m,rotation=0){const o=new THREE.Mesh(geometry(new THREE.TorusGeometry(r,.045,10,36)),m);o.position.set(x,y,z);o.rotation.x=rotation;parent.add(o);return o;}
  function limb(parent,a,b,r){const va=new THREE.Vector3(...a),vb=new THREE.Vector3(...b),o=new THREE.Mesh(geometry(new THREE.CapsuleGeometry(r,Math.max(.01,va.distanceTo(vb)-r*2),6,12)),cyan);o.position.copy(va.clone().add(vb).multiplyScalar(.5));o.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),vb.clone().sub(va).normalize());parent.add(o);return o;}
- const body=new THREE.Group();root.add(body);const childScale=options.stage===0?.84:options.stage===1?.92:1;body.scale.setScalar(childScale);
+ const baby=options.stage===0;host.dataset.lifeStage=String(options.stage);host.dataset.characterHeight=baby?'2.0':options.stage===1?'2.85':'3.4';const body=new THREE.Group();root.add(body);const childScale=baby?.55:options.stage===1?.78:1;body.scale.setScalar(childScale);
  sphere(body,cyan,0,1.7,0,.37,.48,.26);sphere(body,cyan,0,1.18,0,.31,.19,.23);ring(body,0,1.34,0,.29,cyanGlow,Math.PI/2);
  sphere(body,pink,0,2.18,0,.13,.13,.14);ring(body,0,2.15,0,.13,pink,Math.PI/2);
  const heart=sphere(body,pink,0,1.78,.11,.12,.13,.1);sphere(body,glow,0,1.78,.21,.053);
  // Badge is a small 3D disk; canvas texture is generated locally.
  const badgeCanvas=document.createElement('canvas');badgeCanvas.width=badgeCanvas.height=128;const bc=badgeCanvas.getContext('2d');bc.clearRect(0,0,128,128);bc.fillStyle='#635ce2';bc.beginPath();bc.arc(64,64,56,0,Math.PI*2);bc.fill();bc.strokeStyle='#b2efff';bc.lineWidth=6;bc.stroke();bc.fillStyle='#fff';bc.font='bold 52px sans-serif';bc.textAlign='center';bc.textBaseline='middle';bc.fillText('OK',64,67);const badgeTex=new THREE.CanvasTexture(badgeCanvas);textures.add(badgeTex);const badgeMat=new THREE.MeshBasicMaterial({map:badgeTex,transparent:true});materials.add(badgeMat);const badge=new THREE.Mesh(geometry(new THREE.CircleGeometry(.12,32)),badgeMat);badge.position.set(.13,1.82,.263);body.add(badge);
  tube(body,[[-.25,1.98,.12],[-.33,1.80,.16],[-.26,1.48,.14]],.014,cyanGlow);tube(body,[[.25,1.98,.12],[.33,1.80,.16],[.26,1.48,.14]],.014,cyanGlow);
- const legs=[[-.18,1.14,0,-.3,.32,.07],[.18,1.14,0,.38,.32,.02]];
- for(const l of legs){const a=l.slice(0,3),b=l.slice(3);limb(body,a,b,.1);sphere(body,pink,...a,.13,.1,.13);sphere(body,pink,b[0],.33,b[2],.14,.08,.14);ring(body,b[0],.33,b[2],.12,glow,Math.PI/2);sphere(body,cyan,b[0],.16,.15,.22,.12,.27);}
+ const legs=baby?[[-.18,.65,0,-.55,.4,.85],[.18,.65,0,.55,.4,.85]]:[[-.18,1.14,0,-.3,.32,.07],[.18,1.14,0,.38,.32,.02]];if(baby){body.position.y=-.08;for(const mesh of body.children){if(mesh.position.y>1||mesh.geometry?.type==='TubeGeometry')mesh.position.y-=.43;}}
+ for(const l of legs){const a=l.slice(0,3),b=l.slice(3);if(baby){const knee=[b[0]*.7,.45,.43];limb(body,a,knee,.13);limb(body,knee,b,.12);sphere(body,cyan,...knee,.14);}else limb(body,a,b,.1);sphere(body,pink,...a,.13,.1,.13);sphere(body,pink,b[0],b[1],b[2],.14,.08,.14);ring(body,b[0],b[1],b[2],.12,glow,Math.PI/2);const shoe=sphere(body,cyan,b[0],baby?.33:.16,baby?1:.15,.22,baby?.19:.12,.27);if(baby){shoe.rotation.x=-.65;sphere(body,pink,b[0],.30,1.22,.16,.15,.027);}}
  // Hands have five separated rounded fingers and a thumb, visible from every side.
  function hand(parent,x,y,z,rotation){const h=new THREE.Group();h.position.set(x,y,z);h.rotation.z=rotation;parent.add(h);sphere(h,pink,0,0,0,.14,.16,.07);for(let i=0;i<4;i++){const px=(i-1.5)*.065;limbFinger(h,[px,.1,0],[px*1.5,.3+(i===1||i===2?.04:0),.005],.034);}limbFinger(h,[-.1,.01,0],[-.24,.12,.02],.044);ring(h,0,-.14,0,.105,glow,Math.PI/2);return h;}
  function limbFinger(parent,a,b,r){tube(parent,[a,b],r,pink);sphere(parent,pink,...b,r);}
  const armLeft=new THREE.Group();body.add(armLeft);limb(armLeft,[-.3,1.95,0],[-.7,1.64,.03],.085);limb(armLeft,[-.7,1.64,.03],[-.95,1.47,.1],.09);sphere(armLeft,pink,-.32,1.95,0,.14,.15,.13);sphere(armLeft,cyan,-.7,1.64,.03,.12);hand(armLeft,-1.02,1.43,.1,2.35);
  const wave=new THREE.Group();wave.position.set(.3,1.95,0);body.add(wave);limb(wave,[0,0,0],[.35,.19,.03],.09);limb(wave,[.35,.19,.03],[.62,.56,.05],.085);sphere(wave,pink,0,0,0,.14,.15,.13);sphere(wave,cyan,.35,.19,.03,.115);hand(wave,.66,.72,.05,-.22);
- const head=new THREE.Group();root.add(head);head.position.y=childScale*2.18+.63;head.scale.setScalar(options.stage===0?1.04:options.stage===1?1:.96);
+ if(baby){armLeft.position.y=-.43;wave.position.y-=.43;}const head=new THREE.Group();root.add(head);head.position.y=baby?1.37:childScale*2.18+.57;head.scale.setScalar(baby?.79:options.stage===1?.89:.96);root.userData.stage=options.stage;
  sphere(head,headMat,0,0,0,.66,.65,.6);
  sphere(head,pink,-.66,-.01,0,.135,.16,.12);sphere(head,pink,.66,-.01,0,.135,.16,.12);
  // Glowing contours are curved geometry on the actual surface, not a billboard.
- const forehead=[];for(let i=0;i<=32;i++){const a=-.1+i*Math.PI*1.2/32;forehead.push([Math.cos(a)*.665,Math.sin(a)*.655,.06]);}tube(head,forehead,.013,glow);
+ const forehead=[];for(let i=0;i<=32;i++){const a=-.1+i*Math.PI*1.2/32;forehead.push([Math.cos(a)*.665,Math.sin(a)*.655,.06]);}tube(head,forehead,.007,glow);
  const eyes=[];
  for(const x of [-.24,.24]){const group=new THREE.Group();group.position.set(x,.055,.516);head.add(group);sphere(group,white,0,0,0,.17,.205,.065);sphere(group,iris,0,-.01,.057,.111,.135,.035);sphere(group,pupil,0,-.018,.09,.067,.093,.022);sphere(group,white,-.027,.036,.112,.024,.024,.009);sphere(group,white,.034,-.062,.112,.01,.01,.007);eyes.push(group);
  tube(head,[[x-.12,.30,.48],[x-.02,.34,.53],[x+.11,.30,.48]],.023,glow);
  }
- sphere(head,pink,0,-.14,.604,.102,.091,.075);sphere(head,pink,-.40,-.19,.466,.16,.077,.05);sphere(head,pink,.40,-.19,.466,.16,.077,.05);
- const smile=new THREE.Group();head.add(smile);sphere(smile,mouthMat,0,-.335,.506,.20,.115,.025);sphere(smile,tongueMat,0,-.39,.533,.12,.035,.016);tube(smile,[[-.185,-.29,.537],[0,-.30,.566],[.185,-.29,.537]],.014,glow);
+ // Small natural nose and subtle translucent blush: no red ball or painted cheeks.
+ sphere(head,headMat,0,-.12,.595,.054,.045,.032);const blush=mat({color:0xffb4d7,roughness:.3,transmission:.65,thickness:.03,transparent:true,opacity:.35});sphere(head,blush,-.37,-.17,.492,.095,.048,.012);sphere(head,blush,.37,-.17,.492,.095,.048,.012);
+ const smile=new THREE.Group();head.add(smile);sphere(smile,mouthMat,0,-.335,.506,.15,.068,.018);sphere(smile,tongueMat,0,-.36,.529,.083,.022,.011);tube(smile,[[-.145,-.30,.537],[0,-.31,.553],[.145,-.30,.537]],.014,glow);
  if(options.gender==='girl'){
   // A volumetric bob around the BACK and SIDES of the head, with a swept fringe.
   const backHair=sphere(head,hairMat,0,.06,-.12,.74,.70,.54);backHair.name='girl-bob-back';
