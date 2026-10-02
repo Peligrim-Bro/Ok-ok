@@ -1505,3 +1505,24 @@ for(const file of ['index.html','admin.html']){
 console.log('Travel map ready: ferry, UTP flights, BKK airport bus, filters and saved places.');
 const travelSW=readFileSync(swPath,'utf8').replaceAll('./assets/spatial/pattaya-map.js?v=71','./assets/spatial/pattaya-map.js?v=92').replace('const CORE = [','const CORE = ["./assets/spatial/travel-map.css?v=92",');
 writeFileSync(swPath,travelSW);
+// GA4: one asynchronous tag on the public site; admin traffic is excluded.
+{
+ const gaTag = `<script id="ok-ga4">
+(function(){
+ if(navigator.doNotTrack==='1'||window.doNotTrack==='1'||navigator.globalPrivacyControl===true)return;
+ window.dataLayer=window.dataLayer||[];
+ window.gtag=window.gtag||function(){window.dataLayer.push(arguments);};
+ window.gtag('js',new Date());
+ window.gtag('config','G-TD8W93WFV5',{allow_google_signals:false,allow_ad_personalization_signals:false});
+ var tag=document.createElement('script');
+ tag.async=true;
+ tag.src='https://www.googletagmanager.com/gtag/js?id=G-TD8W93WFV5';
+ document.head.appendChild(tag);
+})();
+</script>`;
+ const path='site/public/index.html';
+ const page=readFileSync(path,'utf8');
+ if(!/<head\b[^>]*>/i.test(page))throw new Error('Public page head missing for GA4');
+ writeFileSync(path,page.replace(/<head\b[^>]*>/i,match=>match+'\n'+gaTag));
+ console.log('GA4 ready: G-TD8W93WFV5');
+}
