@@ -20,3 +20,6 @@ assert(asset&&existsSync('site/public'+asset[0]),'3D runtime missing');
 new Script(readFileSync('site/public'+asset[0],'utf8'),{filename:asset[0]});
 assert(existsSync('wrangler-telegram.json'),'Cloudflare deploy config missing');
 console.log('PASS: '+parsed+' inline scripts, 3D bundle, RU/EN/TH, timer, daily care, Tetris and Cloudflare configuration');
+
+// Uses only an in-memory SQLite database; no live telemetry or bot messages.
+await import('./verify-oki-analytics.mjs');
