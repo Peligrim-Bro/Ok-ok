@@ -2,11 +2,6 @@
 // npx esbuild oki-3d-source.mjs --bundle --minify --format=iife --target=es2020 --outfile=oki-3d.js --legal-comments=inline
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
-import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
-import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
-import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
-import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 /* Procedural, genuinely three-dimensional OKI. No external textures or CDN. */
 window.OKI3D={mount(host,options){
  let renderer;
@@ -22,14 +17,14 @@ window.OKI3D={mount(host,options){
  const geometries=new Set(),materials=new Set(),textures=new Set();
  const geometry=g=>{geometries.add(g);return g;};
  const mat=params=>{const m=new THREE.MeshPhysicalMaterial(params);materials.add(m);return m;};
- const cyan=mat({color:0x00bfff,roughness:.08,metalness:.25,clearcoat:1,clearcoatRoughness:.08,transmission:0,transparent:true,opacity:.72,thickness:.45,ior:1.4,emissive:0x007ca8,emissiveIntensity:.45});
- const pink=mat({color:0xff18b9,roughness:.14,metalness:.12,clearcoat:1,transmission:0,transparent:true,opacity:.88,thickness:.2,emissive:0xff329d,emissiveIntensity:.4});
- const headMat=mat({color:0xff30be,roughness:.08,metalness:.05,clearcoat:1,transmission:0,transparent:true,opacity:.83,thickness:.7,ior:1.35,emissive:0xc40073,emissiveIntensity:.2});
- const hairMat=mat({color:0xb528ef,roughness:.15,metalness:.1,clearcoat:1,transmission:0,transparent:true,opacity:.8,thickness:.25,emissive:0xb433d4,emissiveIntensity:.32});
+ const cyan=mat({color:0x00bfff,roughness:.08,metalness:.25,clearcoat:1,clearcoatRoughness:.08,transmission:0,transparent:true,opacity:.72,thickness:.45,ior:1.4,emissive:0x007ca8,emissiveIntensity:.185});
+ const pink=mat({color:0xff18b9,roughness:.14,metalness:.12,clearcoat:1,transmission:0,transparent:true,opacity:.688,thickness:.2,emissive:0xff329d,emissiveIntensity:.18});
+ const headMat=mat({color:0xff30be,roughness:.08,metalness:.05,clearcoat:1,transmission:0,transparent:true,opacity:.683,thickness:.7,ior:1.35,emissive:0xc40073,emissiveIntensity:.2});
+ const hairMat=mat({color:0xff64cd,roughness:.15,metalness:.1,clearcoat:1,transmission:0,transparent:true,opacity:.68,thickness:.25,emissive:0xa82a7d,emissiveIntensity:.12});
  const white=mat({color:0xffffff,roughness:.13,clearcoat:1});const pupil=new THREE.MeshBasicMaterial({color:0x102140,toneMapped:false}),iris=new THREE.MeshBasicMaterial({color:0x14cddd,toneMapped:false});materials.add(pupil);materials.add(iris);
  const mouthMat=mat({color:0x7d184b,roughness:.35});const tongueMat=mat({color:0xff82a7,roughness:.3,clearcoat:1});
- const glow=new THREE.MeshBasicMaterial({color:new THREE.Color(4,.08,1.8),toneMapped:false});materials.add(glow);const cyanGlow=new THREE.MeshBasicMaterial({color:new THREE.Color(.12,1.35,2.4),toneMapped:false});materials.add(cyanGlow);
- const haloMat=color=>{const m=new THREE.ShaderMaterial({uniforms:{tint:{value:new THREE.Color(color)}},vertexShader:'varying vec3 vN;varying vec3 vV;void main(){vec4 p=modelViewMatrix*vec4(position,1.);vN=normalize(normalMatrix*normal);vV=normalize(-p.xyz);gl_Position=projectionMatrix*p;}',fragmentShader:'uniform vec3 tint;varying vec3 vN;varying vec3 vV;void main(){float edge=pow(1.-abs(dot(normalize(vN),normalize(vV))),3.);gl_FragColor=vec4(tint*1.15,edge*.6);}',transparent:true,depthWrite:false,blending:THREE.AdditiveBlending,toneMapped:false});materials.add(m);return m;};const pinkHalo=haloMat(0xff2ebd),blueHalo=haloMat(0x00d5ff);blueHalo.uniforms.tint.value.multiplyScalar(1.8);
+ const glow=new THREE.MeshBasicMaterial({color:new THREE.Color(1,.18,.7),toneMapped:false});materials.add(glow);const cyanGlow=new THREE.MeshBasicMaterial({color:new THREE.Color(.12,.9,1),toneMapped:false});materials.add(cyanGlow);
+ const haloMat=color=>{const m=new THREE.ShaderMaterial({uniforms:{tint:{value:new THREE.Color(color)}},vertexShader:'varying vec3 vN;varying vec3 vV;void main(){vec4 p=modelViewMatrix*vec4(position,1.);vN=normalize(normalMatrix*normal);vV=normalize(-p.xyz);gl_Position=projectionMatrix*p;}',fragmentShader:'uniform vec3 tint;varying vec3 vN;varying vec3 vV;void main(){float edge=pow(1.-abs(dot(normalize(vN),normalize(vV))),3.);gl_FragColor=vec4(tint*.8,edge*.18);}',transparent:true,depthWrite:false,blending:THREE.AdditiveBlending,toneMapped:false});materials.add(m);return m;};const pinkHalo=haloMat(0xff2ebd),blueHalo=haloMat(0x00d5ff);
  function halo(mesh,m){const shell=new THREE.Mesh(mesh.geometry,m);shell.scale.setScalar(1.025);mesh.add(shell);}
  const ball=geometry(new THREE.SphereGeometry(1,32,24));
  function sphere(parent,m,x,y,z,sx,sy=sx,sz=sx){const o=new THREE.Mesh(ball,m);o.position.set(x,y,z);o.scale.set(sx,sy,sz);parent.add(o);if(m===cyan||m===headMat||m===hairMat)halo(o,m===cyan?blueHalo:pinkHalo);return o;}
@@ -63,30 +58,34 @@ window.OKI3D={mount(host,options){
  sphere(head,headMat,0,-.12,.595,.054,.045,.032);const blush=mat({color:0xffb4d7,roughness:.3,transmission:.65,thickness:.03,transparent:true,opacity:.35});sphere(head,blush,-.37,-.17,.492,.095,.048,.012);sphere(head,blush,.37,-.17,.492,.095,.048,.012);
  const smile=new THREE.Group();head.add(smile);sphere(smile,mouthMat,0,-.335,.506,.17,.085,.018);sphere(smile,tongueMat,0,-.38,.529,.095,.025,.011);tube(smile,[[-.145,-.30,.537],[0,-.31,.553],[.145,-.30,.537]],.01,pink);
  if(options.gender==='girl'){
-  // A volumetric bob around the BACK and SIDES of the head, with a swept fringe.
-  const backHair=sphere(head,hairMat,0,.06,-.12,.74,.70,.54);backHair.name='girl-bob-back';
-  for(const side of [-1,1]){sphere(head,hairMat,side*.61,-.055,.06,.15,.50,.28);tube(head,[[side*.48,.50,.29],[side*.70,.20,.25],[side*.72,-.23,.20],[side*.61,-.49,.21]],.024,glow);}
-  tube(head,[[-.39,.49,.30],[-.14,.67,.24],[.19,.60,.38],[.36,.38,.50]],.092,hairMat);
-  for(const x of [-.24,.24])for(let i=0;i<3;i++){const xx=x+(i-1)*.065;tube(head,[[xx,.21,.562],[xx+(x<0?-.04:.04),.29,.54]],.011,pupil);}
+  // Open-backed translucent bob, rounded locks and a swept fringe; no helmet.
+  const bob=new THREE.Mesh(geometry(new THREE.SphereGeometry(1,40,28,Math.PI,Math.PI)),hairMat);bob.scale.set(.73,.69,.62);bob.position.set(0,.015,-.02);bob.name='girl-bob-back';head.add(bob);
+  for(const side of [-1,1])for(let i=0;i<3;i++){
+   const z=.06+i*.12,x=side*(.55+i*.018);
+   tube(head,[[side*.30,.58,z-.12],[side*.58,.42,z],[side*.70,.03,z+.035],[side*.69,-.34,z+.02],[side*.54,-.43,z+.06]],.075-i*.008,hairMat);
+  }
+  tube(head,[[-.37,.49,.34],[-.18,.63,.39],[.04,.61,.49],[.24,.45,.54],[.27,.30,.53]],.065,hairMat);
+  tube(head,[[-.13,.59,.44],[.07,.59,.53],[.23,.43,.57],[.21,.34,.56]],.042,pink);
+  for(const x of [-.24,.24])for(let i=0;i<3;i++){const xx=x+(i-1)*.065;tube(head,[[xx,.25,.59],[xx+(x<0?-.04:.04),.32,.58]],.009,pupil);}
  }else{
-  const curl=tube(head,[[-.17,.59,.15],[.01,.69,.20],[.19,.80,.13],[.15,.91,.08],[.045,.86,.075],[.085,.77,.14]],.061,pink);curl.name='boy-curl';tube(head,[[-.16,.61,.20],[.03,.72,.25],[.17,.82,.18]],.012,glow);
+  const curl=tube(head,[[-.24,.59,.27],[-.08,.60,.37],[.12,.69,.32],[.19,.84,.22],[.10,.94,.16],[-.015,.88,.18],[.01,.79,.25],[.10,.77,.29]],.06,hairMat);curl.name='boy-curl';
  }
  host.dataset.floating='true';
- const key=new THREE.DirectionalLight(0xc9eeff,1.1);key.position.set(-2,4,5);scene.add(key);const fill=new THREE.DirectionalLight(0x65dfff,1.5);fill.position.set(3,2,-2);scene.add(fill);const rim=new THREE.DirectionalLight(0xff38b7,2.5);rim.position.set(-3,3,-3);scene.add(rim);scene.add(new THREE.AmbientLight(0x7943ac,.3));
+ const key=new THREE.DirectionalLight(0xf2e7ff,3.4);key.position.set(-2,4,5);scene.add(key);const fill=new THREE.DirectionalLight(0x65dfff,1.5);fill.position.set(3,2,-2);scene.add(fill);const rim=new THREE.DirectionalLight(0xff38b7,2.5);rim.position.set(-3,3,-3);scene.add(rim);scene.add(new THREE.AmbientLight(0xaba3de,.65));
  const center=new THREE.Vector3(0,1.85,0);
- const composer=new EffectComposer(renderer);composer.addPass(new RenderPass(scene,camera));const bloom=new UnrealBloomPass(new THREE.Vector2(300,320),.48,.75,.85);composer.addPass(bloom);bloom.highPassUniforms.smoothWidth.value=.25;composer.addPass(new OutputPass());const alphaPass=new ShaderPass({uniforms:{tDiffuse:{value:null}},vertexShader:'varying vec2 vUv;void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}',fragmentShader:'uniform sampler2D tDiffuse;varying vec2 vUv;void main(){vec4 c=texture2D(tDiffuse,vUv);float a=smoothstep(.008,.22,max(c.r,max(c.g,c.b)));gl_FragColor=vec4(c.rgb*a,a);}'});composer.addPass(alphaPass);camera.position.set(.15,1.95,6.7);const controls=new OrbitControls(camera,renderer.domElement);controls.target.copy(center);controls.enablePan=false;controls.enableZoom=false;controls.enableDamping=true;controls.dampingFactor=.12;controls.minPolarAngle=.65;controls.maxPolarAngle=2.15;controls.enabled=!!options.interactive;controls.rotateSpeed=.7;
+ camera.position.set(.15,1.95,6.7);const controls=new OrbitControls(camera,renderer.domElement);controls.target.copy(center);controls.enablePan=false;controls.enableZoom=false;controls.enableDamping=true;controls.dampingFactor=.12;controls.minPolarAngle=.65;controls.maxPolarAngle=2.15;controls.enabled=!!options.interactive;controls.rotateSpeed=.7;
  if(options.pose){const r=6.7,pol=options.pose.polar,az=options.pose.azimuth;camera.position.set(r*Math.sin(pol)*Math.sin(az),center.y+r*Math.cos(pol),r*Math.sin(pol)*Math.cos(az));}
  controls.update();
  let disposed=false,frame=0,last=0,needs=true,moving=false,currentMood=options.mood||'happy',currentSkin=options.skin||'neon';
  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
- function paint(mood,skin){currentMood=mood;currentSkin=skin;const palette=skin==='aurora'?[0xb099ff,0xef97ef]:skin==='sunset'?[0xffbb77,0xff89b9]:[0x00bfff,0xff27bd];cyan.emissive.setHex(palette[0]);cyan.emissiveIntensity=.25;cyan.color.setHex(mood==='sleep'||mood==='tired'?0x2472b7:mood==='quiet'||mood==='hungry'?0x7644d9:palette[0]);pink.color.setHex(palette[1]);headMat.color.setHex(mood==='sleep'||mood==='tired'?0x678de3:mood==='quiet'||mood==='hungry'?0xae49e8:palette[1]);headMat.emissive.setHex(palette[1]);headMat.emissiveIntensity=mood==='happy'?.24:.12;eyes.forEach(o=>o.scale.y=mood==='sleep'?.08:1);smile.scale.y=mood==='hungry'?.55:1;needs=true;}
+ function paint(mood,skin){currentMood=mood;currentSkin=skin;const palette=skin==='aurora'?[0xb099ff,0xef97ef]:skin==='sunset'?[0xffbb77,0xff89b9]:[0x00c9ed,0xff64cf];cyan.emissive.setHex(palette[0]);cyan.emissiveIntensity=.25;cyan.color.setHex(mood==='sleep'||mood==='tired'?0x2472b7:mood==='quiet'||mood==='hungry'?0x7644d9:palette[0]);pink.color.setHex(palette[1]);headMat.color.setHex(mood==='sleep'||mood==='tired'?0x678de3:mood==='quiet'||mood==='hungry'?0xae49e8:palette[1]);headMat.emissive.setHex(palette[1]);headMat.emissiveIntensity=mood==='happy'?.18:.1;eyes.forEach(o=>o.scale.y=mood==='sleep'?.08:1);smile.scale.y=mood==='hungry'?.55:1;needs=true;}
  paint(currentMood,currentSkin);
  const abort=new AbortController();renderer.domElement.addEventListener('keydown',e=>{if(!options.interactive||!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home'].includes(e.key))return;e.preventDefault();const az=controls.getAzimuthalAngle()+(e.key==='ArrowLeft'?-.18:e.key==='ArrowRight'?.18:0),pol=THREE.MathUtils.clamp(controls.getPolarAngle()+(e.key==='ArrowUp'?-.1:e.key==='ArrowDown'?.1:0),.65,2.15),r=6.7;if(e.key==='Home')camera.position.set(.15,1.95,6.7);else camera.position.set(r*Math.sin(pol)*Math.sin(az),center.y+r*Math.cos(pol),r*Math.sin(pol)*Math.cos(az));controls.update();needs=true;},{signal:abort.signal});
  controls.addEventListener('start',()=>{moving=true;host.dataset.dragging='true';});controls.addEventListener('end',()=>{moving=false;host.dataset.dragging='false';if(options.onPose)options.onPose({azimuth:controls.getAzimuthalAngle(),polar:controls.getPolarAngle()});});controls.addEventListener('change',()=>{needs=true;if(options.interactive&&options.onPose)options.onPose({azimuth:controls.getAzimuthalAngle(),polar:controls.getPolarAngle()});});
- function resize(){const rect=host.getBoundingClientRect();if(!rect.width||!rect.height)return;renderer.setSize(rect.width,rect.height,false);composer.setSize(rect.width,rect.height);camera.aspect=rect.width/rect.height;camera.updateProjectionMatrix();needs=true;}
+ function resize(){const rect=host.getBoundingClientRect();if(!rect.width||!rect.height)return;renderer.setSize(rect.width,rect.height,false);camera.aspect=rect.width/rect.height;camera.updateProjectionMatrix();needs=true;}
  const observer=new ResizeObserver(resize);observer.observe(host);resize();
- function draw(time){if(disposed)return;frame=requestAnimationFrame(draw);if(document.hidden||time-last<(options.interactive?33:66))return;last=time;controls.update();if(!reduce&&!moving){root.position.y=.06+Math.sin(time*.0018)*.07;root.rotation.z=Math.sin(time*.0011)*.025;head.rotation.z=Math.sin(time*.0015)*.04;wave.rotation.z=(options.gender==='girl'?.18:0)+(currentMood==='sleep'?0:Math.sin(time*.003)*.13);armLeft.rotation.z=Math.sin(time*.0016)*.04;const beat=1+Math.sin(time*.003)*.06;heart.scale.set(.12*beat,.13*beat,.1*beat);if(currentMood!=='sleep'){const blink=time%5900>5700;eyes.forEach(o=>o.scale.y=blink?.12:1);}needs=true;}if(needs){composer.render();needs=false;host.dataset.ready='true';host.dataset.azimuth=controls.getAzimuthalAngle().toFixed(3);}}
+ function draw(time){if(disposed)return;frame=requestAnimationFrame(draw);if(document.hidden||time-last<(options.interactive?33:66))return;last=time;controls.update();if(!reduce&&!moving){root.position.y=.06+Math.sin(time*.0018)*.07;root.rotation.z=Math.sin(time*.0011)*.025;head.rotation.z=Math.sin(time*.0015)*.04;wave.rotation.z=(options.gender==='girl'?.18:0)+(currentMood==='sleep'?0:Math.sin(time*.003)*.13);armLeft.rotation.z=Math.sin(time*.0016)*.04;const beat=1+Math.sin(time*.003)*.06;heart.scale.set(.12*beat,.13*beat,.1*beat);if(currentMood!=='sleep'){const blink=time%5900>5700;eyes.forEach(o=>o.scale.y=blink?.12:1);}needs=true;}if(needs){renderer.render(scene,camera);needs=false;host.dataset.ready='true';host.dataset.azimuth=controls.getAzimuthalAngle().toFixed(3);}}
  frame=requestAnimationFrame(draw);
- return {update:paint,dispose(){disposed=true;cancelAnimationFrame(frame);observer.disconnect();abort.abort();controls.dispose();geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());textures.forEach(t=>t.dispose());env.dispose();composer.passes.forEach(p=>p.dispose?.());composer.dispose();renderer.dispose();renderer.forceContextLoss();renderer.domElement.remove();}};
+ return {update:paint,dispose(){disposed=true;cancelAnimationFrame(frame);observer.disconnect();abort.abort();controls.dispose();geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());textures.forEach(t=>t.dispose());env.dispose();renderer.dispose();renderer.forceContextLoss();renderer.domElement.remove();}};
 }};
 window.dispatchEvent(new Event('oki3dready'));
