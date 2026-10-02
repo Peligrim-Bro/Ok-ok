@@ -43,9 +43,9 @@ window.OKI3D={mount(host,options){
  // Hands have five separated rounded fingers and a thumb, visible from every side.
  function hand(parent,x,y,z,rotation){const h=new THREE.Group();h.position.set(x,y,z);h.rotation.z=rotation;parent.add(h);sphere(h,pink,0,0,0,.14,.16,.07);for(let i=0;i<4;i++){const px=(i-1.5)*.065;limbFinger(h,[px,.1,0],[px*1.5,.3+(i===1||i===2?.04:0),.005],.034);}limbFinger(h,[-.1,.01,0],[-.24,.12,.02],.044);ring(h,0,-.14,0,.105,glow,Math.PI/2);return h;}
  function limbFinger(parent,a,b,r){tube(parent,[a,b],r,pink);sphere(parent,pink,...b,r);}
- const armLeft=new THREE.Group();body.add(armLeft);limb(armLeft,[-.3,1.95,0],[-.7,1.64,.03],.085);limb(armLeft,[-.7,1.64,.03],[-.95,1.47,.1],.09);sphere(armLeft,pink,-.32,1.95,0,.14,.15,.13);sphere(armLeft,cyan,-.7,1.64,.03,.12);hand(armLeft,-1.02,1.43,.1,2.35);
+ const armLeft=new THREE.Group();armLeft.position.set(-.3,1.95,0);body.add(armLeft);limb(armLeft,[0,0,0],[-.4,-.31,.03],.085);limb(armLeft,[-.4,-.31,.03],[-.65,-.48,.1],.09);sphere(armLeft,pink,-.02,0,0,.14,.15,.13);sphere(armLeft,cyan,-.4,-.31,.03,.12);hand(armLeft,-.72,-.52,.1,2.35);
  const wave=new THREE.Group();wave.position.set(.3,1.95,0);body.add(wave);wave.rotation.z=options.gender==='girl'?.18:0;limb(wave,[0,0,0],[.35,.19,.03],.09);limb(wave,[.35,.19,.03],[.62,.56,.05],.085);sphere(wave,pink,0,0,0,.14,.15,.13);sphere(wave,cyan,.35,.19,.03,.115);hand(wave,.66,.72,.05,-.22);
- let diaperMat=null;if(baby){diaperMat=mat({color:0xe6e2ff,roughness:.45,clearcoat:.35});const diaper=sphere(body,diaperMat,0,.74,.07,.33,.20,.27);diaper.name='baby-diaper';sphere(body,pink,-.27,.78,.13,.06,.04,.07);sphere(body,pink,.27,.78,.13,.06,.04,.07);armLeft.position.y=-.43;armLeft.rotation.z=-.25;wave.position.y-=.43;}else if(options.gender==='girl'){armLeft.scale.x=-1;wave.position.x=-.3;wave.scale.x=-1;body.rotation.z=-.075;}
+ let diaperMat=null;if(baby){diaperMat=mat({color:0xe6e2ff,roughness:.45,clearcoat:.35});const diaper=sphere(body,diaperMat,0,.74,.07,.33,.20,.27);diaper.name='baby-diaper';sphere(body,pink,-.27,.78,.13,.06,.04,.07);sphere(body,pink,.27,.78,.13,.06,.04,.07);armLeft.position.y-=.43;armLeft.rotation.z=-.25;wave.position.y-=.43;}else if(options.gender==='girl'){armLeft.position.x=.3;armLeft.scale.x=-1;wave.position.x=-.3;wave.scale.x=-1;body.rotation.z=-.075;}
  const head=new THREE.Group();root.add(head);head.position.y=baby?1.37:childScale*2.18+.57;head.scale.setScalar(baby?.79:options.stage===1?.89:.96);root.userData.stage=options.stage;
  sphere(head,headMat,0,0,0,.69,.64,.6);
  sphere(head,pink,-.66,-.01,0,.135,.16,.12);sphere(head,pink,.66,-.01,0,.135,.16,.12);
@@ -56,8 +56,8 @@ window.OKI3D={mount(host,options){
  tube(head,[[x-.12,.30,.48],[x-.02,.34,.53],[x+.11,.30,.48]],.023,glow);
  }
  // Small natural nose and subtle translucent blush: no red ball or painted cheeks.
- sphere(head,headMat,0,-.12,.595,.054,.045,.032);const blush=mat({color:0xffb4d7,roughness:.3,transmission:.65,thickness:.03,transparent:true,opacity:.35});sphere(head,blush,-.37,-.17,.492,.095,.048,.012);sphere(head,blush,.37,-.17,.492,.095,.048,.012);
- const smile=new THREE.Group();head.add(smile);sphere(smile,mouthMat,0,-.335,.506,.17,.085,.018);sphere(smile,tongueMat,0,-.38,.529,.095,.025,.011);tube(smile,[[-.145,-.30,.537],[0,-.31,.553],[.145,-.30,.537]],.01,pink);
+ sphere(head,headMat,0,-.12,.595,.054,.045,.032);const blush=mat({color:0xff8bcb,roughness:.25,clearcoat:1,transmission:0,transparent:true,opacity:.22,depthWrite:false});sphere(head,blush,-.37,-.17,.492,.08,.045,.012);sphere(head,blush,.37,-.17,.492,.08,.045,.012);
+ const smile=new THREE.Group();head.add(smile);const smileShape=new THREE.Shape();smileShape.moveTo(-.18,0);smileShape.quadraticCurveTo(0,-.21,.18,0);smileShape.quadraticCurveTo(0,-.055,-.18,0);const mouth=new THREE.Mesh(geometry(new THREE.ShapeGeometry(smileShape,24)),mouthMat);mouth.position.set(0,-.29,.543);smile.add(mouth);sphere(smile,tongueMat,0,-.38,.55,.085,.018,.008);tube(smile,[[-.18,-.29,.547],[0,-.322,.559],[.18,-.29,.547]],.009,pink);
  if(options.gender==='girl'){
   // Open-backed translucent bob, rounded locks and a swept fringe; no helmet.
   const bob=new THREE.Mesh(geometry(new THREE.SphereGeometry(1,40,28,Math.PI,Math.PI)),hairMat);bob.scale.set(.73,.69,.62);bob.position.set(0,.015,-.02);bob.name='girl-bob-back';head.add(bob);
@@ -69,7 +69,9 @@ window.OKI3D={mount(host,options){
   tube(head,[[-.13,.59,.44],[.07,.59,.53],[.23,.43,.57],[.21,.34,.56]],.042,pink);
   for(const x of [-.24,.24])for(let i=0;i<3;i++){const xx=x+(i-1)*.065;tube(head,[[xx,.25,.59],[xx+(x<0?-.04:.04),.32,.58]],.009,pupil);}
  }else{
-  const curl=tube(head,[[-.24,.59,.27],[-.08,.60,.37],[.12,.69,.32],[.19,.84,.22],[.10,.94,.16],[-.015,.88,.18],[.01,.79,.25],[.10,.77,.29]],.06,hairMat);curl.name='boy-curl';
+  // Broad swept curl from the supplied character, with a curled tip rather than a thin antenna.
+  const curl=tube(head,[[-.30,.57,.29],[-.12,.59,.42],[.10,.65,.40],[.23,.79,.31],[.22,.92,.23],[.13,.98,.20],[.055,.91,.24],[.11,.84,.31]],.082,hairMat);curl.name='boy-curl';
+  tube(head,[[-.26,.62,.35],[-.10,.65,.48],[.10,.72,.46],[.18,.83,.36]],.012,glow);
  }
  host.dataset.floating='true';
  const key=new THREE.DirectionalLight(0xf2e7ff,3.4);key.position.set(-2,4,5);scene.add(key);const fill=new THREE.DirectionalLight(0x65dfff,1.5);fill.position.set(3,2,-2);scene.add(fill);const rim=new THREE.DirectionalLight(0xff38b7,2.5);rim.position.set(-3,3,-3);scene.add(rim);scene.add(new THREE.AmbientLight(0xaba3de,.65));
@@ -85,7 +87,17 @@ window.OKI3D={mount(host,options){
  controls.addEventListener('start',()=>{moving=true;host.dataset.dragging='true';});controls.addEventListener('end',()=>{moving=false;host.dataset.dragging='false';if(options.onPose)options.onPose({azimuth:controls.getAzimuthalAngle(),polar:controls.getPolarAngle()});});controls.addEventListener('change',()=>{needs=true;if(options.interactive&&options.onPose)options.onPose({azimuth:controls.getAzimuthalAngle(),polar:controls.getPolarAngle()});});
  function resize(){const rect=host.getBoundingClientRect();if(!rect.width||!rect.height)return;renderer.setSize(rect.width,rect.height,false);camera.aspect=rect.width/rect.height;camera.updateProjectionMatrix();needs=true;}
  const observer=new ResizeObserver(resize);observer.observe(host);resize();
- function draw(time){if(disposed)return;frame=requestAnimationFrame(draw);if(document.hidden||time-last<(options.interactive?33:66))return;last=time;controls.update();if(!reduce&&!moving){root.position.y=.06+Math.sin(time*.0018)*.07;root.rotation.z=Math.sin(time*.0011)*.025;head.rotation.z=Math.sin(time*.0015)*.04;wave.rotation.z=(options.gender==='girl'?.18:0)+(currentMood==='sleep'?0:Math.sin(time*.003)*.13);armLeft.rotation.z=(baby?-.25:0)+Math.sin(time*.0016)*.04;const beat=1+Math.sin(time*.003)*.06;heart.scale.set(.12*beat,.13*beat,.1*beat);if(currentMood!=='sleep'){const blink=time%5900>5700;eyes.forEach(o=>o.scale.y=blink?.12:1);}needs=true;}if(needs){renderer.render(scene,camera);needs=false;host.dataset.ready='true';host.dataset.azimuth=controls.getAzimuthalAngle().toFixed(3);}}
+ function draw(time){if(disposed)return;frame=requestAnimationFrame(draw);if(document.hidden||time-last<(options.interactive?33:66))return;last=time;controls.update();
+  // Reference pack's expressive poses, applied to real shoulder pivots.
+  const resting=['sleep','tired'].includes(currentMood),thinking=['hungry','quiet'].includes(currentMood);
+  const waveTarget=resting?-1.5:thinking?.35:(options.gender==='girl'?.18:0);
+  const leftTarget=resting?.5:thinking?-.35:(baby?-.25:0);
+  wave.rotation.z=THREE.MathUtils.lerp(wave.rotation.z,waveTarget+(!reduce&&!moving&&!resting?Math.sin(time*.003)*.13:0),.1);
+  armLeft.rotation.z=THREE.MathUtils.lerp(armLeft.rotation.z,leftTarget+(!reduce&&!moving?Math.sin(time*.0016)*.04:0),.1);
+  wave.rotation.x=THREE.MathUtils.lerp(wave.rotation.x,thinking?.45:resting?.25:0,.1);
+  host.dataset.expression=resting?'calm':thinking?'think':'wave';needs=true;
+  if(!reduce&&!moving){root.position.y=.06+Math.sin(time*.0018)*.07;root.rotation.z=Math.sin(time*.0011)*.025;head.rotation.z=Math.sin(time*.0015)*.04;const beat=1+Math.sin(time*.003)*.06;heart.scale.set(.12*beat,.13*beat,.1*beat);if(currentMood!=='sleep'){const blink=time%5900>5700;eyes.forEach(o=>o.scale.y=blink?.12:1);}}
+  if(needs){renderer.render(scene,camera);needs=false;host.dataset.ready='true';host.dataset.azimuth=controls.getAzimuthalAngle().toFixed(3);}}
  frame=requestAnimationFrame(draw);
  return {update:paint,dispose(){disposed=true;cancelAnimationFrame(frame);observer.disconnect();abort.abort();controls.dispose();geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());textures.forEach(t=>t.dispose());env.dispose();renderer.dispose();renderer.forceContextLoss();renderer.domElement.remove();}};
 }};

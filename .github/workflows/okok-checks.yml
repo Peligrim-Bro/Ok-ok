@@ -1,0 +1,21 @@
+name: OK-OK safety checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build website and Cloudflare Worker
+        run: node gloss-build.mjs && node telegram-build.mjs
+      - name: Verify generated scripts and critical features
+        run: node scripts/verify-project.mjs
