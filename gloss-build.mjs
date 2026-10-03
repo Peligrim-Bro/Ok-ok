@@ -1581,3 +1581,27 @@ writeFileSync(swPath,travelSW);
  writeFileSync(swPath,readFileSync(swPath,'utf8').replaceAll('pattaya-map.js?v=92','pattaya-map.js?v=93').replaceAll('travel-map.css?v=92','travel-map.css?v=93').replace(/partners\.js\?v=\d+/g,'partners.js?v=93').replace('pattayaok-oki-reference-v90-','pattayaok-12go-v93-'));
  console.log('12GO referral 17095940 ready; widget loads only within the city map.');
 }
+
+// v94: Senate roulette, three daily ad slots, author construction notice.
+{
+ for(const name of ['index.html','admin.html']){
+  const path='site/public/'+name;let html=readFileSync(path,'utf8');
+  html=html.replace('💱 Может, сначала пополнить кошелёк?','💱 Может пора поменять валюту').replace('💱 Top up the wallet first?','💱 Time to exchange currency?').replace('💱 เติมกระเป๋าก่อนไหม?','💱 ได้เวลาแลกเงินแล้วหรือยัง?');
+  const a=html.indexOf('    function spinPool() {'),b=html.indexOf('    function renderRules()',a);
+  if(name==='index.html'&&(a<0||b<0))throw Error('Roulette anchors missing');
+  if(a>=0&&b>=0){
+  let spin=html.slice(a,b).replace(/area: "EX24 · SuperRich · T.T."/g,'area: "Senate Exchange"').replace(/photo: "assets\/images\/ex24.jpg"/g,'photo: "assets/icons/icon-192-v80.png"').replace(/maps: "https:\/\/www.google.com\/maps\/search\/\?api=1&query=[^"]*"/g,'maps: "https://t.me/SenateExchange_bot?start=fi10072"').replace(/name: "💱 " \+ [^\n]+/,'name: t().fxSpinTitle,').replace('ru: "",\n        en: ""','ru: "Senate Exchange",\n        en: "Senate Exchange"');
+  spin=spin.replace('ru: t().fxSpinText,\n        en: t().fxSpinText','ru: "Senate Exchange",\n        en: "Senate Exchange"');
+  spin=spin.replace('★ ${p.rating} · ${(p.reviews/1000).toFixed(1)}k Google · ${p.area}','${p.id === "ad-fx" ? p.area : `★ ${p.rating} · ${(p.reviews/1000).toFixed(1)}k Google · ${p.area}`}');
+  spin=spin.replace('Google #${pick.rank} · ★ ${pick.rating} · ${pick.reviews.toLocaleString()} reviews','${pick.id === "ad-fx" ? "Senate Exchange" : `Google #${pick.rank} · ★ ${pick.rating} · ${pick.reviews.toLocaleString()} reviews`}');
+  spin=spin.replace('rel="noopener">${t().maps}</a>','rel="${pick.id === "ad-fx" ? "noopener sponsored" : "noopener"}">${pick.id === "ad-fx" ? t().partnerSenateBtn : t().maps}</a>');
+  html=html.slice(0,a)+spin+html.slice(b);
+  }
+  html=html.replace('const notes = CFG.notes || [];','const notes = [{ru:"Сайт в процессе строительства. Приношу извинения и прошу понимания 🫶",en:"The site is under construction. I apologise and ask for your understanding 🫶",th:"เว็บไซต์อยู่ระหว่างการพัฒนา ขออภัยและขอความเข้าใจด้วยนะครับ 🫶"}, ...(CFG.notes || [])];');
+  writeFileSync(path,html.replace(/ads\.js\?v=\d+/g,'ads.js?v=94'));
+ }
+ const path='site/public/assets/ads/ads.js';
+ let ads=readFileSync(path,'utf8').replaceAll('slots: 5','slots: 3').replaceAll("price: '5'","price: '15'").replaceAll("|| '5'","|| '15'").replaceAll('hours: 12','hours: 24').replaceAll('|| 12','|| 24').replaceAll('12 * 3600e3','24 * 3600e3').replaceAll('12 часов','24 часа').replaceAll('12 hours','24 hours').replaceAll('12 ชั่วโมง','24 ชั่วโมง');
+ writeFileSync(path,ads);
+ writeFileSync(swPath,readFileSync(swPath,'utf8').replace('pattayaok-12go-v93-','pattayaok-senate-ads-v94-').replace(/ads\.js\?v=\d+/g,'ads.js?v=94'));
+}
