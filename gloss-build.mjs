@@ -1605,3 +1605,5 @@ writeFileSync(swPath,travelSW);
  writeFileSync(path,ads);
  writeFileSync(swPath,readFileSync(swPath,'utf8').replace('pattayaok-12go-v93-','pattayaok-senate-ads-v94-').replace(/ads\.js\?v=\d+/g,'ads.js?v=94'));
 }
+
+await import('./scripts/apply-events.mjs');
