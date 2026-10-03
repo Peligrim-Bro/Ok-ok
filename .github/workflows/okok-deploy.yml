@@ -27,22 +27,16 @@ jobs:
           node scripts/verify-project.mjs
           node --input-type=module <<'NODE'
           import { readFileSync } from 'node:fs';
-          const html = readFileSync('site/public/index.html', 'utf8');
-          if (!html.includes('okok-pulse-v1')) throw new Error('Pulse patch missing from generated index.html');
-          if (!html.includes('Как здесь сейчас?')) throw new Error('Pulse UI text missing from generated index.html');
-          if (!html.includes('oki-nav-float-fix-v2')) throw new Error('Floating navigation fix missing');
-          if (!html.includes('oki-prompt-tail-fix-v2')) throw new Error('OKI prompt tail fix missing');
-          console.log('PASS: Pulse, floating nav and OKI prompt fix are present');
+          const html=readFileSync('site/public/index.html','utf8');
+          for(const marker of ['okok-pulse-v1','Как здесь сейчас?','oki-nav-float-fix-v3','oki-prompt-tail-fix-v3','data-okok-wa-lifted']) if(!html.includes(marker)) throw new Error('Missing '+marker);
+          console.log('PASS: Pulse, floating nav, OKI prompt and WhatsApp clearance fixes are present');
           NODE
       - name: Check deployment credentials
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
-          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
-            echo "::error::Cloudflare deployment credentials are missing."
-            exit 1
-          fi
+          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then echo "::error::Cloudflare deployment credentials are missing."; exit 1; fi
       - name: Deploy directly to Cloudflare
         uses: cloudflare/wrangler-action@v4
         with:
@@ -52,16 +46,6 @@ jobs:
       - name: Check public website and API health
         run: |
           node --input-type=module <<'NODE'
-          const checks = [
-            ['/', async r => {
-              const html = await r.text();
-              if (!html.includes('PattayaOK')) throw new Error('Website title missing');
-              if (!html.includes('okok-pulse-v1')) throw new Error('Pulse missing');
-              if (!html.includes('oki-nav-float-fix-v2')) throw new Error('Floating nav fix missing');
-              if (!html.includes('oki-prompt-tail-fix-v2')) throw new Error('OKI prompt fix missing');
-            }],
-            ['/api/telegram/health', async r => { const d=await r.json(); if(d.service!=='okok-telegram'||d.configured!==true) throw new Error('Telegram health failed'); }],
-            ['/api/oki/health', async r => { const d=await r.json(); if(d.service!=='okok-oki-metrics'||d.configured!==true) throw new Error('OKI health failed'); }]
-          ];
-          for (const [path,verify] of checks){let ok=false;for(let a=0;a<4;a++){try{const u=new URL(path,'https://ok-ok.click');u.searchParams.set('deployment-check',process.env.COMMIT_REF+'-'+a);const r=await fetch(u,{headers:{'Cache-Control':'no-cache'},signal:AbortSignal.timeout(15000)});if(!r.ok)throw new Error('HTTP '+r.status);await verify(r);ok=true;console.log('OK '+path);break}catch(e){console.error(path+': '+e.message);if(a<3)await new Promise(x=>setTimeout(x,10000));}}if(!ok)process.exit(1);}
+          const checks=[['/',async r=>{const h=await r.text();for(const m of ['PattayaOK','okok-pulse-v1','oki-nav-float-fix-v3','oki-prompt-tail-fix-v3'])if(!h.includes(m))throw new Error('Missing '+m);}],['/api/telegram/health',async r=>{const d=await r.json();if(d.service!=='okok-telegram'||d.configured!==true)throw new Error('Telegram health failed');}],['/api/oki/health',async r=>{const d=await r.json();if(d.service!=='okok-oki-metrics'||d.configured!==true)throw new Error('OKI health failed');}]];
+          for(const [path,verify] of checks){let ok=false;for(let a=0;a<4;a++){try{const u=new URL(path,'https://ok-ok.click');u.searchParams.set('deployment-check',process.env.COMMIT_REF+'-'+a);const r=await fetch(u,{headers:{'Cache-Control':'no-cache'},signal:AbortSignal.timeout(15000)});if(!r.ok)throw new Error('HTTP '+r.status);await verify(r);ok=true;console.log('OK '+path);break}catch(e){console.error(path+': '+e.message);if(a<3)await new Promise(x=>setTimeout(x,10000));}}if(!ok)process.exit(1);}
           NODE
