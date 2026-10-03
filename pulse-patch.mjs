@@ -17,13 +17,21 @@ html[data-theme="light"] .okok-pulse{background:linear-gradient(145deg,#fff,#eef
  const read=()=>{try{return JSON.parse(localStorage.getItem(STORE)||'{}')}catch{return {}}};
  const save=x=>{try{localStorage.setItem(STORE,JSON.stringify(x))}catch{}};
  const keyFor=(card,i)=>{const title=card.querySelector('h1,h2,h3,h4,.title,.name')?.textContent?.trim()||('place-'+i);return title.toLowerCase().replace(/\\s+/g,'-').slice(0,80)};
+ const isScam=card=>{
+   if(card.closest('[data-tab="scam"],#scam,.scam,.scams,.scam-section,[data-scam]')) return true;
+   const cls=((card.className||'')+' '+(card.id||'')).toLowerCase();
+   if(/scam|скам|мошенн|fraud/.test(cls)) return true;
+   const text=(card.textContent||'').toLowerCase();
+   return /scam of the week|скам недели|жалоб[аы]|мошенн|fraud|visitor report|сообщени[ея] посетител/.test(text);
+ };
  const isPlace=card=>{
-   if(card.closest('.okad,[data-ad],nav,header,footer')) return false;
+   if(card.closest('.okad,[data-ad],nav,header,footer') || isScam(card)) return false;
    const text=(card.textContent||'').toLowerCase();
    if(text.length<35) return false;
    return !!card.querySelector('h2,h3,h4,.title,.name') && (!!card.querySelector('a[href*="maps"],a[href*="google"],[data-report],.rating,.stars,.btn') || /рейтинг|rating|провер|verified|отзыв|review/.test(text));
  };
  const render=()=>{
+  document.querySelectorAll('.okok-pulse').forEach(box=>{const card=box.closest('.card,.place-card,[data-place],article');if(card&&isScam(card))box.remove()});
   const cards=[...document.querySelectorAll('.card,.place-card,[data-place],article')].filter(isPlace);
   const db=read();
   cards.forEach((card,i)=>{
@@ -48,6 +56,6 @@ writeFileSync(indexPath,html);
 
 const swPath='site/public/sw.js';
 let sw=readFileSync(swPath,'utf8');
-sw=sw.replace(/const CACHE = [^;]+;/,'const CACHE = "okok-20261003-pulse-v1";');
+sw=sw.replace(/const CACHE = [^;]+;/,'const CACHE = "okok-20261003-pulse-v2-no-scam";');
 writeFileSync(swPath,sw);
-console.log('OK-OK Pulse v1 injected.');
+console.log('OK-OK Pulse v2 injected; scam cards excluded.');
