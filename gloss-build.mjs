@@ -1607,3 +1607,23 @@ writeFileSync(swPath,travelSW);
 }
 
 await import('./scripts/apply-events.mjs');
+
+
+// Klook author referral code: shared registry powers every partner placement.
+{
+ const path='site/public/assets/commerce/partners.js';
+ let partners=readFileSync(path,'utf8');
+ const anchor="klook: {name:'Klook',url:'https://www.klook.com/',ref:'',";
+ if(!partners.includes(anchor))throw Error('Klook registry anchor missing');
+ partners=partners.replace(anchor,anchor+"referralCode:'HAF8KW',referralNote:{ru:'Реферальный код автора Klook: HAF8KW.',en:'Author’s Klook referral code: HAF8KW.',th:'รหัสแนะนำ Klook ของผู้ดูแล: HAF8KW'},referralInstructions:{ru:'Скопируйте HAF8KW и используйте его в программе приглашения друзей Klook. Доступность бонуса определяется условиями Klook.',en:'Copy HAF8KW and use it in Klook’s friend referral program. Rewards are subject to Klook’s terms.',th:'คัดลอก HAF8KW แล้วใช้ในโปรแกรมชวนเพื่อนของ Klook สิทธิ์รับรางวัลขึ้นอยู่กับเงื่อนไขของ Klook'},");
+ writeFileSync(path,partners);
+ for(const name of ['index.html','admin.html']){
+  const file='site/public/'+name;let html=readFileSync(file,'utf8');
+  html=html.replace('code ? t().referralNote :','code ? (pl.item.referralNote ? L(pl.item.referralNote) : t().referralNote) :');
+  html=html.replace('${t().referralInstructions}</p>','${pl.item.referralInstructions ? L(pl.item.referralInstructions) : t().referralInstructions}</p>');
+  html=html.replace(/partners\.js\?v=\d+/g,'partners.js?v=95');
+  writeFileSync(file,html);
+ }
+ writeFileSync(swPath,readFileSync(swPath,'utf8').replace(/partners\.js\?v=\d+/g,'partners.js?v=95').replace('pattayaok-senate-ads-v94-','pattayaok-klook-v95-'));
+ console.log('Klook referral HAF8KW ready in all partner placements.');
+}
