@@ -1,0 +1,114 @@
+[
+  {
+    "id": "hkt-old-town",
+    "category": "sights",
+    "name": "Phuket Old Town",
+    "icon": "🏘️",
+    "source": "https://www.tourismthailand.org/Trip-Planner/Suggestion-Detail/recommended-route-for-one-day-3",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Phuket%20Old%20Town%20Phuket",
+    "reviewed": "2026-10-03",
+    "text": {
+      "ru": "Прогулка по историческим улицам и сино-европейской архитектуре старого города.",
+      "en": "Walk through the old town’s historic streets and Sino-European architecture.",
+      "th": "เดินชมถนนเก่าแก่และสถาปัตยกรรมชิโน-ยุโรเปียนในย่านเมืองเก่า"
+    }
+  },
+  {
+    "id": "hkt-chalong",
+    "category": "culture",
+    "name": "Wat Chalong",
+    "icon": "🛕",
+    "source": "https://www.tourismthailand.org/Trip-Planner/Suggestion-Detail/recommended-route-for-one-day-3",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Wat%20Chalong%20Phuket",
+    "reviewed": "2026-10-03",
+    "text": {
+      "ru": "Храм Чалонг — знакомство с историей и культурой Пхукета. Перед посещением уточните правила храма.",
+      "en": "Discover Phuket’s history and culture at Wat Chalong. Check temple visitor requirements before visiting.",
+      "th": "เรียนรู้ประวัติศาสตร์และวัฒนธรรมภูเก็ตที่วัดฉลอง ตรวจสอบข้อกำหนดการเข้าชมก่อนเดินทาง"
+    }
+  },
+  {
+    "id": "hkt-promthep",
+    "category": "sights",
+    "name": "Promthep Cape",
+    "icon": "🌅",
+    "source": "https://www.tourismthailand.org/Trip-Planner/Suggestion-Detail/recommended-route-for-one-day-3",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Promthep%20Cape%20Phuket",
+    "reviewed": "2026-10-03",
+    "text": {
+      "ru": "Мыс Промтеп: морская панорама и идея для вечерней прогулки.",
+      "en": "Promthep Cape: sea panoramas and an idea for an evening outing.",
+      "th": "แหลมพรหมเทพ: ชมวิวทะเลและเป็นไอเดียสำหรับเที่ยวช่วงเย็น"
+    }
+  },
+  {
+    "id": "hkt-karon-view",
+    "category": "sights",
+    "name": "Karon Viewpoint",
+    "icon": "🔭",
+    "source": "https://www.tourismthailand.org/Trip-Planner/Suggestion-Detail/recommended-route-for-one-day-3",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Karon%20Viewpoint%20Phuket",
+    "reviewed": "2026-10-03",
+    "text": {
+      "ru": "Обзорная точка с видом на три бухты: Ката-Ной, Ката и Карон.",
+      "en": "A viewpoint overlooking three bays: Kata Noi, Kata and Karon.",
+      "th": "จุดชมวิวสามอ่าว มองเห็นกะตะน้อย กะตะ และกะรน"
+    }
+  },
+  {
+    "id": "hkt-thai-hua",
+    "category": "culture",
+    "name": "Phuket Thai Hua Museum",
+    "icon": "🏛️",
+    "source": "https://www.tourismthailand.org/Trip-Planner/Suggestion-Detail/recommended-route-for-one-day-3",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Phuket%20Thai%20Hua%20Museum%20Phuket",
+    "reviewed": "2026-10-03",
+    "text": {
+      "ru": "Музей Thai Hua включён в культурный маршрут TAT по Пхукету. Уточните часы и билеты перед поездкой.",
+      "en": "Thai Hua Museum is included in TAT’s Phuket cultural itinerary. Confirm hours and tickets before visiting.",
+      "th": "พิพิธภัณฑ์ภูเก็ตไทยหัวอยู่ในเส้นทางเที่ยวภูเก็ตของ ททท. ตรวจสอบเวลาและบัตรก่อนเดินทาง"
+    }
+  },
+  {
+    "id": "hkt-kata",
+    "category": "beach",
+    "name": "Kata Beach",
+    "icon": "🏖️",
+    "source": "https://www.tourismthailand.org/Destinations/Provinces/Phuket/350",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Kata%20Beach%20Phuket",
+    "reviewed": "2026-10-03",
+    "text": {
+      "ru": "Пляж для прогулки и отдыха у моря. Перед купанием проверьте флаги и состояние моря.",
+      "en": "A beach for a seaside walk and relaxation. Check warning flags and sea conditions before swimming.",
+      "th": "หาดกะตะ สำหรับเดินเล่นและพักผ่อนริมทะเล ตรวจสอบธงเตือนและสภาพทะเลก่อนลงน้ำ"
+    }
+  },
+  {
+    "id": "hkt-karon",
+    "category": "beach",
+    "name": "Karon Beach",
+    "icon": "🏖️",
+    "source": "https://www.tourismthailand.org/Destinations/Provinces/Phuket/350",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Karon%20Beach%20Phuket",
+    "reviewed": "2026-10-03",
+    "text": {
+      "ru": "Пляж для прогулки и отдыха у моря. Перед купанием проверьте флаги и состояние моря.",
+      "en": "A beach for a seaside walk and relaxation. Check warning flags and sea conditions before swimming.",
+      "th": "หาดกะรน สำหรับเดินเล่นและพักผ่อนริมทะเล ตรวจสอบธงเตือนและสภาพทะเลก่อนลงน้ำ"
+    }
+  },
+  {
+    "id": "hkt-nai-harn",
+    "category": "beach",
+    "name": "Nai Harn Beach",
+    "icon": "🏖️",
+    "source": "https://www.tourismthailand.org/Destinations/Provinces/Phuket/350",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Nai%20Harn%20Beach%20Phuket",
+    "reviewed": "2026-10-03",
+    "text": {
+      "ru": "Пляж для прогулки и отдыха у моря. Перед купанием проверьте флаги и состояние моря.",
+      "en": "A beach for a seaside walk and relaxation. Check warning flags and sea conditions before swimming.",
+      "th": "หาดในหาน สำหรับเดินเล่นและพักผ่อนริมทะเล ตรวจสอบธงเตือนและสภาพทะเลก่อนลงน้ำ"
+    }
+  }
+]
