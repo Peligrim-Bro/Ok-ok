@@ -57,7 +57,11 @@ outgoingLight+=emissive*(0.48+shellEdge*0.7)+diffuse*(shellEdge*0.9+0.13)+vec3(1
   const points=[];for(let i=0;i<=12;i++){const t=.16+i*.68/12;points.push([r*Math.pow(Math.sin(Math.PI*t),.48)*.7,(t-.5)*length,r*Math.pow(Math.sin(Math.PI*t),.48)*.8]);}tube(o,points,.009,cyanGlow);
   return o;
  }
- const baby=options.stage===0;host.dataset.lifeStage=String(options.stage);host.dataset.characterHeight=baby?'2.0':options.stage===1?'2.85':'3.4';const body=new THREE.Group();root.add(body);const childScale=baby?.55:options.stage===1?.78:.94;body.scale.setScalar(childScale);
+ const baby=options.stage===0,child=options.stage===1;
+ // Growth changes head-to-body proportions, not just overall scale.
+ const childScale=baby?.48:child?.72:1.10,headScale=baby?.85:child?1.00:.90;
+ host.dataset.lifeStage=String(options.stage);host.dataset.characterHeight=baby?'2.1':child?'3.0':'3.85';host.dataset.headBodyRatio=(headScale/childScale).toFixed(3);
+ const body=new THREE.Group();root.add(body);body.scale.setScalar(childScale);
  sphere(body,cyan,0,1.7,0,.395,.39,.30);sphere(body,cyan,0,1.18,0,.31,.19,.23);ring(body,0,1.34,0,.29,pink,Math.PI/2);
  sphere(body,pink,0,2.18,0,.13,.13,.14);ring(body,0,2.15,0,.13,pink,Math.PI/2);
  const heartShape=new THREE.Shape();heartShape.moveTo(0,-.9);heartShape.bezierCurveTo(-1.6,.1,-1.15,1.25,0,.55);heartShape.bezierCurveTo(1.15,1.25,1.6,.1,0,-.9);
@@ -66,15 +70,29 @@ outgoingLight+=emissive*(0.48+shellEdge*0.7)+diffuse*(shellEdge*0.9+0.13)+vec3(1
  // Badge is a small 3D disk; canvas texture is generated locally.
  const badgeCanvas=document.createElement('canvas');badgeCanvas.width=badgeCanvas.height=128;const bc=badgeCanvas.getContext('2d');bc.clearRect(0,0,128,128);bc.fillStyle='#635ce2';bc.beginPath();bc.arc(64,64,56,0,Math.PI*2);bc.fill();bc.strokeStyle='#b2efff';bc.lineWidth=6;bc.stroke();bc.fillStyle='#fff';bc.font='bold 52px sans-serif';bc.textAlign='center';bc.textBaseline='middle';bc.fillText('OK',64,67);const badgeTex=new THREE.CanvasTexture(badgeCanvas);textures.add(badgeTex);const badgeMat=new THREE.MeshBasicMaterial({map:badgeTex,transparent:true});materials.add(badgeMat);const badge=new THREE.Mesh(geometry(new THREE.CircleGeometry(.12,32)),badgeMat);badge.position.set(.10,1.82,.319);body.add(badge);
  tube(body,[[-.25,1.98,.12],[-.33,1.80,.16],[-.26,1.48,.14]],.014,cyanGlow);tube(body,[[.25,1.98,.12],[.33,1.80,.16],[.26,1.48,.14]],.014,cyanGlow);
- const legs=baby?[[-.18,.65,0,-.58,.37,.92],[.18,.65,0,.58,.37,.92]]:[[-.18,1.14,0,-.3,.32,.07],[.18,1.14,0,options.gender==='girl'?.62:.38,options.gender==='girl'?.62:.32,options.gender==='girl'?.15:.02]];if(baby){body.position.y=-.08;for(const mesh of body.children){if(mesh.position.y>1||mesh.geometry?.type==='TubeGeometry')mesh.position.y-=.43;}}
- for(const l of legs){const a=l.slice(0,3),b=l.slice(3);if(baby){const knee=[b[0]*.7,.45,.43];limb(body,a,knee,.13);limb(body,knee,b,.12);sphere(body,cyan,...knee,.14);}else{const knee=[b[0],.72,options.gender==='girl'&&b[0]>0?.18:.015];limb(body,a,knee,.14);limb(body,knee,b,.115);sphere(body,cyan,...knee,.13);}sphere(body,pink,...a,.13,.1,.13);sphere(body,pink,b[0],b[1],b[2],.14,.08,.14);ring(body,b[0],b[1],b[2],.12,glow,Math.PI/2);const shoe=sphere(body,cyan,b[0],baby?.33:(options.gender==='girl'&&b[0]>0?.46:.16),baby?1:(options.gender==='girl'&&b[0]>0?.37:.15),.24,baby?.19:.14,.29);if(!baby&&options.gender==='girl'&&b[0]>0)shoe.rotation.z=-.4;if(baby){shoe.rotation.x=-.65;sphere(body,pink,b[0],.30,1.22,.16,.15,.027);}}
+ const legs=baby?[
+  {hip:[-.18,.65,0],knee:[-.406,.45,.43],ankle:[-.58,.37,.92]},
+  {hip:[.18,.65,0],knee:[.406,.45,.43],ankle:[.58,.37,.92]}
+ ]:[
+  {hip:[-.18,1.14,0],knee:[-.27,.73,.025],ankle:[-.30,.32,.07]},
+  options.gender==='girl'?{hip:[.18,1.14,0],knee:[.40,.78,.02],ankle:[.59,.44,.16],raised:true}:{hip:[.18,1.14,0],knee:[.32,.73,.025],ankle:[.38,.32,.02]}
+ ];
+ if(baby){body.position.y=-.08;for(const mesh of body.children){if(mesh.position.y>1||mesh.geometry?.type==='TubeGeometry')mesh.position.y-=.43;}}
+ for(const {hip:a,knee,ankle:b,raised} of legs){
+  limb(body,a,knee,baby?.13:.14);limb(body,knee,b,baby?.12:.115);sphere(body,cyan,...knee,.14);
+  sphere(body,pink,...a,.13,.1,.13);sphere(body,pink,...b,.14,.08,.14);ring(body,...b,.12,glow,Math.PI/2);
+  // Every shoe follows its own ankle; the lifted leg retains a full-length shin.
+  const shoe=sphere(body,cyan,b[0],baby?.33:b[1]-.14,baby?1:b[2]+.10,.24,baby?.19:.14,.29);
+  if(raised){shoe.rotation.z=-.32;shoe.rotation.x=-.10;}
+  if(baby){shoe.rotation.x=-.65;sphere(body,pink,b[0],.30,1.22,.16,.15,.027);}
+ }
  // Hands have five separated rounded fingers and a thumb, visible from every side.
  function hand(parent,x,y,z,rotation){const h=new THREE.Group();h.position.set(x,y,z);h.rotation.z=rotation;h.scale.setScalar(1.15);parent.add(h);sphere(h,pink,0,0,0,.14,.16,.07);for(let i=0;i<4;i++){const px=(i-1.5)*.065;limbFinger(h,[px,.1,0],[px*1.5,.28+(i===1||i===2?.04:0),.015],.042);}limbFinger(h,[-.1,.01,0],[-.24,.12,.02],.044);ring(h,0,-.14,0,.105,pink,Math.PI/2);ring(h,0,-.17,0,.115,glow,Math.PI/2);return h;}
  function limbFinger(parent,a,b,r){tube(parent,[a,b],r,pink);sphere(parent,pink,...b,r);}
  const armLeft=new THREE.Group();armLeft.position.set(-.3,1.95,0);body.add(armLeft);limb(armLeft,[0,0,0],[-.4,-.31,.03],.085);limb(armLeft,[-.4,-.31,.03],[-.65,-.48,.1],.09);sphere(armLeft,pink,-.02,0,0,.14,.15,.13);sphere(armLeft,cyan,-.4,-.31,.03,.12);hand(armLeft,-.72,-.52,.1,2.35);
  const wave=new THREE.Group();wave.position.set(.3,1.95,0);body.add(wave);wave.rotation.z=options.gender==='girl'?.18:0;limb(wave,[0,0,0],[.35,.19,.03],.09);limb(wave,[.35,.19,.03],[.62,.56,.05],.085);sphere(wave,pink,0,0,0,.14,.15,.13);sphere(wave,cyan,.35,.19,.03,.115);hand(wave,.66,.72,.05,-.22);
  let diaperMat=null;if(baby){diaperMat=mat({color:0xe6e2ff,roughness:.45,clearcoat:.35});const diaper=sphere(body,diaperMat,0,.74,.07,.33,.20,.27);diaper.name='baby-diaper';sphere(body,pink,-.27,.78,.13,.06,.04,.07);sphere(body,pink,.27,.78,.13,.06,.04,.07);armLeft.position.y-=.43;armLeft.rotation.z=-.25;wave.position.y-=.43;}else if(options.gender==='girl'){armLeft.position.x=.3;armLeft.scale.x=-1;wave.position.x=-.3;wave.scale.x=-1;body.rotation.z=-.075;}
- const head=new THREE.Group();root.add(head);head.position.y=baby?1.37:childScale*2.18+.63;head.scale.setScalar(baby?.79:options.stage===1?.93:1.02);root.userData.stage=options.stage;
+ const head=new THREE.Group();root.add(head);head.position.y=baby?1.28:childScale*2.18+headScale*.625-.04;head.scale.setScalar(headScale);root.userData.stage=options.stage;
  sphere(head,headMat,0,0,0,.745,.625,.61);
  sphere(head,pink,-.71,-.025,.04,.145,.16,.13);sphere(head,pink,.71,-.025,.04,.145,.16,.13);
  // Glowing contours are curved geometry on the actual surface, not a billboard.
