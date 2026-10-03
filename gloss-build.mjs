@@ -1576,8 +1576,8 @@ writeFileSync(swPath,travelSW);
  writeFileSync(cssPath,readFileSync(cssPath,'utf8')+'\n.map-12go{margin:12px 14px;border:1px solid var(--line);border-radius:16px;background:var(--card);color:var(--text);overflow:hidden}.map-12go summary{padding:14px;cursor:pointer;font-size:13px;font-weight:700;min-height:44px}.map-12go-body{padding:0 12px 14px;min-width:0}.map-12go-frame{display:block;width:100%;max-width:416px;height:520px;border:0;border-radius:12px;margin:12px auto;background:#fff}.map-12go-body .btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 14px;font-size:12px!important}\n');
  for(const name of ['index.html','admin.html']){
   const file='site/public/'+name;
-  writeFileSync(file,readFileSync(file,'utf8').replaceAll('pattaya-map.js?v=92','pattaya-map.js?v=93').replaceAll('travel-map.css?v=92','travel-map.css?v=93'));
+  writeFileSync(file,readFileSync(file,'utf8').replaceAll('pattaya-map.js?v=92','pattaya-map.js?v=93').replaceAll('travel-map.css?v=92','travel-map.css?v=93').replace(/partners\.js\?v=\d+/g,'partners.js?v=93'));
  }
- writeFileSync(swPath,readFileSync(swPath,'utf8').replaceAll('pattaya-map.js?v=92','pattaya-map.js?v=93').replaceAll('travel-map.css?v=92','travel-map.css?v=93').replace('pattayaok-oki-reference-v90-','pattayaok-12go-v93-'));
+ writeFileSync(swPath,readFileSync(swPath,'utf8').replaceAll('pattaya-map.js?v=92','pattaya-map.js?v=93').replaceAll('travel-map.css?v=92','travel-map.css?v=93').replace(/partners\.js\?v=\d+/g,'partners.js?v=93').replace('pattayaok-oki-reference-v90-','pattayaok-12go-v93-'));
  console.log('12GO referral 17095940 ready; widget loads only within the city map.');
 }
