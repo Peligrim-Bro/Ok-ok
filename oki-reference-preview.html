@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Оки — примерка внешности</title>
+<style>
+body{margin:0;background:#100b27;color:#fff;font:16px system-ui;text-align:center}main{max-width:680px;margin:auto;padding:16px}h1{font-size:24px}p{color:#c7c0df;line-height:1.5}#model{height:min(65vh,560px);min-height:300px;touch-action:none;background:radial-gradient(ellipse,#37205080,transparent 70%);border-radius:24px}#model canvas{display:block;width:100%;height:100%}fieldset{border:0;display:flex;justify-content:center;gap:10px;flex-wrap:wrap}select{font:inherit;padding:12px;border-radius:12px;background:#282040;color:white;border:1px solid #756795}label{display:grid;gap:6px;font-size:14px}a{color:#74e5ff}
+</style>
+<main><h1>Оки — примерка внешности</h1><p>Тест формы и материала. Вращай персонажа пальцем.<br>Возраст и прогресс Оки на сайте здесь не меняются.</p>
+<div id="model"></div>
+<fieldset><label>Персонаж<select id="gender"><option value="boy">Мальчик</option><option value="girl">Девочка</option></select></label><label>Пропорции<select id="stage"><option value="2">Взрослый образец</option><option value="1">Ребёнок</option><option value="0">Малыш</option></select></label><label>Настроение<select id="mood"><option value="happy">Радостный</option><option value="quiet">Задумчивый</option><option value="sleep">Спит</option></select></label></fieldset>
+<p>Первый этап приближения к рендеру.</p><a href="/">Вернуться к сайту</a></main>
+<script src="/assets/oki-3d-v109.js"></script><script>
+const host=document.querySelector('#model');let model;
+function mount(){model?.dispose();host.replaceChildren();model=window.OKI3D?.mount(host,{stage:Number(document.querySelector('#stage').value),gender:document.querySelector('#gender').value,mood:document.querySelector('#mood').value,skin:'neon',interactive:true,label:'Оки: вращаемая 3D-модель'});if(!model)host.textContent='В этом браузере недоступен WebGL. Открой страницу в Safari с поддержкой 3D.';}
+document.querySelector('#gender').onchange=mount;document.querySelector('#stage').onchange=mount;document.querySelector('#mood').onchange=()=>model?.update(document.querySelector('#mood').value,'neon');mount();
+</script></html>
