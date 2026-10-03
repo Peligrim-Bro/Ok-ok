@@ -112,9 +112,9 @@ outgoingLight+=emissive*(0.48+shellEdge*0.7)+diffuse*(shellEdge*0.9+0.13)+vec3(1
  sphere(head,blush,0,-.11,.63,.105,.087,.09);
  const cheeks=[sphere(head,blush,-.43,-.17,.505,.16,.115,.105),sphere(head,blush,.43,-.17,.505,.16,.115,.105)];
  const smile=new THREE.Group();head.add(smile);const smileShape=new THREE.Shape();smileShape.moveTo(-.22,0);smileShape.quadraticCurveTo(0,-.32,.22,0);smileShape.quadraticCurveTo(0,-.045,-.22,0);const mouth=new THREE.Mesh(geometry(new THREE.ExtrudeGeometry(smileShape,{depth:.012,bevelEnabled:true,bevelSize:.006,bevelThickness:.006,bevelSegments:2,curveSegments:24})),mouthMat);mouth.position.set(0,-.29,.543);smile.add(mouth);sphere(smile,tongueMat,0,-.423,.57,.11,.035,.014);tube(smile,[[-.22,-.29,.547],[0,-.312,.57],[.22,-.29,.547]],.009,pink);
- const thoughtMouth=new THREE.Group();head.add(thoughtMouth);sphere(thoughtMouth,mouthMat,.055,-.32,.565,.058,.071,.014);const thoughtLip=ring(thoughtMouth,.055,-.32,.579,.065,pink,0);thoughtLip.scale.set(.8,1,.35);thoughtMouth.visible=false;
+ const thoughtMouth=new THREE.Group();head.add(thoughtMouth);sphere(thoughtMouth,mouthMat,.035,-.32,.565,.035,.044,.014);const lipPoints=[];for(let i=0;i<=32;i++){const a=i*Math.PI*2/32;lipPoints.push([.035+Math.cos(a)*.039,-.32+Math.sin(a)*.048,.581]);}tube(thoughtMouth,lipPoints,.007,tongueMat);thoughtMouth.visible=false;
  // A separate articulated thinking pose is fitted to the face, for every age.
- const thoughtArm=new THREE.Group();head.add(thoughtArm);const thoughtSide=options.gender==='girl'?-1:1;
+ const thoughtArm=new THREE.Group();head.add(thoughtArm);const thoughtSide=!baby&&options.gender==='girl'?-1:1;
  const ta=[thoughtSide*.25,-.88,0],te=[thoughtSide*.63,-.78,.24],tw=[thoughtSide*.44,-.42,.66];
  limb(thoughtArm,ta,te,.075);limb(thoughtArm,te,tw,.068);sphere(thoughtArm,pink,...ta,.10);sphere(thoughtArm,cyan,...te,.085);sphere(thoughtArm,pink,...tw,.09,.10,.055);
  for(let i=0;i<3;i++)sphere(thoughtArm,pink,tw[0]+thoughtSide*(i-1)*.04,tw[1]+.015,tw[2]+.05,.026,.048,.025);
@@ -163,7 +163,7 @@ outgoingLight+=emissive*(0.48+shellEdge*0.7)+diffuse*(shellEdge*0.9+0.13)+vec3(1
   wave.rotation.x=THREE.MathUtils.lerp(wave.rotation.x,baby?0:thinking?.45:resting?.25:0,.1);
   host.dataset.expression=resting?'calm':thinking?'think':'wave';needs=true;
   // Quiet/thinking look raises the pupils; sleep keeps its closed eyes.
-  for(const pair of gaze)for(const part of pair){const highlight=part.material===white;const bx=highlight?(part.scale.x>.02?-.035:.04):0,by=highlight?(part.scale.x>.02?.045:-.059):part.material===iris?-.01:-.018;part.position.x=THREE.MathUtils.lerp(part.position.x,bx+(thinking?.055:0),.12);part.position.y=THREE.MathUtils.lerp(part.position.y,by+(thinking?.072:0),.12);}
+  for(const pair of gaze)for(const part of pair){const highlight=part.material===white;const bx=highlight?(part.scale.x>.02?-.035:.04):0,by=highlight?(part.scale.x>.02?.045:-.059):part.material===iris?-.01:-.018;part.position.x=THREE.MathUtils.lerp(part.position.x,bx+(thinking?.026:0),.12);part.position.y=THREE.MathUtils.lerp(part.position.y,by+(thinking?.040:0),.12);}
   if(!reduce&&!moving){root.position.y=.06+Math.sin(time*.0018)*.07;root.rotation.z=Math.sin(time*.0011)*.025;headPivot.rotation.z=body.rotation.z+(thinking?-.12:resting?.04:0)+Math.sin(time*.0015)*.04;const beat=1+Math.sin(time*.003)*.06;heart.scale.set(.12*beat,.13*beat,.1*beat);}
   setEyesClosed(currentMood==='sleep'||(!reduce&&time%5900>5760));
   if(needs){renderer.render(scene,camera);needs=false;host.dataset.ready='true';host.dataset.azimuth=controls.getAzimuthalAngle().toFixed(3);}}
