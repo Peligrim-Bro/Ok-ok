@@ -1609,6 +1609,7 @@ writeFileSync(swPath,travelSW);
 await import('./scripts/apply-events.mjs');
 
 // Updated physical OKI material and face: invalidate the mascot bundle URL.
+copyFileSync('oki-reference-preview.html','site/public/oki-reference-preview.html');
 for(const f of ['site/public/index.html','site/public/admin/index.html','site/public/sw.js']){
  if(existsSync(f))writeFileSync(f,readFileSync(f,'utf8').replaceAll('oki-3d-v90.js','oki-3d-v97.js'));
 }
