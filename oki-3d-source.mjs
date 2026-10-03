@@ -24,20 +24,25 @@ window.OKI3D={mount(host,options){
  const headMat=mat({...glass,color:0xffcaee,attenuationColor:0xffe5f6,emissive:0xff64cf,opacity:.38});
  const hairMat=mat({...glass,color:0xffb4e6,attenuationColor:0xffdaf2,emissive:0xff64cf,opacity:.46});
  for(const shell of [cyan,pink,headMat,hairMat]){
+  const centerOpacity=shell===pink?.62:shell===cyan?.48:.43;
   shell.onBeforeCompile=shader=>{shader.fragmentShader=shader.fragmentShader.replace('#include <opaque_fragment>',`float shellEdge=pow(1.0-abs(dot(normalize(normal),normalize(vViewPosition))),2.0);
-diffuseColor.a=mix(0.36,0.96,shellEdge);
+diffuseColor.a=mix(${centerOpacity.toFixed(2)},0.96,shellEdge);
 vec3 shellReflection=reflect(-normalize(vViewPosition),normalize(normal));
 float softStrip=pow(max(0.0,dot(shellReflection,normalize(vec3(-0.65,0.8,0.9)))),18.0);
 float coolStrip=pow(max(0.0,dot(shellReflection,normalize(vec3(0.85,0.15,0.65)))),28.0);
-outgoingLight+=diffuse*(shellEdge*0.9+0.13)+vec3(1.0,0.75,0.95)*softStrip*1.7+vec3(0.25,0.85,1.0)*coolStrip*1.3;
+outgoingLight+=emissive*(0.48+shellEdge*0.7)+diffuse*(shellEdge*0.9+0.13)+vec3(1.0,0.75,0.95)*softStrip*2.3+vec3(0.25,0.85,1.0)*coolStrip*1.8;
 #include <opaque_fragment>`);};
-  shell.customProgramCacheKey=()=> 'oki-fresnel-shell-v100';
+  shell.customProgramCacheKey=()=> 'oki-fresnel-shell-v101-'+centerOpacity;
  }
  const white=mat({color:0xe9efff,roughness:.13,clearcoat:1});const pupil=mat({color:0x08182d,roughness:.055,clearcoat:1}),iris=mat({color:0x29cce9,roughness:.09,clearcoat:1,emissive:0x0096c8,emissiveIntensity:.16});
  const mouthMat=mat({color:0x7d184b,roughness:.35});const tongueMat=mat({color:0xff82a7,roughness:.3,clearcoat:1});
  const glow=new THREE.MeshBasicMaterial({color:new THREE.Color(1,.18,.7),toneMapped:false});materials.add(glow);const cyanGlow=new THREE.MeshBasicMaterial({color:new THREE.Color(.12,.9,1),toneMapped:false});materials.add(cyanGlow);
  const haloMat=color=>{const m=new THREE.ShaderMaterial({uniforms:{tint:{value:new THREE.Color(color)}},vertexShader:'varying vec3 vN;varying vec3 vV;void main(){vec4 p=modelViewMatrix*vec4(position,1.);vN=normalize(normalMatrix*normal);vV=normalize(-p.xyz);gl_Position=projectionMatrix*p;}',fragmentShader:'uniform vec3 tint;varying vec3 vN;varying vec3 vV;void main(){float edge=pow(1.-abs(dot(normalize(vN),normalize(vV))),3.);gl_FragColor=vec4(tint,edge*.55);}',transparent:true,depthWrite:false,blending:THREE.AdditiveBlending,toneMapped:false});materials.add(m);return m;};const pinkHalo=haloMat(0xff2ebd),blueHalo=haloMat(0x00d5ff);
- function halo(mesh,m){const shell=new THREE.Mesh(mesh.geometry,m);shell.scale.setScalar(1.025);mesh.add(shell);}
+ const softHalos=new Map();
+ function halo(mesh,m){const shell=new THREE.Mesh(mesh.geometry,m);shell.scale.setScalar(1.025);mesh.add(shell);
+  if(!softHalos.has(m)){const soft=m.clone();soft.fragmentShader=soft.fragmentShader.replace('edge*.55','edge*.11');materials.add(soft);softHalos.set(m,soft);}
+  const haze=new THREE.Mesh(mesh.geometry,softHalos.get(m));haze.scale.setScalar(1.075);mesh.add(haze);
+ }
  const ball=geometry(new THREE.SphereGeometry(1,48,32));
  function sphere(parent,m,x,y,z,sx,sy=sx,sz=sx){const o=new THREE.Mesh(ball,m);o.position.set(x,y,z);o.scale.set(sx,sy,sz);parent.add(o);if(m===cyan||m===headMat||m===hairMat||m===pink)halo(o,m===cyan?blueHalo:pinkHalo);return o;}
  function tube(parent,points,r,m){const curve=new THREE.CatmullRomCurve3(points.map(p=>new THREE.Vector3(...p)));const o=new THREE.Mesh(geometry(new THREE.TubeGeometry(curve,Math.max(12,points.length*9),r,16,false)),m);parent.add(o);if(m===hairMat||m===pink)halo(o,pinkHalo);return o;}
@@ -49,7 +54,7 @@ outgoingLight+=diffuse*(shellEdge*0.9+0.13)+vec3(1.0,0.75,0.95)*softStrip*1.7+ve
   const points=[];for(let i=0;i<=12;i++){const t=.16+i*.68/12;points.push([r*Math.pow(Math.sin(Math.PI*t),.48)*.7,(t-.5)*length,r*Math.pow(Math.sin(Math.PI*t),.48)*.8]);}tube(o,points,.009,cyanGlow);
   return o;
  }
- const baby=options.stage===0;host.dataset.lifeStage=String(options.stage);host.dataset.characterHeight=baby?'2.0':options.stage===1?'2.85':'3.4';const body=new THREE.Group();root.add(body);const childScale=baby?.55:options.stage===1?.78:1;body.scale.setScalar(childScale);
+ const baby=options.stage===0;host.dataset.lifeStage=String(options.stage);host.dataset.characterHeight=baby?'2.0':options.stage===1?'2.85':'3.4';const body=new THREE.Group();root.add(body);const childScale=baby?.55:options.stage===1?.78:.94;body.scale.setScalar(childScale);
  sphere(body,cyan,0,1.7,0,.395,.39,.30);sphere(body,cyan,0,1.18,0,.31,.19,.23);ring(body,0,1.34,0,.29,pink,Math.PI/2);
  sphere(body,pink,0,2.18,0,.13,.13,.14);ring(body,0,2.15,0,.13,pink,Math.PI/2);
  const heartShape=new THREE.Shape();heartShape.moveTo(0,-.9);heartShape.bezierCurveTo(-1.6,.1,-1.15,1.25,0,.55);heartShape.bezierCurveTo(1.15,1.25,1.6,.1,0,-.9);
@@ -59,14 +64,14 @@ outgoingLight+=diffuse*(shellEdge*0.9+0.13)+vec3(1.0,0.75,0.95)*softStrip*1.7+ve
  const badgeCanvas=document.createElement('canvas');badgeCanvas.width=badgeCanvas.height=128;const bc=badgeCanvas.getContext('2d');bc.clearRect(0,0,128,128);bc.fillStyle='#635ce2';bc.beginPath();bc.arc(64,64,56,0,Math.PI*2);bc.fill();bc.strokeStyle='#b2efff';bc.lineWidth=6;bc.stroke();bc.fillStyle='#fff';bc.font='bold 52px sans-serif';bc.textAlign='center';bc.textBaseline='middle';bc.fillText('OK',64,67);const badgeTex=new THREE.CanvasTexture(badgeCanvas);textures.add(badgeTex);const badgeMat=new THREE.MeshBasicMaterial({map:badgeTex,transparent:true});materials.add(badgeMat);const badge=new THREE.Mesh(geometry(new THREE.CircleGeometry(.12,32)),badgeMat);badge.position.set(.10,1.82,.319);body.add(badge);
  tube(body,[[-.25,1.98,.12],[-.33,1.80,.16],[-.26,1.48,.14]],.014,cyanGlow);tube(body,[[.25,1.98,.12],[.33,1.80,.16],[.26,1.48,.14]],.014,cyanGlow);
  const legs=baby?[[-.18,.65,0,-.58,.37,.92],[.18,.65,0,.58,.37,.92]]:[[-.18,1.14,0,-.3,.32,.07],[.18,1.14,0,options.gender==='girl'?.62:.38,options.gender==='girl'?.62:.32,options.gender==='girl'?.15:.02]];if(baby){body.position.y=-.08;for(const mesh of body.children){if(mesh.position.y>1||mesh.geometry?.type==='TubeGeometry')mesh.position.y-=.43;}}
- for(const l of legs){const a=l.slice(0,3),b=l.slice(3);if(baby){const knee=[b[0]*.7,.45,.43];limb(body,a,knee,.13);limb(body,knee,b,.12);sphere(body,cyan,...knee,.14);}else{const knee=[b[0],.72,options.gender==='girl'&&b[0]>0?.18:.015];limb(body,a,knee,.14);limb(body,knee,b,.115);sphere(body,cyan,...knee,.13);}sphere(body,pink,...a,.13,.1,.13);sphere(body,pink,b[0],b[1],b[2],.14,.08,.14);ring(body,b[0],b[1],b[2],.12,glow,Math.PI/2);const shoe=sphere(body,cyan,b[0],baby?.33:(options.gender==='girl'&&b[0]>0?.46:.16),baby?1:(options.gender==='girl'&&b[0]>0?.37:.15),.22,baby?.19:.12,.27);if(!baby&&options.gender==='girl'&&b[0]>0)shoe.rotation.z=-.4;if(baby){shoe.rotation.x=-.65;sphere(body,pink,b[0],.30,1.22,.16,.15,.027);}}
+ for(const l of legs){const a=l.slice(0,3),b=l.slice(3);if(baby){const knee=[b[0]*.7,.45,.43];limb(body,a,knee,.13);limb(body,knee,b,.12);sphere(body,cyan,...knee,.14);}else{const knee=[b[0],.72,options.gender==='girl'&&b[0]>0?.18:.015];limb(body,a,knee,.14);limb(body,knee,b,.115);sphere(body,cyan,...knee,.13);}sphere(body,pink,...a,.13,.1,.13);sphere(body,pink,b[0],b[1],b[2],.14,.08,.14);ring(body,b[0],b[1],b[2],.12,glow,Math.PI/2);const shoe=sphere(body,cyan,b[0],baby?.33:(options.gender==='girl'&&b[0]>0?.46:.16),baby?1:(options.gender==='girl'&&b[0]>0?.37:.15),.24,baby?.19:.14,.29);if(!baby&&options.gender==='girl'&&b[0]>0)shoe.rotation.z=-.4;if(baby){shoe.rotation.x=-.65;sphere(body,pink,b[0],.30,1.22,.16,.15,.027);}}
  // Hands have five separated rounded fingers and a thumb, visible from every side.
- function hand(parent,x,y,z,rotation){const h=new THREE.Group();h.position.set(x,y,z);h.rotation.z=rotation;h.scale.setScalar(1.15);parent.add(h);sphere(h,pink,0,0,0,.14,.16,.07);for(let i=0;i<4;i++){const px=(i-1.5)*.065;limbFinger(h,[px,.1,0],[px*1.5,.28+(i===1||i===2?.04:0),.015],.042);}limbFinger(h,[-.1,.01,0],[-.24,.12,.02],.044);ring(h,0,-.14,0,.105,glow,Math.PI/2);return h;}
+ function hand(parent,x,y,z,rotation){const h=new THREE.Group();h.position.set(x,y,z);h.rotation.z=rotation;h.scale.setScalar(1.15);parent.add(h);sphere(h,pink,0,0,0,.14,.16,.07);for(let i=0;i<4;i++){const px=(i-1.5)*.065;limbFinger(h,[px,.1,0],[px*1.5,.28+(i===1||i===2?.04:0),.015],.042);}limbFinger(h,[-.1,.01,0],[-.24,.12,.02],.044);ring(h,0,-.14,0,.105,pink,Math.PI/2);ring(h,0,-.17,0,.115,glow,Math.PI/2);return h;}
  function limbFinger(parent,a,b,r){tube(parent,[a,b],r,pink);sphere(parent,pink,...b,r);}
  const armLeft=new THREE.Group();armLeft.position.set(-.3,1.95,0);body.add(armLeft);limb(armLeft,[0,0,0],[-.4,-.31,.03],.085);limb(armLeft,[-.4,-.31,.03],[-.65,-.48,.1],.09);sphere(armLeft,pink,-.02,0,0,.14,.15,.13);sphere(armLeft,cyan,-.4,-.31,.03,.12);hand(armLeft,-.72,-.52,.1,2.35);
  const wave=new THREE.Group();wave.position.set(.3,1.95,0);body.add(wave);wave.rotation.z=options.gender==='girl'?.18:0;limb(wave,[0,0,0],[.35,.19,.03],.09);limb(wave,[.35,.19,.03],[.62,.56,.05],.085);sphere(wave,pink,0,0,0,.14,.15,.13);sphere(wave,cyan,.35,.19,.03,.115);hand(wave,.66,.72,.05,-.22);
  let diaperMat=null;if(baby){diaperMat=mat({color:0xe6e2ff,roughness:.45,clearcoat:.35});const diaper=sphere(body,diaperMat,0,.74,.07,.33,.20,.27);diaper.name='baby-diaper';sphere(body,pink,-.27,.78,.13,.06,.04,.07);sphere(body,pink,.27,.78,.13,.06,.04,.07);armLeft.position.y-=.43;armLeft.rotation.z=-.25;wave.position.y-=.43;}else if(options.gender==='girl'){armLeft.position.x=.3;armLeft.scale.x=-1;wave.position.x=-.3;wave.scale.x=-1;body.rotation.z=-.075;}
- const head=new THREE.Group();root.add(head);head.position.y=baby?1.37:childScale*2.18+.57;head.scale.setScalar(baby?.79:options.stage===1?.89:.96);root.userData.stage=options.stage;
+ const head=new THREE.Group();root.add(head);head.position.y=baby?1.37:childScale*2.18+.63;head.scale.setScalar(baby?.79:options.stage===1?.93:1.02);root.userData.stage=options.stage;
  sphere(head,headMat,0,0,0,.745,.625,.61);
  sphere(head,pink,-.71,-.025,.04,.145,.16,.13);sphere(head,pink,.71,-.025,.04,.145,.16,.13);
  // Glowing contours are curved geometry on the actual surface, not a billboard.
@@ -77,10 +82,10 @@ outgoingLight+=diffuse*(shellEdge*0.9+0.13)+vec3(1.0,0.75,0.95)*softStrip*1.7+ve
  tube(head,[[x-.12,.30,.48],[x-.09,.34,.51],[x+.02,.345,.535],[x+.11,.31,.50]],.019,glow);
  }
  // Rounded pink facial volumes from the owner's reference, attached in 3D.
- const blush=mat({...glass,color:0xffa0d7,attenuationColor:0xffc9e8,emissive:0xea2589,opacity:.78});
- sphere(head,blush,0,-.12,.615,.095,.085,.085);
+ const blush=mat({...glass,color:0xffa0d7,attenuationColor:0xffc9e8,emissive:0xea2589,emissiveIntensity:.35,opacity:.84});
+ sphere(head,blush,0,-.11,.63,.105,.087,.09);
  sphere(head,blush,-.43,-.17,.505,.16,.115,.105);sphere(head,blush,.43,-.17,.505,.16,.115,.105);
- const smile=new THREE.Group();head.add(smile);const smileShape=new THREE.Shape();smileShape.moveTo(-.22,0);smileShape.quadraticCurveTo(0,-.29,.22,0);smileShape.quadraticCurveTo(0,-.045,-.22,0);const mouth=new THREE.Mesh(geometry(new THREE.ShapeGeometry(smileShape,24)),mouthMat);mouth.position.set(0,-.29,.543);smile.add(mouth);sphere(smile,tongueMat,0,-.405,.56,.11,.028,.012);tube(smile,[[-.22,-.29,.547],[0,-.312,.57],[.22,-.29,.547]],.009,pink);
+ const smile=new THREE.Group();head.add(smile);const smileShape=new THREE.Shape();smileShape.moveTo(-.22,0);smileShape.quadraticCurveTo(0,-.32,.22,0);smileShape.quadraticCurveTo(0,-.045,-.22,0);const mouth=new THREE.Mesh(geometry(new THREE.ExtrudeGeometry(smileShape,{depth:.012,bevelEnabled:true,bevelSize:.006,bevelThickness:.006,bevelSegments:2,curveSegments:24})),mouthMat);mouth.position.set(0,-.29,.543);smile.add(mouth);sphere(smile,tongueMat,0,-.423,.57,.11,.035,.014);tube(smile,[[-.22,-.29,.547],[0,-.312,.57],[.22,-.29,.547]],.009,pink);
  if(options.gender==='girl'){
   // Open-backed translucent bob, rounded locks and a swept fringe; no helmet.
   const bob=new THREE.Mesh(geometry(new THREE.SphereGeometry(1,40,28,Math.PI,Math.PI)),hairMat);bob.scale.set(.73,.69,.62);bob.position.set(0,.015,-.02);bob.name='girl-bob-back';head.add(bob);
@@ -93,8 +98,8 @@ outgoingLight+=diffuse*(shellEdge*0.9+0.13)+vec3(1.0,0.75,0.95)*softStrip*1.7+ve
   for(const x of [-.24,.24])for(let i=0;i<3;i++){const xx=x+(i-1)*.065;tube(head,[[xx,.25,.59],[xx+(x<0?-.04:.04),.32,.58]],.009,pupil);}
  }else{
   // Broad swept curl from the supplied character, with a curled tip rather than a thin antenna.
-  const curl=tube(head,[[-.30,.57,.29],[-.12,.59,.42],[.10,.65,.40],[.23,.79,.31],[.22,.92,.23],[.13,.98,.20],[.055,.91,.24],[.11,.84,.31]],.082,hairMat);curl.rotation.z=-.13;curl.name='boy-curl';
-  tube(head,[[-.26,.62,.35],[-.10,.65,.48],[.10,.72,.46],[.18,.83,.36]],.012,glow);
+  const curl=tube(head,[[-.30,.57,.29],[-.12,.59,.42],[.10,.65,.40],[.23,.74,.31],[.22,.83,.23],[.13,.89,.20],[.055,.83,.24],[.11,.78,.31]],.082,hairMat);curl.rotation.z=-.13;curl.name='boy-curl';
+  tube(head,[[-.26,.62,.35],[-.10,.65,.48],[.10,.72,.46],[.18,.78,.36]],.016,glow);
  }
  host.dataset.floating='true';
  const key=new THREE.DirectionalLight(0xf2e7ff,3.4);key.position.set(-2,4,5);scene.add(key);const fill=new THREE.DirectionalLight(0x65dfff,1.5);fill.position.set(3,2,-2);scene.add(fill);const rim=new THREE.DirectionalLight(0xff38b7,2.5);rim.position.set(-3,3,-3);scene.add(rim);scene.add(new THREE.AmbientLight(0xaba3de,.65));
