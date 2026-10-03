@@ -100,11 +100,13 @@ outgoingLight+=emissive*(0.48+shellEdge*0.7)+diffuse*(shellEdge*0.9+0.13)+vec3(1
  sphere(head,pink,-.71,-.025,.04,.145,.16,.13);sphere(head,pink,.71,-.025,.04,.145,.16,.13);
  // Glowing contours are curved geometry on the actual surface, not a billboard.
  const forehead=[];for(let i=0;i<=32;i++){const a=-.1+i*Math.PI*1.2/32;forehead.push([Math.cos(a)*.725,Math.sin(a)*.638,.06]);}tube(head,forehead,.012,glow);
- const eyes=[],closedEyes=[],gaze=[],brows=[];
+ const eyes=[],closedEyes=[],joyEyes=[],gaze=[],brows=[];
  for(const x of [-.265,.265]){const group=new THREE.Group();group.position.set(x,.07,.56);group.rotation.z=x<0?-.1:.1;head.add(group);sphere(group,white,0,0,0,.195,.207,.075);sphere(group,iris,0,-.01,.057,.143,.159,.046);sphere(group,pupil,0,-.018,.09,.103,.121,.036);sphere(group,white,-.035,.045,.131,.034,.034,.012);sphere(group,white,.04,-.059,.131,.014,.014,.009);eyes.push(group);
  gaze.push(group.children.filter(o=>o.material===iris||o.material===pupil||o.material===white&&o.position.z>.1));
  const lid=new THREE.Group();lid.position.copy(group.position);lid.rotation.copy(group.rotation);head.add(lid);tube(lid,[[-.14,.025,.10],[0,-.022,.12],[.14,.025,.10]],.012,pupil);closedEyes.push(lid);lid.visible=false;
+ const joyLid=new THREE.Group();joyLid.position.copy(group.position);head.add(joyLid);tube(joyLid,[[-.145,-.035,.10],[-.08,.045,.12],[0,.065,.13],[.08,.045,.12],[.145,-.035,.10]],.017,pupil);joyEyes.push(joyLid);joyLid.visible=false;
  if(options.gender==='girl')for(let i=0;i<3;i++){const xx=(i-1)*.06;tube(group,[[xx,.175,.055],[xx+(x<0?-.025:.025),.225,.055]],.008,pupil);tube(lid,[[xx,-.005,.115],[xx+(x<0?-.025:.025),-.044,.112]],.007,pupil);}
+ if(options.gender==='girl')for(let i=0;i<2;i++)tube(joyLid,[[x<0?-.11:.11,-.005+i*.025,.12],[x<0?-.17:.17,.025+i*.04,.12]],.007,pupil);
  const brow=new THREE.Group();brow.position.set(x,.30,.50);head.add(brow);tube(brow,[[-.12,0,-.02],[-.09,.04,.01],[.02,.045,.035],[.11,.01,0]],.019,glow);brows.push(brow);
  }
  // Rounded pink facial volumes from the owner's reference, attached in 3D.
@@ -119,6 +121,9 @@ outgoingLight+=emissive*(0.48+shellEdge*0.7)+diffuse*(shellEdge*0.9+0.13)+vec3(1
  limb(thoughtArm,ta,te,.075);limb(thoughtArm,te,tw,.068);sphere(thoughtArm,pink,...ta,.10);sphere(thoughtArm,cyan,...te,.085);sphere(thoughtArm,pink,...tw,.09,.10,.055);
  for(let i=0;i<3;i++)sphere(thoughtArm,pink,tw[0]+thoughtSide*(i-1)*.04,tw[1]+.015,tw[2]+.05,.026,.048,.025);
  tube(thoughtArm,[[tw[0]-thoughtSide*.04,tw[1]+.05,.70],[thoughtSide*.32,-.34,.72],[thoughtSide*.23,-.26,.72]],.027,pink);thoughtArm.visible=false;
+ // Reference archive: joyful eyes are upward arcs, hands support both cheeks.
+ const joyArms=new THREE.Group();head.add(joyArms);joyArms.visible=false;
+ for(const side of [-1,1]){const shoulder=[side*.25,-.88,0],elbow=[side*.60,-.72,.24],wrist=[side*.45,-.37,.66];limb(joyArms,shoulder,elbow,.075);limb(joyArms,elbow,wrist,.068);sphere(joyArms,pink,...shoulder,.10);sphere(joyArms,cyan,...elbow,.085);sphere(joyArms,pink,...wrist,.115,.075,.06);for(let i=0;i<4;i++)sphere(joyArms,pink,side*.45+(i-1.5)*.042,-.315,.68,.025,.04,.027);}
  if(options.gender==='girl'){
   // Open-backed translucent bob, rounded locks and a swept fringe; no helmet.
   const bob=new THREE.Mesh(geometry(new THREE.SphereGeometry(1,40,28,Math.PI,Math.PI)),hairMat);bob.scale.set(.79,.70,.65);bob.position.set(0,.015,-.02);bob.name='girl-bob-back';head.add(bob);halo(bob,pinkHalo);
@@ -144,8 +149,8 @@ outgoingLight+=emissive*(0.48+shellEdge*0.7)+diffuse*(shellEdge*0.9+0.13)+vec3(1
  controls.update();
  let disposed=false,frame=0,last=0,needs=true,moving=false,currentMood=options.mood||'happy',currentSkin=options.skin||'neon';
  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
- function setEyesClosed(closed){eyes.forEach(o=>o.visible=!closed);closedEyes.forEach(o=>o.visible=closed);}
- function setExpression(mood){const thinking=['quiet','hungry'].includes(mood),resting=['sleep','tired'].includes(mood);smile.visible=!thinking;thoughtMouth.visible=thinking;thoughtArm.visible=thinking;wave.visible=!thinking;smile.scale.set(resting?.75:1.12,resting?.35:1.08,1);smile.position.y=resting?0:.025;cheeks.forEach(c=>{c.position.y=thinking?-.18:resting?-.17:-.13;});brows.forEach((b,i)=>{b.position.y=thinking?(i===0?.37:.28):resting?.29:.34;b.rotation.z=thinking?(i===0?-.26:.22):resting?0:(i===0?.08:-.08);});headPivot.rotation.z=body.rotation.z+(thinking?-.12:resting?.04:0);host.dataset.expression=thinking?'think':resting?'calm':'happy';}
+ function setEyesClosed(closed){const joyful=currentMood==='happy';eyes.forEach(o=>o.visible=!closed&&!joyful);closedEyes.forEach(o=>o.visible=closed&&!joyful);joyEyes.forEach(o=>o.visible=joyful);}
+ function setExpression(mood){const thinking=['quiet','hungry'].includes(mood),resting=['sleep','tired'].includes(mood);smile.visible=!thinking;thoughtMouth.visible=thinking;thoughtArm.visible=thinking;joyArms.visible=mood==='happy';wave.visible=!thinking&&mood!=='happy';armLeft.visible=mood!=='happy';smile.scale.set(resting?.75:1.12,resting?.35:1.08,1);smile.position.y=resting?0:.025;cheeks.forEach(c=>{c.position.y=thinking?-.18:resting?-.17:-.13;});brows.forEach((b,i)=>{b.position.y=thinking?(i===0?.37:.28):resting?.29:.34;b.rotation.z=thinking?(i===0?-.26:.22):resting?0:(i===0?.08:-.08);});headPivot.rotation.z=body.rotation.z+(thinking?-.12:resting?.04:0);host.dataset.expression=thinking?'think':resting?'calm':'happy';}
  function paint(mood,skin,hygiene=options.hygiene??85){if(diaperMat)diaperMat.color.setHex(hygiene<35?0xe2cde1:0xe6e2ff);currentMood=mood;currentSkin=skin;const palette=skin==='aurora'?[0xb099ff,0xef97ef]:skin==='sunset'?[0xffbb77,0xff89b9]:[0x00c9ed,0xff64cf];cyan.emissive.setHex(palette[0]);cyan.emissiveIntensity=.09;cyan.color.set(mood==='sleep'||mood==='tired'?0xabc5ff:mood==='quiet'||mood==='hungry'?0xc5b4fa:new THREE.Color(palette[0]).lerp(new THREE.Color(0xffffff),.18));pink.color.set(new THREE.Color(palette[1]).lerp(new THREE.Color(0xffffff),.25));headMat.color.set(mood==='sleep'||mood==='tired'?0xbacbff:mood==='quiet'||mood==='hungry'?0xd6b8f6:new THREE.Color(palette[1]).lerp(new THREE.Color(0xffffff),.25));headMat.emissive.setHex(palette[1]);headMat.emissiveIntensity=mood==='happy'?.09:.05;setEyesClosed(mood==='sleep');setExpression(mood);needs=true;}
  paint(currentMood,currentSkin);
  const abort=new AbortController();renderer.domElement.addEventListener('keydown',e=>{if(!options.interactive||!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home'].includes(e.key))return;e.preventDefault();const az=controls.getAzimuthalAngle()+(e.key==='ArrowLeft'?-.18:e.key==='ArrowRight'?.18:0),pol=THREE.MathUtils.clamp(controls.getPolarAngle()+(e.key==='ArrowUp'?-.1:e.key==='ArrowDown'?.1:0),.65,2.15),r=cameraDistance;if(e.key==='Home')camera.position.set(center.x,center.y+.10,cameraDistance);else camera.position.set(r*Math.sin(pol)*Math.sin(az),center.y+r*Math.cos(pol),r*Math.sin(pol)*Math.cos(az));controls.update();needs=true;},{signal:abort.signal});
@@ -157,11 +162,11 @@ outgoingLight+=emissive*(0.48+shellEdge*0.7)+diffuse*(shellEdge*0.9+0.13)+vec3(1
   const resting=['sleep','tired'].includes(currentMood),thinking=['hungry','quiet'].includes(currentMood);
   const waveTarget=baby?-.65:resting?-1.5:thinking?.35:(options.gender==='girl'?.18:0);
   const leftTarget=resting?.5:thinking?-.35:(baby?-.25:0);
-  wave.visible=!thinking;thoughtArm.visible=thinking;
+  wave.visible=!thinking&&currentMood!=='happy';armLeft.visible=currentMood!=='happy';thoughtArm.visible=thinking;joyArms.visible=currentMood==='happy';
   wave.rotation.z=THREE.MathUtils.lerp(wave.rotation.z,waveTarget+(!reduce&&!moving&&!resting&&!thinking?Math.sin(time*.003)*.13:0),.1);
   armLeft.rotation.z=THREE.MathUtils.lerp(armLeft.rotation.z,leftTarget+(!reduce&&!moving?Math.sin(time*.0016)*.04:0),.1);
   wave.rotation.x=THREE.MathUtils.lerp(wave.rotation.x,baby?0:thinking?.45:resting?.25:0,.1);
-  host.dataset.expression=resting?'calm':thinking?'think':'wave';needs=true;
+  host.dataset.expression=resting?'calm':thinking?'think':currentMood==='happy'?'joy':'wave';needs=true;
   // Quiet/thinking look raises the pupils; sleep keeps its closed eyes.
   for(const pair of gaze)for(const part of pair){const highlight=part.material===white;const bx=highlight?(part.scale.x>.02?-.035:.04):0,by=highlight?(part.scale.x>.02?.045:-.059):part.material===iris?-.01:-.018;part.position.x=THREE.MathUtils.lerp(part.position.x,bx+(thinking?.026:0),.12);part.position.y=THREE.MathUtils.lerp(part.position.y,by+(thinking?.040:0),.12);}
   if(!reduce&&!moving){root.position.y=.06+Math.sin(time*.0018)*.07;root.rotation.z=Math.sin(time*.0011)*.025;headPivot.rotation.z=body.rotation.z+(thinking?-.12:resting?.04:0)+Math.sin(time*.0015)*.04;const beat=1+Math.sin(time*.003)*.06;heart.scale.set(.12*beat,.13*beat,.1*beat);}
