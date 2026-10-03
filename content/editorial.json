@@ -1,6 +1,89 @@
 {
-  "verifiedAt": null,
-  "news": null,
+  "verifiedAt": "2026-10-03",
+  "news": [
+    {
+      "category": "world",
+      "when": "02.10 · 🌍",
+      "href": "https://www.reuters.com/business/environment/nepal-plans-drain-four-glacial-lakes-after-deadly-floods-2026-10-02/",
+      "ru": "Непал начал подготовку проекта по контролируемому снижению уровня воды в четырёх высокогорных ледниковых озёрах. План включает исследования, датчики, прогнозирование паводков и системы раннего предупреждения для населённых пунктов ниже по течению.",
+      "en": "Nepal is preparing a project to lower water levels in four high-altitude glacial lakes in a controlled way. The plan includes studies, sensors, flood forecasting and early-warning systems for downstream communities.",
+      "th": "เนปาลกำลังเตรียมโครงการลดระดับน้ำอย่างควบคุมในทะเลสาบธารน้ำแข็งบนพื้นที่สูง 4 แห่ง แผนครอบคลุมการศึกษา เซ็นเซอร์ การพยากรณ์น้ำท่วม และระบบเตือนภัยล่วงหน้าสำหรับชุมชนท้ายน้ำ",
+      "publishedAt": "2026-10-02",
+      "sources": [
+        "https://www.reuters.com/business/environment/nepal-plans-drain-four-glacial-lakes-after-deadly-floods-2026-10-02/"
+      ],
+      "nonWar": true,
+      "discussionEvidence": {
+        "observedAt": "2026-10-03T08:43:00+07:00",
+        "summary": "Comparable public comment/share totals were not available. Selected for current international Reuters coverage and the broad public-safety relevance of glacier-lake risk; this is not a claim of a global popularity rank."
+      }
+    },
+    {
+      "category": "thailand",
+      "when": "02.10 · 🇹🇭",
+      "href": "https://www.reuters.com/world/asia-pacific/thai-airways-board-suspends-chief-executive-over-flood-response-local-media-2026-10-02/",
+      "ru": "Глава Thai Airways Чай Эамсири сообщил, что совет директоров освободил его от должности после критики действий авиакомпании во время недавнего наводнения в Бангкоке. Перевозчику предстоит восстановить стабильную работу после сбоев.",
+      "en": "Thai Airways chief Chai Eamsiri said the board removed him after criticism of the airline's response to Bangkok's recent flooding. The carrier now faces the task of stabilising operations after the disruption.",
+      "th": "ชัย เอี่ยมศิริ ผู้บริหารการบินไทยระบุว่าคณะกรรมการมีมติให้เขาพ้นจากตำแหน่ง หลังเกิดกระแสวิจารณ์การรับมือเหตุอุทกภัยล่าสุดในกรุงเทพฯ ขณะนี้สายการบินต้องเร่งทำให้การดำเนินงานกลับมามีเสถียรภาพ",
+      "publishedAt": "2026-10-02",
+      "sources": [
+        "https://www.reuters.com/world/asia-pacific/thai-airways-board-suspends-chief-executive-over-flood-response-local-media-2026-10-02/"
+      ],
+      "discussionEvidence": {
+        "observedAt": "2026-10-03T08:43:00+07:00",
+        "summary": "No comparable public engagement count was exposed. Selected because Reuters and cited Thai media were covering the management change after widely reported airport disruption; no absolute popularity claim is made."
+      }
+    },
+    {
+      "category": "thailand",
+      "when": "01.10 · 🇹🇭",
+      "href": "https://www.reuters.com/world/asia-pacific/infineon-opens-thailand-plant-country-ramps-up-semiconductor-push-2026-10-01/",
+      "ru": "Infineon открыла новый завод в Самутпракане, усиливая роль Таиланда в региональной цепочке производства полупроводников. Площадка будет заниматься завершающими этапами обработки и тестирования чипов и может расширяться поэтапно.",
+      "en": "Infineon has opened a new plant in Samut Prakan, strengthening Thailand's role in the regional semiconductor supply chain. The site will handle chip back-end processing and testing and can expand in stages.",
+      "th": "Infineon เปิดโรงงานแห่งใหม่ในจังหวัดสมุทรปราการ ช่วยเพิ่มบทบาทของไทยในห่วงโซ่อุปทานเซมิคอนดักเตอร์ของภูมิภาค โรงงานจะทำขั้นตอนปลายทางของการผลิตและทดสอบชิป และสามารถขยายเป็นระยะได้",
+      "publishedAt": "2026-10-01",
+      "sources": [
+        "https://www.reuters.com/world/asia-pacific/infineon-opens-thailand-plant-country-ramps-up-semiconductor-push-2026-10-01/",
+        "https://www.welt.de/regionales/bayern/article6abdee5eca5c42fe8f931536/infineon-eroeffnet-fabrik-in-thailand.html"
+      ],
+      "discussionEvidence": {
+        "observedAt": "2026-10-03T08:43:00+07:00",
+        "summary": "Comparable comment/share totals were unavailable. Selection is based on independent same-day coverage by Reuters and Welt and its significance for Thailand's technology investment; no popularity ranking is asserted."
+      }
+    },
+    {
+      "category": "pattaya",
+      "when": "02.10 · Pattaya",
+      "href": "https://www.reuters.com/business/environment/plankton-bloom-turns-thai-island-waters-bright-smelly-green-2026-10-02/",
+      "ru": "У берегов Ко Лана исследователи зафиксировали ярко-зелёное цветение планктона после сильных дождей. Специалисты Университета Бурапха отбирают пробы; часть побережья не затронута, а явление обычно ослабевает за несколько дней.",
+      "en": "Researchers recorded a bright-green plankton bloom off Ko Lan after heavy rain. A Burapha University team is sampling the water; some stretches remain unaffected and such blooms typically ease within a few days.",
+      "th": "นักวิจัยพบแพลงก์ตอนบลูมสีเขียวสดบริเวณเกาะล้านหลังฝนตกหนัก ทีมมหาวิทยาลัยบูรพากำลังเก็บตัวอย่างน้ำ โดยชายฝั่งบางช่วงไม่ได้รับผลกระทบ และปรากฏการณ์ลักษณะนี้มักลดลงภายในไม่กี่วัน",
+      "publishedAt": "2026-10-02",
+      "sources": [
+        "https://www.reuters.com/business/environment/plankton-bloom-turns-thai-island-waters-bright-smelly-green-2026-10-02/"
+      ],
+      "discussionEvidence": {
+        "observedAt": "2026-10-03T08:43:00+07:00",
+        "summary": "Public comment/share totals were not available. Selected for fresh international coverage, direct Pattaya visitor relevance and on-site attribution to Burapha University researchers; no popularity rank is claimed."
+      }
+    },
+    {
+      "category": "pattaya",
+      "when": "03.10 · Pattaya",
+      "href": "https://www.pattayamail.com/latestnews/news/pattaya-city-and-immigration-close-gaps-in-tourist-services-and-safety-566866",
+      "ru": "Паттайя и иммиграционная служба Чонбури договорились теснее координировать помощь туристам, общественную безопасность и городские сервисы. Встреча прошла в мэрии 2 октября; практические детали дальнейших мер пока не объявлены.",
+      "en": "Pattaya City and Chonburi Immigration agreed to coordinate more closely on visitor assistance, public safety and city services. The meeting took place at City Hall on 2 October; detailed follow-up measures have not yet been announced.",
+      "th": "เมืองพัทยาและตรวจคนเข้าเมืองชลบุรีตกลงประสานงานใกล้ชิดขึ้นด้านการช่วยเหลือนักท่องเที่ยว ความปลอดภัยสาธารณะ และบริการของเมือง การประชุมจัดขึ้นที่ศาลาว่าการเมืองพัทยาเมื่อวันที่ 2 ตุลาคม ส่วนรายละเอียดมาตรการต่อไปยังไม่ได้ประกาศ",
+      "publishedAt": "2026-10-03",
+      "sources": [
+        "https://www.pattayamail.com/latestnews/news/pattaya-city-and-immigration-close-gaps-in-tourist-services-and-safety-566866"
+      ],
+      "discussionEvidence": {
+        "observedAt": "2026-10-03T08:43:00+07:00",
+        "summary": "Pattaya Mail displayed 18 views and 0 comments at observation time. The count is a single-outlet signal and is not comparable with platforms that hide engagement totals."
+      }
+    }
+  ],
   "scams": [],
-  "selection": "1 non-war world story, 2 Thailand stories, 2 Pattaya stories; verifiable discussion signals where available"
+  "selection": "1 non-war world story, 2 Thailand stories, 2 Pattaya stories; verified 2026-10-03 in Asia/Bangkok. No qualifying new official scam warning found, so existing live scam cards are preserved without date changes."
 }
