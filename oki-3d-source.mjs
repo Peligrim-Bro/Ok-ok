@@ -98,8 +98,7 @@ outgoingLight+=emissive*(0.48+shellEdge*0.7)+diffuse*(shellEdge*0.9+0.13)+vec3(1
  head.scale.setScalar(headScale);root.userData.stage=options.stage;
  sphere(head,headMat,0,0,0,.745,.625,.61);
  sphere(head,pink,-.71,-.025,.04,.145,.16,.13);sphere(head,pink,.71,-.025,.04,.145,.16,.13);
- // Glowing contours are curved geometry on the actual surface, not a billboard.
- const forehead=[];for(let i=0;i<=32;i++){const a=-.1+i*Math.PI*1.2/32;forehead.push([Math.cos(a)*.725,Math.sin(a)*.638,.06]);}tube(head,forehead,.012,glow);
+ // Head highlights come from the curved glass material, with no seam-like tube.
  const eyes=[],closedEyes=[],joyEyes=[],gaze=[],brows=[];
  for(const x of [-.265,.265]){const group=new THREE.Group();group.position.set(x,.07,.56);group.rotation.z=x<0?-.1:.1;head.add(group);sphere(group,white,0,0,0,.195,.207,.075);sphere(group,iris,0,-.01,.057,.143,.159,.046);sphere(group,pupil,0,-.018,.09,.103,.121,.036);sphere(group,white,-.035,.045,.131,.034,.034,.012);sphere(group,white,.04,-.059,.131,.014,.014,.009);eyes.push(group);
  gaze.push(group.children.filter(o=>o.material===iris||o.material===pupil||o.material===white&&o.position.z>.1));
@@ -140,8 +139,9 @@ outgoingLight+=emissive*(0.48+shellEdge*0.7)+diffuse*(shellEdge*0.9+0.13)+vec3(1
   tube(head,[[-.13,.59,.44],[.07,.59,.53],[.23,.43,.57],[.21,.34,.56]],.042,pink);
  }else{
   // Broad swept curl from the supplied character, with a curled tip rather than a thin antenna.
-  const curl=tube(head,[[-.30,.57,.29],[-.12,.59,.42],[.10,.65,.40],[.23,.74,.31],[.22,.83,.23],[.13,.89,.20],[.055,.83,.24],[.11,.78,.31]],.082,hairMat);curl.rotation.z=-.13;curl.name='boy-curl';
-  tube(head,[[-.26,.62,.35],[-.10,.65,.48],[.10,.72,.46],[.18,.78,.36]],.016,glow);
+  const curlPoints=[[-.23,.59,.14],[-.07,.64,.20],[.13,.72,.17],[.23,.83,.08],[.16,.93,.015],[.055,.91,.035],[.055,.835,.085],[.12,.825,.09]];
+  const curl=tube(head,curlPoints,.072,hairMat);curl.name='boy-curl';
+  sphere(head,hairMat,...curlPoints[0],.073);sphere(head,hairMat,...curlPoints.at(-1),.072);
  }
  host.dataset.floating='true';
  const key=new THREE.DirectionalLight(0xf2e7ff,3.4);key.position.set(-2,4,5);scene.add(key);const fill=new THREE.DirectionalLight(0x65dfff,1.5);fill.position.set(3,2,-2);scene.add(fill);const rim=new THREE.DirectionalLight(0xff38b7,2.5);rim.position.set(-3,3,-3);scene.add(rim);scene.add(new THREE.AmbientLight(0xaba3de,.65));
