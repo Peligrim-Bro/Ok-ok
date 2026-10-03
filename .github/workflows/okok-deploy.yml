@@ -21,15 +21,15 @@ jobs:
         with:
           node-version: '22'
       - name: Build website and Cloudflare Worker
-        run: node gloss-build.mjs && node pulse-patch.mjs && node oki-bubble-fix.mjs && node telegram-build.mjs
+        run: node gloss-build.mjs && node pulse-patch.mjs && node oki-bubble-fix.mjs && node tetris-expand.mjs && node telegram-build.mjs
       - name: Verify generated scripts and critical features
         run: |
           node scripts/verify-project.mjs
           node --input-type=module <<'NODE'
           import { readFileSync } from 'node:fs';
           const html=readFileSync('site/public/index.html','utf8');
-          for(const marker of ['okok-pulse-v1','Как здесь сейчас?','oki-nav-float-fix-v3','oki-prompt-tail-fix-v3','data-okok-wa-lifted']) if(!html.includes(marker)) throw new Error('Missing '+marker);
-          console.log('PASS: Pulse, floating nav, OKI prompt and WhatsApp clearance fixes are present');
+          for(const marker of ['okok-pulse-v1','Как здесь сейчас?','oki-nav-float-fix-v3','oki-prompt-tail-fix-v3','data-okok-wa-lifted','okok-tetris-expand-v1']) if(!html.includes(marker)) throw new Error('Missing '+marker);
+          console.log('PASS: current UI fixes and expanded Tetris are present');
           NODE
       - name: Check deployment credentials
         env:
@@ -46,6 +46,6 @@ jobs:
       - name: Check public website and API health
         run: |
           node --input-type=module <<'NODE'
-          const checks=[['/',async r=>{const h=await r.text();for(const m of ['PattayaOK','okok-pulse-v1','oki-nav-float-fix-v3','oki-prompt-tail-fix-v3'])if(!h.includes(m))throw new Error('Missing '+m);}],['/api/telegram/health',async r=>{const d=await r.json();if(d.service!=='okok-telegram'||d.configured!==true)throw new Error('Telegram health failed');}],['/api/oki/health',async r=>{const d=await r.json();if(d.service!=='okok-oki-metrics'||d.configured!==true)throw new Error('OKI health failed');}]];
+          const checks=[['/',async r=>{const h=await r.text();for(const m of ['PattayaOK','okok-pulse-v1','oki-nav-float-fix-v3','oki-prompt-tail-fix-v3','okok-tetris-expand-v1'])if(!h.includes(m))throw new Error('Missing '+m);}],['/api/telegram/health',async r=>{const d=await r.json();if(d.service!=='okok-telegram'||d.configured!==true)throw new Error('Telegram health failed');}],['/api/oki/health',async r=>{const d=await r.json();if(d.service!=='okok-oki-metrics'||d.configured!==true)throw new Error('OKI health failed');}]];
           for(const [path,verify] of checks){let ok=false;for(let a=0;a<4;a++){try{const u=new URL(path,'https://ok-ok.click');u.searchParams.set('deployment-check',process.env.COMMIT_REF+'-'+a);const r=await fetch(u,{headers:{'Cache-Control':'no-cache'},signal:AbortSignal.timeout(15000)});if(!r.ok)throw new Error('HTTP '+r.status);await verify(r);ok=true;console.log('OK '+path);break}catch(e){console.error(path+': '+e.message);if(a<3)await new Promise(x=>setTimeout(x,10000));}}if(!ok)process.exit(1);}
           NODE
