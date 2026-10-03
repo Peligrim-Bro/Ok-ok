@@ -1,4 +1,4 @@
-import {readFileSync} from 'node:fs';
+import {readFileSync,existsSync} from 'node:fs';
 import vm from 'node:vm';
 import assert from 'node:assert/strict';
 const html=readFileSync('site/public/index.html','utf8');
@@ -37,3 +37,7 @@ for(const r of routes){const u=new URL(r.url);assert.equal(u.searchParams.get('a
 assert.equal(routes[0].stops.at(-1).id,routes[1].stops[0].id);assert.equal(routes.at(-1).stops.at(-1).id,run('HOLIDAY_PLACES[0].id'));
 assert.equal(run('holidayRoutes([]).length'),0);assert.equal(run('holidayRoutes([HOLIDAY_PLACES[0]]).length'),0);assert.equal(run('holidayRoutes(HOLIDAY_PLACES.slice(0,2)).length'),1);
 console.log('PASS planner: time and family intersections, saved order, mobile route limits and contiguous sections.');
+
+for(const p of JSON.parse(run('JSON.stringify(HOLIDAY_PLACES)')))assert.ok(existsSync('site/public/'+p.photo),'Missing photo '+p.id);
+assert.ok(run('holidayReel(HOLIDAY_PLACES.slice(0,3))').includes('<img'));
+console.log('PASS wheel photos: 50 local assets and reel image markup.');
