@@ -1526,3 +1526,58 @@ writeFileSync(swPath,travelSW);
  writeFileSync(path,page.replace(/<head\b[^>]*>/i,match=>match+'\n'+gaTag));
  console.log('GA4 ready: G-TD8W93WFV5');
 }
+
+
+// 12GO referral registry and an on-demand widget exclusively inside the city map.
+{
+ const referral='https://12go.asia/?z=17095940';
+ const partnerPath='site/public/assets/commerce/partners.js';
+ let partners=readFileSync(partnerPath,'utf8');
+ const entry=/travel12go:\s*\{[^}]+\}/;
+ if(!entry.test(partners))throw Error('12GO partner registry entry missing');
+ partners=partners.replace(entry,row=>row.replace(/\burl:\s*'[^']*'/,"url:'"+referral+"'").replace(/\bref:\s*'[^']*'/,"ref:'"+referral+"'"));
+ writeFileSync(partnerPath,partners);
+ // Preserve route-specific links while adding attribution to every direct 12GO URL.
+ const {readdirSync}=await import('node:fs');
+ function rewrite(dir){for(const item of readdirSync(dir,{withFileTypes:true})){
+  const file=dir+'/'+item.name;
+  if(item.isDirectory()){rewrite(file);continue;}
+  if(!/\.(?:html|js|json)$/.test(item.name)||item.name==='sw.js')continue;
+  const text=readFileSync(file,'utf8');
+  const updated=text.replace(/https?:\/\/(?:www\.)?12go\.asia(?:\/[^\s'"<>\x60\\]*)?/g,raw=>{
+   const u=new URL(raw);u.searchParams.set('z','17095940');return u.href;
+  });
+  if(updated!==text)writeFileSync(file,updated);
+ }}
+ rewrite('site/public');
+ const mapPath='site/public/assets/spatial/pattaya-map.js';
+ let mapJS=readFileSync(mapPath,'utf8');
+ const anchor="let activePlace=null;";
+ if(!mapJS.includes(anchor))throw Error('Map widget insertion anchor missing');
+ const widget=String.raw`
+ const booking=document.createElement('details');booking.className='map-12go';
+ const bookingTitle=document.createElement('summary');bookingTitle.textContent=tr('12GO · Найти билеты в Паттайю','12GO · Find tickets to Pattaya','12GO · ค้นหาตั๋วไปพัทยา');booking.append(bookingTitle);
+ const bookingBody=document.createElement('div');bookingBody.className='map-12go-body';booking.append(bookingBody);
+ paragraph(bookingBody,tr('Автобусы, паромы, поезда · партнёрская ссылка автора. Виджет на английском, цены в USD.','Buses, ferries, trains · author’s affiliate link. Widget in English, prices in USD.','รถบัส เรือ รถไฟ · ลิงก์พันธมิตรของผู้ดูแล วิดเจ็ตภาษาอังกฤษ ราคาเป็น USD'),'map-small');
+ const fallback=external(bookingBody,tr('Открыть 12GO','Open 12GO','เปิด 12GO'),'https://12go.asia/?z=17095940');fallback.rel='noopener sponsored';fallback.dataset.okPartner='travel12go';fallback.dataset.okPlacement='city-map';
+ let bookingLoaded=false;
+ booking.addEventListener('toggle',()=>{
+  if(!booking.open||bookingLoaded)return;bookingLoaded=true;
+  const frame=document.createElement('iframe');frame.title='12GO · Pattaya tickets';frame.className='map-12go-frame';frame.setAttribute('sandbox','allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation');
+  const width=Math.max(240,Math.min(400,bookingBody.clientWidth-16));
+  frame.srcdoc='<!doctype html><html lang="en"><head><meta name="viewport" content="width=device-width,initial-scale=1"><style>html,body{margin:0;padding:0;background:#fff}body{padding:8px;box-sizing:border-box}onetwogo-travelto-widget{display:block;max-width:100%}</style></head><body><onetwogo-travelto-widget city="Pattaya" width="'+width+'" agent="17095940" lang="en" fxcode="USD" wl="12go.asia"></onetwogo-travelto-widget><script src="https://agent.12go.asia/tools/widget/widget.js"></script></body></html>';
+  bookingBody.insertBefore(frame,fallback);
+ },opts);
+ hero.append(booking);
+ `;
+ mapJS=mapJS.replace(anchor,()=>widget+'\n '+anchor);
+ writeFileSync(mapPath,mapJS);
+ const cssPath='site/public/assets/spatial/travel-map.css';
+ writeFileSync(cssPath,readFileSync(cssPath,'utf8')+'\n.map-12go{margin:12px 14px;border:1px solid var(--line);border-radius:16px;background:var(--card);color:var(--text);overflow:hidden}.map-12go summary{padding:14px;cursor:pointer;font-size:13px;font-weight:700;min-height:44px}.map-12go-body{padding:0 12px 14px;min-width:0}.map-12go-frame{display:block;width:100%;max-width:416px;height:520px;border:0;border-radius:12px;margin:12px auto;background:#fff}.map-12go-body .btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 14px;font-size:12px!important}\n');
+ for(const name of ['index.html','admin.html']){
+  const file='site/public/'+name;
+  writeFileSync(file,readFileSync(file,'utf8').replaceAll('pattaya-map.js?v=92','pattaya-map.js?v=93').replaceAll('travel-map.css?v=92','travel-map.css?v=93'));
+ }
+ writeFileSync(swPath,readFileSync(swPath,'utf8').replaceAll('pattaya-map.js?v=92','pattaya-map.js?v=93').replaceAll('travel-map.css?v=92','travel-map.css?v=93').replace('pattayaok-oki-reference-v90-','pattayaok-12go-v93-'));
+ console.log('12GO referral 17095940 ready; widget loads only within the city map.');
+}
