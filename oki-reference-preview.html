@@ -8,7 +8,7 @@ body{margin:0;background:#100b27;color:#fff;font:16px system-ui;text-align:cente
 <div id="model"></div>
 <fieldset><label>Персонаж<select id="gender"><option value="boy">Мальчик</option><option value="girl">Девочка</option></select></label><label>Пропорции<select id="stage"><option value="2">Взрослый образец</option><option value="1">Ребёнок</option><option value="0">Малыш</option></select></label><label>Настроение<select id="mood"><option value="happy">Радостный</option><option value="quiet">Задумчивый</option><option value="sleep">Спит</option></select></label></fieldset>
 <p>Первый этап приближения к рендеру.</p><a href="/">Вернуться к сайту</a></main>
-<script src="/assets/oki-3d-v103.js"></script><script>
+<script src="/assets/oki-3d-v104.js"></script><script>
 const host=document.querySelector('#model');let model;
 function mount(){model?.dispose();host.replaceChildren();model=window.OKI3D?.mount(host,{stage:Number(document.querySelector('#stage').value),gender:document.querySelector('#gender').value,mood:document.querySelector('#mood').value,skin:'neon',interactive:true,label:'Оки: вращаемая 3D-модель'});if(!model)host.textContent='В этом браузере недоступен WebGL. Открой страницу в Safari с поддержкой 3D.';}
 document.querySelector('#gender').onchange=mount;document.querySelector('#stage').onchange=mount;document.querySelector('#mood').onchange=()=>model?.update(document.querySelector('#mood').value,'neon');mount();
