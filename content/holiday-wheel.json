@@ -1,0 +1,352 @@
+[
+  {
+    "id": "t20-walk",
+    "name": "Walking Street",
+    "area": "South Pattaya",
+    "category": "sights",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Pattaya%20Walking%20Street"
+  },
+  {
+    "id": "t20-truth",
+    "name": "Sanctuary of Truth",
+    "area": "Naklua · 206/2 Soi 12",
+    "category": "sights",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The%20Sanctuary%20of%20Truth%20Museum%20Pattaya"
+  },
+  {
+    "id": "t20-nong",
+    "name": "Nong Nooch Tropical Garden",
+    "area": "Na Jomtien · 18 км",
+    "category": "sights",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Nongnooch%20Pattaya%20Garden"
+  },
+  {
+    "id": "t20-central",
+    "name": "Central Festival Pattaya Beach",
+    "area": "Beach Road",
+    "category": "sights",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Central%20Festival%20Pattaya%20Beach"
+  },
+  {
+    "id": "t20-float",
+    "name": "Pattaya Floating Market",
+    "area": "Sukhumvit South",
+    "category": "sights",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Pattaya%20Floating%20Market"
+  },
+  {
+    "id": "t20-t21",
+    "name": "Terminal 21 Pattaya",
+    "area": "North Pattaya",
+    "category": "sights",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Terminal%2021%20Pattaya"
+  },
+  {
+    "id": "t20-alcazar",
+    "name": "Alcazar Cabaret",
+    "area": "Pattaya 2nd Road",
+    "category": "sights",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Alcazar%20Cabaret%20Show%20Pattaya"
+  },
+  {
+    "id": "t20-bazaar",
+    "name": "Pattaya Night Bazaar",
+    "area": "Beach Road / Second",
+    "category": "sights",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Pattaya%20Night%20Bazaar"
+  },
+  {
+    "id": "t20-tiff",
+    "name": "Tiffany's Show",
+    "area": "Pattaya 2nd Road",
+    "category": "sights",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Tiffany%27s%20Show%20Pattaya"
+  },
+  {
+    "id": "t20-jom",
+    "name": "Jomtien Beach",
+    "area": "Jomtien",
+    "category": "sights",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Jomtien%20Beach%20Pattaya"
+  },
+  {
+    "id": "t20-pbeach",
+    "name": "Pattaya Beach",
+    "area": "Beach Road",
+    "category": "sights",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Pattaya%20Beach"
+  },
+  {
+    "id": "t20-larn",
+    "name": "Koh Larn",
+    "area": "Паром Bali Hai ~45 мин",
+    "category": "sights",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Koh%20Larn%20Samae%20Beach"
+  },
+  {
+    "id": "t20-buddha",
+    "name": "Big Buddha · Pratumnak",
+    "area": "Pratumnak Hill",
+    "category": "sights",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Big%20Buddha%20Temple%20Pattaya%20Pratumnak"
+  },
+  {
+    "id": "t20-mini",
+    "name": "Mini Siam",
+    "area": "North · Sukhumvit",
+    "category": "sights",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Mini%20Siam%20Pattaya"
+  },
+  {
+    "id": "t20-aqua",
+    "name": "Columbia Pictures Aquaverse",
+    "area": "Na Jomtien / Sattahip",
+    "category": "sights",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Columbia%20Pictures%20Aquaverse%20Pattaya"
+  },
+  {
+    "id": "t20-rama",
+    "name": "Ramayana Water Park",
+    "area": "Na Jomtien",
+    "category": "sights",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Ramayana%20Water%20Park%20Pattaya"
+  },
+  {
+    "id": "t20-art",
+    "name": "Art in Paradise",
+    "area": "Central / Second Rd",
+    "category": "sights",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Art%20in%20Paradise%20Pattaya"
+  },
+  {
+    "id": "t20-under",
+    "name": "Underwater World Pattaya",
+    "area": "Jomtien Beach Rd",
+    "category": "sights",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Underwater%20World%20Pattaya"
+  },
+  {
+    "id": "t20-stone",
+    "name": "Million Years Stone Park",
+    "area": "Nong Prue",
+    "category": "sights",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Million%20Years%20Stone%20Park%20Pattaya%20Crocodile%20Farm"
+  },
+  {
+    "id": "t20-view",
+    "name": "Pattaya Park Tower Viewpoint",
+    "area": "Pratumnak / Dongtan",
+    "category": "sights",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Pattaya%20Park%20Tower%20viewpoint"
+  },
+  {
+    "id": "harlans",
+    "name": "Harlan’s Pattaya",
+    "area": "Central Pattaya",
+    "category": "food",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Harlan%27s%20Pattaya"
+  },
+  {
+    "id": "moom",
+    "name": "Moom Aroi Na Kluea",
+    "area": "Naklua",
+    "category": "food",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Moom%20Aroi%20Na%20Kluea%20Pattaya"
+  },
+  {
+    "id": "sky",
+    "name": "The Sky Gallery",
+    "area": "Pratumnak Hill",
+    "category": "food",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The%20Sky%20Gallery%20Pattaya"
+  },
+  {
+    "id": "cabbages",
+    "name": "Cabbages & Condoms",
+    "area": "Pratumnak / Birds & Bees",
+    "category": "food",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cabbages%20and%20Condoms%20Pattaya"
+  },
+  {
+    "id": "sandwich",
+    "name": "The Sandwich Company",
+    "area": "East Pattaya",
+    "category": "food",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The%20Sandwich%20Company%20Pattaya"
+  },
+  {
+    "id": "glasssilver",
+    "name": "Glass House Silver",
+    "area": "Naklua / Wongamat",
+    "category": "food",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Glass%20House%20Silver%20Pattaya"
+  },
+  {
+    "id": "mermaids",
+    "name": "3 Mermaids",
+    "area": "Pratumnak Hill",
+    "category": "food",
+    "maps": "https://www.google.com/maps/search/?api=1&query=3%20Mermaids%20Pattaya%20Pratumnak"
+  },
+  {
+    "id": "kaewkaprao",
+    "name": "Kaew Kaprao Pu",
+    "area": "Naklua",
+    "category": "food",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Kaew%20Kaprao%20Pu%20Pattaya"
+  },
+  {
+    "id": "pupen",
+    "name": "Pupen Seafood",
+    "area": "Na Jomtien",
+    "category": "food",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Pupen%20Seafood%20Na%20Jomtien"
+  },
+  {
+    "id": "bigfish",
+    "name": "Big Fish Pattaya",
+    "area": "Pattaya",
+    "category": "food",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Big%20Fish%20Pattaya"
+  },
+  {
+    "id": "collective",
+    "name": "The Collective Pattaya",
+    "area": "Pattaya",
+    "category": "food",
+    "maps": "https://www.google.com/maps/search/?api=1&query=The%20Collective%20Pattaya"
+  },
+  {
+    "id": "anytime",
+    "name": "Anytime Cafe Pattaya",
+    "area": "Central Pattaya",
+    "category": "food",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Anytime%20Cafe%20Pattaya"
+  },
+  {
+    "id": "horizonfood",
+    "name": "Horizon Rooftop Restaurant",
+    "area": "Pattaya rooftop",
+    "category": "food",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Horizon%20Rooftop%20Restaurant%20Bar%20Pattaya"
+  },
+  {
+    "id": "longhorn",
+    "name": "Longhorn Steakhouse & Grill",
+    "area": "Pattaya",
+    "category": "food",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Longhorn%20Steakhouse%20Grill%20Pattaya"
+  },
+  {
+    "id": "pascal",
+    "name": "Casa Pascal",
+    "area": "Second Road",
+    "category": "food",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Casa%20Pascal%20Restaurant%20Pattaya"
+  },
+  {
+    "id": "amis",
+    "name": "Cafe des Amis Fine Dining",
+    "area": "Pattaya",
+    "category": "food",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Cafe%20des%20Amis%20Fine%20Dining%20Pattaya"
+  },
+  {
+    "id": "edge",
+    "name": "Edge Restaurant Pattaya",
+    "area": "Pattaya",
+    "category": "food",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Edge%20Restaurant%20Pattaya"
+  },
+  {
+    "id": "moonwhale",
+    "name": "Moonwhale Pattaya",
+    "area": "Pattaya",
+    "category": "food",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Moonwhale%20Pattaya"
+  },
+  {
+    "id": "tortis",
+    "name": "Torti’s Biergarten",
+    "area": "Naklua Road",
+    "category": "food",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Torti%20Biergarten%20Pattaya%20Naklua"
+  },
+  {
+    "id": "orchidee",
+    "name": "Golden Orchidee",
+    "area": "Naklua",
+    "category": "food",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Golden%20Orchidee%20Pattaya%20Naklua"
+  },
+  {
+    "id": "pier21",
+    "name": "Pier 21 Food Court",
+    "area": "Terminal 21",
+    "category": "food",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Pier%2021%20Terminal%2021%20Pattaya"
+  },
+  {
+    "id": "bru",
+    "name": "BRU Coffee & Bar",
+    "area": "East / Central Pattaya",
+    "category": "food",
+    "maps": "https://www.google.com/maps/search/?api=1&query=BRU%20Coffee%20Bar%20Pattaya"
+  },
+  {
+    "id": "gimbrew",
+    "name": "GIM Brewing Room",
+    "area": "Naklua",
+    "category": "food",
+    "maps": "https://www.google.com/maps/search/?api=1&query=GIM%20Brewing%20Room%20Pattaya"
+  },
+  {
+    "id": "albatross",
+    "name": "Albatross Coffee Roasters",
+    "area": "Central Pattaya",
+    "category": "food",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Albatross%20Coffee%20Roasters%20Pattaya"
+  },
+  {
+    "id": "madras",
+    "name": "Madras Darbar",
+    "area": "Central Pattaya",
+    "category": "food",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Madras%20Darbar%20Indian%20Restaurant%20Pattaya"
+  },
+  {
+    "id": "boho",
+    "name": "Glass House Boho",
+    "area": "Naklua",
+    "category": "food",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Glass%20House%20Boho%20Pattaya"
+  },
+  {
+    "id": "hardrock",
+    "name": "Hard Rock Cafe Pattaya",
+    "area": "Beach Road",
+    "category": "food",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Hard%20Rock%20Cafe%20Pattaya"
+  },
+  {
+    "id": "surfkit",
+    "name": "Surf Kitchen Jomtien",
+    "area": "Jomtien Beach",
+    "category": "food",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Surf%20Kitchen%20Jomtien"
+  },
+  {
+    "id": "nangnual",
+    "name": "Nang Nual Seafood",
+    "area": "Bali Hai / South",
+    "category": "food",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Nang%20Nual%20Seafood%20Pattaya"
+  },
+  {
+    "id": "kingsea",
+    "name": "King Seafood",
+    "area": "Walking Street area",
+    "category": "food",
+    "maps": "https://www.google.com/maps/search/?api=1&query=King%20Seafood%20Pattaya"
+  }
+]
