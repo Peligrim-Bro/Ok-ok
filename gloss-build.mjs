@@ -1629,3 +1629,4 @@ await import('./scripts/apply-events.mjs');
 }
 
 await import('./scripts/apply-bangkok.mjs');
+await import('./scripts/apply-holiday-wheel.mjs');
