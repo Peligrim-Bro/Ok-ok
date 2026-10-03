@@ -17,16 +17,17 @@ window.OKI3D={mount(host,options){
  const geometries=new Set(),materials=new Set(),textures=new Set();
  const geometry=g=>{geometries.add(g);return g;};
  const mat=params=>{const m=new THREE.MeshPhysicalMaterial(params);materials.add(m);return m;};
- const cyan=mat({color:0x00bfff,roughness:.08,metalness:.25,clearcoat:1,clearcoatRoughness:.08,transmission:0,transparent:true,opacity:.72,thickness:.45,ior:1.4,emissive:0x007ca8,emissiveIntensity:.185});
+ // Physical transmission keeps the shell glossy without alpha-sorting seams.
+ const cyan=mat({color:0x48dfff,roughness:.12,metalness:0,clearcoat:1,clearcoatRoughness:.08,transmission:.52,opacity:1,thickness:.32,ior:1.35,attenuationColor:0x55ddff,attenuationDistance:2,emissive:0x007ca8,emissiveIntensity:.12});
  const pink=mat({color:0xff18b9,roughness:.14,metalness:.12,clearcoat:1,transmission:0,transparent:true,opacity:.688,thickness:.2,emissive:0xff329d,emissiveIntensity:.18});
- const headMat=mat({color:0xff30be,roughness:.08,metalness:.05,clearcoat:1,transmission:0,transparent:true,opacity:.683,thickness:.7,ior:1.35,emissive:0xc40073,emissiveIntensity:.2});
+ const headMat=mat({color:0xff8ddd,roughness:.13,metalness:0,clearcoat:1,clearcoatRoughness:.07,transmission:.38,opacity:1,thickness:.45,ior:1.35,attenuationColor:0xff9be2,attenuationDistance:2,emissive:0xc40073,emissiveIntensity:.1});
  const hairMat=mat({color:0xff64cd,roughness:.15,metalness:.1,clearcoat:1,transmission:0,transparent:true,opacity:.68,thickness:.25,emissive:0xa82a7d,emissiveIntensity:.12});
  const white=mat({color:0xffffff,roughness:.13,clearcoat:1});const pupil=new THREE.MeshBasicMaterial({color:0x102140,toneMapped:false}),iris=new THREE.MeshBasicMaterial({color:0x14cddd,toneMapped:false});materials.add(pupil);materials.add(iris);
  const mouthMat=mat({color:0x7d184b,roughness:.35});const tongueMat=mat({color:0xff82a7,roughness:.3,clearcoat:1});
  const glow=new THREE.MeshBasicMaterial({color:new THREE.Color(1,.18,.7),toneMapped:false});materials.add(glow);const cyanGlow=new THREE.MeshBasicMaterial({color:new THREE.Color(.12,.9,1),toneMapped:false});materials.add(cyanGlow);
  const haloMat=color=>{const m=new THREE.ShaderMaterial({uniforms:{tint:{value:new THREE.Color(color)}},vertexShader:'varying vec3 vN;varying vec3 vV;void main(){vec4 p=modelViewMatrix*vec4(position,1.);vN=normalize(normalMatrix*normal);vV=normalize(-p.xyz);gl_Position=projectionMatrix*p;}',fragmentShader:'uniform vec3 tint;varying vec3 vN;varying vec3 vV;void main(){float edge=pow(1.-abs(dot(normalize(vN),normalize(vV))),3.);gl_FragColor=vec4(tint*.8,edge*.18);}',transparent:true,depthWrite:false,blending:THREE.AdditiveBlending,toneMapped:false});materials.add(m);return m;};const pinkHalo=haloMat(0xff2ebd),blueHalo=haloMat(0x00d5ff);
  function halo(mesh,m){const shell=new THREE.Mesh(mesh.geometry,m);shell.scale.setScalar(1.025);mesh.add(shell);}
- const ball=geometry(new THREE.SphereGeometry(1,32,24));
+ const ball=geometry(new THREE.SphereGeometry(1,48,32));
  function sphere(parent,m,x,y,z,sx,sy=sx,sz=sx){const o=new THREE.Mesh(ball,m);o.position.set(x,y,z);o.scale.set(sx,sy,sz);parent.add(o);if(m===cyan||m===headMat||m===hairMat)halo(o,m===cyan?blueHalo:pinkHalo);return o;}
  function tube(parent,points,r,m){const curve=new THREE.CatmullRomCurve3(points.map(p=>new THREE.Vector3(...p)));const o=new THREE.Mesh(geometry(new THREE.TubeGeometry(curve,Math.max(12,points.length*9),r,8,false)),m);parent.add(o);return o;}
  function ring(parent,x,y,z,r,m,rotation=0){const o=new THREE.Mesh(geometry(new THREE.TorusGeometry(r,.045,10,36)),m);o.position.set(x,y,z);o.rotation.x=rotation;parent.add(o);return o;}
@@ -51,12 +52,15 @@ window.OKI3D={mount(host,options){
  sphere(head,pink,-.66,-.01,0,.135,.16,.12);sphere(head,pink,.66,-.01,0,.135,.16,.12);
  // Glowing contours are curved geometry on the actual surface, not a billboard.
  const forehead=[];for(let i=0;i<=32;i++){const a=-.1+i*Math.PI*1.2/32;forehead.push([Math.cos(a)*.665,Math.sin(a)*.655,.06]);}tube(head,forehead,.012,glow);
- const eyes=[];
+ const eyes=[],gaze=[];
  for(const x of [-.24,.24]){const group=new THREE.Group();group.position.set(x,.07,.558);head.add(group);sphere(group,white,0,0,0,.19,.225,.065);sphere(group,iris,0,-.01,.057,.131,.157,.035);sphere(group,pupil,0,-.018,.09,.085,.112,.022);sphere(group,white,-.027,.036,.112,.024,.024,.009);sphere(group,white,.034,-.062,.112,.01,.01,.007);eyes.push(group);
- tube(head,[[x-.12,.30,.48],[x-.02,.34,.53],[x+.11,.30,.48]],.023,glow);
+ gaze.push(group.children.filter(o=>o.material===iris||o.material===pupil));
+ tube(head,[[x-.12,.30,.48],[x-.02,.36,.53],[x+.11,.30,.48]],.027,glow);
  }
- // Small natural nose and subtle translucent blush: no red ball or painted cheeks.
- sphere(head,headMat,0,-.12,.595,.054,.045,.032);const blush=mat({color:0xff8bcb,roughness:.25,clearcoat:1,transmission:0,transparent:true,opacity:.22,depthWrite:false});sphere(head,blush,-.37,-.17,.492,.08,.045,.012);sphere(head,blush,.37,-.17,.492,.08,.045,.012);
+ // Rounded pink facial volumes from the owner's reference, attached in 3D.
+ const blush=mat({color:0xff63bd,roughness:.14,metalness:0,clearcoat:1,clearcoatRoughness:.06,emissive:0xea2589,emissiveIntensity:.12});
+ sphere(head,blush,0,-.12,.615,.10,.075,.065);
+ sphere(head,blush,-.40,-.19,.49,.145,.10,.07);sphere(head,blush,.40,-.19,.49,.145,.10,.07);
  const smile=new THREE.Group();head.add(smile);const smileShape=new THREE.Shape();smileShape.moveTo(-.18,0);smileShape.quadraticCurveTo(0,-.21,.18,0);smileShape.quadraticCurveTo(0,-.055,-.18,0);const mouth=new THREE.Mesh(geometry(new THREE.ShapeGeometry(smileShape,24)),mouthMat);mouth.position.set(0,-.29,.543);smile.add(mouth);sphere(smile,tongueMat,0,-.38,.55,.085,.018,.008);tube(smile,[[-.18,-.29,.547],[0,-.322,.559],[.18,-.29,.547]],.009,pink);
  if(options.gender==='girl'){
   // Open-backed translucent bob, rounded locks and a swept fringe; no helmet.
@@ -96,6 +100,8 @@ window.OKI3D={mount(host,options){
   armLeft.rotation.z=THREE.MathUtils.lerp(armLeft.rotation.z,leftTarget+(!reduce&&!moving?Math.sin(time*.0016)*.04:0),.1);
   wave.rotation.x=THREE.MathUtils.lerp(wave.rotation.x,thinking?.45:resting?.25:0,.1);
   host.dataset.expression=resting?'calm':thinking?'think':'wave';needs=true;
+  // Quiet/thinking look raises the pupils; sleep keeps its closed eyes.
+  for(const pair of gaze)for(const part of pair){part.position.x=THREE.MathUtils.lerp(part.position.x,thinking?.028:0,.12);const base=part.material===iris?-.01:-.018;part.position.y=THREE.MathUtils.lerp(part.position.y,base+(thinking?.035:0),.12);}
   if(!reduce&&!moving){root.position.y=.06+Math.sin(time*.0018)*.07;root.rotation.z=Math.sin(time*.0011)*.025;head.rotation.z=Math.sin(time*.0015)*.04;const beat=1+Math.sin(time*.003)*.06;heart.scale.set(.12*beat,.13*beat,.1*beat);if(currentMood!=='sleep'){const blink=time%5900>5700;eyes.forEach(o=>o.scale.y=blink?.12:1);}}
   if(needs){renderer.render(scene,camera);needs=false;host.dataset.ready='true';host.dataset.azimuth=controls.getAzimuthalAngle().toFixed(3);}}
  frame=requestAnimationFrame(draw);
