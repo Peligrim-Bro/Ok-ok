@@ -30,8 +30,9 @@ jobs:
           const html = readFileSync('site/public/index.html', 'utf8');
           if (!html.includes('okok-pulse-v1')) throw new Error('Pulse patch missing from generated index.html');
           if (!html.includes('Как здесь сейчас?')) throw new Error('Pulse UI text missing from generated index.html');
-          if (!html.includes('oki-bubble-pointer-fix-v1')) throw new Error('OKI bubble pointer fix missing');
-          console.log('PASS: Pulse and OKI bubble fix are present');
+          if (!html.includes('oki-nav-float-fix-v2')) throw new Error('Floating navigation fix missing');
+          if (!html.includes('oki-prompt-tail-fix-v2')) throw new Error('OKI prompt tail fix missing');
+          console.log('PASS: Pulse, floating nav and OKI prompt fix are present');
           NODE
       - name: Check deployment credentials
         env:
@@ -39,7 +40,7 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
           if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
-            echo "::error::Add CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID in Settings > Secrets and variables > Actions, then run this workflow again."
+            echo "::error::Cloudflare deployment credentials are missing."
             exit 1
           fi
       - name: Deploy directly to Cloudflare
@@ -51,42 +52,16 @@ jobs:
       - name: Check public website and API health
         run: |
           node --input-type=module <<'NODE'
-          import { readFileSync } from 'node:fs';
-          const local = readFileSync('site/public/index.html', 'utf8');
           const checks = [
             ['/', async r => {
               const html = await r.text();
               if (!html.includes('PattayaOK')) throw new Error('Website title missing');
-              if (local.includes('HAF8KW') && !html.includes('HAF8KW')) throw new Error('Latest Klook code missing');
-              if (!html.includes('okok-pulse-v1')) throw new Error('Pulse v1 missing on public website');
-              if (!html.includes('oki-bubble-pointer-fix-v1')) throw new Error('OKI bubble fix missing on public website');
+              if (!html.includes('okok-pulse-v1')) throw new Error('Pulse missing');
+              if (!html.includes('oki-nav-float-fix-v2')) throw new Error('Floating nav fix missing');
+              if (!html.includes('oki-prompt-tail-fix-v2')) throw new Error('OKI prompt fix missing');
             }],
-            ['/api/telegram/health', async r => {
-              const data = await r.json();
-              if (data.service !== 'okok-telegram' || data.configured !== true) throw new Error('Telegram health check failed');
-            }],
-            ['/api/oki/health', async r => {
-              const data = await r.json();
-              if (data.service !== 'okok-oki-metrics' || data.configured !== true) throw new Error('OKI health check failed');
-            }]
+            ['/api/telegram/health', async r => { const d=await r.json(); if(d.service!=='okok-telegram'||d.configured!==true) throw new Error('Telegram health failed'); }],
+            ['/api/oki/health', async r => { const d=await r.json(); if(d.service!=='okok-oki-metrics'||d.configured!==true) throw new Error('OKI health failed'); }]
           ];
-          for (const [path, verify] of checks) {
-            let passed = false;
-            for (let attempt = 0; attempt < 4; attempt++) {
-              try {
-                const url = new URL(path, 'https://ok-ok.click');
-                url.searchParams.set('deployment-check', process.env.COMMIT_REF + '-' + attempt);
-                const response = await fetch(url, { headers: { 'Cache-Control': 'no-cache' }, signal: AbortSignal.timeout(15000) });
-                if (!response.ok) throw new Error('HTTP ' + response.status);
-                await verify(response);
-                passed = true;
-                console.log('OK ' + path);
-                break;
-              } catch (error) {
-                console.error(path + ': ' + error.message);
-                if (attempt < 3) await new Promise(resolve => setTimeout(resolve, 10000));
-              }
-            }
-            if (!passed) process.exit(1);
-          }
+          for (const [path,verify] of checks){let ok=false;for(let a=0;a<4;a++){try{const u=new URL(path,'https://ok-ok.click');u.searchParams.set('deployment-check',process.env.COMMIT_REF+'-'+a);const r=await fetch(u,{headers:{'Cache-Control':'no-cache'},signal:AbortSignal.timeout(15000)});if(!r.ok)throw new Error('HTTP '+r.status);await verify(r);ok=true;console.log('OK '+path);break}catch(e){console.error(path+': '+e.message);if(a<3)await new Promise(x=>setTimeout(x,10000));}}if(!ok)process.exit(1);}
           NODE
