@@ -1627,3 +1627,5 @@ await import('./scripts/apply-events.mjs');
  writeFileSync(swPath,readFileSync(swPath,'utf8').replace(/partners\.js\?v=\d+/g,'partners.js?v=95').replace('pattayaok-senate-ads-v94-','pattayaok-klook-v95-'));
  console.log('Klook referral HAF8KW ready in all partner placements.');
 }
+
+await import('./scripts/apply-bangkok.mjs');
