@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: '22'
       - name: Build website and Cloudflare Worker
-        run: node gloss-build.mjs && node pulse-patch.mjs && node telegram-build.mjs
+        run: node gloss-build.mjs && node pulse-patch.mjs && node oki-bubble-fix.mjs && node telegram-build.mjs
       - name: Verify generated scripts and critical features
         run: |
           node scripts/verify-project.mjs
@@ -30,7 +30,8 @@ jobs:
           const html = readFileSync('site/public/index.html', 'utf8');
           if (!html.includes('okok-pulse-v1')) throw new Error('Pulse patch missing from generated index.html');
           if (!html.includes('Как здесь сейчас?')) throw new Error('Pulse UI text missing from generated index.html');
-          console.log('PASS: OK-OK Pulse v1 is present in generated site');
+          if (!html.includes('oki-bubble-pointer-fix-v1')) throw new Error('OKI bubble pointer fix missing');
+          console.log('PASS: Pulse and OKI bubble fix are present');
           NODE
       - name: Check deployment credentials
         env:
@@ -58,6 +59,7 @@ jobs:
               if (!html.includes('PattayaOK')) throw new Error('Website title missing');
               if (local.includes('HAF8KW') && !html.includes('HAF8KW')) throw new Error('Latest Klook code missing');
               if (!html.includes('okok-pulse-v1')) throw new Error('Pulse v1 missing on public website');
+              if (!html.includes('oki-bubble-pointer-fix-v1')) throw new Error('OKI bubble fix missing on public website');
             }],
             ['/api/telegram/health', async r => {
               const data = await r.json();
