@@ -34,5 +34,5 @@ assert.deepEqual([...nav.matchAll(/data-tab="([^"]+)"/g)].map(m=>m[1]),['home','
 assert(html.includes("bubble.style.setProperty('--oki-tail-x'"),'OKI bubble must anchor its tail to OKI');
 assert(html.includes('left:var(--oki-tail-x,50%)'),'OKI tail positioning missing');
 for(const marker of ['okok-pulse-v1','oki-prompt-tail-fix-v4','okok-tetris-playable-v2'])assert(html.includes(marker),'Missing current UI patch '+marker);
-assert(!readFileSync('site/public/sw.js','utf8').match(/okok-20261003-(?:mobile-contact-v4|oki-layout-restore)/),'Cache must be unique per build');
+assert(/const CACHE = "pattayaok-[^"]+-[a-f0-9]{7,13}";/.test(readFileSync('site/public/sw.js','utf8')),'Cache must retain the unique build ID');
 console.log('PASS current UI: OKI second, smiley fifth, anchored tail, Pulse and unique deployment cache');

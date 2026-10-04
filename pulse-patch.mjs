@@ -56,6 +56,7 @@ writeFileSync(indexPath,html);
 
 const swPath='site/public/sw.js';
 let sw=readFileSync(swPath,'utf8');
-sw=sw.replace(/const CACHE = [^;]+;/,'const CACHE = "okok-20261003-pulse-v2-no-scam";');
+// Keep the unique build cache; remove legacy fixed OK-OK caches on activation.
+sw=sw.replace('k.startsWith("pattayaok-") && k !== CACHE','(k.startsWith("pattayaok-") || k.startsWith("okok-")) && k !== CACHE');
 writeFileSync(swPath,sw);
 console.log('OK-OK Pulse v2 injected; scam cards excluded.');
