@@ -17,3 +17,5 @@ GitHub Actions checks are diagnostic; they do not gate Cloudflare's independent 
 
 - Bottom navigation order is fixed: home, game (OKI), list, scam, shop (smiley). Keep exactly five buttons. OKI bubble tail must track the actual OKI button center, including viewport-edge clamping.
 - Preserve the unique service-worker cache generated for each build. Never replace it with a fixed cache name. Verify the live site matches the latest published main and retains Pulse/mobile fixes before reporting success.
+
+- Agoda is discontinued by owner decision. Do not restore its card, links or partner registry entry. Every build must run remove-agoda.mjs; preserve all other partners and their referral codes.

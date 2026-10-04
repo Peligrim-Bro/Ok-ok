@@ -1646,3 +1646,6 @@ await import('./scripts/apply-holiday-wheel.mjs');
  });
  writeFileSync(path,page);
 }
+
+// Mandatory on every build, including native Cloudflare Workers Builds.
+await import('./remove-agoda.mjs');

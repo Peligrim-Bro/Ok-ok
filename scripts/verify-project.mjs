@@ -36,3 +36,13 @@ assert(html.includes('left:var(--oki-tail-x,50%)'),'OKI tail positioning missing
 for(const marker of ['okok-pulse-v1','oki-prompt-tail-fix-v4','okok-tetris-playable-v2'])assert(html.includes(marker),'Missing current UI patch '+marker);
 assert(/const CACHE = "pattayaok-[^"]+-[a-f0-9]{7,13}";/.test(readFileSync('site/public/sw.js','utf8')),'Cache must retain the unique build ID');
 console.log('PASS current UI: OKI second, smiley fifth, anchored tail, Pulse and unique deployment cache');
+
+const partnerSource=readFileSync('site/public/assets/commerce/partners.js','utf8');
+assert(!/agoda/i.test(partnerSource),'Discontinued Agoda partner returned');
+const partnerContext={window:{}};
+new Script(partnerSource).runInNewContext(partnerContext);
+assert.deepEqual(Object.keys(partnerContext.window.OK_PARTNERS),['senate','klook','airalo','safetywing','travel12go'],'Other partners must remain');
+assert.equal(partnerContext.window.OK_PARTNERS.klook.referralCode,'HAF8KW');
+assert.equal(partnerContext.window.OK_PARTNERS.airalo.referralCode,'TIMUR5494');
+assert.equal(partnerContext.window.OK_PARTNERS.travel12go.ref,'https://12go.asia/?z=17095940');
+console.log('PASS: Agoda excluded; all remaining partners and referral codes preserved');
