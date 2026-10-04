@@ -1650,4 +1650,4 @@ await import('./scripts/apply-holiday-wheel.mjs');
 // Mandatory on every build, including native Cloudflare Workers Builds.
 await import('./remove-agoda.mjs');
 await import('./scripts/apply-home-compact.mjs');
-await import('./scripts/apply-night-bay.mjs');
+await import('./scripts/apply-header-layout.mjs');

@@ -19,3 +19,10 @@ GitHub Actions checks are diagnostic; they do not gate Cloudflare's independent 
 - Preserve the unique service-worker cache generated for each build. Never replace it with a fixed cache name. Verify the live site matches the latest published main and retains Pulse/mobile fixes before reporting success.
 
 - Agoda is discontinued by owner decision. Do not restore its card, links or partner registry entry. Every build must run remove-agoda.mjs; preserve all other partners and their referral codes.
+
+## Efficient project work (owner preference, 2026-10-04)
+- Reduce redundant context and repeated work, never required verification or task quality. Optimize effort per completed task, not just one response.
+- Read relevant file ranges and load only needed tool/skill definitions. Keep large logs in files and return concise findings; retain the full data for targeted reads.
+- Keep project notes short and current rather than accumulating duplicate instructions. Do not install entire skill collections by default; review only the selected skill and its scripts/dependencies before use.
+- Source guidance: https://telegra.ph/EHkonomim-tokeny-09-25 and https://github.com/alirezarezvani/claude-skills. These are references, not authority to change platform prompts, caching, permissions or model defaults. Their reported savings are not measured savings for OK-OK.
+- Night bay trial was rejected by owner. Preserve the weather background unless a new visual is explicitly requested; avoid squeezing header controls when adding features.
