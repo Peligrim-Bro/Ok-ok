@@ -5,7 +5,7 @@
 - Preserve existing changes. Read main before edits; never force-push.
 - Build: node gloss-build.mjs && node telegram-build.mjs.
 - Deploy: npx wrangler deploy --config wrangler-telegram.json.
-- Before publishing run scripts/verify-project.mjs after build, plus mobile browser tests of changed behavior. Check RU/EN/TH.
+- Before publishing run scripts/verify-project.mjs after build and check changed behavior in RU/EN/TH. Prefer mobile browser testing before release. For reversible content/layout changes, if the available browser cannot access a preview or set a mobile viewport, run render/translation checks and review responsive CSS, then deploy and check the live site with the available browser. Explicitly report that mobile visual testing remains unverified; do not call it passed. This fallback does not cover payments, authentication or destructive changes.
 - After publishing confirm Workers Builds: ok-ok succeeds. Do not claim publication from a commit alone.
 - Keep header hourglass, remove duplicate full-width timer entry. Preserve visa dates, five-item bottom navigation, partners, payments and Telegram outbox.
 - OKI: actual rotatable 3D, no pedestal, no excessive bloom. New users start as babies. Preserve daily care, diapers, age-specific needs, Tetris and earned crystals. Final stage stays locked; real-money mascot sales disabled until explicitly authorized.
