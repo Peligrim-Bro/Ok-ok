@@ -1,89 +1,78 @@
 {
-  "verifiedAt": "2026-10-03",
+  "verifiedAt": "2026-10-04",
   "news": [
     {
       "category": "world",
-      "when": "02.10 · 🌍",
-      "href": "https://www.reuters.com/business/environment/nepal-plans-drain-four-glacial-lakes-after-deadly-floods-2026-10-02/",
-      "ru": "Непал начал подготовку проекта по контролируемому снижению уровня воды в четырёх высокогорных ледниковых озёрах. План включает исследования, датчики, прогнозирование паводков и системы раннего предупреждения для населённых пунктов ниже по течению.",
-      "en": "Nepal is preparing a project to lower water levels in four high-altitude glacial lakes in a controlled way. The plan includes studies, sensors, flood forecasting and early-warning systems for downstream communities.",
-      "th": "เนปาลกำลังเตรียมโครงการลดระดับน้ำอย่างควบคุมในทะเลสาบธารน้ำแข็งบนพื้นที่สูง 4 แห่ง แผนครอบคลุมการศึกษา เซ็นเซอร์ การพยากรณ์น้ำท่วม และระบบเตือนภัยล่วงหน้าสำหรับชุมชนท้ายน้ำ",
-      "publishedAt": "2026-10-02",
-      "sources": [
-        "https://www.reuters.com/business/environment/nepal-plans-drain-four-glacial-lakes-after-deadly-floods-2026-10-02/"
-      ],
+      "when": "03.10 · 🌍",
+      "href": "https://www.reuters.com/legal/litigation/public-fears-ai-grow-trump-digs-voluntary-safeguards-2026-10-03/",
+      "ru": "Белый дом и шесть крупных технологических компаний объявили добровольное соглашение по безопасности ИИ. Оно предусматривает внутренний контроль и внешние аудиты, но не устанавливает отдельного механизма принуждения или санкций.",
+      "en": "The White House and six major technology companies announced a voluntary AI-safety agreement. It calls for internal controls and external audits but does not set out a separate enforcement mechanism or penalties.",
+      "th": "ทำเนียบขาวและบริษัทเทคโนโลยีรายใหญ่ 6 แห่งประกาศข้อตกลงด้านความปลอดภัยของ AI แบบสมัครใจ โดยกำหนดให้มีการควบคุมภายในและการตรวจสอบจากภายนอก แต่ยังไม่มีกลไกบังคับใช้หรือบทลงโทษเฉพาะ",
+      "publishedAt": "2026-10-03",
+      "sources": ["https://www.reuters.com/legal/litigation/public-fears-ai-grow-trump-digs-voluntary-safeguards-2026-10-03/"],
       "nonWar": true,
       "discussionEvidence": {
-        "observedAt": "2026-10-03T08:43:00+07:00",
-        "summary": "Comparable public comment/share totals were not available. Selected for current international Reuters coverage and the broad public-safety relevance of glacier-lake risk; this is not a claim of a global popularity rank."
+        "observedAt": "2026-10-04T08:50:00+07:00",
+        "summary": "Comparable public comment/share totals were unavailable. Selected for fresh Reuters coverage, broad cross-sector relevance and a Reuters/Ipsos finding that 75% of Americans worry companies are not doing enough on AI safety; this is not a claim of a global popularity rank."
       }
     },
     {
       "category": "thailand",
       "when": "02.10 · 🇹🇭",
-      "href": "https://www.reuters.com/world/asia-pacific/thai-airways-board-suspends-chief-executive-over-flood-response-local-media-2026-10-02/",
-      "ru": "Глава Thai Airways Чай Эамсири сообщил, что совет директоров освободил его от должности после критики действий авиакомпании во время недавнего наводнения в Бангкоке. Перевозчику предстоит восстановить стабильную работу после сбоев.",
-      "en": "Thai Airways chief Chai Eamsiri said the board removed him after criticism of the airline's response to Bangkok's recent flooding. The carrier now faces the task of stabilising operations after the disruption.",
-      "th": "ชัย เอี่ยมศิริ ผู้บริหารการบินไทยระบุว่าคณะกรรมการมีมติให้เขาพ้นจากตำแหน่ง หลังเกิดกระแสวิจารณ์การรับมือเหตุอุทกภัยล่าสุดในกรุงเทพฯ ขณะนี้สายการบินต้องเร่งทำให้การดำเนินงานกลับมามีเสถียรภาพ",
+      "href": "https://thailand.go.th/issue-focus-detail/thai-airways-operates-all-flights-on-3-october-2026",
+      "ru": "Thai Airways сообщила о выполнении всех запланированных рейсов 3 октября после сокращения части программы 1–2 октября. Дополнительная билетная касса в головном офисе работает 3–4 октября с 08:00 до 17:00.",
+      "en": "Thai Airways said it would operate all scheduled flights on 3 October after reducing part of its programme on 1–2 October. An additional ticket office at its head office is open on 3–4 October from 08:00 to 17:00.",
+      "th": "การบินไทยประกาศให้บริการเที่ยวบินตามตารางทั้งหมดในวันที่ 3 ตุลาคม หลังลดเที่ยวบินบางส่วนเมื่อวันที่ 1–2 ตุลาคม และเปิดสำนักงานขายบัตรโดยสารเพิ่มเติมที่สำนักงานใหญ่วันที่ 3–4 ตุลาคม เวลา 08.00–17.00 น.",
       "publishedAt": "2026-10-02",
-      "sources": [
-        "https://www.reuters.com/world/asia-pacific/thai-airways-board-suspends-chief-executive-over-flood-response-local-media-2026-10-02/"
-      ],
+      "sources": ["https://thailand.go.th/issue-focus-detail/thai-airways-operates-all-flights-on-3-october-2026"],
       "discussionEvidence": {
-        "observedAt": "2026-10-03T08:43:00+07:00",
-        "summary": "No comparable public engagement count was exposed. Selected because Reuters and cited Thai media were covering the management change after widely reported airport disruption; no absolute popularity claim is made."
+        "observedAt": "2026-10-04T08:50:00+07:00",
+        "summary": "The official Thailand.go.th page displayed 429 views and 0 comments, versus 66 views and 0 comments for the selected OECD article on the same site. These comparable figures measure only exposure on one government website, not broader public popularity."
       }
     },
     {
       "category": "thailand",
-      "when": "01.10 · 🇹🇭",
-      "href": "https://www.reuters.com/world/asia-pacific/infineon-opens-thailand-plant-country-ramps-up-semiconductor-push-2026-10-01/",
-      "ru": "Infineon открыла новый завод в Самутпракане, усиливая роль Таиланда в региональной цепочке производства полупроводников. Площадка будет заниматься завершающими этапами обработки и тестирования чипов и может расширяться поэтапно.",
-      "en": "Infineon has opened a new plant in Samut Prakan, strengthening Thailand's role in the regional semiconductor supply chain. The site will handle chip back-end processing and testing and can expand in stages.",
-      "th": "Infineon เปิดโรงงานแห่งใหม่ในจังหวัดสมุทรปราการ ช่วยเพิ่มบทบาทของไทยในห่วงโซ่อุปทานเซมิคอนดักเตอร์ของภูมิภาค โรงงานจะทำขั้นตอนปลายทางของการผลิตและทดสอบชิป และสามารถขยายเป็นระยะได้",
-      "publishedAt": "2026-10-01",
-      "sources": [
-        "https://www.reuters.com/world/asia-pacific/infineon-opens-thailand-plant-country-ramps-up-semiconductor-push-2026-10-01/",
-        "https://www.welt.de/regionales/bayern/article6abdee5eca5c42fe8f931536/infineon-eroeffnet-fabrik-in-thailand.html"
-      ],
+      "when": "03.10 · 🇹🇭",
+      "href": "https://thailand.go.th/issue-focus-detail/thailand-moves-closer-to-oecd-membership",
+      "ru": "Таиланд и ОЭСР обсудили дорожную карту вступления, технические проверки и подготовку государственных структур. Правительство сохраняет ориентир на полноправное членство к 2028 году.",
+      "en": "Thailand and the OECD discussed the accession roadmap, technical reviews and capacity building. The government continues to target full membership by 2028.",
+      "th": "ไทยและ OECD หารือแผนการเข้าเป็นสมาชิก การทบทวนด้านเทคนิค และการเสริมศักยภาพหน่วยงาน โดยรัฐบาลยังตั้งเป้าเป็นสมาชิกเต็มรูปแบบภายในปี 2028",
+      "publishedAt": "2026-10-03",
+      "sources": ["https://thailand.go.th/issue-focus-detail/thailand-moves-closer-to-oecd-membership"],
       "discussionEvidence": {
-        "observedAt": "2026-10-03T08:43:00+07:00",
-        "summary": "Comparable comment/share totals were unavailable. Selection is based on independent same-day coverage by Reuters and Welt and its significance for Thailand's technology investment; no popularity ranking is asserted."
-      }
-    },
-    {
-      "category": "pattaya",
-      "when": "02.10 · Pattaya",
-      "href": "https://www.reuters.com/business/environment/plankton-bloom-turns-thai-island-waters-bright-smelly-green-2026-10-02/",
-      "ru": "У берегов Ко Лана исследователи зафиксировали ярко-зелёное цветение планктона после сильных дождей. Специалисты Университета Бурапха отбирают пробы; часть побережья не затронута, а явление обычно ослабевает за несколько дней.",
-      "en": "Researchers recorded a bright-green plankton bloom off Ko Lan after heavy rain. A Burapha University team is sampling the water; some stretches remain unaffected and such blooms typically ease within a few days.",
-      "th": "นักวิจัยพบแพลงก์ตอนบลูมสีเขียวสดบริเวณเกาะล้านหลังฝนตกหนัก ทีมมหาวิทยาลัยบูรพากำลังเก็บตัวอย่างน้ำ โดยชายฝั่งบางช่วงไม่ได้รับผลกระทบ และปรากฏการณ์ลักษณะนี้มักลดลงภายในไม่กี่วัน",
-      "publishedAt": "2026-10-02",
-      "sources": [
-        "https://www.reuters.com/business/environment/plankton-bloom-turns-thai-island-waters-bright-smelly-green-2026-10-02/"
-      ],
-      "discussionEvidence": {
-        "observedAt": "2026-10-03T08:43:00+07:00",
-        "summary": "Public comment/share totals were not available. Selected for fresh international coverage, direct Pattaya visitor relevance and on-site attribution to Burapha University researchers; no popularity rank is claimed."
+        "observedAt": "2026-10-04T08:50:00+07:00",
+        "summary": "The official Thailand.go.th page displayed 66 views and 0 comments, compared with 429 views and 0 comments for the selected Thai Airways article on the same site. The counts are directly comparable only within that government website and do not establish wider popularity."
       }
     },
     {
       "category": "pattaya",
       "when": "03.10 · Pattaya",
-      "href": "https://www.pattayamail.com/latestnews/news/pattaya-city-and-immigration-close-gaps-in-tourist-services-and-safety-566866",
-      "ru": "Паттайя и иммиграционная служба Чонбури договорились теснее координировать помощь туристам, общественную безопасность и городские сервисы. Встреча прошла в мэрии 2 октября; практические детали дальнейших мер пока не объявлены.",
-      "en": "Pattaya City and Chonburi Immigration agreed to coordinate more closely on visitor assistance, public safety and city services. The meeting took place at City Hall on 2 October; detailed follow-up measures have not yet been announced.",
-      "th": "เมืองพัทยาและตรวจคนเข้าเมืองชลบุรีตกลงประสานงานใกล้ชิดขึ้นด้านการช่วยเหลือนักท่องเที่ยว ความปลอดภัยสาธารณะ และบริการของเมือง การประชุมจัดขึ้นที่ศาลาว่าการเมืองพัทยาเมื่อวันที่ 2 ตุลาคม ส่วนรายละเอียดมาตรการต่อไปยังไม่ได้ประกาศ",
+      "href": "https://thepattayanews.com/2026/10/03/banglamung-red-cross-delivers-relief-supplies-to-52-flood-hit-households-near-pattaya/",
+      "ru": "Красный Крест Бангламунга доставил помощь 52 семьям в затопленных районах рядом с Паттайей. Вода постепенно уходит, однако в отдельных сообществах остаются подтопления и бытовые трудности.",
+      "en": "The Banglamung Red Cross delivered relief supplies to 52 households in flood-affected communities near Pattaya. Water is gradually receding, but standing water and daily disruption remain in some areas.",
+      "th": "กิ่งกาชาดอำเภอบางละมุงมอบถุงยังชีพให้ 52 ครัวเรือนในชุมชนที่ได้รับผลกระทบจากน้ำท่วมใกล้พัทยา ระดับน้ำกำลังลดลง แต่บางพื้นที่ยังมีน้ำขังและกระทบการใช้ชีวิตประจำวัน",
       "publishedAt": "2026-10-03",
-      "sources": [
-        "https://www.pattayamail.com/latestnews/news/pattaya-city-and-immigration-close-gaps-in-tourist-services-and-safety-566866"
-      ],
+      "sources": ["https://thepattayanews.com/2026/10/03/banglamung-red-cross-delivers-relief-supplies-to-52-flood-hit-households-near-pattaya/"],
       "discussionEvidence": {
-        "observedAt": "2026-10-03T08:43:00+07:00",
-        "summary": "Pattaya Mail displayed 18 views and 0 comments at observation time. The count is a single-outlet signal and is not comparable with platforms that hide engagement totals."
+        "observedAt": "2026-10-04T08:50:00+07:00",
+        "summary": "The outlet did not expose public totals for likes, comments or shares. Selected for last-24-hour local public-safety relevance and attributed district relief action; no popularity rank is claimed."
+      }
+    },
+    {
+      "category": "pattaya",
+      "when": "03.10 · Pattaya",
+      "href": "https://thepattayanews.com/2026/10/03/indian-tourist-rewards-honest-pattaya-motorcycle-taxi-driver-who-returned-wallet-with-16000-baht/",
+      "ru": "Водитель мототакси в Паттайе нашёл кошелёк туриста с деньгами и документами и сразу передал его полиции. Владелец получил вещи обратно и поблагодарил водителя.",
+      "en": "A Pattaya motorcycle-taxi driver found a tourist's wallet containing cash and documents and promptly handed it to police. The owner recovered the belongings and thanked the driver.",
+      "th": "คนขับวินมอเตอร์ไซค์ในพัทยาพบกระเป๋าสตางค์ของนักท่องเที่ยวที่มีเงินสดและเอกสาร แล้วนำส่งตำรวจทันที เจ้าของได้รับทรัพย์สินคืนและขอบคุณคนขับ",
+      "publishedAt": "2026-10-03",
+      "sources": ["https://thepattayanews.com/2026/10/03/indian-tourist-rewards-honest-pattaya-motorcycle-taxi-driver-who-returned-wallet-with-16000-baht/"],
+      "discussionEvidence": {
+        "observedAt": "2026-10-04T08:50:00+07:00",
+        "summary": "The outlet did not expose public totals for likes, comments or shares. Selected for freshness and direct relevance to Pattaya visitors; no popularity rank is claimed."
       }
     }
   ],
   "scams": [],
-  "selection": "1 non-war world story, 2 Thailand stories, 2 Pattaya stories; verified 2026-10-03 in Asia/Bangkok. No qualifying new official scam warning found, so existing live scam cards are preserved without date changes."
+  "selection": "1 non-war world story, 2 Thailand stories, 2 Pattaya stories; verified 2026-10-04 in Asia/Bangkok. No qualifying new dated official scam warning was found, so existing live scam cards are preserved without date changes."
 }
