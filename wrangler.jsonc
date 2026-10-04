@@ -1,0 +1,34 @@
+{
+  "name": "ok-ok",
+  "main": "cloudflare-telegram-worker.mjs",
+  "compatibility_date": "2026-10-02",
+  "keep_vars": true,
+  "assets": {
+    "directory": "./site/public",
+    "binding": "ASSETS",
+    "run_worker_first": [
+      "/api/telegram/*",
+      "/api/ads/*",
+      "/api/oki/*"
+    ]
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "ADS_STORE",
+        "class_name": "AdsStore"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "okok-ads-v1",
+      "new_sqlite_classes": [
+        "AdsStore"
+      ]
+    }
+  ]
+}
