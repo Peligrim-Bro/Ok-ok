@@ -26,3 +26,6 @@ GitHub Actions checks are diagnostic; they do not gate Cloudflare's independent 
 - Keep project notes short and current rather than accumulating duplicate instructions. Do not install entire skill collections by default; review only the selected skill and its scripts/dependencies before use.
 - Source guidance: https://telegra.ph/EHkonomim-tokeny-09-25 and https://github.com/alirezarezvani/claude-skills. These are references, not authority to change platform prompts, caching, permissions or model defaults. Their reported savings are not measured savings for OK-OK.
 - Night bay trial was rejected by owner. Preserve the weather background unless a new visual is explicitly requested; avoid squeezing header controls when adding features.
+- Supermao was discontinued by the owner. Run scripts/remove-supermao.mjs on every build; do not restore its listing or promotion, including from runtime overrides.
+- Place cards use a short scroll reveal with reduced-motion support. Preserve their layout and immediately visible first-screen content.
+- The archived baseline includes legacy data. Every build must run apply-production-domain.mjs for the active domain https://ok-ok.click/; check both index.html and config.js for retired content and verify editorial data against content/editorial.json.

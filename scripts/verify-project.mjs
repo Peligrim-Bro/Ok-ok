@@ -46,3 +46,18 @@ assert.equal(partnerContext.window.OK_PARTNERS.klook.referralCode,'HAF8KW');
 assert.equal(partnerContext.window.OK_PARTNERS.airalo.referralCode,'TIMUR5494');
 assert.equal(partnerContext.window.OK_PARTNERS.travel12go.ref,'https://12go.asia/?z=17095940');
 console.log('PASS: Agoda excluded; all remaining partners and referral codes preserved');
+
+const configSource=readFileSync('site/public/config.js','utf8');
+const configContext={window:{}};
+new Script(configSource).runInNewContext(configContext);
+assert.equal(configContext.window.PATTAYAOK.site,'https://ok-ok.click/');
+for(const source of [html,configSource]){
+ assert(!/Supermao|id: "supermao"|avmLVvqgaYhCYtGP7\?g_st=it/.test(source),'Discontinued Supermao content returned');
+ assert(!source.includes('https://pattayaok.netlify.app/'),'Legacy hosting URL returned');
+}
+const editorial=JSON.parse(readFileSync('content/editorial.json','utf8'));
+assert.equal(configContext.window.PATTAYAOK.newsVerifiedAt,editorial.verifiedAt,'Editorial date changed');
+if(editorial.news)assert.deepEqual(Array.from(configContext.window.PATTAYAOK.news,n=>n.href),editorial.news.map(n=>n.href),'Current editorial stories changed');
+assert(html.includes('id="ok-card-reveal"'),'Card reveal missing');
+assert.equal(readFileSync('site/public/assets/spatial/spatial.js','utf8'),readFileSync('weather-background.js','utf8'),'Weather background changed');
+console.log('PASS: retired content excluded, active domain, current editorial and weather preserved');

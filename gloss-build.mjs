@@ -1651,3 +1651,7 @@ await import('./scripts/apply-holiday-wheel.mjs');
 await import('./remove-agoda.mjs');
 await import('./scripts/apply-home-compact.mjs');
 await import('./scripts/apply-header-layout.mjs');
+
+await import('./scripts/remove-supermao.mjs');
+await import('./scripts/apply-production-domain.mjs');
+await import('./scripts/apply-card-reveal.mjs');
