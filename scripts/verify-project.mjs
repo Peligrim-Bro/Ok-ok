@@ -51,6 +51,7 @@ const configSource=readFileSync('site/public/config.js','utf8');
 const configContext={window:{}};
 new Script(configSource).runInNewContext(configContext);
 assert.equal(configContext.window.PATTAYAOK.site,'https://ok-ok.click/');
+assert(html.includes('config.js?v=99'),'Updated runtime configuration must invalidate the legacy cached asset');
 for(const source of [html,configSource]){
  assert(!/Supermao|id: "supermao"|avmLVvqgaYhCYtGP7\?g_st=it/.test(source),'Discontinued Supermao content returned');
  assert(!source.includes('https://pattayaok.netlify.app/'),'Legacy hosting URL returned');
