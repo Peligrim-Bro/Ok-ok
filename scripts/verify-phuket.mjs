@@ -1,6 +1,7 @@
 import {readFileSync} from 'node:fs';
 import {runInNewContext} from 'node:vm';
 import assert from 'node:assert/strict';
+const cards=JSON.parse(readFileSync('content/phuket.json','utf8'));
 const html=readFileSync('site/public/index.html','utf8');
 const start=html.indexOf('    let city = (()=>');
 const end=html.indexOf('    function render() {',start);
@@ -11,7 +12,8 @@ for(const lang of ['ru','en','th']){
  nodes.app.querySelectorAll=()=>[];
  const ctx={lang,tab:'home',localStorage:{getItem:()=>null},$:id=>nodes[id],L:p=>p[lang],partnersHTML:()=>'<div>partners preserved</div>'};
  runInNewContext(code+"\ncity='phuket';renderBangkok();",ctx);
- assert.equal((nodes.app.innerHTML.match(/class=\"bkk-card\"/g)||[]).length,8);
+ assert.equal((nodes.app.innerHTML.match(/class=\"bkk-card\"/g)||[]).length,cards.length);
+ for(const p of cards){assert(nodes.app.innerHTML.includes(p.name));assert(nodes.app.innerHTML.includes(p.text[lang]));}
  assert(nodes.app.innerHTML.includes('Phuket Old Town'));
  assert(!nodes.app.innerHTML.includes('okAds'));
  runInNewContext("bangkokCategory='beach';city='phuket';renderBangkok();",ctx);
@@ -27,4 +29,4 @@ for(const lang of ['ru','en','th']){
 const nav=html.match(/<nav class="tab">([\s\S]*?)<\/nav>/)[1];
 assert.equal((nav.match(/data-tab=/g)||[]).length,5);
 assert(html.includes('HAF8KW')===false); // Registry remains shared, not duplicated inline.
-console.log('PASS Phuket: eight cards, RU/EN/TH, beach filter, no cross-city cards/partners, five navigation items');
+console.log('PASS Phuket: source cards, RU/EN/TH, beach filter, no cross-city cards/partners, five navigation items');

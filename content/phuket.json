@@ -110,5 +110,33 @@
       "en": "A beach for a seaside walk and relaxation. Check warning flags and sea conditions before swimming.",
       "th": "หาดในหาน สำหรับเดินเล่นและพักผ่อนริมทะเล ตรวจสอบธงเตือนและสภาพทะเลก่อนลงน้ำ"
     }
+  },
+  {
+    "id": "hkt-aquaria",
+    "category": "sights",
+    "name": "Aquaria Phuket",
+    "icon": "🐠",
+    "source": "https://www.aquaria-phuket.com/",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Aquaria%20Phuket%20Central%20Floresta",
+    "reviewed": "2026-10-04",
+    "text": {
+      "ru": "Океанариум на этаже B1 торгового центра Central Phuket Floresta — идея для отдыха в помещении. Перед поездкой проверьте билеты, часы входа и расписание кормлений на официальном сайте.",
+      "en": "An aquarium on floor B1 of Central Phuket Floresta, offering an indoor outing. Check tickets, admission hours and feeding times on the official website before visiting.",
+      "th": "อควาเรียมชั้น B1 ของเซ็นทรัล ภูเก็ต ฟลอเรสต้า เป็นตัวเลือกสำหรับเที่ยวในอาคาร ตรวจสอบบัตร เวลาเข้าชม และตารางให้อาหารจากเว็บไซต์ทางการก่อนเดินทาง"
+    }
+  },
+  {
+    "id": "hkt-siam-niramit",
+    "category": "culture",
+    "name": "Siam Niramit Phuket",
+    "icon": "🎭",
+    "source": "https://www.siamniramitphuket.com/experience/",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Siam%20Niramit%20Phuket",
+    "reviewed": "2026-10-04",
+    "text": {
+      "ru": "Вечернее сценическое шоу о культуре и истории Таиланда с тематической тайской деревней. На официальном сайте вторник указан как выходной; перед бронированием уточните дату и состав пакета: с ужином или без.",
+      "en": "An evening stage show about Thai culture and history, with a themed Thai village. The official website lists Tuesday as a closing day; confirm your date and whether dinner is included before booking.",
+      "th": "การแสดงช่วงค่ำเกี่ยวกับวัฒนธรรมและประวัติศาสตร์ไทย พร้อมหมู่บ้านไทยจำลอง เว็บไซต์ทางการระบุว่าปิดวันอังคาร ตรวจสอบวันเข้าชมและแพ็กเกจว่ารวมอาหารค่ำหรือไม่ก่อนจอง"
+    }
   }
 ]
