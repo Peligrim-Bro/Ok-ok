@@ -27,3 +27,12 @@ await import('./verify-oki-analytics.mjs');
 new Script(readFileSync('site/public/assets/spatial/pattaya-map.js','utf8'),{filename:'travel-map.js'});
 assert(existsSync('site/public/assets/spatial/travel-map.css'),'Travel map styles missing');
 console.log('PASS: transport map script and styles');
+
+const nav=html.match(/<nav class="tab">([\s\S]*?)<\/nav>/)?.[1];
+assert(nav,'Bottom navigation missing');
+assert.deepEqual([...nav.matchAll(/data-tab="([^"]+)"/g)].map(m=>m[1]),['home','game','list','scam','shop'],'Bottom navigation order changed');
+assert(html.includes("bubble.style.setProperty('--oki-tail-x'"),'OKI bubble must anchor its tail to OKI');
+assert(html.includes('left:var(--oki-tail-x,50%)'),'OKI tail positioning missing');
+for(const marker of ['okok-pulse-v1','oki-prompt-tail-fix-v4','okok-tetris-playable-v2'])assert(html.includes(marker),'Missing current UI patch '+marker);
+assert(!readFileSync('site/public/sw.js','utf8').match(/okok-20261003-(?:mobile-contact-v4|oki-layout-restore)/),'Cache must be unique per build');
+console.log('PASS current UI: OKI second, smiley fifth, anchored tail, Pulse and unique deployment cache');
