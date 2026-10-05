@@ -28,3 +28,7 @@ assert(sw.includes('request.mode === "navigate"')&&sw.includes('fetch(request)')
 for(const source of [html,readFileSync(root+'/config.js','utf8')])assert(!/ex24/i.test(source),'Discontinued EX24 returned');
 assert(html.includes('https://t.me/SenateExchange_bot?start=fi10072'),'Senate referral missing');
 console.log('PASS: size budgets, SEO, PWA icons/offline assets, API cache bypass and EX24 exclusion',measured);
+const home=html.slice(html.indexOf('    function renderHome() {'),html.indexOf('    function renderList() {'));
+assert(home.indexOf('id="okAds"')>home.indexOf('data-tours="1"'),'Async ads must not shift primary home actions');
+assert(html.includes('family=Manrope:wght@400;500;600;700;800&display=optional'),'Loading font strategy changed');
+console.log('PASS: primary home actions stay ahead of the async ad board and optional font loading');

@@ -1,0 +1,28 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: '05:00'
+      timezone: Asia/Bangkok
+    open-pull-requests-limit: 3
+    groups:
+      compatible-tool-updates:
+        update-types: [minor, patch]
+    commit-message:
+      prefix: 'Maintain tools'
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: '05:30'
+      timezone: Asia/Bangkok
+    open-pull-requests-limit: 2
+    groups:
+      workflow-actions:
+        patterns: ['*']
+    commit-message:
+      prefix: 'Maintain workflows'

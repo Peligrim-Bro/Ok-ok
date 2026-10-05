@@ -37,3 +37,8 @@ GitHub Actions checks are diagnostic; they do not gate Cloudflare's independent 
 - telegram-build.mjs validates the completed output with verify-project.mjs and verify-quality.mjs. Preserve this native Cloudflare build gate.
 - Use npm run build, npm run test:mobile and npm run audit. Keep reports as GitHub Actions artifacts; do not publish them as site content.
 - /build-info.json records the deployed source commit. Check it after publishing; do not infer success only from the source ref.
+
+## Loading and tool maintenance
+- Primary home actions (map, visa timer, daily choice and excursions) precede the async ad board. Preserve this order to prevent ad loading from shifting these controls.
+- Preserve the Manrope optional font-loading strategy, which avoids late swaps on slow connections.
+- Dependabot checks npm and GitHub Actions weekly in Asia/Bangkok. Its proposals run the existing PR checks. Do not automatically merge tool updates or weaken checks; review compatible grouped updates after their tests pass. The owner should not need to monitor tool version releases manually.
