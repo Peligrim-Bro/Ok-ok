@@ -24,6 +24,8 @@ jobs:
       - run: npm ci
       - name: Build and enforce project, SEO, PWA and size checks
         run: npm run build
+      - name: Check production verification failure detection
+        run: node --test tests/live-release.test.mjs
       - name: Install test browser
         run: npx playwright install --with-deps chromium
       - name: Check RU/EN/TH phone and tablet layout and offline PWA

@@ -42,3 +42,5 @@ GitHub Actions checks are diagnostic; they do not gate Cloudflare's independent 
 - Primary home actions (map, visa timer, daily choice and excursions) precede the async ad board. Preserve this order to prevent ad loading from shifting these controls.
 - Preserve the Manrope optional font-loading strategy, which avoids late swaps on slow connections.
 - Dependabot checks npm and GitHub Actions weekly in Asia/Bangkok. Its proposals run the existing PR checks. Do not automatically merge tool updates or weaken checks; review compatible grouped updates after their tests pass. The owner should not need to monitor tool version releases manually.
+
+- Deployment now runs scripts/verify-live.mjs against the exact COMMIT_REF after publishing, retrying propagation and saving the result as a GitHub artifact. Preserve checks for runtime partner exclusions, approved 3D background, stable home actions, PWA assets and health endpoints. A failure is diagnostic; investigate it without automatic rollback.
