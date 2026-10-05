@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: '22'
       - name: Build website and Cloudflare Worker
-        run: node gloss-build.mjs && node pulse-patch.mjs && node oki-bubble-fix.mjs && node tetris-expand.mjs && node telegram-build.mjs
+        run: node gloss-build.mjs && node telegram-build.mjs
       - name: Verify generated site
         run: |
           node scripts/verify-project.mjs

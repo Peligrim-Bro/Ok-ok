@@ -6,16 +6,59 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: okok-quality-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   build-check:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
+    env:
+      COMMIT_REF: ${{ github.sha }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Build website and Cloudflare Worker
-        run: node gloss-build.mjs && node telegram-build.mjs
-      - name: Verify generated scripts and critical features
-        run: node scripts/verify-project.mjs
+          cache: npm
+      - run: npm ci
+      - name: Build and enforce project, SEO, PWA and size checks
+        run: npm run build
+      - name: Install test browser
+        run: npx playwright install --with-deps chromium
+      - name: Check RU/EN/TH phone and tablet layout and offline PWA
+        run: npm run test:mobile
+      - name: Keep browser and size reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: okok-quality-reports
+          path: |
+            quality-reports/
+            playwright-report/
+            test-results/
+          retention-days: 14
+  lighthouse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      COMMIT_REF: ${{ github.sha }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Audit the actual generated website three times
+        run: npm run audit
+      - name: Keep Lighthouse reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: okok-lighthouse
+          path: |
+            quality-reports/lighthouse/
+            .lighthouseci/
+          retention-days: 14

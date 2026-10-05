@@ -1,0 +1,30 @@
+import {readFileSync,readdirSync,statSync,existsSync,mkdirSync,writeFileSync} from 'node:fs';
+import {gzipSync} from 'node:zlib';
+import {Script} from 'node:vm';
+import assert from 'node:assert/strict';
+const root='site/public',html=readFileSync(root+'/index.html','utf8');
+function files(dir){return readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?files(dir+'/'+e.name):[dir+'/'+e.name]);}
+const all=files(root),budget=JSON.parse(readFileSync('quality-budget.json','utf8'));
+const measured={htmlBytes:Buffer.byteLength(html),htmlGzipBytes:gzipSync(html).length,javascriptBytes:all.filter(p=>p.endsWith('.js')).reduce((n,p)=>n+statSync(p).size,0),siteBytes:all.reduce((n,p)=>n+statSync(p).size,0)};
+mkdirSync('quality-reports',{recursive:true});
+writeFileSync('quality-reports/size.json',JSON.stringify({measured,budget},null,2));
+for(const [key,max] of Object.entries(budget))assert(measured[key]<=max,`${key}: ${measured[key]} exceeds ${max}; investigate before increasing the budget`);
+assert(/<title>[^<]+<\/title>/.test(html),'SEO title missing');
+assert(/name="description" content="[^"]+"/.test(html),'SEO description missing');
+assert(/rel="canonical" href="https:\/\/ok-ok\.click\/"/.test(html),'Canonical must use active domain');
+assert(!/<meta[^>]+name=["']robots["'][^>]+noindex/i.test(html),'Public site must remain indexable');
+for(const p of ['robots.txt','sitemap.xml','manifest.json','sw.js','build-info.json'])assert(existsSync(root+'/'+p),'Missing '+p);
+assert(readFileSync(root+'/sitemap.xml','utf8').includes('<loc>https://ok-ok.click/</loc>'),'Sitemap domain changed');
+const manifest=JSON.parse(readFileSync(root+'/manifest.json','utf8'));
+assert.equal(manifest.display,'standalone');
+assert.equal(manifest.start_url,'/');
+for(const size of ['192x192','512x512'])assert(manifest.icons.some(i=>i.sizes===size&&existsSync(root+'/'+i.src)),'Missing PWA icon '+size);
+const sw=readFileSync(root+'/sw.js','utf8');
+new Script(sw);
+const core=JSON.parse(sw.match(/const CORE = (\[[^;]+\]);/)[1]);
+for(const asset of core){const pathname=new URL(asset,'https://ok-ok.click/').pathname;assert(pathname==='/'||existsSync(root+pathname),'Offline precache asset missing: '+asset);}
+assert(sw.includes('url.pathname.startsWith("/api/")'),'Service worker must bypass live APIs');
+assert(sw.includes('request.mode === "navigate"')&&sw.includes('fetch(request)'),'Navigation freshness strategy missing');
+for(const source of [html,readFileSync(root+'/config.js','utf8')])assert(!/ex24/i.test(source),'Discontinued EX24 returned');
+assert(html.includes('https://t.me/SenateExchange_bot?start=fi10072'),'Senate referral missing');
+console.log('PASS: size budgets, SEO, PWA icons/offline assets, API cache bypass and EX24 exclusion',measured);

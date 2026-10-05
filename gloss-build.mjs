@@ -1655,3 +1655,6 @@ await import('./scripts/apply-header-layout.mjs');
 await import('./scripts/remove-supermao.mjs');
 await import('./scripts/apply-production-domain.mjs');
 await import('./scripts/apply-card-reveal.mjs');
+
+await import('./scripts/remove-ex24.mjs');
+await import('./scripts/apply-quality-metadata.mjs');
