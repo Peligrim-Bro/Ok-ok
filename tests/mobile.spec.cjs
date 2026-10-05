@@ -25,6 +25,7 @@ test('installed app can reopen the cached shell offline',async({page,context})=>
 
 test('weather animation pauses for reduced motion and resumes when allowed',async({page})=>{
  await page.emulateMedia({reducedMotion:'reduce'});
+ await page.route('https://api.open-meteo.com/**',route=>route.fulfill({json:{current:{weather_code:3,is_day:1,wind_speed_10m:8}}}));
  await page.addInitScript(()=>{
   window.backgroundPaints=0;
   const original=CanvasRenderingContext2D.prototype.drawImage;
@@ -34,6 +35,7 @@ test('weather animation pauses for reduced motion and resumes when allowed',asyn
   };
  });
  await page.goto('/',{waitUntil:'domcontentloaded'});
+ await expect.poll(()=>page.evaluate(()=>document.documentElement.dataset.weather)).toBe('cloud');
  await expect.poll(()=>page.evaluate(()=>window.backgroundPaints)).toBeGreaterThan(0);
  await page.waitForTimeout(500);
  const before=await page.evaluate(()=>window.backgroundPaints);
