@@ -1658,3 +1658,8 @@ await import('./scripts/apply-card-reveal.mjs');
 
 await import('./scripts/remove-ex24.mjs');
 await import('./scripts/apply-quality-metadata.mjs');
+
+// Invalidate the optimized weather renderer even for returning PWA clients.
+for(const path of ['site/public/index.html','site/public/sw.js']){
+ writeFileSync(path,readFileSync(path,'utf8').replaceAll('spatial.js?v=98','spatial.js?v=101'));
+}

@@ -22,3 +22,28 @@ test('installed app can reopen the cached shell offline',async({page,context})=>
  await page.reload();
  await expect(page.locator('nav.tab button')).toHaveCount(5);
 });
+
+test('weather animation pauses for reduced motion and resumes when allowed',async({page})=>{
+ await page.emulateMedia({reducedMotion:'reduce'});
+ await page.addInitScript(()=>{
+  window.backgroundPaints=0;
+  const original=CanvasRenderingContext2D.prototype.drawImage;
+  CanvasRenderingContext2D.prototype.drawImage=function(...args){
+   if(this.canvas.id==='spatial-background')window.backgroundPaints++;
+   return original.apply(this,args);
+  };
+ });
+ await page.goto('/',{waitUntil:'domcontentloaded'});
+ await expect.poll(()=>page.evaluate(()=>window.backgroundPaints)).toBeGreaterThan(0);
+ await page.waitForTimeout(500);
+ const before=await page.evaluate(()=>window.backgroundPaints);
+ await page.waitForTimeout(500);
+ expect(await page.evaluate(()=>window.backgroundPaints)).toBe(before);
+ await page.emulateMedia({reducedMotion:'no-preference'});
+ await expect.poll(()=>page.evaluate(()=>window.backgroundPaints)).toBeGreaterThan(before);
+ await page.emulateMedia({reducedMotion:'reduce'});
+ await page.waitForTimeout(200);
+ const stopped=await page.evaluate(()=>window.backgroundPaints);
+ await page.waitForTimeout(500);
+ expect(await page.evaluate(()=>window.backgroundPaints)).toBe(stopped);
+});
