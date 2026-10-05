@@ -29,3 +29,5 @@ GitHub Actions checks are diagnostic; they do not gate Cloudflare's independent 
 - Supermao was discontinued by the owner. Run scripts/remove-supermao.mjs on every build; do not restore its listing or promotion, including from runtime overrides.
 - Place cards use a short scroll reveal with reduced-motion support. Preserve their layout and immediately visible first-screen content.
 - The archived baseline includes legacy data. Every build must run apply-production-domain.mjs for the active domain https://ok-ok.click/; check both index.html and config.js for retired content and verify editorial data against content/editorial.json.
+
+- Header utility buttons (support, theme, language, report) and their grid row stay 44px high, with explicit height/min/max-height. Preserve this mobile Safari fix; never rely only on min-height or grid stretching.

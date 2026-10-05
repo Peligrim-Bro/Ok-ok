@@ -62,3 +62,9 @@ if(editorial.news)assert.deepEqual(Array.from(configContext.window.PATTAYAOK.new
 assert(html.includes('id="ok-card-reveal"'),'Card reveal missing');
 assert.equal(readFileSync('site/public/assets/spatial/spatial.js','utf8'),readFileSync('weather-background.js','utf8'),'Weather background changed');
 console.log('PASS: retired content excluded, active domain, current editorial and weather preserved');
+
+const headerStyle=html.match(/<style id="ok-header-layout-v100">([\s\S]*?)<\/style>/)?.[1];
+assert(headerStyle,'Compact header sizing patch missing');
+assert(headerStyle.includes('grid-template-rows:44px;grid-auto-rows:44px'),'Utility grid rows must stay compact');
+assert(headerStyle.includes('.top-actions>:is(#donateBtn,#themeBtn,#langBtn,#reportBtn){height:44px!important;min-height:44px!important;max-height:44px!important'),'All four utility controls must have bounded height');
+console.log('PASS: utility buttons and grid rows locked to 44px');
