@@ -60,7 +60,7 @@ const editorial=JSON.parse(readFileSync('content/editorial.json','utf8'));
 assert.equal(configContext.window.PATTAYAOK.newsVerifiedAt,editorial.verifiedAt,'Editorial date changed');
 if(editorial.news)assert.deepEqual(Array.from(configContext.window.PATTAYAOK.news,n=>n.href),editorial.news.map(n=>n.href),'Current editorial stories changed');
 assert(html.includes('id="ok-card-reveal"'),'Card reveal missing');
-assert.equal(readFileSync('site/public/assets/spatial/spatial.js','utf8'),readFileSync('weather-background.js','utf8'),'Weather background changed');
+assert.equal(readFileSync('site/public/assets/spatial/spatial.js','utf8'),readFileSync('hedgehog-background.js','utf8'),'Approved 3D background changed');
 console.log('PASS: retired content excluded, active domain, current editorial and weather preserved');
 
 const headerStyle=html.match(/<style id="ok-header-layout-v100">([\s\S]*?)<\/style>/)?.[1];

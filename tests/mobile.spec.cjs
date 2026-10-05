@@ -23,29 +23,23 @@ test('installed app can reopen the cached shell offline',async({page,context})=>
  await expect(page.locator('nav.tab button')).toHaveCount(5);
 });
 
-test('weather animation pauses for reduced motion and resumes when allowed',async({page})=>{
- await page.emulateMedia({reducedMotion:'reduce'});
- await page.route('https://api.open-meteo.com/**',route=>route.fulfill({json:{current:{weather_code:3,is_day:1,wind_speed_10m:8}}}));
- await page.addInitScript(()=>{
-  window.backgroundPaints=0;
-  const original=CanvasRenderingContext2D.prototype.drawImage;
-  CanvasRenderingContext2D.prototype.drawImage=function(...args){
-   if(this.canvas.id==='spatial-background')window.backgroundPaints++;
-   return original.apply(this,args);
-  };
- });
+test('real 3D background stays idle, animates taps and respects reduced motion',async({page})=>{
+ await page.addInitScript(()=>{localStorage.setItem('pok-lang','ru');localStorage.setItem('pok-lang-set','1');});
  await page.goto('/',{waitUntil:'domcontentloaded'});
- await expect.poll(()=>page.evaluate(()=>document.documentElement.dataset.weather)).toBe('cloud');
- await expect.poll(()=>page.evaluate(()=>window.backgroundPaints)).toBeGreaterThan(0);
- await page.waitForTimeout(500);
- const before=await page.evaluate(()=>window.backgroundPaints);
- await page.waitForTimeout(500);
- expect(await page.evaluate(()=>window.backgroundPaints)).toBe(before);
- await page.emulateMedia({reducedMotion:'no-preference'});
- await expect.poll(()=>page.evaluate(()=>window.backgroundPaints)).toBeGreaterThan(before);
- await page.emulateMedia({reducedMotion:'reduce'});
- await page.waitForTimeout(200);
- const stopped=await page.evaluate(()=>window.backgroundPaints);
- await page.waitForTimeout(500);
- expect(await page.evaluate(()=>window.backgroundPaints)).toBe(stopped);
+ const bg=page.locator('#spatial-background');
+ await expect(bg).toHaveAttribute('data-renderer','webgl');
+ await expect.poll(()=>bg.getAttribute('data-renders')).not.toBeNull();
+ await page.waitForTimeout(300);
+ const read=()=>bg.getAttribute('data-renders').then(Number);
+ const idle=await read();await page.waitForTimeout(500);expect(await read()).toBe(idle);
+ await page.locator('#installClose').click();
+ await page.evaluate(()=>document.body.dispatchEvent(new PointerEvent('pointerdown',{bubbles:true,clientX:innerWidth/2,clientY:innerHeight/2})));
+ await expect.poll(read).toBeGreaterThan(idle);
+ await page.waitForTimeout(2000);const settled=await read();await page.waitForTimeout(400);expect(await read()).toBe(settled);
+ await page.locator('#themeBtn').click();await expect.poll(read).toBeGreaterThan(settled);
+ await page.emulateMedia({reducedMotion:'reduce'});await page.waitForTimeout(200);
+ const stopped=await read();
+ await page.evaluate(()=>document.body.dispatchEvent(new PointerEvent('pointerdown',{bubbles:true,clientX:innerWidth/2,clientY:innerHeight/2})));
+ await page.waitForTimeout(400);expect(await read()).toBe(stopped);
+ await page.screenshot({path:'quality-reports/hedgehogs-light.png',fullPage:false});
 });
