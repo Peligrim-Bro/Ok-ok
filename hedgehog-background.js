@@ -4,7 +4,7 @@
 const canvas=document.createElement('canvas');canvas.id='spatial-background';canvas.setAttribute('aria-hidden','true');canvas.dataset.background='hedgehogs-3d-v102';canvas.style.opacity='.9';canvas.style.filter='none';document.body.prepend(canvas);
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 const saveData=!!navigator.connection?.saveData;
-let gl;try{gl=canvas.getContext('webgl',{alpha:true,antialias:false,powerPreference:'low-power',preserveDrawingBuffer:true})}catch{}
+let gl;try{gl=canvas.getContext('webgl',{alpha:true,antialias:true,powerPreference:'low-power',preserveDrawingBuffer:true})}catch{}
 let ctx=null,program=null,buffer=null,locations=null;
 let W=0,H=0,figures=[],frame=0,last=0,theme='',draws=0;
 const colors=[[.20,.76,.74],[.65,.47,.85],[.28,.54,.88],[.90,.67,.24],[.74,.43,.66]];
@@ -41,7 +41,7 @@ function render(){
  surface.dataset.renders=String(++draws);surface.dataset.renderer=gl?'webgl':'canvas-3d';
 }
 function requestDraw(){if(!document.hidden&&!frame)frame=requestAnimationFrame(tick)}
-function tick(now){frame=0;if(document.hidden)return;const step=Math.min(2.5,(now-last)/16.67||1);last=now;let active=false;
+function tick(now){frame=0;if(document.hidden)return;if(last&&now-last<1000/30){requestDraw();return}const step=Math.min(2.5,(now-last)/16.67||1);last=now;let active=false;
  for(const f of figures){if(reduced.matches||saveData){f.vx=f.vy=f.spin=0;continue}if(Math.abs(f.vx)+Math.abs(f.vy)+Math.abs(f.spin)<.025){f.vx=f.vy=f.spin=0;continue}active=true;f.x=Math.max(f.size,Math.min(W-f.size,f.x+f.vx*step));f.y=Math.max(f.size,Math.min(H-f.size,f.y+f.vy*step));f.rot[0]+=f.spin*step;f.rot[1]+=f.spin*.7*step;f.rot[2]+=f.spin*.4*step;const damping=Math.pow(.88,step);f.vx*=damping;f.vy*=damping;f.spin*=damping;}
  render();if(active)requestDraw();else last=0;
 }

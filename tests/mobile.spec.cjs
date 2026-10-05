@@ -24,6 +24,7 @@ test('installed app can reopen the cached shell offline',async({page,context})=>
 });
 
 test('real 3D background stays idle, animates taps and respects reduced motion',async({page})=>{
+ await page.addInitScript(()=>{localStorage.setItem('pok-lang','ru');localStorage.setItem('pok-lang-set','1');});
  await page.goto('/',{waitUntil:'domcontentloaded'});
  const bg=page.locator('#spatial-background');
  await expect(bg).toHaveAttribute('data-renderer','webgl');
