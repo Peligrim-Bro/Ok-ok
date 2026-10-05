@@ -1,4 +1,26 @@
 const {test,expect}=require('@playwright/test');
+test('late ad loading keeps primary home actions in place',async({page})=>{
+ await page.setViewportSize({width:390,height:844});
+ await page.addInitScript(()=>{localStorage.setItem('pok-lang','ru');localStorage.setItem('pok-lang-set','1');});
+ let release;
+ const ready=new Promise(resolve=>{release=resolve;});
+ await page.route('**/api/ads/list',async route=>{
+  await ready;
+  await route.fulfill({json:{ads:[],slots:3,price:'15',hours:24,t:Date.now()}});
+ });
+ await page.goto('/',{waitUntil:'domcontentloaded'});
+ await page.locator('#installClose').click();
+ await page.evaluate(()=>document.fonts.ready);
+ const primary=page.locator('[data-tours="1"]').first();
+ await expect(primary).toBeVisible();
+ const before=await primary.boundingBox();
+ const adHeight=(await page.locator('#okAds').boundingBox()).height;
+ release();
+ await expect(page.locator('#okAds .okads-list')).toBeVisible();
+ expect((await page.locator('#okAds').boundingBox()).height).toBeGreaterThan(adHeight);
+ expect(Math.abs((await primary.boundingBox()).y-before.y)).toBeLessThan(1);
+ await page.screenshot({path:'quality-reports/stable-home.png',fullPage:false});
+});
 for(const lang of ['ru','en','th'])for(const width of [390,768])test(`${lang} at ${width}px preserves navigation and compact header`,async({page})=>{
  await page.setViewportSize({width,height:844});
  await page.addInitScript(lang=>{localStorage.setItem('pok-lang',lang);localStorage.setItem('pok-lang-set','1');},lang);

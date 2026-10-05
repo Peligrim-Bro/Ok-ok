@@ -1667,3 +1667,5 @@ for(const path of ['site/public/index.html','site/public/sw.js']){
 // Owner-approved trial: true 3D scattered beams, idle until a background tap.
 copyFileSync('hedgehog-background.js','site/public/assets/spatial/spatial.js');
 for(const path of ['site/public/index.html','site/public/sw.js'])writeFileSync(path,readFileSync(path,'utf8').replaceAll('spatial.js?v=101','spatial.js?v=102'));
+
+await import('./scripts/apply-loading-stability.mjs');
