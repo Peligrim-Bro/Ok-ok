@@ -42,12 +42,13 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: deploy --config wrangler-telegram.json
-      - name: Check public website
-        run: |
-          sleep 5
-          curl -fsSL "https://ok-ok.click/?deployment-check=${COMMIT_REF}" -o /tmp/live.html
-          grep -q 'PattayaOK' /tmp/live.html
-          grep -q 'oki-nav-float-fix-v4' /tmp/live.html
-          grep -q 'okok-tetris-playable-v2' /tmp/live.html
-          curl -fsSL "https://ok-ok.click/api/telegram/health" >/dev/null
-          curl -fsSL "https://ok-ok.click/api/oki/health" >/dev/null
+      - name: Verify the published source version, shell, PWA and health endpoints
+        run: node scripts/verify-live.mjs
+      - name: Keep live release verification report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: okok-live-release
+          path: quality-reports/live-release.json
+          if-no-files-found: ignore
+          retention-days: 14
