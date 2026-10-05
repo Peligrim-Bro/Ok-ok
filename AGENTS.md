@@ -31,3 +31,9 @@ GitHub Actions checks are diagnostic; they do not gate Cloudflare's independent 
 - The archived baseline includes legacy data. Every build must run apply-production-domain.mjs for the active domain https://ok-ok.click/; check both index.html and config.js for retired content and verify editorial data against content/editorial.json.
 
 - Header utility buttons (support, theme, language, report) and their grid row stay 44px high, with explicit height/min/max-height. Preserve this mobile Safari fix; never rely only on min-height or grid stretching.
+
+## Automated quality control
+- Read OKOK_RULES.md for the quality workflow. EX24 is discontinued; scripts/remove-ex24.mjs must run in every build.
+- telegram-build.mjs validates the completed output with verify-project.mjs and verify-quality.mjs. Preserve this native Cloudflare build gate.
+- Use npm run build, npm run test:mobile and npm run audit. Keep reports as GitHub Actions artifacts; do not publish them as site content.
+- /build-info.json records the deployed source commit. Check it after publishing; do not infer success only from the source ref.

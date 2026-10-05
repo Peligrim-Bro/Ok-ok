@@ -1,0 +1,8 @@
+node_modules/
+site/
+cloudflare-telegram-worker.mjs
+wrangler-telegram.json
+quality-reports/
+.lighthouseci/
+playwright-report/
+test-results/

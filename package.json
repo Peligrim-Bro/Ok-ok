@@ -5,5 +5,15 @@
   "description": "PattayaOK static PWA + paid ads function",
   "dependencies": {
     "@netlify/blobs": "^8.1.0"
+  },
+  "devDependencies": {
+    "@lhci/cli": "0.15.1",
+    "@playwright/test": "1.63.0"
+  },
+  "scripts": {
+    "build": "node gloss-build.mjs && node telegram-build.mjs",
+    "check": "node scripts/verify-project.mjs && node scripts/verify-quality.mjs",
+    "test:mobile": "playwright test",
+    "audit": "lhci autorun"
   }
 }
