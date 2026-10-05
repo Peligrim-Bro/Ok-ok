@@ -1,78 +1,86 @@
 {
-  "verifiedAt": "2026-10-04",
+  "verifiedAt": "2026-10-05",
   "news": [
     {
       "category": "world",
-      "when": "03.10 · 🌍",
-      "href": "https://www.reuters.com/legal/litigation/public-fears-ai-grow-trump-digs-voluntary-safeguards-2026-10-03/",
-      "ru": "Белый дом и шесть крупных технологических компаний объявили добровольное соглашение по безопасности ИИ. Оно предусматривает внутренний контроль и внешние аудиты, но не устанавливает отдельного механизма принуждения или санкций.",
-      "en": "The White House and six major technology companies announced a voluntary AI-safety agreement. It calls for internal controls and external audits but does not set out a separate enforcement mechanism or penalties.",
-      "th": "ทำเนียบขาวและบริษัทเทคโนโลยีรายใหญ่ 6 แห่งประกาศข้อตกลงด้านความปลอดภัยของ AI แบบสมัครใจ โดยกำหนดให้มีการควบคุมภายในและการตรวจสอบจากภายนอก แต่ยังไม่มีกลไกบังคับใช้หรือบทลงโทษเฉพาะ",
-      "publishedAt": "2026-10-03",
-      "sources": ["https://www.reuters.com/legal/litigation/public-fears-ai-grow-trump-digs-voluntary-safeguards-2026-10-03/"],
+      "when": "04.10 · 🌍",
+      "href": "https://www.reuters.com/business/openais-altman-says-ai-benefits-warrant-accepting-some-risks-2026-10-04/",
+      "ru": "Сэм Альтман заявил, что широкая доступность ИИ оправдывает принятие части рисков, и поддержал более мягкое регулирование. Его позиция стала частью продолжающейся дискуссии отрасли о пользе, злоупотреблениях и контроле над мощными моделями.",
+      "en": "Sam Altman said broad access to AI justifies accepting some risks and backed lighter-touch regulation. His position adds to the industry's continuing debate over benefits, misuse and control of increasingly capable models.",
+      "th": "แซม อัลท์แมนกล่าวว่าการเปิดให้ผู้คนเข้าถึง AI อย่างกว้างขวางทำให้สังคมต้องยอมรับความเสี่ยงบางส่วน และสนับสนุนการกำกับดูแลที่ไม่เข้มงวดเกินไป จุดยืนนี้เป็นส่วนหนึ่งของการถกเถียงในอุตสาหกรรมเรื่องประโยชน์ การนำไปใช้ผิดทาง และการควบคุมโมเดลที่มีความสามารถสูงขึ้น",
+      "publishedAt": "2026-10-04",
+      "sources": ["https://www.reuters.com/business/openais-altman-says-ai-benefits-warrant-accepting-some-risks-2026-10-04/"],
       "nonWar": true,
       "discussionEvidence": {
-        "observedAt": "2026-10-04T08:50:00+07:00",
-        "summary": "Comparable public comment/share totals were unavailable. Selected for fresh Reuters coverage, broad cross-sector relevance and a Reuters/Ipsos finding that 75% of Americans worry companies are not doing enough on AI safety; this is not a claim of a global popularity rank."
+        "observedAt": "2026-10-05T08:53:00+07:00",
+        "sourceUrl": "https://www.reuters.com/business/openais-altman-says-ai-benefits-warrant-accepting-some-risks-2026-10-04/",
+        "summary": "Comparable public comment and share totals were not exposed. Selected for fresh Reuters coverage and broad public relevance in the current AI-regulation debate; this is not a claim of a global popularity rank."
       }
     },
     {
       "category": "thailand",
-      "when": "02.10 · 🇹🇭",
-      "href": "https://thailand.go.th/issue-focus-detail/thai-airways-operates-all-flights-on-3-october-2026",
-      "ru": "Thai Airways сообщила о выполнении всех запланированных рейсов 3 октября после сокращения части программы 1–2 октября. Дополнительная билетная касса в головном офисе работает 3–4 октября с 08:00 до 17:00.",
-      "en": "Thai Airways said it would operate all scheduled flights on 3 October after reducing part of its programme on 1–2 October. An additional ticket office at its head office is open on 3–4 October from 08:00 to 17:00.",
-      "th": "การบินไทยประกาศให้บริการเที่ยวบินตามตารางทั้งหมดในวันที่ 3 ตุลาคม หลังลดเที่ยวบินบางส่วนเมื่อวันที่ 1–2 ตุลาคม และเปิดสำนักงานขายบัตรโดยสารเพิ่มเติมที่สำนักงานใหญ่วันที่ 3–4 ตุลาคม เวลา 08.00–17.00 น.",
-      "publishedAt": "2026-10-02",
-      "sources": ["https://thailand.go.th/issue-focus-detail/thai-airways-operates-all-flights-on-3-october-2026"],
+      "when": "04.10 · 🇹🇭",
+      "href": "https://tmd.go.th/en/warning-and-events/warning-storm/variable-weather-in-upper-thailand-no-7-241-2026",
+      "ru": "Метеодепартамент Таиланда предупредил о грозах, порывистом ветре и местами сильных дождях 4–7 октября. На 5–6 октября риск распространяется на север, центр с Бангкоком, восток и юг; возможны внезапные паводки и оползни.",
+      "en": "Thailand's Meteorological Department warned of thunderstorms, gusty winds and isolated heavy rain from 4–7 October. On 5–6 October the risk extends across the North, Central region including Bangkok, the East and the South, with possible flash floods and landslides.",
+      "th": "กรมอุตุนิยมวิทยาเตือนให้ระวังฝนฟ้าคะนอง ลมกระโชกแรง และฝนตกหนักบางแห่งในช่วง 4–7 ตุลาคม โดยวันที่ 5–6 ตุลาคมครอบคลุมภาคเหนือ ภาคกลางรวมกรุงเทพฯ ภาคตะวันออก และภาคใต้ พร้อมความเสี่ยงน้ำท่วมฉับพลันและดินถล่ม",
+      "publishedAt": "2026-10-04",
+      "sources": ["https://tmd.go.th/en/warning-and-events/warning-storm/variable-weather-in-upper-thailand-no-7-241-2026"],
       "discussionEvidence": {
-        "observedAt": "2026-10-04T08:50:00+07:00",
-        "summary": "The official Thailand.go.th page displayed 429 views and 0 comments, versus 66 views and 0 comments for the selected OECD article on the same site. These comparable figures measure only exposure on one government website, not broader public popularity."
+        "observedAt": "2026-10-05T08:53:00+07:00",
+        "sourceUrl": "https://tmd.go.th/en/warning-and-events/warning-storm/variable-weather-in-upper-thailand-no-7-241-2026",
+        "summary": "The official advisory did not expose comparable comment or share totals. Selected for current nationwide safety and travel relevance, not as a measured popularity ranking."
       }
     },
     {
       "category": "thailand",
-      "when": "03.10 · 🇹🇭",
-      "href": "https://thailand.go.th/issue-focus-detail/thailand-moves-closer-to-oecd-membership",
-      "ru": "Таиланд и ОЭСР обсудили дорожную карту вступления, технические проверки и подготовку государственных структур. Правительство сохраняет ориентир на полноправное членство к 2028 году.",
-      "en": "Thailand and the OECD discussed the accession roadmap, technical reviews and capacity building. The government continues to target full membership by 2028.",
-      "th": "ไทยและ OECD หารือแผนการเข้าเป็นสมาชิก การทบทวนด้านเทคนิค และการเสริมศักยภาพหน่วยงาน โดยรัฐบาลยังตั้งเป้าเป็นสมาชิกเต็มรูปแบบภายในปี 2028",
-      "publishedAt": "2026-10-03",
-      "sources": ["https://thailand.go.th/issue-focus-detail/thailand-moves-closer-to-oecd-membership"],
+      "when": "04.10 · 🇹🇭",
+      "href": "https://www.reuters.com/sports/asian-games-close-after-fortnight-turmoil-teenage-triumph-2026-10-04/",
+      "ru": "Азиатские игры в Айти–Нагое завершились, а 20-летний тайский спринтер Пурипол Бунсон получил мужскую награду MVP после побед на дистанциях 100 и 200 метров. Следующие Игры примет Доха.",
+      "en": "The Aichi-Nagoya Asian Games closed with 20-year-old Thai sprinter Puripol Boonson named men's MVP after winning both the 100m and 200m. Doha is due to host the next Games.",
+      "th": "การแข่งขันเอเชียนเกมส์ที่ไอจิ–นาโกยาปิดฉากลง โดยภูริพล บุญสอน นักวิ่งชาวไทยวัย 20 ปี ได้รับรางวัลนักกีฬายอดเยี่ยมฝ่ายชาย หลังคว้าแชมป์วิ่ง 100 และ 200 เมตร ส่วนเจ้าภาพครั้งต่อไปคือกรุงโดฮา",
+      "publishedAt": "2026-10-04",
+      "sources": [
+        "https://www.reuters.com/sports/asian-games-close-after-fortnight-turmoil-teenage-triumph-2026-10-04/",
+        "https://apnews.com/article/6e6d17c2dea7475ab632dc368cca6dfe"
+      ],
       "discussionEvidence": {
-        "observedAt": "2026-10-04T08:50:00+07:00",
-        "summary": "The official Thailand.go.th page displayed 66 views and 0 comments, compared with 429 views and 0 comments for the selected Thai Airways article on the same site. The counts are directly comparable only within that government website and do not establish wider popularity."
+        "observedAt": "2026-10-05T08:53:00+07:00",
+        "sourceUrl": "https://www.reuters.com/sports/asian-games-close-after-fortnight-turmoil-teenage-triumph-2026-10-04/",
+        "summary": "Comparable public engagement totals were unavailable. The Games' closing was independently covered by Reuters and AP; selection emphasizes the Thai men's MVP result and does not claim a popularity rank."
       }
     },
     {
       "category": "pattaya",
-      "when": "03.10 · Pattaya",
-      "href": "https://thepattayanews.com/2026/10/03/banglamung-red-cross-delivers-relief-supplies-to-52-flood-hit-households-near-pattaya/",
-      "ru": "Красный Крест Бангламунга доставил помощь 52 семьям в затопленных районах рядом с Паттайей. Вода постепенно уходит, однако в отдельных сообществах остаются подтопления и бытовые трудности.",
-      "en": "The Banglamung Red Cross delivered relief supplies to 52 households in flood-affected communities near Pattaya. Water is gradually receding, but standing water and daily disruption remain in some areas.",
-      "th": "กิ่งกาชาดอำเภอบางละมุงมอบถุงยังชีพให้ 52 ครัวเรือนในชุมชนที่ได้รับผลกระทบจากน้ำท่วมใกล้พัทยา ระดับน้ำกำลังลดลง แต่บางพื้นที่ยังมีน้ำขังและกระทบการใช้ชีวิตประจำวัน",
-      "publishedAt": "2026-10-03",
-      "sources": ["https://thepattayanews.com/2026/10/03/banglamung-red-cross-delivers-relief-supplies-to-52-flood-hit-households-near-pattaya/"],
+      "when": "04.10 · Pattaya",
+      "href": "https://thepattayanews.com/2026/10/04/khao-kheow-open-zoo-unveils-khao-kheow-landmark-as-new-visitor-check-in-spot/",
+      "ru": "В открытом зоопарке Khao Kheow в Сираче появился новый комплекс у водоёма: цветочный сад, фотозоны, мини-поезд, зона фламинго, кафе и площадка для кемпинга. Объект работает ежедневно с 08:00 до 17:00.",
+      "en": "Khao Kheow Open Zoo in Sri Racha has opened a new lakeside area with a flower garden, photo spots, a miniature train, flamingo activities, a café and a camping lawn. It is open daily from 08:00 to 17:00.",
+      "th": "สวนสัตว์เปิดเขาเขียวในศรีราชาเปิดพื้นที่ใหม่ริมอ่างเก็บน้ำ มีสวนดอกไม้ จุดถ่ายภาพ รถไฟเล็ก กิจกรรมใกล้ชิดนกฟลามิงโก คาเฟ่ และลานกางเต็นท์ เปิดทุกวันเวลา 08.00–17.00 น.",
+      "publishedAt": "2026-10-04",
+      "sources": ["https://thepattayanews.com/2026/10/04/khao-kheow-open-zoo-unveils-khao-kheow-landmark-as-new-visitor-check-in-spot/"],
       "discussionEvidence": {
-        "observedAt": "2026-10-04T08:50:00+07:00",
-        "summary": "The outlet did not expose public totals for likes, comments or shares. Selected for last-24-hour local public-safety relevance and attributed district relief action; no popularity rank is claimed."
+        "observedAt": "2026-10-05T08:53:00+07:00",
+        "sourceUrl": "https://thepattayanews.com/2026/10/04/khao-kheow-open-zoo-unveils-khao-kheow-landmark-as-new-visitor-check-in-spot/",
+        "summary": "The outlet exposed a Facebook control but no public like, comment or share total. Selected for freshness and practical relevance to visitors in the Pattaya-Chonburi area; no popularity rank is claimed."
       }
     },
     {
       "category": "pattaya",
-      "when": "03.10 · Pattaya",
-      "href": "https://thepattayanews.com/2026/10/03/indian-tourist-rewards-honest-pattaya-motorcycle-taxi-driver-who-returned-wallet-with-16000-baht/",
-      "ru": "Водитель мототакси в Паттайе нашёл кошелёк туриста с деньгами и документами и сразу передал его полиции. Владелец получил вещи обратно и поблагодарил водителя.",
-      "en": "A Pattaya motorcycle-taxi driver found a tourist's wallet containing cash and documents and promptly handed it to police. The owner recovered the belongings and thanked the driver.",
-      "th": "คนขับวินมอเตอร์ไซค์ในพัทยาพบกระเป๋าสตางค์ของนักท่องเที่ยวที่มีเงินสดและเอกสาร แล้วนำส่งตำรวจทันที เจ้าของได้รับทรัพย์สินคืนและขอบคุณคนขับ",
-      "publishedAt": "2026-10-03",
-      "sources": ["https://thepattayanews.com/2026/10/03/indian-tourist-rewards-honest-pattaya-motorcycle-taxi-driver-who-returned-wallet-with-16000-baht/"],
+      "when": "04.10 · Pattaya",
+      "href": "https://thepattayanews.com/2026/10/04/woman-flees-smoke-filled-pattaya-room-fire-blamed-on-short-circuit/",
+      "ru": "Пожарные потушили возгорание в комнате коммерческого здания в Паттайе; жительница не пострадала. Предварительно огонь связывают с розеткой и оставленным подключённым зарядным устройством, однако окончательную причину устанавливают эксперты.",
+      "en": "Firefighters extinguished a room fire in a Pattaya commercial building and the resident was unhurt. A socket and a charger left plugged in are the preliminary focus, but forensic investigators have not yet confirmed the cause.",
+      "th": "เจ้าหน้าที่ดับเพลิงควบคุมเหตุไฟไหม้ห้องพักในอาคารพาณิชย์ที่พัทยาได้ โดยผู้พักอาศัยไม่ได้รับบาดเจ็บ เบื้องต้นพบร่องรอยบริเวณปลั๊กไฟและเครื่องชาร์จที่เสียบค้างไว้ แต่ยังต้องรอเจ้าหน้าที่พิสูจน์หลักฐานยืนยันสาเหตุ",
+      "publishedAt": "2026-10-04",
+      "sources": ["https://thepattayanews.com/2026/10/04/woman-flees-smoke-filled-pattaya-room-fire-blamed-on-short-circuit/"],
       "discussionEvidence": {
-        "observedAt": "2026-10-04T08:50:00+07:00",
-        "summary": "The outlet did not expose public totals for likes, comments or shares. Selected for freshness and direct relevance to Pattaya visitors; no popularity rank is claimed."
+        "observedAt": "2026-10-05T08:53:00+07:00",
+        "sourceUrl": "https://thepattayanews.com/2026/10/04/woman-flees-smoke-filled-pattaya-room-fire-blamed-on-short-circuit/",
+        "summary": "The outlet exposed a Facebook control but no public like, comment or share total. Selected for same-day local safety relevance; the suspected cause remains explicitly unconfirmed and no popularity rank is claimed."
       }
     }
   ],
   "scams": [],
-  "selection": "1 non-war world story, 2 Thailand stories, 2 Pattaya stories; verified 2026-10-04 in Asia/Bangkok. No qualifying new dated official scam warning was found, so existing live scam cards are preserved without date changes."
+  "selection": "1 non-war world story, 2 Thailand stories and 2 Pattaya-area stories; verified 2026-10-05 in Asia/Bangkok. No qualifying new dated official scam warning or reliably corroborated investigation was found, so existing live scam cards are preserved without date changes."
 }
