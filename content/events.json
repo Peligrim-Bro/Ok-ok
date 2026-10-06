@@ -1,29 +1,5 @@
 [
   {
-    "id": "la-fan-20261004",
-    "startAt": "2026-10-04T14:00:00+07:00",
-    "endAt": "2026-10-05T00:00:00+07:00",
-    "title": {
-      "ru": "La Fan Live Concert · тайский рок",
-      "en": "La Fan Live Concert · Thai rock",
-      "th": "ล่าฝัน Live Concert"
-    },
-    "text": {
-      "ru": "Рок под открытым небом: Sek Loso и другие тайские артисты. Билеты и условия — у организатора.",
-      "en": "Outdoor rock with Sek Loso and other Thai artists. Check tickets and entry terms with the organiser.",
-      "th": "คอนเสิร์ตร็อกกลางแจ้ง นำโดยเสก โลโซและศิลปินไทย ดูบัตรและเงื่อนไขกับผู้จัด"
-    },
-    "when": {
-      "ru": "4 октября · вход с 14:00",
-      "en": "4 October · doors at 14:00",
-      "th": "4 ตุลาคม · เปิดประตู 14:00"
-    },
-    "venue": "Kaze Camp & Coffee · Takhian Tia, Bang Lamung",
-    "maps": "https://www.google.com/maps/search/?api=1&query=13.004304,101.05142",
-    "source": "https://www.eventpop.me/e/155793",
-    "checkedAt": "2026-10-03"
-  },
-  {
     "id": "food-fun-first-2026",
     "startAt": "2026-09-29T00:00:00+07:00",
     "endAt": "2026-10-09T00:00:00+07:00",
@@ -33,9 +9,9 @@
       "th": "Food Fun Fest · ไปชิมกัน!"
     },
     "text": {
-      "ru": "Еда от местных продавцов и фудтраков. Зови друзей — здесь публикуют и события, и встречи.",
-      "en": "Local food vendors and food trucks. Bring friends — events and meetups belong here too.",
-      "th": "อาหารจากร้านท้องถิ่นและฟู้ดทรัก ชวนเพื่อนมา ลงกิจกรรมและนัดพบได้ที่นี่"
+      "ru": "Фестиваль еды: местные продавцы и фудтраки на площадке Runway. Зови друзей — здесь можно разместить и своё событие.",
+      "en": "Food festival with local vendors and food trucks at the Runway. Bring friends — you can post your own event here too.",
+      "th": "เทศกาลอาหารจากร้านท้องถิ่นและฟู้ดทรักที่ลาน Runway ชวนเพื่อนมา และลงกิจกรรมของคุณได้ที่นี่"
     },
     "when": {
       "ru": "29 сентября — 8 октября · часы уточняй у организатора",
@@ -44,8 +20,32 @@
     },
     "venue": "Terminal21 Pattaya Runway",
     "maps": "https://www.google.com/maps/search/?api=1&query=Terminal21+Pattaya+Runway",
-    "source": "https://www.terminal21.co.th/pattaya/en/event/food-fun-fest-2026-is-back-en/",
-    "checkedAt": "2026-10-03"
+    "source": "https://www.terminal21.co.th/pattaya/en/event-activity-en-old/",
+    "checkedAt": "2026-10-06"
+  },
+  {
+    "id": "wonder-lawn-20261011",
+    "startAt": "2026-10-11T17:00:00+07:00",
+    "endAt": "2026-10-15T22:00:00+07:00",
+    "title": {
+      "ru": "The Wonder Lawn · праздник у моря",
+      "en": "The Wonder Lawn · seaside fair",
+      "th": "The Wonder Lawn · งานวัดริมทะเล"
+    },
+    "text": {
+      "ru": "Семейный фестиваль в На-Джомтьене: уличная еда, игры и огненное шоу в 20:00. Вход свободный; развлечения оплачиваются отдельно.",
+      "en": "Family festival in Na Jomtien with street food, games and a fire show at 20:00. Free entry; activities cost extra.",
+      "th": "เทศกาลสำหรับครอบครัวที่นาจอมเทียน มีสตรีทฟู้ด เกม และโชว์ไฟเวลา 20:00 น. เข้างานฟรี กิจกรรมมีค่าใช้จ่ายเพิ่มเติม"
+    },
+    "when": {
+      "ru": "11–15 октября · ежедневно 17:00–22:00",
+      "en": "11–15 October · daily 17:00–22:00",
+      "th": "11–15 ตุลาคม · ทุกวัน 17:00–22:00 น."
+    },
+    "venue": "Mövenpick Siam Na Jomtien Pattaya · beachfront lawn",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Movenpick+Siam+Na+Jomtien+Pattaya",
+    "source": "https://www.movenpickpattayanajomtien.com/th/offers/the-wonderlawn/",
+    "checkedAt": "2026-10-06"
   },
   {
     "id": "food-fun-second-2026",
@@ -57,9 +57,9 @@
       "th": "Food Fun Fest · ไปชิมกัน!"
     },
     "text": {
-      "ru": "Еда от местных продавцов и фудтраков. Зови друзей — здесь публикуют и события, и встречи.",
-      "en": "Local food vendors and food trucks. Bring friends — events and meetups belong here too.",
-      "th": "อาหารจากร้านท้องถิ่นและฟู้ดทรัก ชวนเพื่อนมา ลงกิจกรรมและนัดพบได้ที่นี่"
+      "ru": "Фестиваль еды: местные продавцы и фудтраки на площадке Runway. Зови друзей — здесь можно разместить и своё событие.",
+      "en": "Food festival with local vendors and food trucks at the Runway. Bring friends — you can post your own event here too.",
+      "th": "เทศกาลอาหารจากร้านท้องถิ่นและฟู้ดทรักที่ลาน Runway ชวนเพื่อนมา และลงกิจกรรมของคุณได้ที่นี่"
     },
     "when": {
       "ru": "10–25 октября · часы уточняй у организатора",
@@ -68,7 +68,7 @@
     },
     "venue": "Terminal21 Pattaya Runway",
     "maps": "https://www.google.com/maps/search/?api=1&query=Terminal21+Pattaya+Runway",
-    "source": "https://www.terminal21.co.th/pattaya/en/event/food-fun-fest-2026-is-back-en/",
-    "checkedAt": "2026-10-03"
+    "source": "https://www.terminal21.co.th/pattaya/en/event-activity-en-old/",
+    "checkedAt": "2026-10-06"
   }
 ]
