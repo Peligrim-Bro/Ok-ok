@@ -294,7 +294,7 @@ html[data-theme="light"] .ok-support-author{
     "поддержать проект","สนับสนุนผู้เขียน","สนับสนุน"
   ];
   const mark=()=>{
-    document.querySelectorAll("a,button").forEach(el=>{
+    document.querySelectorAll("#donateBtn").forEach(el=>{
       const t=(el.textContent||"").trim().toLowerCase();
       if(labels.some(x=>t.includes(x))) el.classList.add("ok-support-author");
     });
@@ -360,13 +360,7 @@ html[data-theme="light"] .ok-support-author{
     return lang.startsWith("th")?translations.th:lang.startsWith("en")?translations.en:translations.ru;
   };
   const isDonate=(el)=>{
-    const t=(el.textContent||"").trim();
-    const id=(el.id||"").toLowerCase();
-    const cls=(typeof el.className==="string"?el.className:"").toLowerCase();
-    const href=(el.getAttribute?.("href")||"").toLowerCase();
-    const aria=(el.getAttribute?.("aria-label")||"").toLowerCase();
-    return t==="$" ||
-      /donat|donate|support|поддерж/.test(id+" "+cls+" "+href+" "+aria+" "+t.toLowerCase());
+    return el.id === "donateBtn";
   };
   const upgrade=()=>{
     const candidates=[...document.querySelectorAll("a,button")].filter(isDonate);

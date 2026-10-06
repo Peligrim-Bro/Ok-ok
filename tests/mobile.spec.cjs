@@ -31,6 +31,24 @@ for(const lang of ['ru','en','th'])for(const width of [390,768])test(`${lang} at
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
  await page.locator('#installClose').click();
  await expect(page.locator('#installMask')).not.toHaveClass(/on/);
+ await expect(page.locator('.news-card')).toHaveCount(5);
+ await expect(page.locator('.home-fold summary')).not.toContainText([/Полезное для поездки|Useful for your trip|มีประโยชน์สำหรับทริป/]);
+ // News can mention support/donations, including in source URLs, without becoming controls.
+ await page.evaluate(()=>{
+  const card=document.querySelector('.news-card');
+  card.href='https://example.org/support/donations';
+  card.querySelector('p').textContent='Support the author · поддержать автора · สนับสนุนผู้เขียน';
+ });
+ await page.waitForTimeout(1600);
+ await expect(page.locator('.news-card.ok-support-author')).toHaveCount(0);
+ await expect(page.locator('#donateBtn')).toHaveClass(/ok-support-author/);
+ for(const theme of ['dark','light']){
+  await page.evaluate(theme=>document.documentElement.dataset.theme=theme,theme);
+  const cards=await page.locator('.news-card').evaluateAll(nodes=>nodes.map(n=>{
+   const s=getComputedStyle(n),p=n.querySelector('p');return {width:n.getBoundingClientRect().width,gradient:s.backgroundImage,display:s.display,wrap:s.whiteSpace,textFits:p.scrollWidth<=p.clientWidth+1};
+  }));
+  for(const card of cards){expect(card.gradient).toBe(cards[1].gradient);expect(card.display).toBe('block');expect(card.wrap).toBe('normal');expect(card.textFits).toBe(true);expect(card.width).toBeGreaterThan(200);}
+ }
  await page.locator('nav.tab [data-tab="list"]').click();
  await expect(page.locator('nav.tab [data-tab="list"]')).toHaveClass(/active|on/);
  await expect(page.locator('body')).not.toContainText(/EX24|Supermao/i);

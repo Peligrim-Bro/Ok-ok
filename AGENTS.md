@@ -19,6 +19,7 @@ GitHub Actions checks are diagnostic; they do not gate Cloudflare's independent 
 - Preserve the unique service-worker cache generated for each build. Never replace it with a fixed cache name. Verify the live site matches the latest published main and retains Pulse/mobile fixes before reporting success.
 
 - Agoda is discontinued by owner decision. Do not restore its card, links or partner registry entry. Every build must run remove-agoda.mjs; preserve all other partners and their referral codes.
+- The trip resources section is retired on all screens. Preserve individual referral actions and the 12Go map widget. Support styling belongs only to #donateBtn; never infer it from article text or URLs.
 
 ## Efficient project work (owner preference, 2026-10-04)
 - Reduce redundant context and repeated work, never required verification or task quality. Optimize effort per completed task, not just one response.

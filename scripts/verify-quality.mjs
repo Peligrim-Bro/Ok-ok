@@ -29,6 +29,10 @@ for(const source of [html,readFileSync(root+'/config.js','utf8')])assert(!/ex24/
 assert(html.includes('https://t.me/SenateExchange_bot?start=fi10072'),'Senate referral missing');
 console.log('PASS: size budgets, SEO, PWA icons/offline assets, API cache bypass and EX24 exclusion',measured);
 const home=html.slice(html.indexOf('    function renderHome() {'),html.indexOf('    function renderList() {'));
+assert(!home.includes('${t().partnersTitle}'),'Retired trip section returned');
+assert(html.includes('function partnersHTML() { return ""; }'),'Retired trip section must stay empty on every screen');
+assert(html.includes('return el.id === "donateBtn";'),'Support styling must use the explicit donate control');
+assert(!html.includes('labels.some(x=>t.includes(x))') || html.includes('document.querySelectorAll("#donateBtn")'),'Support label detection must not scan news links');
 assert(home.indexOf('id="okAds"')>home.indexOf('data-tours="1"'),'Async ads must not shift primary home actions');
 assert(html.includes('family=Manrope:wght@400;500;600;700;800&display=optional'),'Loading font strategy changed');
 console.log('PASS: primary home actions stay ahead of the async ad board and optional font loading');

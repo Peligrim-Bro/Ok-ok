@@ -11,12 +11,17 @@ if (!page.includes('id="home-compact-style"')) {
     if (!home.includes(from)) throw new Error('Home compact anchor missing: ' + from);
     home = home.replace(from, to);
   };
-  replace('${partnersHTML()}', '<details class="home-fold"><summary>${t().partnersTitle}</summary>${partnersHTML()}</details>');
+  replace('${partnersHTML()}', '');
   replace('<section class="trust">\n          <h3>${t().trustTitle}</h3>', '<details class="home-fold"><summary>${t().trustTitle}</summary><section class="trust">');
   replace('<div class="trust-grid">${trustHTML()}</div>\n        </section>', '<div class="trust-grid">${trustHTML()}</div>\n        </section></details>');
   replace('list.map(cardHTML)', 'list.slice(0, 6).map(cardHTML)');
   replace('<p class="hint">${t().install}</p>', '<button class="btn ghost home-all" type="button" data-open-list="1">${lang === "ru" ? "Все места" : lang === "th" ? "สถานที่ทั้งหมด" : "All places"} · ${list.length}</button>\n        <p class="hint">${t().install}</p>');
   page = page.slice(0, start) + home + page.slice(end);
+  // Remove the retired trip section everywhere, retaining individual partner actions.
+  const partnerStart = page.indexOf('    function partnersHTML() {');
+  const partnerEnd = page.indexOf('    function openPartner(id) {', partnerStart);
+  if (partnerStart < 0 || partnerEnd < 0) throw new Error('Partner section boundaries missing');
+  page = page.slice(0, partnerStart) + '    function partnersHTML() { return ""; }\n' + page.slice(partnerEnd);
   page = page.replace('<img src="${p.photo}" alt="${p.name}" />', '<img src="${p.photo}" alt="${p.name}" loading="lazy" decoding="async" />');
   page = page.replace('</head>', `<style id="home-compact-style">
     .home-fold{margin:0 0 12px;border:1px solid var(--line);border-radius:16px;background:var(--card)}
