@@ -32,6 +32,17 @@ for(const lang of ['ru','en','th'])for(const width of [390,768])test(`${lang} at
  await page.locator('#installClose').click();
  await expect(page.locator('#installMask')).not.toHaveClass(/on/);
  await expect(page.locator('.news-card')).toHaveCount(5);
+ await expect(page.locator('.catalog-note')).toBeVisible();
+ await expect(page.locator('.card').first()).not.toContainText(/сен 2026|Вид платный|Счёт бьётся/);
+ await expect(page.locator('.visit-note').first()).toHaveText({ru:'Условия уточняйте перед визитом',en:'Confirm details before visiting',th:'ยืนยันข้อมูลก่อนเดินทาง'}[lang]);
+ expect(await page.locator('#recTrack').evaluate(n=>getComputedStyle(n).animationName)).toBe('none');
+ await expect(page.locator('#recTrack>.ticker-copy').nth(1)).toBeHidden();
+ expect(await page.locator('#donateBtn').evaluate(n=>getComputedStyle(n,'::before').animationName)).toBe('none');
+ if(lang==='ru'){
+  await expect(page.locator('#recTicker')).toContainText('реклама');
+  await expect(page.locator('.card').first()).toContainText('Центральная Паттайя');
+  await expect(page.locator('body')).not.toContainText('Scam of the Week');
+ }
  await expect(page.locator('.home-fold summary')).not.toContainText([/Полезное для поездки|Useful for your trip|มีประโยชน์สำหรับทริป/]);
  // News can mention support/donations, including in source URLs, without becoming controls.
  await page.evaluate(()=>{

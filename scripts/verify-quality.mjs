@@ -5,6 +5,9 @@ import assert from 'node:assert/strict';
 const root='site/public',html=readFileSync(root+'/index.html','utf8');
 const approvedPalette=readFileSync('tropical-gloss.css','utf8');
 assert(html.includes('<style id="okok-tropical-gloss-v1">'+approvedPalette+'</style>'),'Owner-approved Tropical Night palette missing or changed');
+assert(html.includes('id="okok-editorial-polish-v1"'),'Editorial polish missing');
+assert(!html.includes('${t().checked} сен 2026'),'Unsubstantiated blanket verification date returned');
+assert(html.includes('function editorialVisitNote()'),'Visit uncertainty disclosure missing');
 function files(dir){return readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?files(dir+'/'+e.name):[dir+'/'+e.name]);}
 const all=files(root),budget=JSON.parse(readFileSync('quality-budget.json','utf8'));
 const measured={htmlBytes:Buffer.byteLength(html),htmlGzipBytes:gzipSync(html).length,javascriptBytes:all.filter(p=>p.endsWith('.js')).reduce((n,p)=>n+statSync(p).size,0),siteBytes:all.reduce((n,p)=>n+statSync(p).size,0)};

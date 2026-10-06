@@ -1,5 +1,7 @@
 # OK-OK project operations
 
+- Editorial polish approved 2026-10-06: preserve Tropical Night ceramic gloss and the 3D background. Avoid ornate filler and unsupported claims of personal visits, billing honesty or verification dates. Do not restore the hardcoded September 2026 checked stamp. Localize UI labels in RU/EN/TH; distinguish scheduled hours from live business status. Paid examples remain explicitly labelled. Keep the advertising ticker static and support sheen non-looping; preserve tap effects and the links ticker.
+
 - Owner-approved palette (2026-10-06): saturated Tropical Night. Source of truth: tropical-gloss.css, applied by scripts/apply-tropical-gloss.mjs in every build. Dark base #061d27, panels #103743, text #f4f1ea, mint #57efc3; coral ceramic primary action; light base #eef5ef. Preserve sculpted glossy buttons, bright top highlights, rim and depth shadows. Do not flatten controls, revert to lavender/grey, recolor the 3D background or change layout without approval. Preserve semantic warning/vote colors.
 
 - Repository: Peligrim-Bro/Ok-ok, main. Hosting: Cloudflare Worker ok-ok only. Do not restore Netlify workflows.

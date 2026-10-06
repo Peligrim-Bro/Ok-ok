@@ -1664,3 +1664,5 @@ for(const path of ['site/public/index.html','site/public/sw.js'])writeFileSync(p
 
 await import('./scripts/apply-loading-stability.mjs');
 await import('./scripts/apply-tropical-gloss.mjs');
+
+await import('./scripts/apply-editorial-polish.mjs');
