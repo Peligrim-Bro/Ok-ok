@@ -44,6 +44,14 @@ for(const lang of ['ru','en','th'])for(const width of [390,768])test(`${lang} at
  await expect(page.locator('#donateBtn')).toHaveClass(/ok-support-author/);
  for(const theme of ['dark','light']){
   await page.evaluate(theme=>document.documentElement.dataset.theme=theme,theme);
+  expect(await page.evaluate(()=>getComputedStyle(document.documentElement).getPropertyValue('--bg').trim())).toBe(theme==='dark'?'#061d27':'#eef5ef');
+  const palette=await page.locator('[data-spin="1"]').first().evaluate(n=>({background:getComputedStyle(n).backgroundImage,shadow:getComputedStyle(n).boxShadow,color:getComputedStyle(n).color}));
+  expect(palette.background).toContain('243, 110, 69');
+  expect(palette.shadow).toContain('inset');
+  expect(palette.color).toBe('rgb(57, 24, 12)');
+  const ordinary=await page.locator('[data-openmap="1"]').first().evaluate(n=>({background:getComputedStyle(n).backgroundImage,shadow:getComputedStyle(n).boxShadow}));
+  expect(ordinary.background).toContain(theme==='dark'?'24, 68, 85':'140, 189, 188');
+  expect(ordinary.shadow).toContain('inset');
   const cards=await page.locator('.news-card').evaluateAll(nodes=>nodes.map(n=>{
    const s=getComputedStyle(n),p=n.querySelector('p');return {width:n.getBoundingClientRect().width,gradient:s.backgroundImage,display:s.display,wrap:s.whiteSpace,textFits:p.scrollWidth<=p.clientWidth+1};
   }));

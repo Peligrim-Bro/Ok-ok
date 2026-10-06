@@ -16,6 +16,7 @@ export async function verifyLive(commit,request=fetch){
  const info=await (await get('/build-info.json')).json();
  assert.equal(info.commit,commit,'Live site does not match the expected release');
  const html=await (await get('/')).text();
+ assert(html.includes('id="okok-tropical-gloss-v1"')&&html.includes('--bg:#061d27')&&html.includes('--bg:#eef5ef'),'Approved Tropical Night palette missing on the live site');
  for(const marker of ['PattayaOK','okok-pulse-v1','oki-nav-float-fix-v4','oki-prompt-tail-fix-v4','okok-tetris-playable-v2','https://t.me/SenateExchange_bot?start=fi10072'])assert(html.includes(marker),`Missing live marker: ${marker}`);
  const config=await (await get('/config.js')).text();
  for(const source of [html,config])assert(!/ex24|supermao|agoda/i.test(source),'Retired partner returned on the live site');

@@ -1,0 +1,63 @@
+/* Owner-approved 2026-10-06: Tropical Night / saturated ceramic gloss.
+   Color only: preserve existing sizes, spacing, navigation and 3D renderer. */
+html:root{
+ --bg:#061d27;--card:#103743;--card2:#184551;--line:#346775;--text:#f4f1ea;--muted:#b0c3c5;
+ --mint:#57efc3;--mint2:#35cfa9;--ok:#57efc3;--warn:#ffbf55;--danger:#ff8490;
+ --nav:#061d27f5;--sheet:#08252f;--tick:#10303c;--tick-rec:#103b33;--chip:#103743;
+ --header:linear-gradient(#061d27f5,#061d27e8 70%,#061d2700);
+ --tropical-face:linear-gradient(174deg,#87c4d3 0%,#548a9e 9%,#326b80 27%,#184455 62%,#3c7b8f 100%);
+ --tropical-rim:#72aabd;--tropical-depth:#092c38;--tropical-ink:#f4f1ea;
+ --tropical-shadow:0 5px 0 var(--tropical-depth),0 10px 16px #0006,inset 0 3px 3px #ffffffb0,inset 0 -4px 6px #04172090,inset 3px 0 4px #d0f5ff50;
+ --tropical-panel:linear-gradient(145deg,#103743f2,#082b36f2);
+ --tropical-scam:linear-gradient(145deg,#361923,#27151c);
+}
+html:root[data-theme="light"]{
+ --bg:#eef5ef;--card:#fffdf7;--card2:#e0efea;--line:#8db9b8;--text:#153239;--muted:#4c666d;
+ --mint:#08785c;--mint2:#07694f;--ok:#08785c;--warn:#955700;--danger:#a83b4a;
+ --nav:#eef5eff5;--sheet:#f4f8f2;--tick:#e0efea;--tick-rec:#d8efe5;--chip:#fffdf7;
+ --header:linear-gradient(#eef5eff5,#eef5efe8 70%,#eef5ef00);
+ --tropical-face:linear-gradient(174deg,#fff 0%,#cbece9 23%,#8cbdbc 65%,#d0e8e2 100%);
+ --tropical-rim:#8bb8b7;--tropical-depth:#678e90;--tropical-ink:#153239;
+ --tropical-shadow:0 5px 0 var(--tropical-depth),0 9px 14px #15323925,inset 0 3px 3px #fff,inset 0 -4px 6px #315c6755,inset 3px 0 4px #fff9;
+ --tropical-panel:linear-gradient(145deg,#fffdf7f5,#e4f1eaf5);
+ --tropical-scam:linear-gradient(145deg,#fff1f0,#f5e3e7);
+}
+/* Explicitly override legacy local button tokens, not article links. */
+html body :is(button:not([data-vote]),a.btn,.zones a,.dock a,.leaflet-control-zoom a){
+ --toy-face:var(--tropical-face);--toy-rim:var(--tropical-rim);--toy-depth:var(--tropical-depth);--toy-ink:var(--tropical-ink);--toy-shadow:var(--tropical-shadow);
+ background:radial-gradient(ellipse 66% 42% at 25% 0%,#ffffffa6,transparent 76%),var(--toy-face)!important;
+ color:var(--toy-ink)!important;border-color:var(--toy-rim)!important;box-shadow:var(--toy-shadow)!important;
+}
+html body :is(button.on,button[aria-pressed="true"],nav.tab button.active,#installNow,.lang.timer):not([data-vote]){
+ --toy-face:linear-gradient(174deg,#d4fff0,#79eac8 26%,#26b48f 64%,#83efcc 100%);--toy-rim:#80dfc5;--toy-depth:#176a57;--toy-ink:#103a30;
+ --toy-shadow:0 5px 0 #176a57,0 9px 14px #0004,inset 0 3px 3px #fff9,inset 0 -4px 6px #15594370;
+ text-shadow:0 1px 0 #fff7!important;
+}
+html body :is(button.hot,.btn[data-report],#reportBtn){
+ --toy-face:linear-gradient(174deg,#ffe4ec,#e59bab 28%,#bb657a 65%,#edafbe 100%);--toy-rim:#d29ba8;--toy-depth:#754550;--toy-ink:#42202c;
+ --toy-shadow:0 5px 0 #754550,0 9px 14px #0004,inset 0 3px 3px #fff9,inset 0 -4px 6px #632f4470;
+ text-shadow:0 1px 0 #fff6!important;
+}
+html body :is(button[data-spin],#lever){
+ --toy-face:linear-gradient(174deg,#ffe1c9 0%,#ffaa7e 24%,#f36e45 65%,#ffb58b 100%);--toy-rim:#ef9976;--toy-depth:#99412d;--toy-ink:#39180c;
+ --toy-shadow:0 5px 0 #99412d,0 11px 16px #0005,inset 0 3px 3px #fffd,inset 0 -4px 6px #8b321c75,inset 3px 0 4px #ffe5bc60;
+ text-shadow:0 1px 0 #ffe7d780!important;
+}
+html body #donateBtn{
+ color:var(--tropical-ink)!important;border-color:var(--tropical-rim)!important;
+ background:radial-gradient(ellipse 66% 42% at 25% 0%,#ffffffa6,transparent 76%),var(--tropical-face)!important;
+ box-shadow:var(--tropical-shadow)!important;
+}
+html:root body :is(.news-card,.card,.trust,.partners,.home-fold,.okads,.bkk-card,.bkk-intro,.quote,.okbox,.donate){background:var(--tropical-panel);color:var(--text);border-color:var(--line)}
+html:root body .scam{background:var(--tropical-scam);color:var(--text)}
+html body #okiBubble{background:var(--card);border-color:var(--line);color:var(--text)}
+html body #okiBubble::after{background:var(--card);border-color:var(--line)}
+html body #okiBubble button{background:transparent!important;color:var(--text)!important;border:0!important;box-shadow:none!important}
+html body #okiLife{background:color-mix(in srgb,var(--bg) 92%,transparent);color:var(--text)}
+html body #okiLife .ol-card{background:var(--tropical-panel);border-color:var(--line)}
+html body #okiLife :is(h2,h3,h4){color:var(--text)}
+html body #okiLife p{color:var(--muted)}
+html body #okiLife button:not(.ol-pet):not(.ol-change){background:radial-gradient(ellipse 66% 42% at 25% 0%,#ffffffa6,transparent 76%),var(--toy-face)!important;color:var(--toy-ink)!important;border-color:var(--toy-rim)!important;box-shadow:var(--toy-shadow)!important}
+html body #okiLife button.ol-pet{background:none!important;border:0!important;box-shadow:none!important}
+html body #okiLife button.ol-change{background:transparent!important;box-shadow:none!important;color:var(--muted)!important}
+html body :is(button,a.btn,.zones a,.dock a):focus-visible{outline-color:var(--mint)!important}
