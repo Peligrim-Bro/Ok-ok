@@ -1,86 +1,95 @@
 {
-  "verifiedAt": "2026-10-05",
+  "verifiedAt": "2026-10-06",
   "news": [
     {
       "category": "world",
-      "when": "04.10 · 🌍",
-      "href": "https://www.reuters.com/business/openais-altman-says-ai-benefits-warrant-accepting-some-risks-2026-10-04/",
-      "ru": "Сэм Альтман заявил, что широкая доступность ИИ оправдывает принятие части рисков, и поддержал более мягкое регулирование. Его позиция стала частью продолжающейся дискуссии отрасли о пользе, злоупотреблениях и контроле над мощными моделями.",
-      "en": "Sam Altman said broad access to AI justifies accepting some risks and backed lighter-touch regulation. His position adds to the industry's continuing debate over benefits, misuse and control of increasingly capable models.",
-      "th": "แซม อัลท์แมนกล่าวว่าการเปิดให้ผู้คนเข้าถึง AI อย่างกว้างขวางทำให้สังคมต้องยอมรับความเสี่ยงบางส่วน และสนับสนุนการกำกับดูแลที่ไม่เข้มงวดเกินไป จุดยืนนี้เป็นส่วนหนึ่งของการถกเถียงในอุตสาหกรรมเรื่องประโยชน์ การนำไปใช้ผิดทาง และการควบคุมโมเดลที่มีความสามารถสูงขึ้น",
-      "publishedAt": "2026-10-04",
-      "sources": ["https://www.reuters.com/business/openais-altman-says-ai-benefits-warrant-accepting-some-risks-2026-10-04/"],
+      "when": "05.10 · 🌍",
+      "href": "https://apnews.com/article/cockatoo-olympic-brisbane-2032-emblem-bc8fe8b2d8fa3355d4323353065247e5",
+      "ru": "Организаторы Игр Brisbane 2032 официально представили эмблемы Олимпиады и Паралимпиады в образе какаду. В дизайне объединены мотивы пламени, очертания Квинсленда и элементы культуры коренных народов Австралии.",
+      "en": "Brisbane 2032 organizers officially unveiled cockatoo-inspired emblems for the Olympic and Paralympic Games. The designs combine flame imagery, the outline of Queensland and First Nations cultural elements.",
+      "th": "ผู้จัดการแข่งขันบริสเบน 2032 เปิดตัวตราสัญลักษณ์โอลิมปิกและพาราลิมปิกอย่างเป็นทางการ โดยใช้ภาพนกกระตั้ว ผสานรูปเปลวไฟ เค้าโครงรัฐควีนส์แลนด์ และองค์ประกอบทางวัฒนธรรมของชนพื้นเมืองออสเตรเลีย",
+      "publishedAt": "2026-10-05",
+      "sources": [
+        "https://apnews.com/article/cockatoo-olympic-brisbane-2032-emblem-bc8fe8b2d8fa3355d4323353065247e5",
+        "https://www.theguardian.com/sport/2026/oct/03/brisbane-2032-olympic-games-emblem-leaked-official-youtube"
+      ],
       "nonWar": true,
       "discussionEvidence": {
-        "observedAt": "2026-10-05T08:53:00+07:00",
-        "sourceUrl": "https://www.reuters.com/business/openais-altman-says-ai-benefits-warrant-accepting-some-risks-2026-10-04/",
-        "summary": "Comparable public comment and share totals were not exposed. Selected for fresh Reuters coverage and broad public relevance in the current AI-regulation debate; this is not a claim of a global popularity rank."
+        "observedAt": "2026-10-06T08:55:00+07:00",
+        "sourceUrl": "https://apnews.com/article/cockatoo-olympic-brisbane-2032-emblem-bc8fe8b2d8fa3355d4323353065247e5",
+        "summary": "Comparable public comment and share totals were not exposed. Selected for fresh AP coverage and independent coverage of the emblem release by The Guardian; this is qualitative cross-outlet evidence, not a claim of global popularity rank."
       }
     },
     {
       "category": "thailand",
-      "when": "04.10 · 🇹🇭",
-      "href": "https://tmd.go.th/en/warning-and-events/warning-storm/variable-weather-in-upper-thailand-no-7-241-2026",
-      "ru": "Метеодепартамент Таиланда предупредил о грозах, порывистом ветре и местами сильных дождях 4–7 октября. На 5–6 октября риск распространяется на север, центр с Бангкоком, восток и юг; возможны внезапные паводки и оползни.",
-      "en": "Thailand's Meteorological Department warned of thunderstorms, gusty winds and isolated heavy rain from 4–7 October. On 5–6 October the risk extends across the North, Central region including Bangkok, the East and the South, with possible flash floods and landslides.",
-      "th": "กรมอุตุนิยมวิทยาเตือนให้ระวังฝนฟ้าคะนอง ลมกระโชกแรง และฝนตกหนักบางแห่งในช่วง 4–7 ตุลาคม โดยวันที่ 5–6 ตุลาคมครอบคลุมภาคเหนือ ภาคกลางรวมกรุงเทพฯ ภาคตะวันออก และภาคใต้ พร้อมความเสี่ยงน้ำท่วมฉับพลันและดินถล่ม",
-      "publishedAt": "2026-10-04",
-      "sources": ["https://tmd.go.th/en/warning-and-events/warning-storm/variable-weather-in-upper-thailand-no-7-241-2026"],
-      "discussionEvidence": {
-        "observedAt": "2026-10-05T08:53:00+07:00",
-        "sourceUrl": "https://tmd.go.th/en/warning-and-events/warning-storm/variable-weather-in-upper-thailand-no-7-241-2026",
-        "summary": "The official advisory did not expose comparable comment or share totals. Selected for current nationwide safety and travel relevance, not as a measured popularity ranking."
-      }
-    },
-    {
-      "category": "thailand",
-      "when": "04.10 · 🇹🇭",
-      "href": "https://www.reuters.com/sports/asian-games-close-after-fortnight-turmoil-teenage-triumph-2026-10-04/",
-      "ru": "Азиатские игры в Айти–Нагое завершились, а 20-летний тайский спринтер Пурипол Бунсон получил мужскую награду MVP после побед на дистанциях 100 и 200 метров. Следующие Игры примет Доха.",
-      "en": "The Aichi-Nagoya Asian Games closed with 20-year-old Thai sprinter Puripol Boonson named men's MVP after winning both the 100m and 200m. Doha is due to host the next Games.",
-      "th": "การแข่งขันเอเชียนเกมส์ที่ไอจิ–นาโกยาปิดฉากลง โดยภูริพล บุญสอน นักวิ่งชาวไทยวัย 20 ปี ได้รับรางวัลนักกีฬายอดเยี่ยมฝ่ายชาย หลังคว้าแชมป์วิ่ง 100 และ 200 เมตร ส่วนเจ้าภาพครั้งต่อไปคือกรุงโดฮา",
-      "publishedAt": "2026-10-04",
+      "when": "05.10 · 🇹🇭",
+      "href": "https://apnews.com/article/thailand-floods-rain-storm-deaths-9e2008cc9f7fdd21f6a2e9e1bcf03be6",
+      "ru": "Власти Таиланда предупредили о новых ливнях и риске внезапных паводков. По данным служб на 5 октября, наводнения с середины сентября затронули более 3,5 млн человек, а в восьми провинциях погибли 31 человек.",
+      "en": "Thai authorities warned of further heavy rain and flash-flood risk. As of 5 October, flooding since mid-September had affected more than 3.5 million people and caused 31 deaths across eight provinces.",
+      "th": "ทางการไทยเตือนฝนตกหนักเพิ่มเติมและความเสี่ยงน้ำท่วมฉับพลัน โดยข้อมูล ณ วันที่ 5 ตุลาคมระบุว่า น้ำท่วมตั้งแต่กลางเดือนกันยายนส่งผลกระทบต่อประชาชนมากกว่า 3.5 ล้านคน และมีผู้เสียชีวิต 31 รายใน 8 จังหวัด",
+      "publishedAt": "2026-10-05",
       "sources": [
-        "https://www.reuters.com/sports/asian-games-close-after-fortnight-turmoil-teenage-triumph-2026-10-04/",
-        "https://apnews.com/article/6e6d17c2dea7475ab632dc368cca6dfe"
+        "https://apnews.com/article/thailand-floods-rain-storm-deaths-9e2008cc9f7fdd21f6a2e9e1bcf03be6",
+        "https://www.reuters.com/business/environment/death-toll-thailand-floods-rises-31-interior-ministry-says-2026-10-05/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-05T08:53:00+07:00",
-        "sourceUrl": "https://www.reuters.com/sports/asian-games-close-after-fortnight-turmoil-teenage-triumph-2026-10-04/",
-        "summary": "Comparable public engagement totals were unavailable. The Games' closing was independently covered by Reuters and AP; selection emphasizes the Thai men's MVP result and does not claim a popularity rank."
+        "observedAt": "2026-10-06T08:55:00+07:00",
+        "sourceUrl": "https://apnews.com/article/thailand-floods-rain-storm-deaths-9e2008cc9f7fdd21f6a2e9e1bcf03be6",
+        "summary": "Comparable public engagement totals were unavailable. The national flood update was independently reported by AP and Reuters on 5 October and selected for immediate public-safety relevance; no popularity rank is claimed."
+      }
+    },
+    {
+      "category": "thailand",
+      "when": "05.10 · 🇹🇭",
+      "href": "https://thailand.go.th/useful-information-detail/-uk-",
+      "ru": "Туристическое управление Таиланда и Norse Atlantic Airways запустили зимнюю кампанию для британского рынка. С декабря перевозчик планирует три рейса в неделю Лондон–Пхукет, а маршруты Лондон–Бангкок и Манчестер–Бангкок также расширят зимнее расписание.",
+      "en": "The Tourism Authority of Thailand and Norse Atlantic Airways launched a winter campaign for the UK market. From December, the airline plans three weekly London–Phuket flights, while London–Bangkok and Manchester–Bangkok services will also expand for winter.",
+      "th": "การท่องเที่ยวแห่งประเทศไทยและสายการบิน Norse Atlantic Airways เปิดแคมเปญฤดูหนาวสำหรับตลาดสหราชอาณาจักร โดยตั้งแต่เดือนธันวาคมมีแผนบินลอนดอน–ภูเก็ตสัปดาห์ละ 3 เที่ยว และเพิ่มตารางบินลอนดอน–กรุงเทพฯ กับแมนเชสเตอร์–กรุงเทพฯ ในช่วงฤดูหนาวด้วย",
+      "publishedAt": "2026-10-05",
+      "sources": [
+        "https://thailand.go.th/useful-information-detail/-uk-"
+      ],
+      "discussionEvidence": {
+        "observedAt": "2026-10-06T08:55:00+07:00",
+        "sourceUrl": "https://thailand.go.th/useful-information-detail/-uk-",
+        "summary": "The official page displayed 104 views and 0 comments when opened. It also reported more than 22,000 engagements and over one million views for the joint campaign; those campaign figures are not article-comment totals and do not establish a wider popularity rank."
       }
     },
     {
       "category": "pattaya",
-      "when": "04.10 · Pattaya",
-      "href": "https://thepattayanews.com/2026/10/04/khao-kheow-open-zoo-unveils-khao-kheow-landmark-as-new-visitor-check-in-spot/",
-      "ru": "В открытом зоопарке Khao Kheow в Сираче появился новый комплекс у водоёма: цветочный сад, фотозоны, мини-поезд, зона фламинго, кафе и площадка для кемпинга. Объект работает ежедневно с 08:00 до 17:00.",
-      "en": "Khao Kheow Open Zoo in Sri Racha has opened a new lakeside area with a flower garden, photo spots, a miniature train, flamingo activities, a café and a camping lawn. It is open daily from 08:00 to 17:00.",
-      "th": "สวนสัตว์เปิดเขาเขียวในศรีราชาเปิดพื้นที่ใหม่ริมอ่างเก็บน้ำ มีสวนดอกไม้ จุดถ่ายภาพ รถไฟเล็ก กิจกรรมใกล้ชิดนกฟลามิงโก คาเฟ่ และลานกางเต็นท์ เปิดทุกวันเวลา 08.00–17.00 น.",
-      "publishedAt": "2026-10-04",
-      "sources": ["https://thepattayanews.com/2026/10/04/khao-kheow-open-zoo-unveils-khao-kheow-landmark-as-new-visitor-check-in-spot/"],
+      "when": "06.10 · Pattaya",
+      "href": "https://www.pattayamail.com/latestnews/news/giant-thai-flag-to-take-to-the-skies-over-pattaya-in-world-record-attempt-567286",
+      "ru": "7 октября над Pattaya Beach планируют спустить с парашютом тайский флаг площадью 4 303,04 квадратного фута в рамках попытки установить мировой рекорд. Первый запуск назначен примерно на 07:30; второй состоится только при необходимости.",
+      "en": "A 4,303.04-square-foot Thai flag is scheduled to descend by parachute over Pattaya Beach on 7 October in a world-record attempt. The first run is planned for about 07:30, with a second attempt only if needed.",
+      "th": "วันที่ 7 ตุลาคม มีแผนนำธงชาติไทยขนาด 4,303.04 ตารางฟุตลงสู่ชายหาดพัทยาด้วยร่มชูชีพ เพื่อพยายามสร้างสถิติโลก โดยภารกิจแรกกำหนดเวลาประมาณ 07.30 น. และจะมีครั้งที่สองเฉพาะเมื่อจำเป็น",
+      "publishedAt": "2026-10-06",
+      "sources": [
+        "https://www.pattayamail.com/latestnews/news/giant-thai-flag-to-take-to-the-skies-over-pattaya-in-world-record-attempt-567286"
+      ],
       "discussionEvidence": {
-        "observedAt": "2026-10-05T08:53:00+07:00",
-        "sourceUrl": "https://thepattayanews.com/2026/10/04/khao-kheow-open-zoo-unveils-khao-kheow-landmark-as-new-visitor-check-in-spot/",
-        "summary": "The outlet exposed a Facebook control but no public like, comment or share total. Selected for freshness and practical relevance to visitors in the Pattaya-Chonburi area; no popularity rank is claimed."
+        "observedAt": "2026-10-06T08:55:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/latestnews/news/giant-thai-flag-to-take-to-the-skies-over-pattaya-in-world-record-attempt-567286",
+        "summary": "Pattaya Mail displayed 245 views and 0 comments. On the same site at the same observation time, the selected Chaiyapruek 2 park article displayed 250 views and 0 comments; these counts are comparable only within Pattaya Mail and do not establish wider popularity."
       }
     },
     {
       "category": "pattaya",
-      "when": "04.10 · Pattaya",
-      "href": "https://thepattayanews.com/2026/10/04/woman-flees-smoke-filled-pattaya-room-fire-blamed-on-short-circuit/",
-      "ru": "Пожарные потушили возгорание в комнате коммерческого здания в Паттайе; жительница не пострадала. Предварительно огонь связывают с розеткой и оставленным подключённым зарядным устройством, однако окончательную причину устанавливают эксперты.",
-      "en": "Firefighters extinguished a room fire in a Pattaya commercial building and the resident was unhurt. A socket and a charger left plugged in are the preliminary focus, but forensic investigators have not yet confirmed the cause.",
-      "th": "เจ้าหน้าที่ดับเพลิงควบคุมเหตุไฟไหม้ห้องพักในอาคารพาณิชย์ที่พัทยาได้ โดยผู้พักอาศัยไม่ได้รับบาดเจ็บ เบื้องต้นพบร่องรอยบริเวณปลั๊กไฟและเครื่องชาร์จที่เสียบค้างไว้ แต่ยังต้องรอเจ้าหน้าที่พิสูจน์หลักฐานยืนยันสาเหตุ",
-      "publishedAt": "2026-10-04",
-      "sources": ["https://thepattayanews.com/2026/10/04/woman-flees-smoke-filled-pattaya-room-fire-blamed-on-short-circuit/"],
+      "when": "06.10 · Pattaya",
+      "href": "https://www.pattayamail.com/latestnews/news/pattaya-extends-opening-hours-at-chaiyapruek-2-public-park-567269",
+      "ru": "Паттайя продлила часы работы общественного парка Chaiyapruek 2: теперь он открыт ежедневно с 05:00 до 21:00 вместо прежних 06:00–20:00. Для посетителей доступны беговые зоны, игровые площадки и не менее 500 парковочных мест.",
+      "en": "Pattaya has extended Chaiyapruek 2 Public Park's opening hours to 05:00–21:00, replacing the previous 06:00–20:00 schedule. Visitors can use exercise and play areas, with at least 500 parking spaces available.",
+      "th": "เมืองพัทยาขยายเวลาเปิดสวนสาธารณะชัยพฤกษ์ 2 เป็น 05.00–21.00 น. จากเดิม 06.00–20.00 น. ภายในมีพื้นที่ออกกำลังกาย สนามเด็กเล่น และที่จอดรถอย่างน้อย 500 คัน",
+      "publishedAt": "2026-10-06",
+      "sources": [
+        "https://www.pattayamail.com/latestnews/news/pattaya-extends-opening-hours-at-chaiyapruek-2-public-park-567269"
+      ],
       "discussionEvidence": {
-        "observedAt": "2026-10-05T08:53:00+07:00",
-        "sourceUrl": "https://thepattayanews.com/2026/10/04/woman-flees-smoke-filled-pattaya-room-fire-blamed-on-short-circuit/",
-        "summary": "The outlet exposed a Facebook control but no public like, comment or share total. Selected for same-day local safety relevance; the suspected cause remains explicitly unconfirmed and no popularity rank is claimed."
+        "observedAt": "2026-10-06T08:55:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/latestnews/news/pattaya-extends-opening-hours-at-chaiyapruek-2-public-park-567269",
+        "summary": "Pattaya Mail displayed 250 views and 0 comments. On the same site at the same observation time, the selected giant-flag article displayed 245 views and 0 comments; these counts are comparable only within Pattaya Mail and do not establish wider popularity."
       }
     }
   ],
   "scams": [],
-  "selection": "1 non-war world story, 2 Thailand stories and 2 Pattaya-area stories; verified 2026-10-05 in Asia/Bangkok. No qualifying new dated official scam warning or reliably corroborated investigation was found, so existing live scam cards are preserved without date changes."
+  "selection": "1 non-war world story, 2 Thailand stories and 2 Pattaya stories; verified 2026-10-06 in Asia/Bangkok. No qualifying new dated official scam warning or reliably corroborated investigation was found, so existing live scam cards are preserved without date changes."
 }
