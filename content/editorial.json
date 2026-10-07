@@ -1,95 +1,94 @@
 {
-  "verifiedAt": "2026-10-06",
+  "verifiedAt": "2026-10-07",
   "news": [
     {
       "category": "world",
-      "when": "05.10 · 🌍",
-      "href": "https://apnews.com/article/cockatoo-olympic-brisbane-2032-emblem-bc8fe8b2d8fa3355d4323353065247e5",
-      "ru": "Организаторы Игр Brisbane 2032 официально представили эмблемы Олимпиады и Паралимпиады в образе какаду. В дизайне объединены мотивы пламени, очертания Квинсленда и элементы культуры коренных народов Австралии.",
-      "en": "Brisbane 2032 organizers officially unveiled cockatoo-inspired emblems for the Olympic and Paralympic Games. The designs combine flame imagery, the outline of Queensland and First Nations cultural elements.",
-      "th": "ผู้จัดการแข่งขันบริสเบน 2032 เปิดตัวตราสัญลักษณ์โอลิมปิกและพาราลิมปิกอย่างเป็นทางการ โดยใช้ภาพนกกระตั้ว ผสานรูปเปลวไฟ เค้าโครงรัฐควีนส์แลนด์ และองค์ประกอบทางวัฒนธรรมของชนพื้นเมืองออสเตรเลีย",
-      "publishedAt": "2026-10-05",
+      "when": "06.10 · 🌍",
+      "href": "https://apnews.com/article/nobel-prize-physics-sweden-47d0ab2b92f3512eb09ed44ceb6006d8",
+      "ru": "Нобелевскую премию по физике 2026 года получил Фрэнсис Халзен — за ключевой вклад в создание нейтринной обсерватории IceCube в Антарктиде и открытие высокоэнергетических нейтрино космического происхождения.",
+      "en": "Francis Halzen won the 2026 Nobel Prize in Physics for decisive contributions to the IceCube Neutrino Observatory in Antarctica and the discovery of high-energy neutrinos of astrophysical origin.",
+      "th": "ฟรานซิส ฮัลเซน ได้รับรางวัลโนเบลสาขาฟิสิกส์ประจำปี 2026 จากผลงานสำคัญต่อหอสังเกตการณ์นิวทริโน IceCube ในแอนตาร์กติกา และการค้นพบนิวทริโนพลังงานสูงจากแหล่งกำเนิดทางดาราศาสตร์",
+      "publishedAt": "2026-10-06",
       "sources": [
-        "https://apnews.com/article/cockatoo-olympic-brisbane-2032-emblem-bc8fe8b2d8fa3355d4323353065247e5",
-        "https://www.theguardian.com/sport/2026/oct/03/brisbane-2032-olympic-games-emblem-leaked-official-youtube"
+        "https://apnews.com/article/nobel-prize-physics-sweden-47d0ab2b92f3512eb09ed44ceb6006d8",
+        "https://www.theguardian.com/science/2026/oct/06/nobel-prize-in-physics-francis-halzen-south-pole-neutrinos-icecube-detector"
       ],
       "nonWar": true,
       "discussionEvidence": {
-        "observedAt": "2026-10-06T08:55:00+07:00",
-        "sourceUrl": "https://apnews.com/article/cockatoo-olympic-brisbane-2032-emblem-bc8fe8b2d8fa3355d4323353065247e5",
-        "summary": "Comparable public comment and share totals were not exposed. Selected for fresh AP coverage and independent coverage of the emblem release by The Guardian; this is qualitative cross-outlet evidence, not a claim of global popularity rank."
+        "observedAt": "2026-10-07T08:41:00+07:00",
+        "sourceUrl": "https://apnews.com/article/nobel-prize-physics-sweden-47d0ab2b92f3512eb09ed44ceb6006d8",
+        "summary": "Comparable public comment and share totals were not exposed. The award received same-day independent coverage from AP, The Guardian and other international outlets; this is qualitative cross-outlet evidence, not a claim of global popularity rank."
       }
     },
     {
       "category": "thailand",
-      "when": "05.10 · 🇹🇭",
-      "href": "https://apnews.com/article/thailand-floods-rain-storm-deaths-9e2008cc9f7fdd21f6a2e9e1bcf03be6",
-      "ru": "Власти Таиланда предупредили о новых ливнях и риске внезапных паводков. По данным служб на 5 октября, наводнения с середины сентября затронули более 3,5 млн человек, а в восьми провинциях погибли 31 человек.",
-      "en": "Thai authorities warned of further heavy rain and flash-flood risk. As of 5 October, flooding since mid-September had affected more than 3.5 million people and caused 31 deaths across eight provinces.",
-      "th": "ทางการไทยเตือนฝนตกหนักเพิ่มเติมและความเสี่ยงน้ำท่วมฉับพลัน โดยข้อมูล ณ วันที่ 5 ตุลาคมระบุว่า น้ำท่วมตั้งแต่กลางเดือนกันยายนส่งผลกระทบต่อประชาชนมากกว่า 3.5 ล้านคน และมีผู้เสียชีวิต 31 รายใน 8 จังหวัด",
-      "publishedAt": "2026-10-05",
+      "when": "07.10 · 🇹🇭",
+      "href": "https://www5.tmd.go.th/en/warning-and-events/warning-storm",
+      "ru": "Метеодепартамент Таиланда предупредил: 7 октября грозы и местами сильные дожди вероятны на западе Севера, в Центральном регионе и на Юге. При порывах ветра и ливнях стоит избегать открытых мест и следить за местными предупреждениями.",
+      "en": "Thailand's Meteorological Department warned that thunderstorms and isolated heavy rain were likely on 7 October in the western North, Central region and South. People should avoid exposed areas during gusts and follow local alerts.",
+      "th": "กรมอุตุนิยมวิทยาเตือนว่า วันที่ 7 ตุลาคม ภาคเหนือด้านตะวันตก ภาคกลาง และภาคใต้ มีโอกาสเกิดฝนฟ้าคะนองและฝนตกหนักบางแห่ง ควรหลีกเลี่ยงพื้นที่โล่งขณะมีลมกระโชกและติดตามประกาศในพื้นที่",
+      "publishedAt": "2026-10-07",
       "sources": [
-        "https://apnews.com/article/thailand-floods-rain-storm-deaths-9e2008cc9f7fdd21f6a2e9e1bcf03be6",
-        "https://www.reuters.com/business/environment/death-toll-thailand-floods-rises-31-interior-ministry-says-2026-10-05/"
+        "https://www5.tmd.go.th/en/warning-and-events/warning-storm"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-06T08:55:00+07:00",
-        "sourceUrl": "https://apnews.com/article/thailand-floods-rain-storm-deaths-9e2008cc9f7fdd21f6a2e9e1bcf03be6",
-        "summary": "Comparable public engagement totals were unavailable. The national flood update was independently reported by AP and Reuters on 5 October and selected for immediate public-safety relevance; no popularity rank is claimed."
+        "observedAt": "2026-10-07T08:41:00+07:00",
+        "sourceUrl": "https://www5.tmd.go.th/en/warning-and-events/warning-storm",
+        "summary": "The official warning page exposed no comparable comment or share totals. Selected for current nationwide public-safety relevance; no popularity rank is claimed."
       }
     },
     {
       "category": "thailand",
-      "when": "05.10 · 🇹🇭",
-      "href": "https://thailand.go.th/useful-information-detail/-uk-",
-      "ru": "Туристическое управление Таиланда и Norse Atlantic Airways запустили зимнюю кампанию для британского рынка. С декабря перевозчик планирует три рейса в неделю Лондон–Пхукет, а маршруты Лондон–Бангкок и Манчестер–Бангкок также расширят зимнее расписание.",
-      "en": "The Tourism Authority of Thailand and Norse Atlantic Airways launched a winter campaign for the UK market. From December, the airline plans three weekly London–Phuket flights, while London–Bangkok and Manchester–Bangkok services will also expand for winter.",
-      "th": "การท่องเที่ยวแห่งประเทศไทยและสายการบิน Norse Atlantic Airways เปิดแคมเปญฤดูหนาวสำหรับตลาดสหราชอาณาจักร โดยตั้งแต่เดือนธันวาคมมีแผนบินลอนดอน–ภูเก็ตสัปดาห์ละ 3 เที่ยว และเพิ่มตารางบินลอนดอน–กรุงเทพฯ กับแมนเชสเตอร์–กรุงเทพฯ ในช่วงฤดูหนาวด้วย",
-      "publishedAt": "2026-10-05",
+      "when": "06.10 · 🇹🇭",
+      "href": "https://www.reuters.com/business/environment/thailand-asks-firms-cut-egg-exports-after-flood-losses-2026-10-06/",
+      "ru": "Таиланд попросил производителей сократить экспорт яиц на 30–50% до декабря после ущерба птицефермам от наводнений. Власти также ищут поставки из незатронутых районов и призывают удерживать цены.",
+      "en": "Thailand asked producers to cut egg exports by 30–50% through December after floods damaged poultry farms. Authorities are also sourcing supplies from unaffected areas and asking the industry to keep prices stable.",
+      "th": "ไทยขอให้ผู้ผลิตลดการส่งออกไข่ไก่ร้อยละ 30–50 จนถึงเดือนธันวาคม หลังน้ำท่วมสร้างความเสียหายต่อฟาร์มไก่ พร้อมจัดหาไข่จากพื้นที่ที่ไม่ได้รับผลกระทบและขอความร่วมมือรักษาระดับราคา",
+      "publishedAt": "2026-10-06",
       "sources": [
-        "https://thailand.go.th/useful-information-detail/-uk-"
+        "https://www.reuters.com/business/environment/thailand-asks-firms-cut-egg-exports-after-flood-losses-2026-10-06/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-06T08:55:00+07:00",
-        "sourceUrl": "https://thailand.go.th/useful-information-detail/-uk-",
-        "summary": "The official page displayed 104 views and 0 comments when opened. It also reported more than 22,000 engagements and over one million views for the joint campaign; those campaign figures are not article-comment totals and do not establish a wider popularity rank."
+        "observedAt": "2026-10-07T08:41:00+07:00",
+        "sourceUrl": "https://www.reuters.com/business/environment/thailand-asks-firms-cut-egg-exports-after-flood-losses-2026-10-06/",
+        "summary": "Reuters exposed no comparable public comment or share totals. Selected for fresh national consumer impact and direct attribution to Thailand's Department of Internal Trade; no popularity rank is claimed."
       }
     },
     {
       "category": "pattaya",
       "when": "06.10 · Pattaya",
-      "href": "https://www.pattayamail.com/latestnews/news/giant-thai-flag-to-take-to-the-skies-over-pattaya-in-world-record-attempt-567286",
-      "ru": "7 октября над Pattaya Beach планируют спустить с парашютом тайский флаг площадью 4 303,04 квадратного фута в рамках попытки установить мировой рекорд. Первый запуск назначен примерно на 07:30; второй состоится только при необходимости.",
-      "en": "A 4,303.04-square-foot Thai flag is scheduled to descend by parachute over Pattaya Beach on 7 October in a world-record attempt. The first run is planned for about 07:30, with a second attempt only if needed.",
-      "th": "วันที่ 7 ตุลาคม มีแผนนำธงชาติไทยขนาด 4,303.04 ตารางฟุตลงสู่ชายหาดพัทยาด้วยร่มชูชีพ เพื่อพยายามสร้างสถิติโลก โดยภารกิจแรกกำหนดเวลาประมาณ 07.30 น. และจะมีครั้งที่สองเฉพาะเมื่อจำเป็น",
+      "href": "https://thepattayanews.com/2026/10/06/pattaya-revises-rules-hours-and-zones-for-street-performers/",
+      "ru": "Паттайя уточнила зоны и часы для уличных артистов: на Pattaya Beach и Jomtien Beach выступления разрешены ежедневно с 18:00 до 01:00, а на Walking Street добавлена пятая площадка. Для иностранцев по-прежнему требуется законное разрешение на работу.",
+      "en": "Pattaya revised zones and hours for street performers: shows are allowed daily on Pattaya and Jomtien beaches from 18:00 to 01:00, and a fifth Walking Street spot was added. Foreign performers still need lawful work authorization.",
+      "th": "เมืองพัทยาปรับพื้นที่และเวลาสำหรับศิลปินเปิดหมวก โดยชายหาดพัทยาและจอมเทียนแสดงได้ทุกวันเวลา 18.00–01.00 น. และเพิ่มจุดที่ 5 บนถนนวอล์กกิ้งสตรีท ส่วนชาวต่างชาติยังต้องมีสิทธิทำงานอย่างถูกกฎหมาย",
       "publishedAt": "2026-10-06",
       "sources": [
-        "https://www.pattayamail.com/latestnews/news/giant-thai-flag-to-take-to-the-skies-over-pattaya-in-world-record-attempt-567286"
+        "https://thepattayanews.com/2026/10/06/pattaya-revises-rules-hours-and-zones-for-street-performers/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-06T08:55:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/latestnews/news/giant-thai-flag-to-take-to-the-skies-over-pattaya-in-world-record-attempt-567286",
-        "summary": "Pattaya Mail displayed 245 views and 0 comments. On the same site at the same observation time, the selected Chaiyapruek 2 park article displayed 250 views and 0 comments; these counts are comparable only within Pattaya Mail and do not establish wider popularity."
+        "observedAt": "2026-10-07T08:41:00+07:00",
+        "sourceUrl": "https://thepattayanews.com/2026/10/06/pattaya-revises-rules-hours-and-zones-for-street-performers/",
+        "summary": "The page exposed a Facebook-like control but no visible comparable reaction, share or comment count. The report attributes its information to Pattaya City's Tourism and Sports Bureau; selected for practical local relevance, not a popularity rank."
       }
     },
     {
       "category": "pattaya",
       "when": "06.10 · Pattaya",
-      "href": "https://www.pattayamail.com/latestnews/news/pattaya-extends-opening-hours-at-chaiyapruek-2-public-park-567269",
-      "ru": "Паттайя продлила часы работы общественного парка Chaiyapruek 2: теперь он открыт ежедневно с 05:00 до 21:00 вместо прежних 06:00–20:00. Для посетителей доступны беговые зоны, игровые площадки и не менее 500 парковочных мест.",
-      "en": "Pattaya has extended Chaiyapruek 2 Public Park's opening hours to 05:00–21:00, replacing the previous 06:00–20:00 schedule. Visitors can use exercise and play areas, with at least 500 parking spaces available.",
-      "th": "เมืองพัทยาขยายเวลาเปิดสวนสาธารณะชัยพฤกษ์ 2 เป็น 05.00–21.00 น. จากเดิม 06.00–20.00 น. ภายในมีพื้นที่ออกกำลังกาย สนามเด็กเล่น และที่จอดรถอย่างน้อย 500 คัน",
+      "href": "https://thepattayanews.com/2026/10/06/pattaya-police-and-chonburi-governor-lead-big-cleaning-day-to-restore-beachfront-after-floods/",
+      "ru": "После подтопления власти и волонтёры очистили участок Beach Road от Soi 6 до Central Pattaya: убрали мусор, смыли грязь и расчистили проезжую часть. Работы были направлены на безопасное возвращение транспорта и посетителей.",
+      "en": "After flooding, officials and volunteers cleaned the Beach Road stretch from Soi 6 to Central Pattaya, removing debris, washing away mud and clearing the roadway to restore safe access for traffic and visitors.",
+      "th": "หลังน้ำท่วม เจ้าหน้าที่และอาสาสมัครทำความสะอาดถนนเลียบชายหาดตั้งแต่ซอย 6 ถึงพัทยากลาง เก็บขยะ ล้างโคลน และเปิดผิวจราจร เพื่อให้รถและผู้มาเยือนกลับมาใช้พื้นที่ได้อย่างปลอดภัย",
       "publishedAt": "2026-10-06",
       "sources": [
-        "https://www.pattayamail.com/latestnews/news/pattaya-extends-opening-hours-at-chaiyapruek-2-public-park-567269"
+        "https://thepattayanews.com/2026/10/06/pattaya-police-and-chonburi-governor-lead-big-cleaning-day-to-restore-beachfront-after-floods/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-06T08:55:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/latestnews/news/pattaya-extends-opening-hours-at-chaiyapruek-2-public-park-567269",
-        "summary": "Pattaya Mail displayed 250 views and 0 comments. On the same site at the same observation time, the selected giant-flag article displayed 245 views and 0 comments; these counts are comparable only within Pattaya Mail and do not establish wider popularity."
+        "observedAt": "2026-10-07T08:41:00+07:00",
+        "sourceUrl": "https://thepattayanews.com/2026/10/06/pattaya-police-and-chonburi-governor-lead-big-cleaning-day-to-restore-beachfront-after-floods/",
+        "summary": "The page exposed a Facebook-like control but no visible comparable reaction, share or comment count. Selected for immediate local mobility and safety relevance following flooding; no popularity rank is claimed."
       }
     }
   ],
   "scams": [],
-  "selection": "1 non-war world story, 2 Thailand stories and 2 Pattaya stories; verified 2026-10-06 in Asia/Bangkok. No qualifying new dated official scam warning or reliably corroborated investigation was found, so existing live scam cards are preserved without date changes."
+  "selection": "Exactly 1 non-war world story, 2 Thailand stories and 2 Pattaya stories; verified 2026-10-07 in Asia/Bangkok. No qualifying new dated official scam warning or reliably corroborated investigation was found, so existing live scam cards are preserved without date changes."
 }
