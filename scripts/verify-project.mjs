@@ -1,5 +1,6 @@
 import {readFileSync,existsSync} from 'node:fs';
 import {Script} from 'node:vm';
+import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
 const html=readFileSync('site/public/index.html','utf8');
 let parsed=0;
@@ -23,6 +24,10 @@ for(const lang of ['ru','en','th'])assert(new RegExp('\\b'+lang+'\\s*:').test(ht
 const asset=html.match(/\/assets\/oki-3d-v\d+\.js/);
 assert(asset&&existsSync('site/public'+asset[0]),'3D runtime missing');
 new Script(readFileSync('site/public'+asset[0],'utf8'),{filename:asset[0]});
+const modelBundle=readFileSync('site/public'+asset[0],'utf8');
+const modelHash=createHash('sha256').update(readFileSync('oki-3d-source.mjs')).digest('hex');
+assert(modelBundle.startsWith('// OKI source SHA256: '+modelHash+'\n'),'Rebuild the OKI bundle after changing its source');
+assert(modelBundle.includes('neon-glass-v2')&&asset[0]==='/assets/oki-3d-v91.js','Current OKI model revision missing');
 assert(existsSync('wrangler-telegram.json'),'Cloudflare deploy config missing');
 console.log('PASS: '+parsed+' inline scripts, 3D bundle, RU/EN/TH, timer, daily care, Tetris and Cloudflare configuration');
 
