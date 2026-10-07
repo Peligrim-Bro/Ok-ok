@@ -38,6 +38,8 @@ for(const lang of ['ru','en','th'])for(const width of [390,768])test(`${lang} at
  await expect(page.locator('.tickers .ticker-tag')).toHaveCount(0);
  await expect(page.locator('.tickers a[href*="PattayaOk_Ok"]')).toHaveCount(0);
  await expect(page.locator('#tickerTrack a[href*="SenateExchange_bot"]').first()).toBeAttached();
+ await expect(page.locator('#tickerTrack')).not.toContainText(/Thappraya|офис|office|สาขา/i);
+ await expect(page.locator('#tickerTrack a[href*="SenateExchange_bot"]').first()).toHaveAttribute('href','https://t.me/SenateExchange_bot?start=fi10072');
  for(const id of ['recTrack','tickerTrack'])expect(await page.locator('#'+id).evaluate(n=>getComputedStyle(n).animationName)).toBe('ticker');
  expect(await page.locator('#donateBtn').evaluate(n=>getComputedStyle(n,'::before').animationName)).toBe('none');
  if(lang==='ru'){

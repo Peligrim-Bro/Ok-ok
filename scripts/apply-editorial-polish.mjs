@@ -1,4 +1,6 @@
 import {readFileSync,writeFileSync} from 'node:fs';
+const senateTicker={href:'https://t.me/SenateExchange_bot?start=fi10072',ru:'Senate Exchange · обмен рублей и USDT на баты',en:'Senate Exchange · exchange RUB and USDT for baht',th:'Senate Exchange · แลกรูเบิลและ USDT เป็นบาท'};
+const normalizeSenate='ad => /senateexchange_bot/i.test(String(ad.href || "")) ? {...ad,...'+JSON.stringify(senateTicker)+'} : ad';
 // Editorial clarity only. No new verification dates, visits or business claims.
 const translations={
  ru:{top:'Места для знакомства с Паттайей',week:'Скам недели',recTag:'реклама',adsTag:'ссылки',checking:'Нужна проверка',verified:'В каталоге',premium:'Реклама',openNow:'По графику открыто',closedNow:'По графику закрыто',why:'Перед визитом',reviews:'Отзывы и подробности',chatLead:'Telegram — новости и предупреждения о скамах. WhatsApp — связь с автором.',installTitle:'Добавить на главный экран',installLead:'Сохраните сайт на главный экран, чтобы открывать его как приложение.',rules1:'Карточка в каталоге не гарантирует качество услуг. Уточняйте условия, цены и часы перед визитом.',rules2:'Статус «Нужна проверка» означает, что сведения требуют подтверждения. Не выдаём наличие карточки за личный визит автора.',rules3:'Сообщения о проблемах рассматриваем отдельно. Жалоба сама по себе не доказывает нарушение.',rules4:'Партнёрские ссылки и платные размещения отмечаем отдельно от каталога.'},
@@ -57,10 +59,10 @@ for(const name of ['index.html']){
  if(start<0||end<0)throw Error('Ticker list boundaries missing');
  let ads=html.slice(start,end);
  ads=ads.replace(/^.*href: "https:\/\/t\.me\/PattayaOk_Ok"[^\n]*\n/gm,'');
- ads=ads.replace(/;\s*$/,'.filter(ad => !/pattayaok_ok/i.test(String(ad.href || "")));\n');
+ ads=ads.replace(/;\s*$/,'.filter(ad => !/pattayaok_ok/i.test(String(ad.href || ""))).map('+normalizeSenate+');\n');
  html=html.slice(0,start)+ads+html.slice(end);
  writeFileSync(path,html);
 }
 const configPath='site/public/config.js';
-writeFileSync(configPath,readFileSync(configPath,'utf8').replace(/^.*href: "https:\/\/t\.me\/PattayaOk_Ok"[^\n]*\n/gm,''));
+writeFileSync(configPath,readFileSync(configPath,'utf8').replace(/^.*href: "https:\/\/t\.me\/PattayaOk_Ok"[^\n]*\n/gm,'')+'\nwindow.PATTAYAOK.ads=(window.PATTAYAOK.ads || []).map('+normalizeSenate+');\n');
 console.log('PASS: editorial clarity RU/EN/TH, no invented verification dates, quieter secondary accents');
