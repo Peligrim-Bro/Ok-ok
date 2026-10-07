@@ -1,5 +1,7 @@
 # OK-OK project operations
 
+- Chat mobile recovery (2026-10-07): preserve the independent Minimize chat control above the tawk widget, anchored to visualViewport with safe-area clearance. It must work even when the vendor header is offscreen. Keep the topic dialog within the visible viewport with a sticky close heading; restore page scrolling after minimizing.
+
 - Home density (2026-10-07): author contact belongs below the main content beside author notes, never in the first screen. On Pattaya home, categories and areas are collapsed in the localized Filters disclosure; keep search and primary actions visible. Catalogue filters remain expanded. Preserve filter selections, city navigation and both themes.
 
 - Author contact (2026-10-07): tawk.to via author-chat.js/css and scripts/apply-author-chat.mjs. Keep the one localized contact entry, topic picker, lazy loading only after visitor intent, network-error fallback and hidden launcher when minimized. Preserve five bottom tabs; do not send visitor messages automatically or add paid tawk services.

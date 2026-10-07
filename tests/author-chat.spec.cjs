@@ -16,12 +16,36 @@ for(const lang of ['ru','en','th'])test(`author contact is lazy and accessible: 
  expect(requests).toBe(1);
  const state=await page.evaluate(()=>window.chatTest);
  expect(state.shown&&state.maximized).toBe(true);expect(state.attributes['okok-topic']).toBe('advertising');expect(state.attributes['okok-language']).toBe(lang);expect(state.draft).toBeTruthy();
+ await expect(page.locator('#authorChatMinimize')).toBeVisible();
  await page.evaluate(()=>Tawk_API.onChatMinimized());
  expect(await page.evaluate(()=>chatTest.shown)).toBe(false);
+ await expect(page.locator('#authorChatMinimize')).not.toBeVisible();
  await button.click();await page.locator('[data-author-topic="question"]').click();
  expect(requests).toBe(1);expect(await page.evaluate(()=>chatTest.attributes['okok-topic'])).toBe('question');
  await button.click();await page.locator('#authorChatClose').click();await expect(button).toBeFocused();
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
+});
+test('close controls stay reachable on short mobile screens and a tall vendor widget',async({page})=>{
+ await page.addInitScript(()=>{localStorage.setItem('pok-lang','ru');localStorage.setItem('pok-lang-set','1');});
+ await page.route('https://embed.tawk.to/**',route=>route.fulfill({contentType:'application/javascript',body:`
+ const frame=document.createElement('iframe');frame.id='mockTallWidget';frame.style.cssText='position:fixed;bottom:0;right:0;width:100%;height:1800px;z-index:2147483000;display:none';document.body.appendChild(frame);
+ Object.assign(Tawk_API,{hideWidget(){frame.style.display='none';Tawk_API.onChatHidden();},showWidget(){frame.style.display='block';},maximize(){Tawk_API.onChatMaximized();},minimize(){Tawk_API.onChatMinimized();},isChatOngoing(){return true;}});Tawk_API.onBeforeLoad();Tawk_API.onLoad();` }));
+ await page.setViewportSize({width:390,height:844});await page.goto('/');await page.locator('#installClose').click();
+ for(const viewport of [{width:390,height:844},{width:390,height:300},{width:844,height:390}]){
+  await page.setViewportSize(viewport);
+  await page.locator('#authorChatButton').click();
+  const close=page.locator('#authorChatClose');const box=await close.boundingBox();
+  expect(box.y).toBeGreaterThanOrEqual(0);expect(box.y+box.height).toBeLessThan(viewport.height);
+  await page.locator('#authorChatDialog').evaluate(n=>n.scrollTop=n.scrollHeight);
+  const scrolled=await close.boundingBox();expect(scrolled.y).toBeGreaterThanOrEqual(0);expect(scrolled.y+scrolled.height).toBeLessThan(viewport.height);
+  await close.click();
+  await page.locator('#authorChatButton').click();await page.locator('[data-author-topic="question"]').click();
+  const minimize=page.locator('#authorChatMinimize');await expect(minimize).toBeVisible();
+  const visible=await minimize.boundingBox();expect(visible.y).toBeGreaterThanOrEqual(0);expect(visible.y+visible.height).toBeLessThan(viewport.height);
+  expect(await page.evaluate(()=>document.body.style.overflow)).toBe('hidden');
+  await minimize.click();await expect(page.locator('#mockTallWidget')).not.toBeVisible();await expect(minimize).not.toBeVisible();
+  expect(await page.evaluate(()=>document.body.style.overflow)).not.toBe('hidden');
+ }
 });
 test('unavailable chat offers retry and separate chat',async({page})=>{
  await page.addInitScript(()=>{localStorage.setItem('pok-lang','ru');localStorage.setItem('pok-lang-set','1');});

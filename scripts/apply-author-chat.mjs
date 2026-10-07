@@ -15,7 +15,8 @@ html=html.replace(anchor,`${anchor}
  <div class="author-chat-topics"></div>
  <p id="authorChatStatus" role="status" aria-live="polite"></p>
  <a id="authorChatFallback" href="https://tawk.to/chat/6ac5e0bddd1f0034bfdc8335/1k4afbpev" target="_blank" rel="noopener" hidden></a>
-</dialog>`);
+</dialog>
+<button id="authorChatMinimize" class="btn" type="button" hidden>Свернуть чат</button>`);
 html=html.replace('</head>','<style id="okok-author-chat-style">'+readFileSync('author-chat.css','utf8')+'</style>\n</head>');
 html=html.replace('</body>','<script id="okok-author-chat">'+readFileSync('author-chat.js','utf8')+'</script>\n</body>');
 const filterAnchor='<div class="filters" id="filters"></div>\n      <div class="filters" id="zones"></div>';

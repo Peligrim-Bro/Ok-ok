@@ -9,12 +9,37 @@
  const button=document.getElementById('authorChatButton'),dialog=document.getElementById('authorChatDialog');
  const status=document.getElementById('authorChatStatus'),fallback=document.getElementById('authorChatFallback');
  const keys=['advertising','partnership','question','website-issue'];
+ const minimize=document.getElementById('authorChatMinimize');
+ let expanded=false,previousOverflow='';
+ function viewport(){
+  const v=window.visualViewport;
+  document.documentElement.style.setProperty('--author-viewport-top',(v?.offsetTop||0)+'px');
+  document.documentElement.style.setProperty('--author-viewport-height',(v?.height||innerHeight)+'px');
+ }
+ function expandedState(value){
+  if(value===expanded)return;
+  expanded=value;minimize.hidden=!value;
+  if(value){previousOverflow=document.body.style.overflow;document.body.style.overflow='hidden';viewport();minimize.focus({preventScroll:true});}
+  else{document.body.style.overflow=previousOverflow;button.focus({preventScroll:true});}
+ }
+ function minimizeChat(){
+  window.Tawk_API?.minimize?.();
+  window.Tawk_API?.hideWidget?.();
+  expandedState(false);
+ }
+ minimize.addEventListener('click',minimizeChat);
+ addEventListener('resize',viewport);
+ window.visualViewport?.addEventListener('resize',viewport);
+ window.visualViewport?.addEventListener('scroll',viewport);
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&expanded){e.preventDefault();minimizeChat();}});
+ viewport();
  let ready=false,loading=false,timer=0,script=null,topic=2,error=false;
  const lang=()=>copy[document.documentElement.lang]?document.documentElement.lang:'ru';
  const t=()=>copy[lang()];
  function labels(){
   document.getElementById('authorContactNotes').innerHTML=notesHTML();
   button.textContent=t().button;
+  minimize.textContent=({ru:'Свернуть чат',en:'Minimize chat',th:'ย่อแชต'})[lang()];
   document.getElementById('authorChatTitle').textContent=t().title;
   document.getElementById('authorChatLead').textContent=t().lead;
   document.getElementById('authorChatClose').setAttribute('aria-label',t().close);
@@ -34,7 +59,7 @@
    api.setChatInputMessage?.(t().draft+t().topics[topic],()=>{});
   }
   dialog.close();
-  api.showWidget();api.maximize();
+  api.showWidget();api.maximize();expandedState(true);
  }
  function loadChat(index){
   topic=index;
@@ -47,15 +72,16 @@
   api.customStyle={zIndex:2147483000};
   api.onBeforeLoad=()=>api.hideWidget();
   api.onLoad=()=>{ready=true;if(dialog.open)showChat();else{finish();api.hideWidget();}};
-  api.onChatMinimized=()=>{api.hideWidget();button.focus({preventScroll:true});};
-  api.onChatHidden=()=>button.focus({preventScroll:true});
+  api.onChatMaximized=()=>expandedState(true);
+  api.onChatMinimized=()=>{api.hideWidget();expandedState(false);};
+  api.onChatHidden=()=>expandedState(false);
   api.onChatMessageAgent=()=>{if(!api.isChatMaximized?.()){button.textContent=t().button+' •';button.setAttribute('aria-label',t().button+' •');}};
   window.Tawk_LoadStart=new Date();
   script=document.createElement('script');script.async=true;script.src=EMBED;script.charset='UTF-8';script.setAttribute('crossorigin','*');
   script.onerror=()=>{script.remove();script=null;failed();};
   document.head.appendChild(script);
  }
- button.addEventListener('click',()=>{button.removeAttribute('aria-label');dialog.showModal();labels();});
+ button.addEventListener('click',()=>{button.removeAttribute('aria-label');viewport();dialog.showModal();labels();});
  document.getElementById('authorChatClose').addEventListener('click',()=>dialog.close());
  dialog.addEventListener('close',()=>{if(!ready){clearTimeout(timer);loading=false;labels();}button.focus({preventScroll:true});});
  dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
