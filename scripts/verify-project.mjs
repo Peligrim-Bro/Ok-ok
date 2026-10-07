@@ -9,6 +9,11 @@ for(const match of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)){
 }
 assert(parsed>0,'No inline scripts verified');
 assert.equal((html.match(/id="timerBtn"/g)||[]).length,1,'Header timer must remain');
+const utilities=html.match(/<div class="top-actions">([\s\S]*?)<\/div>/)?.[1];
+assert(utilities,'Header utility grid missing');
+assert.equal((utilities.match(/<button\b/g)||[]).length,4,'Utility grid must contain exactly four controls');
+assert(!utilities.includes('id="timerBtn"'),'Timer must stay outside the utility grid');
+assert(html.includes('id="langClose"'),'Language picker close control missing');
 assert(!html.includes('data-timer="1"'),'Duplicate timer returned');
 assert(html.includes('id="visaForm"')&&html.includes('function clockHTML'),'Visa timer missing');
 for(const token of ['timerSave','ol-routine','block-rotate']){

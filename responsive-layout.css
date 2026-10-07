@@ -1,0 +1,14 @@
+/* Contacts belong to the footer, clear of page controls and overlays. */
+html body #dock{position:static!important;inset:auto!important;display:flex;flex-wrap:wrap;gap:12px;margin:16px 0 8px;z-index:auto}
+html body #dock a{position:static!important;inset:auto!important;min-width:80px;min-height:44px;width:auto;height:auto;padding:12px 20px}
+html body #donateBtn{overflow-wrap:normal!important;word-break:normal!important}
+@media(max-width:360px){html body header.app .top-actions>#donateBtn{font-size:11px!important;padding-inline:4px!important}}
+
+/* Closing a long panel must not require scrolling back to the beginning. */
+html body #sheet.open #closeSheet{position:fixed!important;top:calc(10px + env(safe-area-inset-top,0px));left:12px;z-index:2}
+.spin-card>.row:first-child{position:sticky;top:-16px;z-index:2;background:var(--card);padding:8px 0}
+.spin-card>.row:first-child>button{flex-shrink:0}
+#okiLife .ol-card>header{position:sticky;top:-20px;z-index:3;background:var(--card);padding:8px 0}
+#okAdDialog .okad-x{position:sticky;top:0;z-index:2}
+.install-card{max-height:calc(100dvh - env(safe-area-inset-top,0px) - 12px);overflow:auto;overscroll-behavior:contain}
+#installClose{position:sticky;bottom:0;z-index:2}

@@ -1,5 +1,7 @@
 # OK-OK project operations
 
+- Layout release checks (2026-10-07): before updating main, build and run the full browser suite and Lighthouse on the final output. tests/layout.spec.cjs covers RU/EN/TH, six portrait/landscape widths, both themes, all five sections, city navigation, control intersections and close controls after panel scrolling. Timer belongs in the brand row; the 44px utility row contains only support/theme/language/report. TG/WA belong to the author-contact footer. Never infer floating controls from arbitrary link text or URLs. Preserve responsive-layout.css and reachable close controls in long panels.
+
 - Chat scroll (2026-10-07): capture the page position before opening the topic dialog, lock the body at that offset before maximizing tawk, and restore original inline styles and scroll after minimizing. Restore after vendor/focus/keyboard callbacks without overriding a new user gesture. Do not focus the footer while the chat is maximized.
 
 - Chat mobile recovery (2026-10-07): preserve the independent Minimize chat control above the tawk widget, anchored to visualViewport with safe-area clearance. It must work even when the vendor header is offscreen. Keep the topic dialog within the visible viewport with a sticky close heading; restore page scrolling after minimizing.
