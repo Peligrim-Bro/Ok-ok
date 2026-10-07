@@ -1,5 +1,7 @@
 # OK-OK project operations
 
+- Home density (2026-10-07): author contact belongs below the main content beside author notes, never in the first screen. On Pattaya home, categories and areas are collapsed in the localized Filters disclosure; keep search and primary actions visible. Catalogue filters remain expanded. Preserve filter selections, city navigation and both themes.
+
 - Author contact (2026-10-07): tawk.to via author-chat.js/css and scripts/apply-author-chat.mjs. Keep the one localized contact entry, topic picker, lazy loading only after visitor intent, network-error fallback and hidden launcher when minimized. Preserve five bottom tabs; do not send visitor messages automatically or add paid tawk services.
 
 - Editorial polish approved 2026-10-06: preserve Tropical Night ceramic gloss and the 3D background. Avoid ornate filler and unsupported claims of personal visits, billing honesty or verification dates. Do not restore the hardcoded September 2026 checked stamp. Localize UI labels in RU/EN/TH; distinguish scheduled hours from live business status. Paid examples remain explicitly labelled. Keep support sheen non-looping; preserve tap effects.

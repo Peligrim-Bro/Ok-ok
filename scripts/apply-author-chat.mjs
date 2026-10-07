@@ -3,8 +3,12 @@ const path='site/public/index.html';
 let html=readFileSync(path,'utf8');
 const anchor='<main class="wrap" id="app"></main>';
 if(!html.includes(anchor))throw Error('Author chat: app anchor missing');
-html=html.replace(anchor,`<div class="wrap author-contact"><button class="btn" id="authorChatButton" type="button" aria-haspopup="dialog">Написать автору</button></div>
-${anchor}
+html=html.replace(anchor,`${anchor}
+<section class="wrap author-contact" aria-labelledby="authorContactTitle">
+ <h2 id="authorContactTitle" data-i="notesTitle">От автора</h2>
+ <div id="authorContactNotes"></div>
+ <button class="btn" id="authorChatButton" type="button" aria-haspopup="dialog">Написать автору</button>
+</section>
 <dialog id="authorChatDialog" aria-labelledby="authorChatTitle">
  <div class="author-chat-heading"><h2 id="authorChatTitle"></h2><button class="btn" id="authorChatClose" type="button">×</button></div>
  <p id="authorChatLead"></p>
@@ -14,5 +18,23 @@ ${anchor}
 </dialog>`);
 html=html.replace('</head>','<style id="okok-author-chat-style">'+readFileSync('author-chat.css','utf8')+'</style>\n</head>');
 html=html.replace('</body>','<script id="okok-author-chat">'+readFileSync('author-chat.js','utf8')+'</script>\n</body>');
+const filterAnchor='<div class="filters" id="filters"></div>\n      <div class="filters" id="zones"></div>';
+if(!html.includes(filterAnchor))throw Error('Compact home: filter anchor missing');
+html=html.replace(filterAnchor,`<details id="homeFilters">
+ <summary class="btn" id="homeFiltersToggle">Фильтры</summary>
+ ${filterAnchor}
+</details>`);
+const renderAnchor='      renderCityPicker();';
+if(!html.includes(renderAnchor))throw Error('Compact home: render anchor missing');
+html=html.replace(renderAnchor,renderAnchor+`
+      const homeFilters=$('homeFilters');
+      const filterVisible=city==='pattaya' && ['home','list'].includes(tab);
+      homeFilters.hidden=!filterVisible;
+      $('homeFiltersToggle').hidden=tab!=='home';
+      if(tab!=='home')homeFilters.open=true;
+      else if(homeFilters.dataset.screen!=='home')homeFilters.open=false;
+      homeFilters.dataset.screen=tab;
+      $('homeFiltersToggle').textContent=({ru:'Фильтры',en:'Filters',th:'ตัวกรอง'})[lang];
+`);
 writeFileSync(path,html);
 console.log('PASS: author chat, lazy tawk.to, localized contact and topics');

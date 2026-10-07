@@ -31,6 +31,11 @@ for(const lang of ['ru','en','th'])for(const width of [390,768])test(`${lang} at
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
  await page.locator('#installClose').click();
  await expect(page.locator('#installMask')).not.toHaveClass(/on/);
+ await expect(page.locator('#homeFilters')).not.toHaveAttribute('open');
+ await expect(page.locator('#filters')).not.toBeVisible();
+ await expect(page.locator('#homeFiltersToggle')).toHaveText({ru:'Фильтры',en:'Filters',th:'ตัวกรอง'}[lang]);
+ expect(await page.locator('#authorChatButton').evaluate(n=>n.closest('.author-contact').previousElementSibling.id)).toBe('app');
+ await page.screenshot({path:`quality-reports/home-compact-${lang}-${width}.png`,fullPage:false});
  await expect(page.locator('.news-card')).toHaveCount(5);
  await expect(page.locator('.catalog-note')).toBeVisible();
  await expect(page.locator('.card').first()).not.toContainText(/сен 2026|Вид платный|Счёт бьётся/);
@@ -73,6 +78,8 @@ for(const lang of ['ru','en','th'])for(const width of [390,768])test(`${lang} at
  }
  await page.locator('nav.tab [data-tab="list"]').click();
  await expect(page.locator('nav.tab [data-tab="list"]')).toHaveClass(/active|on/);
+ await expect(page.locator('#filters')).toBeVisible();
+ await expect(page.locator('#homeFiltersToggle')).not.toBeVisible();
  await expect(page.locator('body')).not.toContainText(/EX24|Supermao/i);
  await page.screenshot({path:`quality-reports/${lang}-${width}.png`,fullPage:false});
 });

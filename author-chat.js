@@ -13,6 +13,7 @@
  const lang=()=>copy[document.documentElement.lang]?document.documentElement.lang:'ru';
  const t=()=>copy[lang()];
  function labels(){
+  document.getElementById('authorContactNotes').innerHTML=notesHTML();
   button.textContent=t().button;
   document.getElementById('authorChatTitle').textContent=t().title;
   document.getElementById('authorChatLead').textContent=t().lead;

@@ -1,4 +1,14 @@
-.author-contact{padding-top:8px;padding-bottom:14px}
+.author-contact{padding-top:16px;padding-bottom:calc(120px + env(safe-area-inset-bottom,0px))}
+.author-contact h2{font-size:18px;margin:0 0 10px}
+.author-contact .news{margin:0 0 16px}
+#homeFilters{margin-top:10px}
+#homeFiltersToggle{min-height:44px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;list-style:none}
+#homeFiltersToggle::after{content:'+';font-size:20px}
+#homeFilters[open]>#homeFiltersToggle::after{content:'−'}
+#homeFiltersToggle::-webkit-details-marker{display:none}
+#homeFilters[hidden],#homeFiltersToggle[hidden]{display:none!important}
+html body #homeFiltersToggle{background:radial-gradient(ellipse 66% 42% at 25% 0%,#ffffffa6,transparent 76%),var(--tropical-face);color:var(--tropical-ink);border-color:var(--tropical-rim);box-shadow:var(--tropical-shadow);border-radius:20px}
+#homeFiltersToggle:focus-visible{outline:2px solid var(--mint);outline-offset:3px}
 #authorChatButton{width:100%;min-height:44px}
 #authorChatDialog{box-sizing:border-box;width:min(440px,calc(100% - 28px));max-height:calc(100dvh - 32px);overflow:auto;background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:24px;padding:20px;box-shadow:0 18px 60px #0008}
 #authorChatDialog::backdrop{background:#03141dcc;backdrop-filter:blur(6px)}
