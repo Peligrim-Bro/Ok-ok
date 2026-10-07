@@ -57,3 +57,23 @@ test('unavailable chat offers retry and separate chat',async({page})=>{
  await expect(page.locator('[data-author-topic="question"]')).toBeEnabled();
  await page.locator('#authorChatClose').click();await expect(page.locator('#authorChatDialog')).not.toBeVisible();
 });
+test('minimizing restores the page after vendor scroll resets and callbacks',async({page})=>{
+ await page.setViewportSize({width:390,height:844});
+ await page.addInitScript(()=>{localStorage.setItem('pok-lang','ru');localStorage.setItem('pok-lang-set','1');});
+ await page.route('https://embed.tawk.to/**',route=>route.fulfill({contentType:'application/javascript',body:`
+ Object.assign(Tawk_API,{hideWidget(){Tawk_API.onChatHidden();},showWidget(){},maximize(){window.scrollTo(0,0);Tawk_API.onChatMaximized();},minimize(){Tawk_API.onChatMinimized();window.scrollTo(0,0);requestAnimationFrame(()=>window.scrollTo(0,0));},isChatOngoing(){return true;}});Tawk_API.onBeforeLoad();Tawk_API.onLoad();`}));
+ await page.goto('/');await page.locator('#installClose').click();
+ const button=page.locator('#authorChatButton');
+ await button.scrollIntoViewIfNeeded();
+ for(let i=0;i<2;i++){
+  const start=await page.evaluate(()=>scrollY);expect(start).toBeGreaterThan(500);
+  await button.click();await page.locator('[data-author-topic="question"]').click();
+  await expect(page.locator('#authorChatMinimize')).toBeVisible();
+  await page.locator('#authorChatMinimize').click();
+  await expect.poll(()=>page.evaluate(()=>scrollY)).toBeCloseTo(start,0);
+  await page.waitForTimeout(300);expect(await page.evaluate(()=>scrollY)).toBeCloseTo(start,0);
+  expect(await page.evaluate(()=>document.body.style.position)).not.toBe('fixed');
+ }
+ await button.click();await page.locator('#authorChatClose').click();
+ await expect(button).toBeFocused();
+});

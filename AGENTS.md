@@ -1,5 +1,7 @@
 # OK-OK project operations
 
+- Chat scroll (2026-10-07): capture the page position before opening the topic dialog, lock the body at that offset before maximizing tawk, and restore original inline styles and scroll after minimizing. Restore after vendor/focus/keyboard callbacks without overriding a new user gesture. Do not focus the footer while the chat is maximized.
+
 - Chat mobile recovery (2026-10-07): preserve the independent Minimize chat control above the tawk widget, anchored to visualViewport with safe-area clearance. It must work even when the vendor header is offscreen. Keep the topic dialog within the visible viewport with a sticky close heading; restore page scrolling after minimizing.
 
 - Home density (2026-10-07): author contact belongs below the main content beside author notes, never in the first screen. On Pattaya home, categories and areas are collapsed in the localized Filters disclosure; keep search and primary actions visible. Catalogue filters remain expanded. Preserve filter selections, city navigation and both themes.

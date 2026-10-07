@@ -10,7 +10,17 @@
  const status=document.getElementById('authorChatStatus'),fallback=document.getElementById('authorChatFallback');
  const keys=['advertising','partnership','question','website-issue'];
  const minimize=document.getElementById('authorChatMinimize');
- let expanded=false,previousOverflow='';
+ let expanded=false,lockedStyles=null,returnScroll=null,restoreVersion=0;
+ const lockProperties=['position','top','left','right','width','overflow'];
+ function rememberScroll(){returnScroll={x:scrollX,y:scrollY};restoreVersion++;}
+ function restoreScroll(){
+  if(!returnScroll)return;
+  const point={...returnScroll},version=++restoreVersion;
+  const apply=()=>{if(!expanded&&version===restoreVersion)window.scrollTo({left:point.x,top:point.y,behavior:'instant'});};
+  apply();requestAnimationFrame(()=>requestAnimationFrame(apply));setTimeout(apply,250);
+ }
+ // A new gesture must not be overridden by a delayed keyboard/viewport correction.
+ for(const type of ['pointerdown','touchstart','wheel'])addEventListener(type,()=>restoreVersion++,{passive:true});
  function viewport(){
   const v=window.visualViewport;
   document.documentElement.style.setProperty('--author-viewport-top',(v?.offsetTop||0)+'px');
@@ -19,8 +29,19 @@
  function expandedState(value){
   if(value===expanded)return;
   expanded=value;minimize.hidden=!value;
-  if(value){previousOverflow=document.body.style.overflow;document.body.style.overflow='hidden';viewport();minimize.focus({preventScroll:true});}
-  else{document.body.style.overflow=previousOverflow;button.focus({preventScroll:true});}
+  if(value){
+   if(!returnScroll)rememberScroll();
+   lockedStyles=Object.fromEntries(lockProperties.map(key=>[key,{value:document.body.style.getPropertyValue(key),priority:document.body.style.getPropertyPriority(key)}]));
+   // iOS needs a fixed page at its original scroll offset while the keyboard is open.
+   Object.assign(document.body.style,{position:'fixed',top:-returnScroll.y+'px',left:-returnScroll.x+'px',right:'0',width:'100%',overflow:'hidden'});
+   viewport();minimize.focus({preventScroll:true});
+  }
+  else{
+   for(const [key,old] of Object.entries(lockedStyles||{})){
+    if(old.value)document.body.style.setProperty(key,old.value,old.priority);else document.body.style.removeProperty(key);
+   }
+   lockedStyles=null;button.focus({preventScroll:true});restoreScroll();
+  }
  }
  function minimizeChat(){
   window.Tawk_API?.minimize?.();
@@ -59,7 +80,7 @@
    api.setChatInputMessage?.(t().draft+t().topics[topic],()=>{});
   }
   dialog.close();
-  api.showWidget();api.maximize();expandedState(true);
+  expandedState(true);api.showWidget();api.maximize();
  }
  function loadChat(index){
   topic=index;
@@ -81,9 +102,9 @@
   script.onerror=()=>{script.remove();script=null;failed();};
   document.head.appendChild(script);
  }
- button.addEventListener('click',()=>{button.removeAttribute('aria-label');viewport();dialog.showModal();labels();});
+ button.addEventListener('click',()=>{if(!expanded)rememberScroll();button.removeAttribute('aria-label');viewport();dialog.showModal();labels();});
  document.getElementById('authorChatClose').addEventListener('click',()=>dialog.close());
- dialog.addEventListener('close',()=>{if(!ready){clearTimeout(timer);loading=false;labels();}button.focus({preventScroll:true});});
+ dialog.addEventListener('close',()=>{if(!ready){clearTimeout(timer);loading=false;labels();}if(!expanded){button.focus({preventScroll:true});restoreScroll();}});
  dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
  new MutationObserver(labels).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
  labels();
