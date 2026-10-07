@@ -1,0 +1,35 @@
+const {test,expect}=require('@playwright/test');
+for(const lang of ['ru','en','th'])test(`author contact is lazy and accessible: ${lang}`,async({page})=>{
+ await page.setViewportSize({width:390,height:844});
+ await page.addInitScript(lang=>{localStorage.setItem('pok-lang',lang);localStorage.setItem('pok-lang-set','1');},lang);
+ let requests=0;
+ await page.route('https://embed.tawk.to/**',route=>{requests++;return route.fulfill({contentType:'application/javascript',body:`window.chatTest={shown:false,maximized:false,attributes:null,draft:''};Object.assign(Tawk_API,{hideWidget(){chatTest.shown=false;},showWidget(){chatTest.shown=true;},maximize(){chatTest.maximized=true;},isChatOngoing(){return false;},setAttributes(a,cb){chatTest.attributes=a;cb();},setChatInputMessage(m,cb){chatTest.draft=m;cb();}});Tawk_API.onBeforeLoad();Tawk_API.onLoad();`});});
+ await page.goto('/');await page.locator('#installClose').click();
+ const button=page.locator('#authorChatButton');
+ await expect(button).toHaveText({ru:'Написать автору',en:'Message the author',th:'ติดต่อผู้ดูแล'}[lang]);
+ expect(requests).toBe(0);
+ await button.click();await expect(page.locator('#authorChatDialog')).toBeVisible();
+ expect(requests).toBe(0);
+ await expect(page.locator('[data-author-topic]')).toHaveCount(4);
+ await page.locator('[data-author-topic="advertising"]').click();
+ await expect(page.locator('#authorChatDialog')).not.toBeVisible();
+ expect(requests).toBe(1);
+ const state=await page.evaluate(()=>window.chatTest);
+ expect(state.shown&&state.maximized).toBe(true);expect(state.attributes['okok-topic']).toBe('advertising');expect(state.attributes['okok-language']).toBe(lang);expect(state.draft).toBeTruthy();
+ await page.evaluate(()=>Tawk_API.onChatMinimized());
+ expect(await page.evaluate(()=>chatTest.shown)).toBe(false);
+ await button.click();await page.locator('[data-author-topic="question"]').click();
+ expect(requests).toBe(1);expect(await page.evaluate(()=>chatTest.attributes['okok-topic'])).toBe('question');
+ await button.click();await page.locator('#authorChatClose').click();await expect(button).toBeFocused();
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
+});
+test('unavailable chat offers retry and separate chat',async({page})=>{
+ await page.addInitScript(()=>{localStorage.setItem('pok-lang','ru');localStorage.setItem('pok-lang-set','1');});
+ await page.route('https://embed.tawk.to/**',route=>route.abort());
+ await page.goto('/');await page.locator('#installClose').click();
+ await page.locator('#authorChatButton').click();await page.locator('[data-author-topic="question"]').click();
+ await expect(page.locator('#authorChatStatus')).toContainText('Попробуйте ещё раз');
+ await expect(page.locator('#authorChatFallback')).toBeVisible();
+ await expect(page.locator('[data-author-topic="question"]')).toBeEnabled();
+ await page.locator('#authorChatClose').click();await expect(page.locator('#authorChatDialog')).not.toBeVisible();
+});

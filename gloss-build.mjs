@@ -1666,3 +1666,5 @@ await import('./scripts/apply-loading-stability.mjs');
 await import('./scripts/apply-tropical-gloss.mjs');
 
 await import('./scripts/apply-editorial-polish.mjs');
+
+await import('./scripts/apply-author-chat.mjs');

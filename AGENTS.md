@@ -1,5 +1,7 @@
 # OK-OK project operations
 
+- Author contact (2026-10-07): tawk.to via author-chat.js/css and scripts/apply-author-chat.mjs. Keep the one localized contact entry, topic picker, lazy loading only after visitor intent, network-error fallback and hidden launcher when minimized. Preserve five bottom tabs; do not send visitor messages automatically or add paid tawk services.
+
 - Editorial polish approved 2026-10-06: preserve Tropical Night ceramic gloss and the 3D background. Avoid ornate filler and unsupported claims of personal visits, billing honesty or verification dates. Do not restore the hardcoded September 2026 checked stamp. Localize UI labels in RU/EN/TH; distinguish scheduled hours from live business status. Paid examples remain explicitly labelled. Keep support sheen non-looping; preserve tap effects.
 - Tickers (owner 2026-10-07): both top strips scroll, without category labels such as advertising/links. Respect reduced motion and interaction pauses. Temporarily exclude PattayaOK's Telegram channel from these strips only; preserve Telegram buttons elsewhere and Senate's referral.
 - Senate ticker (2026-10-07): advertise currency exchange without an office, street or branch mention; RU/EN/TH must use https://t.me/SenateExchange_bot?start=fi10072. This applies to the ticker, not the listing's address.
