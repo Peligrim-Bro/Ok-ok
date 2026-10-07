@@ -35,11 +35,12 @@ for(const lang of ['ru','en','th'])for(const width of [390,768])test(`${lang} at
  await expect(page.locator('.catalog-note')).toBeVisible();
  await expect(page.locator('.card').first()).not.toContainText(/сен 2026|Вид платный|Счёт бьётся/);
  await expect(page.locator('.visit-note').first()).toHaveText({ru:'Условия уточняйте перед визитом',en:'Confirm details before visiting',th:'ยืนยันข้อมูลก่อนเดินทาง'}[lang]);
- expect(await page.locator('#recTrack').evaluate(n=>getComputedStyle(n).animationName)).toBe('none');
- await expect(page.locator('#recTrack>.ticker-copy').nth(1)).toBeHidden();
+ await expect(page.locator('.tickers .ticker-tag')).toHaveCount(0);
+ await expect(page.locator('.tickers a[href*="PattayaOk_Ok"]')).toHaveCount(0);
+ await expect(page.locator('#tickerTrack a[href*="SenateExchange_bot"]').first()).toBeAttached();
+ for(const id of ['recTrack','tickerTrack'])expect(await page.locator('#'+id).evaluate(n=>getComputedStyle(n).animationName)).toBe('ticker');
  expect(await page.locator('#donateBtn').evaluate(n=>getComputedStyle(n,'::before').animationName)).toBe('none');
  if(lang==='ru'){
-  await expect(page.locator('#recTicker')).toContainText('реклама');
   await expect(page.locator('.card').first()).toContainText('Центральная Паттайя');
   await expect(page.locator('body')).not.toContainText('Scam of the Week');
  }

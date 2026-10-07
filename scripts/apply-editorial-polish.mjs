@@ -16,11 +16,7 @@ const verdicts={
 };
 const areaNames={ru:{'Central Pattaya':'Центральная Паттайя','East Pattaya':'Восточная Паттайя','North Pattaya':'Северная Паттайя','South Pattaya':'Южная Паттайя','Pratumnak Hill':'Холм Пратамнак','Pratumnak':'Пратамнак','Naklua':'Наклуа','Wongamat':'Вонгамат','Jomtien':'Джомтьен'},th:{'Central Pattaya':'พัทยากลาง','East Pattaya':'พัทยาตะวันออก','North Pattaya':'พัทยาเหนือ','South Pattaya':'พัทยาใต้','Pratumnak Hill':'เขาพระตำหนัก','Pratumnak':'พระตำหนัก','Naklua':'นาเกลือ','Wongamat':'วงศ์อมาตย์','Jomtien':'จอมเทียน'}};
 const css=`
-/* Keep the owner's ceramic controls and 3D background. One moving ticker, not two. */
-html body #recTrack{animation:none!important;transform:none!important;width:100%;min-width:0}
-html body #recTrack>.ticker-copy{padding:0;width:100%;min-width:0}
-html body #recTrack>.ticker-copy:nth-child(n+2){display:none}
-html body #recTrack a{display:block;min-width:0;overflow:hidden;text-overflow:ellipsis;padding:0 10px;line-height:1.4}
+/* Owner request 2026-10-07: two scrolling strips, without category labels. */
 html body #donateBtn::before,html body #donateBtn::after{animation:none!important}
 html body :is(#recTicker,#ticker){font-size:12px}
 html body .catalog-note{margin:0 0 14px;max-width:64ch;line-height:1.5;color:var(--muted);font-size:12px}
@@ -54,6 +50,17 @@ for(const name of ['index.html']){
  // The description already appears as the main verdict when no override exists.
  replace('<p>${L(p.blurb)}</p>','${VERDICT[p.id] && L(VERDICT[p.id]) !== L(p.blurb) ? `<p>${L(p.blurb)}</p>` : ""}');
  html=html.replace('</head>','<style id="okok-editorial-polish-v1">'+css+'</style>\n</head>');
+ // Remove labels from markup, not just visually; applyLang cannot restore them.
+ html=html.replace(/<span class="ticker-tag" data-i="(?:recTag|adsTag)">[^<]*<\/span>/g,'');
+ // Keep channel buttons elsewhere; only exclude it from the promotion list.
+ const start=html.indexOf('    const ADS ='),end=html.indexOf('    const RECS =',start);
+ if(start<0||end<0)throw Error('Ticker list boundaries missing');
+ let ads=html.slice(start,end);
+ ads=ads.replace(/^.*href: "https:\/\/t\.me\/PattayaOk_Ok"[^\n]*\n/gm,'');
+ ads=ads.replace(/;\s*$/,'.filter(ad => !/pattayaok_ok/i.test(String(ad.href || "")));\n');
+ html=html.slice(0,start)+ads+html.slice(end);
  writeFileSync(path,html);
 }
+const configPath='site/public/config.js';
+writeFileSync(configPath,readFileSync(configPath,'utf8').replace(/^.*href: "https:\/\/t\.me\/PattayaOk_Ok"[^\n]*\n/gm,''));
 console.log('PASS: editorial clarity RU/EN/TH, no invented verification dates, quieter secondary accents');
