@@ -1,7 +1,6 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 
 const indexPath='site/public/index.html';
-const swPath='site/public/sw.js';
 let html=readFileSync(indexPath,'utf8');
 
 const tracker=String.raw`
@@ -55,7 +54,4 @@ if(!html.includes('ok-ga4-events-v1')){
   html=html.replace('</body>',tracker+'\n</body>');
   writeFileSync(indexPath,html);
 }
-let sw=readFileSync(swPath,'utf8');
-sw=sw.replace(/const\s+CACHE\s*=\s*[^;]+;/,()=> 'const CACHE = "pattayaok-ga4-events-v1-"+Date.now();');
-writeFileSync(swPath,sw);
 console.log('GA4 interaction events ready: partners, navigation, favorites, daily pick, ads, OKI, map, support.');

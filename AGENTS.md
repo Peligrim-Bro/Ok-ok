@@ -35,6 +35,7 @@ GitHub Actions checks are diagnostic; they do not gate Cloudflare's independent 
 
 - Bottom navigation order is fixed: home, game (OKI), list, scam, shop (smiley). Keep exactly five buttons. OKI bubble tail must track the actual OKI button center, including viewport-edge clamping.
 - Preserve the unique service-worker cache generated for each build. Never replace it with a fixed cache name. Verify the live site matches the latest published main and retains Pulse/mobile fixes before reporting success.
+- Release cache (2026-10-08): finalize-release-cache.mjs must run after all output patches. Cache identity comes from build-info.json (source commit, timestamp fallback for local builds); never use runtime Date.now() in sw.js. verify-project and tests/release-cache.test.mjs reject runtime expressions, mismatched source identity and duplicate declarations. Feature patches, including analytics, must leave cache naming to this finalizer.
 
 - Agoda is discontinued by owner decision. Do not restore its card, links or partner registry entry. Every build must run remove-agoda.mjs; preserve all other partners and their referral codes.
 - The trip resources section is retired on all screens. Preserve individual referral actions and the 12Go map widget. Support styling belongs only to #donateBtn; never infer it from article text or URLs.
