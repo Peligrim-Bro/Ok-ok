@@ -1,29 +1,5 @@
 [
   {
-    "id": "food-fun-first-2026",
-    "startAt": "2026-09-29T00:00:00+07:00",
-    "endAt": "2026-10-09T00:00:00+07:00",
-    "title": {
-      "ru": "Food Fun Fest · идём пробовать!",
-      "en": "Food Fun Fest · let’s taste!",
-      "th": "Food Fun Fest · ไปชิมกัน!"
-    },
-    "text": {
-      "ru": "Фестиваль еды: местные продавцы и фудтраки на площадке Runway. Зови друзей — здесь можно разместить и своё событие.",
-      "en": "Food festival with local vendors and food trucks at the Runway. Bring friends — you can post your own event here too.",
-      "th": "เทศกาลอาหารจากร้านท้องถิ่นและฟู้ดทรักที่ลาน Runway ชวนเพื่อนมา และลงกิจกรรมของคุณได้ที่นี่"
-    },
-    "when": {
-      "ru": "29 сентября — 8 октября · часы уточняй у организатора",
-      "en": "29 September–8 October · check hours with organiser",
-      "th": "29 กันยายน–8 ตุลาคม · ตรวจสอบเวลากับผู้จัด"
-    },
-    "venue": "Terminal21 Pattaya Runway",
-    "maps": "https://www.google.com/maps/search/?api=1&query=Terminal21+Pattaya+Runway",
-    "source": "https://www.terminal21.co.th/pattaya/en/event-activity-en-old/",
-    "checkedAt": "2026-10-06"
-  },
-  {
     "id": "wonder-lawn-20261011",
     "startAt": "2026-10-11T17:00:00+07:00",
     "endAt": "2026-10-15T22:00:00+07:00",
@@ -45,7 +21,7 @@
     "venue": "Mövenpick Siam Na Jomtien Pattaya · beachfront lawn",
     "maps": "https://www.google.com/maps/search/?api=1&query=Movenpick+Siam+Na+Jomtien+Pattaya",
     "source": "https://www.movenpickpattayanajomtien.com/th/offers/the-wonderlawn/",
-    "checkedAt": "2026-10-06"
+    "checkedAt": "2026-10-09"
   },
   {
     "id": "food-fun-second-2026",
@@ -68,7 +44,7 @@
     },
     "venue": "Terminal21 Pattaya Runway",
     "maps": "https://www.google.com/maps/search/?api=1&query=Terminal21+Pattaya+Runway",
-    "source": "https://www.terminal21.co.th/pattaya/en/event-activity-en-old/",
-    "checkedAt": "2026-10-06"
+    "source": "https://www.terminal21.co.th/pattaya/en/event/food-fun-fest-2026-is-back-en/",
+    "checkedAt": "2026-10-09"
   }
 ]
