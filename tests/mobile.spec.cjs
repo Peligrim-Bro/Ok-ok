@@ -80,7 +80,7 @@ for(const lang of ['ru','en','th'])for(const width of [390,768])test(`${lang} at
  await expect(page.locator('nav.tab [data-tab="list"]')).toHaveClass(/active|on/);
  await expect(page.locator('#filters')).toBeVisible();
  await expect(page.locator('#homeFiltersToggle')).not.toBeVisible();
- await expect(page.locator('body')).not.toContainText(/EX24|Supermao/i);
+ await expect(page.locator('body')).not.toContainText(/EX24.pro Thappraya|EX24.pro Naklua|EX24.pro Pratumnak|Supermao/i);
  await page.screenshot({path:`quality-reports/${lang}-${width}.png`,fullPage:false});
 });
 test('installed app can reopen the cached shell offline',async({page,context})=>{

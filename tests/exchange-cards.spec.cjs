@@ -1,0 +1,26 @@
+const {test,expect}=require('@playwright/test');
+for(const lang of ['ru','en','th'])for(const theme of ['dark','light'])test(`owner exchange cards, ${lang}, ${theme}`,async({page})=>{
+ await page.setViewportSize({width:390,height:844});
+ await page.addInitScript(({lang,theme})=>{localStorage.setItem('pok-lang',lang);localStorage.setItem('pok-lang-set','1');localStorage.setItem('pok-theme',theme);},{lang,theme});
+ await page.goto('/',{waitUntil:'domcontentloaded'});
+ await page.locator('#installClose').click();
+ await page.locator('nav.tab [data-tab="list"]').click();
+ await page.locator('[data-cat="cash"]').click();
+ const cards=page.locator('.card');
+ await expect(cards.nth(0)).toHaveAttribute('data-open','senate');
+ await expect(cards.nth(1)).toHaveAttribute('data-open','ex24');
+ const senate=page.locator('.card[data-open="senate"]');
+ const ex24=page.locator('.card[data-open="ex24"]');
+ await expect(senate).toHaveCount(1);await expect(ex24).toHaveCount(1);
+ await expect(senate.locator('.flag')).toHaveText({ru:'✓ OK · Проверено',en:'✓ OK · Verified',th:'✓ OK · ตรวจสอบแล้ว'}[lang]);
+ await expect(senate).toContainText({ru:'Быстрая доставка.',en:'Fast delivery.',th:'จัดส่งรวดเร็ว'}[lang]);
+ await expect(ex24).toContainText({ru:'Хороший курс · доставка обычно около 2 часов.',en:'Good exchange rate · delivery usually takes about 2 hours.',th:'อัตราแลกเปลี่ยนดี · จัดส่งโดยปกติประมาณ 2 ชั่วโมง'}[lang]);
+ await expect(ex24.locator('.flag')).toHaveText({ru:'✓ OK · Проверено',en:'✓ OK · Verified',th:'✓ OK · ตรวจสอบแล้ว'}[lang]);
+ for(const card of [senate,ex24])await expect(card.locator('img')).toHaveJSProperty('complete',true);
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
+ await page.screenshot({path:`quality-reports/exchange-${lang}-${theme}.png`,fullPage:false});
+ await senate.click();
+ await expect(page.locator('#sheet')).toContainText({ru:'✓ OK · Проверено',en:'✓ OK · Verified',th:'✓ OK · ตรวจสอบแล้ว'}[lang]);
+ await page.locator('#sheet [data-partner="senate"]').click();
+ await expect(page.locator('a[href="https://t.me/SenateExchange_bot?start=fi10072"]').last()).toBeVisible();
+});

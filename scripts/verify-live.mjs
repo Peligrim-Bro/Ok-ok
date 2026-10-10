@@ -18,8 +18,9 @@ export async function verifyLive(commit,request=fetch){
  const html=await (await get('/')).text();
  assert(html.includes('id="okok-tropical-gloss-v1"')&&html.includes('--bg:#061d27')&&html.includes('--bg:#eef5ef'),'Approved Tropical Night palette missing on the live site');
  for(const marker of ['PattayaOK','okok-pulse-v1','oki-nav-float-fix-v4','oki-prompt-tail-fix-v4','okok-tetris-playable-v2','https://t.me/SenateExchange_bot?start=fi10072'])assert(html.includes(marker),`Missing live marker: ${marker}`);
+ assert(html.includes("id:'ex24',name:'EX24'")&&html.includes('✓ OK · Проверено')&&html.includes('доставка обычно около 2 часов.'),'Owner exchange cards missing on live site');
  const config=await (await get('/config.js')).text();
- for(const source of [html,config])assert(!/ex24|supermao|agoda/i.test(source),'Retired partner returned on the live site');
+ for(const source of [html,config])assert(!/ex24thap|ex24naklua|ex24prat|supermao|agoda/i.test(source),'Retired partner returned on the live site');
  const home=html.slice(html.indexOf('    function renderHome() {'),html.indexOf('    function renderList() {'));
  assert(home.indexOf('data-tours="1"')>=0&&home.indexOf('id="okAds"')>home.indexOf('data-tours="1"'),'Live primary actions must precede async ads');
  assert(html.includes('family=Manrope:wght@400;500;600;700;800&display=optional'),'Live font strategy changed');

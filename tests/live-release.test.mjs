@@ -23,7 +23,7 @@ test('an old deployment cannot pass as the expected release',async()=>{
  await assert.rejects(verifyLive(commit,request({'/build-info.json':JSON.stringify({commit:'b'.repeat(40)})})),/expected release/);
 });
 test('a retired partner in runtime config fails the release check',async()=>{
- await assert.rejects(verifyLive(commit,request({'/config.js':'EX24'})),/Retired partner/);
+ await assert.rejects(verifyLive(commit,request({'/config.js':'Supermao'})),/Retired partner/);
 });
 test('an unavailable health endpoint fails the release check',async()=>{
  await assert.rejects(verifyLive(commit,request({'/api/oki/health':null})),/HTTP 503/);

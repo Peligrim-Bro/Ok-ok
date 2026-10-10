@@ -53,7 +53,7 @@ GitHub Actions checks are diagnostic; they do not gate Cloudflare's independent 
 - Header utility buttons (support, theme, language, report) and their grid row stay 44px high, with explicit height/min/max-height. Preserve this mobile Safari fix; never rely only on min-height or grid stretching.
 
 ## Automated quality control
-- Read OKOK_RULES.md for the quality workflow. EX24 is discontinued; scripts/remove-ex24.mjs must run in every build.
+- Read OKOK_RULES.md for the quality workflow. Owner 2026-10-10 restored one EX24 delivery card and Senate, both with the OK verification badge. scripts/remove-ex24.mjs cleans archived branches then restores these owner-approved cards in every build; preserve Senate referral fi10072 and RU/EN/TH delivery notes.
 - telegram-build.mjs validates the completed output with verify-project.mjs and verify-quality.mjs. Preserve this native Cloudflare build gate.
 - Use npm run build, npm run test:mobile and npm run audit. Keep reports as GitHub Actions artifacts; do not publish them as site content.
 - /build-info.json records the deployed source commit. Check it after publishing; do not infer success only from the source ref.

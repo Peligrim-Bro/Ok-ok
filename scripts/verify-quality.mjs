@@ -30,9 +30,12 @@ const core=JSON.parse(sw.match(/const CORE = (\[[^;]+\]);/)[1]);
 for(const asset of core){const pathname=new URL(asset,'https://ok-ok.click/').pathname;assert(pathname==='/'||existsSync(root+pathname),'Offline precache asset missing: '+asset);}
 assert(sw.includes('url.pathname.startsWith("/api/")'),'Service worker must bypass live APIs');
 assert(sw.includes('request.mode === "navigate"')&&sw.includes('fetch(request)'),'Navigation freshness strategy missing');
-for(const source of [html,readFileSync(root+'/config.js','utf8')])assert(!/ex24/i.test(source),'Discontinued EX24 returned');
+assert(!/ex24thap|ex24naklua|ex24prat/i.test(html),'Archived EX24 branches returned');
+assert(html.includes("id:'ex24',name:'EX24'"),'Owner EX24 card missing');
+assert(html.includes('Быстрая доставка.')&&html.includes('доставка обычно около 2 часов.'),'Exchange delivery notes missing');
+assert(html.includes('✓ OK · Проверено'),'Senate owner verification badge missing');
 assert(html.includes('https://t.me/SenateExchange_bot?start=fi10072'),'Senate referral missing');
-console.log('PASS: size budgets, SEO, PWA icons/offline assets, API cache bypass and EX24 exclusion',measured);
+console.log('PASS: size budgets, SEO, PWA icons/offline assets, API cache bypass and owner exchange cards',measured);
 const home=html.slice(html.indexOf('    function renderHome() {'),html.indexOf('    function renderList() {'));
 assert(!home.includes('${t().partnersTitle}'),'Retired trip section returned');
 assert(html.includes('function partnersHTML() { return ""; }'),'Retired trip section must stay empty on every screen');
