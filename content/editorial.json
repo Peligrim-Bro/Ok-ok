@@ -1,94 +1,120 @@
 {
-  "verifiedAt": "2026-10-07",
+  "verifiedAt": "2026-10-10",
   "news": [
     {
       "category": "world",
-      "when": "06.10 · 🌍",
-      "href": "https://apnews.com/article/nobel-prize-physics-sweden-47d0ab2b92f3512eb09ed44ceb6006d8",
-      "ru": "Нобелевскую премию по физике 2026 года получил Фрэнсис Халзен — за ключевой вклад в создание нейтринной обсерватории IceCube в Антарктиде и открытие высокоэнергетических нейтрино космического происхождения.",
-      "en": "Francis Halzen won the 2026 Nobel Prize in Physics for decisive contributions to the IceCube Neutrino Observatory in Antarctica and the discovery of high-energy neutrinos of astrophysical origin.",
-      "th": "ฟรานซิส ฮัลเซน ได้รับรางวัลโนเบลสาขาฟิสิกส์ประจำปี 2026 จากผลงานสำคัญต่อหอสังเกตการณ์นิวทริโน IceCube ในแอนตาร์กติกา และการค้นพบนิวทริโนพลังงานสูงจากแหล่งกำเนิดทางดาราศาสตร์",
-      "publishedAt": "2026-10-06",
+      "when": "09.10 · 🌍",
+      "href": "https://www.reuters.com/world/eu-tech-chief-says-bloc-well-equipped-fend-off-rogue-ai-risk-2026-10-09/",
+      "ru": "Еврокомиссия заявила, что действующий в ЕС закон об ИИ охватывает весь жизненный цикл мощных моделей и позволяет реагировать на риск неконтролируемых агентов. Регуляторы изучают сведения о безопасности более чем от 30 компаний.",
+      "en": "The European Commission said the EU AI Act covers the full lifecycle of advanced models and can address risks from rogue agents. Regulators are reviewing safety information requested from more than 30 companies.",
+      "th": "คณะกรรมาธิการยุโรประบุว่ากฎหมาย AI ของสหภาพยุโรปครอบคลุมตลอดวงจรชีวิตของโมเดลขั้นสูงและรองรับความเสี่ยงจากเอเจนต์ที่ควบคุมไม่ได้ ขณะนี้หน่วยงานกำลังตรวจข้อมูลความปลอดภัยจากบริษัทมากกว่า 30 แห่ง",
+      "publishedAt": "2026-10-09",
       "sources": [
-        "https://apnews.com/article/nobel-prize-physics-sweden-47d0ab2b92f3512eb09ed44ceb6006d8",
-        "https://www.theguardian.com/science/2026/oct/06/nobel-prize-in-physics-francis-halzen-south-pole-neutrinos-icecube-detector"
+        "https://www.reuters.com/world/eu-tech-chief-says-bloc-well-equipped-fend-off-rogue-ai-risk-2026-10-09/",
+        "https://apnews.com/article/789d4f5293fba45a22fcb62ebfbc2a41"
       ],
       "nonWar": true,
       "discussionEvidence": {
-        "observedAt": "2026-10-07T08:41:00+07:00",
-        "sourceUrl": "https://apnews.com/article/nobel-prize-physics-sweden-47d0ab2b92f3512eb09ed44ceb6006d8",
-        "summary": "Comparable public comment and share totals were not exposed. The award received same-day independent coverage from AP, The Guardian and other international outlets; this is qualitative cross-outlet evidence, not a claim of global popularity rank."
+        "observedAt": "2026-10-10T08:07:00+07:00",
+        "sourceUrl": "https://www.reuters.com/world/eu-tech-chief-says-bloc-well-equipped-fend-off-rogue-ai-risk-2026-10-09/",
+        "summary": "Comparable public comment and share totals were not exposed. Reuters and AP separately covered the same-day wider dispute over advanced-model safety and oversight; this is qualitative cross-outlet evidence, not a global popularity rank."
       }
     },
     {
       "category": "thailand",
-      "when": "07.10 · 🇹🇭",
-      "href": "https://www5.tmd.go.th/en/warning-and-events/warning-storm",
-      "ru": "Метеодепартамент Таиланда предупредил: 7 октября грозы и местами сильные дожди вероятны на западе Севера, в Центральном регионе и на Юге. При порывах ветра и ливнях стоит избегать открытых мест и следить за местными предупреждениями.",
-      "en": "Thailand's Meteorological Department warned that thunderstorms and isolated heavy rain were likely on 7 October in the western North, Central region and South. People should avoid exposed areas during gusts and follow local alerts.",
-      "th": "กรมอุตุนิยมวิทยาเตือนว่า วันที่ 7 ตุลาคม ภาคเหนือด้านตะวันตก ภาคกลาง และภาคใต้ มีโอกาสเกิดฝนฟ้าคะนองและฝนตกหนักบางแห่ง ควรหลีกเลี่ยงพื้นที่โล่งขณะมีลมกระโชกและติดตามประกาศในพื้นที่",
-      "publishedAt": "2026-10-07",
+      "when": "10.10 · 🇹🇭",
+      "href": "https://www.tmd.go.th/warning-and-events/warning-storm/%E0%B8%9D%E0%B8%99%E0%B8%95%E0%B8%81%E0%B8%AB%E0%B8%99%E0%B8%81%E0%B8%96%E0%B8%87%E0%B8%AB%E0%B8%99%E0%B8%81%E0%B8%A1%E0%B8%B2%E0%B8%81%E0%B8%9A%E0%B8%A3%E0%B9%80%E0%B8%A7%E0%B8%93%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B9%84%E0%B8%97%E0%B8%A2-%E0%B8%A1%E0%B8%9C%E0%B8%A5%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%9A%E0%B8%88%E0%B8%99%E0%B8%96%E0%B8%87%E0%B8%A7%E0%B8%99%E0%B8%97-13-%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%84%E0%B8%A1-2569-%E0%B8%89%E0%B8%9A%E0%B8%9A%E0%B8%97-7-253-2570",
+      "ru": "TMD обновил предупреждение на 10–13 октября: грозы, порывистый ветер и местами сильные или очень сильные дожди ожидаются в нескольких регионах. Возможны внезапные паводки, разливы и оползни; судам советуют обходить грозы.",
+      "en": "TMD updated its warning for 10–13 October: thunderstorms, gusty winds and isolated heavy to very heavy rain are expected across several regions. Flash floods, overflows and landslides are possible, and vessels should avoid storms.",
+      "th": "กรมอุตุนิยมวิทยาปรับประกาศเตือนช่วง 10–13 ตุลาคม หลายพื้นที่อาจมีฝนฟ้าคะนอง ลมกระโชกแรง และฝนตกหนักถึงหนักมากบางแห่ง เสี่ยงน้ำท่วมฉับพลัน น้ำล้นตลิ่ง และดินถล่ม ส่วนเรือควรหลีกเลี่ยงบริเวณพายุฝน",
+      "publishedAt": "2026-10-10",
       "sources": [
-        "https://www5.tmd.go.th/en/warning-and-events/warning-storm"
+        "https://www.tmd.go.th/warning-and-events/warning-storm/%E0%B8%9D%E0%B8%99%E0%B8%95%E0%B8%81%E0%B8%AB%E0%B8%99%E0%B8%81%E0%B8%96%E0%B8%87%E0%B8%AB%E0%B8%99%E0%B8%81%E0%B8%A1%E0%B8%B2%E0%B8%81%E0%B8%9A%E0%B8%A3%E0%B9%80%E0%B8%A7%E0%B8%93%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B9%84%E0%B8%97%E0%B8%A2-%E0%B8%A1%E0%B8%9C%E0%B8%A5%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%9A%E0%B8%88%E0%B8%99%E0%B8%96%E0%B8%87%E0%B8%A7%E0%B8%99%E0%B8%97-13-%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%84%E0%B8%A1-2569-%E0%B8%89%E0%B8%9A%E0%B8%9A%E0%B8%97-7-253-2570",
+        "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/549498"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-07T08:41:00+07:00",
-        "sourceUrl": "https://www5.tmd.go.th/en/warning-and-events/warning-storm",
-        "summary": "The official warning page exposed no comparable comment or share totals. Selected for current nationwide public-safety relevance; no popularity rank is claimed."
+        "observedAt": "2026-10-10T08:07:00+07:00",
+        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/549498",
+        "summary": "The government PRD alert displayed 151 views and exposed no public comment total. The newer TMD No.7 advisory exposed no engagement counters; selection is based on immediate public-safety relevance, not a popularity rank."
       }
     },
     {
       "category": "thailand",
-      "when": "06.10 · 🇹🇭",
-      "href": "https://www.reuters.com/business/environment/thailand-asks-firms-cut-egg-exports-after-flood-losses-2026-10-06/",
-      "ru": "Таиланд попросил производителей сократить экспорт яиц на 30–50% до декабря после ущерба птицефермам от наводнений. Власти также ищут поставки из незатронутых районов и призывают удерживать цены.",
-      "en": "Thailand asked producers to cut egg exports by 30–50% through December after floods damaged poultry farms. Authorities are also sourcing supplies from unaffected areas and asking the industry to keep prices stable.",
-      "th": "ไทยขอให้ผู้ผลิตลดการส่งออกไข่ไก่ร้อยละ 30–50 จนถึงเดือนธันวาคม หลังน้ำท่วมสร้างความเสียหายต่อฟาร์มไก่ พร้อมจัดหาไข่จากพื้นที่ที่ไม่ได้รับผลกระทบและขอความร่วมมือรักษาระดับราคา",
-      "publishedAt": "2026-10-06",
+      "when": "09.10 · 🇹🇭",
+      "href": "https://www.reuters.com/world/asia-pacific/nearly-30-years-after-imf-rescue-thailand-faces-new-economic-test-2026-10-09/",
+      "ru": "Министр финансов Таиланда назвал инвестиции главным способом ускорить экономику и поставил цель выйти на рост 3% в течение трёх лет. Среди приоритетов — полупроводники, дата-центры, электромобили, возобновляемая энергия и подготовка кадров.",
+      "en": "Thailand's finance minister put investment at the centre of a plan to reach 3% growth within three years. Priorities include semiconductors, data centres, electric vehicles, renewable energy and workforce skills.",
+      "th": "รัฐมนตรีว่าการกระทรวงการคลังวางการลงทุนเป็นแกนหลักของแผนผลักดันเศรษฐกิจไทยให้เติบโตร้อยละ 3 ภายในสามปี โดยให้ความสำคัญกับเซมิคอนดักเตอร์ ดาต้าเซ็นเตอร์ รถยนต์ไฟฟ้า พลังงานหมุนเวียน และทักษะแรงงาน",
+      "publishedAt": "2026-10-09",
       "sources": [
-        "https://www.reuters.com/business/environment/thailand-asks-firms-cut-egg-exports-after-flood-losses-2026-10-06/"
+        "https://www.reuters.com/world/asia-pacific/nearly-30-years-after-imf-rescue-thailand-faces-new-economic-test-2026-10-09/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-07T08:41:00+07:00",
-        "sourceUrl": "https://www.reuters.com/business/environment/thailand-asks-firms-cut-egg-exports-after-flood-losses-2026-10-06/",
-        "summary": "Reuters exposed no comparable public comment or share totals. Selected for fresh national consumer impact and direct attribution to Thailand's Department of Internal Trade; no popularity rank is claimed."
+        "observedAt": "2026-10-10T08:07:00+07:00",
+        "sourceUrl": "https://www.reuters.com/world/asia-pacific/nearly-30-years-after-imf-rescue-thailand-faces-new-economic-test-2026-10-09/",
+        "summary": "Reuters exposed no comparable public comment or share totals. Selected for national economic impact and a direct interview with Thailand's finance minister ahead of the IMF-World Bank meetings; no popularity rank is claimed."
       }
     },
     {
       "category": "pattaya",
-      "when": "06.10 · Pattaya",
-      "href": "https://thepattayanews.com/2026/10/06/pattaya-revises-rules-hours-and-zones-for-street-performers/",
-      "ru": "Паттайя уточнила зоны и часы для уличных артистов: на Pattaya Beach и Jomtien Beach выступления разрешены ежедневно с 18:00 до 01:00, а на Walking Street добавлена пятая площадка. Для иностранцев по-прежнему требуется законное разрешение на работу.",
-      "en": "Pattaya revised zones and hours for street performers: shows are allowed daily on Pattaya and Jomtien beaches from 18:00 to 01:00, and a fifth Walking Street spot was added. Foreign performers still need lawful work authorization.",
-      "th": "เมืองพัทยาปรับพื้นที่และเวลาสำหรับศิลปินเปิดหมวก โดยชายหาดพัทยาและจอมเทียนแสดงได้ทุกวันเวลา 18.00–01.00 น. และเพิ่มจุดที่ 5 บนถนนวอล์กกิ้งสตรีท ส่วนชาวต่างชาติยังต้องมีสิทธิทำงานอย่างถูกกฎหมาย",
-      "publishedAt": "2026-10-06",
+      "when": "10.10 · Pattaya",
+      "href": "https://thepattayanews.com/2026/10/10/pattaya-reviews-a-naklua-market-redesign-and-a-30-rai-stray-dog-shelter/",
+      "ru": "Паттайя рассматривает перепланировку рынка Talat Mai Na Kluea на 450 мест с отдельными зонами еды, морепродуктов и ремёсел. Проект пока требует дизайна и бюджета; план приюта для бездомных собак в Huai Yai также остаётся на стадии управления.",
+      "en": "Pattaya is reviewing a 450-stall redesign of Talat Mai Na Kluea with separate food, seafood and craft zones. The project still needs a design and budget, while the Huai Yai stray-dog shelter remains at the management-planning stage.",
+      "th": "เมืองพัทยากำลังพิจารณาปรับตลาดใหม่หนองเกลือให้มี 450 แผง แบ่งโซนอาหารทะเล อาหาร และงานหัตถกรรม โดยยังต้องจัดทำแบบและงบประมาณ ส่วนศูนย์พักพิงสุนัขจรจัดที่ห้วยใหญ่ยังอยู่ในขั้นวางแผนบริหาร",
+      "publishedAt": "2026-10-10",
       "sources": [
-        "https://thepattayanews.com/2026/10/06/pattaya-revises-rules-hours-and-zones-for-street-performers/"
+        "https://thepattayanews.com/2026/10/10/pattaya-reviews-a-naklua-market-redesign-and-a-30-rai-stray-dog-shelter/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-07T08:41:00+07:00",
-        "sourceUrl": "https://thepattayanews.com/2026/10/06/pattaya-revises-rules-hours-and-zones-for-street-performers/",
-        "summary": "The page exposed a Facebook-like control but no visible comparable reaction, share or comment count. The report attributes its information to Pattaya City's Tourism and Sports Bureau; selected for practical local relevance, not a popularity rank."
+        "observedAt": "2026-10-10T08:07:00+07:00",
+        "sourceUrl": "https://thepattayanews.com/2026/10/10/pattaya-reviews-a-naklua-market-redesign-and-a-30-rai-stray-dog-shelter/",
+        "summary": "The page exposed a Facebook-like control but no visible comparable reaction, share, view or comment total. Selected as the newest verified Pattaya municipal-development report; no popularity rank is claimed."
       }
     },
     {
       "category": "pattaya",
-      "when": "06.10 · Pattaya",
-      "href": "https://thepattayanews.com/2026/10/06/pattaya-police-and-chonburi-governor-lead-big-cleaning-day-to-restore-beachfront-after-floods/",
-      "ru": "После подтопления власти и волонтёры очистили участок Beach Road от Soi 6 до Central Pattaya: убрали мусор, смыли грязь и расчистили проезжую часть. Работы были направлены на безопасное возвращение транспорта и посетителей.",
-      "en": "After flooding, officials and volunteers cleaned the Beach Road stretch from Soi 6 to Central Pattaya, removing debris, washing away mud and clearing the roadway to restore safe access for traffic and visitors.",
-      "th": "หลังน้ำท่วม เจ้าหน้าที่และอาสาสมัครทำความสะอาดถนนเลียบชายหาดตั้งแต่ซอย 6 ถึงพัทยากลาง เก็บขยะ ล้างโคลน และเปิดผิวจราจร เพื่อให้รถและผู้มาเยือนกลับมาใช้พื้นที่ได้อย่างปลอดภัย",
-      "publishedAt": "2026-10-06",
+      "when": "09.10 · Pattaya",
+      "href": "https://www.pattayamail.com/news/pattaya-mayor-tracks-progress-on-footbridge-roofing-and-safety-work-567739",
+      "ru": "В Паттайе продолжают устанавливать крыши и плитку на пешеходных мостах возле школ. Работы могут идти на трёх из девяти запланированных объектов; на остальных пока мешают высоковольтные линии и опоры.",
+      "en": "Pattaya is continuing roof and tile work on pedestrian bridges near schools. Work can proceed at three of nine planned sites, while high-voltage lines and poles currently block the others.",
+      "th": "พัทยากำลังติดตั้งหลังคาและกระเบื้องบนสะพานลอยใกล้โรงเรียน โดยขณะนี้ดำเนินการได้ 3 แห่งจาก 9 แห่งที่วางแผนไว้ ส่วนที่เหลือติดข้อจำกัดจากสายไฟแรงสูงและเสาไฟ",
+      "publishedAt": "2026-10-09",
       "sources": [
-        "https://thepattayanews.com/2026/10/06/pattaya-police-and-chonburi-governor-lead-big-cleaning-day-to-restore-beachfront-after-floods/"
+        "https://www.pattayamail.com/news/pattaya-mayor-tracks-progress-on-footbridge-roofing-and-safety-work-567739",
+        "https://thepattayanews.com/2026/10/09/pattaya-mayor-checks-underground-cable-work-a-four-lane-overlay-and-school-footbridges/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-07T08:41:00+07:00",
-        "sourceUrl": "https://thepattayanews.com/2026/10/06/pattaya-police-and-chonburi-governor-lead-big-cleaning-day-to-restore-beachfront-after-floods/",
-        "summary": "The page exposed a Facebook-like control but no visible comparable reaction, share or comment count. Selected for immediate local mobility and safety relevance following flooding; no popularity rank is claimed."
+        "observedAt": "2026-10-10T08:07:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/pattaya-mayor-tracks-progress-on-footbridge-roofing-and-safety-work-567739",
+        "summary": "Pattaya Mail displayed 1,382 views and 0 comments. The underlying footbridge work was also covered independently by The Pattaya News; the counter is outlet-specific and not a citywide popularity rank."
       }
     }
   ],
-  "scams": [],
-  "selection": "Exactly 1 non-war world story, 2 Thailand stories and 2 Pattaya stories; verified 2026-10-07 in Asia/Bangkok. No qualifying new dated official scam warning or reliably corroborated investigation was found, so existing live scam cards are preserved without date changes."
+  "scams": [
+    {
+      "id": "pea-refund-qr-pattaya-2026-10",
+      "title": {
+        "ru": "Ложный возврат депозита PEA через QR-код",
+        "en": "Fake PEA deposit refund via QR code",
+        "th": "หลอกคืนเงินประกัน PEA ผ่านคิวอาร์โค้ด"
+      },
+      "text": {
+        "ru": "Туристическая полиция сообщила о расследовании схемы, где звонящие выдавали себя за сотрудников Provincial Electricity Authority, обещали возврат депозита или замену счётчика и присылали QR-код для сбора банковских данных. Подозреваемые находятся под следствием; их виновность определяет суд.",
+        "en": "Tourist Police reported an investigation into callers impersonating Provincial Electricity Authority staff, offering a deposit refund or meter replacement and sending a QR code to collect banking details. The suspects remain under investigation; guilt is for the court to determine.",
+        "th": "ตำรวจท่องเที่ยวรายงานการสอบสวนกรณีผู้โทรแอบอ้างเป็นเจ้าหน้าที่การไฟฟ้าส่วนภูมิภาค เสนอคืนเงินประกันหรือเปลี่ยนมิเตอร์ แล้วส่งคิวอาร์โค้ดเพื่อเก็บข้อมูลธนาคาร ผู้ต้องสงสัยยังอยู่ระหว่างการสอบสวนและศาลเป็นผู้วินิจฉัยความผิด"
+      },
+      "do": {
+        "ru": "Не сканируйте QR-коды и не устанавливайте приложения по неожиданному звонку или SMS. Не сообщайте банковские данные; самостоятельно проверьте обращение через официальный сайт или контактный центр PEA.",
+        "en": "Do not scan QR codes or install apps after an unexpected call or text. Do not share banking details; verify the request independently through PEA's official website or contact centre.",
+        "th": "อย่าสแกนคิวอาร์โค้ดหรือติดตั้งแอปจากสายโทรหรือข้อความที่ไม่คาดคิด และอย่าให้ข้อมูลธนาคาร ควรตรวจสอบโดยตรงผ่านเว็บไซต์หรือศูนย์บริการทางการของ PEA"
+      },
+      "status": "reported-investigation",
+      "sources": [
+        "https://thepattayanews.com/2026/10/08/pattaya-tourist-police-arrest-four-people-in-mule-account-gang-linked-to-pea-impersonation-scam/"
+      ],
+      "verifiedAt": "2026-10-10"
+    }
+  ],
+  "selection": "Exactly 1 non-war world story, 2 Thailand stories and 2 Pattaya stories; verified 2026-10-10 in Asia/Bangkok. All five were published within the previous 24 hours. One newly reported Pattaya Tourist Police investigation was added with allegation status, no suspect names or loss totals, and practical protection guidance; existing live scam advice remains preserved."
 }
