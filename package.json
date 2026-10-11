@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "@lhci/cli": "0.15.1",
-    "@playwright/test": "1.63.0"
+    "@playwright/test": "1.64.0"
   },
   "scripts": {
     "build": "node gloss-build.mjs && node telegram-build.mjs",
