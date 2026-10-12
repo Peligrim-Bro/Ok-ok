@@ -1,94 +1,95 @@
 {
-  "verifiedAt": "2026-10-11",
+  "verifiedAt": "2026-10-12",
   "news": [
     {
       "category": "world",
-      "when": "10.10 · 🌍",
-      "href": "https://apnews.com/article/panama-earthquakes-8217fbb2e56d75cb39b1f40fa036faa6",
-      "ru": "Панама объявила чрезвычайное положение после землетрясений магнитудой 7,7 и 6,6. Власти сообщили о 27 пострадавших и повреждениях по всей стране, но не связали с толчками ни одной смерти; Панамский канал продолжил работу.",
-      "en": "Panama declared a state of emergency after magnitude 7.7 and 6.6 earthquakes. Authorities reported 27 injuries and damage nationwide but attributed no deaths to the quakes; the Panama Canal continued operating.",
-      "th": "ปานามาประกาศภาวะฉุกเฉินหลังแผ่นดินไหวขนาด 7.7 และ 6.6 ทางการรายงานผู้บาดเจ็บ 27 คนและความเสียหายทั่วประเทศ แต่ยังไม่พบผู้เสียชีวิตจากเหตุการณ์ ขณะที่คลองปานามายังคงเปิดดำเนินการ",
-      "publishedAt": "2026-10-10",
+      "when": "11.10 · 🌍",
+      "href": "https://www.reuters.com/business/environment/panama-suffers-over-200-aftershocks-after-fridays-77-magnitude-earthquake-2026-10-11/",
+      "ru": "После землетрясения магнитудой 7,7 в Панаме зарегистрировали более 200 афтершоков. По данным властей, погибших нет, 27 человек пострадали, повреждены почти 900 домов и 14 мостов; занятия в школах в понедельник отменены, Панамский канал работает.",
+      "en": "Panama recorded more than 200 aftershocks after the magnitude 7.7 earthquake. Authorities reported no deaths, 27 injuries, damage to nearly 900 homes and 14 bridges; Monday classes were suspended while the Panama Canal remained operational.",
+      "th": "ปานามาบันทึกอาฟเตอร์ช็อกมากกว่า 200 ครั้งหลังแผ่นดินไหวขนาด 7.7 ทางการรายงานว่าไม่มีผู้เสียชีวิต มีผู้บาดเจ็บ 27 คน บ้านเกือบ 900 หลังและสะพาน 14 แห่งได้รับความเสียหาย โรงเรียนหยุดเรียนวันจันทร์ ขณะที่คลองปานามายังเปิดดำเนินการ",
+      "publishedAt": "2026-10-11",
       "sources": [
-        "https://apnews.com/article/panama-earthquakes-8217fbb2e56d75cb39b1f40fa036faa6",
-        "https://www.reuters.com/business/environment/strong-80-magnitude-earthquake-felt-panama-usgs-2026-10-09/"
+        "https://www.reuters.com/business/environment/panama-suffers-over-200-aftershocks-after-fridays-77-magnitude-earthquake-2026-10-11/",
+        "https://www.presidencia.gob.pa/publicacion/presidente-mulino-visita-a-familias-de-pese-y-las-minas-que-perdieron-sus-hogares",
+        "https://www.paho.org/en/news/10-10-2026-pahowho-coordinates-ministry-health-support-health-response-following-earthquake"
       ],
       "nonWar": true,
       "discussionEvidence": {
-        "observedAt": "2026-10-11T08:34:00+07:00",
-        "sourceUrl": "https://apnews.com/article/panama-earthquakes-8217fbb2e56d75cb39b1f40fa036faa6",
-        "summary": "AP's page placed its related original Panama quake report at No. 3 in the visible Most read list. AP and Reuters both provided on-the-ground coverage, but comparable public comment and share totals were not exposed; this is outlet-level evidence, not a global popularity rank."
+        "observedAt": "2026-10-12T08:04:00+07:00",
+        "sourceUrl": "https://www.reddit.com/r/Earthquakes/comments/1x1t1mb/panama_earthquake_footage_thankfully_it_was_short/",
+        "summary": "A public r/Earthquakes video post showed +310 votes, compared with +19 on a related AP report thread and +2 on a related r/NaturalDisasters thread at observation time. Reuters, Panama's presidency and PAHO/WHO independently covered the response. These platform-specific signals are not a global popularity ranking."
       }
     },
     {
       "category": "thailand",
       "when": "11.10 · 🇹🇭",
-      "href": "https://www.tmd.go.th/warning-and-events/warning-storm/%E0%B8%9D%E0%B8%99%E0%B8%95%E0%B8%81%E0%B8%AB%E0%B8%99%E0%B8%81%E0%B8%96%E0%B8%87%E0%B8%AB%E0%B8%99%E0%B8%81%E0%B8%A1%E0%B8%B2%E0%B8%81%E0%B8%9A%E0%B8%A3%E0%B9%80%E0%B8%A7%E0%B8%93%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B9%84%E0%B8%97%E0%B8%A2-%E0%B8%A1%E0%B8%9C%E0%B8%A5%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%9A%E0%B8%88%E0%B8%99%E0%B8%96%E0%B8%87%E0%B8%A7%E0%B8%99%E0%B8%97-13-%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%84%E0%B8%A1-2569-%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%97-9-255-2569",
-      "ru": "TMD выпустил предупреждение №9: 11 октября грозы, шквалы и сильные дожди ожидаются в нижней части Севера, центральных районах, Бангкоке, на Востоке и Юге. Возможны внезапные паводки; в грозах волны могут превышать два метра.",
-      "en": "TMD issued Warning No. 9: thunderstorms, gusts and heavy rain are expected on 11 October across the lower North, Central region, Bangkok, the East and the South. Flash flooding is possible, and waves may exceed two metres in storms.",
-      "th": "กรมอุตุนิยมวิทยาออกประกาศฉบับที่ 9 เตือนวันที่ 11 ตุลาคมว่า ภาคเหนือตอนล่าง ภาคกลาง กรุงเทพฯ ภาคตะวันออก และภาคใต้อาจมีพายุฝน ลมกระโชกแรง และฝนตกหนัก เสี่ยงน้ำท่วมฉับพลัน ส่วนคลื่นในบริเวณพายุอาจสูงเกิน 2 เมตร",
+      "href": "https://thailand.go.th/issue-focus-detail/bangkok-travel-and-public-service-updates-during-the-2026-imfworld-bank-group-annual-meetings",
+      "ru": "На время встреч МВФ и Всемирного банка центр QSNCC закрыт для публики до 18 октября, но парк Бенчакитти работает через входы с Ratchadaphisek и Rama IV. Власти советуют закладывать больше времени и пользоваться MRT; госслужащие Бангкока работают из дома 12, 14 и 15 октября, а 16 октября в столице объявлен выходной.",
+      "en": "During the IMF–World Bank meetings, QSNCC is closed to the public through 18 October, while Benjakitti Park remains open via the Ratchadaphisek and Rama IV entrances. Authorities advise extra travel time and MRT use; Bangkok government staff work from home on 12, 14 and 15 October, with a Bangkok-only holiday on 16 October.",
+      "th": "ช่วงการประชุม IMF–ธนาคารโลก ศูนย์ฯ สิริกิติ์ปิดให้บุคคลทั่วไปถึง 18 ตุลาคม แต่สวนเบญจกิติยังเปิดผ่านทางเข้าถนนรัชดาภิเษกและพระราม 4 ทางการแนะนำให้เผื่อเวลาและใช้ MRT หน่วยงานรัฐในกรุงเทพฯ ทำงานที่บ้านวันที่ 12, 14 และ 15 ตุลาคม และวันที่ 16 ตุลาคมเป็นวันหยุดเฉพาะกรุงเทพฯ",
       "publishedAt": "2026-10-11",
       "sources": [
-        "https://www.tmd.go.th/warning-and-events/warning-storm/%E0%B8%9D%E0%B8%99%E0%B8%95%E0%B8%81%E0%B8%96%E0%B8%87%E0%B8%AB%E0%B8%99%E0%B8%81%E0%B8%A1%E0%B8%B2%E0%B8%81%E0%B8%9A%E0%B8%A3%E0%B9%80%E0%B8%A7%E0%B8%93%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B9%84%E0%B8%97%E0%B8%A2-%E0%B8%A1%E0%B8%9C%E0%B8%A5%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%9A%E0%B8%88%E0%B8%99%E0%B8%96%E0%B8%87%E0%B8%A7%E0%B8%99%E0%B8%97-13-%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%84%E0%B8%A1-2569-%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%97-9-255-2569",
-        "https://thepattayanews.com/2026/10/11/thai-meteorological-department-issues-warning-for-heavy-rain-through-october-13th/"
+        "https://thailand.go.th/issue-focus-detail/bangkok-travel-and-public-service-updates-during-the-2026-imfworld-bank-group-annual-meetings",
+        "https://thailand.go.th/issue-focus-detail/roads-around-qsncc-remain-open-during-the-2026-imfworld-bank-group-annual-meetings-from-1218-october-2026"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-11T08:34:00+07:00",
-        "sourceUrl": "https://www.tmd.go.th/warning-and-events/warning-storm/%E0%B8%9D%E0%B8%99%E0%B8%95%E0%B8%81%E0%B8%96%E0%B8%87%E0%B8%AB%E0%B8%99%E0%B8%81%E0%B8%A1%E0%B8%B2%E0%B8%81%E0%B8%9A%E0%B8%A3%E0%B9%80%E0%B8%A7%E0%B8%93%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B9%84%E0%B8%97%E0%B8%A2-%E0%B8%A1%E0%B8%9C%E0%B8%A5%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%9A%E0%B8%88%E0%B8%99%E0%B8%96%E0%B8%87%E0%B8%A7%E0%B8%99%E0%B8%97-13-%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%84%E0%B8%A1-2569-%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%97-9-255-2569",
-        "summary": "TMD exposed no public engagement counters. The warning was separately reported by The Pattaya News within hours; selection is based on current nationwide safety relevance and primary-source confirmation, not a popularity rank."
+        "observedAt": "2026-10-12T08:04:00+07:00",
+        "sourceUrl": "https://thailand.go.th/issue-focus-detail/bangkok-travel-and-public-service-updates-during-the-2026-imfworld-bank-group-annual-meetings",
+        "summary": "Thailand.go.th displayed 335 views and 0 comments for the travel/public-service update, versus 133 views and 0 comments for its same-day roads-around-QSNCC update. These are directly comparable counters on one official platform, not a nationwide popularity measure."
       }
     },
     {
       "category": "thailand",
-      "when": "10.10 · 🇹🇭",
-      "href": "https://www.reuters.com/world/asia-pacific/thailand-prepares-host-imf-world-bank-meetings-2026-10-10/",
-      "ru": "Бангкок завершает подготовку к ежегодным встречам МВФ и Всемирного банка 12–18 октября. Ожидаются более 15 тысяч участников из 191 страны; в программе — мировая экономика, финансовая стабильность, развитие и рабочие места.",
-      "en": "Bangkok is completing preparations for the IMF and World Bank Annual Meetings on 12–18 October. More than 15,000 participants from 191 countries are expected to discuss the global economy, financial stability, development and jobs.",
-      "th": "กรุงเทพฯ เตรียมความพร้อมขั้นสุดท้ายสำหรับการประชุมประจำปีของ IMF และธนาคารโลกวันที่ 12–18 ตุลาคม โดยคาดว่าจะมีผู้เข้าร่วมกว่า 15,000 คนจาก 191 ประเทศ เพื่อหารือเศรษฐกิจโลก เสถียรภาพการเงิน การพัฒนา และการจ้างงาน",
-      "publishedAt": "2026-10-10",
+      "when": "11.10 · 🇹🇭",
+      "href": "https://suvarnabhumi.airportthai.co.th/service/airport-guide/detail/Guidelines_CheckedBaggage_Inspection",
+      "ru": "С 16 октября служба безопасности аэропортов Таиланда сможет вскрывать отмеченный досмотром зарегистрированный багаж без присутствия владельца. Основанием должно быть подозрение на запрещённый предмет; процесс записывают на видео, а внутрь кладут уведомление. Пауэрбанки и запасные литиевые батареи нужно перевозить только в ручной клади.",
+      "en": "From 16 October, Thai airport security may open checked baggage flagged by screening without the owner present. There must be reasonable grounds to suspect a prohibited item; the process is video-recorded and a notice is placed inside. Power banks and spare lithium batteries must travel in cabin baggage only.",
+      "th": "ตั้งแต่ 16 ตุลาคม เจ้าหน้าที่รักษาความปลอดภัยสนามบินไทยสามารถเปิดสัมภาระโหลดใต้เครื่องที่ถูกตรวจพบความเสี่ยงได้โดยเจ้าของไม่ต้องอยู่ด้วย ต้องมีเหตุอันควรสงสัยว่ามีสิ่งของต้องห้าม ขั้นตอนจะบันทึกวิดีโอและใส่ใบแจ้งไว้ในกระเป๋า ส่วนพาวเวอร์แบงก์และแบตเตอรี่ลิเธียมสำรองต้องถือขึ้นเครื่องเท่านั้น",
+      "publishedAt": "2026-10-11",
       "sources": [
-        "https://www.reuters.com/world/asia-pacific/thailand-prepares-host-imf-world-bank-meetings-2026-10-10/",
-        "https://thailand.go.th/issue-focus-detail/thailand-ready-to-host-2026-imf-world-bank-group-annual-meetings-12-18-october-",
-        "https://www.worldbank.org/en/meetings/splash/annual"
+        "https://suvarnabhumi.airportthai.co.th/service/airport-guide/detail/Guidelines_CheckedBaggage_Inspection",
+        "https://www.caat.or.th/laws-regulations/197717/",
+        "https://thepattayanews.com/2026/10/11/thai-airports-can-open-suspicious-checked-bags-without-the-owner-present-from-october-16th-mixed-reaction-online/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-11T08:34:00+07:00",
-        "sourceUrl": "https://www.reuters.com/world/asia-pacific/thailand-prepares-host-imf-world-bank-meetings-2026-10-10/",
-        "summary": "Reuters exposed no public comment or share total. Thailand's official host update and the World Bank meeting page independently confirm the event and scale; this is broad primary-source coverage, not a measured popularity ranking."
+        "observedAt": "2026-10-12T08:04:00+07:00",
+        "sourceUrl": "https://thepattayanews.com/2026/10/11/thai-airports-can-open-suspicious-checked-bags-without-the-owner-present-from-october-16th-mixed-reaction-online/",
+        "summary": "The report appeared third in The Pattaya News Top/Recent list and described visible reaction as largely cautious, but neither it nor the AOT and CAAT primary pages exposed comparable comment, share or view totals. Selection rests on immediate nationwide passenger relevance and primary-source confirmation, not a measured popularity rank."
       }
     },
     {
       "category": "pattaya",
-      "when": "10.10 · Pattaya",
-      "href": "https://thepattayanews.com/2026/10/10/many-pattaya-police-deployed-to-bali-hai-pier-as-public-land-encroachment-dispute-runs-toward-a-deadline/",
-      "ru": "Полиция усилила присутствие у пирса Бали Хай во время спора об использовании муниципальной земли. Власти заявили, что задача — не допустить конфликта и сохранить движение паромов на Ко Лан; задержаний и столкновений не сообщалось, юридический спор не завершён.",
-      "en": "Police increased their presence at Bali Hai Pier during a dispute over the use of public land. Officials said the aim was to prevent confrontation and keep Koh Larn ferries moving; no arrests or clashes were reported, and the legal dispute remains unresolved.",
-      "th": "ตำรวจเพิ่มกำลังที่ท่าเรือแหลมบาลีฮายระหว่างข้อพิพาทเรื่องการใช้ที่สาธารณะ โดยระบุว่าเป้าหมายคือป้องกันการเผชิญหน้าและให้เรือเฟอร์รี่ไปเกาะล้านเดินทางต่อได้ ไม่มีรายงานการจับกุมหรือปะทะ และข้อพิพาททางกฎหมายยังไม่ยุติ",
-      "publishedAt": "2026-10-10",
+      "when": "11.10 · Pattaya",
+      "href": "https://thepattayanews.com/2026/10/11/pattaya-police-arrest-thai-woman-and-two-overstaying-koreans-with-37-etomidate-zombie-pods/",
+      "ru": "Полиция Паттайи сообщила о задержании трёх человек после проверки дома в Нонгпры, где, по версии следствия, обнаружили капсулы с этомидатом, электронную сигарету и небольшое количество метамфетамина. Всем предъявлены обвинения, двум иностранцам также вменяют просрочку виз; виновность определит суд.",
+      "en": "Pattaya police reported detaining three people after searching a Nongprue house where investigators say they found etomidate pods, an e-cigarette and a small amount of methamphetamine. All face charges, and two foreign nationals also face overstay allegations; guilt is for the court to determine.",
+      "th": "ตำรวจพัทยารายงานว่าควบคุมตัว 3 คนหลังตรวจค้นบ้านในหนองปรือ โดยพนักงานสอบสวนระบุว่าพบพอดที่มีเอโทมิเดต บุหรี่ไฟฟ้า และเมทแอมเฟตามีนปริมาณเล็กน้อย ทั้งหมดถูกแจ้งข้อหา และชาวต่างชาติ 2 คนถูกกล่าวหาเรื่องอยู่เกินกำหนดด้วย ศาลจะเป็นผู้วินิจฉัยความผิด",
+      "publishedAt": "2026-10-11",
       "sources": [
-        "https://thepattayanews.com/2026/10/10/many-pattaya-police-deployed-to-bali-hai-pier-as-public-land-encroachment-dispute-runs-toward-a-deadline/"
+        "https://thepattayanews.com/2026/10/11/pattaya-police-arrest-thai-woman-and-two-overstaying-koreans-with-37-etomidate-zombie-pods/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-11T08:34:00+07:00",
-        "sourceUrl": "https://thepattayanews.com/2026/10/10/many-pattaya-police-deployed-to-bali-hai-pier-as-public-land-encroachment-dispute-runs-toward-a-deadline/",
-        "summary": "The report was displayed near the top of The Pattaya News homepage among the newest stories, but no comparable reaction, view or comment total was visible. Selected for immediate impact at Pattaya's main Koh Larn ferry pier; no popularity rank is claimed."
+        "observedAt": "2026-10-12T08:04:00+07:00",
+        "sourceUrl": "https://thepattayanews.com/",
+        "summary": "The article led The Pattaya News Top/Recent list at observation time. The page exposed no comparable view, reaction, share or comment total, so this is an outlet-recency signal and local public-safety relevance, not a citywide popularity rank."
       }
     },
     {
       "category": "pattaya",
-      "when": "09.10 · Pattaya",
-      "href": "https://thepattayanews.com/2026/10/09/pattaya-surveys-about-70-rai-of-encroached-public-land-for-a-community-park/",
-      "ru": "Паттайя обследовала около 70 рай муниципальной земли для возможного общественного парка с зонами отдыха для детей и подростков. Границы участка ещё проходят оформление в Земельном департаменте; место, бюджет и сроки пока не объявлены.",
-      "en": "Pattaya surveyed about 70 rai of public land for a possible community park with recreation areas for children and teenagers. The boundary is still going through Land Department certification; the location, budget and timetable have not been announced.",
-      "th": "เมืองพัทยาสำรวจที่สาธารณะประมาณ 70 ไร่เพื่อพิจารณาพัฒนาเป็นสวนชุมชนและพื้นที่กิจกรรมสำหรับเด็กและเยาวชน ขอบเขตที่ดินยังอยู่ระหว่างกระบวนการรับรองของกรมที่ดิน และยังไม่ประกาศสถานที่ งบประมาณ หรือกรอบเวลา",
-      "publishedAt": "2026-10-09",
+      "when": "11.10 · Pattaya",
+      "href": "https://thepattayanews.com/2026/10/11/pattaya-tourist-police-take-food-water-and-drones-into-flooded-bang-khla-to-help-flood-victims/",
+      "ru": "Туристическая полиция из подразделения района Паттайи доставила еду, воду и предметы первой необходимости в затопленный район Банг Кхла. Для домов на глубоководных участках задействован автомобиль с дронами: их используют для доставки, ночного поиска с тепловизором и передачи предупреждений.",
+      "en": "Tourist police from the Pattaya-area command delivered food, water and essential supplies to flooded Bang Khla. A drone-support vehicle is being used to reach homes in deep water, search at night with a thermal camera and broadcast warnings.",
+      "th": "ตำรวจท่องเที่ยวจากหน่วยพื้นที่พัทยานำอาหาร น้ำ และของจำเป็นไปช่วยพื้นที่น้ำท่วมบางคล้า พร้อมใช้รถสนับสนุนโดรนเพื่อส่งของไปยังบ้านที่น้ำลึก ค้นหาในเวลากลางคืนด้วยกล้องความร้อน และกระจายคำเตือน",
+      "publishedAt": "2026-10-11",
       "sources": [
-        "https://thepattayanews.com/2026/10/09/pattaya-surveys-about-70-rai-of-encroached-public-land-for-a-community-park/"
+        "https://thepattayanews.com/2026/10/11/pattaya-tourist-police-take-food-water-and-drones-into-flooded-bang-khla-to-help-flood-victims/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-11T08:34:00+07:00",
-        "sourceUrl": "https://thepattayanews.com/2026/10/09/pattaya-surveys-about-70-rai-of-encroached-public-land-for-a-community-park/",
-        "summary": "The Pattaya News homepage included the report in its Selected Top Articles section, but the article exposed no comparable reaction, share, view or comment total. This is an outlet-curation signal, not a citywide popularity rank."
+        "observedAt": "2026-10-12T08:04:00+07:00",
+        "sourceUrl": "https://thepattayanews.com/",
+        "summary": "The article ranked second in The Pattaya News Top/Recent list at observation time. No comparable public view, reaction, share or comment total was exposed; selection reflects fresh coverage of the Pattaya-area command's emergency response, not a popularity claim."
       }
     }
   ],
@@ -117,5 +118,5 @@
       "verifiedAt": "2026-10-10"
     }
   ],
-  "selection": "Exactly 1 non-war world story, 2 Thailand stories and 2 Pattaya stories; reviewed 2026-10-11 in Asia/Bangkok. Four stories were published within the previous 24 hours; the community-park report is about 33 hours old and was retained within the allowed 72-hour window because no stronger independently verifiable second Pattaya civic story with comparable public engagement data was available. No new official or reliably corroborated scam warning was found; the still-relevant PEA impersonation investigation remains active with its original verification date unchanged."
+  "selection": "Exactly 1 non-war world story, 2 Thailand stories and 2 Pattaya-area stories; reviewed 2026-10-12 in Asia/Bangkok. All five reports were published during the previous 24 hours. The second Pattaya item concerns emergency work by the Pattaya-area Tourist Police command in flooded Bang Khla and is labelled accordingly rather than presented as an event inside Pattaya city. Public discussion counters were recorded where directly comparable and limitations were stated elsewhere. No new official or reliably corroborated scam warning was found; the still-relevant PEA impersonation investigation remains active with its original verification date unchanged."
 }
