@@ -1,0 +1,44 @@
+{
+  "id": "musselana-shabu",
+  "name": "Shabu · Musselana Condo",
+  "cat": "food",
+  "area": "Jomtien · Musselana Condo",
+  "price": "80 ฿",
+  "badge": "ok",
+  "photo": "assets/images/places/musselana-shabu/1.webp",
+  "photos": [
+    "assets/images/places/musselana-shabu/1.webp",
+    "assets/images/places/musselana-shabu/2.webp",
+    "assets/images/places/musselana-shabu/3.webp",
+    "assets/images/places/musselana-shabu/4.webp",
+    "assets/images/places/musselana-shabu/5.webp"
+  ],
+  "maps": "https://www.google.com/maps/search/?api=1&query=7P42VV6W%2BG8C",
+  "plusCode": "VV6W+G8C",
+  "fullPlusCode": "7P42VV6W+G8C",
+  "coordinates": [
+    12.8613125,
+    100.895765625
+  ],
+  "blurb": {
+    "ru": "Наваристый суп за 80 бат. Весёлые, честные ребята — личная рекомендация автора 👌😎",
+    "en": "Rich soup for 80 baht. Cheerful, honest people — personally recommended by the author 👌😎",
+    "th": "ซุปเข้มข้น 80 บาท คนขายร่าเริงและซื่อสัตย์ — ผู้ดูแลแนะนำจากประสบการณ์ส่วนตัว 👌😎"
+  },
+  "conditions": {
+    "ru": "Обычно стоят в районе Musselana Condo. Работают примерно с 13:00 до вечера или пока всё не продадут. Google Plus Code: VV6W+G8C, Паттайя, Банламунг, Чонбури.",
+    "en": "Usually near Musselana Condo. Open from around 13:00 until evening, or until sold out. Google Plus Code: VV6W+G8C, Pattaya, Bang Lamung, Chon Buri.",
+    "th": "ปกติจอดขายบริเวณ Musselana Condo เริ่มประมาณ 13:00 น. จนถึงช่วงเย็นหรือจนกว่าสินค้าจะหมด Google Plus Code: VV6W+G8C พัทยา บางละมุง ชลบุรี"
+  },
+  "hoursText": {
+    "ru": "≈ 13:00 — до вечера / пока не распродадут",
+    "en": "≈ 13:00 — evening / until sold out",
+    "th": "≈ 13:00 น. — เย็น / จนกว่าจะขายหมด"
+  },
+  "ownerReview": {
+    "ru": "От автора: «За 80 бат можно поесть отличного наваристого супа! Ел у них почти каждый день 2 недели подряд. С животом всё в порядке 👌😎 Весёлые, честные ребята! Рекомендую!»",
+    "en": "From the author: “For 80 baht you can enjoy an excellent, rich soup! I ate here almost every day for two weeks. No stomach trouble 👌😎 Cheerful, honest people! Recommended!”",
+    "th": "จากผู้ดูแล: “80 บาทก็ได้กินซุปเข้มข้นอร่อยมาก! ผมกินที่นี่แทบทุกวันติดต่อกันสองสัปดาห์ ไม่มีปัญหาท้องเลย 👌😎 คนขายร่าเริงและซื่อสัตย์ ขอแนะนำ!”"
+  },
+  "comments": []
+}

@@ -1672,5 +1672,7 @@ await import('./scripts/apply-author-chat.mjs');
 
 await import('./scripts/apply-ga4-events.mjs');
 
+await import('./scripts/apply-owner-place.mjs');
+
 // Set release identity after all patches; browser startup must never change it.
 await import('./scripts/finalize-release-cache.mjs');
