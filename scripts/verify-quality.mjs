@@ -35,7 +35,7 @@ assert(html.includes("id:'ex24',name:'EX24'"),'Owner EX24 card missing');
 assert(html.includes('Быстрая доставка.')&&html.includes('доставка обычно около 2 часов.'),'Exchange delivery notes missing');
 assert(html.includes('✓ OK · Проверено'),'Senate owner verification badge missing');
 assert(html.includes('https://ex24qr.com/sf5vfvhnf'),'EX24 referral missing');
-assert(html.includes("name:'Senate Exchange',resourceUrl:'https://t.me/SenateExchange_bot',checkedDate:'13.10.2026'"),'Dated Senate reference card missing');
+assert(html.includes("name:'Senate Exchange',resourceUrl:'https://t.me/SenateExchange_bot?start=fi10072',checkedDate:'13.10.2026'"),'Dated Senate card or protected referral missing');
 for(const file of ['config.js','assets/commerce/partners.js','assets/spatial/pattaya-map.js'])assert(!/Senate Exchange|SenateExchange_bot|fi10072/.test(readFileSync(root+'/'+file,'utf8')),'Retired Senate placement returned: '+file);
 console.log('PASS: size budgets, SEO, PWA icons/offline assets, API cache bypass and owner exchange cards',measured);
 const home=html.slice(html.indexOf('    function renderHome() {'),html.indexOf('    function renderList() {'));

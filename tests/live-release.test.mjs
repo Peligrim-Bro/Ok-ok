@@ -28,3 +28,7 @@ test('a retired partner in runtime config fails the release check',async()=>{
 test('an unavailable health endpoint fails the release check',async()=>{
  await assert.rejects(verifyLive(commit,request({'/api/oki/health':null})),/HTTP 503/);
 });
+test('stripping the Senate referral code fails the release check',async()=>{
+ const html=readFileSync('site/public/index.html','utf8').replaceAll('?start=fi10072','');
+ await assert.rejects(verifyLive(commit,request({'/':html})),/protected referral missing/);
+});

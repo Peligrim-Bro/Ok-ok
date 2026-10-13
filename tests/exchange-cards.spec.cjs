@@ -26,7 +26,8 @@ for(const lang of ['ru','en','th'])for(const theme of ['dark','light'])test(`own
  await expect(page.locator('#partnerCard')).not.toContainText(/Telegram|Senate/i);
  await page.locator('#partnerClose').click();await page.locator('#closeSheet').click();
  await senate.click();await expect(page.locator('#sheet')).toContainText('13.10.2026');
- await expect(page.locator('#sheet a[href="https://t.me/SenateExchange_bot"]')).toBeVisible();
+ await expect(page.locator('#sheet a[href="https://t.me/SenateExchange_bot?start=fi10072"]')).toBeVisible();
+ await expect(page.locator('#sheet a[href="https://t.me/SenateExchange_bot?start=fi10072"]')).toHaveAttribute('rel','noopener sponsored');
  await page.locator('#closeSheet').click();await page.locator('nav.tab [data-tab="home"]').click();
  await page.locator('[data-spin]').click();await expect(page.locator('.holiday-partner')).toContainText('EX24');
  await expect(page.locator('.holiday-partner a')).toHaveAttribute('href','https://ex24qr.com/sf5vfvhnf');
