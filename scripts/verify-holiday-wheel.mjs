@@ -23,7 +23,7 @@ const restored={...context};vm.createContext(restored);vm.runInContext(source,re
 assert.equal(vm.runInContext('holidayState.saved.length',restored),1);
 assert.equal(vm.runInContext('holidayState.visited.length',restored),1);
 assert.ok(!source.includes('Math.random() < 0.22'));
-assert.ok(source.includes('start=fi10072'));
+assert.ok(source.includes('https://ex24qr.com/sf5vfvhnf'));
 console.log('PASS holiday wheel: 50 unique places, categories, no repeats, visited exclusion, saved persistence, RU/EN/TH and Senate referral.');
 
 run("holidayState.seen=[];holidayState.visited=[];holidayCategory='all';holidayTime='hour'");

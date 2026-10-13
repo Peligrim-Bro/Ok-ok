@@ -14,7 +14,7 @@
 
 - Editorial polish approved 2026-10-06: preserve Tropical Night ceramic gloss and the 3D background. Avoid ornate filler and unsupported claims of personal visits, billing honesty or verification dates. Do not restore the hardcoded September 2026 checked stamp. Localize UI labels in RU/EN/TH; distinguish scheduled hours from live business status. Paid examples remain explicitly labelled. Keep support sheen non-looping; preserve tap effects.
 - Tickers (owner 2026-10-07): both top strips scroll, without category labels such as advertising/links. Respect reduced motion and interaction pauses. Temporarily exclude PattayaOK's Telegram channel from these strips only; preserve Telegram buttons elsewhere and Senate's referral.
-- Senate ticker (2026-10-07): advertise currency exchange without an office, street or branch mention; RU/EN/TH must use https://t.me/SenateExchange_bot?start=fi10072. This applies to the ticker, not the listing's address.
+- Exchange partner (owner 2026-10-13): EX24 uses https://ex24qr.com/sf5vfvhnf in every promotional placement, including both tickers, holiday wheel and map. Senate remains only a separate verified resource card dated 13.10.2026, linking to its plain Telegram bot. apply-ex24-referral.mjs is the final partner override before release cache finalization; preserve other referrals and avoid duplicate EX24 cards.
 
 - Owner-approved palette (2026-10-06): saturated Tropical Night. Source of truth: tropical-gloss.css, applied by scripts/apply-tropical-gloss.mjs in every build. Dark base #061d27, panels #103743, text #f4f1ea, mint #57efc3; coral ceramic primary action; light base #eef5ef. Preserve sculpted glossy buttons, bright top highlights, rim and depth shadows. Do not flatten controls, revert to lavender/grey, recolor the 3D background or change layout without approval. Preserve semantic warning/vote colors.
 
@@ -53,7 +53,7 @@ GitHub Actions checks are diagnostic; they do not gate Cloudflare's independent 
 - Header utility buttons (support, theme, language, report) and their grid row stay 44px high, with explicit height/min/max-height. Preserve this mobile Safari fix; never rely only on min-height or grid stretching.
 
 ## Automated quality control
-- Read OKOK_RULES.md for the quality workflow. Owner 2026-10-10 restored one EX24 delivery card and Senate, both with the OK verification badge. scripts/remove-ex24.mjs cleans archived branches then restores these owner-approved cards in every build; preserve Senate referral fi10072 and RU/EN/TH delivery notes.
+- Read OKOK_RULES.md for the quality workflow. scripts/remove-ex24.mjs cleans archived branches; the final apply-ex24-referral.mjs enforces the owner’s 2026-10-13 decision: EX24 referral in promotions and one dated Senate reference card, both with OK verification badges.
 - telegram-build.mjs validates the completed output with verify-project.mjs and verify-quality.mjs. Preserve this native Cloudflare build gate.
 - Use npm run build, npm run test:mobile and npm run audit. Keep reports as GitHub Actions artifacts; do not publish them as site content.
 - /build-info.json records the deployed source commit. Check it after publishing; do not infer success only from the source ref.

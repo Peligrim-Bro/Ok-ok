@@ -53,6 +53,8 @@ assert(!/agoda/i.test(partnerSource),'Discontinued Agoda partner returned');
 const partnerContext={window:{}};
 new Script(partnerSource).runInNewContext(partnerContext);
 assert.deepEqual(Object.keys(partnerContext.window.OK_PARTNERS),['senate','klook','airalo','safetywing','travel12go'],'Other partners must remain');
+assert.equal(partnerContext.window.OK_PARTNERS.senate.name,'EX24');
+assert.equal(partnerContext.window.OK_PARTNERS.senate.ref,'https://ex24qr.com/sf5vfvhnf');
 assert.equal(partnerContext.window.OK_PARTNERS.klook.referralCode,'HAF8KW');
 assert.equal(partnerContext.window.OK_PARTNERS.airalo.referralCode,'TIMUR5494');
 assert.equal(partnerContext.window.OK_PARTNERS.travel12go.ref,'https://12go.asia/?z=17095940');

@@ -20,7 +20,7 @@ const tracker=String.raw`
       if(h.includes('12go.asia'))return '12go';
       if(h.includes('klook.com'))return 'klook';
       if(h.includes('airalo.com'))return 'airalo';
-      if(h.includes('t.me')&&/SenateExchange/i.test(u.href))return 'senate_exchange';
+      if(h==='ex24qr.com')return 'ex24_exchange';
     }catch{}
     return '';
   };
