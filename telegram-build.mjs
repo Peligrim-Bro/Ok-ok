@@ -34,6 +34,7 @@ if (existsSync(swPath)) {
 }
 console.log("Cloudflare Telegram, payments, report notifications and durable storage prepared.");
 
+await import('./scripts/apply-weather-server.mjs');
 // Validate the final output in native Workers Builds as well as GitHub Actions.
 await import('./scripts/verify-project.mjs');
 await import('./scripts/verify-quality.mjs');

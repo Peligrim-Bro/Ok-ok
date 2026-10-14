@@ -26,7 +26,7 @@ export async function verifyLive(commit,request=fetch){
  assert(home.indexOf('data-tours="1"')>=0&&home.indexOf('id="okAds"')>home.indexOf('data-tours="1"'),'Live primary actions must precede async ads');
  assert(html.includes('family=Manrope:wght@400;500;600;700;800&display=optional'),'Live font strategy changed');
  const background=await (await get('/assets/spatial/spatial.js')).text();
- assert(background.includes('hedgehogs-3d-v102'),'Approved 3D background missing');
+ assert(background.includes('weather-live-v103'),'Current-weather background missing');
  const manifest=await (await get('/manifest.json')).json();
  assert.equal(manifest.display,'standalone');
  for(const size of ['192x192','512x512']){

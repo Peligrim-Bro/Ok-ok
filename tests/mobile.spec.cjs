@@ -93,23 +93,44 @@ test('installed app can reopen the cached shell offline',async({page,context})=>
  await expect(page.locator('nav.tab button')).toHaveCount(5);
 });
 
-test('real 3D background stays idle, animates taps and respects reduced motion',async({page})=>{
+test('current weather animates rain, switches cities and respects reduced motion',async({page})=>{
+ await page.route('**/api/weather?city=*',route=>route.fulfill({json:{current:{weather:new URL(route.request().url()).searchParams.get('city')==='phuket'?'clear':'rain',is_day:1,wind_speed_10m:2,time:new Date().toISOString()}}}));
  await page.addInitScript(()=>{localStorage.setItem('pok-lang','ru');localStorage.setItem('pok-lang-set','1');});
  await page.goto('/',{waitUntil:'domcontentloaded'});
  const bg=page.locator('#spatial-background');
- await expect(bg).toHaveAttribute('data-renderer','webgl');
+ await expect(bg).toHaveAttribute('data-renderer','weather-live-v103');
+ await expect(bg).toHaveAttribute('data-weather','rain');
+ await expect(bg).toHaveAttribute('data-city','pattaya');
  await expect.poll(()=>bg.getAttribute('data-renders')).not.toBeNull();
  await page.waitForTimeout(300);
  const read=()=>bg.getAttribute('data-renders').then(Number);
- const idle=await read();await page.waitForTimeout(500);expect(await read()).toBe(idle);
+ const idle=await read();await page.waitForTimeout(500);expect(await read()).toBeGreaterThan(idle);
  await page.locator('#installClose').click();
  await page.evaluate(()=>document.body.dispatchEvent(new PointerEvent('pointerdown',{bubbles:true,clientX:innerWidth/2,clientY:innerHeight/2})));
  await expect.poll(read).toBeGreaterThan(idle);
- await page.waitForTimeout(2000);const settled=await read();await page.waitForTimeout(400);expect(await read()).toBe(settled);
+ await page.locator('[data-city="phuket"]').click();
+ await expect(bg).toHaveAttribute('data-city','phuket');
+ await expect(bg).toHaveAttribute('data-weather','clear');
+ await page.waitForTimeout(200);const settled=await read();await page.waitForTimeout(400);expect(await read()).toBe(settled);
  await page.locator('#themeBtn').click();await expect.poll(read).toBeGreaterThan(settled);
  await page.emulateMedia({reducedMotion:'reduce'});await page.waitForTimeout(200);
  const stopped=await read();
  await page.evaluate(()=>document.body.dispatchEvent(new PointerEvent('pointerdown',{bubbles:true,clientX:innerWidth/2,clientY:innerHeight/2})));
  await page.waitForTimeout(400);expect(await read()).toBe(stopped);
- await page.screenshot({path:'quality-reports/hedgehogs-light.png',fullPage:false});
+ await page.screenshot({path:'quality-reports/weather-light.png',fullPage:false});
+});
+for(const scenario of ['failure','stale','night','fog','storm'])test(`weather ${scenario} is honest and leaves controls reachable`,async({page})=>{
+ await page.route('**/api/weather?city=*',route=>scenario==='failure'?route.fulfill({status:503,json:{error:'weather_unavailable'}}):route.fulfill({json:{current:{weather:scenario==='fog'?'fog':scenario==='storm'?'storm':'clear',is_day:scenario==='night'?0:1,wind_speed_10m:2,time:new Date(Date.now()-(scenario==='stale'?7200e3:0)).toISOString()}}}));
+ await page.addInitScript(()=>{localStorage.setItem('pok-lang','ru');localStorage.setItem('pok-lang-set','1');});
+ await page.goto('/',{waitUntil:'domcontentloaded'});
+ const bg=page.locator('#spatial-background');
+ await expect(bg).toHaveAttribute('data-status',['failure','stale'].includes(scenario)?'unavailable':'current');
+ await expect(bg).toHaveAttribute('data-weather',['failure','stale'].includes(scenario)?'unknown':scenario==='night'?'clear':scenario);
+ if(scenario==='night')await expect(bg).toHaveAttribute('data-night','true');
+ expect(await bg.evaluate(n=>getComputedStyle(n).pointerEvents)).toBe('none');
+ await page.locator('#installClose').click();
+ await page.locator('#langBtn').click();await expect(page.locator('#langClose')).toBeVisible();await page.locator('#langClose').click();
+ await page.emulateMedia({reducedMotion:'reduce'});await page.waitForTimeout(200);
+ const stopped=await bg.getAttribute('data-renders');await page.waitForTimeout(200);expect(await bg.getAttribute('data-renders')).toBe(stopped);
+ await page.screenshot({path:`quality-reports/weather-${scenario}.png`,fullPage:false});
 });
