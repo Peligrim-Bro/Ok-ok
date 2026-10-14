@@ -1,96 +1,92 @@
 {
-  "verifiedAt": "2026-10-13",
+  "verifiedAt": "2026-10-14",
   "news": [
     {
       "category": "world",
-      "when": "12.10 · 🌍",
-      "href": "https://www.reuters.com/world/hall-woodford-win-2026-nobel-economics-prize-2026-10-12/",
-      "ru": "Премию по экономическим наукам памяти Альфреда Нобеля за 2026 год получили Роберт Холл и Майкл Вудфорд. Комитет отметил их модели, которые связывают решения домохозяйств и компаний с мерами по стабилизации экономики и помогают оценивать реакцию на инфляцию и другие шоки.",
-      "en": "Robert Hall and Michael Woodford received the 2026 prize in economic sciences in memory of Alfred Nobel. The committee recognised models linking household and business decisions to economic-stabilisation policy, helping policymakers assess responses to inflation and other shocks.",
-      "th": "โรเบิร์ต ฮอลล์ และไมเคิล วูดฟอร์ด ได้รับรางวัลเศรษฐศาสตร์เพื่อรำลึกถึงอัลเฟรด โนเบล ประจำปี 2026 คณะกรรมการยกย่องแบบจำลองที่เชื่อมการตัดสินใจของครัวเรือนและธุรกิจกับนโยบายรักษาเสถียรภาพ ช่วยประเมินการรับมือเงินเฟ้อและแรงกระแทกทางเศรษฐกิจอื่น ๆ",
-      "publishedAt": "2026-10-12",
+      "when": "13.10 · 🌍",
+      "href": "https://www.reuters.com/sustainability/multiple-hurricanes-hit-us-mexico-2026-10-13/",
+      "ru": "Сразу несколько тропических циклонов затронули США и Мексику. После урагана Исайяс на юго-востоке США восстанавливают электроснабжение и следят за риском паводков, а у тихоокеанского побережья Мексики ураган Симон принёс сильные дожди, наводнения и оползни; предупреждения для части побережья сохраняются.",
+      "en": "Several tropical cyclones have affected the United States and Mexico. Power restoration and flood monitoring continued in the US Southeast after Hurricane Isaias, while Hurricane Simon brought heavy rain, flooding and landslides to Mexico's Pacific coast; warnings remain in place for parts of the coastline.",
+      "th": "พายุหมุนเขตร้อนหลายลูกส่งผลกระทบต่อสหรัฐฯ และเม็กซิโก โดยภาคตะวันออกเฉียงใต้ของสหรัฐฯ เร่งฟื้นฟูไฟฟ้าและเฝ้าระวังน้ำท่วมหลังเฮอริเคนอิไซอัส ขณะที่เฮอริเคนไซมอนทำให้เกิดฝนหนัก น้ำท่วม และดินถล่มตามชายฝั่งแปซิฟิกของเม็กซิโก และบางพื้นที่ยังคงมีคำเตือน",
+      "publishedAt": "2026-10-13",
       "sources": [
-        "https://www.reuters.com/world/hall-woodford-win-2026-nobel-economics-prize-2026-10-12/",
-        "https://apnews.com/article/nobel-prize-economics-sweden-96f32f1aaeff1054e2dd653e6ea86268",
-        "https://www.lemonde.fr/en/economy/article/2026/10/12/economics-nobel-prize-awarded-to-americans-robert-hall-and-michael-woodford-who-rebuilt-the-macroeconomic-analytical-framework_6758528_19.html",
-        "https://news.stanford.edu/stories/2026/10/robert-e-hall-nobel-prize-economic-sciences",
-        "https://news.columbia.edu/news/columbias-michael-woodford-wins-2026-nobel-memorial-prize-economics"
+        "https://www.reuters.com/sustainability/multiple-hurricanes-hit-us-mexico-2026-10-13/",
+        "https://apnews.com/article/1276142fb7db0f50d0f61d86ae7fa977",
+        "https://www.nhc.noaa.gov/"
       ],
       "nonWar": true,
       "discussionEvidence": {
-        "observedAt": "2026-10-13T08:40:00+07:00",
-        "sourceUrl": "https://apnews.com/article/nobel-prize-economics-sweden-96f32f1aaeff1054e2dd653e6ea86268",
-        "summary": "AP placed the report first in its Business Top Stories list at observation time. Reuters and Le Monde also carried independent reports, while Stanford and Columbia confirmed the awards. The pages did not expose comparable view, share or comment totals, so this is broad cross-outlet coverage and an outlet-ranking signal, not a global popularity ranking."
+        "observedAt": "2026-10-14T08:40:00+07:00",
+        "sourceUrl": "https://www.reuters.com/sustainability/multiple-hurricanes-hit-us-mexico-2026-10-13/",
+        "summary": "Reuters and AP both led fresh reports on the storms, while the US National Hurricane Center maintained current advisories. The accessible pages exposed no comparable view, share or comment totals, so selection reflects broad independent coverage and continuing public-safety relevance, not a global popularity ranking."
       }
     },
     {
       "category": "thailand",
-      "when": "12.10 · 🇹🇭",
-      "href": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/550116",
-      "ru": "В Бангкоке открылись ежегодные встречи МВФ и Всемирного банка. В программе первого дня обсуждали практическое применение ИИ для создания и улучшения рабочих мест, перспективы молодёжи и доступность роста; павильон Таиланда представил цифровую инфраструктуру, устойчивость к климатическим рискам и систему долголетия и здоровья.",
-      "en": "The IMF–World Bank annual meetings opened in Bangkok. The first-day programme covered practical AI for more and better jobs, young people's economic prospects and inclusive growth; Thailand's pavilion presented digital public infrastructure, climate resilience and longevity and health systems.",
-      "th": "การประชุมประจำปี IMF–ธนาคารโลกเปิดขึ้นที่กรุงเทพฯ กิจกรรมวันแรกหารือการใช้ AI ในทางปฏิบัติเพื่อสร้างงานและยกระดับคุณภาพงาน อนาคตทางเศรษฐกิจของเยาวชน และการเติบโตอย่างทั่วถึง ส่วนพาวิลเลียนไทยนำเสนอโครงสร้างพื้นฐานดิจิทัล ความยืดหยุ่นต่อสภาพภูมิอากาศ และระบบสุขภาพรองรับสังคมอายุยืน",
-      "publishedAt": "2026-10-12",
+      "when": "13.10 · 🇹🇭",
+      "href": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/550532",
+      "ru": "Таиланд и Сингапур договорились расширять стратегическое партнёрство в цифровой экономике, продовольственной и энергетической безопасности, финансовых технологиях и развитии кадров. На встрече также обсуждались совместные меры против транснациональной преступности и онлайн-мошенничества.",
+      "en": "Thailand and Singapore agreed to deepen their strategic partnership in the digital economy, food and energy security, financial technology and workforce development. The meeting also covered cooperation against transnational crime and online scams.",
+      "th": "ไทยและสิงคโปร์ตกลงยกระดับหุ้นส่วนเชิงยุทธศาสตร์ด้านเศรษฐกิจดิจิทัล ความมั่นคงทางอาหารและพลังงาน เทคโนโลยีการเงิน และการพัฒนาบุคลากร พร้อมหารือความร่วมมือปราบปรามอาชญากรรมข้ามชาติและการหลอกลวงออนไลน์",
+      "publishedAt": "2026-10-13",
       "sources": [
-        "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/550116",
-        "https://www.thaigov.go.th/th/news/170064"
+        "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/550532"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-13T08:40:00+07:00",
-        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/550116",
-        "summary": "Thailand PRD displayed 168 views for this opening-day explainer, compared with 152 for its same-day inclusive-growth report, 67 for its flood-recovery report and 53 for its Andaman readiness report. These are directly comparable counters on one official platform, not nationwide popularity figures; no public comment totals were shown."
+        "observedAt": "2026-10-14T08:40:00+07:00",
+        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/550532",
+        "summary": "Thailand PRD displayed 189 views for this report, compared with 147 for its same-day IMF financial-stability report. These are directly comparable counters on one official platform, not nationwide popularity figures; no public comment totals were shown."
       }
     },
     {
       "category": "thailand",
-      "when": "12.10 · 🇹🇭",
-      "href": "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/550505",
-      "ru": "Правительство поручило начинать восстановление дорог, коммунальных сетей и населённых пунктов там, где вода отступила, сохраняя помощь в ещё затопленных районах. Центральное внимание постепенно переносится на юг страны из-за прогноза сильных дождей; власти рассматривают создание передового координационного центра.",
-      "en": "The government ordered road, utility and community recovery to begin where floodwater has receded, while assistance continues in areas still inundated. Central attention is shifting toward southern Thailand because of forecast heavy rain, with a forward coordination centre under consideration.",
-      "th": "รัฐบาลสั่งให้เริ่มฟื้นฟูถนน สาธารณูปโภค และชุมชนในพื้นที่ที่น้ำลดแล้ว พร้อมเดินหน้าช่วยเหลือพื้นที่ที่ยังมีน้ำท่วม ศูนย์กลางการเฝ้าระวังกำลังย้ายไปภาคใต้เนื่องจากพยากรณ์ฝนตกหนัก และอยู่ระหว่างพิจารณาจัดตั้งศูนย์บัญชาการส่วนหน้า",
-      "publishedAt": "2026-10-12",
+      "when": "13.10 · 🇹🇭",
+      "href": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/550675",
+      "ru": "МВФ представил в Бангкоке доклад о мировой финансовой стабильности. Среди рисков названы возможная резкая коррекция акций технологических и ИИ-компаний при высокой долговой нагрузке, колебания доходности гособлигаций и системные киберугрозы; для будущего Азии важны демография, ИИ и региональная интеграция.",
+      "en": "The IMF presented its global financial stability report in Bangkok. It highlighted a possible sharp correction in leveraged technology and AI stocks, volatility in government-bond yields and systemic cyber threats; demographics, AI and regional integration were identified as key forces shaping Asia's future.",
+      "th": "IMF เปิดเผยรายงานเสถียรภาพการเงินโลกที่กรุงเทพฯ โดยระบุความเสี่ยงจากการปรับฐานรุนแรงของหุ้นเทคโนโลยีและ AI ที่มีการใช้เงินกู้สูง ความผันผวนของอัตราผลตอบแทนพันธบัตรรัฐบาล และภัยไซเบอร์เชิงระบบ ส่วนอนาคตของเอเชียจะได้รับอิทธิพลจากโครงสร้างประชากร AI และการบูรณาการในภูมิภาค",
+      "publishedAt": "2026-10-13",
       "sources": [
-        "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/550505",
-        "https://www.reuters.com/business/environment/thailand-flood-death-toll-since-september-16-rises-71-interior-ministry-says-2026-10-12/"
+        "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/550675"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-13T08:40:00+07:00",
-        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/550505",
-        "summary": "Thailand PRD displayed 67 views, versus 53 for its same-day Andaman flood-readiness report. Reuters independently covered the national flood situation. These official-platform counts are comparable only within that site and are not a nationwide discussion ranking; no public comment totals were shown."
+        "observedAt": "2026-10-14T08:40:00+07:00",
+        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/550675",
+        "summary": "Thailand PRD displayed 147 views at observation time, versus 189 for its same-day Thailand–Singapore report. These counts are comparable only within the official platform and are not a nationwide discussion ranking; no public comment totals were shown."
       }
     },
     {
       "category": "pattaya",
-      "when": "12.10 · Pattaya",
-      "href": "https://thepattayanews.com/2026/10/12/pattaya-prepares-for-loy-krathong-2026-celebrations-at-lan-pho-park-and-koh-larn/",
-      "ru": "Паттайя готовит празднование Лой Кратонга: основная программа намечена на 24 ноября в парке Лан Пхо в Наклыа, а на Ко Лане — на 23–24 ноября у Wat Mai Samran. В планах лодочные соревнования, местная еда и конкурсы кратонгов из природных материалов; окончательное расписание ещё уточняется.",
-      "en": "Pattaya is preparing Loy Krathong events, with the main programme planned for 24 November at Lan Pho Park in Naklua and Koh Larn activities on 23–24 November near Wat Mai Samran. Boat races, local food and natural-material krathong contests are planned; the final schedule is still being developed.",
-      "th": "พัทยาเตรียมจัดงานลอยกระทง โดยงานหลักวางแผนจัดวันที่ 24 พฤศจิกายนที่สวนสาธารณะลานโพธิ์ นาเกลือ และกิจกรรมบนเกาะล้านวันที่ 23–24 พฤศจิกายนบริเวณวัดใหม่สำราญ มีแผนจัดแข่งพายเรือ อาหารท้องถิ่น และประกวดกระทงจากวัสดุธรรมชาติ ส่วนกำหนดการสุดท้ายยังอยู่ระหว่างจัดทำ",
-      "publishedAt": "2026-10-12",
+      "when": "14.10 · Pattaya",
+      "href": "https://thepattayanews.com/2026/10/14/pattaya-restaurant-owner-and-family-give-away-free-meals-for-eighth-consecutive-year-in-tribute-to-his-royal-majesty-king-rama-ix-the-great/",
+      "ru": "В Нонгпры семья владельца ресторана Je Ya Sukhothai Pad Thai восьмой год подряд раздавала бесплатные блюда и напитки в память о короле Раме IX. Благотворительную акцию провели 13 октября у заведения рядом с Soi Nern Phlap Wan, пока не закончились приготовленные запасы.",
+      "en": "In Nongprue, the family behind Je Ya Sukhothai Pad Thai gave away free meals and drinks for an eighth consecutive year in memory of King Rama IX. The annual charity event was held on 13 October near Soi Nern Phlap Wan and continued until the prepared supplies ran out.",
+      "th": "ครอบครัวเจ้าของร้านเจ๊หยา ผัดไทยสุโขทัย ในหนองปรือ แจกอาหารและเครื่องดื่มฟรีเป็นปีที่ 8 ติดต่อกันเพื่อน้อมรำลึกถึงในหลวงรัชกาลที่ 9 กิจกรรมจัดเมื่อวันที่ 13 ตุลาคม บริเวณใกล้ซอยเนินพลับหวานจนอาหารที่เตรียมไว้หมด",
+      "publishedAt": "2026-10-14",
       "sources": [
-        "https://thepattayanews.com/2026/10/12/pattaya-prepares-for-loy-krathong-2026-celebrations-at-lan-pho-park-and-koh-larn/"
+        "https://thepattayanews.com/2026/10/14/pattaya-restaurant-owner-and-family-give-away-free-meals-for-eighth-consecutive-year-in-tribute-to-his-royal-majesty-king-rama-ix-the-great/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-13T08:40:00+07:00",
+        "observedAt": "2026-10-14T08:40:00+07:00",
         "sourceUrl": "https://thepattayanews.com/",
-        "summary": "This was the newest Pattaya-specific item in The Pattaya News public feed at observation time. The article and feed exposed no comparable view, reaction, share or comment totals, so selection reflects freshness and practical local relevance, not a measured citywide popularity rank."
+        "summary": "This was the newest non-crime Pattaya-area report in The Pattaya News public feed at observation time. The article and feed exposed no comparable view, reaction, share or comment totals, so selection reflects freshness and local community relevance, not a measured citywide popularity rank."
       }
     },
     {
       "category": "pattaya",
-      "when": "12.10 · Pattaya",
-      "href": "https://thepattayanews.com/2026/10/12/banglamung-district-advances-flood-relief-138-applications-approved-and-14-still-pending/",
-      "ru": "В Бангламунге власти сообщили об одобрении 138 заявок на помощь после наводнения; ещё 14 заявок из Khao Mai Kaeo и Nong Pla Lai проверяют из-за расхождений в регистрации и адресах. Отдельно рассмотрены новые заявки из Нонгпры, Лаемчабанга и Паттайи перед передачей на следующий этап.",
-      "en": "Banglamung officials said 138 flood-relief applications had been approved, while 14 cases from Khao Mai Kaeo and Nong Pla Lai remain under review because of registration and address discrepancies. Additional applications from Nongprue, Laem Chabang and Pattaya were separately checked before submission.",
-      "th": "เจ้าหน้าที่บางละมุงรายงานว่าอนุมัติคำขอช่วยเหลือผู้ประสบอุทกภัยแล้ว 138 ราย ขณะที่อีก 14 รายจากเขาไม้แก้วและหนองปลาไหลยังอยู่ระหว่างตรวจสอบเพราะข้อมูลทะเบียนและที่อยู่ไม่ตรงกัน นอกจากนี้ยังตรวจคำขอชุดใหม่จากหนองปรือ แหลมฉบัง และพัทยาก่อนส่งต่อ",
-      "publishedAt": "2026-10-12",
+      "when": "13.10 · Pattaya",
+      "href": "https://thepattayanews.com/2026/10/13/pattaya-police-sweep-10-abandoned-buildings-in-soi-thepprasit-detain-24-people/",
+      "ru": "Полиция Паттайи сообщила о проверке десяти заброшенных зданий на Soi Thepprasit после жалоб жителей. Для дальнейшей проверки были доставлены 24 человека; полиция заявила о предварительных результатах полевых тестов, двух случаях обнаружения наркотиков и одном действующем ордере. Расследование продолжается, виновность определяет суд.",
+      "en": "Pattaya police reported searches of ten abandoned buildings on Soi Thepprasit following residents' complaints. Twenty-four people were taken for further checks; police cited preliminary field-test results, two alleged drug-possession cases and one outstanding warrant. The investigation continues, and guilt is for the court to determine.",
+      "th": "ตำรวจพัทยารายงานการตรวจค้นอาคารร้าง 10 แห่งในซอยเทพประสิทธิ์หลังได้รับข้อร้องเรียนจากประชาชน และนำตัว 24 คนไปตรวจสอบเพิ่มเติม ตำรวจระบุผลตรวจภาคสนามเบื้องต้น การพบยาเสพติด 2 กรณี และหมายจับค้างเก่า 1 ราย คดียังอยู่ระหว่างสอบสวนและศาลเป็นผู้วินิจฉัยความผิด",
+      "publishedAt": "2026-10-13",
       "sources": [
-        "https://thepattayanews.com/2026/10/12/banglamung-district-advances-flood-relief-138-applications-approved-and-14-still-pending/"
+        "https://thepattayanews.com/2026/10/13/pattaya-police-sweep-10-abandoned-buildings-in-soi-thepprasit-detain-24-people/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-13T08:40:00+07:00",
-        "sourceUrl": "https://thepattayanews.com/2026/10/12/banglamung-district-advances-flood-relief-138-applications-approved-and-14-still-pending/",
-        "summary": "No comparable public view, reaction, share or comment total was exposed for the local reports reviewed. This item was selected for direct practical relevance to residents across Banglamung, including Pattaya, from the outlet's same-day public feed; it is not a popularity ranking."
+        "observedAt": "2026-10-14T08:40:00+07:00",
+        "sourceUrl": "https://thepattayanews.com/2026/10/13/pattaya-police-sweep-10-abandoned-buildings-in-soi-thepprasit-detain-24-people/",
+        "summary": "No comparable public view, reaction, share or comment totals were exposed for the local reports reviewed. This item was selected from the previous day's feed for direct neighbourhood-safety relevance and a clearly attributed police account; it is not a popularity ranking."
       }
     }
   ],
@@ -117,7 +113,30 @@
         "https://thepattayanews.com/2026/10/08/pattaya-tourist-police-arrest-four-people-in-mule-account-gang-linked-to-pea-impersonation-scam/"
       ],
       "verifiedAt": "2026-10-10"
+    },
+    {
+      "id": "fake-cyber-police-recovery-pattaya-2026-10",
+      "title": {
+        "ru": "Ложные «киберполицейские» обещают вернуть деньги",
+        "en": "Fake cyber police promise to recover money",
+        "th": "มิจฉาชีพอ้างเป็นตำรวจไซเบอร์เสนอช่วยทวงเงินคืน"
+      },
+      "text": {
+        "ru": "Полиция региона 2 и Паттайи сообщила о расследовании предполагаемого кол-центра, который выдавал себя за киберполицию и предлагал прежним жертвам мошенников вернуть деньги, присылая QR-коды. Задержаны три человека; число потерпевших и ущерб не подтверждены, расследование продолжается, виновность определяет суд.",
+        "en": "Provincial Police Region 2 and Pattaya police reported an investigation into an alleged call centre impersonating cyber police and offering previous scam victims help recovering money, including by sending QR codes. Three people were arrested; victim numbers and losses remain unconfirmed, the investigation continues, and guilt is for the court to determine.",
+        "th": "ตำรวจภูธรภาค 2 และตำรวจพัทยารายงานการสอบสวนคอลเซ็นเตอร์ต้องสงสัยที่แอบอ้างเป็นตำรวจไซเบอร์ เสนอช่วยผู้ที่เคยถูกหลอกให้ได้เงินคืนและส่งคิวอาร์โค้ด มีผู้ถูกจับกุม 3 คน แต่จำนวนผู้เสียหายและมูลค่าความเสียหายยังไม่ได้รับการยืนยัน คดียังอยู่ระหว่างสอบสวนและศาลเป็นผู้วินิจฉัยความผิด"
+      },
+      "do": {
+        "ru": "Не доверяйте неожиданным предложениям «вернуть деньги», не сканируйте присланные QR-коды и не давайте доступ к банку. Самостоятельно свяжитесь с официальным подразделением полиции по контактам на его сайте.",
+        "en": "Do not trust unsolicited offers to recover money, scan supplied QR codes or grant banking access. Contact the relevant police unit independently using details from its official website.",
+        "th": "อย่าเชื่อข้อเสนอทวงเงินคืนที่ติดต่อมาโดยไม่ได้นัดหมาย อย่าสแกนคิวอาร์โค้ดที่ส่งมา หรือให้สิทธิ์เข้าถึงบัญชีธนาคาร ควรติดต่อหน่วยตำรวจที่เกี่ยวข้องเองผ่านช่องทางบนเว็บไซต์ทางการ"
+      },
+      "status": "reported-investigation",
+      "sources": [
+        "https://thepattayanews.com/2026/10/14/three-people-arrested-in-pattaya-call-centre-raid-over-alleged-fake-cyber-police-recovery-scam/"
+      ],
+      "verifiedAt": "2026-10-14"
     }
   ],
-  "selection": "Exactly 1 non-war world story, 2 Thailand stories and 2 Pattaya-area stories; reviewed 2026-10-13 in Asia/Bangkok. All five reports were published during the previous 24 hours. Comparable Thailand PRD view counters and AP's public section ranking were recorded; where local public counts were unavailable, the limitation and qualitative selection basis were stated. No new official or reliably corroborated scam warning was found; the still-relevant PEA impersonation investigation remains active with its original verification date unchanged."
+  "selection": "Exactly 1 non-war world story, 2 Thailand stories and 2 Pattaya-area stories; reviewed 2026-10-14 in Asia/Bangkok. All five reports were published during the previous 24 hours. Comparable Thailand PRD view counters were recorded; where public counts were unavailable, broad independent coverage or practical local relevance and the limitation were stated. A new Pattaya police-attributed investigation into a fake cyber-police recovery scam was added without unconfirmed victim or loss figures; the still-relevant PEA warning remains unchanged with its original verification date."
 }
