@@ -1,0 +1,23 @@
+name: Prepare editorial drafts
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 3 * * 1'
+permissions:
+  contents: write
+jobs:
+  drafts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Generate offline outlines
+        run: node content-pipeline/generate.mjs
+      - name: Save draft artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: editorial-drafts
+          path: content-pipeline/generated/latest.md
+          retention-days: 30
