@@ -1681,3 +1681,18 @@ await import('./scripts/apply-pwa-update.mjs');
 
 // Set release identity after all patches; browser startup must never change it.
 await import('./scripts/finalize-release-cache.mjs');
+
+// Experimental portal: isolated to the experiment/portal-launch branch.
+// Run after all production transforms, so the public index is final.
+{
+ const portalSource=readFileSync('portal-launch.js','utf8');
+ if(!portalSource.includes('okok-portal'))throw new Error('Portal source invalid');
+ const pagePath='site/public/index.html';
+ let page=readFileSync(pagePath,'utf8');
+ if(!page.includes('</body>'))throw new Error('Portal: missing closing body');
+ if(page.includes('src="./portal-launch.js"'))throw new Error('Portal already injected');
+ writeFileSync('site/public/portal-launch.js',portalSource);
+ page=page.replace('</body>','<script defer src="./portal-launch.js"></script>\n</body>');
+ writeFileSync(pagePath,page);
+ console.log('Experimental portal injected into public index only');
+}
