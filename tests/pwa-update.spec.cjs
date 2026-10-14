@@ -36,9 +36,8 @@ test('foreground update activates new SW once and preserves tab and local progre
  current=B;
  await page.evaluate(()=>{window.dispatchEvent(new Event('focus'));});
  await expect(page.locator('#okokUpdate')).toBeVisible();
- // Explicit action avoids waiting for the normal ten-second idle period.
- await page.locator('#okokUpdate button').click();
- await expect.poll(()=>page.evaluate(()=>window.OKOK_RELEASE.commit)).toBe(B);
+ // Returning to an idle installed page refreshes automatically.
+ await expect.poll(()=>page.evaluate(()=>window.OKOK_RELEASE.commit),{timeout:15000}).toBe(B);
  await expect(page.locator('nav.tab button[data-tab="list"]')).toHaveClass(/on/);
  expect(await page.evaluate(()=>localStorage.getItem('pwa-progress-test'))).toBe('saved');
  await page.evaluate(()=>window.dispatchEvent(new Event('focus')));await page.waitForTimeout(300);expect(navigations).toBe(1);

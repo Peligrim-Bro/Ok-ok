@@ -13,7 +13,7 @@ function busy(){
  for(const el of dirty)if(!el.isConnected)dirty.delete(el);
  return dirty.size>0||Date.now()-lastInput<10000||
  ['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName)||document.activeElement?.isContentEditable||
- [...document.querySelectorAll('[role="dialog"],.mask.on,.modal.on,.overlay.on,.sheet.open,#okiLife,#authorChatMinimize:not([hidden])')].some(visible)||
+ [...document.querySelectorAll('[role="dialog"],.mask.on,.install-mask.on,.spin-mask.on,.modal.on,.overlay.on,.sheet.open,#okiLife,#authorChatMinimize:not([hidden])')].some(visible)||
  !!document.querySelector('nav.tab button[data-tab="game"].on')||
  !!window.Tawk_API?.isChatMaximized?.();
 }
