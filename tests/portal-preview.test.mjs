@@ -48,3 +48,11 @@ test('new Preview API rejection is distinguished from a valid ordinary Worker re
  assert.equal(await runPortalPreview({env:base,write:s=>logs.push(s),request:async()=>++calls===2?response(200,ok):response(401,{success:false,errors:[{code:1000}]}),launch:()=>assert.fail('launch forbidden')}),1);
  assert(logs.join('').includes('worker_readable_preview_api_rejected'));
 });
+test('the dedicated Preview secret is used consistently for reads and launch, never logged',async()=>{
+ const secret='dedicated-test-secret';const logs=[];
+ assert.equal(await runPortalPreview({env:{...base,PORTAL_PREVIEW_API_TOKEN:secret},write:s=>logs.push(s),request:async(url,options)=>{assert.equal(options.headers.Authorization,'Bearer '+secret);return response(200,ok);},launch:env=>{assert.equal(env.CLOUDFLARE_API_TOKEN,secret);assert.equal(base.CLOUDFLARE_API_TOKEN,token);return {status:0};}}),0);
+ assert(logs.join('').includes('portal_preview_secret'));assert(!logs.join('').includes(secret));assert(!logs.join('').includes(token));
+});
+test('an empty explicit secret never falls back to a different credential',async()=>{
+ assert.equal(await runPortalPreview({env:{...base,PORTAL_PREVIEW_API_TOKEN:''},write:()=>{},request:()=>assert.fail('network forbidden'),launch:()=>assert.fail('launch forbidden')}),1);
+});
