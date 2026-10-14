@@ -1,0 +1,18 @@
+import {readFileSync,writeFileSync,copyFileSync} from 'node:fs';
+const path='site/public/index.html';
+let html=readFileSync(path,'utf8');
+const original='if ("serviceWorker" in navigator) navigator.serviceWorker.register("./sw.js");';
+if(!html.includes(original))throw Error('PWA registration anchor missing');
+html=html.replace(original,'/* Registration and foreground updates are handled by pwa-update.js. */');
+const anchor='    function pushOverlay(id) {';
+if(!html.includes(anchor))throw Error('View restore anchor missing');
+html=html.replace(anchor,'    window.okokRestoreView = name => { if (["home","list","scam","shop","rules","spot","timer"].includes(name)) setTab(name, false); };\n'+anchor);
+const release=JSON.parse(readFileSync('site/public/build-info.json','utf8'));
+html=html.replace('</body>',`<style>#okokUpdate{position:fixed;z-index:2147482000;left:12px;right:12px;bottom:calc(90px + env(safe-area-inset-bottom));display:flex;gap:12px;align-items:center;justify-content:space-between;padding:12px 16px;border:1px solid #63dfcd;border-radius:16px;background:#102431;color:#fff;font:14px system-ui;box-shadow:0 6px 24px #0006}#okokUpdate button{flex-shrink:0;border:0;border-radius:12px;padding:10px 14px;background:#63dfcd;color:#102431;font:inherit;font-weight:700;cursor:pointer}</style>\n<script>window.OKOK_RELEASE=${JSON.stringify(release)};</script>\n<script src="./pwa-update.js?v=${release.commit?.slice(0,12)||Date.parse(release.builtAt)}" defer></script>\n</body>`);
+writeFileSync(path,html);copyFileSync('pwa-update.js','site/public/pwa-update.js');
+let sw=readFileSync('site/public/sw.js','utf8');
+sw=sw.replace('const CORE = [','const CORE = ["./pwa-update.js?v='+ (release.commit?.slice(0,12)||Date.parse(release.builtAt))+'",');
+sw=sw.replace('url.pathname.startsWith("/api/")','(url.pathname.startsWith("/api/") || url.pathname === "/build-info.json")');
+if(!sw.includes('url.pathname === "/build-info.json"'))throw Error('SW freshness bypass missing');
+writeFileSync('site/public/sw.js',sw);
+console.log('PASS: installed PWA checks releases on foreground and defers busy views');

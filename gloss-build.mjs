@@ -1677,5 +1677,7 @@ await import('./scripts/apply-owner-place.mjs');
 // Owner's current exchange partner overrides archived placements on every build.
 await import('./scripts/apply-ex24-referral.mjs');
 
+await import('./scripts/apply-pwa-update.mjs');
+
 // Set release identity after all patches; browser startup must never change it.
 await import('./scripts/finalize-release-cache.mjs');
