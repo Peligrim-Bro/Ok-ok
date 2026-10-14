@@ -1,10 +1,8 @@
 name: Prepare editorial drafts
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 3 * * 1'
 permissions:
-  contents: write
+  contents: read
 jobs:
   drafts:
     runs-on: ubuntu-latest
@@ -13,8 +11,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Check generator syntax
+        run: node --check content-pipeline/generate.mjs
       - name: Generate offline outlines
         run: node content-pipeline/generate.mjs
+      - name: Verify output and publication gate
+        run: |
+          test -s content-pipeline/generated/latest.md
+          grep -q 'DRAFT ONLY' content-pipeline/generated/latest.md
+          node -e "if(require('./content-pipeline/drafts.json').publishing_enabled !== false) process.exit(1)"
       - name: Save draft artifact
         uses: actions/upload-artifact@v4
         with:
