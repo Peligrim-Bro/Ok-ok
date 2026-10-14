@@ -1,0 +1,10 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+const config=JSON.parse(readFileSync('wrangler-telegram.json','utf8'));
+config.main='weather-worker.mjs';
+config.assets.run_worker_first.push('/api/weather');
+writeFileSync('wrangler-telegram.json',JSON.stringify(config,null,2)+'\n');
+const path='site/public/index.html';
+let html=readFileSync(path,'utf8');
+html=html.replace('</body>',`<footer id="weather-credit" style="position:relative;text-align:center;font-size:11px;padding:8px 12px 100px;color:var(--muted)"><a href="https://api.met.no/doc/Locationforecast" target="_blank" rel="noopener" style="color:inherit">Weather data: MET Norway</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:inherit">CC BY 4.0</a> · <span id="weather-credit-label">Modelled current-hour weather</span></footer></body>`);
+writeFileSync(path,html);
+console.log('City weather: cached MET Norway forecast; existing backend preserved.');
