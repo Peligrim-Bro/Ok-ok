@@ -15,10 +15,10 @@ test('missing, malformed and wrong-account credentials stop without network',asy
   assert.equal(await runPortalPreview({env,write:()=>{},request:()=>assert.fail('network forbidden'),launch:()=>assert.fail('launch forbidden')}),1);
  }
 });
-test('an invalid injected token stops and cannot leak bodies or error messages',async()=>{
+test('rejected credentials produce independent read results without leaking secrets',async()=>{
  const logs=[];let calls=0;
  assert.equal(await runPortalPreview({env:base,write:s=>logs.push(s),request:async()=>{calls++;return response(403,{success:false,errors:[{code:9109,message:token}],result:{secret:token}});},launch:()=>assert.fail('launch forbidden')}),1);
- assert.equal(calls,1);assert(logs.join('').includes('9109'));assert(!logs.join('').includes(token));
+ assert.equal(calls,3);assert(logs.join('').includes('9109'));assert(logs.join('').includes('both_worker_apis_rejected'));assert(!logs.join('').includes(token));
 });
 test('active tokens must also pass ordinary worker and Preview API reads',async()=>{
  let calls=0;const logs=[];
@@ -37,4 +37,14 @@ test('only GET checks on Cloudflare API precede the original preview launch',asy
 });
 test('network exceptions never reveal credential-bearing exception text',async()=>{
  const logs=[];assert.equal(await runPortalPreview({env:base,write:s=>logs.push(s),request:()=>{throw Error(token);},launch:()=>assert.fail('launch forbidden')}),1);assert(!logs.join('').includes(token));
+});
+test('a verification-only rejection does not imply rejected Worker access',async()=>{
+ let calls=0;let launched=0;const logs=[];
+ assert.equal(await runPortalPreview({env:base,write:s=>logs.push(s),request:async()=>++calls===1?response(401,{success:false,errors:[{code:1000}]}):response(200,ok),launch:()=>{launched++;return {status:0};}}),0);
+ assert.equal(calls,3);assert.equal(launched,1);assert(logs.join('').includes('"userTokenVerified":false'));assert(logs.join('').includes('both_worker_apis_readable'));
+});
+test('new Preview API rejection is distinguished from a valid ordinary Worker read',async()=>{
+ let calls=0;const logs=[];
+ assert.equal(await runPortalPreview({env:base,write:s=>logs.push(s),request:async()=>++calls===2?response(200,ok):response(401,{success:false,errors:[{code:1000}]}),launch:()=>assert.fail('launch forbidden')}),1);
+ assert(logs.join('').includes('worker_readable_preview_api_rejected'));
 });

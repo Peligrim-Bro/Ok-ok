@@ -23,11 +23,17 @@ export async function runPortalPreview({env=process.env,request=fetch,write=cons
   }catch{const record={check,result:'network_or_timeout',success:false};emit(record);return record;}
  }
  const verified=await probe('token_verify','/user/tokens/verify');
- if(!verified.success||verified.tokenStatus!=='active')return 1;
+ // User-token verification alone cannot identify the credential used by Builds.
+ // Compare the two Worker APIs before drawing an authentication conclusion.
+ const limited=r=>r.http===429||r.codes?.includes(10429);
+ if(limited(verified))return 1;
  const production=await probe('existing_worker_read','/accounts/'+ACCOUNT+'/workers/scripts/ok-ok/settings');
- if(!production.success)return 1;
+ if(limited(production))return 1;
  const preview=await probe('preview_api_read','/accounts/'+ACCOUNT+'/workers/workers/ok-ok');
+ if(limited(preview))return 1;
+ emit({check:'comparison',result:production.success?(preview.success?'both_worker_apis_readable':'worker_readable_preview_api_rejected'):(preview.success?'preview_api_readable':'both_worker_apis_rejected'),userTokenVerified:verified.success&&verified.tokenStatus==='active'});
  if(!preview.success)return 1;
+ if(['disabled','expired'].includes(verified.tokenStatus))return 1;
  emit({check:'read_checks_complete',result:'starting_preview_only'});
  try{const result=await launch();return Number.isInteger(result?.status)?result.status:1;}catch{emit({check:'preview_process',result:'could_not_start'});return 1;}
 }
