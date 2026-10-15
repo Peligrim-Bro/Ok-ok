@@ -1690,9 +1690,15 @@ await import('./scripts/finalize-release-cache.mjs');
  const pagePath='site/public/index.html';
  let page=readFileSync(pagePath,'utf8');
  if(!page.includes('</body>'))throw new Error('Portal: missing closing body');
- if(page.includes('src="./portal-launch.js"'))throw new Error('Portal already injected');
+ if(/src="\.\/portal-launch\.js(?:\?|")/.test(page))throw new Error('Portal already injected');
+ const {createHash}=await import('node:crypto');
+ const portalURL='./portal-launch.js?v='+createHash('sha256').update(portalSource).digest('hex').slice(0,16);
  writeFileSync('site/public/portal-launch.js',portalSource);
- page=page.replace('</body>','<script defer src="./portal-launch.js"></script>\n</body>');
+ page=page.replace('</body>','<script defer src="'+portalURL+'"></script>\n</body>');
+ const swPath='site/public/sw.js';
+ const portalSW=readFileSync(swPath,'utf8');
+ if(!portalSW.includes('const CORE = ['))throw new Error('Portal: offline assets anchor missing');
+ writeFileSync(swPath,portalSW.replace('const CORE = [','const CORE = ['+JSON.stringify(portalURL)+','));
  writeFileSync(pagePath,page);
  console.log('Experimental portal injected into public index only');
 }

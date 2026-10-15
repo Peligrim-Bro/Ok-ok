@@ -30,3 +30,22 @@ test('reduced motion skips the portal entirely',async({page})=>{
  await expect(page.locator('#okok-portal')).toHaveCount(0);
  expect(await page.evaluate(()=>sessionStorage.getItem('okok-portal-seen-v5'))).toBeNull();
 });
+
+test('first navigation uses current galaxy despite a stale unversioned SW cache',async({page})=>{
+ await page.addInitScript(()=>{localStorage.setItem('pok-lang','ru');localStorage.setItem('pok-lang-set','1');});
+ await page.goto('/',{waitUntil:'domcontentloaded'});
+ await page.waitForFunction(()=>!!navigator.serviceWorker.controller);
+ await expect(page.locator('#okok-portal')).toHaveCount(0,{timeout:7000});
+ const src=await page.locator('script[src*="portal-launch.js"]').getAttribute('src');
+ expect(src).toMatch(/portal-launch\.js\?v=[a-f0-9]{16}$/);
+ await page.evaluate(async()=>{
+  for(const name of await caches.keys()){
+   const cache=await caches.open(name);
+   await cache.put(new URL('./portal-launch.js',location.href),new Response('window.stalePortalExecuted=true;', {headers:{'Content-Type':'text/javascript'}}));
+  }
+  sessionStorage.removeItem('okok-portal-seen-v5');
+ });
+ await page.reload({waitUntil:'domcontentloaded'});
+ await expect(page.locator('#okok-portal canvas')).toBeAttached();
+ expect(await page.evaluate(()=>window.stalePortalExecuted)).toBeUndefined();
+});
