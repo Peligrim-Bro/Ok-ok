@@ -21,8 +21,8 @@ for(const lang of ['ru','en','th'])for(const [width,height] of sizes)test(`layou
  test.setTimeout(90000);
  await page.setViewportSize({width,height});
  await page.addInitScript(lang=>{localStorage.setItem('pok-lang',lang);localStorage.setItem('pok-lang-set','1');localStorage.setItem('pok-install-seen','1');},lang);
- await page.goto('/',{waitUntil:'domcontentloaded'});
  await page.emulateMedia({reducedMotion:'reduce'});
+ await page.goto('/',{waitUntil:'domcontentloaded'});
  for(const theme of ['dark','light']){
   if(await page.locator('html').getAttribute('data-theme')!==theme)await page.locator('#themeBtn').click();
   await expect(page.locator('html')).toHaveAttribute('data-theme',theme);
