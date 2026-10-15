@@ -7,6 +7,8 @@ test('portal is decorative, cleans up and runs once per session',async({page})=>
  await expect(portal).toBeAttached();
  await expect(portal).toHaveAttribute('aria-hidden','true');
  await expect(portal).toHaveCSS('pointer-events','none');
+ const centered=await portal.locator('.tunnel').evaluate(el=>{const r=el.getBoundingClientRect();return Math.abs(r.x+r.width/2-innerWidth/2)<2&&Math.abs(r.y+r.height/2-innerHeight/2)<2});
+ expect(centered).toBe(true);
  const ring=portal.locator('.ring').first();
  const scale=()=>ring.evaluate(el=>{const m=new DOMMatrix(getComputedStyle(el).transform);return Math.hypot(m.a,m.b)});
  const initial=await scale();
