@@ -57,6 +57,8 @@ console.log("Cloudflare Telegram, payments, report notifications and durable sto
 execFileSync(process.execPath,['--test','tests/ads-payments.test.mjs'],{stdio:'inherit'});
 
 await import('./scripts/apply-weather-server.mjs');
+await import('./scripts/apply-channel-server.mjs');
+execFileSync(process.execPath,['--test','tests/channel-publisher.test.mjs'],{stdio:'inherit'});
 // Validate the final output in native Workers Builds as well as GitHub Actions.
 await import('./scripts/verify-project.mjs');
 await import('./scripts/verify-quality.mjs');
