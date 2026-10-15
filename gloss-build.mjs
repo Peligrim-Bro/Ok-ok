@@ -1682,7 +1682,7 @@ await import('./scripts/apply-pwa-update.mjs');
 // Set release identity after all patches; browser startup must never change it.
 await import('./scripts/finalize-release-cache.mjs');
 
-// Owner-approved five-second galaxy startup (2026-10-15).
+// Owner-approved three-second galaxy startup (2026-10-15).
 // Run after all production transforms, so the public index is final.
 {
  const portalSource=readFileSync('portal-launch.js','utf8');
@@ -1693,6 +1693,10 @@ await import('./scripts/finalize-release-cache.mjs');
  if(/src="\.\/portal-launch\.js(?:\?|")/.test(page))throw new Error('Portal already injected');
  const {createHash}=await import('node:crypto');
  const portalURL='./portal-launch.js?v='+createHash('sha256').update(portalSource).digest('hex').slice(0,16);
+ const portalSessionKey=portalSource.match(/const key='([^']+)'/)?.[1];
+ if(!portalSessionKey||!page.includes('</head>'))throw new Error('Portal: startup anchor missing');
+ const startup='<style id="okok-portal-startup">html[data-okok-portal-pending]::before{content:"";position:fixed;inset:0;background:#030510;z-index:2147483646;pointer-events:none}</style><script>try{if(!matchMedia("(prefers-reduced-motion: reduce)").matches&&!sessionStorage.getItem('+JSON.stringify(portalSessionKey)+')){document.documentElement.setAttribute("data-okok-portal-pending","");setTimeout(function(){document.documentElement.removeAttribute("data-okok-portal-pending")},4500)}}catch(e){}</script>';
+ page=page.replace('</head>',startup+'\n</head>');
  writeFileSync('site/public/portal-launch.js',portalSource);
  page=page.replace('</body>','<script defer src="'+portalURL+'"></script>\n</body>');
  const swPath='site/public/sw.js';

@@ -10,7 +10,7 @@ test('portal is decorative, cleans up and runs once per session',async({page})=>
  const centered=await portal.locator('.tunnel').evaluate(el=>{const r=el.getBoundingClientRect();return Math.abs(r.x+r.width/2-innerWidth/2)<2&&Math.abs(r.y+r.height/2-innerHeight/2)<2});
  expect(centered).toBe(true);
  const duration=await portal.evaluate(el=>getComputedStyle(el).animationDuration);
- expect(duration).toBe('5s');
+ expect(duration).toBe('3s');
  await page.waitForTimeout(400);
  const painted=await portal.locator('canvas').evaluate(c=>{const data=c.getContext('2d').getImageData(0,0,c.width,c.height).data;let bright=0;for(let i=0;i<data.length;i+=4)if(Math.max(data[i],data[i+1],data[i+2])>90)bright++;return bright});
  expect(painted).toBeGreaterThan(100);
@@ -22,13 +22,13 @@ test('portal is decorative, cleans up and runs once per session',async({page})=>
  await page.screenshot({path:'quality-reports/portal-cleanup-phone.png'});
  await page.reload({waitUntil:'domcontentloaded'});
  await expect(page.locator('#okok-portal')).toHaveCount(0);
- expect(await page.evaluate(()=>sessionStorage.getItem('okok-portal-seen-v5'))).toBe('1');
+ expect(await page.evaluate(()=>sessionStorage.getItem('okok-portal-seen-v6'))).toBe('1');
 });
 test('reduced motion skips the portal entirely',async({page})=>{
  await page.emulateMedia({reducedMotion:'reduce'});
  await page.goto('/',{waitUntil:'domcontentloaded'});
  await expect(page.locator('#okok-portal')).toHaveCount(0);
- expect(await page.evaluate(()=>sessionStorage.getItem('okok-portal-seen-v5'))).toBeNull();
+ expect(await page.evaluate(()=>sessionStorage.getItem('okok-portal-seen-v6'))).toBeNull();
 });
 
 test('first navigation uses current galaxy despite a stale unversioned SW cache',async({page})=>{
@@ -43,9 +43,23 @@ test('first navigation uses current galaxy despite a stale unversioned SW cache'
    const cache=await caches.open(name);
    await cache.put(new URL('./portal-launch.js',location.href),new Response('window.stalePortalExecuted=true;', {headers:{'Content-Type':'text/javascript'}}));
   }
-  sessionStorage.removeItem('okok-portal-seen-v5');
+  sessionStorage.removeItem('okok-portal-seen-v6');
  });
  await page.reload({waitUntil:'domcontentloaded'});
  await expect(page.locator('#okok-portal canvas')).toBeAttached();
  expect(await page.evaluate(()=>window.stalePortalExecuted)).toBeUndefined();
+});
+
+test('head covers the site before a delayed galaxy script loads',async({page})=>{
+ let release;const gate=new Promise(resolve=>{release=resolve});
+ await page.route('**/portal-launch.js?*',async route=>{await gate;await route.continue()});
+ try{
+  await page.goto('/',{waitUntil:'commit'});
+  await expect(page.locator('html')).toHaveAttribute('data-okok-portal-pending','');
+  expect(await page.locator('html').evaluate(el=>{const s=getComputedStyle(el,'::before');return s.position==='fixed'&&s.backgroundColor==='rgb(3, 5, 16)'&&s.zIndex==='2147483646'})).toBe(true);
+  await expect(page.locator('#okok-portal canvas')).toHaveCount(0);
+  await page.screenshot({path:'quality-reports/portal-first-frame.png',timeout:3000});
+ }finally{release()}
+ await expect(page.locator('#okok-portal canvas')).toBeAttached();
+ await expect(page.locator('html')).not.toHaveAttribute('data-okok-portal-pending','');
 });
