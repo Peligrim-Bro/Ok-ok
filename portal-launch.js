@@ -1,12 +1,12 @@
 // Experimental particle galaxy: continuous inward flow, no solid spiral ribbons.
 (()=>{
  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
- const key='okok-portal-seen-v5';if(sessionStorage.getItem(key))return;sessionStorage.setItem(key,'1');
+ const key='okok-portal-seen-v6';if(sessionStorage.getItem(key))return;sessionStorage.setItem(key,'1');
  const style=document.createElement('style');style.textContent=`
-#okok-portal{position:fixed;inset:0;z-index:2147483647;overflow:hidden;background:#030510;pointer-events:none;animation:okportal-reveal 5s ease both}
+#okok-portal{position:fixed;inset:0;z-index:2147483647;overflow:hidden;background:#030510;pointer-events:none;animation:okportal-reveal 3s ease both}
 #okok-portal .tunnel{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:100%;height:100%}
 #okok-portal canvas{display:block;width:100%;height:100%}
-@keyframes okportal-reveal{0%{opacity:0}8%,80%{opacity:1}100%{opacity:0;visibility:hidden}}
+@keyframes okportal-reveal{0%,78%{opacity:1}100%{opacity:0;visibility:hidden}}
 `;document.head.append(style);
  function mount(){
   if(!document.body)return;
@@ -14,8 +14,8 @@
   el.innerHTML='<div class="tunnel"><canvas aria-hidden="true"></canvas></div>';document.body.append(el);
   const canvas=el.querySelector('canvas'),ctx=canvas.getContext('2d');
   let frame=0,stopped=false;
-  const cleanup=()=>{stopped=true;cancelAnimationFrame(frame);el.remove();style.remove();window.removeEventListener('resize',resize)};
-  el.addEventListener('animationend',e=>{if(e.target===el)cleanup()});setTimeout(cleanup,5600);
+  const cleanup=()=>{document.documentElement.removeAttribute('data-okok-portal-pending');stopped=true;cancelAnimationFrame(frame);el.remove();style.remove();window.removeEventListener('resize',resize)};
+  el.addEventListener('animationend',e=>{if(e.target===el)cleanup()});setTimeout(cleanup,3600);
   if(!ctx){cleanup();return}
   const colors=['#55eaff','#a65aff','#ff4db9','#ff965a','#ffe098','#697aff'];
   const sprites=colors.map(color=>{
@@ -41,6 +41,7 @@
     for(const p of stars){const q=position(p,t),size=p.size*(.3+q.depth*.9);ctx.globalAlpha=q.alpha*(.48+q.depth*.52);ctx.fillStyle=colors[p.color];ctx.beginPath();ctx.arc(q.x,q.y,size,0,Math.PI*2);ctx.fill();if(p.size>1.8){ctx.globalAlpha=q.alpha*.22;ctx.drawImage(sprites[p.color],q.x-size*5,q.y-size*5,size*10,size*10)}}
     ctx.globalAlpha=1;ctx.globalCompositeOperation='source-over';
     const core=ctx.createRadialGradient(w/2,h/2,1,w/2,h/2,Math.min(w,h)*.048);core.addColorStop(0,'#02030b');core.addColorStop(.4,'#050615');core.addColorStop(.65,'#6b62c655');core.addColorStop(1,'#17114000');ctx.fillStyle=core;ctx.fillRect(w/2-40,h/2-40,80,80);
+    document.documentElement.removeAttribute('data-okok-portal-pending');
    }
    frame=requestAnimationFrame(draw);
   }frame=requestAnimationFrame(draw);
