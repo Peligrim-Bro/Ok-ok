@@ -1,52 +1,49 @@
-// Experimental inward portal; test branch only.
+// Experimental particle galaxy: continuous inward flow, no solid spiral ribbons.
 (()=>{
  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
- const key='okok-portal-seen-v4';if(sessionStorage.getItem(key))return;sessionStorage.setItem(key,'1');
+ const key='okok-portal-seen-v5';if(sessionStorage.getItem(key))return;sessionStorage.setItem(key,'1');
  const style=document.createElement('style');style.textContent=`
-#okok-portal{position:fixed;inset:0;z-index:2147483647;display:grid;place-items:center;overflow:hidden;background:#050817;pointer-events:none;animation:okportal-reveal 5s ease both}
-#okok-portal .tunnel{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:118vmax;height:118vmax;isolation:isolate}
-#okok-portal .ring{position:absolute;inset:0;animation:okportal-inward 4.8s linear infinite;animation-delay:calc(var(--i) * -1.6s);will-change:transform,opacity}
-#okok-portal .ring svg{display:block;width:100%;height:100%;overflow:visible;filter:drop-shadow(0 0 5px #5964ad88)}
-#okok-portal .ribbon{fill:url(#portal-ribbon);opacity:.26;stroke:#78bdde33;stroke-width:.6}
-#okok-portal .core{position:absolute;width:12vmin;height:12vmin;border-radius:50%;background:#02040d;box-shadow:0 0 12px 3px #040718,0 0 26px 5px #26417277;z-index:1}
-#okok-portal .core:after{content:'';position:absolute;inset:-3px;border-radius:50%;border:1px solid #60c7df66;box-shadow:0 0 9px #4875b855;filter:blur(1px)}
-@keyframes okportal-inward{0%{transform:rotate(0deg) scale(1);opacity:0}12%{opacity:.8}75%{opacity:.5}100%{transform:rotate(420deg) scale(.025);opacity:0}}
+#okok-portal{position:fixed;inset:0;z-index:2147483647;overflow:hidden;background:#030510;pointer-events:none;animation:okportal-reveal 5s ease both}
+#okok-portal .tunnel{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:100%;height:100%}
+#okok-portal canvas{display:block;width:100%;height:100%}
 @keyframes okportal-reveal{0%{opacity:0}8%,80%{opacity:1}100%{opacity:0;visibility:hidden}}
 `;document.head.append(style);
- // Two tapered logarithmic arms; radius falls as angle advances toward the core.
- function spiralRibbon(phase){
-  const sides=[[],[]];
-  for(let i=0;i<=180;i++){
-   const t=i/180,angle=phase+t*Math.PI*3.5,r=460*Math.exp(-3.65*t),w=2+r*.065;
-   for(let side=0;side<2;side++){
-    const rr=r+(side?1:-1)*w;
-    sides[side].push((500+Math.cos(angle)*rr).toFixed(2)+','+(500+Math.sin(angle)*rr).toFixed(2));
-   }
-  }
-  return 'M'+sides[0].join(' L')+' L'+sides[1].reverse().join(' L')+' Z';
- }
- function galaxyStars(){
-  let stars='';
-  for(let arm=0;arm<2;arm++)for(let i=0;i<120;i++){
-   const t=(i+.5)/120,r=460*Math.exp(-3.65*t);
-   const scatter=Math.sin(i*12.9898+arm*7)*.13;
-   const angle=arm*Math.PI+t*Math.PI*3.5+scatter;
-   const spread=1+Math.cos(i*7.17)*.07;
-   const x=(500+Math.cos(angle)*r*spread).toFixed(2),y=(500+Math.sin(angle)*r*spread).toFixed(2);
-   const size=i%19===0?2.2: .65+(i%5)*.23;
-   stars+='<circle class="galaxy-star" cx="'+x+'" cy="'+y+'" r="'+size+'" fill="'+(i%7===0?'#f3e7cf':i%2?'#88d9ef':'#c5acfa')+'" opacity="'+(.4+(i%6)*.1)+'"/>';
-  }
-  return stars;
- }
  function mount(){
   if(!document.body)return;
   const el=document.createElement('div');el.id='okok-portal';el.setAttribute('aria-hidden','true');
-  const arms=[0,Math.PI].map(phase=>'<path class="ribbon" d="'+spiralRibbon(phase)+'"/>').join('')+galaxyStars();
-  const defs='<svg width="0" height="0" style="position:absolute"><defs><radialGradient id="portal-ribbon"><stop stop-color="#89dce9"/><stop offset=".4" stop-color="#6258b4"/><stop offset="1" stop-color="#265e7777"/></radialGradient></defs></svg>';
-  el.innerHTML=defs+'<div class="tunnel">'+Array.from({length:3},(_,i)=>'<div class="ring" style="--i:'+i+'"><svg viewBox="0 0 1000 1000">'+arms+'</svg></div>').join('')+'<div class="core"></div></div>';
-  document.body.append(el);
-  const cleanup=()=>{el.remove();style.remove()};
+  el.innerHTML='<div class="tunnel"><canvas aria-hidden="true"></canvas></div>';document.body.append(el);
+  const canvas=el.querySelector('canvas'),ctx=canvas.getContext('2d');
+  let frame=0,stopped=false;
+  const cleanup=()=>{stopped=true;cancelAnimationFrame(frame);el.remove();style.remove();window.removeEventListener('resize',resize)};
   el.addEventListener('animationend',e=>{if(e.target===el)cleanup()});setTimeout(cleanup,5600);
+  if(!ctx){cleanup();return}
+  const colors=['#55eaff','#a65aff','#ff4db9','#ff965a','#ffe098','#697aff'];
+  const sprites=colors.map(color=>{
+   const c=document.createElement('canvas');c.width=c.height=96;const g=c.getContext('2d');
+   const glow=g.createRadialGradient(48,48,0,48,48,48);glow.addColorStop(0,color);glow.addColorStop(.28,color+'aa');glow.addColorStop(1,color+'00');g.fillStyle=glow;g.fillRect(0,0,96,96);return c;
+  });
+  const noise=n=>{const x=Math.sin(n*127.1+311.7)*43758.5453;return x-Math.floor(x)};
+  const stars=Array.from({length:1100},(_,i)=>({phase:noise(i+1),arm:i%3,jitter:(noise(i+17)-.5)*.82,size:.4+noise(i+23)*1.65,color:i%colors.length}));
+  const clouds=Array.from({length:110},(_,i)=>({phase:noise(i+91),arm:i%3,jitter:(noise(i+120)-.5)*.65,size:30+noise(i+52)*80,color:i%colors.length}));
+  let w,h,radius;function resize(){w=innerWidth;h=innerHeight;const dpr=Math.min(devicePixelRatio||1,1.5);canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);radius=Math.hypot(w,h)*.8}resize();window.addEventListener('resize',resize);
+  const started=performance.now();
+  function position(p,t){
+   const phase=(p.phase+t*.115)%1,r=radius*Math.exp(-4.8*phase);
+   const angle=p.arm*Math.PI*2/3+phase*Math.PI*5.8+p.jitter+t*.18;
+   return {x:w/2+Math.cos(angle)*r,y:h/2+Math.sin(angle)*r,depth:r/radius,alpha:Math.min(1,phase*12,(1-phase)*9)};
+  }
+  function draw(now){
+   if(stopped)return;
+   if(!document.hidden){
+    const t=(now-started)/1000;ctx.globalCompositeOperation='source-over';ctx.globalAlpha=1;ctx.fillStyle='#030510';ctx.fillRect(0,0,w,h);
+    ctx.globalCompositeOperation='lighter';
+    for(const p of clouds){const q=position(p,t),size=p.size*(.18+q.depth)*2.2;ctx.globalAlpha=q.alpha*.26;ctx.drawImage(sprites[p.color],q.x-size/2,q.y-size/2,size,size)}
+    for(const p of stars){const q=position(p,t),size=p.size*(.3+q.depth*.9);ctx.globalAlpha=q.alpha*(.48+q.depth*.52);ctx.fillStyle=colors[p.color];ctx.beginPath();ctx.arc(q.x,q.y,size,0,Math.PI*2);ctx.fill();if(p.size>1.8){ctx.globalAlpha=q.alpha*.22;ctx.drawImage(sprites[p.color],q.x-size*5,q.y-size*5,size*10,size*10)}}
+    ctx.globalAlpha=1;ctx.globalCompositeOperation='source-over';
+    const core=ctx.createRadialGradient(w/2,h/2,1,w/2,h/2,Math.min(w,h)*.048);core.addColorStop(0,'#02030b');core.addColorStop(.4,'#050615');core.addColorStop(.65,'#6b62c655');core.addColorStop(1,'#17114000');ctx.fillStyle=core;ctx.fillRect(w/2-40,h/2-40,80,80);
+   }
+   frame=requestAnimationFrame(draw);
+  }frame=requestAnimationFrame(draw);
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount,{once:true});else mount();
 })();

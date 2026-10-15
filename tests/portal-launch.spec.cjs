@@ -9,16 +9,11 @@ test('portal is decorative, cleans up and runs once per session',async({page})=>
  await expect(portal).toHaveCSS('pointer-events','none');
  const centered=await portal.locator('.tunnel').evaluate(el=>{const r=el.getBoundingClientRect();return Math.abs(r.x+r.width/2-innerWidth/2)<2&&Math.abs(r.y+r.height/2-innerHeight/2)<2});
  expect(centered).toBe(true);
- await expect(portal.locator('.ribbon')).toHaveCount(6);
- await expect(portal.locator('.galaxy-star')).toHaveCount(720);
  const duration=await portal.evaluate(el=>getComputedStyle(el).animationDuration);
  expect(duration).toBe('5s');
- const ring=portal.locator('.ring').first();
- const scale=()=>ring.evaluate(el=>{const m=new DOMMatrix(getComputedStyle(el).transform);return Math.hypot(m.a,m.b)});
- const initial=await scale();
  await page.waitForTimeout(400);
- const inward=await scale();
- expect(inward).toBeLessThan(initial);
+ const painted=await portal.locator('canvas').evaluate(c=>{const data=c.getContext('2d').getImageData(0,0,c.width,c.height).data;let bright=0;for(let i=0;i<data.length;i+=4)if(Math.max(data[i],data[i+1],data[i+2])>90)bright++;return bright});
+ expect(painted).toBeGreaterThan(100);
  await page.screenshot({path:'quality-reports/portal-launch-phone.png'});
  await expect(portal).toHaveCount(0,{timeout:6000});
  await page.locator('#installClose').click();
@@ -27,11 +22,11 @@ test('portal is decorative, cleans up and runs once per session',async({page})=>
  await page.screenshot({path:'quality-reports/portal-cleanup-phone.png'});
  await page.reload({waitUntil:'domcontentloaded'});
  await expect(page.locator('#okok-portal')).toHaveCount(0);
- expect(await page.evaluate(()=>sessionStorage.getItem('okok-portal-seen-v4'))).toBe('1');
+ expect(await page.evaluate(()=>sessionStorage.getItem('okok-portal-seen-v5'))).toBe('1');
 });
 test('reduced motion skips the portal entirely',async({page})=>{
  await page.emulateMedia({reducedMotion:'reduce'});
  await page.goto('/',{waitUntil:'domcontentloaded'});
  await expect(page.locator('#okok-portal')).toHaveCount(0);
- expect(await page.evaluate(()=>sessionStorage.getItem('okok-portal-seen-v4'))).toBeNull();
+ expect(await page.evaluate(()=>sessionStorage.getItem('okok-portal-seen-v5'))).toBeNull();
 });
