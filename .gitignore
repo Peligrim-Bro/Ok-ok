@@ -6,3 +6,5 @@ quality-reports/
 .lighthouseci/
 playwright-report/
 test-results/
+
+wrangler-portal-preview.json

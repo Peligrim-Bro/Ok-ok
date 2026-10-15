@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {runPortalPreview} from '../scripts/portal-preview.mjs';
+import {runPortalPreview,createPreviewLauncher} from '../scripts/portal-preview.mjs';
 const token='test-credential-never-print';
 const base={WORKERS_CI:'1',WORKERS_CI_BRANCH:'experiment/portal-launch',CLOUDFLARE_API_TOKEN:token};
 const response=(status,body,headers={})=>new Response(JSON.stringify(body),{status,headers});
@@ -55,4 +55,16 @@ test('the dedicated Preview secret is used consistently for reads and launch, ne
 });
 test('an empty explicit secret never falls back to a different credential',async()=>{
  assert.equal(await runPortalPreview({env:{...base,PORTAL_PREVIEW_API_TOKEN:''},write:()=>{},request:()=>assert.fail('network forbidden'),launch:()=>assert.fail('launch forbidden')}),1);
+});
+test('launch builds the backend and selects only the isolated Preview configuration',()=>{
+ const calls=[];const env={CLOUDFLARE_API_TOKEN:token};
+ assert.equal(createPreviewLauncher({run:(...args)=>{calls.push(args);return {status:0};}})(env).status,0);
+ assert.deepEqual(calls.map(c=>c[1]),[['telegram-build.mjs'],['scripts/finalize-release-cache.mjs'],['scripts/prepare-portal-preview.mjs'],['wrangler','preview','--config','wrangler-portal-preview.json']]);
+ for(const call of calls)assert.equal(call[2].env,env);
+});
+test('a failed backend or config check cannot reach a remote Preview command',()=>{
+ for(const failAt of [0,1,2]){
+  let calls=0;const result=createPreviewLauncher({run:()=>({status:calls++===failAt?1:0})})({});
+  assert.equal(result.status,1);assert.equal(calls,failAt+1);
+ }
 });

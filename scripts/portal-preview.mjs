@@ -3,8 +3,25 @@ import {pathToFileURL} from 'node:url';
 
 const ACCOUNT='0e2b94a71684b818b68119ad0bf5ae51';
 const BRANCH='experiment/portal-launch';
+export function createPreviewLauncher({run=spawnSync}={}){
+ return env=>{
+  // Builds currently runs gloss-build only. Generate and validate the backend
+  // before selecting an explicit Preview config; never invoke wrangler deploy.
+  const commands=[
+   [process.execPath,['telegram-build.mjs']],
+   [process.execPath,['scripts/finalize-release-cache.mjs']],
+   [process.execPath,['scripts/prepare-portal-preview.mjs']],
+   ['npx',['wrangler','preview','--config','wrangler-portal-preview.json']]
+  ];
+  for(const [command,args] of commands){
+   const result=run(command,args,{stdio:'inherit',env});
+   if(result.status!==0)return result;
+  }
+  return {status:0};
+ };
+}
 // Never log credentials, response bodies, API error messages or exception details.
-export async function runPortalPreview({env=process.env,request=fetch,write=console.log,launch=previewEnv=>spawnSync('npx',['wrangler','preview'],{stdio:'inherit',env:previewEnv})}={}){
+export async function runPortalPreview({env=process.env,request=fetch,write=console.log,launch=createPreviewLauncher()}={}){
  const emit=record=>write('CF_DIAGNOSTIC '+JSON.stringify(record));
  if(env.WORKERS_CI!=='1'||env.WORKERS_CI_BRANCH!==BRANCH){emit({check:'branch_guard',result:'refused'});return 1;}
  const explicit=Object.hasOwn(env,'PORTAL_PREVIEW_API_TOKEN');
