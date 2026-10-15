@@ -30,5 +30,15 @@
         "AdsStore"
       ]
     }
-  ]
+  ],
+  "previews": {
+    "durable_objects": {
+      "bindings": [
+        {
+          "name": "ADS_STORE",
+          "class_name": "AdsStore"
+        }
+      ]
+    }
+  }
 }

@@ -25,7 +25,7 @@ jobs:
       - name: Build and enforce project, SEO, PWA and size checks
         run: npm run build
       - name: Check production verification failure detection
-        run: node --test tests/live-release.test.mjs tests/release-cache.test.mjs tests/weather-service.test.mjs
+        run: node --test tests/live-release.test.mjs tests/release-cache.test.mjs tests/weather-service.test.mjs tests/portal-preview.test.mjs tests/portal-preview-config.test.mjs
       - name: Install test browser
         run: npx playwright install --with-deps chromium
       - name: Check RU/EN/TH phone and tablet layout and offline PWA
@@ -63,4 +63,24 @@ jobs:
           path: |
             quality-reports/lighthouse/
             .lighthouseci/
+          retention-days: 14
+  portal-motion:
+    if: github.head_ref == 'experiment/portal-launch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: npx playwright test tests/portal-launch.spec.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: portal-motion-screenshots
+          path: quality-reports/portal-*.png
           retention-days: 14
