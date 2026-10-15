@@ -1681,3 +1681,24 @@ await import('./scripts/apply-pwa-update.mjs');
 
 // Set release identity after all patches; browser startup must never change it.
 await import('./scripts/finalize-release-cache.mjs');
+
+// Owner-approved five-second galaxy startup (2026-10-15).
+// Run after all production transforms, so the public index is final.
+{
+ const portalSource=readFileSync('portal-launch.js','utf8');
+ if(!portalSource.includes('okok-portal'))throw new Error('Portal source invalid');
+ const pagePath='site/public/index.html';
+ let page=readFileSync(pagePath,'utf8');
+ if(!page.includes('</body>'))throw new Error('Portal: missing closing body');
+ if(/src="\.\/portal-launch\.js(?:\?|")/.test(page))throw new Error('Portal already injected');
+ const {createHash}=await import('node:crypto');
+ const portalURL='./portal-launch.js?v='+createHash('sha256').update(portalSource).digest('hex').slice(0,16);
+ writeFileSync('site/public/portal-launch.js',portalSource);
+ page=page.replace('</body>','<script defer src="'+portalURL+'"></script>\n</body>');
+ const swPath='site/public/sw.js';
+ const portalSW=readFileSync(swPath,'utf8');
+ if(!portalSW.includes('const CORE = ['))throw new Error('Portal: offline assets anchor missing');
+ writeFileSync(swPath,portalSW.replace('const CORE = [','const CORE = ['+JSON.stringify(portalURL)+','));
+ writeFileSync(pagePath,page);
+ console.log('Experimental portal injected into public index only');
+}
