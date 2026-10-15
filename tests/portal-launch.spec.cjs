@@ -7,6 +7,12 @@ test('portal is decorative, cleans up and runs once per session',async({page})=>
  await expect(portal).toBeAttached();
  await expect(portal).toHaveAttribute('aria-hidden','true');
  await expect(portal).toHaveCSS('pointer-events','none');
+ const ring=portal.locator('.ring').first();
+ const scale=()=>ring.evaluate(el=>{const m=new DOMMatrix(getComputedStyle(el).transform);return Math.hypot(m.a,m.b)});
+ const initial=await scale();
+ await page.waitForTimeout(400);
+ const inward=await scale();
+ expect(inward).toBeLessThan(initial);
  await page.screenshot({path:'quality-reports/portal-launch-phone.png'});
  await expect(portal).toHaveCount(0,{timeout:6000});
  await page.locator('#installClose').click();
@@ -15,11 +21,11 @@ test('portal is decorative, cleans up and runs once per session',async({page})=>
  await page.screenshot({path:'quality-reports/portal-cleanup-phone.png'});
  await page.reload({waitUntil:'domcontentloaded'});
  await expect(page.locator('#okok-portal')).toHaveCount(0);
- expect(await page.evaluate(()=>sessionStorage.getItem('okok-portal-seen'))).toBe('1');
+ expect(await page.evaluate(()=>sessionStorage.getItem('okok-portal-seen-v2'))).toBe('1');
 });
 test('reduced motion skips the portal entirely',async({page})=>{
  await page.emulateMedia({reducedMotion:'reduce'});
  await page.goto('/',{waitUntil:'domcontentloaded'});
  await expect(page.locator('#okok-portal')).toHaveCount(0);
- expect(await page.evaluate(()=>sessionStorage.getItem('okok-portal-seen'))).toBeNull();
+ expect(await page.evaluate(()=>sessionStorage.getItem('okok-portal-seen-v2'))).toBeNull();
 });
