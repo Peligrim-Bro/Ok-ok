@@ -10,6 +10,7 @@ test('portal is decorative, cleans up and runs once per session',async({page})=>
  const centered=await portal.locator('.tunnel').evaluate(el=>{const r=el.getBoundingClientRect();return Math.abs(r.x+r.width/2-innerWidth/2)<2&&Math.abs(r.y+r.height/2-innerHeight/2)<2});
  expect(centered).toBe(true);
  await expect(portal.locator('.ribbon')).toHaveCount(6);
+ await expect(portal.locator('.galaxy-star')).toHaveCount(720);
  const duration=await portal.evaluate(el=>getComputedStyle(el).animationDuration);
  expect(duration).toBe('5s');
  const ring=portal.locator('.ring').first();
@@ -26,11 +27,11 @@ test('portal is decorative, cleans up and runs once per session',async({page})=>
  await page.screenshot({path:'quality-reports/portal-cleanup-phone.png'});
  await page.reload({waitUntil:'domcontentloaded'});
  await expect(page.locator('#okok-portal')).toHaveCount(0);
- expect(await page.evaluate(()=>sessionStorage.getItem('okok-portal-seen-v3'))).toBe('1');
+ expect(await page.evaluate(()=>sessionStorage.getItem('okok-portal-seen-v4'))).toBe('1');
 });
 test('reduced motion skips the portal entirely',async({page})=>{
  await page.emulateMedia({reducedMotion:'reduce'});
  await page.goto('/',{waitUntil:'domcontentloaded'});
  await expect(page.locator('#okok-portal')).toHaveCount(0);
- expect(await page.evaluate(()=>sessionStorage.getItem('okok-portal-seen-v3'))).toBeNull();
+ expect(await page.evaluate(()=>sessionStorage.getItem('okok-portal-seen-v4'))).toBeNull();
 });
