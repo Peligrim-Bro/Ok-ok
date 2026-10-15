@@ -16,9 +16,9 @@
       ],
       "nonWar": true,
       "discussionEvidence": {
-        "observedAt": "2026-10-15T08:46:00+07:00",
-        "sourceUrl": "https://nvidianews.nvidia.com/news/nvidia-commits-250-million-to-advance-uk-agentic-safety-and-security-research-over-the-next-five-years",
-        "summary": "Reuters and The Guardian independently covered the pledge on 14 October, following NVIDIA's 13 October statement. No comparable public comment, view or share totals were exposed. This is cross-outlet coverage, not a measured global popularity rank; the primary announcement is retained with its actual date within the permitted 72-hour window."
+        "observedAt": "2026-10-15T08:48:00+07:00",
+        "sourceUrl": "https://www.reddit.com/r/nvidia/comments/1x5otpt/nvidia_pledges_250_million_to_uk_ai_safety/",
+        "summary": "The public search snapshot showed +34 votes on r/nvidia for this story versus +1 on r/MarketFluxHub (https://www.reddit.com/r/MarketFluxHub/comments/1x5xdg5/nvidia_pledges_250m_in_compute_to_uk_ai_safety/). Different community sizes and post ages make these weak, non-equivalent signals, not a global rank; the opened r/nvidia page did not expose an exact comment total. Reuters and The Guardian independently covered the pledge on 14 October, following NVIDIA's primary statement dated 13 October within the permitted 72-hour window."
       }
     },
     {
@@ -138,5 +138,5 @@
       "verifiedAt": "2026-10-14"
     }
   ],
-  "selection": "Exactly 1 non-war world story, 2 Thailand and 2 Pattaya-area stories, reviewed 2026-10-15 Asia/Bangkok. Four source reports are dated 14–15 October; NVIDIA's primary announcement is honestly dated 13 October within the expanded 72-hour window, with fresh independent reporting on 14 October. Public outlet rankings and an official view counter were observed; comparable engagement counts and independent coverage were not available for every topic, as recorded individually. No new sufficiently verified scam scheme was found; both active warnings and their original dates remain unchanged. No unrelated content or settings changed."
+  "selection": "Exactly 1 non-war world story, 2 Thailand and 2 Pattaya-area stories, reviewed 2026-10-15 Asia/Bangkok. Four source reports are dated 14–15 October; NVIDIA's primary announcement is honestly dated 13 October within the expanded 72-hour window, with fresh independent reporting on 14 October. Public outlet rankings and an official view counter were observed; comparable engagement counts and independent coverage were not available for every topic, as recorded individually. A fresh secondary report about misuse of children's IDs contained inconsistent sentencing details and lacked independently checked official corroboration, so no new scam card was added; both active warnings and their original dates remain unchanged. No unrelated content or settings changed."
 }
