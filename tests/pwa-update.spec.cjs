@@ -26,7 +26,7 @@ async function open(page,lang='ru'){
  await page.addInitScript(lang=>{localStorage.setItem('pok-lang',lang);localStorage.setItem('pok-lang-set','1');},lang);
  await page.goto(origin);await page.locator('#installClose').click();
  await page.waitForFunction(()=>!!navigator.serviceWorker.controller);
- await expect.poll(()=>page.evaluate(()=>window.OKOK_RELEASE.commit)).toBe(A);
+ await page.waitForFunction(expected=>window.OKOK_RELEASE?.commit===expected,A);
 }
 test('foreground update activates new SW once and preserves tab and local progress',async({page})=>{
  await open(page);await page.locator('nav.tab button[data-tab="list"]').click();
@@ -37,7 +37,7 @@ test('foreground update activates new SW once and preserves tab and local progre
  await page.evaluate(()=>{window.dispatchEvent(new Event('focus'));});
  await expect(page.locator('#okokUpdate')).toBeVisible();
  // Returning to an idle installed page refreshes automatically.
- await expect.poll(()=>page.evaluate(()=>window.OKOK_RELEASE.commit),{timeout:15000}).toBe(B);
+ await page.waitForFunction(expected=>window.OKOK_RELEASE?.commit===expected,B,{timeout:15000});
  await expect(page.locator('nav.tab button[data-tab="list"]')).toHaveClass(/on/);
  expect(await page.evaluate(()=>localStorage.getItem('pwa-progress-test'))).toBe('saved');
  await page.evaluate(()=>window.dispatchEvent(new Event('focus')));await page.waitForTimeout(300);expect(navigations).toBe(1);
@@ -53,17 +53,17 @@ for(const lang of ['ru','en','th'])test(`unfinished form waits and update banner
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
  await page.screenshot({path:`quality-reports/pwa-update-${lang}.png`});
  await page.locator('#pwaForm').evaluate(el=>el.remove());await page.locator('#okokUpdate button').click();
- await expect.poll(()=>page.evaluate(()=>window.OKOK_RELEASE.commit)).toBe(B);
+ await page.waitForFunction(expected=>window.OKOK_RELEASE?.commit===expected,B,{timeout:15000});
 });
 test('offline version checks do not reload and foreground recovers later',async({page,context})=>{
  await open(page);current=B;await context.setOffline(true);
  await page.evaluate(()=>window.dispatchEvent(new Event('focus')));await page.waitForTimeout(300);
  expect(await page.evaluate(()=>window.OKOK_RELEASE.commit)).toBe(A);await expect(page.locator('#okokUpdate')).toHaveCount(0);
- await context.setOffline(false);unavailable=true;
+ unavailable=true;await context.setOffline(false);
  await page.evaluate(()=>window.dispatchEvent(new Event('focus')));await page.waitForTimeout(300);await expect(page.locator('#okokUpdate')).toHaveCount(0);
  unavailable=false;await page.evaluate(()=>window.dispatchEvent(new Event('focus')));
  await expect(page.locator('#okokUpdate')).toBeVisible();await page.locator('#okokUpdate button').click();
- await expect.poll(()=>page.evaluate(()=>window.OKOK_RELEASE.commit)).toBe(B);
+ await page.waitForFunction(expected=>window.OKOK_RELEASE?.commit===expected,B,{timeout:15000});
 });
 test('OKI dialog defers update without losing the active session',async({page})=>{
  await open(page);await page.locator('nav.tab button[data-tab="game"]').click();await expect(page.locator('#okiLife')).toBeVisible();
@@ -71,5 +71,5 @@ test('OKI dialog defers update without losing the active session',async({page})=
  await expect(page.locator('#okokUpdate')).toBeAttached();await page.waitForTimeout(2500);
  expect(await page.evaluate(()=>window.OKOK_RELEASE.commit)).toBe(A);await expect(page.locator('#okiLife')).toBeVisible();
  await page.locator('.ol-close').click();await page.locator('#okokUpdate button').click();
- await expect.poll(()=>page.evaluate(()=>window.OKOK_RELEASE.commit)).toBe(B);
+ await page.waitForFunction(expected=>window.OKOK_RELEASE?.commit===expected,B,{timeout:15000});
 });
