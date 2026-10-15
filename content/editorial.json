@@ -1,92 +1,92 @@
 {
-  "verifiedAt": "2026-10-14",
+  "verifiedAt": "2026-10-15",
   "news": [
     {
       "category": "world",
       "when": "13.10 · 🌍",
-      "href": "https://www.reuters.com/sustainability/multiple-hurricanes-hit-us-mexico-2026-10-13/",
-      "ru": "Сразу несколько тропических циклонов затронули США и Мексику. После урагана Исайяс на юго-востоке США восстанавливают электроснабжение и следят за риском паводков, а у тихоокеанского побережья Мексики ураган Симон принёс сильные дожди, наводнения и оползни; предупреждения для части побережья сохраняются.",
-      "en": "Several tropical cyclones have affected the United States and Mexico. Power restoration and flood monitoring continued in the US Southeast after Hurricane Isaias, while Hurricane Simon brought heavy rain, flooding and landslides to Mexico's Pacific coast; warnings remain in place for parts of the coastline.",
-      "th": "พายุหมุนเขตร้อนหลายลูกส่งผลกระทบต่อสหรัฐฯ และเม็กซิโก โดยภาคตะวันออกเฉียงใต้ของสหรัฐฯ เร่งฟื้นฟูไฟฟ้าและเฝ้าระวังน้ำท่วมหลังเฮอริเคนอิไซอัส ขณะที่เฮอริเคนไซมอนทำให้เกิดฝนหนัก น้ำท่วม และดินถล่มตามชายฝั่งแปซิฟิกของเม็กซิโก และบางพื้นที่ยังคงมีคำเตือน",
+      "href": "https://nvidianews.nvidia.com/news/nvidia-commits-250-million-to-advance-uk-agentic-safety-and-security-research-over-the-next-five-years",
+      "ru": "NVIDIA пообещала предоставить британским исследователям вычислительные ресурсы стоимостью $250 млн за пять лет для изучения безопасности ИИ-агентов и робототехники. Это доступ к вычислениям, а не денежная выплата; провайдеры и коммерческие условия ещё согласуются. Заявление компании вышло 13 октября, сообщения Reuters — 14 октября.",
+      "en": "NVIDIA pledged $250 million in computing access over five years for UK research into AI-agent and robotics safety. This is a compute contribution, not a cash payment; providers and commercial terms remain to be agreed. The company statement is dated 13 October, followed by Reuters coverage on 14 October.",
+      "th": "NVIDIA ประกาศมอบสิทธิ์ใช้ทรัพยากรประมวลผลมูลค่า 250 ล้านดอลลาร์ในช่วง 5 ปี เพื่อสนับสนุนงานวิจัยความปลอดภัยของเอเจนต์ AI และหุ่นยนต์ในสหราชอาณาจักร ไม่ใช่การจ่ายเงินสด โดยผู้ให้บริการและเงื่อนไขยังต้องตกลงกัน แถลงการณ์ลงวันที่ 13 ตุลาคม และ Reuters รายงานวันที่ 14 ตุลาคม",
       "publishedAt": "2026-10-13",
       "sources": [
-        "https://www.reuters.com/sustainability/multiple-hurricanes-hit-us-mexico-2026-10-13/",
-        "https://apnews.com/article/1276142fb7db0f50d0f61d86ae7fa977",
-        "https://www.nhc.noaa.gov/"
+        "https://nvidianews.nvidia.com/news/nvidia-commits-250-million-to-advance-uk-agentic-safety-and-security-research-over-the-next-five-years",
+        "https://www.reuters.com/technology/nvidia-pledges-250-million-boost-uk-ai-safety-research-2026-10-14/",
+        "https://www.theguardian.com/technology/2026/oct/14/nvidia-donates-to-uk-ai-safety-research"
       ],
       "nonWar": true,
       "discussionEvidence": {
-        "observedAt": "2026-10-14T08:40:00+07:00",
-        "sourceUrl": "https://www.reuters.com/sustainability/multiple-hurricanes-hit-us-mexico-2026-10-13/",
-        "summary": "Reuters and AP both led fresh reports on the storms, while the US National Hurricane Center maintained current advisories. The accessible pages exposed no comparable view, share or comment totals, so selection reflects broad independent coverage and continuing public-safety relevance, not a global popularity ranking."
+        "observedAt": "2026-10-15T08:46:00+07:00",
+        "sourceUrl": "https://nvidianews.nvidia.com/news/nvidia-commits-250-million-to-advance-uk-agentic-safety-and-security-research-over-the-next-five-years",
+        "summary": "Reuters and The Guardian independently covered the pledge on 14 October, following NVIDIA's 13 October statement. No comparable public comment, view or share totals were exposed. This is cross-outlet coverage, not a measured global popularity rank; the primary announcement is retained with its actual date within the permitted 72-hour window."
       }
     },
     {
       "category": "thailand",
-      "when": "13.10 · 🇹🇭",
-      "href": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/550532",
-      "ru": "Таиланд и Сингапур договорились расширять стратегическое партнёрство в цифровой экономике, продовольственной и энергетической безопасности, финансовых технологиях и развитии кадров. На встрече также обсуждались совместные меры против транснациональной преступности и онлайн-мошенничества.",
-      "en": "Thailand and Singapore agreed to deepen their strategic partnership in the digital economy, food and energy security, financial technology and workforce development. The meeting also covered cooperation against transnational crime and online scams.",
-      "th": "ไทยและสิงคโปร์ตกลงยกระดับหุ้นส่วนเชิงยุทธศาสตร์ด้านเศรษฐกิจดิจิทัล ความมั่นคงทางอาหารและพลังงาน เทคโนโลยีการเงิน และการพัฒนาบุคลากร พร้อมหารือความร่วมมือปราบปรามอาชญากรรมข้ามชาติและการหลอกลวงออนไลน์",
-      "publishedAt": "2026-10-13",
+      "when": "14.10 · 🇹🇭",
+      "href": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/550916",
+      "ru": "В Бангкоке МВФ, Всемирный банк и Банк Таиланда представили Bangkok Blueprint — рамочную программу против цифрового финансового мошенничества. Она предусматривает обмен данными между банками, операторами связи, платформами и правоохранителями, международное сотрудничество и оценку результатов по скорости выявления схем и помощи пострадавшим.",
+      "en": "The IMF, World Bank Group and Bank of Thailand launched the Bangkok Blueprint against digital financial fraud. It calls for information-sharing among banks, telecoms, platforms and law enforcement, cross-border cooperation and measurable improvements in detection and victim assistance.",
+      "th": "IMF กลุ่มธนาคารโลก และธนาคารแห่งประเทศไทยเปิดตัว Bangkok Blueprint เพื่อต่อสู้การฉ้อโกงทางการเงินดิจิทัล โดยเน้นการแลกเปลี่ยนข้อมูลระหว่างธนาคาร โทรคมนาคม แพลตฟอร์ม และตำรวจ ความร่วมมือข้ามพรมแดน และการวัดผลด้านการตรวจพบภัยและช่วยเหลือผู้เสียหาย",
+      "publishedAt": "2026-10-14",
       "sources": [
-        "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/550532"
+        "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/550916"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-14T08:40:00+07:00",
-        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/550532",
-        "summary": "Thailand PRD displayed 189 views for this report, compared with 147 for its same-day IMF financial-stability report. These are directly comparable counters on one official platform, not nationwide popularity figures; no public comment totals were shown."
+        "observedAt": "2026-10-15T08:46:00+07:00",
+        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/550916",
+        "summary": "PRD displayed 191 views on the opened article, whereas the search-index snapshot showed 99 for the same URL; these are observations at different crawl times, not comparable competing-story totals. The Nation's public Most Viewed list instead ranked its IMF livestream guide first and Bangkok security guide second (https://www.nationthailand.com/news/tourism/40072247). No comparable comment totals or national ranking for this Blueprint report were available; selection rests on the official policy launch, not a popularity claim."
       }
     },
     {
       "category": "thailand",
-      "when": "13.10 · 🇹🇭",
-      "href": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/550675",
-      "ru": "МВФ представил в Бангкоке доклад о мировой финансовой стабильности. Среди рисков названы возможная резкая коррекция акций технологических и ИИ-компаний при высокой долговой нагрузке, колебания доходности гособлигаций и системные киберугрозы; для будущего Азии важны демография, ИИ и региональная интеграция.",
-      "en": "The IMF presented its global financial stability report in Bangkok. It highlighted a possible sharp correction in leveraged technology and AI stocks, volatility in government-bond yields and systemic cyber threats; demographics, AI and regional integration were identified as key forces shaping Asia's future.",
-      "th": "IMF เปิดเผยรายงานเสถียรภาพการเงินโลกที่กรุงเทพฯ โดยระบุความเสี่ยงจากการปรับฐานรุนแรงของหุ้นเทคโนโลยีและ AI ที่มีการใช้เงินกู้สูง ความผันผวนของอัตราผลตอบแทนพันธบัตรรัฐบาล และภัยไซเบอร์เชิงระบบ ส่วนอนาคตของเอเชียจะได้รับอิทธิพลจากโครงสร้างประชากร AI และการบูรณาการในภูมิภาค",
-      "publishedAt": "2026-10-13",
+      "when": "14.10 · 🇹🇭",
+      "href": "https://www.nationthailand.com/news/tourism/40072247",
+      "ru": "Управление по туризму Таиланда делает ставку на фестивали и другие события конца года, чтобы приблизиться к цели около 33 млн иностранных приездов за 2026 год. По словам главы TAT, дальние рынки показывают сильное раннее бронирование, а укрепление бата осложняет конкуренцию за туристов из соседних стран. Цель остаётся прогнозом, не достигнутым результатом.",
+      "en": "Thailand's tourism authority is backing year-end festivals and events to pursue roughly 33 million foreign arrivals in 2026. Its governor reported strong advance bookings from long-haul markets, while a stronger baht is making nearby destinations more competitive. The annual figure remains a target, not an achieved result.",
+      "th": "ททท. สนับสนุนเทศกาลและกิจกรรมปลายปีเพื่อมุ่งสู่เป้าหมายนักท่องเที่ยวต่างชาติประมาณ 33 ล้านคนในปี 2026 ผู้ว่าการ ททท. ระบุว่าตลาดระยะไกลมียอดจองล่วงหน้าดี แต่เงินบาทแข็งทำให้การแข่งขันกับจุดหมายใกล้เคียงยากขึ้น ตัวเลขดังกล่าวยังเป็นเป้าหมาย ไม่ใช่ผลสำเร็จแล้ว",
+      "publishedAt": "2026-10-14",
       "sources": [
-        "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/550675"
+        "https://www.nationthailand.com/news/tourism/40072247"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-14T08:40:00+07:00",
-        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/550675",
-        "summary": "Thailand PRD displayed 147 views at observation time, versus 189 for its same-day Thailand–Singapore report. These counts are comparable only within the official platform and are not a nationwide discussion ranking; no public comment totals were shown."
+        "observedAt": "2026-10-15T08:46:00+07:00",
+        "sourceUrl": "https://www.nationthailand.com/news/tourism/40072247",
+        "summary": "The Nation's accessible Most Viewed list ranked its IMF livestream guide 1, Bangkok meeting security guide 2 and October 15–16 weather report 4; this tourism report was not in the displayed top five. No article-level comment/view counts or broad independent corroborating coverage were available. Selected as fresh, attributed reporting of TAT's national tourism strategy, with no claim that it is the most discussed."
       }
     },
     {
       "category": "pattaya",
       "when": "14.10 · Pattaya",
-      "href": "https://thepattayanews.com/2026/10/14/pattaya-restaurant-owner-and-family-give-away-free-meals-for-eighth-consecutive-year-in-tribute-to-his-royal-majesty-king-rama-ix-the-great/",
-      "ru": "В Нонгпры семья владельца ресторана Je Ya Sukhothai Pad Thai восьмой год подряд раздавала бесплатные блюда и напитки в память о короле Раме IX. Благотворительную акцию провели 13 октября у заведения рядом с Soi Nern Phlap Wan, пока не закончились приготовленные запасы.",
-      "en": "In Nongprue, the family behind Je Ya Sukhothai Pad Thai gave away free meals and drinks for an eighth consecutive year in memory of King Rama IX. The annual charity event was held on 13 October near Soi Nern Phlap Wan and continued until the prepared supplies ran out.",
-      "th": "ครอบครัวเจ้าของร้านเจ๊หยา ผัดไทยสุโขทัย ในหนองปรือ แจกอาหารและเครื่องดื่มฟรีเป็นปีที่ 8 ติดต่อกันเพื่อน้อมรำลึกถึงในหลวงรัชกาลที่ 9 กิจกรรมจัดเมื่อวันที่ 13 ตุลาคม บริเวณใกล้ซอยเนินพลับหวานจนอาหารที่เตรียมไว้หมด",
+      "href": "https://thepattayanews.com/2026/10/14/pattaya-officials-inspect-vegetarian-festival-kitchens-to-ensure-food-safety-and-hygiene/",
+      "ru": "Власти Паттайи проверили кухни в фонде Sawang Boriboon во время вегетарианского фестиваля: чистоту, ингредиенты, посуду и хранение готовых блюд. Продавцам напомнили о санитарных требованиях. По сообщению организаторов, фестивальная площадка в Наклыа напротив парка Лан Пхо работает до 19 октября.",
+      "en": "Pattaya officials inspected kitchens at the Sawang Boriboon foundation during the Vegetarian Festival, checking cleanliness, ingredients, utensils and food storage. Vendors received hygiene guidance. The report says the Naklua festival site opposite Lan Pho Park continues through 19 October.",
+      "th": "เจ้าหน้าที่พัทยาตรวจครัวของมูลนิธิสว่างบริบูรณ์ธรรมสถานช่วงเทศกาลกินเจ ทั้งความสะอาด วัตถุดิบ อุปกรณ์ และการเก็บอาหาร พร้อมให้คำแนะนำสุขาภิบาลแก่ผู้ค้า รายงานระบุว่างานบริเวณนาเกลือตรงข้ามสวนลานโพธิ์มีถึงวันที่ 19 ตุลาคม",
       "publishedAt": "2026-10-14",
       "sources": [
-        "https://thepattayanews.com/2026/10/14/pattaya-restaurant-owner-and-family-give-away-free-meals-for-eighth-consecutive-year-in-tribute-to-his-royal-majesty-king-rama-ix-the-great/"
+        "https://thepattayanews.com/2026/10/14/pattaya-officials-inspect-vegetarian-festival-kitchens-to-ensure-food-safety-and-hygiene/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-14T08:40:00+07:00",
-        "sourceUrl": "https://thepattayanews.com/",
-        "summary": "This was the newest non-crime Pattaya-area report in The Pattaya News public feed at observation time. The article and feed exposed no comparable view, reaction, share or comment totals, so selection reflects freshness and local community relevance, not a measured citywide popularity rank."
+        "observedAt": "2026-10-15T08:46:00+07:00",
+        "sourceUrl": "https://thepattayanews.com/2026/10/14/pattaya-officials-inspect-vegetarian-festival-kitchens-to-ensure-food-safety-and-hygiene/",
+        "summary": "The public article and feed exposed no comparable comment, reaction, share or view totals, and independent cross-outlet coverage was not established. Chosen for fresh municipal food-safety reporting and practical festival information, not a measured local popularity rank."
       }
     },
     {
       "category": "pattaya",
-      "when": "13.10 · Pattaya",
-      "href": "https://thepattayanews.com/2026/10/13/pattaya-police-sweep-10-abandoned-buildings-in-soi-thepprasit-detain-24-people/",
-      "ru": "Полиция Паттайи сообщила о проверке десяти заброшенных зданий на Soi Thepprasit после жалоб жителей. Для дальнейшей проверки были доставлены 24 человека; полиция заявила о предварительных результатах полевых тестов, двух случаях обнаружения наркотиков и одном действующем ордере. Расследование продолжается, виновность определяет суд.",
-      "en": "Pattaya police reported searches of ten abandoned buildings on Soi Thepprasit following residents' complaints. Twenty-four people were taken for further checks; police cited preliminary field-test results, two alleged drug-possession cases and one outstanding warrant. The investigation continues, and guilt is for the court to determine.",
-      "th": "ตำรวจพัทยารายงานการตรวจค้นอาคารร้าง 10 แห่งในซอยเทพประสิทธิ์หลังได้รับข้อร้องเรียนจากประชาชน และนำตัว 24 คนไปตรวจสอบเพิ่มเติม ตำรวจระบุผลตรวจภาคสนามเบื้องต้น การพบยาเสพติด 2 กรณี และหมายจับค้างเก่า 1 ราย คดียังอยู่ระหว่างสอบสวนและศาลเป็นผู้วินิจฉัยความผิด",
-      "publishedAt": "2026-10-13",
+      "when": "15.10 · Pattaya",
+      "href": "https://thepattayanews.com/2026/10/15/woman-25-swept-into-drain-while-riding-motorcycle-through-floodwater-near-pattaya-survives-uninjured/",
+      "ru": "В Khao Mai Kaeo под Паттайей прохожий помог женщине, которую вместе с мотоциклом снесло в придорожный водоотвод при попытке пересечь затопленную дорогу. По данным спасателей, она не пострадала. Службы напоминают: если глубина и сила течения неизвестны, следует развернуться и выбрать другой маршрут.",
+      "en": "A passerby helped a woman swept with her motorcycle into a roadside drain while trying to cross floodwater in Khao Mai Kaeo near Pattaya. Rescuers reported no injuries. Emergency teams advise turning back and taking another route when the water's depth or current cannot be assessed safely.",
+      "th": "ผู้สัญจรช่วยหญิงที่ถูกน้ำพัดพร้อมรถจักรยานยนต์ลงร่องระบายน้ำ ขณะพยายามข้ามถนนที่น้ำท่วมในเขาไม้แก้วใกล้พัทยา เจ้าหน้าที่กู้ภัยรายงานว่าเธอไม่ได้รับบาดเจ็บ และแนะนำให้ย้อนกลับไปใช้เส้นทางอื่นเมื่อไม่สามารถประเมินความลึกหรือความแรงของกระแสน้ำได้",
+      "publishedAt": "2026-10-15",
       "sources": [
-        "https://thepattayanews.com/2026/10/13/pattaya-police-sweep-10-abandoned-buildings-in-soi-thepprasit-detain-24-people/"
+        "https://thepattayanews.com/2026/10/15/woman-25-swept-into-drain-while-riding-motorcycle-through-floodwater-near-pattaya-survives-uninjured/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-14T08:40:00+07:00",
-        "sourceUrl": "https://thepattayanews.com/2026/10/13/pattaya-police-sweep-10-abandoned-buildings-in-soi-thepprasit-detain-24-people/",
-        "summary": "No comparable public view, reaction, share or comment totals were exposed for the local reports reviewed. This item was selected from the previous day's feed for direct neighbourhood-safety relevance and a clearly attributed police account; it is not a popularity ranking."
+        "observedAt": "2026-10-15T08:46:00+07:00",
+        "sourceUrl": "https://thepattayanews.com/wp-json/wp/v2/posts?after=2026-10-14T00:00:00&per_page=50&_fields=date,link,title",
+        "summary": "This was the newest item in the outlet's public WordPress feed at observation, ahead of a youth cultural-exchange report. Neither report exposed comparable public engagement totals; independent cross-outlet coverage was not established. Selection is a freshness and practical road-safety judgement, not a citywide discussion ranking."
       }
     }
   ],
@@ -138,5 +138,5 @@
       "verifiedAt": "2026-10-14"
     }
   ],
-  "selection": "Exactly 1 non-war world story, 2 Thailand stories and 2 Pattaya-area stories; reviewed 2026-10-14 in Asia/Bangkok. All five reports were published during the previous 24 hours. Comparable Thailand PRD view counters were recorded; where public counts were unavailable, broad independent coverage or practical local relevance and the limitation were stated. A new Pattaya police-attributed investigation into a fake cyber-police recovery scam was added without unconfirmed victim or loss figures; the still-relevant PEA warning remains unchanged with its original verification date."
+  "selection": "Exactly 1 non-war world story, 2 Thailand and 2 Pattaya-area stories, reviewed 2026-10-15 Asia/Bangkok. Four source reports are dated 14–15 October; NVIDIA's primary announcement is honestly dated 13 October within the expanded 72-hour window, with fresh independent reporting on 14 October. Public outlet rankings and an official view counter were observed; comparable engagement counts and independent coverage were not available for every topic, as recorded individually. No new sufficiently verified scam scheme was found; both active warnings and their original dates remain unchanged. No unrelated content or settings changed."
 }
