@@ -14,7 +14,11 @@ for(const lang of ['ru','en','th'])for(const theme of ['dark','light'])test(`J-K
  await expect(sheet).toContainText('J-Kao Seafood');await expect(sheet.locator('.stars')).toHaveCount(0);
  await expect(sheet).toContainText({ru:'График работы не уточнялся',en:'Opening hours have not been checked',th:'ยังไม่ได้ตรวจสอบเวลาเปิดปิด'}[lang]);
  await expect(sheet).not.toContainText('undefined');await expect(sheet.locator('.gallery img')).toHaveCount(3);
- await expect(sheet.locator('a[href*="7P42VV6X"]')).toHaveCount(1);
+ // Existing detail UI intentionally offers both Map and Route actions.
+ const destination='https://www.google.com/maps/search/?api=1&query=7P42VV6X%2B9Q';
+ await expect(sheet.locator('a.btn.map')).toHaveAttribute('href',destination);
+ await expect(sheet.locator('a.btn.ghost')).toHaveAttribute('href',destination);
+ await expect(sheet.locator('a[href*="7P42VV6X"]')).toHaveCount(2);
  await expect(sheet.locator('iframe.mapbox')).toHaveAttribute('src',/12\.8609375,100\.8994375/);
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
  mkdirSync('quality-reports',{recursive:true});await page.screenshot({path:`quality-reports/jkao-${lang}-${theme}.png`});
