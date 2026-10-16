@@ -1,92 +1,94 @@
 {
-  "verifiedAt": "2026-10-15",
+  "verifiedAt": "2026-10-16",
   "news": [
     {
       "category": "world",
-      "when": "13.10 · 🌍",
-      "href": "https://nvidianews.nvidia.com/news/nvidia-commits-250-million-to-advance-uk-agentic-safety-and-security-research-over-the-next-five-years",
-      "ru": "NVIDIA пообещала предоставить британским исследователям вычислительные ресурсы стоимостью $250 млн за пять лет для изучения безопасности ИИ-агентов и робототехники. Это доступ к вычислениям, а не денежная выплата; провайдеры и коммерческие условия ещё согласуются. Заявление компании вышло 13 октября, сообщения Reuters — 14 октября.",
-      "en": "NVIDIA pledged $250 million in computing access over five years for UK research into AI-agent and robotics safety. This is a compute contribution, not a cash payment; providers and commercial terms remain to be agreed. The company statement is dated 13 October, followed by Reuters coverage on 14 October.",
-      "th": "NVIDIA ประกาศมอบสิทธิ์ใช้ทรัพยากรประมวลผลมูลค่า 250 ล้านดอลลาร์ในช่วง 5 ปี เพื่อสนับสนุนงานวิจัยความปลอดภัยของเอเจนต์ AI และหุ่นยนต์ในสหราชอาณาจักร ไม่ใช่การจ่ายเงินสด โดยผู้ให้บริการและเงื่อนไขยังต้องตกลงกัน แถลงการณ์ลงวันที่ 13 ตุลาคม และ Reuters รายงานวันที่ 14 ตุลาคม",
-      "publishedAt": "2026-10-13",
+      "when": "15.10 · 🌍",
+      "href": "https://home.cern/cern-and-mistral-join-forces-to-accelerate-ai-for-science/",
+      "ru": "CERN и Mistral подписали заявление о намерениях создать базовую ИИ-модель для физики частиц. Её планируют обучать на миллиардах смоделированных столкновений протонов, чтобы объединить задачи восстановления событий, распознавания частиц и поиска необычных сигналов. Это исследовательский проект, а не уже готовый научный результат.",
+      "en": "CERN and Mistral signed a statement of intent to develop a foundation AI model for particle physics. Training on billions of simulated proton collisions is intended to support event reconstruction, particle identification and searches for unexpected signals. This is a research plan, not an already delivered scientific result.",
+      "th": "CERN และ Mistral ลงนามแสดงเจตจำนงพัฒนาโมเดล AI พื้นฐานสำหรับฟิสิกส์อนุภาค โดยวางแผนฝึกด้วยการชนโปรตอนจำลองหลายพันล้านครั้ง เพื่อช่วยสร้างภาพเหตุการณ์ ระบุอนุภาค และค้นหาสัญญาณผิดปกติ ขณะนี้ยังเป็นโครงการวิจัย ไม่ใช่ผลงานสำเร็จแล้ว",
+      "publishedAt": "2026-10-15",
       "sources": [
-        "https://nvidianews.nvidia.com/news/nvidia-commits-250-million-to-advance-uk-agentic-safety-and-security-research-over-the-next-five-years",
-        "https://www.reuters.com/technology/nvidia-pledges-250-million-boost-uk-ai-safety-research-2026-10-14/",
-        "https://www.theguardian.com/technology/2026/oct/14/nvidia-donates-to-uk-ai-safety-research"
+        "https://home.cern/cern-and-mistral-join-forces-to-accelerate-ai-for-science/",
+        "https://www.reuters.com/science/cern-mistral-partner-build-ai-foundation-models-physics-2026-10-15/"
       ],
       "nonWar": true,
       "discussionEvidence": {
-        "observedAt": "2026-10-15T08:48:00+07:00",
-        "sourceUrl": "https://www.reddit.com/r/nvidia/comments/1x5otpt/nvidia_pledges_250_million_to_uk_ai_safety/",
-        "summary": "The public search snapshot showed +34 votes on r/nvidia for this story versus +1 on r/MarketFluxHub (https://www.reddit.com/r/MarketFluxHub/comments/1x5xdg5/nvidia_pledges_250m_in_compute_to_uk_ai_safety/). Different community sizes and post ages make these weak, non-equivalent signals, not a global rank; the opened r/nvidia page did not expose an exact comment total. Reuters and The Guardian independently covered the pledge on 14 October, following NVIDIA's primary statement dated 13 October within the permitted 72-hour window."
+        "observedAt": "2026-10-16T08:42:00+07:00",
+        "sourceUrl": "https://www.reddit.com/r/MistralAI/comments/1x6j7k9/cern_and_mistral_join_forces_to_create_a_large/",
+        "summary": "The public search snapshot for r/MistralAI showed +759 votes on this story (https://www.reddit.com/r/MistralAI/comments/1x6j7k9/cern_and_mistral_join_forces_to_create_a_large/). A separate r/Thailand post about the Bangkok protests showed +67 (https://www.reddit.com/r/Thailand/comments/1x6c7eu/police_tighten_security_as_antiworld_bank_and_imf/); these are different audiences and not equivalent global-popularity measures. Exact comment totals were not exposed. Reuters independently reported the CERN announcement; Yahoo, CNA and other Reuters republications are one agency source, not independent confirmations."
       }
     },
     {
       "category": "thailand",
-      "when": "14.10 · 🇹🇭",
-      "href": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/550916",
-      "ru": "В Бангкоке МВФ, Всемирный банк и Банк Таиланда представили Bangkok Blueprint — рамочную программу против цифрового финансового мошенничества. Она предусматривает обмен данными между банками, операторами связи, платформами и правоохранителями, международное сотрудничество и оценку результатов по скорости выявления схем и помощи пострадавшим.",
-      "en": "The IMF, World Bank Group and Bank of Thailand launched the Bangkok Blueprint against digital financial fraud. It calls for information-sharing among banks, telecoms, platforms and law enforcement, cross-border cooperation and measurable improvements in detection and victim assistance.",
-      "th": "IMF กลุ่มธนาคารโลก และธนาคารแห่งประเทศไทยเปิดตัว Bangkok Blueprint เพื่อต่อสู้การฉ้อโกงทางการเงินดิจิทัล โดยเน้นการแลกเปลี่ยนข้อมูลระหว่างธนาคาร โทรคมนาคม แพลตฟอร์ม และตำรวจ ความร่วมมือข้ามพรมแดน และการวัดผลด้านการตรวจพบภัยและช่วยเหลือผู้เสียหาย",
-      "publishedAt": "2026-10-14",
+      "when": "16.10 · 🇹🇭",
+      "href": "https://thepattayanews.com/2026/10/16/thai-tourism-could-lose-far-more-than-proposed-1000-baht-departure-tax-would-raise-airlines-warn/",
+      "ru": "Авиакомпании и представители турбизнеса выступили против предлагаемого сбора в 1 000 бат за вылет из Таиланда, опасаясь снижения спроса и конкурентоспособности. Отраслевые оценки возможных потерь — сценарии, а не установленный ущерб. Публикация подчёркивает, что проект ещё обсуждается и новый сбор не введён.",
+      "en": "Airlines and tourism representatives opposed a proposed 1,000-baht levy on departures from Thailand, warning about demand and competitiveness. Industry estimates of possible losses are scenarios, not established damage. The report stresses that the proposal remains under discussion and the new levy has not been introduced.",
+      "th": "สายการบินและตัวแทนธุรกิจท่องเที่ยวคัดค้านข้อเสนอเก็บภาษีขาออก 1,000 บาท โดยกังวลต่อความต้องการเดินทางและการแข่งขัน ตัวเลขความเสียหายที่ภาคธุรกิจประเมินเป็นเพียงฉากทัศน์ ไม่ใช่ความเสียหายที่เกิดขึ้นแล้ว รายงานย้ำว่าข้อเสนอยังอยู่ระหว่างหารือและยังไม่ได้เริ่มเก็บภาษีใหม่นี้",
+      "publishedAt": "2026-10-16",
       "sources": [
-        "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/550916"
+        "https://thepattayanews.com/2026/10/16/thai-tourism-could-lose-far-more-than-proposed-1000-baht-departure-tax-would-raise-airlines-warn/",
+        "https://www.chinadailyasia.com/hk/article/641148"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-15T08:46:00+07:00",
-        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/550916",
-        "summary": "PRD displayed 191 views on the opened article, whereas the search-index snapshot showed 99 for the same URL; these are observations at different crawl times, not comparable competing-story totals. The Nation's public Most Viewed list instead ranked its IMF livestream guide first and Bangkok security guide second (https://www.nationthailand.com/news/tourism/40072247). No comparable comment totals or national ranking for this Blueprint report were available; selection rests on the official policy launch, not a popularity claim."
+        "observedAt": "2026-10-16T08:42:00+07:00",
+        "sourceUrl": "https://thepattayanews.com/2026/10/16/thai-tourism-could-lose-far-more-than-proposed-1000-baht-departure-tax-would-raise-airlines-warn/",
+        "summary": "No directly comparable article comment/view totals were exposed. Fresh reporting by The Pattaya News (16 October) and China Daily Asia (15 October) shows cross-outlet attention, while both discuss industry objections rather than an enacted levy. The available +67 Reddit signal for the other Thailand selection is only a community-level signal, not proof that this tax story ranks below or above it. No national discussion ranking is claimed."
       }
     },
     {
       "category": "thailand",
-      "when": "14.10 · 🇹🇭",
-      "href": "https://www.nationthailand.com/news/tourism/40072247",
-      "ru": "Управление по туризму Таиланда делает ставку на фестивали и другие события конца года, чтобы приблизиться к цели около 33 млн иностранных приездов за 2026 год. По словам главы TAT, дальние рынки показывают сильное раннее бронирование, а укрепление бата осложняет конкуренцию за туристов из соседних стран. Цель остаётся прогнозом, не достигнутым результатом.",
-      "en": "Thailand's tourism authority is backing year-end festivals and events to pursue roughly 33 million foreign arrivals in 2026. Its governor reported strong advance bookings from long-haul markets, while a stronger baht is making nearby destinations more competitive. The annual figure remains a target, not an achieved result.",
-      "th": "ททท. สนับสนุนเทศกาลและกิจกรรมปลายปีเพื่อมุ่งสู่เป้าหมายนักท่องเที่ยวต่างชาติประมาณ 33 ล้านคนในปี 2026 ผู้ว่าการ ททท. ระบุว่าตลาดระยะไกลมียอดจองล่วงหน้าดี แต่เงินบาทแข็งทำให้การแข่งขันกับจุดหมายใกล้เคียงยากขึ้น ตัวเลขดังกล่าวยังเป็นเป้าหมาย ไม่ใช่ผลสำเร็จแล้ว",
-      "publishedAt": "2026-10-14",
-      "sources": [
-        "https://www.nationthailand.com/news/tourism/40072247"
-      ],
-      "discussionEvidence": {
-        "observedAt": "2026-10-15T08:46:00+07:00",
-        "sourceUrl": "https://www.nationthailand.com/news/tourism/40072247",
-        "summary": "The Nation's accessible Most Viewed list ranked its IMF livestream guide 1, Bangkok meeting security guide 2 and October 15–16 weather report 4; this tourism report was not in the displayed top five. No article-level comment/view counts or broad independent corroborating coverage were available. Selected as fresh, attributed reporting of TAT's national tourism strategy, with no claim that it is the most discussed."
-      }
-    },
-    {
-      "category": "pattaya",
-      "when": "14.10 · Pattaya",
-      "href": "https://thepattayanews.com/2026/10/14/pattaya-officials-inspect-vegetarian-festival-kitchens-to-ensure-food-safety-and-hygiene/",
-      "ru": "Власти Паттайи проверили кухни в фонде Sawang Boriboon во время вегетарианского фестиваля: чистоту, ингредиенты, посуду и хранение готовых блюд. Продавцам напомнили о санитарных требованиях. По сообщению организаторов, фестивальная площадка в Наклыа напротив парка Лан Пхо работает до 19 октября.",
-      "en": "Pattaya officials inspected kitchens at the Sawang Boriboon foundation during the Vegetarian Festival, checking cleanliness, ingredients, utensils and food storage. Vendors received hygiene guidance. The report says the Naklua festival site opposite Lan Pho Park continues through 19 October.",
-      "th": "เจ้าหน้าที่พัทยาตรวจครัวของมูลนิธิสว่างบริบูรณ์ธรรมสถานช่วงเทศกาลกินเจ ทั้งความสะอาด วัตถุดิบ อุปกรณ์ และการเก็บอาหาร พร้อมให้คำแนะนำสุขาภิบาลแก่ผู้ค้า รายงานระบุว่างานบริเวณนาเกลือตรงข้ามสวนลานโพธิ์มีถึงวันที่ 19 ตุลาคม",
-      "publishedAt": "2026-10-14",
-      "sources": [
-        "https://thepattayanews.com/2026/10/14/pattaya-officials-inspect-vegetarian-festival-kitchens-to-ensure-food-safety-and-hygiene/"
-      ],
-      "discussionEvidence": {
-        "observedAt": "2026-10-15T08:46:00+07:00",
-        "sourceUrl": "https://thepattayanews.com/2026/10/14/pattaya-officials-inspect-vegetarian-festival-kitchens-to-ensure-food-safety-and-hygiene/",
-        "summary": "The public article and feed exposed no comparable comment, reaction, share or view totals, and independent cross-outlet coverage was not established. Chosen for fresh municipal food-safety reporting and practical festival information, not a measured local popularity rank."
-      }
-    },
-    {
-      "category": "pattaya",
-      "when": "15.10 · Pattaya",
-      "href": "https://thepattayanews.com/2026/10/15/woman-25-swept-into-drain-while-riding-motorcycle-through-floodwater-near-pattaya-survives-uninjured/",
-      "ru": "В Khao Mai Kaeo под Паттайей прохожий помог женщине, которую вместе с мотоциклом снесло в придорожный водоотвод при попытке пересечь затопленную дорогу. По данным спасателей, она не пострадала. Службы напоминают: если глубина и сила течения неизвестны, следует развернуться и выбрать другой маршрут.",
-      "en": "A passerby helped a woman swept with her motorcycle into a roadside drain while trying to cross floodwater in Khao Mai Kaeo near Pattaya. Rescuers reported no injuries. Emergency teams advise turning back and taking another route when the water's depth or current cannot be assessed safely.",
-      "th": "ผู้สัญจรช่วยหญิงที่ถูกน้ำพัดพร้อมรถจักรยานยนต์ลงร่องระบายน้ำ ขณะพยายามข้ามถนนที่น้ำท่วมในเขาไม้แก้วใกล้พัทยา เจ้าหน้าที่กู้ภัยรายงานว่าเธอไม่ได้รับบาดเจ็บ และแนะนำให้ย้อนกลับไปใช้เส้นทางอื่นเมื่อไม่สามารถประเมินความลึกหรือความแรงของกระแสน้ำได้",
+      "when": "15.10 · 🇹🇭",
+      "href": "https://apnews.com/article/imf-economy-oil-war-bangkok-8fd7f0f1b10ac0a3c13c2210110db288",
+      "ru": "В Бангкоке участники акции у встреч МВФ и Всемирного банка привлекали внимание к долгам домохозяйств, бедности и экологическим проблемам. AP сообщает о кратком затруднении движения и небольшом столкновении с полицией; затем шествие завершилось. Оценки численности в источниках расходятся, поэтому точное число не приводится.",
+      "en": "Protesters near the IMF–World Bank meetings in Bangkok highlighted household debt, poverty and environmental concerns. AP reported a brief traffic obstruction and a minor scuffle with police before the march dispersed. Reports differ on crowd size, so no precise attendance figure is given.",
+      "th": "ผู้ชุมนุมใกล้การประชุม IMF–ธนาคารโลกในกรุงเทพฯ เรียกร้องให้ใส่ใจหนี้ครัวเรือน ความยากจน และปัญหาสิ่งแวดล้อม AP รายงานว่าการจราจรติดขัดชั่วครู่และมีการกระทบกระทั่งเล็กน้อยกับตำรวจ ก่อนผู้ชุมนุมแยกย้าย เนื่องจากแหล่งข่าวประเมินจำนวนคนต่างกัน จึงไม่ระบุตัวเลขแน่นอน",
       "publishedAt": "2026-10-15",
       "sources": [
-        "https://thepattayanews.com/2026/10/15/woman-25-swept-into-drain-while-riding-motorcycle-through-floodwater-near-pattaya-survives-uninjured/"
+        "https://apnews.com/article/imf-economy-oil-war-bangkok-8fd7f0f1b10ac0a3c13c2210110db288",
+        "https://thepattayanews.com/2026/10/15/more-than-1000-protestors-march-in-bangkok-against-imf-world-bank-meetings/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-15T08:46:00+07:00",
-        "sourceUrl": "https://thepattayanews.com/wp-json/wp/v2/posts?after=2026-10-14T00:00:00&per_page=50&_fields=date,link,title",
-        "summary": "This was the newest item in the outlet's public WordPress feed at observation, ahead of a youth cultural-exchange report. Neither report exposed comparable public engagement totals; independent cross-outlet coverage was not established. Selection is a freshness and practical road-safety judgement, not a citywide discussion ranking."
+        "observedAt": "2026-10-16T08:42:00+07:00",
+        "sourceUrl": "https://www.reddit.com/r/Thailand/comments/1x6c7eu/police_tighten_security_as_antiworld_bank_and_imf/",
+        "summary": "The public Reddit search snapshot showed +67 votes for the linked protest discussion. The opened page exposed no exact comment total. AP and The Pattaya News both reported the event but gave substantially different crowd estimates, which are deliberately omitted from the digest. No comparable public engagement total for the departure-tax report or a nationwide popularity ranking was available."
+      }
+    },
+    {
+      "category": "pattaya",
+      "when": "16.10 · Pattaya",
+      "href": "https://www.pattayamail.com/news/pattaya-second-road-repairs-face-october-deadline-after-rain-delays-568621",
+      "ru": "После дождевых задержек ремонт покрытия Second Road от пересечения с Central Pattaya в сторону Dolphin Roundabout ориентируют на завершение к 22 октября. Укладка асфальта и перенос коммуникаций идут отдельными этапами; названный срок — план, а не подтверждение окончания работ. Водителям стоит учитывать строительные участки.",
+      "en": "After rain delays, resurfacing on Second Road from the Central Pattaya intersection toward Dolphin Roundabout is targeting completion by 22 October. Asphalt work and utility relocation are separate stages; the date is a target, not confirmation that work is finished. Drivers should allow for construction sections.",
+      "th": "การซ่อมผิวถนนพัทยาสายสองจากแยกพัทยากลางไปทางวงเวียนปลาโลมาตั้งเป้าเสร็จวันที่ 22 ตุลาคม หลังล่าช้าจากฝน งานปูยางมะตอยและย้ายสาธารณูปโภคเป็นคนละขั้นตอน กำหนดนี้ยังเป็นเป้าหมาย ไม่ใช่การยืนยันว่างานเสร็จแล้ว ผู้ขับขี่ควรเผื่อพื้นที่ก่อสร้าง",
+      "publishedAt": "2026-10-16",
+      "sources": [
+        "https://www.pattayamail.com/news/pattaya-second-road-repairs-face-october-deadline-after-rain-delays-568621"
+      ],
+      "discussionEvidence": {
+        "observedAt": "2026-10-16T08:42:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/pattaya-second-road-repairs-face-october-deadline-after-rain-delays-568621",
+        "summary": "Pattaya Mail displayed 312 views and 0 comments for this report, compared with 150 views and 0 comments for its same-day Lan Pho parking report (https://www.pattayamail.com/news/complaints-mount-over-dangerous-ramps-at-pattayas-lan-pho-naklua-parking-building-568616). These are same-platform public counters, not unique readers or citywide discussion rankings; article age and exposure may differ."
+      }
+    },
+    {
+      "category": "pattaya",
+      "when": "16.10 · Pattaya",
+      "href": "https://www.pattayamail.com/news/complaints-mount-over-dangerous-ramps-at-pattayas-lan-pho-naklua-parking-building-568616",
+      "ru": "После жалоб водителей власти обследовали узкие съезды парковки Лан Пхо в Наклыа. Рассматриваются изменение мешающих обзору ограждений, ограничители скорости и разметка пешеходных дорожек. Пока улучшения не завершены, незнакомым с планировкой водителям советуют особенно осторожно пользоваться верхними уровнями или выбрать другую парковку.",
+      "en": "Officials inspected the narrow ramps at Lan Pho's Naklua parking building after drivers' complaints. Proposed measures include adjusting barriers that block visibility, speed bumps and marked pedestrian routes. Until improvements are completed, unfamiliar drivers are advised to use extra care on upper levels or choose alternative parking.",
+      "th": "เจ้าหน้าที่ตรวจทางลาดแคบของอาคารจอดรถลานโพธิ์ นาเกลือ หลังมีข้อร้องเรียนจากผู้ขับขี่ โดยพิจารณาปรับรั้วที่บังทัศนวิสัย ติดลูกระนาด และตีเส้นทางเดินเท้า ระหว่างที่ยังปรับปรุงไม่เสร็จ ผู้ที่ไม่คุ้นเส้นทางควรระวังเป็นพิเศษเมื่อขึ้นชั้นบนหรือเลือกที่จอดอื่น",
+      "publishedAt": "2026-10-16",
+      "sources": [
+        "https://www.pattayamail.com/news/complaints-mount-over-dangerous-ramps-at-pattayas-lan-pho-naklua-parking-building-568616",
+        "https://thepattayanews.com/2026/10/15/pattaya-plans-safety-improvements-at-lan-pho-naklua-parking-building-after-driver-complaints/"
+      ],
+      "discussionEvidence": {
+        "observedAt": "2026-10-16T08:42:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/complaints-mount-over-dangerous-ramps-at-pattayas-lan-pho-naklua-parking-building-568616",
+        "summary": "Pattaya Mail displayed 150 views and 0 comments, versus 312 views and 0 comments for its same-day Second Road report (https://www.pattayamail.com/news/pattaya-second-road-repairs-face-october-deadline-after-rain-delays-568621). The Pattaya News separately reported the municipal inspection on 15 October. Counters are limited to one platform and do not establish a citywide ranking."
       }
     }
   ],
@@ -138,5 +140,5 @@
       "verifiedAt": "2026-10-14"
     }
   ],
-  "selection": "Exactly 1 non-war world story, 2 Thailand and 2 Pattaya-area stories, reviewed 2026-10-15 Asia/Bangkok. Four source reports are dated 14–15 October; NVIDIA's primary announcement is honestly dated 13 October within the expanded 72-hour window, with fresh independent reporting on 14 October. Public outlet rankings and an official view counter were observed; comparable engagement counts and independent coverage were not available for every topic, as recorded individually. A fresh secondary report about misuse of children's IDs contained inconsistent sentencing details and lacked independently checked official corroboration, so no new scam card was added; both active warnings and their original dates remain unchanged. No unrelated content or settings changed."
+  "selection": "Exactly 1 non-war world story, 2 Thailand stories and 2 Pattaya stories, reviewed 2026-10-16 Asia/Bangkok. All five selected reports are dated 15–16 October, within the preferred last-24-hour window. Same-platform Pattaya Mail counters and public Reddit search snapshots are recorded with observation time and URLs; cross-platform vote counts are explicitly not treated as comparable global rankings. Independent reporting and source limitations are described; Reuters republications are not counted as independent outlets. Conflicting protest attendance estimates are omitted. No new sufficiently verified official scam warning or corroborated investigation was found in the fresh review; both relevant active cards, wording and original verification dates remain unchanged. Only content/editorial.json changes."
 }
