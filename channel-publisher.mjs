@@ -23,6 +23,7 @@ export function validatePosts(posts) {
   const ids = new Set();
   for(const p of posts) {
     if(!/^[a-z0-9-]{3,80}$/.test(p.id)||ids.has(p.id)||typeof p.text!=='string'||!p.text.trim()||p.text.length>4000||!Number.isFinite(Date.parse(p.publishAt))||!Number.isFinite(Date.parse(p.expiresAt))||Date.parse(p.expiresAt)<=Date.parse(p.publishAt)||typeof p.approved!=='boolean') throw Error('invalid_channel_post');
+    if(p.photo !== undefined && (typeof p.photo!=='string'||!/^https:\/\/www\.ok-ok\.click\/assets\/channel\/[a-z0-9-]+\.(?:png|jpg)$/.test(p.photo)||p.text.length>1024)) throw Error('invalid_channel_photo');
     ids.add(p.id);
   }
   return posts;
@@ -48,7 +49,7 @@ export class ChannelPublisher {
     const due=posts.filter(p=>p.approved&&Date.parse(p.publishAt)<=now&&now<Date.parse(p.expiresAt));
     let sent=0;
     for(const p of due){
-      const key='post:'+p.id, contentKey='content:'+hash(p.text);
+      const key='post:'+p.id, contentKey='content:'+hash(p.photo?JSON.stringify({text:p.text,photo:p.photo}):p.text);
       // Reserve durably BEFORE network I/O. A timeout is ambiguous and must not
       // be blindly retried, even after an isolate restart or a new deployment.
       const reserved=await this.ctx.storage.transaction(async txn=>{
@@ -58,7 +59,9 @@ export class ChannelPublisher {
       if(!reserved)continue;
       try{
         const channelId=await checkRights(this.env);
-        const result=await api(this.env,'sendMessage',{chat_id:channelId,text:p.text,link_preview_options:{is_disabled:false}});
+        const result=p.photo
+          ? await api(this.env,'sendPhoto',{chat_id:channelId,photo:p.photo,caption:p.text})
+          : await api(this.env,'sendMessage',{chat_id:channelId,text:p.text,link_preview_options:{is_disabled:false}});
         await this.ctx.storage.put(key,{state:'sent',messageId:result.message_id,at:Date.now()});sent++;
       }catch{
         await this.ctx.storage.put(key,{state:'needs_review',at:Date.now()});
