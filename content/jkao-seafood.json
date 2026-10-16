@@ -1,0 +1,33 @@
+{
+  "id": "jkao-seafood",
+  "name": "J-Kao Seafood",
+  "cat": "food",
+  "area": "Na Jomtien · 46/3",
+  "price": "60–70 ฿",
+  "badge": "checking",
+  "firstVisitLabel": {"ru":"Первый визит · 16.10.2026","en":"First visit · 16 Oct 2026","th":"เยี่ยมชมครั้งแรก · 16 ต.ค. 2026"},
+  "photo": "assets/images/places/jkao-seafood/food.jpg",
+  "photos": ["assets/images/places/jkao-seafood/food.jpg", "assets/images/places/jkao-seafood/menu.jpg", "assets/images/places/jkao-seafood/sign.jpg"],
+  "maps": "https://www.google.com/maps/search/?api=1&query=7P42VV6X%2B9Q",
+  "plusCode": "VV6X+9Q",
+  "fullPlusCode": "7P42VV6X+9Q",
+  "coordinates": [12.8609375, 100.8994375],
+  "statusLabel": {"ru":"Не уточнено","en":"Not checked","th":"ยังไม่ยืนยัน"},
+  "hoursText": {"ru":"График работы не уточнялся","en":"Opening hours have not been checked","th":"ยังไม่ได้ตรวจสอบเวลาเปิดปิด"},
+  "blurb": {
+    "ru":"Первое посещение Тимура, 16.10.2026: простая еда без изысков, неплохие порции. В сфотографированном меню есть блюда по 60 и 70 бат.",
+    "en":"Timur's first visit, 16 Oct 2026: simple food and decent portions. The photographed menu includes dishes at 60 and 70 baht.",
+    "th":"Timur มาเยี่ยมครั้งแรกวันที่ 16 ต.ค. 2026 อาหารเรียบง่าย ปริมาณใช้ได้ เมนูที่ถ่ายภาพมีอาหารราคา 60 และ 70 บาท"
+  },
+  "conditions": {
+    "ru":"Небольшое кафе внутри двора, есть парковка. Адрес от автора: 46/3, Muang Pattaya, Chon Buri 20250. Точка от автора: VV6X+9Q. Название J-Kao Seafood видно на вывеске. Фото и цены — с посещения 16.10.2026; актуальные условия уточняйте на месте. Семейное управление не подтверждено.",
+    "en":"Small cafe inside a courtyard, with parking. Owner-supplied address: 46/3, Muang Pattaya, Chon Buri 20250; map point VV6X+9Q. J-Kao Seafood is shown on the sign. Photos and prices are from 16 Oct 2026; confirm current details locally. Family ownership has not been verified.",
+    "th":"ร้านเล็กในลาน มีที่จอดรถ ที่อยู่และจุดบนแผนที่จากผู้ดูแล: 46/3 Muang Pattaya, Chon Buri 20250, VV6X+9Q ป้ายระบุ J-Kao Seafood ภาพและราคาจากวันที่ 16 ต.ค. 2026 ควรสอบถามข้อมูลปัจจุบันที่ร้าน ยังไม่ยืนยันว่าเป็นกิจการครอบครัว"
+  },
+  "ownerReview": {
+    "ru":"Тимур, 16.10.2026: «Еда без особых изысков, но нормально и по цене хорошо. Порции неплохие». Это впечатление после одного посещения, не многолетняя проверка.",
+    "en":"Timur, 16 Oct 2026: simple food, decent portions and reasonable prices. This is an impression after one visit, not a long-term assessment.",
+    "th":"ความเห็นของ Timur วันที่ 16 ต.ค. 2026: อาหารเรียบง่าย ปริมาณใช้ได้ ราคาเหมาะสม เป็นความเห็นจากการเยี่ยมครั้งเดียว ไม่ใช่การประเมินระยะยาว"
+  },
+  "comments": []
+}

@@ -1673,6 +1673,7 @@ await import('./scripts/apply-author-chat.mjs');
 await import('./scripts/apply-ga4-events.mjs');
 
 await import('./scripts/apply-owner-place.mjs');
+await import('./scripts/apply-jkao-place.mjs');
 
 // Owner's current exchange partner overrides archived placements on every build.
 await import('./scripts/apply-ex24-referral.mjs');
