@@ -4,11 +4,24 @@ const json = (v, status=200) => new Response(JSON.stringify(v), {status,headers:
 const hash = text => createHash('sha256').update(text).digest('hex');
 async function api(env, method, body) {
   const response = await fetch('https://api.telegram.org/bot'+env.TG_BOT_TOKEN+'/'+method, {
-    method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body),signal:AbortSignal.timeout(8000)
+    method:'POST',headers:body instanceof FormData?undefined:{'content-type':'application/json'},body:body instanceof FormData?body:JSON.stringify(body),signal:AbortSignal.timeout(body instanceof FormData?15000:8000)
   });
   const result = await response.json();
   if (!response.ok || result.ok !== true) throw new Error('telegram_rejected');
   return result.result;
+}
+async function photoBody(env, channelId, post) {
+  // Read our bundled asset internally, then upload its bytes to Telegram.
+  // Telegram does not need public-site access or a browser challenge exemption.
+  const image=await env.ASSETS.fetch(new Request(post.photo));
+  const type=(image.headers.get('content-type')||'').split(';')[0].trim();
+  if(!image.ok||!['image/jpeg','image/png'].includes(type))throw Error('comic_asset_unavailable');
+  const bytes=await image.arrayBuffer();
+  if(!bytes.byteLength||bytes.byteLength>10000000)throw Error('comic_asset_size');
+  const body=new FormData();
+  body.set('chat_id',String(channelId));body.set('caption',post.text);
+  body.set('photo',new Blob([bytes],{type}),new URL(post.photo).pathname.split('/').pop());
+  return body;
 }
 export async function checkRights(env) {
   const me = await api(env,'getMe',{});
@@ -60,7 +73,7 @@ export class ChannelPublisher {
       try{
         const channelId=await checkRights(this.env);
         const result=p.photo
-          ? await api(this.env,'sendPhoto',{chat_id:channelId,photo:p.photo,caption:p.text})
+          ? await api(this.env,'sendPhoto',await photoBody(this.env,channelId,p))
           : await api(this.env,'sendMessage',{chat_id:channelId,text:p.text,link_preview_options:{is_disabled:false}});
         await this.ctx.storage.put(key,{state:'sent',messageId:result.message_id,at:Date.now()});sent++;
       }catch{

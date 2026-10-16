@@ -32,7 +32,9 @@ panel sizes and Oki's exact approved reference. The first episode replaces the
 be sent again. Optional `photo` uses only versioned images at
 https://www.ok-ok.click/assets/channel/. Captions must fit 1024 characters.
 Assets are copied from channel-media during the native build; max 10 MB.
-Photo posts use sendPhoto, text posts retain sendMessage and their existing
+Photo posts read the reviewed file through the internal ASSETS binding and upload
+its bytes using multipart sendPhoto. Telegram never fetches the public URL.
+Text posts retain sendMessage and their existing
 text hashes. Ambiguous photo sends are never retried automatically or replaced
 with text. New comics require reviewed content; do not invent real visits,
 prices or documentary depictions. The approved published comic is the public Oki style reference.
