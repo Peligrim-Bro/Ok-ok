@@ -4,9 +4,11 @@ import {createHash} from 'node:crypto';
 import {ChannelPublisher,channelWebhook,checkRights,validatePosts} from '../channel-publisher.mjs';
 const realFetch=globalThis.fetch;
 afterEach(()=>globalThis.fetch=realFetch);
-const env={TG_BOT_TOKEN:'test-secret',TG_CHAT_ID:'123'};
+const jpeg=new Uint8Array([255,216,255,217]);
+const env={TG_BOT_TOKEN:'test-secret',TG_CHAT_ID:'123',ASSETS:{fetch:async()=>new Response(jpeg,{headers:{'content-type':'image/jpeg'}})}};
+function decode(body){return body instanceof FormData?{chat_id:Number(body.get('chat_id')),caption:body.get('caption'),photo:body.get('photo')}:JSON.parse(body);}
 function mock(fail=false){const calls=[];globalThis.fetch=async(url,init)=>{
- const method=url.split('/').pop();calls.push({method,body:JSON.parse(init.body)});
+ const method=url.split('/').pop();calls.push({method,body:decode(init.body)});
  if(fail&&method==='sendMessage')throw Error('timeout');
  const result=method==='getMe'?{id:456,username:'Aibotadam_bot'}:method==='getChat'?{id:-100123,type:'channel',username:'PattayaOk_Ok'}:method==='getChatMember'?{status:'administrator',can_post_messages:true}:{message_id:999};
  return Response.json({ok:true,result});};return calls;}
@@ -50,7 +52,7 @@ test('photo captions and origins are validated before any Telegram call',()=>{
 });
 test('approved photo uses sendPhoto with the original caption, never a text fallback',async()=>{
  const calls=mock(),d=new ChannelPublisher({storage:store()},env);await d.fetch(req({action:'start'}));await d.fetch(req({action:'tick',posts:[comic]}));
- const sent=calls.filter(x=>['sendPhoto','sendMessage'].includes(x.method));assert.deepEqual(sent,[{method:'sendPhoto',body:{chat_id:-100123,photo:comic.photo,caption:comic.text}}]);
+ const sent=calls.filter(x=>['sendPhoto','sendMessage'].includes(x.method));assert.equal(sent.length,1);assert.equal(sent[0].method,'sendPhoto');assert.equal(sent[0].body.chat_id,-100123);assert.equal(sent[0].body.caption,comic.text);assert.equal(sent[0].body.photo.name,'oki-comic-001-super-soup.jpg');assert.equal(sent[0].body.photo.type,'image/jpeg');assert.deepEqual(new Uint8Array(await sent[0].body.photo.arrayBuffer()),jpeg);
 });
 test('photo duplicate guard survives restart and changed post ID',async()=>{
  const calls=mock(),storage=store();let d=new ChannelPublisher({storage},env);await d.fetch(req({action:'start'}));await d.fetch(req({action:'tick',posts:[comic]}));d=new ChannelPublisher({storage},env);await d.fetch(req({action:'tick',posts:[comic,{...comic,id:'comic-2'}]}));assert.equal(calls.filter(x=>x.method==='sendPhoto').length,1);
@@ -59,9 +61,23 @@ test('replacing the content of a previously sent slot never resends that slot',a
  const calls=mock(),storage=store(),d=new ChannelPublisher({storage},env);await d.fetch(req({action:'start'}));await d.fetch(req({action:'tick',posts:[post]}));await d.fetch(req({action:'tick',posts:[{...comic,id:post.id,text:'Replacement caption'}]}));assert.equal(calls.filter(x=>x.method==='sendPhoto').length,0);
 });
 test('ambiguous photo send persists review state without retries or fallback',async()=>{
- const calls=mock(),normalFetch=globalThis.fetch;globalThis.fetch=async(url,init)=>{if(url.endsWith('/sendPhoto')){calls.push({method:'sendPhoto',body:JSON.parse(init.body)});throw Error('timeout');}return normalFetch(url,init);};
+ const calls=mock(),normalFetch=globalThis.fetch;globalThis.fetch=async(url,init)=>{if(url.endsWith('/sendPhoto')){calls.push({method:'sendPhoto',body:decode(init.body)});throw Error('timeout');}return normalFetch(url,init);};
  const storage=store();let d=new ChannelPublisher({storage},env);await d.fetch(req({action:'start'}));await d.fetch(req({action:'tick',posts:[comic]}));d=new ChannelPublisher({storage},env);await d.fetch(req({action:'tick',posts:[comic]}));assert.equal((await storage.get('post:'+comic.id)).state,'needs_review');assert.equal(calls.filter(x=>x.method==='sendPhoto').length,1);assert.equal(calls.filter(x=>x.method==='sendMessage'&&x.body.chat_id<0).length,0);
 });
 test('stopped, future, expired and draft photo posts do not publish',async()=>{
  const calls=mock(),d=new ChannelPublisher({storage:store()},env);await d.fetch(req({action:'tick',posts:[comic]}));await d.fetch(req({action:'start'}));await d.fetch(req({action:'tick',posts:[{...comic,approved:false},{...comic,id:'photo-future',publishAt:'2098-01-01T00:00:00Z'},{...comic,id:'photo-expired',expiresAt:'2026-01-02T00:00:00Z'}]}));assert.equal(calls.filter(x=>x.method==='sendPhoto').length,0);
+});
+
+test('uses internal ASSETS binding and rejects non-image or missing files without posting',async()=>{
+ for(const response of [new Response('missing',{status:404}),new Response('<html>challenge</html>',{headers:{'content-type':'text/html'}}),new Response(null,{headers:{'content-type':'image/jpeg'}})]){
+  const calls=mock(),storage=store();let requested;
+  const d=new ChannelPublisher({storage},{...env,ASSETS:{fetch:async request=>{requested=request.url;return response;}}});
+  await d.fetch(req({action:'start'}));await d.fetch(req({action:'tick',posts:[comic]}));
+  assert.equal(requested,comic.photo);assert.equal(calls.filter(x=>x.method==='sendPhoto').length,0);assert.equal((await storage.get('post:'+comic.id)).state,'needs_review');
+ }
+});
+test('photo file upload leaves Content-Type to multipart encoder',async()=>{
+ mock();const wrapped=globalThis.fetch;let observed;
+ globalThis.fetch=async(url,init)=>{if(url.endsWith('/sendPhoto'))observed=init;return wrapped(url,init);};
+ const d=new ChannelPublisher({storage:store()},env);await d.fetch(req({action:'start'}));await d.fetch(req({action:'tick',posts:[comic]}));assert.ok(observed.body instanceof FormData);assert.equal(observed.headers,undefined);
 });
