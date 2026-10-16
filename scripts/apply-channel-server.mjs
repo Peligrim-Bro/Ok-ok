@@ -12,6 +12,9 @@ import {POSTS} from '../channel-posts.mjs';
 mkdirSync('site/public/assets/channel',{recursive:true});
 for(const post of POSTS.filter(p=>p.photo)){
  const name=new URL(post.photo).pathname.split('/').pop();
+ // Keep episode one as the public style reference; expired later episodes
+ // remain archived in Git, while Telegram keeps their uploaded media.
+ if(Date.parse(post.expiresAt)<=Date.now() && name!=='oki-comic-001-super-soup.jpg')continue;
  const source='channel-media/'+name;
  if(statSync(source).size>10000000)throw Error('Telegram photo exceeds 10 MB');
  copyFileSync(source,'site/public/assets/channel/'+name);
