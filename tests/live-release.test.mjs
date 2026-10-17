@@ -2,6 +2,10 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {verifyLive} from '../scripts/verify-live.mjs';
+test('a disabled portal returned in the live shell fails release verification',async()=>{
+ const html=readFileSync('site/public/index.html','utf8').replace('</head>','<style id="okok-portal-startup"></style></head>');
+ await assert.rejects(verifyLive(commit,request({'/':html})),/Disabled startup portal/);
+});
 const commit='a'.repeat(40);
 function request(override={}){
  return async url=>{

@@ -4,6 +4,11 @@ import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
 import {verifyReleaseCache} from './release-cache.mjs';
 const html=readFileSync('site/public/index.html','utf8');
+const startupSettings=JSON.parse(readFileSync('content/startup.json','utf8'));
+if(!startupSettings.portalEnabled){
+ assert(!/portal-launch\.js|okok-portal-startup|data-okok-portal-pending/.test(html),'Disabled startup portal must not load or cover the site');
+ assert(!readFileSync('site/public/sw.js','utf8').includes('portal-launch.js'),'Disabled portal must not be precached');
+}
 let parsed=0;
 for(const match of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)){
  if(/\bsrc\s*=|type=["'](?:module|application\/ld\+json|application\/json)/i.test(match[1]))continue;

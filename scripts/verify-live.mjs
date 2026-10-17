@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {mkdirSync,writeFileSync} from 'node:fs';
+import {mkdirSync,writeFileSync,readFileSync} from 'node:fs';
 import {pathToFileURL} from 'node:url';
 
 export async function verifyLive(commit,request=fetch){
@@ -16,6 +16,8 @@ export async function verifyLive(commit,request=fetch){
  const info=await (await get('/build-info.json')).json();
  assert.equal(info.commit,commit,'Live site does not match the expected release');
  const html=await (await get('/')).text();
+ const startupSettings=JSON.parse(readFileSync('content/startup.json','utf8'));
+ if(!startupSettings.portalEnabled)assert(!/portal-launch\.js|okok-portal-startup|data-okok-portal-pending/.test(html),'Disabled startup portal returned on live site');
  assert(html.includes('id="okok-tropical-gloss-v1"')&&html.includes('--bg:#061d27')&&html.includes('--bg:#eef5ef'),'Approved Tropical Night palette missing on the live site');
  for(const marker of ['PattayaOK','okok-pulse-v1','oki-nav-float-fix-v4','oki-prompt-tail-fix-v4','okok-tetris-playable-v2','https://ex24qr.com/sf5vfvhnf'])assert(html.includes(marker),`Missing live marker: ${marker}`);
  assert(html.includes("checkedDate:'13.10.2026'")&&html.includes('https://t.me/SenateExchange_bot?start=fi10072'),'Dated Senate resource or protected referral missing');
