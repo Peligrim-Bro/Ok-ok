@@ -1683,9 +1683,11 @@ await import('./scripts/apply-pwa-update.mjs');
 // Set release identity after all patches; browser startup must never change it.
 await import('./scripts/finalize-release-cache.mjs');
 
-// Owner-approved three-second galaxy startup (2026-10-15).
-// Run after all production transforms, so the public index is final.
-{
+// Owner paused the startup portal on 2026-10-17 pending refinement.
+// Keep its source available, but inject neither the cover nor animation while off.
+const startupSettings=JSON.parse(readFileSync('content/startup.json','utf8'));
+if(typeof startupSettings.portalEnabled!=='boolean')throw new Error('Portal setting must be boolean');
+if(startupSettings.portalEnabled){
  const portalSource=readFileSync('portal-launch.js','utf8');
  if(!portalSource.includes('okok-portal'))throw new Error('Portal source invalid');
  const pagePath='site/public/index.html';
@@ -1706,4 +1708,8 @@ await import('./scripts/finalize-release-cache.mjs');
  writeFileSync(swPath,portalSW.replace('const CORE = [','const CORE = ['+JSON.stringify(portalURL)+','));
  writeFileSync(pagePath,page);
  console.log('Experimental portal injected into public index only');
+}else{
+ const page=readFileSync('site/public/index.html','utf8');
+ if(/portal-launch\.js|okok-portal-startup|data-okok-portal-pending/.test(page))throw new Error('Disabled portal returned to the page');
+ console.log('Startup portal paused: direct site opening, no cover or animation');
 }
