@@ -10,7 +10,7 @@ const tracker=String.raw`
   window.__OKOK_GA4_EVENTS__=true;
   try{if(new URLSearchParams(location.search).get('okok_test')==='1')sessionStorage.setItem('okok-test','1')}catch{}
   const excluded=()=>{
-    try{return /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)||navigator.webdriver||sessionStorage.getItem('okok-test')==='1'}catch{return true}
+    try{return navigator.doNotTrack==='1'||window.doNotTrack==='1'||navigator.globalPrivacyControl===true||/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)||navigator.webdriver||sessionStorage.getItem('okok-test')==='1'}catch{return true}
   };
   const send=(name,params={})=>{
     if(excluded())return;
