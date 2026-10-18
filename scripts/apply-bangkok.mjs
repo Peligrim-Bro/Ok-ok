@@ -17,7 +17,7 @@ const functions=String.raw`
     const cityEscape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     function renderCityPicker(){
       let picker=$('cityPicker');
-      if(!picker){picker=document.createElement('div');picker.id='cityPicker';picker.className='city-picker';$('searchBar').before(picker)}
+      if(!picker){picker=document.createElement('div');picker.id='cityPicker';picker.className='city-picker';document.querySelector('.top-actions').prepend(picker)}
       picker.setAttribute('aria-label',cityText('Город','City','เมือง'));
       picker.innerHTML='<select class="lang" id="citySelect" aria-label="'+cityText('Город','City','เมือง')+'">'+[['pattaya',cityText('Паттайя','Pattaya','พัทยา')],['bangkok',cityText('Бангкок','Bangkok','กรุงเทพฯ')],['phuket',cityText('Пхукет','Phuket','ภูเก็ต')]].map(([id,label])=>'<option value="'+id+'" '+(city===id?'selected':'')+'>'+label+'</option>').join('')+'</select>';
       picker.onchange=e=>{if(e.target.id!=='citySelect'||e.target.value===city)return;city=e.target.value;window.dispatchEvent(new Event('okok:city-change'));try{localStorage.setItem('okok-city',city)}catch(_){}bangkokCategory='all';$('q').value='';while(closeOverlay()){}setTab('home');};

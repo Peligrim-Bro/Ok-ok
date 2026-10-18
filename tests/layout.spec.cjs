@@ -2,7 +2,7 @@ const {test,expect}=require('@playwright/test');
 const sizes=[[320,568],[360,740],[390,844],[430,932],[768,1024],[844,390]];
 async function layout(page,label){
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),label+' page overflow').toBe(true);
- const boxes=await page.locator('header.app .brand>#timerBtn,header.app .top-actions>button,nav.tab>button').evaluateAll(nodes=>nodes.map(n=>{const r=n.getBoundingClientRect();return {id:n.id||n.dataset.tab,x:r.x,y:r.y,w:r.width,h:r.height};}));
+ const boxes=await page.locator('header.app .brand>#timerBtn,header.app .top-actions>button,#citySelect,nav.tab>button').evaluateAll(nodes=>nodes.map(n=>{const r=n.getBoundingClientRect();return {id:n.id||n.dataset.tab,x:r.x,y:r.y,w:r.width,h:r.height};}));
  const width=await page.evaluate(()=>innerWidth);
  for(const b of boxes){expect(b.x,label+' '+b.id).toBeGreaterThanOrEqual(-1);expect(b.x+b.w,label+' '+b.id).toBeLessThanOrEqual(width+1);}
  for(let i=0;i<boxes.length;i++)for(let j=i+1;j<boxes.length;j++){
