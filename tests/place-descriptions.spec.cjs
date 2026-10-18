@@ -15,6 +15,7 @@ for(const lang of ['ru','en','th'])for(const theme of ['dark','light'])test(`all
  }
  const first=cards.first();await first.locator('.place-sources summary').click();
  await expect(first.locator('.place-sources a').first()).toBeVisible();
+ expect(await first.locator('.place-sources a').first().evaluate(n=>getComputedStyle(n).color)).toBe(await first.locator('.place-description').evaluate(n=>getComputedStyle(n).color));
  await page.screenshot({path:`quality-reports/place-descriptions-${lang}-${theme}.png`});
  const panel=page.locator('#spinCard');await panel.evaluate(n=>n.scrollTop=n.scrollHeight);
  await page.locator('#spinClose').click();await expect(page.locator('#spinMask')).not.toHaveClass(/on/);

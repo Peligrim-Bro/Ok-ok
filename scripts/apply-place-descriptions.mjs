@@ -40,6 +40,7 @@ for(const [id,n] of Object.entries(notes.places))if(n.area){
  const marker='    function placeNote(p)';
  replace(marker,'    for(const p of PLACES){if(p.id==='+JSON.stringify(id)+')p.area='+JSON.stringify(n.area)+';}\n'+marker);
 }
+replace('</head>','<style>.place-sources a{color:var(--text);text-underline-offset:3px}</style></head>');
 writeFileSync(path,html);
 const swPath='site/public/sw.js';const sw=readFileSync(swPath,'utf8');assert(sw.includes('const CORE = ['));
 writeFileSync(swPath,sw.replace('const CORE = [','const CORE = ['+JSON.stringify('./'+asset)+','));
