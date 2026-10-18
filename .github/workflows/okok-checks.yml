@@ -78,12 +78,13 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npx playwright install --with-deps chromium
-      - run: npx playwright test tests/ads-payments.spec.cjs
+      - run: npx playwright test tests/ads-payments.spec.cjs tests/ad-invitation-oki.spec.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: payment-ui-reports
           path: |
             quality-reports/payment-*.png
+            quality-reports/oki-invitation-*.png
             test-results/
           retention-days: 14

@@ -47,10 +47,12 @@ window.OKI3D={mount(host,options){
  // Hands have five separated rounded fingers and a thumb, visible from every side.
  function hand(parent,x,y,z,rotation){const h=new THREE.Group();h.position.set(x,y,z);h.rotation.z=rotation;parent.add(h);sphere(h,pink,0,0,0,.14,.16,.07);for(let i=0;i<4;i++){const px=(i-1.5)*.065;limbFinger(h,[px,.1,0],[px*1.5,.3+(i===1||i===2?.04:0),.005],.034);}limbFinger(h,[-.1,.01,0],[-.24,.12,.02],.044);ring(h,0,-.14,0,.105,glow,Math.PI/2);return h;}
  function limbFinger(parent,a,b,r){tube(parent,[a,b],r,pink);sphere(parent,pink,...b,r);}
- const armLeft=new THREE.Group();armLeft.position.set(-.3,1.95,0);body.add(armLeft);limb(armLeft,[0,0,0],[-.4,-.31,.03],.085);limb(armLeft,[-.4,-.31,.03],[-.65,-.48,.1],.09);sphere(armLeft,pink,-.02,0,0,.14,.15,.13);sphere(armLeft,cyan,-.4,-.31,.03,.12);hand(armLeft,-.72,-.52,.1,2.35);
+ const armLeft=new THREE.Group();armLeft.position.set(-.3,1.95,0);body.add(armLeft);limb(armLeft,[0,0,0],[-.4,-.31,.03],.085);limb(armLeft,[-.4,-.31,.03],[-.65,-.48,.1],.09);sphere(armLeft,pink,-.02,0,0,.14,.15,.13);sphere(armLeft,cyan,-.4,-.31,.03,.12);const leftHand=hand(armLeft,-.72,-.52,.1,2.35);
  const wave=new THREE.Group();wave.position.set(.3,1.95,0);body.add(wave);wave.rotation.z=options.gender==='girl'?.18:0;limb(wave,[0,0,0],[.35,.19,.03],.09);sphere(wave,pink,0,0,0,.14,.15,.13);sphere(wave,cyan,.35,.19,.03,.115);
  // An actual elbow pivot brings the palm to the chin without moving the shoulder or hiding an eye.
- const waveForearm=new THREE.Group();waveForearm.position.set(.35,.19,.03);wave.add(waveForearm);limb(waveForearm,[0,0,0],[.27,.37,.02],.085);hand(waveForearm,.31,.53,.02,-.22);
+ const waveForearm=new THREE.Group();waveForearm.position.set(.35,.19,.03);wave.add(waveForearm);limb(waveForearm,[0,0,0],[.27,.37,.02],.085);const waveHand=hand(waveForearm,.31,.53,.02,-.22);
+ // Both palms turn down towards the invitation rim; default care poses are unchanged.
+ if(options.gesture==='invite'){leftHand.rotation.z=Math.PI+.65;waveHand.rotation.z=Math.PI+.82;}
  const neutralElbow=new THREE.Quaternion(),thinkingElbow=new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(.31,.53,.02).normalize(),new THREE.Vector3(-.30,.17,.45).normalize());
  let diaperMat=null;if(baby){diaperMat=mat({color:0xe6e2ff,roughness:.45,clearcoat:.35});const diaper=sphere(body,diaperMat,0,.74,.07,.33,.20,.27);diaper.name='baby-diaper';sphere(body,pink,-.27,.78,.13,.06,.04,.07);sphere(body,pink,.27,.78,.13,.06,.04,.07);armLeft.position.y-=.43;armLeft.rotation.z=-.25;wave.position.y-=.43;}else if(options.gender==='girl'){armLeft.position.x=.3;armLeft.scale.x=-1;wave.position.x=-.3;wave.scale.x=-1;body.rotation.z=-.075;}
  const head=new THREE.Group();root.add(head);head.position.y=baby?1.37:childScale*2.18+.57;head.scale.setScalar(baby?.79:options.stage===1?.89:.96);root.userData.stage=options.stage;
@@ -113,15 +115,16 @@ window.OKI3D={mount(host,options){
  function draw(time){if(disposed)return;frame=requestAnimationFrame(draw);if(document.hidden||!visible||time-last<(options.interactive?33:66))return;last=time;controls.update();
   // Reference pack's expressive poses, applied to real shoulder pivots.
   const resting=['sleep','tired'].includes(currentMood),thinking=['hungry','quiet'].includes(currentMood);
-  const waveTarget=resting?-1.5:thinking?0:(options.gender==='girl'?.18:0);
-  const leftTarget=resting?.5:thinking?.25:(baby?-.25:0);
+  const inviting=options.gesture==='invite';
+  const waveTarget=inviting?-.82:resting?-1.5:thinking?0:(options.gender==='girl'?.18:0);
+  const leftTarget=inviting?-.65:resting?.5:thinking?.25:(baby?-.25:0);
   const waveX=resting?.25:0,headTilt=thinking?-.10:resting?.04:0,elbowTarget=thinking?thinkingElbow:neutralElbow;
   const settling=Math.abs(wave.rotation.z-waveTarget)+Math.abs(armLeft.rotation.z-leftTarget)+Math.abs(wave.rotation.x-waveX)+Math.abs(head.rotation.z-headTilt)+waveForearm.quaternion.angleTo(elbowTarget)>.001;
   wave.rotation.z=reduce?waveTarget:THREE.MathUtils.lerp(wave.rotation.z,waveTarget+(!moving&&!resting?Math.sin(time*.003)*.13:0),.1);
   armLeft.rotation.z=reduce?leftTarget:THREE.MathUtils.lerp(armLeft.rotation.z,leftTarget+(!moving?Math.sin(time*.0016)*.04:0),.1);
   wave.rotation.x=reduce?waveX:THREE.MathUtils.lerp(wave.rotation.x,waveX,.1);
   waveForearm.quaternion.slerp(elbowTarget,reduce?1:.1);
-  host.dataset.expression=resting?'calm':thinking?'think':'wave';needs ||= settling;
+  host.dataset.expression=inviting?'invite':resting?'calm':thinking?'think':'wave';needs ||= settling;
   head.rotation.z=reduce?headTilt:THREE.MathUtils.lerp(head.rotation.z,headTilt,.1);
   if(!reduce&&!moving){root.position.y=.06+Math.sin(time*.0018)*.07;root.rotation.z=Math.sin(time*.0011)*.025;head.rotation.z+=(thinking?.012:.025)*Math.sin(time*.0015);const beat=1+Math.sin(time*.003)*.06;heart.scale.set(.12*beat,.13*beat,.1*beat);if(currentMood!=='sleep'){const blink=time%5900>5700;eyes.forEach(o=>o.scale.y=blink?.12:currentMood==='tired'?.55:1);}needs=true;}
   if(needs){renderer.render(scene,camera);needs=false;host.dataset.ready='true';host.dataset.renders=String(++renders);host.dataset.azimuth=controls.getAzimuthalAngle().toFixed(3);}}
