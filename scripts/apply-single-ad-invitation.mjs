@@ -40,7 +40,7 @@ const cssPath='site/public/assets/ads/ads.css';
 const css=readFileSync(cssPath,'utf8')+String.raw`
 /* okok-personal-invitation-v1 */
 html body #okAds .okads-list{margin-bottom:0}
-html body #okAds .okad-invitation-wrap{position:relative;padding-top:82px;isolation:isolate;min-width:0}
+html body #okAds .okad-invitation-wrap{position:relative;padding-top:82px;isolation:isolate;min-width:0;scroll-margin-block:100px}
 html body #okAds .okad-oki-peek{position:absolute;inset:0 0 auto;height:86px;overflow:hidden;pointer-events:none;z-index:0}
 html body #okAds .okad-oki-peek[hidden]{display:none}
 html body #okAds .okad-oki-model{position:absolute;right:8px;top:-12px;width:126px;height:148px;transform:translateY(65px);animation:okad-oki-rise .6s cubic-bezier(.2,.8,.2,1) forwards}

@@ -1,12 +1,13 @@
 const {test,expect}=require('@playwright/test');
 async function jump(page,ms){await page.clock.setFixedTime(new Date(await page.evaluate(()=>Date.now())+ms));}
+async function center(wrap){await wrap.evaluate(n=>n.scrollIntoView({block:'center',behavior:'instant'}));}
 async function prepare(page,lang='ru',reduce=false){
  await page.emulateMedia({reducedMotion:reduce?'reduce':'no-preference'});
  await page.addInitScript(lang=>{localStorage.setItem('pok-lang',lang);localStorage.setItem('pok-lang-set','1');localStorage.setItem('pok-install-seen','1');localStorage.setItem('oki-life-v1',JSON.stringify({reminders:false}));},lang);
  await page.route('**/api/ads/list',r=>r.fulfill({json:{slots:3,price:15,hours:24,ads:[],free:3}}));
  await page.goto('/',{waitUntil:'domcontentloaded'});
  await expect(page.locator('.okad-invitation-wrap')).toBeVisible();
- await page.locator('.okad-invitation-wrap').scrollIntoViewIfNeeded();
+ await center(page.locator('.okad-invitation-wrap'));
  // Advance wall time without replacing requestAnimationFrame/WebGL scheduling.
  await jump(page,16000);
 }
@@ -21,10 +22,12 @@ for(const lang of ['ru','en','th'])test(`small real 3D Oki invitation: ${lang}`,
  for(const theme of ['dark','light']){
   if(await page.locator('html').getAttribute('data-theme')!==theme)await page.locator('#themeBtn').evaluate(b=>b.click());
   for(const size of [{width:320,height:568},{width:768,height:1024},{width:844,height:390}]){
-   await page.setViewportSize(size);await wrap.scrollIntoViewIfNeeded();
+   await page.setViewportSize(size);await center(wrap);
    await expect(peek).toBeVisible();
    const speech=await wrap.locator('.okad-oki-speech').boundingBox(),card=await wrap.locator('.okad-invitation').boundingBox();
    expect(speech.y+speech.height).toBeLessThanOrEqual(card.y);
+   const nav=await page.locator('nav.tab').boundingBox();
+   expect(card.y+card.height).toBeLessThanOrEqual(nav.y-8);
    expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
    await wrap.screenshot({path:`quality-reports/oki-invitation-${lang}-${theme}-${size.width}.png`});
   }
@@ -47,7 +50,7 @@ test('Oki repeats gently, disposes offscreen and never appears over a dialog',as
  await wrap.evaluate(n=>{document.body.style.paddingBottom='2000px';scrollTo(0,n.getBoundingClientRect().bottom+scrollY+100);});
  await expect.poll(async()=>{const r=await wrap.boundingBox();return r.y+r.height;}).toBeLessThan(0);
  await expect(peek).toBeHidden();await expect(wrap.locator('canvas')).toHaveCount(0);
- await wrap.scrollIntoViewIfNeeded();await jump(page,100000);await expect(peek).toBeVisible();
+ await center(wrap);await jump(page,100000);await expect(peek).toBeVisible();
  await wrap.locator('.okad-invitation').click();await expect(peek).toBeHidden();
  await jump(page,100000);await page.waitForTimeout(700);await expect(peek).toBeHidden();
 });

@@ -11,7 +11,8 @@ function mountInviteOki(wrap) {
  wrap.prepend(peek);
  const host=peek.querySelector('.okad-oki-model'),abort=new AbortController();
  let model=null,visible=false,loading=false,stopped=false,job;
- const blocked=()=>document.hidden||!visible||!wrap.isConnected||
+ const outsideSafeArea=()=>{const box=wrap.getBoundingClientRect(),nav=document.querySelector('nav.tab'),navBox=nav?.getBoundingClientRect();return box.top<0||box.bottom>Math.min(innerHeight,navBox&&nav.getClientRects().length?navBox.top:innerHeight)-8;};
+ const blocked=()=>document.hidden||!visible||!wrap.isConnected||outsideSafeArea()||
   [...document.querySelectorAll('[role="dialog"],.modal.on,.overlay.on,.lang-overlay.on,.install-overlay.on,#okiBubble')].some(el=>el.getClientRects().length)||document.body.style.position==='fixed';
  function hide(){peek.hidden=true;wrap.classList.remove('oki-is-peeking');model?.dispose();model=null;}
  function snooze(){inviteOkiUntil=0;inviteOkiNext=Date.now()+600000;try{sessionStorage.setItem('ok-ad-oki-snooze',String(inviteOkiNext));}catch{}hide();}
