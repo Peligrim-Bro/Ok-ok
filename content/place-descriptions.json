@@ -1,0 +1,796 @@
+{
+  "reviewedAt": "2026-10-18",
+  "aliases": {
+    "truth": "t20-truth",
+    "nongnooch": "t20-nong",
+    "minisiam": "t20-mini",
+    "kohlarn": "t20-larn",
+    "tiffany": "t20-tiff",
+    "alcazar": "t20-alcazar"
+  },
+  "places": {
+    "t20-walk": {
+      "description": {
+        "ru": "Неоновая улица с клубами, барами и живой музыкой: сюда идут за шумной вечерней Паттайей. В отзывах отмечают навязчивых зазывал; цены на напитки лучше уточнять до заказа.",
+        "en": "Neon, clubs, bars and live music make this a walk through Pattaya’s louder nightlife. Reviews mention persistent touts; check drink prices before ordering.",
+        "th": "ถนนนีออนที่รวมคลับ บาร์ และดนตรีสด เหมาะกับคนอยากสัมผัสพัทยายามค่ำคืน รีวิวพูดถึงพนักงานชวนเข้าร้าน ควรถามราคาเครื่องดื่มก่อนสั่ง"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.com/Attraction_Review-g293919-d1441352-Reviews-Walking_Street_Pattaya-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "t20-truth": {
+      "description": {
+        "ru": "Деревянный музей у моря, где резные фигуры покрывают фасады и своды. В отзывах особенно хвалят работу мастеров — интереснее рассматривать детали, чем ограничиться фото снаружи.",
+        "en": "A wooden seaside museum whose façades and ceilings are covered in carved figures. Reviewers especially admire the craftsmanship: give the details more attention than a quick exterior photo.",
+        "th": "พิพิธภัณฑ์ไม้ริมทะเลที่มีงานแกะสลักเต็มทั้งภายนอกและเพดาน ผู้รีวิวชื่นชมฝีมือช่างเป็นพิเศษ ควรเผื่อเวลาชมรายละเอียดมากกว่าถ่ายรูปด้านนอก"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.com/Attraction_Review-g293919-d456350-Reviews-The_Sanctuary_Of_Truth-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "t20-nong": {
+      "description": {
+        "ru": "Большой тропический сад с тематическими ландшафтами и долиной динозавров. Посетители хвалят ухоженную территорию и фотозоны; это прогулка на несколько часов, а не короткая остановка.",
+        "en": "A sprawling tropical garden with themed landscapes and a dinosaur valley. Visitors praise the maintained grounds and photo spots; allow several hours rather than a quick stop.",
+        "th": "สวนเขตร้อนขนาดใหญ่พร้อมสวนหลากธีมและหุบเขาไดโนเสาร์ ผู้เข้าชมชอบพื้นที่ที่ดูแลดีและมุมถ่ายรูป ควรเผื่อหลายชั่วโมงสำหรับการเดินชม"
+      },
+      "sources": [
+        {
+          "url": "https://wanderlog.com/place/details/6597/nongnooch-pattaya-garden",
+          "label": "Отзывы гостей"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "t20-central": {
+      "description": {
+        "ru": "Торговый центр на Beach Road: магазины, еда и вид на залив в одном маршруте. В отзывах ценят возможность совместить покупки с прогулкой у моря — удобный вариант и в дождь.",
+        "en": "A Beach Road mall combining shops, food and bay views in one stop. Reviews value the easy mix of shopping and a seaside walk; useful when rain interrupts outdoor plans.",
+        "th": "ศูนย์การค้าบนบีชโรดที่รวมร้านค้า อาหาร และวิวอ่าว รีวิวชอบการจับคู่ช้อปปิ้งกับเดินริมทะเล เป็นอีกตัวเลือกเมื่อฝนทำให้แผนกลางแจ้งสะดุด"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.com/Attraction_Review-g293919-d1594951-Reviews-Central_Pattaya-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "t20-float": {
+      "description": {
+        "ru": "Деревянные мостики, каналы и лавки с едой и сувенирами создают декорацию тайского рынка. Отзывы неоднозначны: сюда лучше ехать за прогулкой и атмосферой, учитывая туристический формат.",
+        "en": "Wooden walkways, canals and food and souvenir stalls recreate a Thai waterside market. Reviews are mixed: approach it as a themed tourist stroll rather than a local bargain market.",
+        "th": "สะพานไม้ คลอง และร้านอาหารกับของฝากจำลองบรรยากาศตลาดริมน้ำไทย รีวิวมีทั้งดีและไม่ดี เหมาะกับการเดินเที่ยวชมบรรยากาศในรูปแบบแหล่งท่องเที่ยว"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.com/Attraction_Review-g293919-d1438832-Reviews-Pattaya_Floating_Market-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "t20-t21": {
+      "description": {
+        "ru": "Молл в стиле путешествия по разным городам: можно гулять среди тематических декораций и заглянуть в Pier 21. Фудкорт особенно хвалят за выбор еды и доступный формат.",
+        "en": "A travel-themed mall where city-inspired décor turns shopping into a photo walk. Pier 21 is a useful food stop, with reviews praising its variety and affordable approach.",
+        "th": "ห้างธีมการเดินทางพร้อมมุมตกแต่งเมืองต่าง ๆ ให้เดินถ่ายรูป แวะกินที่ Pier 21 ได้ด้วย รีวิวชื่นชมอาหารหลากหลายและราคาที่เข้าถึงง่าย"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.com/Attraction_Review-g293919-d15266527-Reviews-Terminal_21_Pattaya-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        },
+        {
+          "url": "https://wanderlog.com/place/details/4907383/pier-21-terminal-21-pattaya",
+          "label": "Отзывы гостей"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "t20-alcazar": {
+      "description": {
+        "ru": "Кабаре с яркими костюмами, танцевальными номерами и большой сценой. Вариант для вечера, когда хочется зрелища без похода по клубам; перед покупкой сравните места в зале.",
+        "en": "A cabaret evening of colourful costumes, dance numbers and stage spectacle. An alternative to club-hopping when you want a seated show; compare seating sections before booking.",
+        "th": "คาบาเรต์ที่มีเครื่องแต่งกายสีสันสดใสและการแสดงเต้นบนเวทีใหญ่ เหมาะกับค่ำคืนที่อยากชมโชว์แบบนั่งสบาย ควรเปรียบเทียบโซนที่นั่งก่อนจอง"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.com/Attraction_Review-g293919-d1237125-Reviews-Alcazar_Cabaret-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "t20-bazaar": {
+      "description": {
+        "ru": "Крытый рынок с одеждой, сумками и сувенирами в центре города. Подходит для неспешного поиска мелочей на память; сравнивайте предложения соседних лавок, прежде чем покупать.",
+        "en": "A covered central market for clothes, bags and souvenirs. Good for browsing small holiday finds; compare neighbouring stalls before committing to a purchase.",
+        "th": "ตลาดในร่มใจกลางเมือง มีเสื้อผ้า กระเป๋า และของฝาก เหมาะกับเดินเลือกของที่ระลึกแบบไม่รีบ ลองเทียบสินค้าระหว่างร้านก่อนซื้อ"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.com/Attraction_Review-g293919-d7797849-Reviews-Pattaya_Night_Bazaar-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "t20-tiff": {
+      "description": {
+        "ru": "Театральное кабаре с эффектными декорациями, светом и тщательно продуманными костюмами. Сюда идут за постановкой и сценическим блеском — удачный формат для отдельного вечернего выхода.",
+        "en": "A theatrical cabaret built around elaborate sets, lighting and costumes. The appeal is the production and stage glamour: make it the centrepiece of an evening out.",
+        "th": "คาบาเรต์ที่โดดเด่นด้วยฉาก แสงสี และเครื่องแต่งกาย เหมาะกับคนอยากดูการแสดงบนเวทีเต็มรูปแบบและวางเป็นกิจกรรมหลักของค่ำคืน"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.com/Attraction_Review-g293919-d1847172-Reviews-Tiffany_s_Show_Pattaya-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "t20-jom": {
+      "description": {
+        "ru": "Длинный городской пляж с набережной и едой поблизости. В отзывах его часто выбирают за более спокойную атмосферу по сравнению с центром; чистота воды и берега зависит от участка и погоды.",
+        "en": "A long urban beach with a promenade and nearby food stalls. Reviewers often prefer its calmer feel to central Pattaya; water and beach conditions vary with the stretch and weather.",
+        "th": "ชายหาดเมืองแนวยาวพร้อมทางเดินและร้านอาหารใกล้ ๆ รีวิวมักชอบบรรยากาศที่สงบกว่าใจกลางพัทยา สภาพน้ำและชายหาดต่างกันตามช่วงและอากาศ"
+      },
+      "sources": [
+        {
+          "url": "https://wanderlog.com/place/details/21842/jomtien-beach",
+          "label": "Отзывы гостей"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "t20-pbeach": {
+      "description": {
+        "ru": "Главная набережная Паттайи: море, лодки и городской ритм рядом с магазинами и кафе. В отзывах особенно ценят вечерние прогулки и закаты; для тишины выбирайте менее оживлённый участок.",
+        "en": "Pattaya’s main beachfront mixes boats, sea views and city bustle with shops and cafés nearby. Reviews particularly value sunset walks; choose a quieter stretch if you want less activity.",
+        "th": "ชายหาดหลักของพัทยาที่รวมวิวทะเล เรือ และชีวิตเมือง ใกล้ร้านค้าและคาเฟ่ รีวิวชอบเดินเล่นชมพระอาทิตย์ตก หากอยากสงบให้เลือกช่วงที่คนไม่พลุกพล่าน"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.co.uk/Attraction_Review-g293919-d462834-Reviews-Pattaya_Beach-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "t20-larn": {
+      "description": {
+        "ru": "Островной день с пляжами и сменой городского пейзажа на море; ссылка ведёт к пляжу Samae. В отзывах хвалят пляжный отдых, но поездку стоит планировать с запасом на обратную переправу.",
+        "en": "Swap city streets for an island beach day; the map link points to Samae Beach. Reviews highlight the seaside escape, but leave enough time for your return crossing.",
+        "th": "เปลี่ยนจากถนนในเมืองเป็นวันพักบนเกาะ โดยลิงก์แผนที่ชี้ไปหาดแสม รีวิวชอบบรรยากาศพักผ่อนริมทะเล ควรเผื่อเวลากลับและตรวจรอบเรือ"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.com.au/Attraction_Review-g2282455-d2663021-Reviews-Samae_Beach-Ko_Lan_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "t20-buddha": {
+      "description": {
+        "ru": "Золотой Будда на холме Пратамнак и лестница с нагами — короткая остановка с храмовой атмосферой. Это действующее религиозное место: выбирайте закрытую одежду и спокойное поведение.",
+        "en": "A golden Buddha above Pratumnak and a naga-lined stairway make a compact temple visit. This is an active religious site, so dress modestly and keep the visit respectful.",
+        "th": "พระพุทธรูปสีทองบนเขาพระตำหนักและบันไดพญานาค เหมาะกับแวะชมวัดระยะสั้น เป็นศาสนสถานที่ใช้งานจริง ควรแต่งกายสุภาพและสำรวม"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.com/Attraction_Review-g293919-d1438830-Reviews-Big_Buddha_Temple-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "t20-mini": {
+      "description": {
+        "ru": "Миниатюры тайских и мировых достопримечательностей: прогулка словно по нескольким странам за один раз. Интереснее идти с любителем архитектуры или камерой и рассматривать маленькие детали.",
+        "en": "Miniature Thai and international landmarks turn a walk into a tiny world tour. Bring a camera or an architecture enthusiast and take time to inspect the small details.",
+        "th": "สถานที่สำคัญของไทยและต่างประเทศในขนาดจำลอง ให้ความรู้สึกเหมือนเที่ยวหลายประเทศในการเดินครั้งเดียว เหมาะกับคนชอบสถาปัตยกรรมและถ่ายรูป"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.co.uk/Attraction_Review-g293919-d464601-Reviews-Mini_Siam-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "t20-aqua": {
+      "description": {
+        "ru": "Аквапарк с горками и зонами по мотивам фильмов Columbia Pictures. В отзывах отмечают дополнительные расходы на отдельные услуги — перед поездкой посмотрите, что входит именно в ваш билет.",
+        "en": "A water park with slides and zones themed around Columbia Pictures films. Reviews mention extra charges for some services; check exactly what your chosen ticket includes.",
+        "th": "สวนน้ำพร้อมเครื่องเล่นและโซนธีมภาพยนตร์ Columbia Pictures รีวิวพูดถึงค่าใช้จ่ายเพิ่มสำหรับบางบริการ ควรตรวจว่าบัตรที่เลือกครอบคลุมอะไรบ้าง"
+      },
+      "sources": [
+        {
+          "url": "https://www.wongnai.com/reviews/1405d9309d08496b9820e60e9edf8cef",
+          "label": "Wongnai"
+        },
+        {
+          "url": "https://pattaya-insider.com/things-to-do/columbia-pictures-aquaverse/",
+          "label": "Источник"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "t20-rama": {
+      "description": {
+        "ru": "Большой аквапарк для дня с горками, бассейнами и отдыхом у воды. Посетители хвалят разнообразие развлечений и ухоженность; удобно выделить ему отдельный день без плотного маршрута.",
+        "en": "A large water park for a full day of slides, pools and breaks by the water. Visitors praise the range of attractions and maintained facilities; avoid squeezing it into an already busy itinerary.",
+        "th": "สวนน้ำขนาดใหญ่สำหรับเล่นสไลเดอร์ ว่ายน้ำ และพักผ่อนทั้งวัน ผู้รีวิวชื่นชมเครื่องเล่นหลากหลายและการดูแลสถานที่ เหมาะกับจัดเป็นทริปหนึ่งวัน"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.com.sg/Attraction_Review-g293919-d10188252-Reviews-Ramayana_Water_Park-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "t20-art": {
+      "description": {
+        "ru": "Музей оптических иллюзий, где картина оживает, если правильно встать перед камерой. Лучше приходить вдвоём: один становится частью сюжета, второй ловит нужный ракурс.",
+        "en": "An optical-illusion museum where your pose and camera angle complete the artwork. Go with a friend: one person joins the scene while the other finds the convincing perspective.",
+        "th": "พิพิธภัณฑ์ภาพลวงตาที่ท่าทางและมุมกล้องทำให้ภาพสมบูรณ์ ไปกับเพื่อนจะสนุกกว่า คนหนึ่งเข้าไปอยู่ในฉาก อีกคนช่วยหามุมถ่ายภาพ"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.com/Attraction_Review-g293919-d3611252-Reviews-Art_in_Paradise_Pattaya-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "t20-under": {
+      "description": {
+        "ru": "Аквариум с подводным тоннелем: можно наблюдать рыб не через маленькое окно, а со всех сторон. Отзывы о масштабе и впечатлениях разные — воспринимайте его как отдельную прогулку, а не огромный океанариум.",
+        "en": "An aquarium with an underwater tunnel lets you watch fish around and above you. Reviews differ on its scale and impact; expect a focused visit rather than a vast oceanarium.",
+        "th": "อควาเรียมพร้อมอุโมงค์ใต้น้ำให้ดูปลาได้ทั้งรอบตัวและด้านบน รีวิวมีมุมมองต่างกันเรื่องขนาด เหมาะกับการแวะชมมากกว่าคาดหวังพิพิธภัณฑ์สัตว์น้ำขนาดมหึมา"
+      },
+      "sources": [
+        {
+          "url": "https://wanderlog.com/place/details/21843/underwater-world-pattaya",
+          "label": "Отзывы гостей"
+        }
+      ],
+      "reviewedAt": "2026-10-18",
+      "area": "Sukhumvit · South Pattaya"
+    },
+    "t20-stone": {
+      "description": {
+        "ru": "Ландшафтный парк с необычными камнями, садами и крокодиловой фермой. Важно учитывать формат заранее: это не только прогулка среди растений, здесь есть животные и шоу.",
+        "en": "A landscaped park combining unusual rock formations, gardens and a crocodile farm. Know the format before you go: animals and shows are part of the visit, not just planted gardens.",
+        "th": "สวนภูมิทัศน์ที่มีหินรูปทรงแปลก สวน และฟาร์มจระเข้ ควรรู้รูปแบบก่อนเดินทาง เพราะมีทั้งสัตว์และการแสดง ไม่ได้เป็นเพียงสวนต้นไม้"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.com/Attraction_Review-g293919-d464602-Reviews-Million_Years_Stone_Park_Pattaya_Crocodile_Farm-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "t20-view": {
+      "description": {
+        "ru": "Высотная панорама Паттайи и побережья со смотровой площадки башни. Сюда едут за масштабным видом и фотографиями; в пасмурную погоду впечатление сильнее зависит от видимости.",
+        "en": "A tower viewpoint for a broad panorama of Pattaya and its coastline. Come for the wide perspective and photographs; on cloudy days, visibility makes a big difference.",
+        "th": "จุดชมวิวบนหอคอยที่มองเห็นเมืองพัทยาและแนวชายฝั่ง เหมาะกับคนอยากชมภาพกว้างและถ่ายรูป ในวันครึ้มควรคำนึงถึงทัศนวิสัย"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.co.uk/Attraction_Review-g11891445-d553105-Reviews-Pattaya_Park_Tower-Nong_Prue_Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "harlans": {
+      "description": {
+        "ru": "Стейк-хаус с акцентом на мясо и Beef Wellington. В отзывах хвалят кухню, но оценки цены и порций расходятся — вариант для запланированного ужина, а не бюджетного перекуса.",
+        "en": "A steakhouse with a focus on meat and Beef Wellington. Reviews praise the cooking but differ on portions and value; think planned dinner rather than budget snack.",
+        "th": "สเต๊กเฮาส์ที่เน้นเนื้อและ Beef Wellington รีวิวชอบอาหารแต่เห็นต่างเรื่องปริมาณและความคุ้มค่า เหมาะกับมื้อเย็นที่ตั้งใจมา มากกว่ามื้อประหยัด"
+      },
+      "sources": [
+        {
+          "url": "https://wanderlog.com/place/details/6998246/harlans-pattaya",
+          "label": "Отзывы гостей"
+        },
+        {
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g1226133-d25007053-Reviews-Harlan_s-Bang_Lamung_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "moom": {
+      "description": {
+        "ru": "Большой ресторан морепродуктов у моря в Наклуа. Его выбирают за сочетание тайской кухни и вида на воду — удобно прийти компанией и заказать несколько блюд на общий стол.",
+        "en": "A large waterfront seafood restaurant in Naklua. Thai dishes and sea views are the draw; a group visit makes it easy to share several plates.",
+        "th": "ร้านอาหารทะเลขนาดใหญ่ริมทะเลนาเกลือ จุดเด่นคืออาหารไทยคู่กับวิวทะเล ไปเป็นกลุ่มแล้วสั่งหลายจานแบ่งกันจะลองได้หลากหลาย"
+      },
+      "sources": [
+        {
+          "url": "https://wanderlog.com/place/details/389775",
+          "label": "Отзывы гостей"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "sky": {
+      "description": {
+        "ru": "Терраса над морем на Пратамнаке — место для заката, фотографий и неспешного ужина. В отзывах особенно выделяют панораму, а мнения о еде различаются: главный повод прийти — вид.",
+        "en": "A Pratumnak terrace above the sea for sunset photos and an unhurried meal. Reviews highlight the panorama while opinions on food vary: the view is the clearest reason to come.",
+        "th": "ระเบียงเหนือทะเลบนพระตำหนัก เหมาะกับถ่ายรูปพระอาทิตย์ตกและกินมื้อสบาย ๆ รีวิวเน้นวิวเป็นพิเศษ ส่วนความเห็นเรื่องอาหารมีทั้งสองด้าน"
+      },
+      "sources": [
+        {
+          "url": "https://wanderlog.com/place/details/1137322",
+          "label": "Отзывы гостей"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "cabbages": {
+      "description": {
+        "ru": "Тайский ресторан среди зелени на территории Birds & Bees, с выходом к морской атмосфере. Сюда интересно прийти ради сада и обстановки, а на ужин лучше оставить время без спешки.",
+        "en": "A Thai restaurant in the greenery of Birds & Bees with a seaside setting. The garden and atmosphere make it worth exploring; leave time for an unhurried meal.",
+        "th": "ร้านอาหารไทยท่ามกลางสวนของ Birds & Bees ใกล้บรรยากาศริมทะเล เหมาะกับคนชอบสวนและอยากนั่งกินแบบไม่เร่งรีบ"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g293919-d1226113-Reviews-Cabbages_and_Condoms-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        },
+        {
+          "url": "https://th.tripadvisor.com/Restaurant_Review-g293919-d1226113-Reviews-Cabbages_and_Condoms-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "sandwich": {
+      "description": {
+        "ru": "Сэндвичи и пицца — простой вариант, когда хочется привычной еды вместо большого ужина. Свежих подтверждённых отзывов по этой карточке мало: перед поездкой проверьте адрес и работу заведения.",
+        "en": "Sandwiches and pizza offer a familiar alternative to a full sit-down dinner. Recent verified review information for this listing is limited; confirm the location and operation before travelling.",
+        "th": "แซนด์วิชและพิซซ่าเป็นตัวเลือกอาหารคุ้นเคยแทนมื้อใหญ่ ข้อมูลรีวิวล่าสุดของรายการนี้ยังมีจำกัด ควรยืนยันที่ตั้งและการเปิดบริการก่อนเดินทาง"
+      },
+      "sources": [
+        {
+          "url": "https://www.facebook.com/sandwich.co.th/",
+          "label": "Страница заведения"
+        },
+        {
+          "url": "https://www.wongnai.com/restaurants/3170204tr-the-sandwich-company",
+          "label": "Wongnai"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "glasssilver": {
+      "description": {
+        "ru": "Ресторан у пляжа Wongamat с морепродуктами и разными направлениями кухни. В отзывах ценят прибрежную обстановку, но мнения о соотношении цены и еды расходятся — выбирайте его прежде всего ради места.",
+        "en": "A Wongamat beachfront restaurant serving seafood and several styles of cuisine. Reviews appreciate the setting but differ on value and food; the location is a main part of the appeal.",
+        "th": "ร้านริมชายหาดวงศ์อมาตที่มีอาหารทะเลและอาหารหลายสไตล์ รีวิวชอบบรรยากาศ แต่เห็นต่างเรื่องอาหารกับราคา จุดเด่นหลักคือทำเลริมทะเล"
+      },
+      "sources": [
+        {
+          "url": "https://www.wongnai.com/restaurants/327968uI-the-glass-house-silver/reviews",
+          "label": "Wongnai"
+        },
+        {
+          "url": "https://wanderlog.com/place/details/1137331/the-glass-house-silver",
+          "label": "Отзывы гостей"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "mermaids": {
+      "description": {
+        "ru": "Ресторан на склоне с видом на море и узнаваемыми столиками-гнёздами. В отзывах хвалят панораму, но впечатления от сервиса неоднозначны; условия посадки в гнёздах уточняйте отдельно.",
+        "en": "A hillside restaurant with sea views and distinctive nest-style seating. Reviews praise the panorama but are mixed on service; check the separate conditions for nest seats.",
+        "th": "ร้านบนเนินพร้อมวิวทะเลและที่นั่งรังนกอันเป็นเอกลักษณ์ รีวิวชอบวิว แต่มีความเห็นเรื่องบริการต่างกัน ควรสอบถามเงื่อนไขที่นั่งรังนกแยกต่างหาก"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g293919-d23026325-Reviews-3_Mermaids_Cafe_Restaurant-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        },
+        {
+          "url": "https://wanderlog.com/place/details/753261/%E5%B8%95%E5%A1%94%E4%BA%9A%E7%BE%8E%E4%BA%BA%E9%B1%BC%E9%A4%90%E5%8E%85",
+          "label": "Отзывы гостей"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "kaewkaprao": {
+      "description": {
+        "ru": "Место для знакомства с крабовым капрао: мясо краба, базилик и рис вместо обычного мясного варианта. Подойдёт тем, кто хочет попробовать местное блюдо с морским акцентом; остроту обсудите при заказе.",
+        "en": "Try crab kaprao: crab meat, basil and rice give the familiar stir-fry a seafood twist. A useful stop for a local dish with a different main ingredient; discuss chilli levels when ordering.",
+        "th": "ลองกะเพราปูที่ใช้เนื้อปูกับใบกะเพราและข้าวแทนเนื้อสัตว์แบบทั่วไป เหมาะกับคนอยากลองอาหารจานคุ้นเคยในเวอร์ชันทะเล สอบถามระดับความเผ็ดตอนสั่ง"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g293919-d14973915-Reviews-Kaew_Kaphrao_Phu-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        },
+        {
+          "url": "https://www.reddit.com/r/ThaiFood/comments/1w8xr3h/crab_meat_pad_kra_pao_with_a_crispy_fried_egg/",
+          "label": "Источник"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "pupen": {
+      "description": {
+        "ru": "Крупный ресторан морепродуктов у южной части Джомтьена, узнаваемый по крабу у входа. В отзывах выделяют большой выбор блюд; лучше идти с компанией и пробовать несколько позиций вместе.",
+        "en": "A large seafood restaurant at the southern end of Jomtien, recognised by its entrance crab. Reviews highlight the broad menu; go with a group to share and sample several dishes.",
+        "th": "ร้านอาหารทะเลขนาดใหญ่ปลายหาดจอมเทียน สังเกตได้จากปูหน้าร้าน รีวิวพูดถึงเมนูหลากหลาย เหมาะกับไปเป็นกลุ่มและสั่งแบ่งกันหลายจาน"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g297916-d3698154-Reviews-Pupen_Seafood-Chonburi_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        },
+        {
+          "url": "https://wanderlog.com/place/details/733461/pupen-seafood",
+          "label": "Отзывы гостей"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "bigfish": {
+      "description": {
+        "ru": "Ресторан в Siam@Siam с морской тематикой, морепродуктами и буфетным форматом. Удобен для длинного ужина с разными вкусами за одним столом; состав и доступность буфета проверьте на нужную дату.",
+        "en": "An underwater-themed Siam@Siam restaurant serving seafood and buffet options. Useful for a long meal with varied tastes around one table; check the buffet offering for your chosen date.",
+        "th": "ร้านใน Siam@Siam ตกแต่งธีมโลกใต้น้ำ มีอาหารทะเลและบุฟเฟต์ เหมาะกับมื้อยาวที่แต่ละคนอยากกินต่างกัน ควรตรวจรูปแบบบุฟเฟต์สำหรับวันที่จะไป"
+      },
+      "sources": [
+        {
+          "url": "https://www.siamatsiam.com/restaurants/big-fish-restaurant/",
+          "label": "Страница заведения"
+        },
+        {
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g293919-d8260002-Reviews-Big_Fish_Pattaya-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "collective": {
+      "description": {
+        "ru": "Ресторан Holiday Inn на Beach Road: копчёное мясо, барбекю и пицца из дровяной печи в одном месте. Подойдёт компании с разными вкусами, когда хочется поесть у моря без долгого выбора кухни.",
+        "en": "Holiday Inn’s Beach Road restaurant brings smokehouse meats, barbecue and wood-fired pizza together. A useful choice for a group with different tastes looking for a seaside meal.",
+        "th": "ร้านของ Holiday Inn บนบีชโรดที่รวมเนื้อรมควัน บาร์บีคิว และพิซซ่าเตาฟืน เหมาะกับกลุ่มที่ชอบอาหารต่างกันและอยากกินริมทะเล"
+      },
+      "sources": [
+        {
+          "url": "https://pattaya.holidayinn.com/bars-and-restaurants/the-collective",
+          "label": "Страница заведения"
+        },
+        {
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g293919-d27963524-Reviews-The_Collective_Pattaya-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "anytime": {
+      "description": {
+        "ru": "Кафе у пирса Bali Hai с видом на воду, тайскими и европейскими блюдами. В отзывах хвалят выбор и порции — можно совместить завтрак или обед с прогулкой у причала.",
+        "en": "A Bali Hai Pier café with water views and Thai and European dishes. Reviews praise the choice and portions; combine breakfast or lunch with a walk around the pier.",
+        "th": "คาเฟ่ข้างท่าเรือบาลีฮาย มีวิวทะเล อาหารไทยและยุโรป รีวิวชอบตัวเลือกอาหารและปริมาณ เหมาะกับแวะกินก่อนหรือหลังเดินเล่นแถวท่าเรือ"
+      },
+      "sources": [
+        {
+          "url": "https://anytime-cafe.com/",
+          "label": "Страница заведения"
+        },
+        {
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g293919-d10783708-Reviews-Anytime_Cafe_Pattaya-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        }
+      ],
+      "reviewedAt": "2026-10-18",
+      "area": "Bali Hai Pier"
+    },
+    "horizonfood": {
+      "description": {
+        "ru": "Ресторан и бар на крыше Hilton: Паттайский залив виден с высоты, а вечер строится вокруг заката и огней города. В отзывах особо отмечают панораму; бронирование и требования к одежде уточните заранее.",
+        "en": "Hilton’s rooftop restaurant and bar frames the bay from above, with sunset and city lights as the setting. Reviews particularly highlight the panorama; check reservations and dress requirements ahead.",
+        "th": "ร้านอาหารและบาร์บนดาดฟ้า Hilton มองเห็นอ่าวจากมุมสูง เหมาะกับชมพระอาทิตย์ตกและไฟเมือง รีวิวเน้นวิว ควรสอบถามการจองและการแต่งกายก่อน"
+      },
+      "sources": [
+        {
+          "url": "https://wanderlog.com/place/details/733577/horizon-rooftop-restaurant-and-bar",
+          "label": "Отзывы гостей"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "longhorn": {
+      "description": {
+        "ru": "Стейк-хаус на Second Road для тех, кто соскучился по мясному ужину. В отзывах выделяют стейки и тушёную говядину; при заказе лучше сразу согласовать прожарку и гарнир.",
+        "en": "A Second Road steakhouse for a dedicated meat dinner. Reviews mention steaks and beef stew; agree your preferred doneness and sides when ordering.",
+        "th": "สเต๊กเฮาส์บนถนนสายสองสำหรับมื้อเนื้อจริงจัง รีวิวพูดถึงสเต๊กและสตูว์เนื้อ ควรระบุระดับความสุกและเครื่องเคียงตอนสั่ง"
+      },
+      "sources": [
+        {
+          "url": "https://wanderlog.com/place/details/2668180/%E3%83%AD%E3%83%B3%E3%82%B0%E3%83%9B%E3%83%BC%E3%83%B3-%E3%82%B9%E3%83%86%E3%83%BC%E3%82%AD%E3%83%8F%E3%82%A6%E3%82%B9",
+          "label": "Отзывы гостей"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "pascal": {
+      "description": {
+        "ru": "Европейский ресторан на Second Road, который в отзывах вспоминают и за завтрак, и за обстоятельный ужин. Формат зависит от времени визита: актуальное предложение завтрака уточняйте отдельно.",
+        "en": "A European restaurant on Second Road that reviews mention for both breakfast and a leisurely dinner. The format changes with the time of day; confirm the current breakfast offering separately.",
+        "th": "ร้านอาหารยุโรปบนถนนสายสองที่มีรีวิวพูดถึงทั้งอาหารเช้าและมื้อเย็นแบบสบาย ๆ รูปแบบขึ้นกับเวลาไป ควรสอบถามบริการอาหารเช้าปัจจุบันแยกต่างหาก"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.ca/Restaurant_Review-g293919-d1130181-Reviews-Casa_Pascal_Restaurant-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        },
+        {
+          "url": "https://wanderlog.com/place/details/1184847/casa-pascal-restaurant",
+          "label": "Отзывы гостей"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "amis": {
+      "description": {
+        "ru": "Камерный ресторан для особого вечера с европейской кухней и вниманием к подаче. В отзывах выделяют Beef Wellington и морепродукты; подходящий повод — ужин, которому хочется уделить время.",
+        "en": "An intimate European dining setting for an occasion worth slowing down for. Reviews highlight Beef Wellington, seafood and presentation; think a planned evening rather than a quick bite.",
+        "th": "ร้านอาหารยุโรปบรรยากาศเป็นส่วนตัวสำหรับค่ำคืนพิเศษ รีวิวชื่นชม Beef Wellington อาหารทะเล และการจัดจาน เหมาะกับมื้อที่ตั้งใจเผื่อเวลาให้"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.ca/Restaurant_Review-g293919-d1594762-Reviews-Cafe_Des_Amis_Fine_Dining-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "edge": {
+      "description": {
+        "ru": "Ресторан Hilton с видом на залив и буфетными предложениями. Интересен, когда хочется попробовать несколько направлений кухни за один визит; тему и состав буфета проверяйте на выбранный день.",
+        "en": "A Hilton restaurant pairing bay views with buffet dining options. Useful when you want to try several cuisines in one visit; check the buffet theme and offering for your chosen day.",
+        "th": "ร้านใน Hilton พร้อมวิวอ่าวและบุฟเฟต์ เหมาะกับคนอยากลองอาหารหลายแนวในมื้อเดียว ควรตรวจธีมและรายการบุฟเฟต์ของวันที่จะไป"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g293919-d1955605-Reviews-Edge-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "moonwhale": {
+      "description": {
+        "ru": "Видовое место для заката, напитков и ужина с морской панорамой. Отзывы об обслуживании различаются, поэтому лучше идти за атмосферой и заранее уточнить условия столиков.",
+        "en": "A sea-view setting for sunset drinks and dinner. Reviews differ on service; come for the atmosphere and ask about seating conditions before planning the evening.",
+        "th": "ร้านวิวทะเลสำหรับดื่มชมพระอาทิตย์ตกและกินมื้อเย็น รีวิวเรื่องบริการมีหลายมุม ควรสอบถามเงื่อนไขที่นั่งก่อนวางแผนไป"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g293919-d28640595-Reviews-Moonwhale_Pattaya-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "tortis": {
+      "description": {
+        "ru": "Немецкий биргартен в Наклуа, где в меню встречаются и тайские блюда. Вариант для компании, которая хочет совместить европейский ужин с местными вкусами, не меняя заведение.",
+        "en": "A German biergarten in Naklua whose menu also includes Thai dishes. An option for a group wanting European comfort food and local flavours at the same table.",
+        "th": "เบียร์การ์เดนสไตล์เยอรมันในนาเกลือที่มีอาหารไทยด้วย เหมาะกับกลุ่มที่อยากกินอาหารยุโรปและรสชาติไทยร่วมโต๊ะเดียวกัน"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g293919-d27511195-Reviews-Torti_s_Biergarten_Das_Restaurant_In_Naklua-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "orchidee": {
+      "description": {
+        "ru": "Небольшой ресторан немецкой и тайской кухни в Наклуа. В отзывах ценят домашний формат и понятную еду — вариант, когда хочется сменить морепродукты на европейский ужин.",
+        "en": "A small Naklua restaurant serving German and Thai food. Reviews appreciate its homely approach and familiar dishes; an alternative when you want a break from seafood.",
+        "th": "ร้านขนาดเล็กในนาเกลือ มีอาหารเยอรมันและไทย รีวิวชอบบรรยากาศแบบบ้าน ๆ และอาหารคุ้นเคย เหมาะกับวันที่อยากเปลี่ยนจากอาหารทะเล"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g293919-d8746303-Reviews-Golden_Orchidee-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        },
+        {
+          "url": "https://wanderlog.com/place/details/4082994/golden-orchidee",
+          "label": "Отзывы гостей"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "pier21": {
+      "description": {
+        "ru": "Фудкорт Terminal 21 с множеством тайских блюд в одном зале. В отзывах хвалят цены и выбор, но предупреждают о поиске свободного столика в загруженное время.",
+        "en": "Terminal 21’s food court brings many Thai dishes into one hall. Reviews praise the prices and variety, while noting that a free table can be hard to find at busy times.",
+        "th": "ฟู้ดคอร์ตของ Terminal 21 ที่รวมอาหารไทยหลายแบบ รีวิวชอบราคาและความหลากหลาย แต่ช่วงคนเยอะอาจหาที่นั่งได้ยาก"
+      },
+      "sources": [
+        {
+          "url": "https://wanderlog.com/place/details/4907383/pier-21-terminal-21-pattaya",
+          "label": "Отзывы гостей"
+        },
+        {
+          "url": "https://www.wongnai.com/reviews/ce07dce27aeb419aa56d019b3011b48f",
+          "label": "Wongnai"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "bru": {
+      "description": {
+        "ru": "Кофейня в восточной Паттайе с завтраками, выпечкой и сэндвичами. В отзывах отмечают кофе и BLT — удобный повод выбраться за привычный маршрут вдоль пляжа.",
+        "en": "An East Pattaya café with breakfast, baked treats and sandwiches. Reviews mention the coffee and BLT; a reason to explore beyond the usual beachfront route.",
+        "th": "คาเฟ่ฝั่งพัทยาตะวันออก มีอาหารเช้า ขนม และแซนด์วิช รีวิวพูดถึงกาแฟกับ BLT เหมาะกับลองเปลี่ยนเส้นทางจากโซนชายหาด"
+      },
+      "sources": [
+        {
+          "url": "https://brupattaya.com/",
+          "label": "Страница заведения"
+        },
+        {
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g293919-d27153174-Reviews-Bru_Coffee_Bar-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "gimbrew": {
+      "description": {
+        "ru": "Небольшая кофейня с авторскими латте и выбором зёрен; в отзывах выделяют тирамису-латте. В справочнике есть отметка о возможном закрытии: актуальную работу нужно подтвердить до поездки.",
+        "en": "A small café with signature lattes and a choice of beans; reviews mention the tiramisu latte. A directory flags possible closure, so confirm current operation before making the trip.",
+        "th": "คาเฟ่เล็ก ๆ ที่มีกาแฟซิกเนเจอร์และเมล็ดให้เลือก รีวิวพูดถึงทีรามิสุลาเต้ แต่ไดเรกทอรีมีหมายเหตุว่าอาจปิดแล้ว ควรยืนยันก่อนเดินทาง"
+      },
+      "sources": [
+        {
+          "url": "https://www.wongnai.com/restaurants/992003Ro-gim-brewing-room-coffee",
+          "label": "Wongnai"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "albatross": {
+      "description": {
+        "ru": "Кофейня-обжарщик для тех, кому интересен сам кофе, а не только интерьер. В отзывах выделяют капучино и кофейные напитки — повод сделать отдельную остановку между прогулками.",
+        "en": "A roastery café for travellers who care about the coffee itself. Reviews highlight cappuccino and other coffee drinks; make it a focused break between sightseeing stops.",
+        "th": "คาเฟ่โรงคั่วสำหรับคนที่สนใจตัวกาแฟมากกว่าการตกแต่ง รีวิวพูดถึงคาปูชิโนและเครื่องดื่มกาแฟ เหมาะกับแวะพักระหว่างเที่ยว"
+      },
+      "sources": [
+        {
+          "url": "https://wanderlog.com/place/details/6012521/albatross-coffee-roasters",
+          "label": "Отзывы гостей"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "madras": {
+      "description": {
+        "ru": "Индийский ресторан на Second Road с блюдами севера и юга Индии. Отзывы о кухне и сервисе разные; интересный выбор, если хочется карри и смены вкусов после тайской еды.",
+        "en": "A Second Road Indian restaurant offering northern and southern Indian dishes. Reviews differ on food and service; an option for curry and a change of flavours after Thai meals.",
+        "th": "ร้านอาหารอินเดียบนถนนสายสอง มีอาหารทั้งภาคเหนือและใต้ รีวิวเรื่องอาหารและบริการต่างกัน เหมาะกับวันที่อยากกินแกงอินเดียและเปลี่ยนรสชาติ"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g293919-d1504592-Reviews-Madras_Darbar-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        },
+        {
+          "url": "https://wanderlog.com/place/details/1531235/madras-darbar",
+          "label": "Отзывы гостей"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "boho": {
+      "description": {
+        "ru": "Пляжный ресторан в На-Джомтьене с морепродуктами и столиками у песка. В отзывах хвалят закаты и обстановку, но оценки еды расходятся — планируйте визит прежде всего ради атмосферы.",
+        "en": "A Na Jomtien beachfront restaurant with seafood and seating by the sand. Reviews praise sunsets and setting but differ on food; the atmosphere is a main reason to visit.",
+        "th": "ร้านริมชายหาดนาจอมเทียน มีอาหารทะเลและที่นั่งใกล้ทราย รีวิวชอบพระอาทิตย์ตกและบรรยากาศ ส่วนอาหารมีความเห็นต่างกัน เหมาะกับคนเน้นวิว"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g2005201-d2062068-Reviews-The_Glass_House_Pattaya-Na_Chom_Thian_Sattahip_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        },
+        {
+          "url": "https://wanderlog.com/place/details/502911/glass-house-boho",
+          "label": "Отзывы гостей"
+        }
+      ],
+      "reviewedAt": "2026-10-18",
+      "area": "Na Jomtien"
+    },
+    "hardrock": {
+      "description": {
+        "ru": "Рок-меморабилия, американская еда и музыка на Beach Road — знакомый формат в курортной обстановке. В отзывах отмечают музыкальную атмосферу; актуальную программу выступлений уточняйте отдельно.",
+        "en": "Rock memorabilia, American food and music on Beach Road bring a familiar format to a seaside setting. Reviews mention the musical atmosphere; check the current performance programme separately.",
+        "th": "ของสะสมดนตรีร็อก อาหารอเมริกัน และเสียงเพลงบนบีชโรดในบรรยากาศเมืองทะเล รีวิวพูดถึงบรรยากาศดนตรี ควรตรวจตารางการแสดงล่าสุดแยกต่างหาก"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g293919-d2186582-Reviews-Hard_Rock_Cafe_Pattaya-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "surfkit": {
+      "description": {
+        "ru": "Ресторан у набережной Джомтьена для неторопливого приёма пищи между пляжными прогулками. В отзывах постоянных гостей отмечают расположение и разнообразный опыт сервиса — удобен прежде всего по маршруту.",
+        "en": "A Jomtien seafront restaurant for a relaxed meal between beach walks. Regular visitors discuss the location and differing service experiences; its main convenience is the beachfront route.",
+        "th": "ร้านริมถนนเลียบหาดจอมเทียนสำหรับกินมื้อสบาย ๆ ระหว่างเดินเที่ยว รีวิวลูกค้าประจำพูดถึงทำเลและประสบการณ์บริการที่ต่างกัน จุดสะดวกคืออยู่ในเส้นทางริมหาด"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g293919-d1131043-Reviews-Surf_Kitchen-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        },
+        {
+          "url": "https://wanderlog.com/place/details/436426/surf-kitchen-restaurant",
+          "label": "Отзывы гостей"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "nangnual": {
+      "description": {
+        "ru": "Ресторан морепродуктов на Walking Street с террасами у воды. В отзывах вспоминают краба в карри и морскую обстановку, но мнения о качестве различаются; стоимость весовых блюд уточняйте до заказа.",
+        "en": "A Walking Street seafood restaurant with waterfront terraces. Reviews mention curry crab and the seaside setting but differ on quality; confirm prices for items sold by weight before ordering.",
+        "th": "ร้านอาหารทะเลบนวอล์กกิ้งสตรีทพร้อมระเบียงริมน้ำ รีวิวพูดถึงปูผัดผงกะหรี่และบรรยากาศ แต่คุณภาพมีความเห็นต่างกัน ควรถามราคาอาหารที่คิดตามน้ำหนักก่อน"
+      },
+      "sources": [
+        {
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g293919-d1888868-Reviews-Nang_Nual_Pattaya_Restaurant-Pattaya_Chonburi_Province.html",
+          "label": "Tripadvisor"
+        },
+        {
+          "url": "https://wanderlog.com/place/details/1171697/nang-nual-pattaya",
+          "label": "Отзывы гостей"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    },
+    "kingsea": {
+      "description": {
+        "ru": "Морепродукты на Walking Street с аквариумами и видом на залив. Подойдёт для ужина у воды после прогулки; выбранный вес, цену и способ приготовления лучше согласовать заранее.",
+        "en": "A Walking Street seafood restaurant with display tanks and bay views. A possible waterfront dinner after a walk; agree the weight, price and cooking method before ordering.",
+        "th": "ร้านอาหารทะเลบนวอล์กกิ้งสตรีท มีตู้สัตว์ทะเลและวิวอ่าว เหมาะกับมื้อริมน้ำหลังเดินเที่ยว ควรตกลงน้ำหนัก ราคา และวิธีปรุงก่อนสั่ง"
+      },
+      "sources": [
+        {
+          "url": "https://wanderlog.com/place/details/1137333/king-seafood",
+          "label": "Отзывы гостей"
+        }
+      ],
+      "reviewedAt": "2026-10-18"
+    }
+  }
+}
