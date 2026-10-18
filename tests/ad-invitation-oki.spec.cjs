@@ -1,23 +1,26 @@
 const {test,expect}=require('@playwright/test');
 async function jump(page,ms){await page.clock.setFixedTime(new Date(await page.evaluate(()=>Date.now())+ms));}
-async function center(wrap){await wrap.evaluate(n=>{const r=n.getBoundingClientRect(),bottom=Math.min(innerHeight,document.querySelector('nav.tab').getBoundingClientRect().top)-8;scrollTo({top:scrollY+r.top-Math.max(8,(bottom-r.height)/2),behavior:'instant'});});}
+async function center(wrap){await wrap.evaluate(n=>{const r=n.getBoundingClientRect(),bottom=Math.min(innerHeight,document.querySelector('nav.tab').getBoundingClientRect().top)-8;scrollTo({top:scrollY+r.top-Math.max(96,(bottom-r.height+88)/2),behavior:'instant'});});}
 async function prepare(page,lang='ru',reduce=false){
  await page.emulateMedia({reducedMotion:reduce?'reduce':'no-preference'});
  await page.addInitScript(lang=>{localStorage.setItem('pok-lang',lang);localStorage.setItem('pok-lang-set','1');localStorage.setItem('pok-install-seen','1');localStorage.setItem('oki-life-v1',JSON.stringify({reminders:false}));},lang);
  await page.route('**/api/ads/list',r=>r.fulfill({json:{slots:3,price:15,hours:24,ads:[],free:3}}));
  await page.goto('/',{waitUntil:'domcontentloaded'});
  await expect(page.locator('.okad-invitation-wrap')).toBeVisible();
+ const before=await page.locator('.okad-invitation-wrap').boundingBox(),card=await page.locator('.okad-invitation').boundingBox();
+ expect(before.height).toBe(card.height);expect(before.y).toBe(card.y);
  await center(page.locator('.okad-invitation-wrap'));
- // Advance wall time without replacing requestAnimationFrame/WebGL scheduling.
+ // Advance wall time without replacing image loading or animation scheduling.
  await jump(page,16000);
 }
-for(const lang of ['ru','en','th'])test(`small real 3D Oki invitation: ${lang}`,async({page})=>{
+for(const lang of ['ru','en','th'])test(`reference-matched illustrated Oki without a reserved gap: ${lang}`,async({page})=>{
  test.setTimeout(60000);await page.setViewportSize({width:390,height:844});
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await prepare(page,lang,true);
- const wrap=page.locator('.okad-invitation-wrap'),model=wrap.locator('.okad-oki-model'),peek=wrap.locator('.okad-oki-peek');
- await expect(model).toHaveAttribute('data-ready','true');await expect(model).toHaveAttribute('data-expression','invite');
- await expect(model).toHaveAttribute('data-model-revision','neon-glass-v2');
+ const wrap=page.locator('.okad-invitation-wrap'),portrait=wrap.locator('.okad-oki-portrait'),peek=wrap.locator('.okad-oki-peek');
+ await expect(peek).toBeVisible();await expect(portrait).toHaveAttribute('src',/\/assets\/oki\/invitation-[a-f0-9]{16}\.webp$/);
+ expect(await portrait.evaluate(n=>n.complete&&n.naturalWidth>0)).toBe(true);
+ await expect(wrap.locator('canvas')).toHaveCount(0);await expect(page.locator('#oki3d-loader')).toHaveCount(0);
  await expect(peek).toContainText({ru:'Твоему сообщению — сюда!',en:'Your message belongs here!',th:'ข้อความของคุณอยู่ตรงนี้ได้!'}[lang]);
  for(const theme of ['dark','light']){
   if(await page.locator('html').getAttribute('data-theme')!==theme)await page.locator('#themeBtn').evaluate(b=>b.click());
@@ -28,21 +31,26 @@ for(const lang of ['ru','en','th'])test(`small real 3D Oki invitation: ${lang}`,
    expect(speech.y+speech.height).toBeLessThanOrEqual(card.y);
    const nav=await page.locator('nav.tab').boundingBox();
    expect(card.y+card.height).toBeLessThanOrEqual(nav.y-8);
+   const rect=await wrap.boundingBox(),peekRect=await peek.boundingBox();
+   expect(rect.height).toBe(card.height);expect(rect.y).toBe(card.y);
+   expect(Math.abs(peekRect.y+peekRect.height-card.y)).toBeLessThan(1);
+   expect(await peek.evaluate(n=>{const p=n.getBoundingClientRect();return [...document.querySelectorAll('button,a,input,textarea,select,summary')].filter(el=>!n.closest('.okad-invitation-wrap').contains(el)&&el.getClientRects().length).every(el=>{const r=el.getBoundingClientRect();return r.right<=p.left||r.left>=p.right||r.bottom<=p.top||r.top>=p.bottom;});})).toBe(true);
    expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
-   await wrap.screenshot({path:`quality-reports/oki-invitation-${lang}-${theme}-${size.width}.png`});
+   await page.screenshot({path:`quality-reports/oki-invitation-${lang}-${theme}-${size.width}.png`});
   }
  }
  const before=await wrap.boundingBox();
- await wrap.locator('.okad-oki-close').click();await expect(peek).toBeHidden();await expect(model.locator('canvas')).toHaveCount(0);
+ await wrap.locator('.okad-oki-close').click();await expect(peek).toBeHidden();
  const after=await wrap.boundingBox();expect(after.height).toBe(before.height);
+ await page.screenshot({path:`quality-reports/oki-invitation-idle-${lang}.png`});
  await jump(page,120000);await page.waitForTimeout(700);await expect(peek).toBeHidden();
  await wrap.locator('.okad-invitation').click();await expect(page.locator('#okAdDialog')).toBeVisible();
  expect(errors).toEqual([]);
 });
-test('Oki repeats gently, disposes offscreen and never appears over a dialog',async({page})=>{
+test('Oki repeats gently, hides offscreen and never appears over a dialog',async({page})=>{
  test.setTimeout(45000);await page.setViewportSize({width:390,height:844});await prepare(page);
  const wrap=page.locator('.okad-invitation-wrap'),peek=wrap.locator('.okad-oki-peek');
- await expect(wrap.locator('[data-ready="true"]')).toHaveCount(1);
+ await expect(peek).toBeVisible();
  const bounds=await wrap.boundingBox();
  await jump(page,8000);await expect(peek).toBeHidden();
  expect((await wrap.boundingBox()).height).toBe(bounds.height);
@@ -54,10 +62,11 @@ test('Oki repeats gently, disposes offscreen and never appears over a dialog',as
  await wrap.locator('.okad-invitation').click();await expect(peek).toBeHidden();
  await jump(page,100000);await page.waitForTimeout(700);await expect(peek).toBeHidden();
 });
-test('data-saving does not fetch an extra renderer',async({page})=>{
+test('data-saving does not fetch the invitation image or an extra renderer',async({page})=>{
  await page.addInitScript(()=>Object.defineProperty(navigator,'connection',{value:{saveData:true},configurable:true}));
  let models=0;await page.route('**/assets/oki-3d-v91.js',r=>{models++;return r.abort();});
+ let portraits=0;await page.route('**/assets/oki/invitation-*.webp',r=>{portraits++;return r.abort();});
  await prepare(page);await page.waitForTimeout(700);
- await expect(page.locator('.okad-oki-peek')).toHaveCount(0);expect(models).toBe(0);
+ await expect(page.locator('.okad-oki-peek')).toHaveCount(0);expect(models).toBe(0);expect(portraits).toBe(0);
  await page.locator('.okad-invitation').click();await expect(page.locator('#okAdDialog')).toBeVisible();
 });
