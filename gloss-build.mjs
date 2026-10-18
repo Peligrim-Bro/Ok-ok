@@ -1681,6 +1681,7 @@ await import('./scripts/apply-ex24-referral.mjs');
 await import('./scripts/apply-pwa-update.mjs');
 
 // Set release identity after all patches; browser startup must never change it.
+await import('./scripts/apply-place-descriptions.mjs');
 await import('./scripts/finalize-release-cache.mjs');
 
 // Owner paused the startup portal on 2026-10-17 pending refinement.
