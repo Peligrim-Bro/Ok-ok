@@ -16,14 +16,18 @@ ads=ads.slice(0,headStart)+ads.slice(headEnd);
 const start=ads.indexOf('  const freeCount = Math.max(0, data.slots - ads.length);');
 const end=ads.indexOf('  const mine = myOrder();',start);
 if(start<0||end<0)throw Error('Ad invitation anchors missing');
-ads=ads.slice(0,start)+`  list.append(h('button', { type: 'button', class: 'okad free okad-invitation', onclick: () => openOrder() },
+ads=ads.slice(0,start)+`  const inviteWrap=h('div', {class:'okad-invitation-wrap'});
+  inviteWrap.append(h('button', { type: 'button', class: 'okad free okad-invitation', onclick: () => openOrder() },
     h('span', { class: 'okad-invite-icon', 'aria-hidden': 'true', text: '…' }),
     h('span', { class: 'okad-invite-copy' },
       h('b', { text: tr('Заяви о себе', 'Get noticed', 'บอกให้โลกรู้') }),
       h('span', { class: 'okad-invite-note', text: tr('Объявление, поздравление или просто привет.', 'An announcement, a celebration, or just a hello.', 'ประกาศ คำอวยพร หรือแค่ทักทายกัน') })),
     h('span', { class: 'okad-invite-arrow', 'aria-hidden': 'true', text: '↗' })));
+  list.append(inviteWrap);
   root.append(list);
+  mountInviteOki(inviteWrap);
 `+ads.slice(end);
+replaceOnce('function paint() {',readFileSync('ad-invitation-oki.js','utf8')+'\nfunction paint() {\n  inviteOkiCleanup();');
 // Keep the paid-placement disclosure inside the form, before any submission.
 replaceOnce("h('p', { class: 'hint', text: tr(`${price} USDT за ${hours} часов. Текст проверяется до оплаты.`, `${price} USDT for ${hours} hours. The text is checked before payment.`, `${price} USDT ต่อ ${hours} ชั่วโมง ตรวจข้อความก่อนชำระ`) }), form)",
 "h('p', { class: 'hint', text: tr(`Платное размещение: ${price} USDT за ${hours} часов. Текст проверяется до оплаты.`, `Paid placement: ${price} USDT for ${hours} hours. The text is checked before payment.`, `โฆษณาแบบเสียเงิน: ${price} USDT ต่อ ${hours} ชั่วโมง ตรวจข้อความก่อนชำระ`) }), h('p', {class:'hint',text:tr('Платное размещение — это не рекомендация и не статус «Проверено ok-ok».','A paid placement is not a recommendation or an “ok-ok verified” status.','โฆษณาแบบเสียเงินไม่ใช่คำแนะนำหรือสถานะ \"ตรวจสอบโดย ok-ok\"')}), form)");
@@ -36,7 +40,17 @@ const cssPath='site/public/assets/ads/ads.css';
 const css=readFileSync(cssPath,'utf8')+String.raw`
 /* okok-personal-invitation-v1 */
 html body #okAds .okads-list{margin-bottom:0}
+html body #okAds .okad-invitation-wrap{position:relative;padding-top:82px;isolation:isolate;min-width:0}
+html body #okAds .okad-oki-peek{position:absolute;inset:0 0 auto;height:86px;overflow:hidden;pointer-events:none;z-index:0}
+html body #okAds .okad-oki-peek[hidden]{display:none}
+html body #okAds .okad-oki-model{position:absolute;right:8px;top:-12px;width:126px;height:148px;transform:translateY(65px);animation:okad-oki-rise .6s cubic-bezier(.2,.8,.2,1) forwards}
+html body #okAds .okad-oki-model canvas{display:block;width:100%;height:100%;pointer-events:none}
+html body #okAds .okad-oki-speech{position:absolute;left:8px;right:132px;top:20px;padding:10px 12px;border:1px solid var(--toy-rim);border-radius:15px 15px 3px 15px;background:var(--card);color:var(--text);box-shadow:inset 0 1px 0 #ffffff66,0 4px 10px #0002;font-size:12px;font-weight:750;line-height:1.35;opacity:0;animation:okad-oki-say .25s .45s ease forwards}
+html body #okAds button.okad-oki-close{position:absolute;right:0;top:0;width:44px;min-width:44px;height:44px;min-height:44px;padding:0;border:0!important;background:transparent!important;box-shadow:none!important;color:var(--muted)!important;font-size:22px;pointer-events:auto;z-index:2}
+@keyframes okad-oki-rise{to{transform:translateY(0)}}
+@keyframes okad-oki-say{to{opacity:1}}
 html body #okAds .okad.okad-invitation{
+ position:relative;z-index:1;width:100%;
  display:grid;grid-template-columns:52px minmax(0,1fr) 30px;gap:12px;align-items:center;
  min-height:128px;padding:18px 16px;box-sizing:border-box;text-align:left;isolation:isolate;overflow:hidden;
  border:1px solid var(--toy-rim)!important;border-radius:20px;
@@ -54,7 +68,7 @@ html body #okAds .okad-invite-arrow{display:grid;place-items:center;width:30px;h
 @media(hover:hover){html body #okAds .okad-invitation:hover{transform:translateY(-2px)}}
 html body #okAds .okad-invitation:active{transform:scale(.985)}
 @media(max-width:350px){html body #okAds .okad.okad-invitation{grid-template-columns:40px minmax(0,1fr) 26px;gap:9px;padding:16px 12px}html body #okAds .okad-invite-icon{width:37px;height:38px;font-size:18px;border-radius:12px}html body #okAds .okad-invite-copy b{font-size:17px}html body #okAds .okad-invite-arrow{width:26px;height:26px;font-size:18px}}
-@media(prefers-reduced-motion:reduce){html body #okAds .okad.okad-invitation{transition:none;transform:none}}
+@media(prefers-reduced-motion:reduce){html body #okAds .okad.okad-invitation{transition:none;transform:none}html body #okAds .okad-oki-model{animation:none;transform:none}html body #okAds .okad-oki-speech{animation:none;opacity:1}}
 `;
 writeFileSync(cssPath,css);
 const version=createHash('sha256').update(css).digest('hex').slice(0,16);

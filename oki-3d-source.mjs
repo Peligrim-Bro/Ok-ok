@@ -113,15 +113,16 @@ window.OKI3D={mount(host,options){
  function draw(time){if(disposed)return;frame=requestAnimationFrame(draw);if(document.hidden||!visible||time-last<(options.interactive?33:66))return;last=time;controls.update();
   // Reference pack's expressive poses, applied to real shoulder pivots.
   const resting=['sleep','tired'].includes(currentMood),thinking=['hungry','quiet'].includes(currentMood);
-  const waveTarget=resting?-1.5:thinking?0:(options.gender==='girl'?.18:0);
-  const leftTarget=resting?.5:thinking?.25:(baby?-.25:0);
+  const inviting=options.gesture==='invite';
+  const waveTarget=inviting?-1.85:resting?-1.5:thinking?0:(options.gender==='girl'?.18:0);
+  const leftTarget=inviting?.45:resting?.5:thinking?.25:(baby?-.25:0);
   const waveX=resting?.25:0,headTilt=thinking?-.10:resting?.04:0,elbowTarget=thinking?thinkingElbow:neutralElbow;
   const settling=Math.abs(wave.rotation.z-waveTarget)+Math.abs(armLeft.rotation.z-leftTarget)+Math.abs(wave.rotation.x-waveX)+Math.abs(head.rotation.z-headTilt)+waveForearm.quaternion.angleTo(elbowTarget)>.001;
   wave.rotation.z=reduce?waveTarget:THREE.MathUtils.lerp(wave.rotation.z,waveTarget+(!moving&&!resting?Math.sin(time*.003)*.13:0),.1);
   armLeft.rotation.z=reduce?leftTarget:THREE.MathUtils.lerp(armLeft.rotation.z,leftTarget+(!moving?Math.sin(time*.0016)*.04:0),.1);
   wave.rotation.x=reduce?waveX:THREE.MathUtils.lerp(wave.rotation.x,waveX,.1);
   waveForearm.quaternion.slerp(elbowTarget,reduce?1:.1);
-  host.dataset.expression=resting?'calm':thinking?'think':'wave';needs ||= settling;
+  host.dataset.expression=inviting?'invite':resting?'calm':thinking?'think':'wave';needs ||= settling;
   head.rotation.z=reduce?headTilt:THREE.MathUtils.lerp(head.rotation.z,headTilt,.1);
   if(!reduce&&!moving){root.position.y=.06+Math.sin(time*.0018)*.07;root.rotation.z=Math.sin(time*.0011)*.025;head.rotation.z+=(thinking?.012:.025)*Math.sin(time*.0015);const beat=1+Math.sin(time*.003)*.06;heart.scale.set(.12*beat,.13*beat,.1*beat);if(currentMood!=='sleep'){const blink=time%5900>5700;eyes.forEach(o=>o.scale.y=blink?.12:currentMood==='tired'?.55:1);}needs=true;}
   if(needs){renderer.render(scene,camera);needs=false;host.dataset.ready='true';host.dataset.renders=String(++renders);host.dataset.azimuth=controls.getAzimuthalAngle().toFixed(3);}}
