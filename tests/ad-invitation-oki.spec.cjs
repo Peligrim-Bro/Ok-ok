@@ -23,6 +23,8 @@ for(const lang of ['ru','en','th'])test(`small real 3D Oki invitation: ${lang}`,
   for(const size of [{width:320,height:568},{width:768,height:1024},{width:844,height:390}]){
    await page.setViewportSize(size);await wrap.scrollIntoViewIfNeeded();
    await expect(peek).toBeVisible();
+   const speech=await wrap.locator('.okad-oki-speech').boundingBox(),card=await wrap.locator('.okad-invitation').boundingBox();
+   expect(speech.y+speech.height).toBeLessThanOrEqual(card.y);
    expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
    await wrap.screenshot({path:`quality-reports/oki-invitation-${lang}-${theme}-${size.width}.png`});
   }
@@ -42,7 +44,9 @@ test('Oki repeats gently, disposes offscreen and never appears over a dialog',as
  await jump(page,8000);await expect(peek).toBeHidden();
  expect((await wrap.boundingBox()).height).toBe(bounds.height);
  await jump(page,100000);await expect(peek).toBeVisible();
- await page.evaluate(()=>scrollTo(0,0));await expect(peek).toBeHidden();await expect(wrap.locator('canvas')).toHaveCount(0);
+ await wrap.evaluate(n=>{document.body.style.paddingBottom='2000px';scrollTo(0,n.getBoundingClientRect().bottom+scrollY+100);});
+ await expect.poll(async()=>{const r=await wrap.boundingBox();return r.y+r.height;}).toBeLessThan(0);
+ await expect(peek).toBeHidden();await expect(wrap.locator('canvas')).toHaveCount(0);
  await wrap.scrollIntoViewIfNeeded();await jump(page,100000);await expect(peek).toBeVisible();
  await wrap.locator('.okad-invitation').click();await expect(peek).toBeHidden();
  await jump(page,100000);await page.waitForTimeout(700);await expect(peek).toBeHidden();

@@ -45,7 +45,7 @@ html body #okAds .okad-oki-peek{position:absolute;inset:0 0 auto;height:86px;ove
 html body #okAds .okad-oki-peek[hidden]{display:none}
 html body #okAds .okad-oki-model{position:absolute;right:8px;top:-12px;width:126px;height:148px;transform:translateY(65px);animation:okad-oki-rise .6s cubic-bezier(.2,.8,.2,1) forwards}
 html body #okAds .okad-oki-model canvas{display:block;width:100%;height:100%;pointer-events:none}
-html body #okAds .okad-oki-speech{position:absolute;left:8px;right:132px;top:20px;padding:10px 12px;border:1px solid var(--toy-rim);border-radius:15px 15px 3px 15px;background:var(--card);color:var(--text);box-shadow:inset 0 1px 0 #ffffff66,0 4px 10px #0002;font-size:12px;font-weight:750;line-height:1.35;opacity:0;animation:okad-oki-say .25s .45s ease forwards}
+html body #okAds .okad-oki-speech{position:absolute;left:8px;right:132px;top:8px;padding:8px 10px;border:1px solid var(--toy-rim);border-radius:15px 15px 3px 15px;background:var(--card);color:var(--text);box-shadow:inset 0 1px 0 #ffffff66,0 4px 10px #0002;font-size:12px;font-weight:750;line-height:1.35;opacity:0;animation:okad-oki-say .25s .45s ease forwards}
 html body #okAds button.okad-oki-close{position:absolute;right:0;top:0;width:44px;min-width:44px;height:44px;min-height:44px;padding:0;border:0!important;background:transparent!important;box-shadow:none!important;color:var(--muted)!important;font-size:22px;pointer-events:auto;z-index:2}
 @keyframes okad-oki-rise{to{transform:translateY(0)}}
 @keyframes okad-oki-say{to{opacity:1}}
