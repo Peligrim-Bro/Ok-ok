@@ -20,7 +20,16 @@ async function prepare(page,lang,legacy=false,theme='dark'){
  await expect(page.locator('#okAds')).not.toContainText(/USDT|Платн|Paid|เสียเงิน/);
  await expect(page.locator('#okAds .okad-example, #okAds .okad-event, #okAds > .btn.call')).toHaveCount(0);
  if(await page.locator('html').getAttribute('data-theme')!==theme)await page.locator('#themeBtn').click();
- await page.locator('#okAds .okad.free').click();
+ const invitation=page.locator('#okAds .okad.free');
+ await expect(invitation).toContainText({ru:'Объявление, поздравление или просто привет.',en:'An announcement, a celebration, or just a hello.',th:'ประกาศ คำอวยพร หรือแค่ทักทายกัน'}[lang]);
+ await expect(invitation).not.toContainText(/бизнес|своём деле|business|ธุรกิจ/i);
+ expect(await invitation.evaluate(n=>getComputedStyle(n).display)).toBe('grid');
+ await invitation.screenshot({path:`quality-reports/invitation-${lang}-${theme}.png`});
+ await page.setViewportSize({width:320,height:568});
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
+ await invitation.screenshot({path:`quality-reports/invitation-small-${lang}-${theme}.png`});
+ await page.setViewportSize({width:390,height:844});
+ await invitation.click();
  return {paid:()=>{paid=true}};
 }
 for(const lang of ['ru','en','th'])for(const theme of ['dark','light'])test(`invoice and exact-payment explanation ${lang} ${theme}`,async({page})=>{
