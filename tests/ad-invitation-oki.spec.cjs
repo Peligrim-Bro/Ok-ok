@@ -1,6 +1,6 @@
 const {test,expect}=require('@playwright/test');
 async function jump(page,ms){await page.clock.setFixedTime(new Date(await page.evaluate(()=>Date.now())+ms));}
-async function center(wrap){await wrap.evaluate(n=>n.scrollIntoView({block:'center',behavior:'instant'}));}
+async function center(wrap){await wrap.evaluate(n=>{const r=n.getBoundingClientRect(),bottom=Math.min(innerHeight,document.querySelector('nav.tab').getBoundingClientRect().top)-8;scrollTo({top:scrollY+r.top-Math.max(8,(bottom-r.height)/2),behavior:'instant'});});}
 async function prepare(page,lang='ru',reduce=false){
  await page.emulateMedia({reducedMotion:reduce?'reduce':'no-preference'});
  await page.addInitScript(lang=>{localStorage.setItem('pok-lang',lang);localStorage.setItem('pok-lang-set','1');localStorage.setItem('pok-install-seen','1');localStorage.setItem('oki-life-v1',JSON.stringify({reminders:false}));},lang);

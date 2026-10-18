@@ -45,7 +45,7 @@ function mountInviteOki(wrap) {
  }
  function tick(){
   if(stopped)return;
-  if(blocked()){hide();if(inviteOkiUntil>Date.now())inviteOkiUntil=0;}
+  if(blocked())hide();
   else if(model&&Date.now()>=inviteOkiUntil)hide();
   else if(!model&&(Date.now()<inviteOkiUntil||(Date.now()>=inviteOkiNext&&inviteOkiCount<3&&(!reduce.matches||inviteOkiCount===0))))void reveal();
   job=setTimeout(tick,500);
@@ -54,7 +54,7 @@ function mountInviteOki(wrap) {
  visibility.observe(wrap);
  document.addEventListener('visibilitychange',()=>{if(document.hidden){inviteOkiUntil=0;hide();}},{signal:abort.signal});
  // Disappear immediately when a dialog opens, not after the next timer tick.
- const overlays=new MutationObserver(()=>{if(model&&blocked()){inviteOkiUntil=0;hide();}});
+ const overlays=new MutationObserver(()=>{if(model&&blocked())hide();});
  overlays.observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['class','style','open']});
  tick();
  inviteOkiCleanup=()=>{stopped=true;clearTimeout(job);abort.abort();visibility.disconnect();overlays.disconnect();hide();};
