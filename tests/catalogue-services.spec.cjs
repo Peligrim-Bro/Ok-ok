@@ -21,7 +21,7 @@ for(const lang of ['ru','en','th'])for(const [width,height] of [[390,844],[768,1
    await expect(page.locator('#sheet .service-attribution')).toContainText('OK-OK.click');
    await expect(page.locator('#sheet')).toContainText('2026-10-18');
    await page.locator('#sheet').evaluate(n=>n.scrollTop=n.scrollHeight);
-   expect(await page.locator('#closeSheet').evaluate(n=>{const r=n.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight&&n.contains(document.elementFromPoint(r.x+r.width/2,r.y+r.height/2));})).toBe(true);
+   await expect.poll(()=>page.locator('#closeSheet').evaluate(n=>{const r=n.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight&&n.contains(document.elementFromPoint(r.x+r.width/2,r.y+r.height/2));}),{message:'Close remains reachable after the sheet opening transition and scrolling'}).toBe(true);
    await page.screenshot({path:`quality-reports/services-detail-${lang}-${width}-${theme}-${category}.png`});
    await page.locator('#closeSheet').click();await expect(page.locator('#sheet')).not.toHaveClass(/open/);
   }
