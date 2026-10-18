@@ -1505,6 +1505,7 @@ writeFileSync(swPath,travelSW);
  const gaTag = `<script id="ok-ga4">
 (function(){
  if(navigator.doNotTrack==='1'||window.doNotTrack==='1'||navigator.globalPrivacyControl===true)return;
+ try{if(new URLSearchParams(location.search).get('okok_test')==='1')sessionStorage.setItem('okok-test','1');if(navigator.webdriver||/^(localhost|127[.]0[.]0[.]1)$/.test(location.hostname)||sessionStorage.getItem('okok-test')==='1')return;}catch(e){return;}
  window.dataLayer=window.dataLayer||[];
  window.gtag=window.gtag||function(){window.dataLayer.push(arguments);};
  window.gtag('js',new Date());
@@ -1682,6 +1683,7 @@ await import('./scripts/apply-pwa-update.mjs');
 
 // Set release identity after all patches; browser startup must never change it.
 await import('./scripts/apply-place-descriptions.mjs');
+await import('./scripts/apply-catalogue-services.mjs');
 await import('./scripts/finalize-release-cache.mjs');
 
 // Owner paused the startup portal on 2026-10-17 pending refinement.

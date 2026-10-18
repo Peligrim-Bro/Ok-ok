@@ -18,7 +18,8 @@ assert(parsed>0,'No inline scripts verified');
 assert.equal((html.match(/id="timerBtn"/g)||[]).length,1,'Header timer must remain');
 const utilities=html.match(/<div class="top-actions">([\s\S]*?)<\/div>/)?.[1];
 assert(utilities,'Header utility grid missing');
-assert.equal((utilities.match(/<button\b/g)||[]).length,4,'Utility grid must contain exactly four controls');
+assert.equal((utilities.match(/<button\b/g)||[]).length,3,'Utility grid must contain theme, language and More');
+assert(html.includes('id="headerMore" hidden')&&html.includes('id="donateBtn"')&&html.includes('id="reportBtn"'),'Support and report must remain reachable in More');
 assert(!utilities.includes('id="timerBtn"'),'Timer must stay outside the utility grid');
 assert(html.includes('id="langClose"'),'Language picker close control missing');
 assert(!html.includes('data-timer="1"'),'Duplicate timer returned');
@@ -84,5 +85,5 @@ console.log('PASS: retired content excluded, active domain, current editorial an
 const headerStyle=html.match(/<style id="ok-header-layout-v100">([\s\S]*?)<\/style>/)?.[1];
 assert(headerStyle,'Compact header sizing patch missing');
 assert(headerStyle.includes('grid-template-rows:44px;grid-auto-rows:44px'),'Utility grid rows must stay compact');
-assert(headerStyle.includes('.top-actions>:is(#donateBtn,#themeBtn,#langBtn,#reportBtn){height:44px!important;min-height:44px!important;max-height:44px!important'),'All four utility controls must have bounded height');
+assert(headerStyle.includes('.top-actions>:is(#themeBtn,#langBtn,#moreBtn){height:44px!important;min-height:44px!important;max-height:44px!important'),'All three visible utility controls must have bounded height');
 console.log('PASS: utility buttons and grid rows locked to 44px');
