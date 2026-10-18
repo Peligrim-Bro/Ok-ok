@@ -1,5 +1,7 @@
 # OK-OK project operations
 
+- Owner decision (2026-10-18): the home ad board has one empty invitation, «Заяви о себе», with prices and paid-placement terms visible only after opening. Remove example/event filler cards and duplicate purchase buttons from this board. Preserve existing paid placements, ad labels, invoices and backend capacity; this is a presentation change. scripts/apply-single-ad-invitation.mjs applies before payment UI content versioning.
+
 - Owner decision (2026-10-17): startup portal is temporarily OFF pending refinement. content/startup.json portalEnabled=false must suppress both the head cover and animation script, including the precache entry. Keep portal-launch.js for later work; do not re-enable it without owner instruction. Portal browser coverage now verifies direct opening and that stale cached portal assets stay inactive.
 
 - Background superseding owner decision (2026-10-14): replace scattered 3D beams with current-hour modelled weather for the selected city. weather-background.js is now active, weather-service.mjs retrieves and caches MET Norway data via /api/weather; weather-worker.mjs wraps the existing Cloudflare backend without changing payments or Telegram. Preserve weather source/license attribution, city changes, honest neutral fallback, day/night, reduced-motion/data-saving and hidden-tab pauses. Older hedgehog preservation instructions below are superseded for the background only. Verify weather-service tests plus the full browser and Lighthouse suites before main publication.

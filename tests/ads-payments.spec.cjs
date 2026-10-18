@@ -15,7 +15,10 @@ async function prepare(page,lang,legacy=false,theme='dark'){
   await route.fulfill({status:200,contentType:'application/json',body:JSON.stringify(body)});
  });
  await page.goto('/',{waitUntil:'domcontentloaded'});
+ await expect(page.locator('#okAds .okad.free')).toHaveCount(1);
  await expect(page.locator('#okAds .okad.free')).toBeVisible();
+ await expect(page.locator('#okAds')).not.toContainText(/USDT|Платн|Paid|เสียเงิน/);
+ await expect(page.locator('#okAds .okad-example, #okAds .okad-event, #okAds > .btn.call')).toHaveCount(0);
  if(await page.locator('html').getAttribute('data-theme')!==theme)await page.locator('#themeBtn').click();
  await page.locator('#okAds .okad.free').click();
  return {paid:()=>{paid=true}};
