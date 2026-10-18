@@ -9,7 +9,7 @@ html = html.replace(timer[0], '').replace('<div class="top-actions">', timer[0] 
 const moved=[];
 for(const id of ['donateBtn','reportBtn'])html=html.replace(new RegExp('<button[^>]*id="'+id+'"[^>]*>[\\s\\S]*?</button>'),s=>{moved.push(s);return ''});
 html=html.replace(/(<div class="top-actions">[\s\S]*?)(<\/div>)/, '$1<button class="lang" id="moreBtn" type="button" aria-expanded="false" aria-controls="headerMore">⋯</button>$2');
-html=html.replace('</header>', '<div id="headerMore" hidden><button class="lang" id="moreClose" type="button">×</button>'+moved.join('')+'</div></header>');
+html=html.replace('</header>', '</header><div id="headerMore" hidden><button class="lang" id="moreClose" type="button">×</button>'+moved.join('')+'</div>');
 if (!html.includes('id="ok-header-layout-v100"')) {
   html = html.replace('</head>', `<style id="ok-header-layout-v100">
     html body header.app .brand{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
@@ -21,7 +21,7 @@ if (!html.includes('id="ok-header-layout-v100"')) {
     html body header.app .top-actions>:is(#themeBtn,#langBtn,#reportBtn){width:100%!important;min-width:0!important;min-height:44px!important;padding:7px 4px!important;white-space:nowrap!important;box-sizing:border-box;flex:none!important}
     /* Explicit block sizing prevents utility controls stretching on mobile Safari. */
     html body header.app .top-actions>:is(#themeBtn,#langBtn,#moreBtn){height:44px!important;min-height:44px!important;max-height:44px!important;align-self:center!important;aspect-ratio:auto!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;margin-block:0!important;overflow:hidden}
-    html body #headerMore[hidden]{display:none!important}html body #headerMore{position:fixed;top:max(12px,env(safe-area-inset-top));right:12px;z-index:12000;display:flex;flex-direction:column;gap:8px;padding:12px;width:min(340px,calc(100vw - 24px));box-sizing:border-box;background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:0 12px 36px #0008;max-height:calc(100dvh - 24px);overflow:auto}html body #headerMore>button{min-height:44px;flex:0 0 auto;padding:10px!important;white-space:normal}html body #moreClose{align-self:flex-end;width:44px}
+    html body #headerMore[hidden]{display:none!important}html body #headerMore{position:fixed;top:max(12px,env(safe-area-inset-top));right:12px;z-index:12000;display:flex;flex-direction:column;gap:8px;padding:12px;width:min(340px,calc(100vw - 24px));box-sizing:border-box;background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:0 12px 36px #0008;max-height:calc(100dvh - 24px);overflow:auto}html body #headerMore>button{height:44px!important;min-height:44px!important;max-height:44px!important;flex:0 0 44px;padding:10px!important;white-space:normal;display:flex!important;align-items:center;justify-content:center;font-size:13px!important}html body #moreClose{align-self:flex-end;width:44px}
     html body header.app #langBtn{font-size:13px!important}
     html body header.app #reportBtn{font-size:12px!important}
     html body nav.tab{left:max(10px,calc((100% - 560px)/2))!important;right:max(10px,calc((100% - 560px)/2))!important}
