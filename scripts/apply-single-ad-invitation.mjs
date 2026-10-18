@@ -17,7 +17,7 @@ const start=ads.indexOf('  const freeCount = Math.max(0, data.slots - ads.length
 const end=ads.indexOf('  const mine = myOrder();',start);
 if(start<0||end<0)throw Error('Ad invitation anchors missing');
 ads=ads.slice(0,start)+`  list.append(h('button', { type: 'button', class: 'okad free okad-invitation', onclick: () => openOrder() },
-    h('span', { class: 'okad-invite-icon', 'aria-hidden': 'true', text: '•••' }),
+    h('span', { class: 'okad-invite-icon', 'aria-hidden': 'true', text: '…' }),
     h('span', { class: 'okad-invite-copy' },
       h('b', { text: tr('Заяви о себе', 'Get noticed', 'บอกให้โลกรู้') }),
       h('span', { class: 'okad-invite-note', text: tr('Объявление, поздравление или просто привет.', 'An announcement, a celebration, or just a hello.', 'ประกาศ คำอวยพร หรือแค่ทักทายกัน') })),
