@@ -1,29 +1,5 @@
 [
   {
-    "id": "wonder-lawn-20261011",
-    "startAt": "2026-10-11T17:00:00+07:00",
-    "endAt": "2026-10-15T22:00:00+07:00",
-    "title": {
-      "ru": "The Wonder Lawn · праздник у моря",
-      "en": "The Wonder Lawn · seaside fair",
-      "th": "The Wonder Lawn · งานวัดริมทะเล"
-    },
-    "text": {
-      "ru": "Семейный фестиваль в На-Джомтьене: уличная еда, игры и огненное шоу в 20:00. Вход свободный; развлечения оплачиваются отдельно.",
-      "en": "Family festival in Na Jomtien with street food, games and a fire show at 20:00. Free entry; activities cost extra.",
-      "th": "เทศกาลสำหรับครอบครัวที่นาจอมเทียน มีสตรีทฟู้ด เกม และโชว์ไฟเวลา 20:00 น. เข้างานฟรี กิจกรรมมีค่าใช้จ่ายเพิ่มเติม"
-    },
-    "when": {
-      "ru": "11–15 октября · ежедневно 17:00–22:00",
-      "en": "11–15 October · daily 17:00–22:00",
-      "th": "11–15 ตุลาคม · ทุกวัน 17:00–22:00 น."
-    },
-    "venue": "Mövenpick Siam Na Jomtien Pattaya · beachfront lawn",
-    "maps": "https://www.google.com/maps/search/?api=1&query=Movenpick+Siam+Na+Jomtien+Pattaya",
-    "source": "https://www.movenpickpattayanajomtien.com/th/offers/the-wonderlawn/",
-    "checkedAt": "2026-10-14"
-  },
-  {
     "id": "food-fun-second-2026",
     "startAt": "2026-09-29T00:00:00+07:00",
     "endAt": "2026-10-26T00:00:00+07:00",
@@ -45,6 +21,30 @@
     "venue": "Terminal21 Pattaya Runway",
     "maps": "https://www.google.com/maps/search/?api=1&query=Terminal21+Pattaya+Runway",
     "source": "https://www.terminal21.co.th/pattaya/en/event/food-fun-fest-2026-is-back-en/",
-    "checkedAt": "2026-10-14"
+    "checkedAt": "2026-10-18"
+  },
+  {
+    "id": "pattaya-bikini-beach-race-20261031",
+    "startAt": "2026-10-31T00:00:00+07:00",
+    "endAt": "2026-11-01T00:00:00+07:00",
+    "title": {
+      "ru": "Pattaya Bikini Beach Race · ночной забег",
+      "en": "Pattaya Bikini Beach Race · night run",
+      "th": "Pattaya Bikini Beach Race · วิ่งกลางคืนริมชายหาด"
+    },
+    "text": {
+      "ru": "Юбилейный 5-километровый забег по пляжу Паттайи: закат, музыка и вечерняя программа. Старт и финиш — у Central Pattaya.",
+      "en": "A 10th-anniversary 5 km Pattaya beach run with sunset, music and evening entertainment. Start and finish at Central Pattaya.",
+      "th": "งานวิ่งครบรอบ 10 ปี ระยะ 5 กม. บนชายหาดพัทยา พร้อมพระอาทิตย์ตก ดนตรี และความบันเทิงยามค่ำคืน จุดเริ่มต้นและเส้นชัยที่เซ็นทรัล พัทยา"
+    },
+    "when": {
+      "ru": "31 октября · время старта уточняй у организатора",
+      "en": "31 October · check start time with organiser",
+      "th": "31 ตุลาคม · ตรวจสอบเวลาเริ่มกับผู้จัด"
+    },
+    "venue": "Pattaya Beach · Central Pattaya",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Central+Pattaya+Beach",
+    "source": "https://race.thai.run/bikinirun2026",
+    "checkedAt": "2026-10-18"
   }
 ]
