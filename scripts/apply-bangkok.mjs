@@ -19,8 +19,8 @@ const functions=String.raw`
       let picker=$('cityPicker');
       if(!picker){picker=document.createElement('div');picker.id='cityPicker';picker.className='city-picker';$('searchBar').before(picker)}
       picker.setAttribute('aria-label',cityText('Город','City','เมือง'));
-      picker.innerHTML=[['pattaya',cityText('Паттайя','Pattaya','พัทยา')],['bangkok',cityText('Бангкок','Bangkok','กรุงเทพฯ')],['phuket',cityText('Пхукет','Phuket','ภูเก็ต')]].map(([id,label])=>'<button class="btn ghost" type="button" data-city="'+id+'" aria-pressed="'+(city===id)+'">'+label+'</button>').join('');
-      picker.onclick=e=>{const b=e.target.closest('[data-city]');if(!b||b.dataset.city===city)return;city=b.dataset.city;try{localStorage.setItem('okok-city',city)}catch(_){}bangkokCategory='all';$('q').value='';while(closeOverlay()){}setTab('home');};
+      picker.innerHTML='<select class="lang" id="citySelect" aria-label="'+cityText('Город','City','เมือง')+'">'+[['pattaya',cityText('Паттайя','Pattaya','พัทยา')],['bangkok',cityText('Бангкок','Bangkok','กรุงเทพฯ')],['phuket',cityText('Пхукет','Phuket','ภูเก็ต')]].map(([id,label])=>'<option value="'+id+'" '+(city===id?'selected':'')+'>'+label+'</option>').join('')+'</select>';
+      picker.onchange=e=>{if(e.target.id!=='citySelect'||e.target.value===city)return;city=e.target.value;window.dispatchEvent(new Event('okok:city-change'));try{localStorage.setItem('okok-city',city)}catch(_){}bangkokCategory='all';$('q').value='';while(closeOverlay()){}setTab('home');};
       document.documentElement.dataset.city=city;
       document.querySelector('header.app h1').textContent=city==='phuket'?cityText('ok-ok · Пхукет','ok-ok · Phuket','ok-ok · ภูเก็ต'):city==='bangkok'?cityText('ok-ok · Бангкок','ok-ok · Bangkok','ok-ok · กรุงเทพฯ'):'PattayaOK';
       document.querySelector('.tickers').hidden=city!=='pattaya';

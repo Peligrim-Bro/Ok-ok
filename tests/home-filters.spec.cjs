@@ -14,6 +14,6 @@ test('home filter choices survive folding, catalogue and city navigation',async(
  await page.locator('nav.tab [data-tab="list"]').click();await expect(page.locator('#filters')).toBeVisible();
  await page.locator('nav.tab [data-tab="home"]').click();await expect(page.locator('#filters')).not.toBeVisible();
  await page.locator('#homeFiltersToggle').click();await expect(page.locator('#filters [data-cat="'+value+'"]').first()).toHaveClass(/on/);
- await page.locator('#cityPicker [data-city="phuket"]').click();await expect(page.locator('#homeFilters')).not.toBeVisible();
- await page.locator('#cityPicker [data-city="pattaya"]').click();await expect(page.locator('#homeFiltersToggle')).toBeVisible();
+ await page.locator('#citySelect').selectOption('phuket');await expect(page.locator('#homeFilters')).not.toBeVisible();
+ await page.locator('#citySelect').selectOption('pattaya');await expect(page.locator('#homeFiltersToggle')).toBeVisible();
 });

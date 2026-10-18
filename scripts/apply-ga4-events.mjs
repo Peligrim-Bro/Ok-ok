@@ -8,12 +8,22 @@ const tracker=String.raw`
 (()=> {
   if(window.__OKOK_GA4_EVENTS__) return;
   window.__OKOK_GA4_EVENTS__=true;
+  try{if(new URLSearchParams(location.search).get('okok_test')==='1')sessionStorage.setItem('okok-test','1')}catch{}
+  const excluded=()=>{
+    try{return /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)||navigator.webdriver||sessionStorage.getItem('okok-test')==='1'}catch{return true}
+  };
   const send=(name,params={})=>{
+    if(excluded())return;
     if(typeof window.gtag!=='function') return;
     window.gtag('event',name,{...params,transport_type:'beacon'});
   };
   const clean=s=>String(s||'').trim().replace(/\s+/g,' ').slice(0,100);
   const lang=()=>clean(document.documentElement.lang||localStorage.getItem('lang')||'ru');
+  window.addEventListener('okok:catalogue',e=>{
+    const d=e.detail||{};
+    if(!['catalogue_view','provider_open'].includes(d.name))return;
+    send(d.name,{category:clean(d.category),city:clean(d.city),provider_id:clean(d.provider_id),ui_language:lang()});
+  });
   const partnerFromHref=href=>{
     try{
       const u=new URL(href,location.href),h=u.hostname.toLowerCase();
@@ -34,6 +44,7 @@ const tracker=String.raw`
     const tab=clean(el.dataset?.tab);
     const bag=(text+' '+(el.id||'')+' '+(typeof el.className==='string'?el.className:'')).toLowerCase();
     const base={ui_language:lang()};
+    if(el.dataset?.provider&&el.dataset?.contactChannel)send(el.dataset.contactChannel==='reviews'?'provider_reviews_click':'provider_contact_click',{...base,provider_id:clean(el.dataset.provider),channel:clean(el.dataset.contactChannel),city:clean(document.documentElement.dataset.city)});
     if(partner)send('partner_click',{...base,partner,placement:placement||'unknown'});
     if(tab)send('navigation_click',{...base,tab});
     if(/любим|favorite|favourite|сохран|save|บันทึก/.test(bag))send('favorite_action',{...base,label:text});

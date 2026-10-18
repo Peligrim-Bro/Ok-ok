@@ -9,7 +9,7 @@ async function layout(page,label){
   const a=boxes[i],b=boxes[j],overlap=Math.min(a.x+a.w,b.x+b.w)-Math.max(a.x,b.x)>1&&Math.min(a.y+a.h,b.y+b.h)-Math.max(a.y,b.y)>1;
   expect(overlap,label+' overlap '+a.id+'/'+b.id).toBe(false);
  }
- expect(await page.locator('header.app .top-actions>button').count()).toBe(4);
+ expect(await page.locator('header.app .top-actions>button').count()).toBe(3);
  const brand=await page.locator('header.app .brand').evaluate(n=>Array.from(n.children).filter(n=>!n.classList.contains('top-actions')&&n.getClientRects().length).map(n=>{const r=n.getBoundingClientRect();return {x:r.x,y:r.y,w:r.width,h:r.height};}));
  for(let i=0;i<brand.length;i++)for(let j=i+1;j<brand.length;j++){const a=brand[i],b=brand[j];expect(Math.min(a.x+a.w,b.x+b.w)-Math.max(a.x,b.x)>1&&Math.min(a.y+a.h,b.y+b.h)-Math.max(a.y,b.y)>1,label+' brand overlap').toBe(false);}
 }
@@ -29,18 +29,18 @@ for(const lang of ['ru','en','th'])for(const [width,height] of sizes)test(`layou
   for(const tab of ['home','list','scam','shop']){
    await page.locator(`nav.tab [data-tab="${tab}"]`).click();
    await layout(page,lang+' '+theme+' '+tab);
-   await reachable(page,'#timerBtn');await reachable(page,'#reportBtn');
+   await reachable(page,'#timerBtn');await reachable(page,'#moreBtn');
    await page.screenshot({path:`quality-reports/layout-${lang}-${width}-${height}-${theme}-${tab}.png`,fullPage:false});
   }
  }
  await page.locator('#timerBtn').click();await expect(page.locator('#visaForm')).toBeVisible();await layout(page,'timer');
- await page.locator('#reportBtn').click();await expect(page.locator('#app form')).toBeVisible();await layout(page,'report');
+ await page.locator('#moreBtn').click();await reachable(page,'#reportBtn');await page.locator('#reportBtn').click();await expect(page.locator('#app form')).toBeVisible();await layout(page,'report');
  await page.locator('nav.tab [data-tab="home"]').click();
- for(const city of ['bangkok','phuket','pattaya']){await page.locator(`[data-city="${city}"]`).click();await layout(page,city);}
+ for(const city of ['bangkok','phuket','pattaya']){await page.locator('#citySelect').selectOption(city);await layout(page,city);}
  await page.locator('#langBtn').click();for(const code of ['ru','en','th'])await reachable(page,'#langMask [data-lang="'+code+'"]');await reachable(page,'#langClose');await page.locator('#langClose').click();await expect(page.locator('#langMask')).not.toHaveClass(/on/);
  // Close without changing the selected language.
 
- await page.locator('#donateBtn').click();await page.locator('#donateCard').evaluate(n=>n.scrollTop=n.scrollHeight);await reachable(page,'#donateClose');await page.locator('#donateClose').click();await expect(page.locator('#donateMask')).not.toHaveClass(/on/);
+ await page.locator('#moreBtn').click();await reachable(page,'#donateBtn');await page.locator('#donateBtn').click();await page.locator('#donateCard').evaluate(n=>n.scrollTop=n.scrollHeight);await reachable(page,'#donateClose');await page.locator('#donateClose').click();await expect(page.locator('#donateMask')).not.toHaveClass(/on/);
  await page.locator('[data-spin="1"]').first().click();await page.locator('#spinCard').evaluate(n=>n.scrollTop=n.scrollHeight);await reachable(page,'#spinClose');await page.locator('#spinClose').click();await expect(page.locator('#spinMask')).not.toHaveClass(/on/);
  await page.locator('nav.tab [data-tab="list"]').click();await page.locator('.card').first().click();await page.locator('#sheet').evaluate(n=>n.scrollTop=n.scrollHeight);await reachable(page,'#closeSheet');await page.locator('#closeSheet').click();await expect(page.locator('#sheet')).not.toHaveClass(/open/);
  await page.locator('nav.tab [data-tab="game"]').click();await page.locator('#okiLife .ol-card').evaluate(n=>n.scrollTop=n.scrollHeight);await reachable(page,'#okiLife .ol-close');await page.locator('#okiLife .ol-close').click();await expect(page.locator('#okiLife')).toHaveCount(0);

@@ -27,7 +27,7 @@ for(const lang of ['ru','en','th'])for(const width of [390,768])test(`${lang} at
  await page.goto('/',{waitUntil:'domcontentloaded'});
  await expect(page.locator('nav.tab button')).toHaveCount(5);
  await expect(page.locator('#langBtn')).toHaveText(lang.toUpperCase());
- for(const id of ['donateBtn','themeBtn','langBtn','reportBtn'])expect((await page.locator('#'+id).boundingBox()).height).toBe(44);
+ for(const id of ['moreBtn','themeBtn','langBtn'])expect((await page.locator('#'+id).boundingBox()).height).toBe(44);
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
  await page.locator('#installClose').click();
  await expect(page.locator('#installMask')).not.toHaveClass(/on/);
@@ -108,7 +108,7 @@ test('current weather animates rain, switches cities and respects reduced motion
  await page.locator('#installClose').click();
  await page.evaluate(()=>document.body.dispatchEvent(new PointerEvent('pointerdown',{bubbles:true,clientX:innerWidth/2,clientY:innerHeight/2})));
  await expect.poll(read).toBeGreaterThan(idle);
- await page.locator('[data-city="phuket"]').click();
+ await page.locator('#citySelect').selectOption('phuket');
  await expect(bg).toHaveAttribute('data-city','phuket');
  await expect(bg).toHaveAttribute('data-weather','clear');
  await page.waitForTimeout(200);const settled=await read();await page.waitForTimeout(400);expect(await read()).toBe(settled);

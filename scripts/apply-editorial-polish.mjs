@@ -21,6 +21,7 @@ const css=`
 /* Owner request 2026-10-07: two scrolling strips, without category labels. */
 html body #donateBtn::before,html body #donateBtn::after{animation:none!important}
 html body :is(#recTicker,#ticker){font-size:12px}
+html body #recTrack{animation-direction:normal}html body #tickerTrack{animation-direction:reverse}
 html body .catalog-note{margin:0 0 14px;max-width:64ch;line-height:1.5;color:var(--muted);font-size:12px}
 html body .card .verdict{line-height:1.55}
 html body .card .mini{line-height:1.5;row-gap:5px}
