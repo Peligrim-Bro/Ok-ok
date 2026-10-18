@@ -1,91 +1,94 @@
 {
-  "verifiedAt": "2026-10-17",
+  "verifiedAt": "2026-10-18",
   "news": [
     {
       "category": "world",
-      "when": "14.10 · 🌍",
-      "href": "https://apnews.com/article/bemotrizinol-bemt-new-sunscreen-ingredient-fda-7892cc598c0b553b8c9c6715d7a36d6a",
-      "ru": "В США начали появляться солнцезащитные средства с фильтром бемотризинолом после июньского допуска FDA. В других странах его используют давно; новость касается американского рынка.",
-      "en": "Sunscreens containing bemotrizinol are reaching US stores following FDA approval in June. The filter has long been used elsewhere; the launch is new to the American market.",
-      "th": "ผลิตภัณฑ์กันแดดที่มีสารเบโมไตรซินอลเริ่มวางขายในสหรัฐฯ หลัง FDA อนุญาตในเดือนมิถุนายน สารนี้ใช้ในประเทศอื่นมานานแล้ว ความใหม่จึงเป็นเรื่องของตลาดสหรัฐฯ",
-      "publishedAt": "2026-10-14",
+      "when": "16.10 · 🌍",
+      "href": "https://www.reuters.com/legal/litigation/top-global-climate-science-body-meet-ends-without-deal-review-timeline-2026-10-16/",
+      "ru": "Сессия IPCC в Аддис-Абебе приостановлена без согласования графика следующего климатического доклада. Обсуждение продолжится; решение о сроках ещё не принято.",
+      "en": "The IPCC session in Addis Ababa was suspended without agreement on the next climate assessment's timetable. Discussions will resume; publication dates remain undecided.",
+      "th": "การประชุม IPCC ที่แอดดิสอาบาบาถูกพักโดยยังตกลงกำหนดเผยแพร่รายงานประเมินภูมิอากาศฉบับถัดไปไม่ได้ การหารือจะดำเนินต่อ และยังไม่มีข้อยุติเรื่องวันเผยแพร่",
+      "publishedAt": "2026-10-16",
       "sources": [
-        "https://apnews.com/article/bemotrizinol-bemt-new-sunscreen-ingredient-fda-7892cc598c0b553b8c9c6715d7a36d6a",
-        "https://www.fda.gov/news-events/press-announcements/fda-expands-sunscreen-options-first-time-20-years"
+        "https://www.reuters.com/legal/litigation/top-global-climate-science-body-meet-ends-without-deal-review-timeline-2026-10-16/",
+        "https://climatenetwork.org/2026/10/16/ipcc-ar7-session-suspended-deeply-disappointing-says-can/",
+        "https://www.afp.com/en/un-climate-panel-fails-agree-date-global-warming-update-envoy"
       ],
       "nonWar": true,
       "discussionEvidence": {
-        "observedAt": "2026-10-17T08:16:00+07:00",
-        "sourceUrl": "https://apnews.com/article/bemotrizinol-bemt-new-sunscreen-ingredient-fda-7892cc598c0b553b8c9c6715d7a36d6a",
-        "summary": "At observation, AP placed this report first in its Health Top Stories section, ahead of the peptide-drug proposal and Pope health stories; this is an editorial section position, not the overall Most Read ranking or a measured comment total. Comparable engagement totals were unavailable. Multiple syndications repeat AP and are not independent reporting; FDA independently confirms the June regulatory background, not the October retail launch. The 14 October report is retained within the permitted 72-hour window; no global popularity claim is made."
+        "observedAt": "2026-10-18T08:05:00+07:00",
+        "sourceUrl": "https://www.reuters.com/legal/litigation/top-global-climate-science-body-meet-ends-without-deal-review-timeline-2026-10-16/",
+        "summary": "Related public Reddit search snapshots showed +34 votes on a timeline-pressure discussion (https://www.reddit.com/r/AcharyaPrashant_AP/comments/1x7aqyb/why_is_there_a_push_to_postpone_the_ipccs_next/) and +16 on an older 13 October background thread (https://www.reddit.com/r/collapse/comments/1x4o6sm/ipcc_is_under_pressure_to_delay_publication_of/). They are different communities and ages, not equivalent measures of this suspension's popularity; direct pages did not expose comment totals. Reuters and AFP independently reported the outcome; CAN supplies a direct participant statement. Their syndications are not extra independent outlets. IPCC's own homepage returned 403 and was not bypassed. The 16 October source uses the permitted 72-hour window; no global ranking is claimed."
       }
     },
     {
       "category": "thailand",
-      "when": "16.10 · 🇹🇭",
-      "href": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/551369",
-      "ru": "С 16 октября аэропорты Таиланда могут вскрывать зарегистрированный багаж при обнаружении подозрительных или запрещённых предметов без присутствия пассажира. По сообщению правительства, досмотр снимают на видео, а внутрь кладут уведомление. Ценности и важные документы рекомендуют держать в ручной клади.",
-      "en": "From 16 October, Thai airports may open checked baggage containing suspected prohibited or dangerous items without the passenger present. The government says inspections are recorded and a notice is placed inside. Travellers are advised to keep valuables and important documents in cabin baggage.",
-      "th": "ตั้งแต่ 16 ตุลาคม สนามบินไทยสามารถเปิดตรวจสัมภาระโหลดใต้ท้องเครื่องเมื่อพบสิ่งต้องสงสัยหรือสิ่งของต้องห้าม โดยไม่ต้องมีผู้โดยสารอยู่ด้วย รัฐบาลระบุว่าจะบันทึกวิดีโอและใส่ใบแจ้งการตรวจไว้ในกระเป๋า พร้อมแนะนำให้เก็บของมีค่าและเอกสารสำคัญในสัมภาระถือขึ้นเครื่อง",
-      "publishedAt": "2026-10-16",
+      "when": "18.10 · 🇹🇭",
+      "href": "https://www.tmd.go.th/warning-and-events/warning-storm/%E0%B8%9D%E0%B8%99%E0%B8%95%E0%B8%81%E0%B8%AB%E0%B8%99%E0%B8%81%E0%B8%96%E0%B8%87%E0%B8%AB%E0%B8%99%E0%B8%81%E0%B8%A1%E0%B8%B2%E0%B8%81%E0%B8%9A%E0%B8%A3%E0%B9%80%E0%B8%A7%E0%B8%93%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B9%84%E0%B8%97%E0%B8%A2-%E0%B8%A1%E0%B8%9C%E0%B8%A5%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%9A%E0%B9%83%E0%B8%99%E0%B8%8A%E0%B8%A7%E0%B8%87%E0%B8%A7%E0%B8%99%E0%B8%97-18-25-%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%84%E0%B8%A1-2569-%E0%B8%89%E0%B8%9A%E0%B8%9A%E0%B8%97-3-262-2570",
+      "ru": "TMD выпустил предупреждение №3: 18–20 октября сильные дожди возможны на юге и востоке, 21–25 октября зона расширится. Есть риск внезапных паводков и оползней; следите за обновлениями.",
+      "en": "TMD advisory No.3 warns of heavy rain in the South and East on 18–20 October, spreading more widely on 21–25 October. Flash floods and landslides are possible; monitor updates.",
+      "th": "TMD ออกประกาศฉบับที่ 3 เตือนฝนหนักภาคใต้และตะวันออก 18–20 ตุลาคม ก่อนขยายพื้นที่ 21–25 ตุลาคม เสี่ยงน้ำท่วมฉับพลันและดินถล่ม ควรติดตามประกาศล่าสุด",
+      "publishedAt": "2026-10-18",
       "sources": [
-        "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/551369"
+        "https://www.tmd.go.th/warning-and-events/warning-storm/%E0%B8%9D%E0%B8%99%E0%B8%95%E0%B8%81%E0%B8%AB%E0%B8%99%E0%B8%81%E0%B8%96%E0%B8%87%E0%B8%AB%E0%B8%99%E0%B8%81%E0%B8%A1%E0%B8%B2%E0%B8%81%E0%B8%9A%E0%B8%A3%E0%B9%80%E0%B8%A7%E0%B8%93%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B9%84%E0%B8%97%E0%B8%A2-%E0%B8%A1%E0%B8%9C%E0%B8%A5%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%9A%E0%B9%83%E0%B8%99%E0%B8%8A%E0%B8%A7%E0%B8%87%E0%B8%A7%E0%B8%99%E0%B8%97-18-25-%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%84%E0%B8%A1-2569-%E0%B8%89%E0%B8%9A%E0%B8%9A%E0%B8%97-3-262-2570",
+        "https://en.thairath.co.th/news/local/2966715"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-17T08:16:00+07:00",
-        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/551369",
-        "summary": "The opened PRD page displayed 207 views, versus 164 for its same-day plenary report (https://thailand.prd.go.th/en/content/category/detail/id/48/iid/551564). These are comparable same-platform page counters, not unique readers, comments or a national discussion ranking; exposure and article age differ. No comment totals were exposed. This is the official implementation update, not a claim of broad independent coverage."
+        "observedAt": "2026-10-18T08:05:00+07:00",
+        "sourceUrl": "https://www.tmd.go.th/warning-and-events/warning-storm/%E0%B8%9D%E0%B8%99%E0%B8%95%E0%B8%81%E0%B8%AB%E0%B8%99%E0%B8%81%E0%B8%96%E0%B8%87%E0%B8%AB%E0%B8%99%E0%B8%81%E0%B8%A1%E0%B8%B2%E0%B8%81%E0%B8%9A%E0%B8%A3%E0%B9%80%E0%B8%A7%E0%B8%93%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B9%84%E0%B8%97%E0%B8%A2-%E0%B8%A1%E0%B8%9C%E0%B8%A5%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%9A%E0%B9%83%E0%B8%99%E0%B8%8A%E0%B8%A7%E0%B8%87%E0%B8%A7%E0%B8%99%E0%B8%97-18-25-%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%84%E0%B8%A1-2569-%E0%B8%89%E0%B8%9A%E0%B8%9A%E0%B8%97-3-262-2570",
+        "summary": "No comparable public view/comment totals were exposed on TMD's advisory or PDMO's low-carbon announcement (https://www.pdmo.go.th/en/press-conference/3972); neither page establishes a popularity ranking. Thairath independently covered the same 18–25 October weather episode on 17 October (https://en.thairath.co.th/news/local/2966715), although its article refers to earlier bulletin No.1. This digest uses the newer official No.3, issued 18 October at 05:00, rather than recycling the old bulletin date. Selection reflects current safety relevance, with limited cross-outlet evidence, not measured national discussion."
       }
     },
     {
       "category": "thailand",
-      "when": "16.10 · 🇹🇭",
-      "href": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/551564",
-      "ru": "На открытии пленарного заседания МВФ и Всемирного банка в Бангкоке 16 октября премьер Анутин призвал укреплять международное сотрудничество, торговлю и доступ к технологиям и финансам. Это заявленные приоритеты выступления, а не уже принятые новые меры.",
-      "en": "Opening the IMF–World Bank plenary in Bangkok on 16 October, Prime Minister Anutin called for international cooperation, trade and wider access to technology and finance. These were priorities set out in a speech, not newly enacted measures.",
-      "th": "นายกรัฐมนตรีอนุทินกล่าวเปิดการประชุมเต็มคณะ IMF–ธนาคารโลกที่กรุงเทพฯ วันที่ 16 ตุลาคม โดยเรียกร้องความร่วมมือระหว่างประเทศ การค้า และการเข้าถึงเทคโนโลยีกับเงินทุน ประเด็นเหล่านี้เป็นแนวทางในสุนทรพจน์ ไม่ใช่มาตรการใหม่ที่มีผลแล้ว",
-      "publishedAt": "2026-10-16",
+      "when": "17.10 · 🇹🇭",
+      "href": "https://www.pdmo.go.th/en/press-conference/3972",
+      "ru": "Таиланд и Всемирный банк представили направления сотрудничества по низкоуглеродным городам, энергоэффективности и рынку углеродных кредитов. Инициативы рассчитаны на привлечение частного капитала; будущий эффект ещё предстоит оценить.",
+      "en": "Thailand and the World Bank outlined cooperation on low-carbon cities, energy efficiency and carbon-credit markets. The initiatives aim to attract private capital; their eventual impact remains to be assessed.",
+      "th": "ไทยและธนาคารโลกนำเสนอความร่วมมือด้านเมืองคาร์บอนต่ำ ประสิทธิภาพพลังงาน และตลาดคาร์บอนเครดิต โดยมุ่งดึงเงินทุนเอกชน ผลลัพธ์ในอนาคตยังต้องติดตาม",
+      "publishedAt": "2026-10-17",
       "sources": [
-        "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/551564"
+        "https://www.pdmo.go.th/en/press-conference/3972",
+        "https://www.nationthailand.com/sustaination/40072428"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-17T08:16:00+07:00",
-        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/551564",
-        "summary": "PRD displayed 164 views, compared with 207 for the baggage implementation report (https://thailand.prd.go.th/en/content/category/detail/id/48/iid/551369), observed on the same platform. No comparable comment totals were exposed. This limited sample cannot establish nationwide discussion or independent breadth; selection also reflects the public significance of the Bangkok plenary."
+        "observedAt": "2026-10-18T08:05:00+07:00",
+        "sourceUrl": "https://www.pdmo.go.th/en/press-conference/3972",
+        "summary": "Comparable public engagement counters were unavailable for this announcement and the TMD selection. The Nation's signed 17 October report independently covers the package (https://www.nationthailand.com/sustaination/40072428); Money & Banking also reports it (https://en.moneyandbanking.co.th/2026/279718/), but may draw on the same official briefing and is not counted as another independent confirmation. PDMO is the government primary source. This is cross-outlet attention, not a measured national discussion ranking; aims are not presented as achieved economic outcomes."
       }
     },
     {
       "category": "pattaya",
-      "when": "16.10 · Pattaya",
-      "href": "https://thepattayanews.com/2026/10/16/banglamung-switches-motorcycle-taxi-vests-from-orange-to-blue-for-5281-drivers/",
-      "ru": "В Бангламунге начали заменять оранжевые жилеты зарегистрированных водителей мототакси на синие. По местному репортажу, программа охватывает 5 281 водителя. Срок завершения перехода не объявлен: публикация не означает, что все оранжевые жилеты уже недействительны.",
-      "en": "Banglamung has begun replacing registered motorcycle-taxi drivers' orange vests with blue ones. Local reporting says the programme covers 5,281 drivers. No completion deadline was announced, so the report does not mean all orange vests are already invalid.",
-      "th": "บางละมุงเริ่มเปลี่ยนเสื้อวินจักรยานยนต์รับจ้างที่ขึ้นทะเบียนจากสีส้มเป็นสีน้ำเงิน รายงานท้องถิ่นระบุว่าครอบคลุมผู้ขับขี่ 5,281 คน ยังไม่ประกาศวันสิ้นสุดการเปลี่ยน จึงไม่ควรตีความว่าเสื้อสีส้มทั้งหมดใช้ไม่ได้แล้ว",
-      "publishedAt": "2026-10-16",
+      "when": "17.10 · Pattaya",
+      "href": "https://www.pattayamail.com/news/pattaya-clears-cones-and-metal-barriers-from-nightlife-streets-to-reclaim-public-parking-spaces-568752",
+      "ru": "Муниципальные сотрудники Паттайи убирают конусы и металлические заграждения, которыми занимают общественные парковочные места возле ночных заведений. Это продолжение контроля, а не новое правило. О препятствиях можно сообщить городу по номеру 1337.",
+      "en": "Pattaya municipal officers are removing cones and metal barriers used to reserve public parking near nightlife venues. This continues existing enforcement, rather than introducing a new rule. Obstructions can be reported to the city on 1337.",
+      "th": "เจ้าหน้าที่เทศกิจพัทยาเก็บกรวยและแผงเหล็กที่ใช้จองที่จอดรถสาธารณะใกล้สถานบันเทิง เป็นการบังคับใช้แนวทางเดิม ไม่ใช่กฎใหม่ แจ้งสิ่งกีดขวางได้ที่สายด่วนเมือง 1337",
+      "publishedAt": "2026-10-17",
       "sources": [
-        "https://thepattayanews.com/2026/10/16/banglamung-switches-motorcycle-taxi-vests-from-orange-to-blue-for-5281-drivers/"
+        "https://www.pattayamail.com/news/pattaya-clears-cones-and-metal-barriers-from-nightlife-streets-to-reclaim-public-parking-spaces-568752"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-17T08:16:00+07:00",
-        "sourceUrl": "https://thepattayanews.com/2026/10/16/banglamung-switches-motorcycle-taxi-vests-from-orange-to-blue-for-5281-drivers/",
-        "summary": "No comparable public view, share or comment totals were exposed for this report or the Bali Hai proposal (https://thepattayanews.com/2026/10/16/pattaya-considers-tourist-assistance-centre-at-bali-hai-pier-to-improve-visitor-safety/). Searches found no sufficiently verified independent breadth for this specific rollout; it is selected for direct local transport relevance, not a proven popularity rank. The Pattaya News is the primary local event report. This limitation prevents a quantitative comparison between the two Pattaya selections."
+        "observedAt": "2026-10-18T08:05:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/pattaya-clears-cones-and-metal-barriers-from-nightlife-streets-to-reclaim-public-parking-spaces-568752",
+        "summary": "Pattaya Mail displayed 1,619 views and 0 comments, versus 893 views and 0 comments for the same-day sports-project review (https://www.pattayamail.com/news/pattaya-reviews-progress-on-football-stadium-and-youth-sports-center-projects-568719). Its blue-vest story had 1,673 views and 0 comments (https://www.pattayamail.com/news/pattaya-switches-5281-motorcycle-taxi-drivers-from-orange-to-blue-vests-568761), but repeats yesterday's selected event and is excluded. These are same-platform counters, not unique users or a citywide rank; ages and exposure differ. Search found attributed aggregations, not verified independent reporting of this specific operation."
       }
     },
     {
       "category": "pattaya",
-      "when": "16.10 · Pattaya",
-      "href": "https://thepattayanews.com/2026/10/16/pattaya-considers-tourist-assistance-centre-at-bali-hai-pier-to-improve-visitor-safety/",
-      "ru": "Паттайя обсуждает центр помощи туристам у пирса Бали Хай: он мог бы давать информацию о поездках и координировать помощь при чрезвычайных ситуациях. На встрече 16 октября рассматривали размещение; центр ещё не открыт, дата запуска не названа.",
-      "en": "Pattaya is considering a tourist assistance centre at Bali Hai Pier for travel information and emergency coordination. Officials discussed its location on 16 October. The centre is still a proposal, not an operating service, and no opening date was announced.",
-      "th": "พัทยากำลังพิจารณาศูนย์ช่วยเหลือนักท่องเที่ยวที่ท่าเรือบาลีฮาย เพื่อให้ข้อมูลการเดินทางและประสานความช่วยเหลือฉุกเฉิน การประชุมวันที่ 16 ตุลาคมหารือเรื่องสถานที่ ศูนย์ยังเป็นข้อเสนอ ไม่ได้เปิดบริการ และยังไม่มีวันเปิด",
-      "publishedAt": "2026-10-16",
+      "when": "17.10 · Pattaya",
+      "href": "https://www.pattayamail.com/news/pattaya-reviews-progress-on-football-stadium-and-youth-sports-center-projects-568719",
+      "ru": "Паттайя рассмотрела ход работ на футбольном стадионе Eastern Sports Centre и в Молодёжном спортивном центре. Материал от 17 октября описывает заседание 15 октября; о завершении объектов или дате открытия не сообщается.",
+      "en": "Pattaya reviewed work on the Eastern Sports Centre football stadium and Youth Sports Centre. The 17 October report covers a 15 October meeting; it does not announce completion or an opening date.",
+      "th": "พัทยาติดตามงานสนามฟุตบอลศูนย์กีฬาแห่งภาคตะวันออกและศูนย์กีฬาเยาวชน ข่าวเผยแพร่ 17 ตุลาคมกล่าวถึงการประชุม 15 ตุลาคม โดยยังไม่ได้ประกาศว่างานเสร็จหรือกำหนดวันเปิด",
+      "publishedAt": "2026-10-17",
       "sources": [
-        "https://thepattayanews.com/2026/10/16/pattaya-considers-tourist-assistance-centre-at-bali-hai-pier-to-improve-visitor-safety/"
+        "https://www.pattayamail.com/news/pattaya-reviews-progress-on-football-stadium-and-youth-sports-center-projects-568719"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-17T08:16:00+07:00",
-        "sourceUrl": "https://thepattayanews.com/2026/10/16/pattaya-considers-tourist-assistance-centre-at-bali-hai-pier-to-improve-visitor-safety/",
-        "summary": "No comparable public engagement totals were exposed, including for the same-day blue-vest report (https://thepattayanews.com/2026/10/16/banglamung-switches-motorcycle-taxi-vests-from-orange-to-blue-for-5281-drivers/). Search found publisher social reposts and an attributed translation, not verified broad independent reporting. The local meeting report is selected for visitor-service relevance; no citywide discussion ranking is claimed, and the lack of independent breadth is explicit."
+        "observedAt": "2026-10-18T08:05:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/pattaya-reviews-progress-on-football-stadium-and-youth-sports-center-projects-568719",
+        "summary": "Pattaya Mail displayed 893 views and 0 comments, below the parking-enforcement report's 1,619 views and 0 comments (https://www.pattayamail.com/news/pattaya-clears-cones-and-metal-barriers-from-nightlife-streets-to-reclaim-public-parking-spaces-568752). Same-platform counts allow a limited comparison only; no citywide rank is claimed. This civic-project item is selected for community relevance, not as the most-read local story. Verified broad independent coverage was unavailable. Publication is 17 October; the underlying meeting was 15 October, explicitly disclosed rather than presented as a new 17 October event."
       }
     }
   ],
@@ -135,7 +138,30 @@
         "https://thepattayanews.com/2026/10/14/three-people-arrested-in-pattaya-call-centre-raid-over-alleged-fake-cyber-police-recovery-scam/"
       ],
       "verifiedAt": "2026-10-14"
+    },
+    {
+      "id": "fake-jobs-filming-invitations-thailand-2026-10",
+      "title": {
+        "ru": "Ложные вакансии и приглашения на съёмки",
+        "en": "Fake jobs and filming invitations",
+        "th": "งานและคำเชิญถ่ายทำปลอม"
+      },
+      "text": {
+        "ru": "Посольство Китая в Таиланде 16 октября предупредило своих граждан: ложные вакансии и приглашения на съёмки могут вести к удержанию и принудительному вывозу к Мьянме.",
+        "en": "On 16 October, China's embassy in Thailand warned its citizens that fake jobs and filming invitations may lead to detention and forced transfers toward Myanmar.",
+        "th": "สถานทูตจีนประจำไทยเตือนพลเมืองของตนเมื่อ 16 ตุลาคมว่างานและคำเชิญถ่ายทำปลอมอาจนำไปสู่การกักขังและส่งต่อไปชายแดนเมียนมา"
+      },
+      "do": {
+        "ru": "Проверьте работодателя и адрес. Не отдавайте паспорт, откажитесь от необъяснимой поездки к границе. Сообщите планы близким. При угрозе обращайтесь в полицию и своё консульство.",
+        "en": "Verify the employer and workplace. Keep your passport; reject unexplained border-bound journeys. Share plans with trusted people. If threatened, contact police and your consulate.",
+        "th": "ตรวจสอบนายจ้างและที่ทำงาน เก็บหนังสือเดินทางไว้เอง ปฏิเสธเส้นทางไปชายแดนที่ไม่ชัดเจน แจ้งแผนแก่คนที่ไว้ใจ หากมีภัยให้ติดต่อตำรวจและกงสุลของตน"
+      },
+      "status": "official-warning",
+      "sources": [
+        "https://th.china-embassy.gov.cn/sgxw/202610/t20261016_12042063.html"
+      ],
+      "verifiedAt": "2026-10-18"
     }
   ],
-  "selection": "Exactly 1 non-war world story, 2 Thailand stories and 2 Pattaya stories reviewed 2026-10-17 Asia/Bangkok. Four reports are dated 16 October; the world retail-launch report is dated 14 October and uses the permitted 72-hour window. AP Health section placement and same-platform PRD view counters are recorded with observation time and URLs, with their limits; no global or nationwide popularity ranking is claimed. No comparable Pattaya engagement totals or verified broad independent coverage were available, explicitly recorded in discussionEvidence rather than invented. Syndications and publisher social reposts are not independent confirmation. New scam review included the 16 October Money & Banking interview with a BOT deputy governor (https://en.moneyandbanking.co.th/2026/279427/); this general trend report lacked the additional primary confirmation needed for a distinct new warning. No sufficiently verified new official warning or corroborated investigation was established. Both still-relevant active scam cards and original verification dates remain unchanged. Only content/editorial.json changes; no Telegram news sending."
+  "selection": "Exactly 1 non-war world story, 2 Thailand stories and 2 Pattaya stories reviewed 2026-10-18 Asia/Bangkok. Thailand and Pattaya source publication dates are 17–18 October. The world outcome was reported late 16 October UTC (early 17 October Bangkok), within the permitted 72-hour window. The sports story was published 17 October but concerns a 15 October meeting; both dates are disclosed. Same-platform Pattaya Mail view/comment counters are compared with URLs and observation time. Related Reddit search signals are not treated as equivalent global measures; qualitative independent coverage and its limits are explicit. The already-selected blue-vest and Bali Hai stories are not recycled merely because of later republication. Official TMD bulletin No.3, issued 18 October 05:00, supersedes the earlier bulletin. New scam card: the Chinese embassy's 16 October official warning to its citizens about high-pay job, investment and filming-invitation lures, independently reported by Lianhe Zaobao. Source date is explicit; no victim details, unverified sums or findings of guilt are published. Both existing active scam cards and original verification dates remain unchanged. Only content/editorial.json changes. No Telegram news sending. Independent corroboration: https://www.zaobao.com.sg/news/china/story20261017-9851179. The new warning is deliberately concise to fit the existing size budget; no budget or unrelated file is changed."
 }
