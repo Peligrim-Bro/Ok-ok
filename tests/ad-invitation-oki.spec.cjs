@@ -20,6 +20,7 @@ for(const lang of ['ru','en','th'])test(`reference-matched illustrated Oki witho
  const wrap=page.locator('.okad-invitation-wrap'),portrait=wrap.locator('.okad-oki-portrait'),peek=wrap.locator('.okad-oki-peek');
  await expect(peek).toBeVisible();await expect(portrait).toHaveAttribute('src',/\/assets\/oki\/invitation-[a-f0-9]{16}\.webp$/);
  expect(await portrait.evaluate(n=>n.complete&&n.naturalWidth>0)).toBe(true);
+ expect(await peek.evaluate(n=>n.getAnimations({subtree:true}).length)).toBe(0);
  await expect(wrap.locator('canvas')).toHaveCount(0);await expect(page.locator('#oki3d-loader')).toHaveCount(0);
  await expect(peek).toContainText({ru:'Твоему сообщению — сюда!',en:'Your message belongs here!',th:'ข้อความของคุณอยู่ตรงนี้ได้!'}[lang]);
  for(const theme of ['dark','light']){
@@ -46,6 +47,31 @@ for(const lang of ['ru','en','th'])test(`reference-matched illustrated Oki witho
  await jump(page,120000);await page.waitForTimeout(700);await expect(peek).toBeHidden();
  await wrap.locator('.okad-invitation').click();await expect(page.locator('#okAdDialog')).toBeVisible();
  expect(errors).toEqual([]);
+});
+test('Oki moves head and hands, follows touch and pointer, retreats and yields to More',async({page})=>{
+ await page.setViewportSize({width:390,height:844});await prepare(page);
+ const wrap=page.locator('.okad-invitation-wrap'),peek=wrap.locator('.okad-oki-peek'),rig=wrap.locator('.okad-oki-rig'),head=wrap.locator('.okad-oki-head'),hands=wrap.locator('.okad-oki-hand');
+ await expect(peek).toBeVisible();const before=await wrap.boundingBox();
+ // Sample the browser's real CSS animations at deterministic times.
+ const sample=async time=>rig.evaluate((n,time)=>n.getAnimations({subtree:true}).forEach(a=>{a.pause();a.currentTime=time}),time);
+ await sample(1600);
+ const first=await hands.evaluateAll(nodes=>nodes.map(n=>getComputedStyle(n).transform));
+ await sample(1950);
+ const second=await hands.evaluateAll(nodes=>nodes.map(n=>getComputedStyle(n).transform));
+ expect(first).not.toEqual(second);expect(second.every(s=>s!=='none'&&s!=='matrix(1, 0, 0, 1, 0, 0)')).toBe(true);
+ const box=await rig.boundingBox();
+ await page.mouse.move(box.x-100,box.y);
+ await expect.poll(()=>head.evaluate(n=>parseFloat(getComputedStyle(n).rotate))).toBeLessThan(0);
+ await page.evaluate(({x,y})=>document.dispatchEvent(new PointerEvent('pointerdown',{clientX:x,clientY:y,pointerType:'touch',bubbles:true})),{x:box.x+box.width+100,y:box.y});
+ await expect.poll(()=>head.evaluate(n=>parseFloat(getComputedStyle(n).rotate))).toBeGreaterThan(0);
+ await page.screenshot({path:'quality-reports/oki-invitation-motion-point.png'});
+ const lookBefore=await rig.boundingBox();await sample(6800);
+ await expect.poll(async()=>(await rig.boundingBox()).y).toBeGreaterThan(lookBefore.y+5);
+ expect((await wrap.boundingBox()).y).toBe(before.y);expect((await wrap.boundingBox()).height).toBe(before.height);
+ await sample(1600);await page.locator('#moreBtn').evaluate(n=>n.click());await expect(peek).toBeHidden();
+ await page.locator('#moreClose').click();await expect(peek).toBeVisible();
+ await wrap.locator('.okad-oki-close').click();await expect(peek).toBeHidden();
+ await page.mouse.move(0,0);expect(await rig.evaluate(n=>n.style.getPropertyValue('--oki-look-x'))).toBe('0');
 });
 test('Oki repeats gently, hides offscreen and never appears over a dialog',async({page})=>{
  test.setTimeout(45000);await page.setViewportSize({width:390,height:844});await prepare(page);
