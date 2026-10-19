@@ -49,10 +49,19 @@ html body .hint.okad-oki-underlay-hidden{opacity:0;pointer-events:none}
 html body #okAds .okad-invitation-wrap{--oki-rise:88px;position:relative;padding:0;isolation:isolate;min-width:0;scroll-margin-block:110px}
 html body #okAds .okad-oki-peek{position:absolute;left:0;right:0;top:calc(-1 * var(--oki-rise));height:var(--oki-rise);overflow:hidden;pointer-events:none;z-index:2}
 html body #okAds .okad-oki-peek[hidden]{display:none}
-html body #okAds .okad-oki-portrait{position:absolute;right:22px;top:0;height:calc(var(--oki-rise) + 6px);width:auto;max-width:none;display:block;pointer-events:none;transform:translateY(100%);animation:okad-oki-rise .6s cubic-bezier(.2,.8,.2,1) forwards}
+html body #okAds .okad-oki-rig{--oki-look-x:0;--oki-look-y:0;position:absolute;right:22px;top:0;height:calc(var(--oki-rise) + 6px);aspect-ratio:384/324;display:block;pointer-events:none;transform:translateY(105%);animation:okad-oki-rise .6s cubic-bezier(.2,.8,.2,1) forwards,okad-oki-retreat .5s 6.4s ease-in forwards}
+html body #okAds :is(.okad-oki-portrait,.okad-oki-head,.okad-oki-hand){position:absolute;inset:0;width:100%;height:100%;max-width:none;display:block;pointer-events:none;background-image:var(--oki-portrait);background-size:100% 100%;background-repeat:no-repeat}
+html body #okAds .okad-oki-portrait{clip-path:polygon(36% 70%,65% 70%,70% 77%,70% 94%,30% 94%,31% 77%)}
+html body #okAds .okad-oki-head{clip-path:polygon(0 0,100% 0,100% 71.5%,0 71.5%);transform-origin:50% 69%;translate:calc(var(--oki-look-x) * 2px) calc(var(--oki-look-y) * 1px);rotate:calc(var(--oki-look-x) * 5deg);transition:translate .16s ease-out,rotate .16s ease-out;animation:okad-oki-greet 5.2s .6s ease-in-out both}
+html body #okAds .okad-oki-hand-left{clip-path:polygon(0 71.5%,36% 71.5%,40% 86%,42% 100%,0 100%);transform-origin:34% 74%;animation:okad-oki-point-left 1.15s 1.3s ease-in-out 2}
+html body #okAds .okad-oki-hand-right{clip-path:polygon(65% 71.5%,100% 71.5%,100% 100%,61% 100%,60% 86%);transform-origin:66% 74%;animation:okad-oki-point-right 1.15s 1.45s ease-in-out 2}
 html body #okAds .okad-oki-speech{position:absolute;left:0;right:140px;top:4px;padding:7px 9px;border:1px solid var(--toy-rim);border-radius:15px 15px 3px 15px;background:var(--card);color:var(--text);box-shadow:inset 0 1px 0 #ffffff66,0 4px 10px #0002;font-size:12px;font-weight:750;line-height:1.35;opacity:0;animation:okad-oki-say .25s .45s ease forwards}
 html body #okAds button.okad-oki-close{position:absolute;right:0;top:0;width:44px;min-width:44px;height:44px;min-height:44px;padding:0;border:0!important;background:transparent!important;box-shadow:none!important;color:var(--muted)!important;font-size:22px;pointer-events:auto;z-index:2}
 @keyframes okad-oki-rise{to{transform:translateY(0)}}
+@keyframes okad-oki-retreat{to{transform:translateY(108%)}}
+@keyframes okad-oki-greet{0%,100%{transform:rotate(0deg)}12%{transform:rotate(-4deg)}25%,68%{transform:rotate(0deg)}44%{transform:rotate(3deg)}78%{transform:rotate(-2deg)}}
+@keyframes okad-oki-point-left{0%,100%{transform:rotate(0deg) translateY(0)}45%,62%{transform:rotate(-9deg) translateY(3px)}}
+@keyframes okad-oki-point-right{0%,100%{transform:rotate(0deg) translateY(0)}45%,62%{transform:rotate(9deg) translateY(3px)}}
 @keyframes okad-oki-say{to{opacity:1}}
 html body #okAds .okad.okad-invitation{
  position:relative;z-index:1;width:100%;
@@ -73,7 +82,7 @@ html body #okAds .okad-invite-arrow{display:grid;place-items:center;width:30px;h
 @media(hover:hover){html body #okAds .okad-invitation:hover{transform:translateY(-2px)}}
 html body #okAds .okad-invitation:active{transform:scale(.985)}
 @media(max-width:350px){html body #okAds .okad.okad-invitation{grid-template-columns:40px minmax(0,1fr) 26px;gap:9px;padding:16px 12px}html body #okAds .okad-invite-icon{width:37px;height:38px;font-size:18px;border-radius:12px}html body #okAds .okad-invite-copy b{font-size:17px}html body #okAds .okad-invite-arrow{width:26px;height:26px;font-size:18px}}
-@media(prefers-reduced-motion:reduce){html body #okAds .okad.okad-invitation{transition:none;transform:none}html body #okAds .okad-oki-portrait{animation:none;transform:none}html body #okAds .okad-oki-speech{animation:none;opacity:1}}
+@media(prefers-reduced-motion:reduce){html body #okAds .okad.okad-invitation{transition:none;transform:none}html body #okAds :is(.okad-oki-rig,.okad-oki-head,.okad-oki-hand){animation:none;transition:none;transform:none;translate:none;rotate:none}html body #okAds .okad-oki-speech{animation:none;opacity:1}}
 `;
 writeFileSync(cssPath,css);
 const version=createHash('sha256').update(css).digest('hex').slice(0,16);

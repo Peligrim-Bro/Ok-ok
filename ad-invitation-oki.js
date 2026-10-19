@@ -5,14 +5,16 @@ function mountInviteOki(wrap) {
  const reduce=matchMedia('(prefers-reduced-motion: reduce)');
  if(navigator.connection?.saveData)return;
  const portrait=h('img',{class:'okad-oki-portrait',alt:'',decoding:'async','aria-hidden':'true'});
+ const rig=h('span',{class:'okad-oki-rig','aria-hidden':'true'},portrait,
+  h('span',{class:'okad-oki-head'}),h('span',{class:'okad-oki-hand okad-oki-hand-left'}),h('span',{class:'okad-oki-hand okad-oki-hand-right'}));
  const peek=h('div',{class:'okad-oki-peek',hidden:true},
-  h('span',{class:'okad-oki-speech',text:tr('Твоему сообщению — сюда!','Your message belongs here!','ข้อความของคุณอยู่ตรงนี้ได้!')}),portrait,
+  h('span',{class:'okad-oki-speech',text:tr('Твоему сообщению — сюда!','Your message belongs here!','ข้อความของคุณอยู่ตรงนี้ได้!')}),rig,
   h('button',{type:'button',class:'okad-oki-close','aria-label':tr('Скрыть подсказку Оки','Hide Oki’s hint','ซ่อนคำแนะนำของโอกิ'),text:'×'}));
  wrap.prepend(peek);
  const previous=wrap.closest('#okAds')?.previousElementSibling;
  const underlay=previous?.matches('p.hint')?previous:null;
  const abort=new AbortController();
- let active=false,loaded=false,visible=false,loading=false,stopped=false,job,measuredWidth=0,minimum=44;
+ let active=false,loaded=false,visible=false,loading=false,stopped=false,job,lookFrame=0,lookReset=0,lookX=0,lookY=0,measuredWidth=0,minimum=44;
  function outsideSafeArea(){
   const box=wrap.getBoundingClientRect(),nav=document.querySelector('nav.tab'),navBox=nav?.getBoundingClientRect();
   // Use only existing free space above the button; never reserve a blank row or cover another control.
@@ -32,8 +34,19 @@ function mountInviteOki(wrap) {
   return rise<minimum||box.bottom>Math.min(innerHeight,navBox&&nav.getClientRects().length?navBox.top:innerHeight)-8;
  }
  const blocked=()=>document.hidden||!visible||!wrap.isConnected||outsideSafeArea()||
-  [...document.querySelectorAll('[role="dialog"],.modal.on,.overlay.on,.lang-overlay.on,.install-overlay.on,#okiBubble')].some(el=>el.getClientRects().length)||document.body.style.position==='fixed';
- function hide(){peek.hidden=true;wrap.classList.remove('oki-is-peeking');underlay?.classList.remove('okad-oki-underlay-hidden');active=false;}
+  [...document.querySelectorAll('[role="dialog"],dialog[open],#sheet.open,#headerMore:not([hidden]),.modal.on,.overlay.on,.lang-overlay.on,.install-overlay.on,#okiBubble')].some(el=>el.getClientRects().length)||document.body.style.position==='fixed';
+ function clearLook(){cancelAnimationFrame(lookFrame);clearTimeout(lookReset);lookFrame=lookReset=0;lookX=lookY=0;rig.style.setProperty('--oki-look-x','0');rig.style.setProperty('--oki-look-y','0');}
+ function hide(){peek.hidden=true;wrap.classList.remove('oki-is-peeking');underlay?.classList.remove('okad-oki-underlay-hidden');active=false;clearLook();}
+ function follow(e){
+  if(!active||reduce.matches)return;
+  const box=rig.getBoundingClientRect();
+  lookX=Math.max(-1,Math.min(1,(e.clientX-box.left-box.width/2)/140));
+  lookY=Math.max(-1,Math.min(1,(e.clientY-box.top-box.height/2)/140));
+  if(!lookFrame)lookFrame=requestAnimationFrame(()=>{lookFrame=0;if(active){rig.style.setProperty('--oki-look-x',lookX.toFixed(3));rig.style.setProperty('--oki-look-y',lookY.toFixed(3));}});
+  clearTimeout(lookReset);lookReset=setTimeout(clearLook,e.pointerType==='touch'?1000:1600);
+ }
+ document.addEventListener('pointermove',follow,{passive:true,signal:abort.signal});
+ document.addEventListener('pointerdown',follow,{passive:true,signal:abort.signal});
  function snooze(){inviteOkiUntil=0;inviteOkiNext=Date.now()+600000;try{sessionStorage.setItem('ok-ad-oki-snooze',String(inviteOkiNext));}catch{}hide();}
  peek.querySelector('button').addEventListener('click',snooze,{signal:abort.signal});
  wrap.querySelector('.okad-invitation').addEventListener('click',()=>{inviteOkiUntil=0;inviteOkiNext=Date.now()+90000;hide();},{signal:abort.signal});
@@ -50,7 +63,7 @@ function mountInviteOki(wrap) {
      portrait.src='__OKI_INVITATION_ASSET__';
      if(portrait.complete&&portrait.naturalWidth)finish();
     });
-    await portrait.decode();loaded=true;
+    await portrait.decode();rig.style.setProperty('--oki-portrait','url("'+portrait.src+'")');loaded=true;
    }
    if(stopped||blocked())return;
    peek.hidden=false;active=true;wrap.classList.add('oki-is-peeking');underlay?.classList.add('okad-oki-underlay-hidden');
@@ -67,8 +80,8 @@ function mountInviteOki(wrap) {
  const visibility=new IntersectionObserver(entries=>{visible=entries[0].isIntersecting&&entries[0].intersectionRatio>=.95;if(!visible)hide();},{threshold:[0,.95]});
  visibility.observe(wrap);
  document.addEventListener('visibilitychange',()=>{if(document.hidden){inviteOkiUntil=0;hide();}},{signal:abort.signal});
- const overlays=new MutationObserver(()=>{if(active&&blocked())hide();});
- overlays.observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['class','style','open']});
+ const overlays=new MutationObserver(records=>{if(active&&records.some(r=>!peek.contains(r.target))&&blocked())hide();});
+ overlays.observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['class','style','open','hidden']});
  tick();
  inviteOkiCleanup=()=>{stopped=true;clearTimeout(job);abort.abort();visibility.disconnect();overlays.disconnect();hide();};
 }
