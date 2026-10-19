@@ -1,5 +1,19 @@
 # Telegram channel publishing
 
+## Rolling text queue (owner 19 October 2026)
+
+Maintain seven future calendar days of reviewed text posts. The existing daily
+editorial automation is enabled without a COUNT/UNTIL end date and runs in the
+Bangkok morning; it replenishes the queue through a checked GitHub PR. It is
+Telegram-only and does not resume paused TikTok/YouTube publishing. Text slots
+are 09:00, 14:00 and 19:30 Asia/Bangkok. Tuesday and Friday 19:30 belong to the
+separate approved Oki comic task; never fill those slots with ordinary text.
+Never backfill missed slots in a burst. Keep existing IDs and delivery history;
+warn the owner if replenishment fails or the confirmed buffer drops below 48h.
+New text content is reviewed by the editorial task under the owner's ongoing
+authorization; public test messages and automatic ambiguous-send retries remain
+prohibited. A schedule/commit is not evidence that Telegram delivered a post.
+
 Owner-authorized channel: @PattayaOk_Ok. Bot identity must be @Aibotadam_bot.
 Uses the existing TG_BOT_TOKEN and owner TG_CHAT_ID only inside Cloudflare.
 Never change TG_CHAT_ID to the channel: that would redirect payment notifications.
@@ -11,7 +25,8 @@ enable it using /channel_start, inspect permissions using /channel, or stop it
 using /channel_stop in Adam's private chat. Stop cannot undo a send already begun.
 
 channel-posts.mjs contains reviewed posts, explicit publishAt/expiresAt times and
-approval flags. No recurring editorial schedule is implied. The initial intro is
+approval flags. The Worker only delivers reviewed entries; ongoing editorial
+replenishment is provided by the separate daily task above. The initial intro is
 eligible from 19:00 Bangkok on 15 October until 19:00 on 16 October 2026; it will
 not publish unless the owner enables the queue. Every queued post needs a stable
 ID. Both ID and text hash are reserved durably before sending to prevent duplicates
