@@ -1,94 +1,92 @@
 {
-  "verifiedAt": "2026-10-18",
+  "verifiedAt": "2026-10-19",
   "news": [
     {
       "category": "world",
-      "when": "16.10 · 🌍",
-      "href": "https://www.reuters.com/legal/litigation/top-global-climate-science-body-meet-ends-without-deal-review-timeline-2026-10-16/",
-      "ru": "Сессия IPCC в Аддис-Абебе приостановлена без согласования графика следующего климатического доклада. Обсуждение продолжится; решение о сроках ещё не принято.",
-      "en": "The IPCC session in Addis Ababa was suspended without agreement on the next climate assessment's timetable. Discussions will resume; publication dates remain undecided.",
-      "th": "การประชุม IPCC ที่แอดดิสอาบาบาถูกพักโดยยังตกลงกำหนดเผยแพร่รายงานประเมินภูมิอากาศฉบับถัดไปไม่ได้ การหารือจะดำเนินต่อ และยังไม่มีข้อยุติเรื่องวันเผยแพร่",
-      "publishedAt": "2026-10-16",
+      "when": "18.10 · 🌍",
+      "href": "https://www.reuters.com/world/asia-pacific/samsung-use-tsmc-technology-nvidias-next-generation-memory-chips-seoul-newspaper-2026-10-18/",
+      "ru": "Samsung, по данным Seoul Economic Daily, планирует использовать 3-нм процесс TSMC для базовых кристаллов памяти Nvidia NVHBM. Компании публично не подтвердили детали, поэтому это пока сообщение источников, а не объявленный контракт.",
+      "en": "Samsung plans to use TSMC's 3nm process for base dies in Nvidia's NVHBM memory, Seoul Economic Daily reported. The companies have not publicly confirmed the details, so this remains a sourced report rather than an announced contract.",
+      "th": "Seoul Economic Daily รายงานว่า Samsung มีแผนใช้กระบวนการ 3 นาโนเมตรของ TSMC ผลิตฐานชิปสำหรับหน่วยความจำ NVHBM ของ Nvidia บริษัทต่าง ๆ ยังไม่ยืนยันรายละเอียดต่อสาธารณะ จึงยังเป็นรายงานจากแหล่งข่าว ไม่ใช่สัญญาที่ประกาศแล้ว",
+      "publishedAt": "2026-10-18",
       "sources": [
-        "https://www.reuters.com/legal/litigation/top-global-climate-science-body-meet-ends-without-deal-review-timeline-2026-10-16/",
-        "https://climatenetwork.org/2026/10/16/ipcc-ar7-session-suspended-deeply-disappointing-says-can/",
-        "https://www.afp.com/en/un-climate-panel-fails-agree-date-global-warming-update-envoy"
+        "https://www.reuters.com/world/asia-pacific/samsung-use-tsmc-technology-nvidias-next-generation-memory-chips-seoul-newspaper-2026-10-18/",
+        "https://en.sedaily.com/finance/2026/10/18/samsung-to-tap-tsmc-3-nanometer-lines-for-nvidia-custom-hbm"
       ],
       "nonWar": true,
       "discussionEvidence": {
-        "observedAt": "2026-10-18T08:05:00+07:00",
-        "sourceUrl": "https://www.reuters.com/legal/litigation/top-global-climate-science-body-meet-ends-without-deal-review-timeline-2026-10-16/",
-        "summary": "Related public Reddit search snapshots showed +34 votes on a timeline-pressure discussion (https://www.reddit.com/r/AcharyaPrashant_AP/comments/1x7aqyb/why_is_there_a_push_to_postpone_the_ipccs_next/) and +16 on an older 13 October background thread (https://www.reddit.com/r/collapse/comments/1x4o6sm/ipcc_is_under_pressure_to_delay_publication_of/). They are different communities and ages, not equivalent measures of this suspension's popularity; direct pages did not expose comment totals. Reuters and AFP independently reported the outcome; CAN supplies a direct participant statement. Their syndications are not extra independent outlets. IPCC's own homepage returned 403 and was not bypassed. The 16 October source uses the permitted 72-hour window; no global ranking is claimed."
+        "observedAt": "2026-10-19T08:55:00+07:00",
+        "sourceUrl": "https://www.reddit.com/r/hardware/comments/1x9hgyt/samsung_to_use_tsmc_tech_for_nvidias/",
+        "summary": "A public r/hardware search snapshot showed +17 votes on the report at observation time. Techmeme also listed the Reuters/Seoul Economic Daily item (https://www.techmeme.com/261018/p9), indicating specialist pickup, but exposed no comparable universal counter. These signals are platform-specific and do not prove global popularity. Reuters attributes the claim to Seoul Economic Daily and says Samsung, TSMC and Nvidia did not immediately comment; the original outlet is included rather than counting Reuters syndications as independent reports."
+      }
+    },
+    {
+      "category": "thailand",
+      "when": "19.10 · 🇹🇭",
+      "href": "https://www.tmd.go.th/warning-and-events/warning-storm/%E0%B8%9D%E0%B8%99%E0%B8%95%E0%B8%81%E0%B8%96%E0%B8%87%E0%B8%AB%E0%B8%99%E0%B8%81%E0%B8%A1%E0%B8%B2%E0%B8%81%E0%B8%9A%E0%B8%A3%E0%B9%80%E0%B8%A7%E0%B8%93%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B9%84%E0%B8%97%E0%B8%A2-%E0%B8%A1%E0%B8%9C%E0%B8%A5%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%9A%E0%B9%83%E0%B8%99%E0%B8%8A%E0%B8%A7%E0%B8%87%E0%B8%A7%E0%B8%99%E0%B8%97-19-25-%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%84%E0%B8%A1-2569-%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%97-5-264-2569",
+      "ru": "TMD в предупреждении №5 ожидает 19–20 октября сильные дожди на юге и востоке, а 21–25 октября — расширение зоны осадков. Возможны внезапные паводки, оползни и волны выше трёх метров в грозовых районах.",
+      "en": "TMD advisory No.5 forecasts heavy rain in the South and East on 19–20 October, then a wider affected area on 21–25 October. Flash floods, landslides and waves above three metres in thunderstorms are possible.",
+      "th": "ประกาศ TMD ฉบับที่ 5 คาดว่าภาคใต้และภาคตะวันออกจะมีฝนหนัก 19–20 ตุลาคม ก่อนขยายพื้นที่ 21–25 ตุลาคม เสี่ยงน้ำท่วมฉับพลัน ดินถล่ม และคลื่นสูงกว่า 3 เมตรในบริเวณฝนฟ้าคะนอง",
+      "publishedAt": "2026-10-19",
+      "sources": [
+        "https://www.tmd.go.th/warning-and-events/warning-storm/%E0%B8%9D%E0%B8%99%E0%B8%95%E0%B8%81%E0%B8%96%E0%B8%87%E0%B8%AB%E0%B8%99%E0%B8%81%E0%B8%A1%E0%B8%B2%E0%B8%81%E0%B8%9A%E0%B8%A3%E0%B9%80%E0%B8%A7%E0%B8%93%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B9%84%E0%B8%97%E0%B8%A2-%E0%B8%A1%E0%B8%9C%E0%B8%A5%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%9A%E0%B9%83%E0%B8%99%E0%B8%8A%E0%B8%A7%E0%B8%87%E0%B8%A7%E0%B8%99%E0%B8%97-19-25-%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%84%E0%B8%A1-2569-%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%97-5-264-2569"
+      ],
+      "discussionEvidence": {
+        "observedAt": "2026-10-19T08:55:00+07:00",
+        "sourceUrl": "https://www.tmd.go.th/warning-and-events/warning-storm/",
+        "summary": "TMD exposes no public view or comment counter. Its warning index places bulletin No.5 first and shows it superseding No.4 and No.3; the bulletin was issued at 05:00 on 19 October. Selection is based on official recency and broad safety relevance, not a measured national discussion rank. Comparable engagement metrics with the PRD meeting wrap-up are unavailable because the platforms publish different counters."
       }
     },
     {
       "category": "thailand",
       "when": "18.10 · 🇹🇭",
-      "href": "https://www.tmd.go.th/warning-and-events/warning-storm/%E0%B8%9D%E0%B8%99%E0%B8%95%E0%B8%81%E0%B8%AB%E0%B8%99%E0%B8%81%E0%B8%96%E0%B8%87%E0%B8%AB%E0%B8%99%E0%B8%81%E0%B8%A1%E0%B8%B2%E0%B8%81%E0%B8%9A%E0%B8%A3%E0%B9%80%E0%B8%A7%E0%B8%93%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B9%84%E0%B8%97%E0%B8%A2-%E0%B8%A1%E0%B8%9C%E0%B8%A5%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%9A%E0%B9%83%E0%B8%99%E0%B8%8A%E0%B8%A7%E0%B8%87%E0%B8%A7%E0%B8%99%E0%B8%97-18-25-%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%84%E0%B8%A1-2569-%E0%B8%89%E0%B8%9A%E0%B8%9A%E0%B8%97-3-262-2570",
-      "ru": "TMD выпустил предупреждение №3: 18–20 октября сильные дожди возможны на юге и востоке, 21–25 октября зона расширится. Есть риск внезапных паводков и оползней; следите за обновлениями.",
-      "en": "TMD advisory No.3 warns of heavy rain in the South and East on 18–20 October, spreading more widely on 21–25 October. Flash floods and landslides are possible; monitor updates.",
-      "th": "TMD ออกประกาศฉบับที่ 3 เตือนฝนหนักภาคใต้และตะวันออก 18–20 ตุลาคม ก่อนขยายพื้นที่ 21–25 ตุลาคม เสี่ยงน้ำท่วมฉับพลันและดินถล่ม ควรติดตามประกาศล่าสุด",
+      "href": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/551780",
+      "ru": "Таиланд подвёл итоги встреч МВФ и Всемирного банка в Бангкоке. Правительство сообщило о дальнейших работах по раннему предупреждению о паводках, «зелёным» больницам, малым ИИ-инструментам для сельского хозяйства и борьбе с трансграничным финансовым мошенничеством.",
+      "en": "Thailand reviewed outcomes from the IMF–World Bank meetings in Bangkok. The government cited follow-up work on flood early warning, green hospitals, small AI tools for farming and cross-border financial fraud.",
+      "th": "ไทยสรุปผลการประชุม IMF–World Bank ที่กรุงเทพฯ โดยรัฐบาลระบุงานต่อเนื่องเรื่องระบบเตือนภัยน้ำท่วม โรงพยาบาลสีเขียว AI ขนาดเล็กเพื่อการเกษตร และการรับมือการฉ้อโกงทางการเงินข้ามพรมแดน",
       "publishedAt": "2026-10-18",
       "sources": [
-        "https://www.tmd.go.th/warning-and-events/warning-storm/%E0%B8%9D%E0%B8%99%E0%B8%95%E0%B8%81%E0%B8%AB%E0%B8%99%E0%B8%81%E0%B8%96%E0%B8%87%E0%B8%AB%E0%B8%99%E0%B8%81%E0%B8%A1%E0%B8%B2%E0%B8%81%E0%B8%9A%E0%B8%A3%E0%B9%80%E0%B8%A7%E0%B8%93%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B9%84%E0%B8%97%E0%B8%A2-%E0%B8%A1%E0%B8%9C%E0%B8%A5%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%9A%E0%B9%83%E0%B8%99%E0%B8%8A%E0%B8%A7%E0%B8%87%E0%B8%A7%E0%B8%99%E0%B8%97-18-25-%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%84%E0%B8%A1-2569-%E0%B8%89%E0%B8%9A%E0%B8%9A%E0%B8%97-3-262-2570",
-        "https://en.thairath.co.th/news/local/2966715"
+        "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/551780",
+        "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/551830"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-18T08:05:00+07:00",
-        "sourceUrl": "https://www.tmd.go.th/warning-and-events/warning-storm/%E0%B8%9D%E0%B8%99%E0%B8%95%E0%B8%81%E0%B8%AB%E0%B8%99%E0%B8%81%E0%B8%96%E0%B8%87%E0%B8%AB%E0%B8%99%E0%B8%81%E0%B8%A1%E0%B8%B2%E0%B8%81%E0%B8%9A%E0%B8%A3%E0%B9%80%E0%B8%A7%E0%B8%93%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B9%84%E0%B8%97%E0%B8%A2-%E0%B8%A1%E0%B8%9C%E0%B8%A5%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%9A%E0%B9%83%E0%B8%99%E0%B8%8A%E0%B8%A7%E0%B8%87%E0%B8%A7%E0%B8%99%E0%B8%97-18-25-%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%84%E0%B8%A1-2569-%E0%B8%89%E0%B8%9A%E0%B8%9A%E0%B8%97-3-262-2570",
-        "summary": "No comparable public view/comment totals were exposed on TMD's advisory or PDMO's low-carbon announcement (https://www.pdmo.go.th/en/press-conference/3972); neither page establishes a popularity ranking. Thairath independently covered the same 18–25 October weather episode on 17 October (https://en.thairath.co.th/news/local/2966715), although its article refers to earlier bulletin No.1. This digest uses the newer official No.3, issued 18 October at 05:00, rather than recycling the old bulletin date. Selection reflects current safety relevance, with limited cross-outlet evidence, not measured national discussion."
-      }
-    },
-    {
-      "category": "thailand",
-      "when": "17.10 · 🇹🇭",
-      "href": "https://www.pdmo.go.th/en/press-conference/3972",
-      "ru": "Таиланд и Всемирный банк представили направления сотрудничества по низкоуглеродным городам, энергоэффективности и рынку углеродных кредитов. Инициативы рассчитаны на привлечение частного капитала; будущий эффект ещё предстоит оценить.",
-      "en": "Thailand and the World Bank outlined cooperation on low-carbon cities, energy efficiency and carbon-credit markets. The initiatives aim to attract private capital; their eventual impact remains to be assessed.",
-      "th": "ไทยและธนาคารโลกนำเสนอความร่วมมือด้านเมืองคาร์บอนต่ำ ประสิทธิภาพพลังงาน และตลาดคาร์บอนเครดิต โดยมุ่งดึงเงินทุนเอกชน ผลลัพธ์ในอนาคตยังต้องติดตาม",
-      "publishedAt": "2026-10-17",
-      "sources": [
-        "https://www.pdmo.go.th/en/press-conference/3972",
-        "https://www.nationthailand.com/sustaination/40072428"
-      ],
-      "discussionEvidence": {
-        "observedAt": "2026-10-18T08:05:00+07:00",
-        "sourceUrl": "https://www.pdmo.go.th/en/press-conference/3972",
-        "summary": "Comparable public engagement counters were unavailable for this announcement and the TMD selection. The Nation's signed 17 October report independently covers the package (https://www.nationthailand.com/sustaination/40072428); Money & Banking also reports it (https://en.moneyandbanking.co.th/2026/279718/), but may draw on the same official briefing and is not counted as another independent confirmation. PDMO is the government primary source. This is cross-outlet attention, not a measured national discussion ranking; aims are not presented as achieved economic outcomes."
+        "observedAt": "2026-10-19T08:55:00+07:00",
+        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/551780",
+        "summary": "PRD displayed 170 views, versus 107 views on its same-day general meeting wrap-up (https://thailand.prd.go.th/en/content/category/detail/id/48/iid/551830). Both pages expose a comment form but no public comment total. These same-platform counters are a limited comparison, not unique-user data or a national popularity rank. Both sources are government summaries of the same meeting week, so they are not independent corroboration; initiatives are attributed to the government and not presented as completed outcomes."
       }
     },
     {
       "category": "pattaya",
-      "when": "17.10 · Pattaya",
-      "href": "https://www.pattayamail.com/news/pattaya-clears-cones-and-metal-barriers-from-nightlife-streets-to-reclaim-public-parking-spaces-568752",
-      "ru": "Муниципальные сотрудники Паттайи убирают конусы и металлические заграждения, которыми занимают общественные парковочные места возле ночных заведений. Это продолжение контроля, а не новое правило. О препятствиях можно сообщить городу по номеру 1337.",
-      "en": "Pattaya municipal officers are removing cones and metal barriers used to reserve public parking near nightlife venues. This continues existing enforcement, rather than introducing a new rule. Obstructions can be reported to the city on 1337.",
-      "th": "เจ้าหน้าที่เทศกิจพัทยาเก็บกรวยและแผงเหล็กที่ใช้จองที่จอดรถสาธารณะใกล้สถานบันเทิง เป็นการบังคับใช้แนวทางเดิม ไม่ใช่กฎใหม่ แจ้งสิ่งกีดขวางได้ที่สายด่วนเมือง 1337",
-      "publishedAt": "2026-10-17",
+      "when": "18.10 · Pattaya",
+      "href": "https://www.pattayamail.com/thailandnews/u-tapao-rayong-pattaya-airport-prepares-for-winter-travel-season-with-new-aircraft-arrival-568873",
+      "ru": "Аэропорт Утапао принял второй Airbus A330-200 авиакомпании SiamWings перед зимним сезоном. Аэропорт заявил о готовности поддержать будущие операции; новые маршруты в материале не объявлены.",
+      "en": "U-Tapao welcomed SiamWings' second Airbus A330-200 ahead of the winter season. The airport said it was ready to support future operations; the report did not announce new routes.",
+      "th": "สนามบินอู่ตะเภาต้อนรับ Airbus A330-200 ลำที่สองของ SiamWings ก่อนฤดูหนาว สนามบินระบุว่าพร้อมสนับสนุนการดำเนินงานในอนาคต แต่ข่าวยังไม่ได้ประกาศเส้นทางบินใหม่",
+      "publishedAt": "2026-10-18",
       "sources": [
-        "https://www.pattayamail.com/news/pattaya-clears-cones-and-metal-barriers-from-nightlife-streets-to-reclaim-public-parking-spaces-568752"
+        "https://www.pattayamail.com/thailandnews/u-tapao-rayong-pattaya-airport-prepares-for-winter-travel-season-with-new-aircraft-arrival-568873"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-18T08:05:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/pattaya-clears-cones-and-metal-barriers-from-nightlife-streets-to-reclaim-public-parking-spaces-568752",
-        "summary": "Pattaya Mail displayed 1,619 views and 0 comments, versus 893 views and 0 comments for the same-day sports-project review (https://www.pattayamail.com/news/pattaya-reviews-progress-on-football-stadium-and-youth-sports-center-projects-568719). Its blue-vest story had 1,673 views and 0 comments (https://www.pattayamail.com/news/pattaya-switches-5281-motorcycle-taxi-drivers-from-orange-to-blue-vests-568761), but repeats yesterday's selected event and is excluded. These are same-platform counters, not unique users or a citywide rank; ages and exposure differ. Search found attributed aggregations, not verified independent reporting of this specific operation."
+        "observedAt": "2026-10-19T08:55:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/thailandnews/u-tapao-rayong-pattaya-airport-prepares-for-winter-travel-season-with-new-aircraft-arrival-568873",
+        "summary": "Pattaya Mail displayed 792 views and 0 comments, versus 218 views and 0 comments for the 19 October sanitation feature (https://www.pattayamail.com/news/pattayas-sanitation-workers-work-tirelessly-to-keep-the-city-clean-568956). Same-platform counters allow only a limited comparison: the airport article is older, exposure differs and views are not unique users. No independent report of this exact aircraft arrival was verified, so no citywide discussion rank is claimed."
       }
     },
     {
       "category": "pattaya",
-      "when": "17.10 · Pattaya",
-      "href": "https://www.pattayamail.com/news/pattaya-reviews-progress-on-football-stadium-and-youth-sports-center-projects-568719",
-      "ru": "Паттайя рассмотрела ход работ на футбольном стадионе Eastern Sports Centre и в Молодёжном спортивном центре. Материал от 17 октября описывает заседание 15 октября; о завершении объектов или дате открытия не сообщается.",
-      "en": "Pattaya reviewed work on the Eastern Sports Centre football stadium and Youth Sports Centre. The 17 October report covers a 15 October meeting; it does not announce completion or an opening date.",
-      "th": "พัทยาติดตามงานสนามฟุตบอลศูนย์กีฬาแห่งภาคตะวันออกและศูนย์กีฬาเยาวชน ข่าวเผยแพร่ 17 ตุลาคมกล่าวถึงการประชุม 15 ตุลาคม โดยยังไม่ได้ประกาศว่างานเสร็จหรือกำหนดวันเปิด",
-      "publishedAt": "2026-10-17",
+      "when": "19.10 · Pattaya",
+      "href": "https://www.pattayamail.com/news/pattayas-sanitation-workers-work-tirelessly-to-keep-the-city-clean-568956",
+      "ru": "Санитарные бригады Паттайи ежедневно убирают улицы, тротуары, общественные зоны и каналы, в том числе в дождь и праздники. Жителей и гостей просят пользоваться урнами и не оставлять мусор.",
+      "en": "Pattaya sanitation crews clean streets, pavements, public spaces and canals daily, including during rain and holidays. Residents and visitors are asked to use bins and avoid littering.",
+      "th": "ทีมงานรักษาความสะอาดพัทยาดูแลถนน ทางเท้า พื้นที่สาธารณะ และคลองทุกวัน รวมถึงช่วงฝนตกและวันหยุด เมืองขอให้ประชาชนและนักท่องเที่ยวทิ้งขยะลงถังและไม่ทิ้งเรี่ยราด",
+      "publishedAt": "2026-10-19",
       "sources": [
-        "https://www.pattayamail.com/news/pattaya-reviews-progress-on-football-stadium-and-youth-sports-center-projects-568719"
+        "https://www.pattayamail.com/news/pattayas-sanitation-workers-work-tirelessly-to-keep-the-city-clean-568956"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-18T08:05:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/pattaya-reviews-progress-on-football-stadium-and-youth-sports-center-projects-568719",
-        "summary": "Pattaya Mail displayed 893 views and 0 comments, below the parking-enforcement report's 1,619 views and 0 comments (https://www.pattayamail.com/news/pattaya-clears-cones-and-metal-barriers-from-nightlife-streets-to-reclaim-public-parking-spaces-568752). Same-platform counts allow a limited comparison only; no citywide rank is claimed. This civic-project item is selected for community relevance, not as the most-read local story. Verified broad independent coverage was unavailable. Publication is 17 October; the underlying meeting was 15 October, explicitly disclosed rather than presented as a new 17 October event."
+        "observedAt": "2026-10-19T08:55:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/pattayas-sanitation-workers-work-tirelessly-to-keep-the-city-clean-568956",
+        "summary": "Pattaya Mail displayed 218 views and 0 comments, below the U-Tapao article's 792 views and 0 comments (https://www.pattayamail.com/thailandnews/u-tapao-rayong-pattaya-airport-prepares-for-winter-travel-season-with-new-aircraft-arrival-568873). This newer item is selected for direct civic relevance, not because it led the site's counters. Ages and exposure differ; no broad independent coverage of this routine municipal work was verified."
       }
     }
   ],
@@ -161,7 +159,30 @@
         "https://th.china-embassy.gov.cn/sgxw/202610/t20261016_12042063.html"
       ],
       "verifiedAt": "2026-10-18"
+    },
+    {
+      "id": "face-scan-for-cash-thailand-2026-10",
+      "title": {
+        "ru": "Деньги за скан лица и данные удостоверения",
+        "en": "Cash for a face scan and ID data",
+        "th": "เงินแลกสแกนใบหน้าและข้อมูลบัตร"
+      },
+      "text": {
+        "ru": "Киберполиция 17 октября предупредила: мошенники могут прикрываться государственной выплатой и предлагать деньги за скан лица и данные удостоверения личности. Эти данные могут использовать для открытия подставных счетов или заявок на кредит.",
+        "en": "Cyber Police warned on 17 October that scammers may invoke a government benefit and offer cash for a face scan and ID details. The data may be used to open mule accounts or apply for loans.",
+        "th": "ตำรวจไซเบอร์เตือนเมื่อ 17 ตุลาคมว่า มิจฉาชีพอาจอ้างโครงการสวัสดิการรัฐและเสนอเงินแลกกับการสแกนใบหน้าและข้อมูลบัตร ซึ่งอาจถูกนำไปเปิดบัญชีม้าหรือสมัครสินเชื่อ"
+      },
+      "do": {
+        "ru": "Не сканируйте лицо и не передавайте удостоверение личности в обмен на деньги или подарок. Проверяйте льготы напрямую у госоргана; при подозрении прекратите контакт.",
+        "en": "Do not provide a face scan or ID in exchange for cash or gifts. Verify benefits directly with the government agency and end suspicious contact.",
+        "th": "อย่าสแกนใบหน้าหรือมอบข้อมูลบัตรเพื่อแลกเงินหรือของฟรี ตรวจสอบสิทธิ์กับหน่วยงานรัฐโดยตรง และหยุดติดต่อเมื่อพบพิรุธ"
+      },
+      "status": "official-warning",
+      "sources": [
+        "https://www.police9.go.th/%E0%B8%95%E0%B8%B3%E0%B8%A3%E0%B8%A7%E0%B8%88%E0%B9%84%E0%B8%8B%E0%B9%80%E0%B8%9A%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%80%E0%B8%95%E0%B8%B7%E0%B8%AD%E0%B8%99-2/"
+      ],
+      "verifiedAt": "2026-10-19"
     }
   ],
-  "selection": "Exactly 1 non-war world story, 2 Thailand stories and 2 Pattaya stories reviewed 2026-10-18 Asia/Bangkok. Thailand and Pattaya source publication dates are 17–18 October. The world outcome was reported late 16 October UTC (early 17 October Bangkok), within the permitted 72-hour window. The sports story was published 17 October but concerns a 15 October meeting; both dates are disclosed. Same-platform Pattaya Mail view/comment counters are compared with URLs and observation time. Related Reddit search signals are not treated as equivalent global measures; qualitative independent coverage and its limits are explicit. The already-selected blue-vest and Bali Hai stories are not recycled merely because of later republication. Official TMD bulletin No.3, issued 18 October 05:00, supersedes the earlier bulletin. New scam card: the Chinese embassy's 16 October official warning to its citizens about high-pay job, investment and filming-invitation lures, independently reported by Lianhe Zaobao. Source date is explicit; no victim details, unverified sums or findings of guilt are published. Both existing active scam cards and original verification dates remain unchanged. Only content/editorial.json changes. No Telegram news sending. Independent corroboration: https://www.zaobao.com.sg/news/china/story20261017-9851179. The new warning is deliberately concise to fit the existing size budget; no budget or unrelated file is changed."
+  "selection": "Exactly 1 non-war world story, 2 Thailand stories and 2 Pattaya stories reviewed 2026-10-19 Asia/Bangkok. All source publication dates are 18–19 October. Public metrics are compared only within the same platform and observed at 08:55 local time: Pattaya Mail 792/0 versus 218/0; PRD 170 versus 107; a Reddit search snapshot showed +17 on the chip report. Platform ages and exposure differ, and no global, national or citywide popularity rank is claimed. TMD bulletin No.5 issued 19 October at 05:00 supersedes earlier bulletins. The chip item remains explicitly attributed and unconfirmed by the companies. New scam card: an official 17 October Cyber Police warning about cash-for-face-scan lures; it omits personal identifiers and loss figures and gives practical protection. Three existing active scam cards and their original dates remain unchanged. Only content/editorial.json changes. No Telegram news sending."
 }
