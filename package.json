@@ -12,5 +12,8 @@
     "check": "node scripts/verify-project.mjs && node scripts/verify-quality.mjs",
     "test:mobile": "playwright test",
     "audit": "lhci autorun"
+  },
+  "overrides": {
+    "tmp": "0.2.7"
   }
 }
