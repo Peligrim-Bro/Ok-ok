@@ -6,8 +6,10 @@ Maintain seven future calendar days of reviewed text posts. The existing daily
 editorial automation is enabled without a COUNT/UNTIL end date and runs in the
 Bangkok morning; it replenishes the queue through a checked GitHub PR. It is
 Telegram-only and does not resume paused TikTok/YouTube publishing. Text slots
-are 09:00, 14:00 and 19:30 Asia/Bangkok. Tuesday and Friday 19:30 belong to the
-separate approved Oki comic task; never fill those slots with ordinary text.
+are 09:00, 14:00 and 19:30 Asia/Bangkok. The owner's superseding 19 October
+decision reserves 20:30 daily for the separate Oki comic task. Tuesday and Friday
+19:30 are ordinary text slots when empty. Preserve existing approved/sent comics
+at their original slots; never replace them or fill 20:30 with text.
 Never backfill missed slots in a burst. Keep existing IDs and delivery history;
 warn the owner if replenishment fails or the confirmed buffer drops below 48h.
 New text content is reviewed by the editorial task under the owner's ongoing
