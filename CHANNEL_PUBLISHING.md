@@ -6,8 +6,8 @@ Maintain seven future calendar days of reviewed text posts. The existing daily
 editorial automation is enabled without a COUNT/UNTIL end date and runs in the
 Bangkok morning; it replenishes the queue through a checked GitHub PR. It is
 Telegram-only and does not resume paused TikTok/YouTube publishing. Text slots
-are 09:00, 14:00 and 19:30 Asia/Bangkok. Tuesday and Friday 19:30 belong to the
-separate approved Oki comic task; never fill those slots with ordinary text.
+are 09:00, 14:00 and 19:30 Asia/Bangkok every day. The additional daily Oki
+comic has its separate 20:30 slot and never replaces these text posts.
 Never backfill missed slots in a burst. Keep existing IDs and delivery history;
 warn the owner if replenishment fails or the confirmed buffer drops below 48h.
 New text content is reviewed by the editorial task under the owner's ongoing
@@ -39,10 +39,18 @@ permission check still requires the owner command after the verified release.
 New videos require owner approval; the four videos supplied on 15 October are
 already published on TikTok and must not be automatically reposted.
 
-## Reviewed comics (owner 16 October 2026)
+## Reviewed comics (owner 19 October 2026; reaffirmed 20 October)
 
-The owner approved the comic rubric twice a week, with Russian dialogue, varied
-panel sizes and Oki's exact approved reference. The first episode replaces the
+Publish one additional new Oki comic every day at 20:30 Asia/Bangkok, with Russian
+dialogue, varied panel sizes and Oki's exact approved reference. This supersedes
+the former Tuesday/Friday schedule. Preserve an already approved/sent comic for
+the same day; never add a second or resend an old slot under a new ID. If 20:30
+is occupied, preserve that post and use the nearest later free slot at least
+30 minutes after it. New daily IDs are stable and unique; expiresAt is three
+hours after publishAt. Ordinary 09:00, 14:00 and 19:30 text slots remain.
+Until 1 November 2026 publish only to Telegram; do not resume TikTok, YouTube or
+Metricool. No repeated routine owner approval is required for this comic task.
+Each page must be reviewed before entering the queue. The first episode replaces the
 16 October 19:30 text slot, retaining its ID so an already-delivered slot cannot
 be sent again. Optional `photo` uses only versioned images at
 https://www.ok-ok.click/assets/channel/. Captions must fit 1024 characters.
