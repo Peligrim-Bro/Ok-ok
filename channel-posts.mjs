@@ -228,38 +228,96 @@ export const POSTS = [{
 }
 ,
 {
-  id: 'okok-english-takeaway-20261020',
-  approved: true,
-  publishAt: '2026-10-20T19:30:00+07:00',
-  expiresAt: '2026-10-20T22:30:00+07:00',
-  text: '🥡 Поесть здесь или взять с собой?\n\n“For here, please.” — «Здесь, пожалуйста».\n“To take away, please.” — «С собой, пожалуйста».\n\nДве короткие фразы для заказа без длинного объяснения. Можно просто показать нужную на экране.\n\nА место для следующего обеда можно присмотреть здесь:\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=english_takeaway_20261020'
+  "id": "okok-oki-comic-002-photo-memory-20261020",
+  "approved": true,
+  "publishAt": "2026-10-20T20:30:00+07:00",
+  "expiresAt": "2026-10-20T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-002-photo-memory-20261020.jpg",
+  "text": "📷 Приключения Оки №2 — «Фото на память»\n\nОки хотел сфотографировать море. Но у одного местного жителя были свои планы на этот кадр 🦀😄\n\nВымышленное приключение маскота: история и изображение созданы с помощью ИИ. Это не рассказ о реальном посещении и не изображение конкретного пляжа.\n\nЗа идеями для прогулок заглядывай на OK-OK.click 🌴\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_photo_memory_002_20261020"
+}
+,
+{
+  "id": "okok-oki-comic-003-mango-plan-20261021",
+  "approved": true,
+  "publishAt": "2026-10-21T20:30:00+07:00",
+  "expiresAt": "2026-10-21T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-003-mango-plan-20261021.jpg",
+  "text": "🌴 Приключения Оки №3 — «Манговый план»\n\nОки заказал самое большое манго. Но размер оказался с сюрпризом 🥭\n\nВымышленное приключение маскота. История и изображение созданы с помощью ИИ; нарисованные места не являются изображениями конкретных заведений.\n\nИдеи для прогулок — на OK-OK.click\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_mango_plan_003_20261021"
 },
 {
-  id: 'okok-photo-before-bite-20261023',
-  approved: true,
-  publishAt: '2026-10-23T19:30:00+07:00',
-  expiresAt: '2026-10-23T22:30:00+07:00',
-  text: '📸 Понравилось блюдо, но название забылось?\n\nСфотографируй не только тарелку, но и соответствующую строку меню. Добавь в заметку название места и что хотелось бы изменить в следующий раз: меньше льда, другой гарнир или соус отдельно.\n\nПолучится маленькая личная шпаргалка, а не ещё одно фото еды без подписи.\n\nНовые идеи для своей коллекции:\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=food_note_20261023'
+  "id": "okok-oki-comic-004-local-rain-20261022",
+  "approved": true,
+  "publishAt": "2026-10-22T20:30:00+07:00",
+  "expiresAt": "2026-10-22T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-004-local-rain-20261022.jpg",
+  "text": "🌴 Приключения Оки №4 — «Дождь по расписанию»\n\nОки приготовился к ливню. Прогноз оказался очень местным ☂️\n\nВымышленное приключение маскота. История и изображение созданы с помощью ИИ; нарисованные места не являются изображениями конкретных заведений.\n\nИдеи для прогулок — на OK-OK.click\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_local_rain_004_20261022"
 },
 {
-  id: 'okok-english-separate-sauce-20261027',
-  approved: true,
-  publishAt: '2026-10-27T09:00:00+07:00',
-  expiresAt: '2026-10-27T12:00:00+07:00',
-  text: '🗣 Соус отдельно — коротко и понятно\n\n“Could I have the sauce on the side, please?”\n«Можно соус отдельно, пожалуйста?»\n\nТак можно попросить подать соус отдельно от блюда. Это просьба, а не обещание, что кухня сможет изменить подачу: дождись ответа перед заказом.\n\nСохрани фразу для следующего обеда. Места для прогулки и еды — на https://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=sauce_on_side_20261027'
+  "id": "okok-oki-comic-005-coconut-orchestra-20261023",
+  "approved": true,
+  "publishAt": "2026-10-23T20:30:00+07:00",
+  "expiresAt": "2026-10-23T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-005-coconut-orchestra-20261023.jpg",
+  "text": "🌴 Приключения Оки №5 — «Кокосовый оркестр»\n\nКогда хочется музыки, пляж сам собирает оркестр 🥥🎶\n\nВымышленное приключение маскота. История и изображение созданы с помощью ИИ; нарисованные места не являются изображениями конкретных заведений.\n\nИдеи для прогулок — на OK-OK.click\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_coconut_orchestra_005_20261023"
 },
 {
-  id: 'okok-walk-photo-game-20261027',
-  approved: true,
-  publishAt: '2026-10-27T14:00:00+07:00',
-  expiresAt: '2026-10-27T17:00:00+07:00',
-  text: '🟡 Прогулка с маленьким заданием\n\nВыбери один цвет и попробуй заметить пять деталей этого цвета по дороге: цветок, дверь, лодку, чашку или узор на стене.\n\nНичего покупать и никуда специально ехать не нужно. Можно устроить мини-фотоохоту вдвоём и в конце сравнить находки. Снимай с безопасного места, не выходя ради кадра на дорогу.\n\nКакой цвет выберешь?\n\nОтправная точка для прогулки: https://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=colour_walk_20261027'
+  "id": "okok-oki-comic-006-sand-tracks-20261024",
+  "approved": true,
+  "publishAt": "2026-10-24T20:30:00+07:00",
+  "expiresAt": "2026-10-24T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-006-sand-tracks-20261024.jpg",
+  "text": "🌴 Приключения Оки №6 — «Следы на песке»\n\nОки придумал навигацию на пляже. У краба нашёлся свой маршрут 🦀\n\nВымышленное приключение маскота. История и изображение созданы с помощью ИИ; нарисованные места не являются изображениями конкретных заведений.\n\nИдеи для прогулок — на OK-OK.click\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_sand_tracks_006_20261024"
 },
 {
-  id: 'okok-meeting-point-20261027',
-  approved: true,
-  publishAt: '2026-10-27T19:30:00+07:00',
-  expiresAt: '2026-10-27T22:30:00+07:00',
-  text: '🤝 «Встретимся у пляжа» — иногда слишком большой адрес\n\nДля встречи удобнее отправить одну точку на карте, фото заметного ориентира и уточнение, с какой стороны ждать. Если у места несколько входов, договоритесь об одном заранее.\n\n“We’re waiting by the main entrance.”\n«Мы ждём у главного входа».\n\nМеньше поисков друг друга — больше времени вместе 🌴\n\nИдеи, куда встретиться и пойти дальше:\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=meeting_point_20261027'
+  "id": "okok-oki-comic-007-suitcase-20261025",
+  "approved": true,
+  "publishAt": "2026-10-25T20:30:00+07:00",
+  "expiresAt": "2026-10-25T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-007-suitcase-20261025.jpg",
+  "text": "🌴 Приключения Оки №7 — «Чемодан впечатлений»\n\nУместить отпуск в чемодан непросто. Особенно если у утки свои планы 🧳\n\nВымышленное приключение маскота. История и изображение созданы с помощью ИИ; нарисованные места не являются изображениями конкретных заведений.\n\nИдеи для прогулок — на OK-OK.click\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_suitcase_007_20261025"
+},
+{
+  "id": "okok-oki-comic-008-spicy-question-20261026",
+  "approved": true,
+  "publishAt": "2026-10-26T20:30:00+07:00",
+  "expiresAt": "2026-10-26T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-008-spicy-question-20261026.jpg",
+  "text": "🌴 Приключения Оки №8 — «Острый вопрос»\n\nОки выбирает обед и узнаёт кое-что о смелости 🌶️\n\nВымышленное приключение маскота. История и изображение созданы с помощью ИИ; нарисованные места не являются изображениями конкретных заведений.\n\nИдеи для прогулок — на OK-OK.click\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_spicy_question_008_20261026"
+},
+{
+  "id": "okok-oki-comic-009-hammock-20261027",
+  "approved": true,
+  "publishAt": "2026-10-27T20:30:00+07:00",
+  "expiresAt": "2026-10-27T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-009-hammock-20261027.jpg",
+  "text": "🌴 Приключения Оки №9 — «Гамак для двоих»\n\nОки нашёл идеальное место для отдыха. Но рыжий кот пришёл первым 🐈\n\nВымышленное приключение маскота. История и изображение созданы с помощью ИИ; нарисованные места не являются изображениями конкретных заведений.\n\nИдеи для прогулок — на OK-OK.click\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_hammock_009_20261027"
+},
+{
+  "id": "okok-photo-before-bite-20261023",
+  "approved": true,
+  "publishAt": "2026-10-23T19:30:00+07:00",
+  "expiresAt": "2026-10-23T22:30:00+07:00",
+  "text": "📸 Понравилось блюдо, но название забылось?\n\nСфотографируй не только тарелку, но и соответствующую строку меню. Добавь в заметку название места и что хотелось бы изменить в следующий раз: меньше льда, другой гарнир или соус отдельно.\n\nПолучится маленькая личная шпаргалка, а не ещё одно фото еды без подписи.\n\nНовые идеи для своей коллекции:\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=food_note_20261023"
+},
+{
+  "id": "okok-english-separate-sauce-20261027",
+  "approved": true,
+  "publishAt": "2026-10-27T09:00:00+07:00",
+  "expiresAt": "2026-10-27T12:00:00+07:00",
+  "text": "🗣 Соус отдельно — коротко и понятно\n\n“Could I have the sauce on the side, please?”\n«Можно соус отдельно, пожалуйста?»\n\nТак можно попросить подать соус отдельно от блюда. Это просьба, а не обещание, что кухня сможет изменить подачу: дождись ответа перед заказом.\n\nСохрани фразу для следующего обеда. Места для прогулки и еды — на https://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=sauce_on_side_20261027"
+},
+{
+  "id": "okok-walk-photo-game-20261027",
+  "approved": true,
+  "publishAt": "2026-10-27T14:00:00+07:00",
+  "expiresAt": "2026-10-27T17:00:00+07:00",
+  "text": "🟡 Прогулка с маленьким заданием\n\nВыбери один цвет и попробуй заметить пять деталей этого цвета по дороге: цветок, дверь, лодку, чашку или узор на стене.\n\nНичего покупать и никуда специально ехать не нужно. Можно устроить мини-фотоохоту вдвоём и в конце сравнить находки. Снимай с безопасного места, не выходя ради кадра на дорогу.\n\nКакой цвет выберешь?\n\nОтправная точка для прогулки: https://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=colour_walk_20261027"
+},
+{
+  "id": "okok-meeting-point-20261027",
+  "approved": true,
+  "publishAt": "2026-10-27T19:30:00+07:00",
+  "expiresAt": "2026-10-27T22:30:00+07:00",
+  "text": "🤝 «Встретимся у пляжа» — иногда слишком большой адрес\n\nДля встречи удобнее отправить одну точку на карте, фото заметного ориентира и уточнение, с какой стороны ждать. Если у места несколько входов, договоритесь об одном заранее.\n\n“We’re waiting by the main entrance.”\n«Мы ждём у главного входа».\n\nМеньше поисков друг друга — больше времени вместе 🌴\n\nИдеи, куда встретиться и пойти дальше:\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=meeting_point_20261027"
 }
 ];

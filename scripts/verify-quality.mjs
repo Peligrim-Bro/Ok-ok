@@ -46,3 +46,8 @@ assert(!html.includes('labels.some(x=>t.includes(x))') || html.includes('documen
 assert(home.indexOf('id="okAds"')>home.indexOf('data-tours="1"'),'Async ads must not shift primary home actions');
 assert(html.includes('family=Manrope:wght@400;500;600;700;800&display=optional'),'Loading font strategy changed');
 console.log('PASS: primary home actions stay ahead of the async ad board and optional font loading');
+
+// Prevent reintroducing retired Netlify runtime dependencies into Cloudflare builds.
+const packageManifest=JSON.parse(readFileSync('package.json','utf8'));
+assert(!Object.keys(packageManifest.scripts||{}).some(k=>/netlify/i.test(k)),'Legacy Netlify npm script returned');
+assert(!Object.keys(packageManifest.dependencies||{}).some(k=>/netlify/i.test(k)),'Legacy Netlify runtime dependency remains; migrate or explicitly justify it');

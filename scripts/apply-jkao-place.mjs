@@ -17,7 +17,7 @@ mkdirSync('site/public/assets/data',{recursive:true});writeFileSync('site/public
 const path='site/public/index.html';let html=readFileSync(path,'utf8');
 const replace=(from,to)=>{assert(html.includes(from),'J-Kao anchor missing');html=html.replaceAll(from,to);};
 replace('<script src="config.js?v=99"></script>','<script src="config.js?v=99"></script><script src="'+asset+'"></script>');
-replace('    const WHO = {','    if(window.OKOK_JKAO_PLACE){const p=window.OKOK_JKAO_PLACE;if(!PLACES.some(x=>x.id===p.id))PLACES.push(p);GEO[p.id]=p.coordinates;}\n    const WHO = {');
+replace('    const WHO = {','    if(window.OKOK_JKAO_PLACE){const p=window.OKOK_JKAO_PLACE;if(!PLACES.some(x=>x.id===p.id))PLACES.unshift(p);GEO[p.id]=p.coordinates;}\n    const WHO = {');
 replace('const flag = p.badge === "premium"','const flag = p.firstVisitLabel ? `<span class="flag check">${L(p.firstVisitLabel)}</span>` : p.badge === "premium"');
 replace('["senate","ex24","musselana-shabu"].includes(p.id) ? "" : `<span class="stars">','(["senate","ex24","musselana-shabu"].includes(p.id)||p.rating==null) ? "" : `<span class="stars">');
 replace('${({ru:"Примерный график",en:"Approximate hours",th:"เวลาโดยประมาณ"})[lang]}','${p.statusLabel ? L(p.statusLabel) : ({ru:"Примерный график",en:"Approximate hours",th:"เวลาโดยประมาณ"})[lang]}');
