@@ -3,9 +3,6 @@
   "private": true,
   "version": "71.0.0",
   "description": "PattayaOK static PWA + paid ads function",
-  "dependencies": {
-    "@netlify/blobs": "^8.1.0"
-  },
   "devDependencies": {
     "@lhci/cli": "0.15.1",
     "@playwright/test": "1.63.0"
