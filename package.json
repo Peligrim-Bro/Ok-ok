@@ -14,6 +14,7 @@
     "build": "node gloss-build.mjs && node telegram-build.mjs",
     "check": "node scripts/verify-project.mjs && node scripts/verify-quality.mjs",
     "test:mobile": "playwright test",
-    "audit": "lhci autorun"
+    "audit": "lhci autorun",
+    "optimize:images": "node scripts/optimize-images.mjs"
   }
 }
