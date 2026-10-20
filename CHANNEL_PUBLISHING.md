@@ -50,6 +50,16 @@ is occupied, preserve that post and use the nearest later free slot at least
 hours after publishAt. Ordinary 09:00, 14:00 and 19:30 text slots remain.
 Until 1 November 2026 publish only to Telegram; do not resume TikTok, YouTube or
 Metricool. No repeated routine owner approval is required for this comic task.
+Owner decision 20 October 2026: keep at least seven upcoming calendar days of
+finished, individually reviewed comic pages ready in the queue. The existing
+daily 10:00 Asia/Bangkok comic task replenishes missing future 20:30 slots;
+preserve existing episodes and delivery records. Warn if confirmed ready
+coverage falls below 48 hours. Scripts or unmerged PRs are not ready coverage.
+The seven-page buffer adds about 4.1 MB of JPEG assets to the former 27.8 MB
+bundle. The total static budget is 33 MB for this owner-requested expansion;
+HTML, gzip and JavaScript budgets remain unchanged. Comics are fetched only
+for channel delivery, never loaded by the website UI or added to its precache.
+Expired later episodes remain in Git but are excluded from the public build.
 Each page must be reviewed before entering the queue. The first episode replaces the
 16 October 19:30 text slot, retaining its ID so an already-delivered slot cannot
 be sent again. Optional `photo` uses only versioned images at
