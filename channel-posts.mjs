@@ -235,4 +235,61 @@ export const POSTS = [{
   "photo": "https://www.ok-ok.click/assets/channel/oki-comic-002-photo-memory-20261020.jpg",
   "text": "📷 Приключения Оки №2 — «Фото на память»\n\nОки хотел сфотографировать море. Но у одного местного жителя были свои планы на этот кадр 🦀😄\n\nВымышленное приключение маскота: история и изображение созданы с помощью ИИ. Это не рассказ о реальном посещении и не изображение конкретного пляжа.\n\nЗа идеями для прогулок заглядывай на OK-OK.click 🌴\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_photo_memory_002_20261020"
 }
+,
+{
+  "id": "okok-oki-comic-003-mango-plan-20261021",
+  "approved": true,
+  "publishAt": "2026-10-21T20:30:00+07:00",
+  "expiresAt": "2026-10-21T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-003-mango-plan-20261021.jpg",
+  "text": "🌴 Приключения Оки №3 — «Манговый план»\n\nОки заказал самое большое манго. Но размер оказался с сюрпризом 🥭\n\nВымышленное приключение маскота. История и изображение созданы с помощью ИИ; нарисованные места не являются изображениями конкретных заведений.\n\nИдеи для прогулок — на OK-OK.click\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_mango_plan_003_20261021"
+},
+{
+  "id": "okok-oki-comic-004-local-rain-20261022",
+  "approved": true,
+  "publishAt": "2026-10-22T20:30:00+07:00",
+  "expiresAt": "2026-10-22T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-004-local-rain-20261022.jpg",
+  "text": "🌴 Приключения Оки №4 — «Дождь по расписанию»\n\nОки приготовился к ливню. Прогноз оказался очень местным ☂️\n\nВымышленное приключение маскота. История и изображение созданы с помощью ИИ; нарисованные места не являются изображениями конкретных заведений.\n\nИдеи для прогулок — на OK-OK.click\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_local_rain_004_20261022"
+},
+{
+  "id": "okok-oki-comic-005-coconut-orchestra-20261023",
+  "approved": true,
+  "publishAt": "2026-10-23T20:30:00+07:00",
+  "expiresAt": "2026-10-23T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-005-coconut-orchestra-20261023.jpg",
+  "text": "🌴 Приключения Оки №5 — «Кокосовый оркестр»\n\nКогда хочется музыки, пляж сам собирает оркестр 🥥🎶\n\nВымышленное приключение маскота. История и изображение созданы с помощью ИИ; нарисованные места не являются изображениями конкретных заведений.\n\nИдеи для прогулок — на OK-OK.click\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_coconut_orchestra_005_20261023"
+},
+{
+  "id": "okok-oki-comic-006-sand-tracks-20261024",
+  "approved": true,
+  "publishAt": "2026-10-24T20:30:00+07:00",
+  "expiresAt": "2026-10-24T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-006-sand-tracks-20261024.jpg",
+  "text": "🌴 Приключения Оки №6 — «Следы на песке»\n\nОки придумал навигацию на пляже. У краба нашёлся свой маршрут 🦀\n\nВымышленное приключение маскота. История и изображение созданы с помощью ИИ; нарисованные места не являются изображениями конкретных заведений.\n\nИдеи для прогулок — на OK-OK.click\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_sand_tracks_006_20261024"
+},
+{
+  "id": "okok-oki-comic-007-suitcase-20261025",
+  "approved": true,
+  "publishAt": "2026-10-25T20:30:00+07:00",
+  "expiresAt": "2026-10-25T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-007-suitcase-20261025.jpg",
+  "text": "🌴 Приключения Оки №7 — «Чемодан впечатлений»\n\nУместить отпуск в чемодан непросто. Особенно если у утки свои планы 🧳\n\nВымышленное приключение маскота. История и изображение созданы с помощью ИИ; нарисованные места не являются изображениями конкретных заведений.\n\nИдеи для прогулок — на OK-OK.click\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_suitcase_007_20261025"
+},
+{
+  "id": "okok-oki-comic-008-spicy-question-20261026",
+  "approved": true,
+  "publishAt": "2026-10-26T20:30:00+07:00",
+  "expiresAt": "2026-10-26T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-008-spicy-question-20261026.jpg",
+  "text": "🌴 Приключения Оки №8 — «Острый вопрос»\n\nОки выбирает обед и узнаёт кое-что о смелости 🌶️\n\nВымышленное приключение маскота. История и изображение созданы с помощью ИИ; нарисованные места не являются изображениями конкретных заведений.\n\nИдеи для прогулок — на OK-OK.click\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_spicy_question_008_20261026"
+},
+{
+  "id": "okok-oki-comic-009-hammock-20261027",
+  "approved": true,
+  "publishAt": "2026-10-27T20:30:00+07:00",
+  "expiresAt": "2026-10-27T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-009-hammock-20261027.jpg",
+  "text": "🌴 Приключения Оки №9 — «Гамак для двоих»\n\nОки нашёл идеальное место для отдыха. Но рыжий кот пришёл первым 🐈\n\nВымышленное приключение маскота. История и изображение созданы с помощью ИИ; нарисованные места не являются изображениями конкретных заведений.\n\nИдеи для прогулок — на OK-OK.click\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_hammock_009_20261027"
+}
 ];
