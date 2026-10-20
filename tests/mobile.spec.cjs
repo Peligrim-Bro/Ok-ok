@@ -49,7 +49,7 @@ for(const lang of ['ru','en','th'])for(const width of [390,768])test(`${lang} at
  for(const id of ['recTrack','tickerTrack'])expect(await page.locator('#'+id).evaluate(n=>getComputedStyle(n).animationName)).toBe('ticker');
  expect(await page.locator('#donateBtn').evaluate(n=>getComputedStyle(n,'::before').animationName)).toBe('none');
  if(lang==='ru'){
-  await expect(page.locator('.card').first()).toContainText('Центральная Паттайя');
+  await expect(page.locator('.card').first()).toContainText('J-Kao Seafood');
   await expect(page.locator('body')).not.toContainText('Scam of the Week');
  }
  await expect(page.locator('.home-fold summary')).not.toContainText([/Полезное для поездки|Useful for your trip|มีประโยชน์สำหรับทริป/]);
