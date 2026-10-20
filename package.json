@@ -5,7 +5,7 @@
   "description": "PattayaOK static PWA + paid ads function",
   "devDependencies": {
     "@lhci/cli": "0.15.1",
-    "@playwright/test": "1.63.0"
+    "@playwright/test": "1.64.1"
   },
   "scripts": {
     "build": "node gloss-build.mjs && node telegram-build.mjs",
