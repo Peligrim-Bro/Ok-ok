@@ -1,92 +1,99 @@
 {
-  "verifiedAt": "2026-10-19",
+  "verifiedAt": "2026-10-20",
   "news": [
     {
       "category": "world",
-      "when": "18.10 · 🌍",
-      "href": "https://www.reuters.com/world/asia-pacific/samsung-use-tsmc-technology-nvidias-next-generation-memory-chips-seoul-newspaper-2026-10-18/",
-      "ru": "Samsung, по данным Seoul Economic Daily, планирует использовать 3-нм процесс TSMC для базовых кристаллов памяти Nvidia NVHBM. Компании публично не подтвердили детали, поэтому это пока сообщение источников, а не объявленный контракт.",
-      "en": "Samsung plans to use TSMC's 3nm process for base dies in Nvidia's NVHBM memory, Seoul Economic Daily reported. The companies have not publicly confirmed the details, so this remains a sourced report rather than an announced contract.",
-      "th": "Seoul Economic Daily รายงานว่า Samsung มีแผนใช้กระบวนการ 3 นาโนเมตรของ TSMC ผลิตฐานชิปสำหรับหน่วยความจำ NVHBM ของ Nvidia บริษัทต่าง ๆ ยังไม่ยืนยันรายละเอียดต่อสาธารณะ จึงยังเป็นรายงานจากแหล่งข่าว ไม่ใช่สัญญาที่ประกาศแล้ว",
-      "publishedAt": "2026-10-18",
+      "when": "19.10 · 🌍",
+      "href": "https://www.gov.uk/government/publications/ai-sovereignty-preserving-uk-agency-in-an-ai-enabled-world",
+      "ru": "Великобритания опубликовала рекомендации Совета по науке и технологиям: развивать собственные навыки, данные и вычислительные мощности для ИИ, сохраняя доступ к ведущим зарубежным моделям. Письмо датировано 30 июля; это советы, а не утверждённая программа расходов.",
+      "en": "The UK published science advisers' recommendations to build domestic AI skills, data and computing capacity while retaining access to leading foreign models. The letter is dated 30 July; it is advice, not an approved spending programme.",
+      "th": "สหราชอาณาจักรเผยแพร่ข้อเสนอจากที่ปรึกษาวิทยาศาสตร์ให้พัฒนาทักษะ ข้อมูล และกำลังประมวลผล AI ในประเทศ ควบคู่กับการเข้าถึงโมเดลชั้นนำจากต่างประเทศ จดหมายลงวันที่ 30 กรกฎาคม ยังเป็นคำแนะนำ ไม่ใช่แผนงบประมาณที่อนุมัติแล้ว",
+      "publishedAt": "2026-10-19",
       "sources": [
-        "https://www.reuters.com/world/asia-pacific/samsung-use-tsmc-technology-nvidias-next-generation-memory-chips-seoul-newspaper-2026-10-18/",
-        "https://en.sedaily.com/finance/2026/10/18/samsung-to-tap-tsmc-3-nanometer-lines-for-nvidia-custom-hbm"
+        "https://www.gov.uk/government/publications/ai-sovereignty-preserving-uk-agency-in-an-ai-enabled-world",
+        "https://www.gov.uk/government/publications/ai-sovereignty-preserving-uk-agency-in-an-ai-enabled-world/ai-sovereignty-preserving-uk-agency-in-an-ai-enabled-world-web-version",
+        "https://www.reuters.com/legal/litigation/uk-risks-becoming-ai-customer-rather-than-creator-advisers-warn-2026-10-19/",
+        "https://www.artificialintelligence-news.com/news/council-for-science-and-technology-uk-ai-sovereignty-plan/"
       ],
       "nonWar": true,
       "discussionEvidence": {
-        "observedAt": "2026-10-19T08:55:00+07:00",
-        "sourceUrl": "https://www.reddit.com/r/hardware/comments/1x9hgyt/samsung_to_use_tsmc_tech_for_nvidias/",
-        "summary": "A public r/hardware search snapshot showed +17 votes on the report at observation time. Techmeme also listed the Reuters/Seoul Economic Daily item (https://www.techmeme.com/261018/p9), indicating specialist pickup, but exposed no comparable universal counter. These signals are platform-specific and do not prove global popularity. Reuters attributes the claim to Seoul Economic Daily and says Samsung, TSMC and Nvidia did not immediately comment; the original outlet is included rather than counting Reuters syndications as independent reports."
+        "observedAt": "2026-10-20T08:12:21+07:00",
+        "sourceUrl": "https://www.gov.uk/government/publications/ai-sovereignty-preserving-uk-agency-in-an-ai-enabled-world",
+        "summary": "No comparable public comment, share or trending counters were available on GOV.UK, Reuters or AI News. Qualitative selection uses the newly published primary letter plus separate reporting by Reuters and AI News, both dated 19 October. This demonstrates cross-outlet pickup, not a global discussion rank; syndications are not counted as independent reports. The underlying letter is dated 30 July and was publicly released on 19 October."
       }
     },
     {
       "category": "thailand",
       "when": "19.10 · 🇹🇭",
-      "href": "https://www.tmd.go.th/warning-and-events/warning-storm/%E0%B8%9D%E0%B8%99%E0%B8%95%E0%B8%81%E0%B8%96%E0%B8%87%E0%B8%AB%E0%B8%99%E0%B8%81%E0%B8%A1%E0%B8%B2%E0%B8%81%E0%B8%9A%E0%B8%A3%E0%B9%80%E0%B8%A7%E0%B8%93%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B9%84%E0%B8%97%E0%B8%A2-%E0%B8%A1%E0%B8%9C%E0%B8%A5%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%9A%E0%B9%83%E0%B8%99%E0%B8%8A%E0%B8%A7%E0%B8%87%E0%B8%A7%E0%B8%99%E0%B8%97-19-25-%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%84%E0%B8%A1-2569-%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%97-5-264-2569",
-      "ru": "TMD в предупреждении №5 ожидает 19–20 октября сильные дожди на юге и востоке, а 21–25 октября — расширение зоны осадков. Возможны внезапные паводки, оползни и волны выше трёх метров в грозовых районах.",
-      "en": "TMD advisory No.5 forecasts heavy rain in the South and East on 19–20 October, then a wider affected area on 21–25 October. Flash floods, landslides and waves above three metres in thunderstorms are possible.",
-      "th": "ประกาศ TMD ฉบับที่ 5 คาดว่าภาคใต้และภาคตะวันออกจะมีฝนหนัก 19–20 ตุลาคม ก่อนขยายพื้นที่ 21–25 ตุลาคม เสี่ยงน้ำท่วมฉับพลัน ดินถล่ม และคลื่นสูงกว่า 3 เมตรในบริเวณฝนฟ้าคะนอง",
+      "href": "https://thailand.prd.go.th/en/content/category/detail/id/52/iid/552293",
+      "ru": "Таиланд расширяет проверки подозреваемого номинального владения землёй через тайских держателей. Правительство поручило сопоставлять данные ведомств и проверять реальных владельцев и историю перехода прав. Объявление операции не означает доказанную вину каждой проверяемой компании.",
+      "en": "Thailand is expanding checks on suspected nominee land ownership through Thai holders. The government ordered agencies to cross-check records, beneficial owners and transfer histories. The operation's announcement does not establish guilt for every company being examined.",
+      "th": "ไทยขยายการตรวจสอบการถือครองที่ดินผ่านนอมินี โดยสั่งเชื่อมโยงข้อมูลหน่วยงาน ตรวจผู้รับประโยชน์ที่แท้จริงและประวัติการโอนสิทธิ การประกาศปฏิบัติการไม่ได้หมายความว่าทุกบริษัทที่ถูกตรวจมีความผิดแล้ว",
       "publishedAt": "2026-10-19",
       "sources": [
-        "https://www.tmd.go.th/warning-and-events/warning-storm/%E0%B8%9D%E0%B8%99%E0%B8%95%E0%B8%81%E0%B8%96%E0%B8%87%E0%B8%AB%E0%B8%99%E0%B8%81%E0%B8%A1%E0%B8%B2%E0%B8%81%E0%B8%9A%E0%B8%A3%E0%B9%80%E0%B8%A7%E0%B8%93%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B9%84%E0%B8%97%E0%B8%A2-%E0%B8%A1%E0%B8%9C%E0%B8%A5%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%9A%E0%B9%83%E0%B8%99%E0%B8%8A%E0%B8%A7%E0%B8%87%E0%B8%A7%E0%B8%99%E0%B8%97-19-25-%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%84%E0%B8%A1-2569-%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%97-5-264-2569"
+        "https://thailand.prd.go.th/en/content/category/detail/id/52/iid/552293",
+        "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/552251",
+        "https://www.thaipbsworld.com/around-thailand/571288"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-19T08:55:00+07:00",
-        "sourceUrl": "https://www.tmd.go.th/warning-and-events/warning-storm/",
-        "summary": "TMD exposes no public view or comment counter. Its warning index places bulletin No.5 first and shows it superseding No.4 and No.3; the bulletin was issued at 05:00 on 19 October. Selection is based on official recency and broad safety relevance, not a measured national discussion rank. Comparable engagement metrics with the PRD meeting wrap-up are unavailable because the platforms publish different counters."
+        "observedAt": "2026-10-20T08:12:21+07:00",
+        "sourceUrl": "https://www.thaipbsworld.com/",
+        "summary": "Thai PBS World's homepage placed this story fifth in Popular this week, below the trademark and museum stories and above the water-diversion canal item. This is one outlet's weekly ranking, not a national rank. PRD showed 227 views on the main announcement versus 147 on its related explainer (https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/552251); no public comment total was exposed. The two PRD pages are not independent coverage; Thai PBS World supplies separate reporting. Views and a weekly rank cannot be combined into one score."
       }
     },
     {
       "category": "thailand",
-      "when": "18.10 · 🇹🇭",
-      "href": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/551780",
-      "ru": "Таиланд подвёл итоги встреч МВФ и Всемирного банка в Бангкоке. Правительство сообщило о дальнейших работах по раннему предупреждению о паводках, «зелёным» больницам, малым ИИ-инструментам для сельского хозяйства и борьбе с трансграничным финансовым мошенничеством.",
-      "en": "Thailand reviewed outcomes from the IMF–World Bank meetings in Bangkok. The government cited follow-up work on flood early warning, green hospitals, small AI tools for farming and cross-border financial fraud.",
-      "th": "ไทยสรุปผลการประชุม IMF–World Bank ที่กรุงเทพฯ โดยรัฐบาลระบุงานต่อเนื่องเรื่องระบบเตือนภัยน้ำท่วม โรงพยาบาลสีเขียว AI ขนาดเล็กเพื่อการเกษตร และการรับมือการฉ้อโกงทางการเงินข้ามพรมแดน",
-      "publishedAt": "2026-10-18",
+      "when": "19.10 · 🇹🇭",
+      "href": "https://www.nationthailand.com/news/tourism/40072479",
+      "ru": "По предварительным данным министра туризма, с 1 января по 17 октября Таиланд принял 24,42 млн иностранных туристов — на 4,12% меньше год к году. За неделю 11–17 октября число прибытий выросло на 0,83%; дальние рынки росли, ближние снижались.",
+      "en": "Preliminary figures released by Thailand's tourism minister put foreign arrivals at 24.42 million for 1 January–17 October, down 4.12% year on year. Arrivals rose 0.83% in the week of 11–17 October, with long-haul markets growing and short-haul markets declining.",
+      "th": "ข้อมูลเบื้องต้นที่รัฐมนตรีท่องเที่ยวเปิดเผยระบุว่า 1 มกราคม–17 ตุลาคม ไทยรับนักท่องเที่ยวต่างชาติ 24.42 ล้านคน ลดลง 4.12% จากปีก่อน ส่วนสัปดาห์ 11–17 ตุลาคมเพิ่มขึ้น 0.83% โดยตลาดระยะไกลขยายตัว ขณะที่ตลาดระยะใกล้ลดลง",
+      "publishedAt": "2026-10-19",
       "sources": [
-        "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/551780",
-        "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/551830"
+        "https://www.nationthailand.com/news/tourism/40072479",
+        "https://www.thansettakij.com/business/tourism/671774",
+        "https://www.thailandplus.tv/archives/1065164"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-19T08:55:00+07:00",
-        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/551780",
-        "summary": "PRD displayed 170 views, versus 107 views on its same-day general meeting wrap-up (https://thailand.prd.go.th/en/content/category/detail/id/48/iid/551830). Both pages expose a comment form but no public comment total. These same-platform counters are a limited comparison, not unique-user data or a national popularity rank. Both sources are government summaries of the same meeting week, so they are not independent corroboration; initiatives are attributed to the government and not presented as completed outcomes."
-      }
-    },
-    {
-      "category": "pattaya",
-      "when": "18.10 · Pattaya",
-      "href": "https://www.pattayamail.com/thailandnews/u-tapao-rayong-pattaya-airport-prepares-for-winter-travel-season-with-new-aircraft-arrival-568873",
-      "ru": "Аэропорт Утапао принял второй Airbus A330-200 авиакомпании SiamWings перед зимним сезоном. Аэропорт заявил о готовности поддержать будущие операции; новые маршруты в материале не объявлены.",
-      "en": "U-Tapao welcomed SiamWings' second Airbus A330-200 ahead of the winter season. The airport said it was ready to support future operations; the report did not announce new routes.",
-      "th": "สนามบินอู่ตะเภาต้อนรับ Airbus A330-200 ลำที่สองของ SiamWings ก่อนฤดูหนาว สนามบินระบุว่าพร้อมสนับสนุนการดำเนินงานในอนาคต แต่ข่าวยังไม่ได้ประกาศเส้นทางบินใหม่",
-      "publishedAt": "2026-10-18",
-      "sources": [
-        "https://www.pattayamail.com/thailandnews/u-tapao-rayong-pattaya-airport-prepares-for-winter-travel-season-with-new-aircraft-arrival-568873"
-      ],
-      "discussionEvidence": {
-        "observedAt": "2026-10-19T08:55:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/thailandnews/u-tapao-rayong-pattaya-airport-prepares-for-winter-travel-season-with-new-aircraft-arrival-568873",
-        "summary": "Pattaya Mail displayed 792 views and 0 comments, versus 218 views and 0 comments for the 19 October sanitation feature (https://www.pattayamail.com/news/pattayas-sanitation-workers-work-tirelessly-to-keep-the-city-clean-568956). Same-platform counters allow only a limited comparison: the airport article is older, exposure differs and views are not unique users. No independent report of this exact aircraft arrival was verified, so no citywide discussion rank is claimed."
+        "observedAt": "2026-10-20T08:12:21+07:00",
+        "sourceUrl": "https://www.nationthailand.com/news/tourism/40072479",
+        "summary": "The Nation and Thansettakij published the same ministerial figures on 19 October; Thailandplus also reproduced the attributed update. Nation and Thansettakij share Nation Group and the same reporter, so they are not counted as independent corroboration. No comparable public engagement counters or ranking were available for this exact release. Broad independent coverage was not established; selection is for nationwide tourism relevance, not measured popularity. These are preliminary ministerial figures; the ministry homepage was opened but exposed no readable release."
       }
     },
     {
       "category": "pattaya",
       "when": "19.10 · Pattaya",
-      "href": "https://www.pattayamail.com/news/pattayas-sanitation-workers-work-tirelessly-to-keep-the-city-clean-568956",
-      "ru": "Санитарные бригады Паттайи ежедневно убирают улицы, тротуары, общественные зоны и каналы, в том числе в дождь и праздники. Жителей и гостей просят пользоваться урнами и не оставлять мусор.",
-      "en": "Pattaya sanitation crews clean streets, pavements, public spaces and canals daily, including during rain and holidays. Residents and visitors are asked to use bins and avoid littering.",
-      "th": "ทีมงานรักษาความสะอาดพัทยาดูแลถนน ทางเท้า พื้นที่สาธารณะ และคลองทุกวัน รวมถึงช่วงฝนตกและวันหยุด เมืองขอให้ประชาชนและนักท่องเที่ยวทิ้งขยะลงถังและไม่ทิ้งเรี่ยราด",
+      "href": "https://www.pattayamail.com/news/pattaya-woman-lures-suspected-thief-into-beer-session-before-police-arrest-568963",
+      "ru": "В Джомтьене 18 октября владелица кофейни узнала мужчину, которого подозревала в прежней краже, и через сотрудников ресторана вызвала полицию. По сообщениям местных СМИ, его задержали по действующему ордеру; следствие проверяет обстоятельства, виновность определяет суд.",
+      "en": "In Jomtien on 18 October, a coffee-shop owner recognised a man she suspected of an earlier theft and had restaurant staff call police. Local reports say he was detained on an outstanding warrant. Investigators are checking the circumstances; guilt is for the court to determine.",
+      "th": "เมื่อ 18 ตุลาคมที่จอมเทียน เจ้าของร้านกาแฟพบชายที่เธอสงสัยว่าเกี่ยวข้องกับเหตุลักทรัพย์ก่อนหน้า และให้พนักงานร้านอาหารเรียกตำรวจ สื่อท้องถิ่นรายงานว่าเขาถูกควบคุมตัวตามหมายจับเดิม ตำรวจยังสอบสวนข้อเท็จจริง และศาลเป็นผู้วินิจฉัยความผิด",
       "publishedAt": "2026-10-19",
       "sources": [
-        "https://www.pattayamail.com/news/pattayas-sanitation-workers-work-tirelessly-to-keep-the-city-clean-568956"
+        "https://www.pattayamail.com/news/pattaya-woman-lures-suspected-thief-into-beer-session-before-police-arrest-568963",
+        "https://thepattayanews.com/2026/10/18/coffee-shop-owner-spots-alleged-thief-at-jomtien-restaurant-keeps-him-talking-until-police-arrive/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-19T08:55:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/pattayas-sanitation-workers-work-tirelessly-to-keep-the-city-clean-568956",
-        "summary": "Pattaya Mail displayed 218 views and 0 comments, below the U-Tapao article's 792 views and 0 comments (https://www.pattayamail.com/thailandnews/u-tapao-rayong-pattaya-airport-prepares-for-winter-travel-season-with-new-aircraft-arrival-568873). This newer item is selected for direct civic relevance, not because it led the site's counters. Ages and exposure differ; no broad independent coverage of this routine municipal work was verified."
+        "observedAt": "2026-10-20T08:12:21+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/pattaya-woman-lures-suspected-thief-into-beer-session-before-police-arrest-568963",
+        "summary": "Pattaya Mail displayed 1,707 views and 0 comments, versus 977 views and 0 comments on its same-date sanitation feature (https://www.pattayamail.com/news/pattayas-sanitation-workers-work-tirelessly-to-keep-the-city-clean-568956). This limited same-platform comparison does not establish citywide popularity or unique readership. The Pattaya News reported the event on 18 October at 10:38; Pattaya Mail published on 19 October. Reports disagree on an unrelated cash figure, so all amounts, names and victim identifiers are omitted. Neither report establishes a conviction."
+      }
+    },
+    {
+      "category": "pattaya",
+      "when": "17.10 · Pattaya",
+      "href": "https://thepattayanews.com/2026/10/17/pattaya-international-jazz-festival-2026-set-for-november-6-7-on-pattaya-beach-free-entry/",
+      "ru": "Паттайя готовит бесплатный международный джазовый фестиваль на пляже 6–7 ноября. По сообщению The Pattaya News от 17 октября, полный состав артистов и точное время концертов ещё не опубликованы; детали стоит проверять ближе к событию.",
+      "en": "Pattaya is preparing a free international jazz festival on the beach on 6–7 November. The Pattaya News reported on 17 October that the full artist lineup and exact concert times had not yet been released; check details closer to the event.",
+      "th": "พัทยาเตรียมจัดเทศกาลแจ๊สนานาชาติริมหาด 6–7 พฤศจิกายน เข้าชมฟรี ตามข่าว The Pattaya News วันที่ 17 ตุลาคม รายชื่อศิลปินครบชุดและเวลาแสดงที่แน่นอนยังไม่ประกาศ ควรตรวจรายละเอียดอีกครั้งใกล้วันงาน",
+      "publishedAt": "2026-10-17",
+      "sources": [
+        "https://thepattayanews.com/2026/10/17/pattaya-international-jazz-festival-2026-set-for-november-6-7-on-pattaya-beach-free-entry/",
+        "https://www.pattayamail.com/latestnews/news/pattaya-jazz-festival-is-coming-soon-with-global-stars-and-free-concerts-567512"
+      ],
+      "discussionEvidence": {
+        "observedAt": "2026-10-20T08:12:21+07:00",
+        "sourceUrl": "https://thepattayanews.com/2026/10/17/pattaya-international-jazz-festival-2026-set-for-november-6-7-on-pattaya-beach-free-entry/",
+        "summary": "The 17 October 18:37 report is about 62 hours old and is deliberately selected from the permitted 72-hour window. No comparable public engagement counter was exposed on The Pattaya News page. An earlier independent Pattaya Mail announcement dated 7 October confirms dates and free entry; it displayed 1,855 views and 0 comments, but its much greater age makes it unsuitable for a fresh-news ranking. Cross-outlet coverage is local, not broad international coverage. No citywide discussion rank is claimed; the older corroborating source is not presented as new news."
       }
     }
   ],
@@ -184,5 +191,5 @@
       "verifiedAt": "2026-10-19"
     }
   ],
-  "selection": "Exactly 1 non-war world story, 2 Thailand stories and 2 Pattaya stories reviewed 2026-10-19 Asia/Bangkok. All source publication dates are 18–19 October. Public metrics are compared only within the same platform and observed at 08:55 local time: Pattaya Mail 792/0 versus 218/0; PRD 170 versus 107; a Reddit search snapshot showed +17 on the chip report. Platform ages and exposure differ, and no global, national or citywide popularity rank is claimed. TMD bulletin No.5 issued 19 October at 05:00 supersedes earlier bulletins. The chip item remains explicitly attributed and unconfirmed by the companies. New scam card: an official 17 October Cyber Police warning about cash-for-face-scan lures; it omits personal identifiers and loss figures and gives practical protection. Three existing active scam cards and their original dates remain unchanged. Only content/editorial.json changes. No Telegram news sending."
+  "selection": "Exactly 1 non-war world, 2 Thailand and 2 Pattaya stories reviewed 2026-10-20 Asia/Bangkok. Four selected source pages are dated 19 October; the jazz report is 17 October 18:37, about 62 hours old, included under the allowed 72-hour window because sufficiently verified fresh local topics and comparable counters were limited. No duplicated story between categories. Metrics observed at 08:12 local time: Thai PBS World weekly rank 5 for nominee checks; PRD 227 versus 147 views; Pattaya Mail 1707/0 versus same-date sanitation 977/0. Counters differ in age, platform and exposure and are not combined into absolute ranks. Broad independent coverage could not be established for the exact tourism statistics release or the local festival; limitations and related-source independence are explicit. The UK letter was written 30 July but published 19 October; recommendations are not adopted policy. Reviewed official Police Region 9 cyber alerts (latest visible 17 October), Thai Police Online, fresh police-related reporting and targeted Thai/English searches. A 19 October youth/mule-account report lacked independently verified official/corroborating evidence in this review and was not automatically added. No new scam card met the publication threshold; all four active cards and their original dates remain unchanged. Only content/editorial.json changes. No Telegram news sending."
 }
