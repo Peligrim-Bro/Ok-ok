@@ -16,7 +16,7 @@ Current rules consolidated on 2026-10-20. Later explicit owner decisions superse
 - Chat and contact: [docs/FEATURE_RULES.md#chat-and-contact](docs/FEATURE_RULES.md#chat-and-contact)
 - Partners, referrals and editorial integrity: [docs/FEATURE_RULES.md#partners-referrals-and-editorial-integrity](docs/FEATURE_RULES.md#partners-referrals-and-editorial-integrity)
 - Payments and persistent state: [docs/FEATURE_RULES.md#payments-and-persistent-state](docs/FEATURE_RULES.md#payments-and-persistent-state)
-- Historical designs: inactive: [docs/FEATURE_RULES.md#historical-designs:-inactive](docs/FEATURE_RULES.md#historical-designs:-inactive)
+- Historical designs: inactive: [docs/FEATURE_RULES.md#historical-designs-inactive](docs/FEATURE_RULES.md#historical-designs-inactive)
 
 ## Project, authorization and sources
 - Repository: Peligrim-Bro/Ok-ok, main. Hosting: Cloudflare Worker ok-ok only. Do not restore Netlify workflows.
