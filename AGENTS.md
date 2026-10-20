@@ -118,6 +118,8 @@ GitHub Actions checks are diagnostic; they do not gate Cloudflare's independent 
 
 ## Efficient work and evidence-based audits
 
+- Checkpoint and resume (owner-authorized Academy review, 2026-10-20): for nontrivial multi-session work, keep one current durable task note linked from the PR or project report. Update it at milestones, on failure and before pausing/handoff: approved scope, stage, HEAD, pending file changes, check commands/results and log locations, blockers and next step; never include secrets. On resume, read the note and compare it with current Git/files and recorded external outcomes before continuing. Re-run checks when the source state changed or earlier evidence is incomplete. Confirm ambiguous action outcomes before retrying, especially payments and publishing. Use existing authorizations; clarify only an unresolved decision or missing authority. This adapts the recovery/checkpoint guidance from https://academy.openai.com/public/clubs/builders-etkn1/events/codex-bootcamp-301-advanced-automation-zejtj1ae6t ; it does not install hooks, SDKs or extra agents.
+
 - Reduce redundant context and repeated work, never required verification or task quality. Optimize effort per completed task, not just one response.
 
 - Read relevant file ranges and load only needed tool/skill definitions. Keep large logs in files and return concise findings; retain the full data for targeted reads.
