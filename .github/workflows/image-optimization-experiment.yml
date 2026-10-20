@@ -1,0 +1,26 @@
+name: Image optimization experiment
+on:
+  push:
+    branches:
+      - experiment/image-optimization-20261020
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies without changing lockfile
+        run: npm install --no-package-lock --ignore-scripts=false
+      - name: Build with optimized image copies
+        run: npm run build:optimized
+      - name: Verify site regressions
+        run: npm run check
+      - name: Summarize generated WebP files
+        run: |
+          find site/public/assets/optimized -type f -name '*.webp' | wc -l || true
+          du -sh site/public/assets/optimized || true
