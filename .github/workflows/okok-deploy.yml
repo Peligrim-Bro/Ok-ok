@@ -41,6 +41,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: '4.151.3'
           command: deploy --config wrangler-telegram.json
       - name: Verify the published source version, shell, PWA and health endpoints
         run: node scripts/verify-live.mjs

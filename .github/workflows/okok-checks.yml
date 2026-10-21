@@ -22,6 +22,8 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
+      - name: Verify patched Lighthouse consumers offline
+        run: node scripts/verify-toolchain.mjs
       - name: Build and enforce project, SEO, PWA and size checks
         run: npm run build
       - name: Check production verification failure detection
