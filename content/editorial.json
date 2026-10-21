@@ -1,99 +1,95 @@
 {
-  "verifiedAt": "2026-10-20",
+  "verifiedAt": "2026-10-21",
   "news": [
     {
       "category": "world",
-      "when": "19.10 · 🌍",
-      "href": "https://www.gov.uk/government/publications/ai-sovereignty-preserving-uk-agency-in-an-ai-enabled-world",
-      "ru": "Великобритания опубликовала рекомендации Совета по науке и технологиям: развивать собственные навыки, данные и вычислительные мощности для ИИ, сохраняя доступ к ведущим зарубежным моделям. Письмо датировано 30 июля; это советы, а не утверждённая программа расходов.",
-      "en": "The UK published science advisers' recommendations to build domestic AI skills, data and computing capacity while retaining access to leading foreign models. The letter is dated 30 July; it is advice, not an approved spending programme.",
-      "th": "สหราชอาณาจักรเผยแพร่ข้อเสนอจากที่ปรึกษาวิทยาศาสตร์ให้พัฒนาทักษะ ข้อมูล และกำลังประมวลผล AI ในประเทศ ควบคู่กับการเข้าถึงโมเดลชั้นนำจากต่างประเทศ จดหมายลงวันที่ 30 กรกฎาคม ยังเป็นคำแนะนำ ไม่ใช่แผนงบประมาณที่อนุมัติแล้ว",
-      "publishedAt": "2026-10-19",
-      "sources": [
-        "https://www.gov.uk/government/publications/ai-sovereignty-preserving-uk-agency-in-an-ai-enabled-world",
-        "https://www.gov.uk/government/publications/ai-sovereignty-preserving-uk-agency-in-an-ai-enabled-world/ai-sovereignty-preserving-uk-agency-in-an-ai-enabled-world-web-version",
-        "https://www.reuters.com/legal/litigation/uk-risks-becoming-ai-customer-rather-than-creator-advisers-warn-2026-10-19/",
-        "https://www.artificialintelligence-news.com/news/council-for-science-and-technology-uk-ai-sovereignty-plan/"
-      ],
+      "when": "20.10 · 🌍",
+      "href": "https://apnews.com/article/orionid-meteor-shower-shooting-stars-6c4b33c54257f27108cb952196827180",
+      "publishedAt": "2026-10-20",
       "nonWar": true,
+      "ru": "В ночь 21–22 октября ожидается пик Орионид — метеорного потока из пыли кометы Галлея. NASA и AMS указывают обычный максимум около 10–20 метеоров в час в тёмном небе; яркая Луна и облака могут помешать. Наблюдать лучше после полуночи вдали от освещения.",
+      "en": "The Orionid meteor shower, produced by debris from Halley's Comet, peaks overnight on 21–22 October. NASA and AMS give typical dark-sky rates of about 10–20 meteors per hour; bright moonlight and clouds may reduce visibility. Look after midnight away from artificial lights.",
+      "th": "ฝนดาวตกโอไรออนิดส์จากเศษฝุ่นดาวหางฮัลลีย์จะมีช่วงสูงสุดคืน 21–22 ตุลาคม NASA และ AMS ระบุอัตราปกติราว 10–20 ดวงต่อชั่วโมงในท้องฟ้ามืด แต่แสงจันทร์และเมฆอาจบดบัง ควรดูหลังเที่ยงคืนในที่ห่างจากแสงไฟ",
+      "sources": [
+        "https://apnews.com/article/orionid-meteor-shower-shooting-stars-6c4b33c54257f27108cb952196827180",
+        "https://science.nasa.gov/solar-system/meteors-meteorites/orionids/",
+        "https://www.amsmeteors.org/calendar/",
+        "https://www.wired.com/story/how-to-see-the-orionid-meteor-shower-and-other-upcoming-astronomical-events"
+      ],
       "discussionEvidence": {
-        "observedAt": "2026-10-20T08:12:21+07:00",
-        "sourceUrl": "https://www.gov.uk/government/publications/ai-sovereignty-preserving-uk-agency-in-an-ai-enabled-world",
-        "summary": "No comparable public comment, share or trending counters were available on GOV.UK, Reuters or AI News. Qualitative selection uses the newly published primary letter plus separate reporting by Reuters and AI News, both dated 19 October. This demonstrates cross-outlet pickup, not a global discussion rank; syndications are not counted as independent reports. The underlying letter is dated 30 July and was publicly released on 19 October."
+        "observedAt": "2026-10-21T01:07:40.186Z",
+        "sourceUrl": "https://apnews.com/article/orionid-meteor-shower-shooting-stars-6c4b33c54257f27108cb952196827180",
+        "summary": "No comparable public discussion counters were exposed for this story. AP and WIRED each published coverage on 20 October; NASA and AMS independently confirm the peak and viewing conditions. This is qualitative cross-outlet coverage, not a global popularity ranking. publishedAt is the AP report date, not the date of the older NASA reference page."
       }
     },
     {
       "category": "thailand",
-      "when": "19.10 · 🇹🇭",
-      "href": "https://thailand.prd.go.th/en/content/category/detail/id/52/iid/552293",
-      "ru": "Таиланд расширяет проверки подозреваемого номинального владения землёй через тайских держателей. Правительство поручило сопоставлять данные ведомств и проверять реальных владельцев и историю перехода прав. Объявление операции не означает доказанную вину каждой проверяемой компании.",
-      "en": "Thailand is expanding checks on suspected nominee land ownership through Thai holders. The government ordered agencies to cross-check records, beneficial owners and transfer histories. The operation's announcement does not establish guilt for every company being examined.",
-      "th": "ไทยขยายการตรวจสอบการถือครองที่ดินผ่านนอมินี โดยสั่งเชื่อมโยงข้อมูลหน่วยงาน ตรวจผู้รับประโยชน์ที่แท้จริงและประวัติการโอนสิทธิ การประกาศปฏิบัติการไม่ได้หมายความว่าทุกบริษัทที่ถูกตรวจมีความผิดแล้ว",
-      "publishedAt": "2026-10-19",
+      "when": "21.10 · 🇹🇭",
+      "href": "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-thailand-no-9-268-2026",
+      "publishedAt": "2026-10-21",
+      "ru": "TMD в предупреждении от 21 октября ожидает сильные дожди 21–25 октября на юге и усиление осадков на востоке, в Бангкоке и ряде других регионов. Возможны внезапные паводки и оползни; в грозах волны могут превышать 3 м. Перед поездкой проверяйте местный прогноз.",
+      "en": "TMD's 21 October advisory warns of heavy rain in the South and increased rainfall in the East, Bangkok and several other regions during 21–25 October. Flash floods and landslides are possible; waves may exceed three metres in thunderstorms. Check local forecasts before travelling.",
+      "th": "ประกาศกรมอุตุนิยมวิทยาวันที่ 21 ตุลาคมเตือนฝนหนักภาคใต้ และฝนเพิ่มในภาคตะวันออก กรุงเทพฯ และบางภูมิภาคช่วง 21–25 ตุลาคม เสี่ยงน้ำท่วมฉับพลันและดินถล่ม บริเวณฝนฟ้าคะนองคลื่นอาจสูงเกิน 3 เมตร ควรตรวจพยากรณ์พื้นที่ก่อนเดินทาง",
       "sources": [
-        "https://thailand.prd.go.th/en/content/category/detail/id/52/iid/552293",
-        "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/552251",
-        "https://www.thaipbsworld.com/around-thailand/571288"
+        "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-thailand-no-9-268-2026",
+        "https://www.nationthailand.com/news/general/40072548"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-20T08:12:21+07:00",
-        "sourceUrl": "https://www.thaipbsworld.com/",
-        "summary": "Thai PBS World's homepage placed this story fifth in Popular this week, below the trademark and museum stories and above the water-diversion canal item. This is one outlet's weekly ranking, not a national rank. PRD showed 227 views on the main announcement versus 147 on its related explainer (https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/552251); no public comment total was exposed. The two PRD pages are not independent coverage; Thai PBS World supplies separate reporting. Views and a weekly rank cannot be combined into one score."
+        "observedAt": "2026-10-21T01:07:40.186Z",
+        "sourceUrl": "https://www.nationthailand.com/news/general/40072548",
+        "summary": "The Nation's article displayed this weather story second in its Most Viewed list, behind the fuel-price story. This is one outlet's displayed ranking, not a Thai national ranking or a comment count. TMD advisory No.9 is dated 21 October at 05:00; The Nation page has a 20 October header despite describing the newer advisory, so the primary TMD publication date is used."
       }
     },
     {
       "category": "thailand",
-      "when": "19.10 · 🇹🇭",
-      "href": "https://www.nationthailand.com/news/tourism/40072479",
-      "ru": "По предварительным данным министра туризма, с 1 января по 17 октября Таиланд принял 24,42 млн иностранных туристов — на 4,12% меньше год к году. За неделю 11–17 октября число прибытий выросло на 0,83%; дальние рынки росли, ближние снижались.",
-      "en": "Preliminary figures released by Thailand's tourism minister put foreign arrivals at 24.42 million for 1 January–17 October, down 4.12% year on year. Arrivals rose 0.83% in the week of 11–17 October, with long-haul markets growing and short-haul markets declining.",
-      "th": "ข้อมูลเบื้องต้นที่รัฐมนตรีท่องเที่ยวเปิดเผยระบุว่า 1 มกราคม–17 ตุลาคม ไทยรับนักท่องเที่ยวต่างชาติ 24.42 ล้านคน ลดลง 4.12% จากปีก่อน ส่วนสัปดาห์ 11–17 ตุลาคมเพิ่มขึ้น 0.83% โดยตลาดระยะไกลขยายตัว ขณะที่ตลาดระยะใกล้ลดลง",
-      "publishedAt": "2026-10-19",
+      "when": "21.10 · 🇹🇭",
+      "href": "https://www.nationthailand.com/news/general/40072549",
+      "publishedAt": "2026-10-21",
+      "ru": "С 05:00 21 октября PTT Station и Bangchak повысили цены на ряд марок топлива на 0,60 бата за литр. Рост касается обычного дизеля и газохола 91/95; E20 и B20 оставлены без изменения. Цена на конкретной АЗС может отличаться от опубликованной для Бангкока.",
+      "en": "From 05:00 on 21 October, PTT Station and Bangchak raised selected fuel prices by 0.60 baht per litre, including regular diesel and gasohol 91/95. E20 and B20 were unchanged. Prices at individual stations may differ from the published Bangkok rates.",
+      "th": "ตั้งแต่ 05.00 น. วันที่ 21 ตุลาคม PTT Station และบางจากปรับราคาน้ำมันบางชนิดขึ้นลิตรละ 0.60 บาท รวมดีเซลธรรมดาและแก๊สโซฮอล์ 91/95 ส่วน E20 และ B20 ไม่เปลี่ยนแปลง ราคาที่แต่ละสถานีอาจต่างจากราคากรุงเทพฯ ที่ประกาศ",
       "sources": [
-        "https://www.nationthailand.com/news/tourism/40072479",
-        "https://www.thansettakij.com/business/tourism/671774",
-        "https://www.thailandplus.tv/archives/1065164"
+        "https://www.nationthailand.com/news/general/40072549",
+        "https://en.thairath.co.th/money/economics/thai_economics/2967386"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-20T08:12:21+07:00",
-        "sourceUrl": "https://www.nationthailand.com/news/tourism/40072479",
-        "summary": "The Nation and Thansettakij published the same ministerial figures on 19 October; Thailandplus also reproduced the attributed update. Nation and Thansettakij share Nation Group and the same reporter, so they are not counted as independent corroboration. No comparable public engagement counters or ranking were available for this exact release. Broad independent coverage was not established; selection is for nationwide tourism relevance, not measured popularity. These are preliminary ministerial figures; the ministry homepage was opened but exposed no readable release."
+        "observedAt": "2026-10-21T01:07:40.186Z",
+        "sourceUrl": "https://www.nationthailand.com/news/general/40072549",
+        "summary": "Displayed first in The Nation's Most Viewed list, ahead of the weather advisory. This is a single-outlet reading rank, not a comment total or nationwide rank. Independent Thairath reporting dated 20 October confirms the 21 October 05:00 increase. Bangchak's primary oil-price page was opened but exposed no usable current price table; no precise E20 price is repeated because the outlets differ on that figure."
       }
     },
     {
       "category": "pattaya",
-      "when": "19.10 · Pattaya",
-      "href": "https://www.pattayamail.com/news/pattaya-woman-lures-suspected-thief-into-beer-session-before-police-arrest-568963",
-      "ru": "В Джомтьене 18 октября владелица кофейни узнала мужчину, которого подозревала в прежней краже, и через сотрудников ресторана вызвала полицию. По сообщениям местных СМИ, его задержали по действующему ордеру; следствие проверяет обстоятельства, виновность определяет суд.",
-      "en": "In Jomtien on 18 October, a coffee-shop owner recognised a man she suspected of an earlier theft and had restaurant staff call police. Local reports say he was detained on an outstanding warrant. Investigators are checking the circumstances; guilt is for the court to determine.",
-      "th": "เมื่อ 18 ตุลาคมที่จอมเทียน เจ้าของร้านกาแฟพบชายที่เธอสงสัยว่าเกี่ยวข้องกับเหตุลักทรัพย์ก่อนหน้า และให้พนักงานร้านอาหารเรียกตำรวจ สื่อท้องถิ่นรายงานว่าเขาถูกควบคุมตัวตามหมายจับเดิม ตำรวจยังสอบสวนข้อเท็จจริง และศาลเป็นผู้วินิจฉัยความผิด",
-      "publishedAt": "2026-10-19",
+      "when": "21.10 · Pattaya",
+      "href": "https://www.pattayamail.com/news/pattaya-clears-jomtien-footpaths-of-overgrown-branches-and-rubbish-569224",
+      "publishedAt": "2026-10-21",
+      "ru": "Муниципальные службы расчистили тротуары на Второй улице Джомтьена у сои 7: убрали мусор и обрезали ветви, мешавшие проходу. По сообщению Pattaya Mail от 21 октября, о подобных проблемах можно сообщать в мэрию по номеру 1337.",
+      "en": "Municipal teams cleared rubbish and trimmed branches obstructing footpaths on Jomtien Second Road near Soi 7. Pattaya Mail's 21 October report says residents can report similar local problems to City Hall on 1337.",
+      "th": "เจ้าหน้าที่เมืองพัทยาเก็บขยะและตัดกิ่งไม้ที่กีดขวางทางเท้าบนถนนจอมเทียนสายสอง ใกล้ซอยจอมเทียน 7 ตามรายงาน Pattaya Mail วันที่ 21 ตุลาคม ประชาชนแจ้งปัญหาลักษณะนี้ต่อเมืองพัทยาได้ที่ 1337",
       "sources": [
-        "https://www.pattayamail.com/news/pattaya-woman-lures-suspected-thief-into-beer-session-before-police-arrest-568963",
-        "https://thepattayanews.com/2026/10/18/coffee-shop-owner-spots-alleged-thief-at-jomtien-restaurant-keeps-him-talking-until-police-arrive/"
+        "https://www.pattayamail.com/news/pattaya-clears-jomtien-footpaths-of-overgrown-branches-and-rubbish-569224"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-20T08:12:21+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/pattaya-woman-lures-suspected-thief-into-beer-session-before-police-arrest-568963",
-        "summary": "Pattaya Mail displayed 1,707 views and 0 comments, versus 977 views and 0 comments on its same-date sanitation feature (https://www.pattayamail.com/news/pattayas-sanitation-workers-work-tirelessly-to-keep-the-city-clean-568956). This limited same-platform comparison does not establish citywide popularity or unique readership. The Pattaya News reported the event on 18 October at 10:38; Pattaya Mail published on 19 October. Reports disagree on an unrelated cash figure, so all amounts, names and victim identifiers are omitted. Neither report establishes a conviction."
+        "observedAt": "2026-10-21T01:07:40.186Z",
+        "sourceUrl": "https://www.pattayamail.com/news/pattaya-clears-jomtien-footpaths-of-overgrown-branches-and-rubbish-569224",
+        "summary": "Pattaya Mail displayed a 0 comment link and an unlabelled number 281; the latter is not treated as a verified view or share count. No comparable independent discussion metric was found. Selected for fresh, practical local relevance; this report alone does not establish broad discussion."
       }
     },
     {
       "category": "pattaya",
-      "when": "17.10 · Pattaya",
-      "href": "https://thepattayanews.com/2026/10/17/pattaya-international-jazz-festival-2026-set-for-november-6-7-on-pattaya-beach-free-entry/",
-      "ru": "Паттайя готовит бесплатный международный джазовый фестиваль на пляже 6–7 ноября. По сообщению The Pattaya News от 17 октября, полный состав артистов и точное время концертов ещё не опубликованы; детали стоит проверять ближе к событию.",
-      "en": "Pattaya is preparing a free international jazz festival on the beach on 6–7 November. The Pattaya News reported on 17 October that the full artist lineup and exact concert times had not yet been released; check details closer to the event.",
-      "th": "พัทยาเตรียมจัดเทศกาลแจ๊สนานาชาติริมหาด 6–7 พฤศจิกายน เข้าชมฟรี ตามข่าว The Pattaya News วันที่ 17 ตุลาคม รายชื่อศิลปินครบชุดและเวลาแสดงที่แน่นอนยังไม่ประกาศ ควรตรวจรายละเอียดอีกครั้งใกล้วันงาน",
-      "publishedAt": "2026-10-17",
+      "when": "21.10 · Pattaya",
+      "href": "https://www.pattayamail.com/news/pattaya-mayor-meets-region-2-police-chief-to-discuss-cctv-traffic-and-flooding-569211",
+      "publishedAt": "2026-10-21",
+      "ru": "Мэр Паттайи и глава полиции региона 2 обсудили 20 октября камеры наблюдения, пробки и борьбу с подтоплениями. Pattaya Mail сообщил об этом 21 октября. Речь о координации ведомств и предлагаемых мерах; завершённые улучшения пока не объявлены.",
+      "en": "Pattaya's mayor and the Region 2 police chief met on 20 October to discuss CCTV, traffic and flood prevention, Pattaya Mail reported on 21 October. The meeting concerned coordination and proposed measures; completed improvements were not announced.",
+      "th": "นายกเมืองพัทยาพบผู้บัญชาการตำรวจภูธรภาค 2 เมื่อ 20 ตุลาคม หารือกล้อง CCTV การจราจรและการป้องกันน้ำท่วม ตามข่าว Pattaya Mail วันที่ 21 ตุลาคม เป็นการประสานงานและหารือแนวทาง ยังไม่มีประกาศว่าการปรับปรุงเสร็จแล้ว",
       "sources": [
-        "https://thepattayanews.com/2026/10/17/pattaya-international-jazz-festival-2026-set-for-november-6-7-on-pattaya-beach-free-entry/",
-        "https://www.pattayamail.com/latestnews/news/pattaya-jazz-festival-is-coming-soon-with-global-stars-and-free-concerts-567512"
+        "https://www.pattayamail.com/news/pattaya-mayor-meets-region-2-police-chief-to-discuss-cctv-traffic-and-flooding-569211"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-20T08:12:21+07:00",
-        "sourceUrl": "https://thepattayanews.com/2026/10/17/pattaya-international-jazz-festival-2026-set-for-november-6-7-on-pattaya-beach-free-entry/",
-        "summary": "The 17 October 18:37 report is about 62 hours old and is deliberately selected from the permitted 72-hour window. No comparable public engagement counter was exposed on The Pattaya News page. An earlier independent Pattaya Mail announcement dated 7 October confirms dates and free entry; it displayed 1,855 views and 0 comments, but its much greater age makes it unsuitable for a fresh-news ranking. Cross-outlet coverage is local, not broad international coverage. No citywide discussion rank is claimed; the older corroborating source is not presented as new news."
+        "observedAt": "2026-10-21T01:07:40.186Z",
+        "sourceUrl": "https://www.pattayamail.com/news/pattaya-mayor-meets-region-2-police-chief-to-discuss-cctv-traffic-and-flooding-569211",
+        "summary": "Pattaya Mail displayed a 0 comment link and an unlabelled number 255; no assumption is made about the latter's meaning. No independent discussion rank was verified. Selected as a fresh public-service report, not as a proven most-discussed story. Meeting date 20 October and article publication date 21 October are distinguished."
       }
     }
   ],
