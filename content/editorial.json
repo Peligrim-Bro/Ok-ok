@@ -1,95 +1,91 @@
 {
-  "verifiedAt": "2026-10-21",
+  "verifiedAt": "2026-10-22",
   "news": [
     {
       "category": "world",
-      "when": "20.10 · 🌍",
-      "href": "https://apnews.com/article/orionid-meteor-shower-shooting-stars-6c4b33c54257f27108cb952196827180",
-      "publishedAt": "2026-10-20",
+      "when": "21.10 · 🌍",
+      "href": "https://wmo.int/resources/publication-series/global-seasonal-climate-updates/gscu-ndj2026",
+      "publishedAt": "2026-10-21",
       "nonWar": true,
-      "ru": "В ночь 21–22 октября ожидается пик Орионид — метеорного потока из пыли кометы Галлея. NASA и AMS указывают обычный максимум около 10–20 метеоров в час в тёмном небе; яркая Луна и облака могут помешать. Наблюдать лучше после полуночи вдали от освещения.",
-      "en": "The Orionid meteor shower, produced by debris from Halley's Comet, peaks overnight on 21–22 October. NASA and AMS give typical dark-sky rates of about 10–20 meteors per hour; bright moonlight and clouds may reduce visibility. Look after midnight away from artificial lights.",
-      "th": "ฝนดาวตกโอไรออนิดส์จากเศษฝุ่นดาวหางฮัลลีย์จะมีช่วงสูงสุดคืน 21–22 ตุลาคม NASA และ AMS ระบุอัตราปกติราว 10–20 ดวงต่อชั่วโมงในท้องฟ้ามืด แต่แสงจันทร์และเมฆอาจบดบัง ควรดูหลังเที่ยงคืนในที่ห่างจากแสงไฟ",
+      "ru": "ВМО: Эль-Ниньо усилится, аномалия воды в зоне Niño 3.4 может достичь +3,8 °C в ноябре–январе. Это сезонный, не локальный прогноз.",
+      "en": "WMO says El Niño will strengthen; the Niño 3.4 sea anomaly may reach +3.8°C in November–January. This is a seasonal, not local, forecast.",
+      "th": "WMO คาดว่าเอลนีโญจะแรงขึ้น อุณหภูมิน้ำเขต Niño 3.4 อาจสูงกว่าปกติ 3.8 องศาเซลเซียสช่วงพฤศจิกายน–มกราคม เป็นแนวโน้มตามฤดูกาล",
       "sources": [
-        "https://apnews.com/article/orionid-meteor-shower-shooting-stars-6c4b33c54257f27108cb952196827180",
-        "https://science.nasa.gov/solar-system/meteors-meteorites/orionids/",
-        "https://www.amsmeteors.org/calendar/",
-        "https://www.wired.com/story/how-to-see-the-orionid-meteor-shower-and-other-upcoming-astronomical-events"
+        "https://wmo.int/resources/publication-series/global-seasonal-climate-updates/gscu-ndj2026",
+        "https://www.reuters.com/business/environment/el-nio-could-be-strongest-40-years-un-weather-agency-chief-says-2026-10-21/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-21T01:07:40.186Z",
-        "sourceUrl": "https://apnews.com/article/orionid-meteor-shower-shooting-stars-6c4b33c54257f27108cb952196827180",
-        "summary": "No comparable public discussion counters were exposed for this story. AP and WIRED each published coverage on 20 October; NASA and AMS independently confirm the peak and viewing conditions. This is qualitative cross-outlet coverage, not a global popularity ranking. publishedAt is the AP report date, not the date of the older NASA reference page."
+        "observedAt": "2026-10-22T06:50:04+07:00",
+        "sourceUrl": "https://wmo.int/resources/publication-series/global-seasonal-climate-updates/gscu-ndj2026",
+        "summary": "No comparable counters. Reuters covered WMO on 21 October; qualitative evidence, not a global rank. +3.8°C is the Niño 3.4 sea anomaly."
       }
     },
     {
       "category": "thailand",
       "when": "21.10 · 🇹🇭",
-      "href": "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-thailand-no-9-268-2026",
+      "href": "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/553005",
       "publishedAt": "2026-10-21",
-      "ru": "TMD в предупреждении от 21 октября ожидает сильные дожди 21–25 октября на юге и усиление осадков на востоке, в Бангкоке и ряде других регионов. Возможны внезапные паводки и оползни; в грозах волны могут превышать 3 м. Перед поездкой проверяйте местный прогноз.",
-      "en": "TMD's 21 October advisory warns of heavy rain in the South and increased rainfall in the East, Bangkok and several other regions during 21–25 October. Flash floods and landslides are possible; waves may exceed three metres in thunderstorms. Check local forecasts before travelling.",
-      "th": "ประกาศกรมอุตุนิยมวิทยาวันที่ 21 ตุลาคมเตือนฝนหนักภาคใต้ และฝนเพิ่มในภาคตะวันออก กรุงเทพฯ และบางภูมิภาคช่วง 21–25 ตุลาคม เสี่ยงน้ำท่วมฉับพลันและดินถล่ม บริเวณฝนฟ้าคะนองคลื่นอาจสูงเกิน 3 เมตร ควรตรวจพยากรณ์พื้นที่ก่อนเดินทาง",
+      "ru": "В парке Пху Хин Чом Тхат — Пху Пхрабат подтвердили шесть следов теропода возрастом около 120 млн лет. Участок временно закрыт.",
+      "en": "Six 120-million-year-old theropod footprints were confirmed in Phu Hin Chom That–Phu Phrabat park. The site is temporarily closed.",
+      "th": "ยืนยันรอยเท้าเทอโรพอด 6 รอย อายุราว 120 ล้านปี ที่อุทยานภูหินจอมธาตุ–ภูพระบาท พื้นที่ปิดชั่วคราว",
       "sources": [
-        "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-thailand-no-9-268-2026",
-        "https://www.nationthailand.com/news/general/40072548"
+        "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/553005"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-21T01:07:40.186Z",
-        "sourceUrl": "https://www.nationthailand.com/news/general/40072548",
-        "summary": "The Nation's article displayed this weather story second in its Most Viewed list, behind the fuel-price story. This is one outlet's displayed ranking, not a Thai national ranking or a comment count. TMD advisory No.9 is dated 21 October at 05:00; The Nation page has a 20 October header despite describing the newer advisory, so the primary TMD publication date is used."
+        "observedAt": "2026-10-22T06:50:04+07:00",
+        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/553005",
+        "summary": "PRD: 87 views versus 74 for the same-day cane report; no comment totals or independent metrics. Not a national rank."
       }
     },
     {
       "category": "thailand",
       "when": "21.10 · 🇹🇭",
-      "href": "https://www.nationthailand.com/news/general/40072549",
+      "href": "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/553006",
       "publishedAt": "2026-10-21",
-      "ru": "С 05:00 21 октября PTT Station и Bangchak повысили цены на ряд марок топлива на 0,60 бата за литр. Рост касается обычного дизеля и газохола 91/95; E20 и B20 оставлены без изменения. Цена на конкретной АЗС может отличаться от опубликованной для Бангкока.",
-      "en": "From 05:00 on 21 October, PTT Station and Bangchak raised selected fuel prices by 0.60 baht per litre, including regular diesel and gasohol 91/95. E20 and B20 were unchanged. Prices at individual stations may differ from the published Bangkok rates.",
-      "th": "ตั้งแต่ 05.00 น. วันที่ 21 ตุลาคม PTT Station และบางจากปรับราคาน้ำมันบางชนิดขึ้นลิตรละ 0.60 บาท รวมดีเซลธรรมดาและแก๊สโซฮอล์ 91/95 ส่วน E20 และ B20 ไม่เปลี่ยนแปลง ราคาที่แต่ละสถานีอาจต่างจากราคากรุงเทพฯ ที่ประกาศ",
+      "ru": "Тайские университеты передали 500 тростей со световым и звуковым предупреждением об электричестве в паводковой воде для зон риска.",
+      "en": "Thai universities delivered 500 canes with light and sound warnings for electricity in floodwater, for use in high-risk areas.",
+      "th": "มหาวิทยาลัยไทยส่งมอบไม้เท้า 500 อัน เตือนแสงและเสียงเมื่อพบไฟฟ้ารั่วในน้ำท่วม สำหรับพื้นที่เสี่ยง",
       "sources": [
-        "https://www.nationthailand.com/news/general/40072549",
-        "https://en.thairath.co.th/money/economics/thai_economics/2967386"
+        "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/553006"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-21T01:07:40.186Z",
-        "sourceUrl": "https://www.nationthailand.com/news/general/40072549",
-        "summary": "Displayed first in The Nation's Most Viewed list, ahead of the weather advisory. This is a single-outlet reading rank, not a comment total or nationwide rank. Independent Thairath reporting dated 20 October confirms the 21 October 05:00 increase. Bangchak's primary oil-price page was opened but exposed no usable current price table; no precise E20 price is repeated because the outlets differ on that figure."
+        "observedAt": "2026-10-22T06:50:04+07:00",
+        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/553006",
+        "summary": "PRD: 74 views versus 87 for the same-day dinosaur report; no cross-site metric. Not a national rank."
       }
     },
     {
       "category": "pattaya",
-      "when": "21.10 · Pattaya",
-      "href": "https://www.pattayamail.com/news/pattaya-clears-jomtien-footpaths-of-overgrown-branches-and-rubbish-569224",
-      "publishedAt": "2026-10-21",
-      "ru": "Муниципальные службы расчистили тротуары на Второй улице Джомтьена у сои 7: убрали мусор и обрезали ветви, мешавшие проходу. По сообщению Pattaya Mail от 21 октября, о подобных проблемах можно сообщать в мэрию по номеру 1337.",
-      "en": "Municipal teams cleared rubbish and trimmed branches obstructing footpaths on Jomtien Second Road near Soi 7. Pattaya Mail's 21 October report says residents can report similar local problems to City Hall on 1337.",
-      "th": "เจ้าหน้าที่เมืองพัทยาเก็บขยะและตัดกิ่งไม้ที่กีดขวางทางเท้าบนถนนจอมเทียนสายสอง ใกล้ซอยจอมเทียน 7 ตามรายงาน Pattaya Mail วันที่ 21 ตุลาคม ประชาชนแจ้งปัญหาลักษณะนี้ต่อเมืองพัทยาได้ที่ 1337",
+      "when": "22.10 · Pattaya",
+      "href": "https://www.pattayamail.com/news/pattaya-motorcycle-taxi-drivers-question-dark-blue-vests-over-night-safety-569306",
+      "publishedAt": "2026-10-22",
+      "ru": "Водители мототакси просят пересмотреть тёмно-синие жилеты из-за видимости ночью. Сравнение не было стандартным тестом; решения властей нет.",
+      "en": "Motorcycle-taxi drivers want dark-blue vests reconsidered over night visibility. The comparison was not a standard test; no official decision.",
+      "th": "วินจักรยานยนต์ขอทบทวนเสื้อกั๊กสีน้ำเงินเข้มเพราะมองเห็นยากกลางคืน การเปรียบเทียบไม่ใช่การทดสอบมาตรฐาน และยังไม่มีมติทางการ",
       "sources": [
-        "https://www.pattayamail.com/news/pattaya-clears-jomtien-footpaths-of-overgrown-branches-and-rubbish-569224"
+        "https://www.pattayamail.com/news/pattaya-motorcycle-taxi-drivers-question-dark-blue-vests-over-night-safety-569306"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-21T01:07:40.186Z",
-        "sourceUrl": "https://www.pattayamail.com/news/pattaya-clears-jomtien-footpaths-of-overgrown-branches-and-rubbish-569224",
-        "summary": "Pattaya Mail displayed a 0 comment link and an unlabelled number 281; the latter is not treated as a verified view or share count. No comparable independent discussion metric was found. Selected for fresh, practical local relevance; this report alone does not establish broad discussion."
+        "observedAt": "2026-10-22T06:50:04+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/pattaya-motorcycle-taxi-drivers-question-dark-blue-vests-over-night-safety-569306",
+        "summary": "Pattaya Mail: 245 views/0 comments versus 237/0 and 221/0. Early unequal-exposure counters; no independent metric or city rank."
       }
     },
     {
       "category": "pattaya",
-      "when": "21.10 · Pattaya",
-      "href": "https://www.pattayamail.com/news/pattaya-mayor-meets-region-2-police-chief-to-discuss-cctv-traffic-and-flooding-569211",
-      "publishedAt": "2026-10-21",
-      "ru": "Мэр Паттайи и глава полиции региона 2 обсудили 20 октября камеры наблюдения, пробки и борьбу с подтоплениями. Pattaya Mail сообщил об этом 21 октября. Речь о координации ведомств и предлагаемых мерах; завершённые улучшения пока не объявлены.",
-      "en": "Pattaya's mayor and the Region 2 police chief met on 20 October to discuss CCTV, traffic and flood prevention, Pattaya Mail reported on 21 October. The meeting concerned coordination and proposed measures; completed improvements were not announced.",
-      "th": "นายกเมืองพัทยาพบผู้บัญชาการตำรวจภูธรภาค 2 เมื่อ 20 ตุลาคม หารือกล้อง CCTV การจราจรและการป้องกันน้ำท่วม ตามข่าว Pattaya Mail วันที่ 21 ตุลาคม เป็นการประสานงานและหารือแนวทาง ยังไม่มีประกาศว่าการปรับปรุงเสร็จแล้ว",
+      "when": "22.10 · Pattaya",
+      "href": "https://www.pattayamail.com/news/pattaya-prepares-fire-safety-drills-for-soi-6-entertainment-area-569311",
+      "publishedAt": "2026-10-22",
+      "ru": "В Soi 6 готовят пожарные учения: штабное — 28 октября, эвакуационное — 29 октября. Ограничения движения объявят заранее.",
+      "en": "Soi 6 fire drills are planned: a tabletop exercise on 28 October and evacuation on 29 October. Traffic restrictions will be announced.",
+      "th": "ซอย 6 เตรียมซ้อมดับเพลิงวันที่ 28 ตุลาคม และอพยพวันที่ 29 ตุลาคม พร้อมแจ้งข้อจำกัดการจราจร",
       "sources": [
-        "https://www.pattayamail.com/news/pattaya-mayor-meets-region-2-police-chief-to-discuss-cctv-traffic-and-flooding-569211"
+        "https://www.pattayamail.com/news/pattaya-prepares-fire-safety-drills-for-soi-6-entertainment-area-569311"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-21T01:07:40.186Z",
-        "sourceUrl": "https://www.pattayamail.com/news/pattaya-mayor-meets-region-2-police-chief-to-discuss-cctv-traffic-and-flooding-569211",
-        "summary": "Pattaya Mail displayed a 0 comment link and an unlabelled number 255; no assumption is made about the latter's meaning. No independent discussion rank was verified. Selected as a fresh public-service report, not as a proven most-discussed story. Meeting date 20 October and article publication date 21 October are distinguished."
+        "observedAt": "2026-10-22T06:50:04+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/pattaya-prepares-fire-safety-drills-for-soi-6-entertainment-area-569311",
+        "summary": "Pattaya Mail: 221 views/0 comments versus 245/0 and 237/0. No independent metric; practical selection, not a city rank."
       }
     }
   ],
@@ -187,5 +183,5 @@
       "verifiedAt": "2026-10-19"
     }
   ],
-  "selection": "Exactly 1 non-war world, 2 Thailand and 2 Pattaya stories reviewed 2026-10-20 Asia/Bangkok. Four selected source pages are dated 19 October; the jazz report is 17 October 18:37, about 62 hours old, included under the allowed 72-hour window because sufficiently verified fresh local topics and comparable counters were limited. No duplicated story between categories. Metrics observed at 08:12 local time: Thai PBS World weekly rank 5 for nominee checks; PRD 227 versus 147 views; Pattaya Mail 1707/0 versus same-date sanitation 977/0. Counters differ in age, platform and exposure and are not combined into absolute ranks. Broad independent coverage could not be established for the exact tourism statistics release or the local festival; limitations and related-source independence are explicit. The UK letter was written 30 July but published 19 October; recommendations are not adopted policy. Reviewed official Police Region 9 cyber alerts (latest visible 17 October), Thai Police Online, fresh police-related reporting and targeted Thai/English searches. A 19 October youth/mule-account report lacked independently verified official/corroborating evidence in this review and was not automatically added. No new scam card met the publication threshold; all four active cards and their original dates remain unchanged. Only content/editorial.json changes. No Telegram news sending."
+  "selection": "Reviewed 2026-10-22 Asia/Bangkok: 1 world, 2 Thailand, 2 Pattaya; sources dated 21–22 October. Metrics are limited in discussionEvidence. The 19 October ACSC item describes established online-shopping fraud rather than a new scheme, so no card was added; four active cards and dates remain unchanged. No Telegram sending."
 }
