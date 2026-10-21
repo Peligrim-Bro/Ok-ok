@@ -16,6 +16,7 @@ Current rules consolidated on 2026-10-20. Later explicit owner decisions superse
 - Chat and contact: [docs/FEATURE_RULES.md#chat-and-contact](docs/FEATURE_RULES.md#chat-and-contact)
 - Partners, referrals and editorial integrity: [docs/FEATURE_RULES.md#partners-referrals-and-editorial-integrity](docs/FEATURE_RULES.md#partners-referrals-and-editorial-integrity)
 - Payments and persistent state: [docs/FEATURE_RULES.md#payments-and-persistent-state](docs/FEATURE_RULES.md#payments-and-persistent-state)
+- Telegram channel, reviewed media, interactions and delivery receipts: [CHANNEL_PUBLISHING.md](CHANNEL_PUBLISHING.md) and [docs/TELEGRAM_STANDARD.md](docs/TELEGRAM_STANDARD.md).
 - Historical designs: inactive: [docs/FEATURE_RULES.md#historical-designs-inactive](docs/FEATURE_RULES.md#historical-designs-inactive)
 
 ## Project, authorization and sources

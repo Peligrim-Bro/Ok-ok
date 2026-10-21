@@ -6,11 +6,11 @@ const realFetch=globalThis.fetch;
 afterEach(()=>globalThis.fetch=realFetch);
 const jpeg=new Uint8Array([255,216,255,217]);
 const env={TG_BOT_TOKEN:'test-secret',TG_CHAT_ID:'123',ASSETS:{fetch:async()=>new Response(jpeg,{headers:{'content-type':'image/jpeg'}})}};
-function decode(body){return body instanceof FormData?{chat_id:Number(body.get('chat_id')),caption:body.get('caption'),photo:body.get('photo')}:JSON.parse(body);}
+function decode(body){return body instanceof FormData?{chat_id:Number(body.get('chat_id')),caption:body.get('caption'),photo:body.get('photo'),caption_entities:body.get('caption_entities')?JSON.parse(body.get('caption_entities')):undefined,reply_markup:body.get('reply_markup')?JSON.parse(body.get('reply_markup')):undefined}:JSON.parse(body);}
 function mock(fail=false){const calls=[];globalThis.fetch=async(url,init)=>{
  const method=url.split('/').pop();calls.push({method,body:decode(init.body)});
  if(fail&&method==='sendMessage')throw Error('timeout');
- const result=method==='getMe'?{id:456,username:'Aibotadam_bot'}:method==='getChat'?{id:-100123,type:'channel',username:'PattayaOk_Ok'}:method==='getChatMember'?{status:'administrator',can_post_messages:true}:{message_id:999};
+ const result=method==='getMe'?{id:456,username:'Aibotadam_bot'}:method==='getChat'?{id:-100123,type:'channel',username:'PattayaOk_Ok'}:method==='getChatMember'?{status:'administrator',can_post_messages:true}:{message_id:999,chat:{id:JSON.parse(typeof init.body==='string'?init.body:'{}').chat_id||-100123,type:'channel'}};
  return Response.json({ok:true,result});};return calls;}
 function store(){const map=new Map();const s={get:async k=>map.get(k),put:async(k,v)=>map.set(k,v),transaction:async f=>f(s)};return s;}
 const req=action=>new Request('https://internal',{method:'POST',body:JSON.stringify(action)});
@@ -80,4 +80,36 @@ test('photo file upload leaves Content-Type to multipart encoder',async()=>{
  mock();const wrapped=globalThis.fetch;let observed;
  globalThis.fetch=async(url,init)=>{if(url.endsWith('/sendPhoto'))observed=init;return wrapped(url,init);};
  const d=new ChannelPublisher({storage:store()},env);await d.fetch(req({action:'start'}));await d.fetch(req({action:'tick',posts:[comic]}));assert.ok(observed.body instanceof FormData);assert.equal(observed.headers,undefined);
+});
+
+test('success requires a positive message ID and the exact channel receipt; no blind retry',async()=>{
+ for(const result of [{message_id:0,chat:{id:-100123,type:'channel'}},{message_id:2,chat:{id:-100999,type:'channel'}},{message_id:2},{message_id:2,chat:{id:-100123,type:'group'}}]){
+  const calls=mock(),original=globalThis.fetch,storage=store();
+  globalThis.fetch=async(url,init)=>url.endsWith('/sendMessage')&&JSON.parse(init.body).chat_id<0
+   ?(calls.push({method:'invalid-receipt'}),Response.json({ok:true,result})):original(url,init);
+  const d=new ChannelPublisher({storage},env);await d.fetch(req({action:'start'}));
+  await d.fetch(req({action:'tick',posts:[post]}));await d.fetch(req({action:'tick',posts:[post]}));
+  assert.equal((await storage.get('post:'+post.id)).state,'needs_review');
+  assert.equal(calls.filter(c=>c.method==='invalid-receipt').length,1);
+ }
+});
+test('delivery keeps the channel, planned time and delay without changing owner routing',async()=>{
+ const calls=mock(),storage=store(),d=new ChannelPublisher({storage},env);
+ await d.fetch(req({action:'start'}));await d.fetch(req({action:'tick',posts:[post]}));
+ const r=await storage.get('post:'+post.id);
+ assert.equal(r.chatId,-100123);assert.equal(r.messageId,999);assert.equal(r.publishAt,post.publishAt);
+ assert(Number.isFinite(r.delayMinutes)&&r.delayMinutes>=0);assert.equal(env.TG_CHAT_ID,'123');
+ assert.equal(calls.filter(c=>c.method==='sendMessage'&&c.body.chat_id<0).length,1);
+});
+test('copy buttons, links and UTF-16 entities survive both text and photo delivery',async()=>{
+ for(const photo of [undefined,comic.photo]){
+  const p={...post,photo,text:'🌴 Could I have the sauce on the side, please?\nhttps://ok-ok.click/?ref=one&lang=ru',
+   copyText:'Could I have the sauce on the side, please?',buttons:[{text:'Открыть сайт',url:'https://ok-ok.click/?ref=one&lang=ru'}],formatting:[{type:'bold',text:'Could I have the sauce on the side, please?'}]};
+  const calls=mock(),d=new ChannelPublisher({storage:store()},env);await d.fetch(req({action:'start'}));await d.fetch(req({action:'tick',posts:[p]}));
+  const body=calls.find(c=>c.method===(photo?'sendPhoto':'sendMessage')).body;
+  assert.equal(body.reply_markup.inline_keyboard[0][0].copy_text.text,p.copyText);
+  assert.equal(body.reply_markup.inline_keyboard[1][0].url,p.buttons[0].url);
+  assert.equal((body.entities||body.caption_entities)[0].offset,3);
+  assert.equal(body.parse_mode,undefined);
+ }
 });

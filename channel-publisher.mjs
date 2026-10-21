@@ -1,5 +1,6 @@
 import {createHash, timingSafeEqual} from 'node:crypto';
 import {CHANNEL, POSTS} from './channel-posts.mjs';
+import {channelPresentation} from './channel-presentation.mjs';
 const json = (v, status=200) => new Response(JSON.stringify(v), {status,headers:{'content-type':'application/json','cache-control':'no-store'}});
 const hash = text => createHash('sha256').update(text).digest('hex');
 async function api(env, method, body) {
@@ -20,6 +21,9 @@ async function photoBody(env, channelId, post) {
   if(!bytes.byteLength||bytes.byteLength>10000000)throw Error('comic_asset_size');
   const body=new FormData();
   body.set('chat_id',String(channelId));body.set('caption',post.text);
+  const presentation=channelPresentation(post);
+  if(presentation.entities)body.set('caption_entities',JSON.stringify(presentation.entities));
+  if(presentation.reply_markup)body.set('reply_markup',JSON.stringify(presentation.reply_markup));
   body.set('photo',new Blob([bytes],{type}),new URL(post.photo).pathname.split('/').pop());
   return body;
 }
@@ -37,6 +41,7 @@ export function validatePosts(posts) {
   for(const p of posts) {
     if(!/^[a-z0-9-]{3,80}$/.test(p.id)||ids.has(p.id)||typeof p.text!=='string'||!p.text.trim()||p.text.length>4000||!Number.isFinite(Date.parse(p.publishAt))||!Number.isFinite(Date.parse(p.expiresAt))||Date.parse(p.expiresAt)<=Date.parse(p.publishAt)||typeof p.approved!=='boolean') throw Error('invalid_channel_post');
     if(p.photo !== undefined && (typeof p.photo!=='string'||!/^https:\/\/www\.ok-ok\.click\/assets\/channel\/[a-z0-9-]+\.(?:png|jpg)$/.test(p.photo)||p.text.length>1024)) throw Error('invalid_channel_photo');
+    channelPresentation(p);
     ids.add(p.id);
   }
   return posts;
@@ -48,7 +53,14 @@ export class ChannelPublisher {
   async fetch(request){
     if(request.method!=='POST')return json({error:'method'},405);
     const {action,posts=POSTS}=await request.json();
-    if(action==='status')return json({enabled:!!await this.ctx.storage.get('enabled')});
+    if(action==='status'){
+      const records=await Promise.all(POSTS.map(async p=>({id:p.id,...await this.ctx.storage.get('post:'+p.id)})));
+      const sent=records.filter(r=>r.state==='sent');
+      return json({enabled:!!await this.ctx.storage.get('enabled'),sent:sent.length,
+        needsReview:records.filter(r=>r.state==='needs_review').map(r=>r.id),
+        // Old records remain untouched; missing chatId is explicitly unverified.
+        receipts:sent.sort((a,b)=>b.at-a.at).slice(0,8).map(r=>({...r,channelVerified:Number.isSafeInteger(r.chatId)&&r.chatId<0}))});
+    }
     if(action==='stop'){await this.ctx.storage.put('enabled',false);return json({enabled:false});}
     if(action==='start'){
       await checkRights(this.env);
@@ -74,8 +86,11 @@ export class ChannelPublisher {
         const channelId=await checkRights(this.env);
         const result=p.photo
           ? await api(this.env,'sendPhoto',await photoBody(this.env,channelId,p))
-          : await api(this.env,'sendMessage',{chat_id:channelId,text:p.text,link_preview_options:{is_disabled:false}});
-        await this.ctx.storage.put(key,{state:'sent',messageId:result.message_id,at:Date.now()});sent++;
+          : await api(this.env,'sendMessage',{chat_id:channelId,text:p.text,link_preview_options:{is_disabled:false},...channelPresentation(p)});
+        if(!Number.isSafeInteger(result?.message_id)||result.message_id<=0||result.chat?.id!==channelId||result.chat?.type!=='channel')throw Error('invalid_delivery_receipt');
+        const deliveredAt=Date.now();
+        await this.ctx.storage.put(key,{state:'sent',messageId:result.message_id,chatId:channelId,
+          at:deliveredAt,publishAt:p.publishAt,delayMinutes:Math.max(0,(deliveredAt-Date.parse(p.publishAt))/60000)});sent++;
       }catch{
         await this.ctx.storage.put(key,{state:'needs_review',at:Date.now()});
         // No secrets, body dumps or automatic repost on ambiguous delivery.
@@ -99,9 +114,14 @@ export async function channelWebhook(request,env){
     if(!env.CHANNEL_PUBLISHER)throw Error('not_configured');
     const stub=env.CHANNEL_PUBLISHER.get(env.CHANNEL_PUBLISHER.idFromName('pattaya-ok-ok-v1'));
     if(cmd==='/channel'){
-      await checkRights(env);
+      const channelId=await checkRights(env);
       const state=await (await stub.fetch(new Request('https://internal',{method:'POST',body:JSON.stringify({action:'status'})}))).json();
-      text='Adam может публиковать в '+CHANNEL+'. Очередь '+(state.enabled?'включена':'выключена')+'. /channel_start — включить; /channel_stop — остановить. Публикуются только одобренные записи с заданным временем.';
+      const latest=state.receipts?.[0];
+      text='Adam может публиковать в '+CHANNEL+' (chat_id '+channelId+'). Очередь '+(state.enabled?'включена':'выключена')+'. /channel_start — включить; /channel_stop — остановить. Публикуются только одобренные записи с заданным временем.'+
+        '\nЗаписей отправлено: '+state.sent+'. Требуют сверки: '+state.needsReview.length+'.'+
+        (latest?'\nПоследняя запись: '+latest.id+', message_id '+latest.messageId+'.'+
+          (latest.channelVerified?' chat_id '+latest.chatId+'.':' Старый журнал: chat_id не сохранён.')+
+          (Number.isFinite(latest.delayMinutes)?' Задержка '+Math.round(latest.delayMinutes)+' мин.':''):'\nКвитанций доставки пока нет.');
     }else{
       await stub.fetch(new Request('https://internal',{method:'POST',body:JSON.stringify({action:cmd==='/channel_start'?'start':'stop'})}));
       text=cmd==='/channel_start'?'Очередь '+CHANNEL+' включена. Только одобренные записи; существующие публикации не повторяются.':'Очередь '+CHANNEL+' остановлена. Уже отправленная публикация или начатая отправка не отменяются.';
