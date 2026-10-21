@@ -16,7 +16,7 @@ for(const [width,dpr,variant] of [[390,1,480],[390,2,960],[768,1,960]]){
    await img.scrollIntoViewIfNeeded();
    await expect.poll(()=>img.evaluate(n=>n.complete&&n.naturalWidth>0&&n.currentSrc.includes('/assets/responsive/'))).toBe(true);
    const src=await img.evaluate(n=>n.currentSrc);
-   expect(src).toMatch(new RegExp('/'+name+'-'+variant+'-[a-f0-9]{12}\\.webp$'));
+   expect(src).toMatch(new RegExp('/assets/responsive/[a-f0-9]{12}/'+name+'-'+variant+'\\.webp$'));
    expect(requests).not.toContain('/assets/images/places/'+original);
    await expect(img).toHaveAttribute('loading','lazy');
    expect(await img.evaluate(n=>Math.abs(n.getBoundingClientRect().width-Math.min(innerWidth-34,526)))).toBeLessThan(2);
@@ -26,7 +26,7 @@ for(const [width,dpr,variant] of [[390,1,480],[390,2,960],[768,1,960]]){
   await page.locator('#langBtn').click();await page.locator('#langMask [data-lang="th"]').click();
   const img=page.locator('.card .pic img[src="assets/images/places/sky.jpg"]');
   await img.scrollIntoViewIfNeeded();
-  await expect(img).toHaveAttribute('srcset',/sky-480-.*480w, .*sky-960-.*960w/);
+  await expect(img).toHaveAttribute('srcset',/sky-480.webp 480w, .*sky-960.webp 960w/);
   await img.click();
   const cover=page.locator('#sheet .cover img');
   await expect(cover).toHaveAttribute('src','assets/images/places/sky.jpg');
