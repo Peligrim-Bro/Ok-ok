@@ -2,7 +2,7 @@ const {test,expect}=require('@playwright/test');
 const photos=[['sky','sky.jpg'],['harlans','harlans.jpg'],['cabbages','cabbages.jpg'],['musselana','musselana-shabu/1.webp']];
 for(const [width,dpr,variant] of [[390,1,480],[390,2,960],[768,1,960]]){
  test(`responsive photos ${width}px DPR ${dpr}: selected bytes, rerender and original details`,async({browser})=>{
-  const context=await browser.newContext({viewport:{width,height:844},deviceScaleFactor:dpr,reducedMotion:'reduce'});
+  const context=await browser.newContext({baseURL:test.info().project.use.baseURL,viewport:{width,height:844},deviceScaleFactor:dpr,reducedMotion:'reduce'});
   const page=await context.newPage();
   await page.addInitScript(()=>{
    localStorage.setItem('pok-lang','en');localStorage.setItem('pok-lang-set','1');localStorage.setItem('pok-install-seen','1');
