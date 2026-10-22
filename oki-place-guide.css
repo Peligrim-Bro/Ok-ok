@@ -1,0 +1,10 @@
+.oki-guide{margin:12px 0;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+.oki-guide[hidden]{display:none}
+.oki-guide>summary{padding:14px;min-height:44px;box-sizing:border-box;cursor:pointer;font-weight:800;overflow-wrap:anywhere}
+.oki-guide-body{padding:0 12px 12px}
+.oki-guide fieldset{border:0;padding:0;margin:0 0 12px;display:flex;flex-wrap:wrap;gap:8px;min-width:0}
+.oki-guide legend{padding:10px 0;font-weight:700}
+.oki-guide .btn{min-height:44px;white-space:normal;overflow-wrap:anywhere}
+.oki-guide fieldset .btn{flex:1 1 120px}
+.oki-guide-body>button{margin:8px 8px 0 0}
+.oki-guide-results .holiday-result{min-width:0}
