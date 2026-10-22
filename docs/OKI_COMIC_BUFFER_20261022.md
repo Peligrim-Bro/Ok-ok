@@ -76,3 +76,11 @@ No ordinary post modified. Full initial/final audit logs are reproducible with
 `node scripts/audit-channel-queue.mjs --at 2026-10-22T10:03:10+07:00`.
 Local Git push lacks credentials; use authorized GitHub connector, never request
 or inspect tokens. Production remains unchanged pending PR checks.
+
+## Concurrent main integration
+
+Main advanced to e5efa367b730999b532956186d69f7b9d17f8c6f (PR 61, seven-day
+Oki absence) during successful comic CI 39715394602. All 341 screenshot views
+reviewed; Lighthouse 59–60/98/96/100. Preserve the separate approved change by
+merging current main into this branch; repeat required checks on combined output.
+Application/content files are disjoint. PR 62 retains final release evidence.
