@@ -38,4 +38,5 @@
     render();
   }
   window.OKOK_GUIDE=Object.freeze({mount,pick});
+  try{if(document.querySelector('#spinMask.on'))mount();}catch{}
 })();

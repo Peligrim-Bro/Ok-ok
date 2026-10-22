@@ -19,7 +19,7 @@ assert(html.includes(anchor),'Guide integration anchor missing');
 html=html.replace(anchor,anchor+'try{window.OKOK_GUIDE?.mount();}catch{}');
 const script=html.lastIndexOf('<script>',html.indexOf('const HOLIDAY_PLACES'));
 assert(script>=0,'Guide script anchor missing');
-html=html.slice(0,script)+'<script src="assets/'+stem+'.js"></script>'+html.slice(script);
+html=html.slice(0,script)+'<script defer src="assets/'+stem+'.js"></script>'+html.slice(script);
 html=html.replace('</head>','<link rel="stylesheet" href="assets/'+stem+'.css"></head>');
 writeFileSync(path,html);
 const swPath='site/public/sw.js',sw=readFileSync(swPath,'utf8');

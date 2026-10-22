@@ -2,14 +2,14 @@ const {test,expect}=require('@playwright/test');
 const wheel=require('../content/holiday-wheel.json');
 const food=wheel.filter(p=>p.category==='food');
 const initial={seen:[food[0].id],visited:[food[1].id],saved:[]};
-async function prepare(page,lang='ru',theme='dark'){
+async function prepare(page,lang='ru',theme='dark',waitUntil='domcontentloaded'){
  await page.setViewportSize({width:390,height:844});
  await page.emulateMedia({reducedMotion:'reduce'});
  await page.addInitScript(({lang,theme,initial})=>{
   localStorage.setItem('pok-lang',lang);localStorage.setItem('pok-lang-set','1');localStorage.setItem('pok-theme',theme);localStorage.setItem('pok-install-seen','1');
   if(!localStorage.getItem('okok-holiday-wheel'))localStorage.setItem('okok-holiday-wheel',JSON.stringify(initial));
  },{lang,theme,initial});
- await page.goto('/',{waitUntil:'domcontentloaded'});
+ await page.goto('/',{waitUntil});
 }
 async function choose(page){
  await page.locator('[data-spin="1"]').click();
@@ -44,6 +44,20 @@ test('missing optional guide script leaves the original wheel usable',async({pag
  await expect(page.locator('.oki-guide')).toHaveCount(0);
  await page.locator('#lever').click();await expect(page.locator('#spinResult .holiday-result')).toHaveCount(1);
  expect(errors).toEqual([]);
+});
+
+test('a stalled guide download does not block the site or the normal wheel',async({page})=>{
+ let release;
+ await page.route('**/assets/oki-place-guide-*.js',route=>new Promise(resolve=>{
+  release=async()=>{await route.abort();resolve();};
+ }));
+ try{
+  await prepare(page,'ru','dark','commit');
+  await page.locator('[data-spin="1"]').click();
+  await expect(page.locator('#lever')).toBeVisible();
+  await expect(page.locator('.oki-guide')).toHaveCount(0);
+ }finally{if(release)await release();}
+ await page.locator('#lever').click();await expect(page.locator('#spinResult .holiday-result')).toHaveCount(1);
 });
 
 test('the precached guide works offline and blocked storage never breaks navigation',async({page,context})=>{

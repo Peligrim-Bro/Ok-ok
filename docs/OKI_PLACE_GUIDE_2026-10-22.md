@@ -13,7 +13,8 @@ Showing ideas does not consume draw history. Existing save/visited actions are
 reused. RU/EN/TH and both themes supported; existing close control stays in charge.
 
 Failure boundaries: a missing guide script leaves the normal wheel available;
-the guide mounts through a guarded optional call after the existing UI renders.
+the guide loads with defer and mounts through a guarded optional call after the
+existing UI renders. A stalled optional download must not block the normal UI.
 Versioned JS/CSS are precached before normal release-cache finalization. Offline
 selection uses local data; external maps/sources still need connectivity.
 Storage failure uses the existing visible warning without blocking navigation.
@@ -22,9 +23,9 @@ No pet progress, payment, referral, Telegram or other-city changes.
 Current files: oki-place-guide.js/css, scripts/apply-oki-place-guide.mjs,
 tests/oki-place-guide.test.mjs and tests/oki-place-guide.spec.cjs, build import.
 Local build and 71 native tests passed on the final application source. Size:
-HTML 454,304 bytes, gzip 124,868, JavaScript 924,882, site 31,617,047; existing
+HTML 454,310 bytes, gzip 124,872, JavaScript 924,945, site 31,617,116; existing
 limits unchanged. New browser cases cover all languages/themes, preserved history,
-source/map/save actions, reachable close, missing helper, offline and blocked storage.
+source/map/save actions, reachable close, missing/stalled helper, offline and blocked storage.
 Required full browser suite, three Lighthouse
 runs and screenshot review must pass before main. Then check native Workers build,
 exact live source, guide assets and the 11 public release checks. Preserve this
