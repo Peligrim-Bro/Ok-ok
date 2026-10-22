@@ -32,6 +32,10 @@ authenticated owner's `/channel`; never replace TG_CHAT_ID (payment recipient).
   Several possible phrases require an editorial choice, not automatic guessing.
 - Use spoilers only for verified optional answers; three choices need three answers.
   Keep critical costs, addresses, risks and source links outside hidden regions.
+- iPhone/iPad observation from the source network on 22 October: tapping one
+  spoiler can reveal all spoilers in that message. Separate spoiler entities do
+  not prove independent opening. Use one spoiler for one quiz answer; for several
+  independent answers use separate expandable blocks and verify on the client.
 - Optional long explanations may expand; do not complicate a short post.
 - `channel-presentation.mjs` uses native entities instead of parsing arbitrary HTML:
   plaintext characters and link parameters remain unchanged; UTF-16 offsets are tested.
@@ -59,6 +63,15 @@ New entries inherit this typography through `channel-posts.mjs`; validate the
 finished `channelPresentation` output before approval. A second phrase in a post
 does not get copied automatically: the editor explicitly selected “No chilli,
 please.” for 23 October. The Russian translation stays visible.
+The 28 October evening language quiz has one optional answer under a spoiler;
+the prompt, choices, practical phrase reminder and site button stay visible.
+
+Carousels are a separate format: Telegram's official `InputRichBlockSlideshow`
+belongs to `sendRichMessage`, not `sendPhoto` or an album. The source network's
+current APPROVED_STANDARD still marks carousels as unconnected. Do not claim
+they are enabled here. A future implementation needs reviewed slide assets,
+validation, a single-message receipt and the same timeout/dedup protections;
+never automatically retry as a text/photo after an ambiguous send.
 
 This is the text layer of the common design, not completion of the illustration
 work. No AI image calls, paid service, extra workflow or public test is added.

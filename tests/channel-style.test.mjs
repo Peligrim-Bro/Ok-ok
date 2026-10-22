@@ -36,3 +36,15 @@ test('28 October ordinary slots are complete and never borrow an old comic',()=>
   for(const p of posts){assert.equal(p.approved,true);assert.equal(Date.parse(p.expiresAt)-Date.parse(p.publishAt),3*3600000);}
   assert.equal(new Set(POSTS.map(p=>p.id)).size,POSTS.length);
 });
+
+test('the language quiz hides one answer and leaves its action and site visible',()=>{
+  const p=POSTS.find(p=>p.id==='okok-bill-quiz-20261028');
+  const entities=channelPresentation(p).entities;
+  const spoilers=entities.filter(e=>e.type==='spoiler');
+  assert.equal(spoilers.length,1);
+  const hidden=p.text.slice(spoilers[0].offset,spoilers[0].offset+spoilers[0].length);
+  assert(hidden.startsWith('Б —'));
+  assert(!hidden.includes('https:'));
+  assert(p.text.indexOf('Коснись скрытого ответа:')<spoilers[0].offset);
+  assert(p.text.indexOf('https://ok-ok.click/')>spoilers[0].offset+spoilers[0].length);
+});

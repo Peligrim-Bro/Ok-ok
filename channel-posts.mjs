@@ -332,9 +332,10 @@ export const POSTS = [{
   text:'🗣 Адрес лучше записать, чем запомнить на слух\n\n“Could you write down the address, please?”\n«Не могли бы вы записать адрес, пожалуйста?»\n\nФраза пригодится, если тебе объясняют, где находится нужное место. Попроси также показать точку на карте: написанный адрес и вход в здание могут потребовать отдельного уточнения.\n\nКнопка ниже копирует английскую фразу без кавычек.\n\nМеста и полезные контакты:\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=written_address_20261028'
 },
 {
-  id:'okok-useful-question-20261028', approved:true,
+  id:'okok-bill-quiz-20261028', approved:true,
   publishAt:'2026-10-28T19:30:00+07:00', expiresAt:'2026-10-28T22:30:00+07:00',
-  text:'💬 Как задать вопрос, на который проще ответить\n\nВместо «Куда сходить?» добавь три детали: район, сколько есть времени и что хочется — поесть, погулять или найти услугу. Если едете компанией, укажи, сколько вас.\n\nНапример: «Мы вдвоём в Джомтьене, есть два часа. Ищем место для спокойного обеда, желательно с парковкой».\n\nЭто пример запроса, а не обещание свободного столика. Для вопроса о самом проекте открой «Написать автору» на OK-OK.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=useful_question_20261028'
+  text:'🧩 Как попросить счёт по-английски?\n\nТы закончил обед и хочешь расплатиться. Какую фразу выберешь?\n\nА. Could we have the menu, please?\nБ. Could we have the bill, please?\nВ. Could we have some water, please?\n\nКоснись скрытого ответа:\nБ — “Could we have the bill, please?” означает «Можно нам счёт, пожалуйста?». Menu — меню, water — вода.\n\nЗапомни короткую связку: the bill — счёт за заказ.\n\nМеста для следующего обеда:\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=bill_quiz_20261028',
+  formatting:[{type:'spoiler',text:'Б — “Could we have the bill, please?” означает «Можно нам счёт, пожалуйста?». Menu — меню, water — вода.'}]
 }
 ];
 

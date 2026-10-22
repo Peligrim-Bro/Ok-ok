@@ -19,9 +19,14 @@ IDs, text, schedule, photos and dedup identities are preserved. Shared typograph
 also applies to future additions. Official source pages were opened on 22 October:
 https://www.nongnoochpattaya.com/en/dinosaur and
 https://www.thailandtravel.or.jp/art-in-paradise/ . No prices or hours added.
+Owner follow-up: add useful spoiler/carousel interactions. A one-answer English
+quiz now occupies the new 28 October evening text slot, without another message.
+Source-network inspection confirmed the iOS all-spoilers-open limitation and
+that its carousels are still documented as unconnected. Independent answers use
+expandable blocks; carousels remain separate future work, not a claimed release.
 
-Validation: local build passed with unchanged output budgets; 68 native tests
-passed, including three queue-style integration cases. Compared all 44 original
+Validation: local build passed with unchanged output budgets; 69 native tests
+passed, including four queue-style integration cases. Compared all 44 original
 posts against base main: IDs, text, approval, times and photo URLs are identical.
 Local logs: /tmp/okok-channel-build.log and /tmp/okok-channel-native.log.
 Release pending: run full browser suite and three Lighthouse runs before main;
