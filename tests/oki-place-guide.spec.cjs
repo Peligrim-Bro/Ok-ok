@@ -37,6 +37,8 @@ for(const lang of ['ru','en','th'])for(const theme of ['dark','light'])test(`Oki
  await page.locator('#spinClose').click();await expect(page.locator('#spinMask')).not.toHaveClass(/on/);
 });
 
+test.describe('optional module failures',()=>{
+test.use({serviceWorkers:'block'});
 test('missing optional guide script leaves the original wheel usable',async({page})=>{
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.route('**/assets/oki-place-guide-*.js',route=>route.abort());
@@ -49,15 +51,23 @@ test('missing optional guide script leaves the original wheel usable',async({pag
 test('a stalled guide download does not block the site or the normal wheel',async({page})=>{
  let release;
  await page.route('**/assets/oki-place-guide-*.js',route=>new Promise(resolve=>{
-  release=async()=>{await route.abort();resolve();};
+  release=async()=>{await route.continue();resolve();};
  }));
  try{
-  await prepare(page,'ru','dark','commit');
+  await prepare(page);
+  expect(release).toBeUndefined(); // No parser-blocking guide request at startup.
   await page.locator('[data-spin="1"]').click();
+  await expect.poll(()=>typeof release).toBe('function');
   await expect(page.locator('#lever')).toBeVisible();
   await expect(page.locator('.oki-guide')).toHaveCount(0);
+  await page.locator('#lever').click();await expect(page.locator('#spinResult .holiday-result')).toHaveCount(1);
+  await page.locator('[data-holiday-filter="saved"]').click();
  }finally{if(release)await release();}
- await page.locator('#lever').click();await expect(page.locator('#spinResult .holiday-result')).toHaveCount(1);
+ await expect(page.locator('.oki-guide')).toHaveCount(1);
+ await expect(page.locator('.oki-guide')).toBeHidden();
+ await page.locator('[data-holiday-filter="all"]').click();
+ await expect(page.locator('.oki-guide>summary')).toBeVisible();
+});
 });
 
 test('the precached guide works offline and blocked storage never breaks navigation',async({page,context})=>{
