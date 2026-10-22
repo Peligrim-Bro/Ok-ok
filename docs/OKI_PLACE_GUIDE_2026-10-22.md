@@ -15,7 +15,8 @@ reused. RU/EN/TH and both themes supported; existing close control stays in char
 Failure boundaries: a missing guide script leaves the normal wheel available;
 the guide loads with defer and mounts through a guarded optional call after the
 existing UI renders. A stalled optional download must not block the normal UI.
-Versioned JS/CSS are precached before normal release-cache finalization. Offline
+Styles ship inside the page, adding no blocking stylesheet request. The versioned
+deferred JS is precached before normal release-cache finalization. Offline
 selection uses local data; external maps/sources still need connectivity.
 Storage failure uses the existing visible warning without blocking navigation.
 No pet progress, payment, referral, Telegram or other-city changes.
@@ -23,10 +24,17 @@ No pet progress, payment, referral, Telegram or other-city changes.
 Current files: oki-place-guide.js/css, scripts/apply-oki-place-guide.mjs,
 tests/oki-place-guide.test.mjs and tests/oki-place-guide.spec.cjs, build import.
 Local build and 71 native tests passed on the final application source. Size:
-HTML 454,310 bytes, gzip 124,872, JavaScript 924,945, site 31,617,116; existing
+HTML 454,860 bytes, gzip 124,974, JavaScript 924,897, site 31,616,965; existing
 limits unchanged. New browser cases cover all languages/themes, preserved history,
 source/map/save actions, reachable close, missing/stalled helper, offline and blocked storage.
 Required full browser suite, three Lighthouse
 runs and screenshot review must pass before main. Then check native Workers build,
 exact live source, guide assets and the 11 public release checks. Preserve this
 checkpoint and the PR evidence if interrupted; main remains working until release.
+
+CI 39743861052 passed all 136 browser tests, including the nine helper cases,
+payment UI and three Lighthouse runs (65/60/62, accessibility 98, best practices
+96, SEO 100). Final stylesheet delivery was then simplified to inline CSS to
+remove any optional stylesheet download from startup. Repeat required release
+checks on that final output. Remaining proposed features are themed carousels,
+optional-answer travel quiz and a phrasebook; they are not claimed implemented.
