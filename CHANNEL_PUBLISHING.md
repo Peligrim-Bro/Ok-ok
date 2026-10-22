@@ -1,5 +1,46 @@
 # Telegram channel publishing
 
+## Owner standard transferred on 22 October 2026
+
+Read `docs/TELEGRAM_STANDARD.md` before editing queue content, illustrations or
+delivery. This adapts the owner's Telegram network handoff to this channel;
+tokens, identities, schedules and budgets of the other channels are not copied.
+Keep the existing stable post/content dedup records. Optional reviewed
+`copyText`, `buttons` and `formatting` fields affect presentation only, not the
+legacy content hash. `channel-presentation.mjs` validates them before sending.
+The two copy phrases for 27 October and the three site buttons preserve their
+original post IDs, text, dates and exact URLs. Already-sent slots do not resend.
+
+Native MessageEntity offsets use UTF-16 and leave the original text intact;
+HTML-looking input is literal, not executable Telegram markup. Supported optional
+formatting: bold, spoiler, expandable_blockquote, each naming one unique exact
+substring. No nesting or automatic hiding of sources/footers. Copy buttons copy
+one explicit phrase of at most 256 UTF-16 units actually present once in the post.
+URL buttons merge with copy buttons; callback buttons and external URL guessing
+are not supported. The feature is tested offline, not claimed as client-verified
+until an actual approved scheduled post and receipt can be observed.
+
+New successful sends require a positive message_id and the exact channel chat_id
+in Telegram's response. Receipts retain planned time, observed delivery time and
+delay in minutes. Old receipts are retained as-is and explicitly labelled when
+chat_id was not recorded. `/channel` is read-only and shows current rights,
+numeric channel ID, enablement, recent receipts and review count only to the
+authenticated owner. It does not post publicly or enable the queue.
+
+Run `node scripts/audit-channel-queue.mjs` for an offline seven-day slot/media
+report in `quality-reports/channel-readiness.json`. Exit 1 means known editorial
+gaps; it does not mean the live website is down. The report never sends anything
+or invents delivery. Exact-file hashes catch identical assets across history;
+they cannot certify that crops/recolours use a different original scene.
+
+Initial offline audit on 22 October 2026 (also checked at reference time
+07:30 Bangkok): 24 future approved entries,
+6 with available, different photo files, 18 ordinary entries without a separate
+illustration. All four slots of 28 October are missing, so the complete seven-day
+buffer is not ready. Delivery and runtime enablement remain unconfirmed without
+owner-only runtime evidence; public-channel access was unavailable to the checker.
+Do not turn this snapshot into a permanent fact; rerun the audit on current main.
+
 ## Rolling text queue (owner 19 October 2026)
 
 Maintain seven future calendar days of reviewed text posts. The existing daily

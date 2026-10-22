@@ -321,3 +321,15 @@ export const POSTS = [{
   "text": "🤝 «Встретимся у пляжа» — иногда слишком большой адрес\n\nДля встречи удобнее отправить одну точку на карте, фото заметного ориентира и уточнение, с какой стороны ждать. Если у места несколько входов, договоритесь об одном заранее.\n\n“We’re waiting by the main entrance.”\n«Мы ждём у главного входа».\n\nМеньше поисков друг друга — больше времени вместе 🌴\n\nИдеи, куда встретиться и пойти дальше:\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=meeting_point_20261027"
 }
 ];
+
+// Reviewed presentation only. Keep the original IDs, bodies, times and dedup hashes.
+const copyPhrases = {
+  'okok-english-separate-sauce-20261027': 'Could I have the sauce on the side, please?',
+  'okok-meeting-point-20261027': 'We’re waiting by the main entrance.'
+};
+for (const post of POSTS) {
+  if (!copyPhrases[post.id] && post.id !== 'okok-source-date-20261023') continue;
+  if (copyPhrases[post.id]) post.copyText = copyPhrases[post.id];
+  const siteUrl = post.text.match(/https:\/\/ok-ok\.click\/[^\s]*/)?.[0];
+  if (siteUrl) post.buttons = [{text: 'Открыть OK-OK', url: siteUrl}];
+}
