@@ -26,6 +26,7 @@ html[data-theme="light"] .okok-pulse{background:linear-gradient(145deg,#fff,#eef
  };
  const isPlace=card=>{
    if(card.closest('.okad,[data-ad],nav,header,footer') || isScam(card)) return false;
+   if(card.matches('.card[data-open]')) return true;
    const text=(card.textContent||'').toLowerCase();
    if(text.length<35) return false;
    return !!card.querySelector('h2,h3,h4,.title,.name') && (!!card.querySelector('a[href*="maps"],a[href*="google"],[data-report],.rating,.stars,.btn') || /рейтинг|rating|провер|verified|отзыв|review/.test(text));
@@ -40,7 +41,7 @@ html[data-theme="light"] .okok-pulse{background:linear-gradient(145deg,#fff,#eef
    const box=document.createElement('div'); box.className='okok-pulse'; box.dataset.pulseKey=key;
    box.innerHTML='<div class="okok-pulse__title">Как здесь сейчас?</div><div class="okok-pulse__buttons"><button type="button" data-vote="great">🔥 Отлично</button><button type="button" data-vote="ok">👍 Норм</button><button type="button" data-vote="issue">⚠️ Есть нюанс</button></div><div class="okok-pulse__meta"><span class="okok-pulse__count"></span><span class="okok-pulse__fresh"></span></div><div class="okok-pulse__thanks" hidden></div>';
    const update=()=>{const r=read()[key]||{};box.querySelector('.okok-pulse__count').textContent=r.vote?'Твоя отметка учтена':'1 касание — и данные свежее';box.querySelector('.okok-pulse__fresh').textContent=r.at?'Обновлено только что':'Нужна свежая отметка';box.querySelectorAll('[data-vote]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.vote===r.vote)))};
-   box.addEventListener('click',e=>{const b=e.target.closest('[data-vote]');if(!b)return;const all=read();all[key]={vote:b.dataset.vote,at:Date.now()};save(all);const t=box.querySelector('.okok-pulse__thanks');t.hidden=false;t.textContent='Оки принял 👀 Теперь данные свежее';update();setTimeout(()=>{t.hidden=true},2600)});
+   box.addEventListener('click',e=>{const b=e.target.closest('[data-vote]');if(!b)return;e.stopPropagation();const all=read();all[key]={vote:b.dataset.vote,at:Date.now()};save(all);const t=box.querySelector('.okok-pulse__thanks');t.hidden=false;t.textContent='Оки принял 👀 Теперь данные свежее';update();setTimeout(()=>{t.hidden=true},2600)});
    const actions=card.querySelector('.actions,.buttons,.card-actions');
    if(actions) actions.before(box); else card.append(box); update();
   });

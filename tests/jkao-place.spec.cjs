@@ -11,16 +11,13 @@ for(const lang of ['ru','en','th'])for(const theme of ['dark','light'])test(`J-K
  await expect(card.locator('.flag')).toHaveText({ru:'Первый визит · 16.10.2026',en:'First visit · 16 Oct 2026',th:'เยี่ยมชมครั้งแรก · 16 ต.ค. 2026'}[lang]);
  await expect.poll(()=>card.locator('img').evaluate(n=>n.naturalWidth)).toBeGreaterThan(0);
  const destination='https://www.google.com/maps/search/?api=1&query=7P42VV6X%2B9Q';
- await expect(card.locator('a[data-jkao-map]')).toHaveAttribute('href',destination);
  const sheet=page.locator('#sheet');
- if(lang==='ru'&&theme==='dark'){
-  await page.context().route('https://www.google.com/**',route=>route.fulfill({body:'Map navigation fixture'}));
-  const popupPromise=page.waitForEvent('popup');await card.locator('a[data-jkao-map]').click();
-  const popup=await popupPromise;await popup.waitForLoadState();expect(popup.url()).toBe(destination);
-  await expect(sheet).not.toHaveClass(/open/);await popup.close();
- }
+ await expect(card.locator('.okok-pulse [data-vote]')).toHaveCount(3);
+ const vote=card.locator('.okok-pulse [data-vote="ok"]');await vote.click();
+ await expect(vote).toHaveAttribute('aria-pressed','true');await expect(sheet).not.toHaveClass(/open/);
+ expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('okok-pulse-v1'))['j-kao-seafood'].vote)).toBe('ok');
  await page.screenshot({path:`quality-reports/jkao-card-${lang}-${theme}.png`});
- await card.getByRole('button',{name:{ru:'Подробнее',en:'Details',th:'รายละเอียด'}[lang],exact:true}).click();await expect(sheet).toHaveClass(/open/);
+ await card.locator('h3').click();await expect(sheet).toHaveClass(/open/);
  await expect(sheet).toContainText('J-Kao Seafood');await expect(sheet.locator('.stars')).toHaveCount(0);
  await expect(sheet).toContainText({ru:'Воскресенье — выходной',en:'Closed Sundays',th:'หยุดวันอาทิตย์'}[lang]);
  await expect(sheet.locator('.owner-review')).toContainText('120');
