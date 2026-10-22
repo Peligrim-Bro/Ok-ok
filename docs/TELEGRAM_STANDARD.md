@@ -76,8 +76,8 @@ never automatically retry as a text/photo after an ambiguous send.
 This is the text layer of the common design, not completion of the illustration
 work. No AI image calls, paid service, extra workflow or public test is added.
 Different original scenes remain required; generic template cards cannot close
-the media gap. The ordinary 28 October slots are replenished; its comic still
-requires an original finished, reviewed page under the existing comic task.
+the media gap. The ordinary 28 October slots are replenished and the existing
+reviewed comic PR 62 supplies episode 010 for its 20:30 slot without regeneration.
 
 Preserve ordinary 09:00/14:00/19:30 and extra 20:30 Oki slots in Asia/Bangkok.
 The Cloudflare queue checks every 15 minutes; replenishers are distinct existing
@@ -102,6 +102,8 @@ tests, PR, release result, unknowns and next action; do not call an unknown deli
 - https://core.telegram.org/bots/api#sendphoto
 
 Known initial gaps: ordinary future posts lack unique illustrations; complete
-coverage of 28 October is missing; runtime channel ID, enablement and delivery
+coverage of 28 October was missing; runtime channel ID, enablement and delivery
 cannot be confirmed by repository checks or configured:true alone. These remain
 open until actual media, merged coverage and runtime observations close them.
+The 22 October integrated queue closes all 28 October slot gaps; illustration
+and runtime evidence gaps remain separate.

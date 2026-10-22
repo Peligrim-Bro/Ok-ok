@@ -5,7 +5,7 @@ import {channelPresentation} from '../channel-presentation.mjs';
 
 test('reviewed queue has one complete bold heading and preserves every exact site link',()=>{
   const batch=POSTS.filter(p=>Date.parse(p.publishAt)>=Date.parse('2026-10-22T14:00:00+07:00'));
-  assert.equal(batch.length,26);
+  assert.equal(batch.length,27);
   for(const p of batch){
     const presentation=channelPresentation(p), heading=p.text.split('\n')[0];
     assert.equal(presentation.entities.filter(e=>e.type==='bold'&&e.offset===0&&e.length===heading.length).length,1,p.id);
@@ -32,7 +32,8 @@ test('copy phrases and source buttons remain useful alongside shared site button
 
 test('28 October ordinary slots are complete and never borrow an old comic',()=>{
   const posts=POSTS.filter(p=>p.publishAt.startsWith('2026-10-28'));
-  assert.deepEqual(posts.map(p=>p.publishAt.slice(11,16)),['09:00','14:00','19:30']);
+  assert.deepEqual(posts.map(p=>p.publishAt.slice(11,16)).sort(),['09:00','14:00','19:30','20:30']);
+  assert.equal(posts.find(p=>p.publishAt.includes('T20:30:'))?.id,'okok-oki-comic-010-sea-mail-20261028');
   for(const p of posts){assert.equal(p.approved,true);assert.equal(Date.parse(p.expiresAt)-Date.parse(p.publishAt),3*3600000);}
   assert.equal(new Set(POSTS.map(p=>p.id)).size,POSTS.length);
 });

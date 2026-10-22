@@ -33,7 +33,14 @@ Release pending: run full browser suite and three Lighthouse runs before main;
 inspect generated screenshots. Then confirm native Workers build and exact live
 SHA/public checks. Keep logs as CI artifacts and final results on the PR.
 
-Open work: 28 October comic and separate original scenes for ordinary posts;
+Integration: reuse PR 62 head 961d4ae536423f086fbdc7098ba31efa293e98c2,
+including its source/review note and finished 796,522-byte episode 010. Visually
+reviewed the finished JPG here; no regeneration or paid call. Combined local
+audit: 26 future posts, seven distinct available photos, no missing slots,
+collisions or exact duplicates; 19 ordinary posts still need separate scenes.
+Combined output must pass the final CI, not just the earlier separate runs.
+
+Open work: separate original scenes for ordinary posts;
 runtime delivery evidence; historical message edits require known message IDs.
 Do not repeat old comics or promise the entire channel is finished.
 
