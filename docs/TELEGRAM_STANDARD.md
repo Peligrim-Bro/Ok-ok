@@ -64,7 +64,7 @@ finished `channelPresentation` output before approval. A second phrase in a post
 does not get copied automatically: the editor explicitly selected “No chilli,
 please.” for 23 October. The Russian translation stays visible.
 The 28 October evening language quiz has one optional answer under a spoiler;
-the prompt, choices, practical phrase reminder and site button stay visible.
+the prompt, choices, next action and site button stay visible.
 
 Carousels are a separate format: Telegram's official `InputRichBlockSlideshow`
 belongs to `sendRichMessage`, not `sendPhoto` or an album. The source network's

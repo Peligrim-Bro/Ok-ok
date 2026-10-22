@@ -334,7 +334,7 @@ export const POSTS = [{
 {
   id:'okok-bill-quiz-20261028', approved:true,
   publishAt:'2026-10-28T19:30:00+07:00', expiresAt:'2026-10-28T22:30:00+07:00',
-  text:'🧩 Как попросить счёт по-английски?\n\nТы закончил обед и хочешь расплатиться. Какую фразу выберешь?\n\nА. Could we have the menu, please?\nБ. Could we have the bill, please?\nВ. Could we have some water, please?\n\nКоснись скрытого ответа:\nБ — “Could we have the bill, please?” означает «Можно нам счёт, пожалуйста?». Menu — меню, water — вода.\n\nЗапомни короткую связку: the bill — счёт за заказ.\n\nМеста для следующего обеда:\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=bill_quiz_20261028',
+  text:'🧩 Как попросить счёт по-английски?\n\nТы закончил обед и хочешь расплатиться. Какую фразу выберешь?\n\nА. Could we have the menu, please?\nБ. Could we have the bill, please?\nВ. Could we have some water, please?\n\nКоснись скрытого ответа:\nБ — “Could we have the bill, please?” означает «Можно нам счёт, пожалуйста?». Menu — меню, water — вода.\n\nПроверь себя, затем произнеси выбранную фразу вслух.\n\nМеста для следующего обеда:\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=bill_quiz_20261028',
   formatting:[{type:'spoiler',text:'Б — “Could we have the bill, please?” означает «Можно нам счёт, пожалуйста?». Menu — меню, water — вода.'}]
 }
 ];
