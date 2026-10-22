@@ -9,7 +9,10 @@
   }
   function localDate(now){
     if(!Number.isFinite(now))return null;
-    try{return new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Bangkok',year:'numeric',month:'2-digit',day:'2-digit'}).format(now);}catch{return null;}
+    try{
+      const parts=Object.fromEntries(new Intl.DateTimeFormat('en',{timeZone:'Asia/Bangkok',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(now).map(p=>[p.type,p.value]));
+      return parts.year+'-'+parts.month+'-'+parts.day;
+    }catch{return null;}
   }
   function state(kind,reviewed,now=Date.now()){
     const current=dateDay(localDate(now)),previous=dateDay(reviewed);
