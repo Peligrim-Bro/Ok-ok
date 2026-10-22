@@ -319,11 +319,39 @@ export const POSTS = [{
   "publishAt": "2026-10-27T19:30:00+07:00",
   "expiresAt": "2026-10-27T22:30:00+07:00",
   "text": "🤝 «Встретимся у пляжа» — иногда слишком большой адрес\n\nДля встречи удобнее отправить одну точку на карте, фото заметного ориентира и уточнение, с какой стороны ждать. Если у места несколько входов, договоритесь об одном заранее.\n\n“We’re waiting by the main entrance.”\n«Мы ждём у главного входа».\n\nМеньше поисков друг друга — больше времени вместе 🌴\n\nИдеи, куда встретиться и пойти дальше:\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=meeting_point_20261027"
+},
+{
+  "id": "okok-oki-comic-010-sea-mail-20261028",
+  "approved": true,
+  "publishAt": "2026-10-28T20:30:00+07:00",
+  "expiresAt": "2026-10-28T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-010-sea-mail-20261028.jpg",
+  "text": "🌴 Приключения Оки №10 — «Морская почта»\n\nОки хотел отправить друзьям кусочек моря. Ветер чуть не понял его слишком буквально — хорошо, рядом оказался краб-почтальон 🦀💌\n\nВымышленное приключение маскота. История и изображение созданы с помощью ИИ; нарисованные места не являются изображениями конкретных заведений.\n\nИдеи для прогулок — на OK-OK.click\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_sea_mail_010_20261028"
+}
+,
+{
+  id:'okok-offline-note-20261028', approved:true,
+  publishAt:'2026-10-28T09:00:00+07:00', expiresAt:'2026-10-28T12:00:00+07:00',
+  text:'📱 Сохрани больше, чем название места\n\nПеред выходом сделай скриншот адреса, входа и контакта заведения. В заметке рядом запиши, что именно хочешь там посмотреть или заказать.\n\nСсылка пригодится для навигации, а скриншот — если страница не откроется без связи. Он не заменяет свежую проверку часов работы и не обновляется вместе с сайтом.\n\nВыбрать точку для прогулки:\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=offline_note_20261028'
+},
+{
+  id:'okok-written-address-20261028', approved:true,
+  publishAt:'2026-10-28T14:00:00+07:00', expiresAt:'2026-10-28T17:00:00+07:00',
+  text:'🗣 Адрес лучше записать, чем запомнить на слух\n\n“Could you write down the address, please?”\n«Не могли бы вы записать адрес, пожалуйста?»\n\nФраза пригодится, если тебе объясняют, где находится нужное место. Попроси также показать точку на карте: написанный адрес и вход в здание могут потребовать отдельного уточнения.\n\nКнопка ниже копирует английскую фразу без кавычек.\n\nМеста и полезные контакты:\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=written_address_20261028'
+},
+{
+  id:'okok-bill-quiz-20261028', approved:true,
+  publishAt:'2026-10-28T19:30:00+07:00', expiresAt:'2026-10-28T22:30:00+07:00',
+  text:'🧩 Как попросить счёт по-английски?\n\nТы закончил обед и хочешь расплатиться. Какую фразу выберешь?\n\nА. Could we have the menu, please?\nБ. Could we have the bill, please?\nВ. Could we have some water, please?\n\nКоснись скрытого ответа:\nБ — “Could we have the bill, please?” означает «Можно нам счёт, пожалуйста?». Menu — меню, water — вода.\n\nПроверь себя, затем произнеси выбранную фразу вслух.\n\nМеста для следующего обеда:\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=bill_quiz_20261028',
+  formatting:[{type:'spoiler',text:'Б — “Could we have the bill, please?” означает «Можно нам счёт, пожалуйста?». Menu — меню, water — вода.'}]
 }
 ];
 
 // Reviewed presentation only. Keep the original IDs, bodies, times and dedup hashes.
 const copyPhrases = {
+  'okok-english-spice-20261023': 'No chilli, please.',
+  'okok-menu-units-20261025': 'How much is it altogether?',
+  'okok-written-address-20261028': 'Could you write down the address, please?',
   'okok-english-separate-sauce-20261027': 'Could I have the sauce on the side, please?',
   'okok-meeting-point-20261027': 'We’re waiting by the main entrance.'
 };
@@ -332,4 +360,26 @@ for (const post of POSTS) {
   if (copyPhrases[post.id]) post.copyText = copyPhrases[post.id];
   const siteUrl = post.text.match(/https:\/\/ok-ok\.click\/[^\s]*/)?.[0];
   if (siteUrl) post.buttons = [{text: 'Открыть OK-OK', url: siteUrl}];
+}
+
+// Shared typography for this reviewed batch and later queue additions. These
+// native entities/buttons do not change text, IDs or the delivery dedup key.
+// Do not revisit historical sends or infer arbitrary external destinations.
+const sourceButtons = {
+  'okok-nong-nooch-dinosaurs-20261022': ['Сайт Нонг Нуч', 'https://www.nongnoochpattaya.com/en/dinosaur'],
+  'okok-art-in-paradise-20261026': ['Источник: Туристическое управление', 'https://www.thailandtravel.or.jp/art-in-paradise/']
+};
+for (const post of POSTS) {
+  if (Date.parse(post.publishAt) < Date.parse('2026-10-22T14:00:00+07:00')) continue;
+  const heading = post.text.split('\n')[0];
+  const formatting = post.formatting || [];
+  if (!formatting.some(item => item.type === 'bold' && item.text === heading)) {
+    post.formatting = [{type:'bold', text:heading}, ...formatting];
+  }
+  const buttons = [...(post.buttons || [])];
+  const siteUrl = post.text.match(/https:\/\/ok-ok\.click\/[^\s]*/)?.[0];
+  if (siteUrl && !buttons.some(button => button.url === siteUrl)) buttons.push({text:'Открыть OK-OK', url:siteUrl});
+  const source = sourceButtons[post.id];
+  if (source && !buttons.some(button => button.url === source[1])) buttons.push({text:source[0], url:source[1]});
+  if (buttons.length) post.buttons = buttons;
 }
