@@ -1,91 +1,90 @@
 {
-  "verifiedAt": "2026-10-22",
+  "verifiedAt": "2026-10-23",
   "news": [
     {
       "category": "world",
-      "when": "21.10 · 🌍",
-      "href": "https://wmo.int/resources/publication-series/global-seasonal-climate-updates/gscu-ndj2026",
-      "publishedAt": "2026-10-21",
+      "when": "23.10 · 🌍",
+      "href": "https://apnews.com/article/d57dac06335203107caba8ae6ef67185",
+      "publishedAt": "2026-10-23",
       "nonWar": true,
-      "ru": "ВМО: Эль-Ниньо усилится, аномалия воды в зоне Niño 3.4 может достичь +3,8 °C в ноябре–январе. Это сезонный, не локальный прогноз.",
-      "en": "WMO says El Niño will strengthen; the Niño 3.4 sea anomaly may reach +3.8°C in November–January. This is a seasonal, not local, forecast.",
-      "th": "WMO คาดว่าเอลนีโญจะแรงขึ้น อุณหภูมิน้ำเขต Niño 3.4 อาจสูงกว่าปกติ 3.8 องศาเซลเซียสช่วงพฤศจิกายน–มกราคม เป็นแนวโน้มตามฤดูกาล",
+      "ru": "Исследование оценивает летнюю жару 2026 года в 50 391 смерть в 854 городах Европы; 32 619 случаев авторы связывают с антропогенным потеплением.",
+      "en": "A study estimates 50,391 heat deaths in 854 European cities in summer 2026; 32,619 are attributed to human-caused warming.",
+      "th": "งานวิจัยประเมินว่าความร้อนฤดูร้อนปี 2026 เกี่ยวข้องกับ 50,391 ชีวิตใน 854 เมืองยุโรป โดย 32,619 รายมาจากภาวะโลกร้อนจากมนุษย์",
       "sources": [
-        "https://wmo.int/resources/publication-series/global-seasonal-climate-updates/gscu-ndj2026",
-        "https://www.reuters.com/business/environment/el-nio-could-be-strongest-40-years-un-weather-agency-chief-says-2026-10-21/"
+        "https://apnews.com/article/d57dac06335203107caba8ae6ef67185"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-22T06:50:04+07:00",
-        "sourceUrl": "https://wmo.int/resources/publication-series/global-seasonal-climate-updates/gscu-ndj2026",
-        "summary": "No comparable counters. Reuters covered WMO on 21 October; qualitative evidence, not a global rank. +3.8°C is the Niño 3.4 sea anomaly."
+        "observedAt": "2026-10-23T06:38:22+07:00",
+        "sourceUrl": "https://apnews.com/article/d57dac06335203107caba8ae6ef67185",
+        "summary": "No comparable counters. Same-day Washington Post, El País and Folha coverage; qualitative breadth, not a global rank. Figures are modelled."
       }
     },
     {
       "category": "thailand",
-      "when": "21.10 · 🇹🇭",
-      "href": "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/553005",
-      "publishedAt": "2026-10-21",
-      "ru": "В парке Пху Хин Чом Тхат — Пху Пхрабат подтвердили шесть следов теропода возрастом около 120 млн лет. Участок временно закрыт.",
-      "en": "Six 120-million-year-old theropod footprints were confirmed in Phu Hin Chom That–Phu Phrabat park. The site is temporarily closed.",
-      "th": "ยืนยันรอยเท้าเทอโรพอด 6 รอย อายุราว 120 ล้านปี ที่อุทยานภูหินจอมธาตุ–ภูพระบาท พื้นที่ปิดชั่วคราว",
+      "when": "23.10 · 🇹🇭",
+      "href": "https://thepattayanews.com/2026/10/23/thai-government-postpones-for-the-time-being-introducing-proposed-1000-baht-overseas-travel-tax-to-protect-tourism-momentum/",
+      "publishedAt": "2026-10-23",
+      "ru": "Таиланд пока отложил предлагаемый сбор 1 000 бат за выезд. Новой даты нет; отдельный въездной сбор этим решением не отменён.",
+      "en": "Thailand postponed the proposed 1,000-baht departure tax. No new date was set; a separate arrival fee was not cancelled.",
+      "th": "ไทยชะลอภาษีเดินทางออก 1,000 บาท ยังไม่กำหนดวันใหม่ และไม่ได้ยกเลิกค่าธรรมเนียมขาเข้าอีกโครงการ",
       "sources": [
-        "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/553005"
+        "https://thepattayanews.com/2026/10/23/thai-government-postpones-for-the-time-being-introducing-proposed-1000-baht-overseas-travel-tax-to-protect-tourism-momentum/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-22T06:50:04+07:00",
-        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/553005",
-        "summary": "PRD: 87 views versus 74 for the same-day cane report; no comment totals or independent metrics. Not a national rank."
+        "observedAt": "2026-10-23T06:38:22+07:00",
+        "sourceUrl": "https://thepattayanews.com/2026/10/23/thai-government-postpones-for-the-time-being-introducing-proposed-1000-baht-overseas-travel-tax-to-protect-tourism-momentum/",
+        "summary": "No public counters. Newest national homepage item when observed; placement is not a comparable metric or national rank."
       }
     },
     {
       "category": "thailand",
-      "when": "21.10 · 🇹🇭",
-      "href": "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/553006",
-      "publishedAt": "2026-10-21",
-      "ru": "Тайские университеты передали 500 тростей со световым и звуковым предупреждением об электричестве в паводковой воде для зон риска.",
-      "en": "Thai universities delivered 500 canes with light and sound warnings for electricity in floodwater, for use in high-risk areas.",
-      "th": "มหาวิทยาลัยไทยส่งมอบไม้เท้า 500 อัน เตือนแสงและเสียงเมื่อพบไฟฟ้ารั่วในน้ำท่วม สำหรับพื้นที่เสี่ยง",
+      "when": "22.10 · 🇹🇭",
+      "href": "https://www.pattayamail.com/thailandnews/anutin-orders-pm2-5-preparations-hazardous-waste-checks-and-oecd-readiness-569342",
+      "publishedAt": "2026-10-22",
+      "ru": "Ведомствам Таиланда поручили подготовить меры против PM2.5 и усилить досмотр судов и контейнеров для пресечения ввоза опасных отходов.",
+      "en": "Thai agencies were told to prepare PM2.5 measures and tighten ship and container checks against illegal hazardous-waste imports.",
+      "th": "หน่วยงานไทยต้องเตรียมมาตรการ PM2.5 และตรวจเรือกับตู้สินค้าเข้มขึ้น เพื่อสกัดการนำเข้าของเสียอันตรายผิดกฎหมาย",
       "sources": [
-        "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/553006"
+        "https://www.pattayamail.com/thailandnews/anutin-orders-pm2-5-preparations-hazardous-waste-checks-and-oecd-readiness-569342"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-22T06:50:04+07:00",
-        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/553006",
-        "summary": "PRD: 74 views versus 87 for the same-day dinosaur report; no cross-site metric. Not a national rank."
+        "observedAt": "2026-10-23T06:38:22+07:00",
+        "sourceUrl": "https://www.pattayamail.com/thailandnews/anutin-orders-pm2-5-preparations-hazardous-waste-checks-and-oecd-readiness-569342",
+        "summary": "Pattaya Mail: 933 views/0 comments versus 794/0 and 700/0 on same-day reports. Unequal exposure; not a national rank."
       }
     },
     {
       "category": "pattaya",
       "when": "22.10 · Pattaya",
-      "href": "https://www.pattayamail.com/news/pattaya-motorcycle-taxi-drivers-question-dark-blue-vests-over-night-safety-569306",
+      "href": "https://thepattayanews.com/2026/10/22/pattaya-motorbike-taxi-riders-cheer-decision-to-return-to-orange-vests-instead-of-blue/",
       "publishedAt": "2026-10-22",
-      "ru": "Водители мототакси просят пересмотреть тёмно-синие жилеты из-за видимости ночью. Сравнение не было стандартным тестом; решения властей нет.",
-      "en": "Motorcycle-taxi drivers want dark-blue vests reconsidered over night visibility. The comparison was not a standard test; no official decision.",
-      "th": "วินจักรยานยนต์ขอทบทวนเสื้อกั๊กสีน้ำเงินเข้มเพราะมองเห็นยากกลางคืน การเปรียบเทียบไม่ใช่การทดสอบมาตรฐาน และยังไม่มีมติทางการ",
+      "ru": "Губернатор Чонбури отменил обязательные тёмно-синие жилеты для мототакси Паттайи и Бангламунга: водители вернутся к оранжевым. Порядок возможного возмещения не объявлен.",
+      "en": "Chonburi's governor cancelled mandatory dark-blue vests for Pattaya and Banglamung motorcycle taxis, restoring orange. No reimbursement procedure was announced.",
+      "th": "ผู้ว่าราชการชลบุรียกเลิกเสื้อกั๊กสีน้ำเงินเข้มของวินจักรยานยนต์พัทยาและบางละมุง ให้กลับมาใช้สีส้ม โดยยังไม่มีขั้นตอนชดเชยค่าใช้จ่าย",
       "sources": [
-        "https://www.pattayamail.com/news/pattaya-motorcycle-taxi-drivers-question-dark-blue-vests-over-night-safety-569306"
+        "https://thepattayanews.com/2026/10/22/pattaya-motorbike-taxi-riders-cheer-decision-to-return-to-orange-vests-instead-of-blue/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-22T06:50:04+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/pattaya-motorcycle-taxi-drivers-question-dark-blue-vests-over-night-safety-569306",
-        "summary": "Pattaya Mail: 245 views/0 comments versus 237/0 and 221/0. Early unequal-exposure counters; no independent metric or city rank."
+        "observedAt": "2026-10-23T06:38:22+07:00",
+        "sourceUrl": "https://thepattayanews.com/2026/10/22/pattaya-motorbike-taxi-riders-cheer-decision-to-return-to-orange-vests-instead-of-blue/",
+        "summary": "No public counters. Current local/business listing; qualitative relevance only, not a city rank."
       }
     },
     {
       "category": "pattaya",
-      "when": "22.10 · Pattaya",
-      "href": "https://www.pattayamail.com/news/pattaya-prepares-fire-safety-drills-for-soi-6-entertainment-area-569311",
-      "publishedAt": "2026-10-22",
-      "ru": "В Soi 6 готовят пожарные учения: штабное — 28 октября, эвакуационное — 29 октября. Ограничения движения объявят заранее.",
-      "en": "Soi 6 fire drills are planned: a tabletop exercise on 28 October and evacuation on 29 October. Traffic restrictions will be announced.",
-      "th": "ซอย 6 เตรียมซ้อมดับเพลิงวันที่ 28 ตุลาคม และอพยพวันที่ 29 ตุลาคม พร้อมแจ้งข้อจำกัดการจราจร",
+      "when": "23.10 · Pattaya",
+      "href": "https://thepattayanews.com/2026/10/23/seven-year-old-boy-rescued-after-nearly-drowning-at-pattaya-beach-during-heavy-rain/",
+      "publishedAt": "2026-10-23",
+      "ru": "У пляжа Паттайи во время ливня спасли семилетнего ребёнка; после первой помощи его доставили в больницу. Причина происшествия независимо не подтверждена.",
+      "en": "A seven-year-old was rescued from Pattaya Beach during heavy rain, given first aid and taken to hospital. The incident's cause has not been independently confirmed.",
+      "th": "ช่วยเด็กอายุ 7 ปีจากทะเลพัทยาระหว่างฝนตกหนัก ก่อนปฐมพยาบาลและส่งโรงพยาบาล ส่วนสาเหตุยังไม่ได้รับการยืนยันอย่างอิสระ",
       "sources": [
-        "https://www.pattayamail.com/news/pattaya-prepares-fire-safety-drills-for-soi-6-entertainment-area-569311"
+        "https://thepattayanews.com/2026/10/23/seven-year-old-boy-rescued-after-nearly-drowning-at-pattaya-beach-during-heavy-rain/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-22T06:50:04+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/pattaya-prepares-fire-safety-drills-for-soi-6-entertainment-area-569311",
-        "summary": "Pattaya Mail: 221 views/0 comments versus 245/0 and 237/0. No independent metric; practical selection, not a city rank."
+        "observedAt": "2026-10-23T06:38:22+07:00",
+        "sourceUrl": "https://thepattayanews.com/2026/10/23/seven-year-old-boy-rescued-after-nearly-drowning-at-pattaya-beach-during-heavy-rain/",
+        "summary": "No public counters. It led the current local-news list when observed; early placement is not a comparable metric or city rank."
       }
     }
   ],
@@ -183,5 +182,5 @@
       "verifiedAt": "2026-10-19"
     }
   ],
-  "selection": "Reviewed 2026-10-22 Asia/Bangkok: 1 world, 2 Thailand, 2 Pattaya; sources dated 21–22 October. Metrics are limited in discussionEvidence. The 19 October ACSC item describes established online-shopping fraud rather than a new scheme, so no card was added; four active cards and dates remain unchanged. No Telegram sending."
+  "selection": "Reviewed 2026-10-23 Asia/Bangkok: 1 world, 2 Thailand, 2 Pattaya; sources dated 22–23 October. Public counters were compared where available and limitations are explicit in discussionEvidence. Targeted official and reputable-source checks found no sufficiently distinct new Thailand or Pattaya scam warning, so four active cards and their dates remain unchanged. No Telegram sending."
 }
