@@ -24,4 +24,4 @@ replace('${({ru:"Примерный график",en:"Approximate hours",th:"เ
 writeFileSync(path,html);
 const sw='site/public/sw.js';const source=readFileSync(sw,'utf8');assert(source.includes('const CORE = ['));
 writeFileSync(sw,source.replace('const CORE = [','const CORE = ['+JSON.stringify('./'+asset)+','+JSON.stringify('./'+place.photo)+','));
-console.log('PASS: J-Kao first-visit listing, original owner photos, 60/70-baht menu, no invented rating or opening status');
+console.log('PASS: J-Kao owner review, Sunday closure and 120-baht tom yum; no invented live opening status');
