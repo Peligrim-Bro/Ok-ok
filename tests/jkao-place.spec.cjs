@@ -7,15 +7,26 @@ for(const lang of ['ru','en','th'])for(const theme of ['dark','light'])test(`J-K
  await page.goto('/');await page.locator('#installClose').click();
  await page.locator('nav.tab [data-tab="list"]').click();await page.locator('#q').fill('J-Kao');
  const card=page.locator('.card[data-open="jkao-seafood"]');
- await expect(card).toHaveCount(1);await expect(card).toContainText('60–70');await expect(card.locator('.stars')).toHaveCount(0);
+ await expect(card).toHaveCount(1);await expect(card).toContainText('60–120');await expect(card).toContainText('120');await expect(card.locator('.stars')).toHaveCount(0);
  await expect(card.locator('.flag')).toHaveText({ru:'Первый визит · 16.10.2026',en:'First visit · 16 Oct 2026',th:'เยี่ยมชมครั้งแรก · 16 ต.ค. 2026'}[lang]);
  await expect.poll(()=>card.locator('img').evaluate(n=>n.naturalWidth)).toBeGreaterThan(0);
- await card.click();const sheet=page.locator('#sheet');await expect(sheet).toHaveClass(/open/);
+ const destination='https://www.google.com/maps/search/?api=1&query=7P42VV6X%2B9Q';
+ await expect(card.locator('a[data-jkao-map]')).toHaveAttribute('href',destination);
+ const sheet=page.locator('#sheet');
+ if(lang==='ru'&&theme==='dark'){
+  await page.context().route('https://www.google.com/**',route=>route.fulfill({body:'Map navigation fixture'}));
+  const popupPromise=page.waitForEvent('popup');await card.locator('a[data-jkao-map]').click();
+  const popup=await popupPromise;await popup.waitForLoadState();expect(popup.url()).toBe(destination);
+  await expect(sheet).not.toHaveClass(/open/);await popup.close();
+ }
+ await page.screenshot({path:`quality-reports/jkao-card-${lang}-${theme}.png`});
+ await card.locator('button').click();await expect(sheet).toHaveClass(/open/);
  await expect(sheet).toContainText('J-Kao Seafood');await expect(sheet.locator('.stars')).toHaveCount(0);
- await expect(sheet).toContainText({ru:'График работы не уточнялся',en:'Opening hours have not been checked',th:'ยังไม่ได้ตรวจสอบเวลาเปิดปิด'}[lang]);
+ await expect(sheet).toContainText({ru:'Воскресенье — выходной',en:'Closed Sundays',th:'หยุดวันอาทิตย์'}[lang]);
+ await expect(sheet.locator('.owner-review')).toContainText('120');
+ await expect(sheet.locator('.owner-review')).toContainText({ru:'жестковаты',en:'a little tough',th:'เหนียวไปหน่อย'}[lang]);
  await expect(sheet).not.toContainText('undefined');await expect(sheet.locator('.gallery img')).toHaveCount(3);
  // Existing detail UI intentionally offers both Map and Route actions.
- const destination='https://www.google.com/maps/search/?api=1&query=7P42VV6X%2B9Q';
  await expect(sheet.locator('a.btn.map')).toHaveAttribute('href',destination);
  await expect(sheet.locator('a.btn.ghost')).toHaveAttribute('href',destination);
  await expect(sheet.locator('a[href*="7P42VV6X"]')).toHaveCount(2);

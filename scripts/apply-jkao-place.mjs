@@ -11,7 +11,7 @@ for(const photo of place.photos){
  const target='site/public/'+photo;mkdirSync(target.slice(0,target.lastIndexOf('/')),{recursive:true});copyFileSync(source,target);
 }
 // A content-addressed data file avoids stale config caches on the first visit.
-const data='window.OKOK_JKAO_PLACE='+JSON.stringify(place).replaceAll('<','\\u003c')+';\n';
+const data='window.OKOK_JKAO_PLACE='+JSON.stringify(place).replaceAll('<','\\u003c')+';\n'+String.raw`window.okokJkaoActions=()=>'<div class="actions"><a class="btn map" data-jkao-map href="'+window.OKOK_JKAO_PLACE.maps+'" target="_blank" rel="noopener">'+t().maps+'</a><button class="btn ghost" type="button">'+({ru:'Подробнее',en:'Details',th:'รายละเอียด'})[lang]+'</button></div>';`;
 const asset='assets/data/jkao-seafood-'+createHash('sha256').update(data).digest('hex').slice(0,16)+'.js';
 mkdirSync('site/public/assets/data',{recursive:true});writeFileSync('site/public/'+asset,data);
 const path='site/public/index.html';let html=readFileSync(path,'utf8');
@@ -21,7 +21,9 @@ replace('    const WHO = {','    if(window.OKOK_JKAO_PLACE){const p=window.OKOK_
 replace('const flag = p.badge === "premium"','const flag = p.firstVisitLabel ? `<span class="flag check">${L(p.firstVisitLabel)}</span>` : p.badge === "premium"');
 replace('["senate","ex24","musselana-shabu"].includes(p.id) ? "" : `<span class="stars">','(["senate","ex24","musselana-shabu"].includes(p.id)||p.rating==null) ? "" : `<span class="stars">');
 replace('${({ru:"Примерный график",en:"Approximate hours",th:"เวลาโดยประมาณ"})[lang]}','${p.statusLabel ? L(p.statusLabel) : ({ru:"Примерный график",en:"Approximate hours",th:"เวลาโดยประมาณ"})[lang]}');
+replace('          <p class="verdict">${why}</p>','          <p class="verdict">${why}</p>${p.id==="jkao-seafood"?window.okokJkaoActions():""}');
+replace('if (card) openPlace(card.dataset.open);','if (card&&!e.target.closest("[data-jkao-map]")) openPlace(card.dataset.open);');
 writeFileSync(path,html);
 const sw='site/public/sw.js';const source=readFileSync(sw,'utf8');assert(source.includes('const CORE = ['));
 writeFileSync(sw,source.replace('const CORE = [','const CORE = ['+JSON.stringify('./'+asset)+','+JSON.stringify('./'+place.photo)+','));
-console.log('PASS: J-Kao first-visit listing, original owner photos, 60/70-baht menu, no invented rating or opening status');
+console.log('PASS: J-Kao owner review, Sunday closure, 120-baht tom yum, visible card actions; no invented live opening status');
