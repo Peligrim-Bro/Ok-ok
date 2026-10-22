@@ -21,6 +21,11 @@ gzip 124954, JS 924825. Six existing browser cases now cover visible actions,
 updated review/hours, and (RU dark) a mocked map popup without accidental sheet
 opening. Physical iOS/vendor navigation is not claimed tested.
 
-Pending: full browser suite, three Lighthouse runs and screenshot review before
+CI 39750876424: build, payment checks and three Lighthouse runs passed; 130 browser
+cases passed. Six J-Kao cases stopped on an ambiguous test locator matching the
+existing vote buttons as well as Details. Corrected to the exact localized
+Details role/name; application output unchanged. Repeat the browser check.
+
+Pending: full browser suite and screenshot review before
 main; then Workers Builds success, exact live revision and public release checks.
 The PR will hold final release receipts. Keep production unchanged on failure.

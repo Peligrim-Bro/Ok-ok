@@ -20,7 +20,7 @@ for(const lang of ['ru','en','th'])for(const theme of ['dark','light'])test(`J-K
   await expect(sheet).not.toHaveClass(/open/);await popup.close();
  }
  await page.screenshot({path:`quality-reports/jkao-card-${lang}-${theme}.png`});
- await card.locator('button').click();await expect(sheet).toHaveClass(/open/);
+ await card.getByRole('button',{name:{ru:'Подробнее',en:'Details',th:'รายละเอียด'}[lang],exact:true}).click();await expect(sheet).toHaveClass(/open/);
  await expect(sheet).toContainText('J-Kao Seafood');await expect(sheet.locator('.stars')).toHaveCount(0);
  await expect(sheet).toContainText({ru:'Воскресенье — выходной',en:'Closed Sundays',th:'หยุดวันอาทิตย์'}[lang]);
  await expect(sheet.locator('.owner-review')).toContainText('120');
