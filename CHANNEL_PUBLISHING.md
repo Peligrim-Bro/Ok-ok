@@ -33,13 +33,17 @@ gaps; it does not mean the live website is down. The report never sends anything
 or invents delivery. Exact-file hashes catch identical assets across history;
 they cannot certify that crops/recolours use a different original scene.
 
-Initial offline audit on 22 October 2026 (also checked at reference time
-07:30 Bangkok): 24 future approved entries,
-6 with available, different photo files, 18 ordinary entries without a separate
-illustration. All four slots of 28 October are missing, so the complete seven-day
-buffer is not ready. Delivery and runtime enablement remain unconfirmed without
-owner-only runtime evidence; public-channel access was unavailable to the checker.
-Do not turn this snapshot into a permanent fact; rerun the audit on current main.
+Offline audit refreshed 22 October 2026 at 10:03 Bangkok: the comic-only
+change adds episode 010 «Морская почта» for 28 October, 20:30, with expiry 23:30.
+The reviewed source queue now contains seven separate comic pages for 22–28
+October; files exist and no exact-file duplicates or slot collisions were found.
+Provenance, SHA-256 and visual review: `docs/OKI_COMIC_BUFFER_20261022.md`.
+The overall audit remains `ready:false`: ordinary 28 October slots at 09:00,
+14:00 and 19:30 are absent and 17 future ordinary entries have no separate
+illustration. This comic task preserves the ordinary queue; these are editorial
+gaps, not a website outage. Source coverage alone does not confirm deployment,
+runtime enablement, numeric channel identity or delivery. Release evidence is
+recorded in the task note; only authenticated runtime receipts prove delivery.
 
 ## Rolling text queue (owner 19 October 2026)
 
