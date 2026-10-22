@@ -33,7 +33,8 @@ gaps; it does not mean the live website is down. The report never sends anything
 or invents delivery. Exact-file hashes catch identical assets across history;
 they cannot certify that crops/recolours use a different original scene.
 
-Initial audit at 22 October 2026 07:30 Bangkok: 24 future approved entries,
+Initial offline audit on 22 October 2026 (also checked at reference time
+07:30 Bangkok): 24 future approved entries,
 6 with available, different photo files, 18 ordinary entries without a separate
 illustration. All four slots of 28 October are missing, so the complete seven-day
 buffer is not ready. Delivery and runtime enablement remain unconfirmed without
