@@ -48,6 +48,24 @@ authenticated owner's `/channel`; never replace TG_CHAT_ID (payment recipient).
 
 ## Automation and release
 
+### Shared text appearance, 22 October 2026
+
+From the 22 October 14:00 slot onward, the first full line is a native bold
+heading. Keep one topic, short paragraphs and a useful action. The shared queue
+presentation retains one exact OK-OK URL button, explicit reviewed source buttons
+and copy buttons together. It never guesses external URLs, hides critical facts,
+changes historical messages or appends advertising from the other channels.
+New entries inherit this typography through `channel-posts.mjs`; validate the
+finished `channelPresentation` output before approval. A second phrase in a post
+does not get copied automatically: the editor explicitly selected “No chilli,
+please.” for 23 October. The Russian translation stays visible.
+
+This is the text layer of the common design, not completion of the illustration
+work. No AI image calls, paid service, extra workflow or public test is added.
+Different original scenes remain required; generic template cards cannot close
+the media gap. The ordinary 28 October slots are replenished; its comic still
+requires an original finished, reviewed page under the existing comic task.
+
 Preserve ordinary 09:00/14:00/19:30 and extra 20:30 Oki slots in Asia/Bangkok.
 The Cloudflare queue checks every 15 minutes; replenishers are distinct existing
 tasks at 08:00 and 10:00. Do not import the other network's eight-slot schedule,

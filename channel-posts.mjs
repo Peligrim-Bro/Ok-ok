@@ -320,10 +320,29 @@ export const POSTS = [{
   "expiresAt": "2026-10-27T22:30:00+07:00",
   "text": "🤝 «Встретимся у пляжа» — иногда слишком большой адрес\n\nДля встречи удобнее отправить одну точку на карте, фото заметного ориентира и уточнение, с какой стороны ждать. Если у места несколько входов, договоритесь об одном заранее.\n\n“We’re waiting by the main entrance.”\n«Мы ждём у главного входа».\n\nМеньше поисков друг друга — больше времени вместе 🌴\n\nИдеи, куда встретиться и пойти дальше:\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=meeting_point_20261027"
 }
+,
+{
+  id:'okok-offline-note-20261028', approved:true,
+  publishAt:'2026-10-28T09:00:00+07:00', expiresAt:'2026-10-28T12:00:00+07:00',
+  text:'📱 Сохрани больше, чем название места\n\nПеред выходом сделай скриншот адреса, входа и контакта заведения. В заметке рядом запиши, что именно хочешь там посмотреть или заказать.\n\nСсылка пригодится для навигации, а скриншот — если страница не откроется без связи. Он не заменяет свежую проверку часов работы и не обновляется вместе с сайтом.\n\nВыбрать точку для прогулки:\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=offline_note_20261028'
+},
+{
+  id:'okok-written-address-20261028', approved:true,
+  publishAt:'2026-10-28T14:00:00+07:00', expiresAt:'2026-10-28T17:00:00+07:00',
+  text:'🗣 Адрес лучше записать, чем запомнить на слух\n\n“Could you write down the address, please?”\n«Не могли бы вы записать адрес, пожалуйста?»\n\nФраза пригодится, если тебе объясняют, где находится нужное место. Попроси также показать точку на карте: написанный адрес и вход в здание могут потребовать отдельного уточнения.\n\nКнопка ниже копирует английскую фразу без кавычек.\n\nМеста и полезные контакты:\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=written_address_20261028'
+},
+{
+  id:'okok-useful-question-20261028', approved:true,
+  publishAt:'2026-10-28T19:30:00+07:00', expiresAt:'2026-10-28T22:30:00+07:00',
+  text:'💬 Как задать вопрос, на который проще ответить\n\nВместо «Куда сходить?» добавь три детали: район, сколько есть времени и что хочется — поесть, погулять или найти услугу. Если едете компанией, укажи, сколько вас.\n\nНапример: «Мы вдвоём в Джомтьене, есть два часа. Ищем место для спокойного обеда, желательно с парковкой».\n\nЭто пример запроса, а не обещание свободного столика. Для вопроса о самом проекте открой «Написать автору» на OK-OK.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=useful_question_20261028'
+}
 ];
 
 // Reviewed presentation only. Keep the original IDs, bodies, times and dedup hashes.
 const copyPhrases = {
+  'okok-english-spice-20261023': 'No chilli, please.',
+  'okok-menu-units-20261025': 'How much is it altogether?',
+  'okok-written-address-20261028': 'Could you write down the address, please?',
   'okok-english-separate-sauce-20261027': 'Could I have the sauce on the side, please?',
   'okok-meeting-point-20261027': 'We’re waiting by the main entrance.'
 };
@@ -332,4 +351,26 @@ for (const post of POSTS) {
   if (copyPhrases[post.id]) post.copyText = copyPhrases[post.id];
   const siteUrl = post.text.match(/https:\/\/ok-ok\.click\/[^\s]*/)?.[0];
   if (siteUrl) post.buttons = [{text: 'Открыть OK-OK', url: siteUrl}];
+}
+
+// Shared typography for this reviewed batch and later queue additions. These
+// native entities/buttons do not change text, IDs or the delivery dedup key.
+// Do not revisit historical sends or infer arbitrary external destinations.
+const sourceButtons = {
+  'okok-nong-nooch-dinosaurs-20261022': ['Сайт Нонг Нуч', 'https://www.nongnoochpattaya.com/en/dinosaur'],
+  'okok-art-in-paradise-20261026': ['Источник: Туристическое управление', 'https://www.thailandtravel.or.jp/art-in-paradise/']
+};
+for (const post of POSTS) {
+  if (Date.parse(post.publishAt) < Date.parse('2026-10-22T14:00:00+07:00')) continue;
+  const heading = post.text.split('\n')[0];
+  const formatting = post.formatting || [];
+  if (!formatting.some(item => item.type === 'bold' && item.text === heading)) {
+    post.formatting = [{type:'bold', text:heading}, ...formatting];
+  }
+  const buttons = [...(post.buttons || [])];
+  const siteUrl = post.text.match(/https:\/\/ok-ok\.click\/[^\s]*/)?.[0];
+  if (siteUrl && !buttons.some(button => button.url === siteUrl)) buttons.push({text:'Открыть OK-OK', url:siteUrl});
+  const source = sourceButtons[post.id];
+  if (source && !buttons.some(button => button.url === source[1])) buttons.push({text:source[0], url:source[1]});
+  if (buttons.length) post.buttons = buttons;
 }
