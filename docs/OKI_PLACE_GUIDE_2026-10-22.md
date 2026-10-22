@@ -17,8 +17,8 @@ the guide is imported only after the user opens the already-rendered wheel,
 through a guarded optional call. Its fetch cannot delay startup DOM/load events.
 A stalled optional download must not block the normal UI; late initialization
 also respects a switch into the saved-list view.
-Styles ship inside the page, adding no blocking stylesheet request. The versioned
-lazy JS is precached before normal release-cache finalization. Offline
+Styles load from the optional module only after wheel opening, adding no
+startup stylesheet request. Versioned JS/CSS are precached before normal release-cache finalization. Offline
 selection uses local data; external maps/sources still need connectivity.
 Storage failure uses the existing visible warning without blocking navigation.
 No pet progress, payment, referral, Telegram or other-city changes.
@@ -26,7 +26,7 @@ No pet progress, payment, referral, Telegram or other-city changes.
 Current files: oki-place-guide.js/css, scripts/apply-oki-place-guide.mjs,
 tests/oki-place-guide.test.mjs and tests/oki-place-guide.spec.cjs, build import.
 Local build and 71 native tests passed on the final application source. Size:
-HTML 454,782 bytes, gzip 124,990, JavaScript 924,906, site 31,616,896; existing
+HTML 454,267 bytes, gzip about 124,910, JavaScript below 925,000; existing
 limits unchanged. New browser cases cover all languages/themes, preserved history,
 source/map/save actions, reachable close, missing/stalled helper, offline and blocked storage.
 Required full browser suite, three Lighthouse
@@ -36,8 +36,9 @@ checkpoint and the PR evidence if interrupted; main remains working until releas
 
 CI 39743861052 passed all 136 browser tests, including the nine helper cases,
 payment UI and three Lighthouse runs (65/60/62, accessibility 98, best practices
-96, SEO 100). Final stylesheet delivery was then simplified to inline CSS to
-remove any optional stylesheet download from startup. The final module loads on
+96, SEO 100). Final stylesheet delivery moved into the lazy module to
+remove optional stylesheet downloads from startup and preserve the page budget.
+The final module loads on
 wheel opening only; failure fixtures block service workers to test actual network
 failures, and filter listeners belong to the current popup to avoid stale nodes.
 Repeat required release
