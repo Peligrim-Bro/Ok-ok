@@ -20,6 +20,7 @@ Current rules consolidated on 2026-10-20. Later explicit owner decisions superse
 - Historical designs: inactive: [docs/FEATURE_RULES.md#historical-designs-inactive](docs/FEATURE_RULES.md#historical-designs-inactive)
 
 ## Project, authorization and sources
+- Owner privacy/editorial rule (2026-10-23): never use the owner's personal name in public copy, signatures, reviews or generated content without separate explicit approval for that use. Write owner-confirmed experiences in the first person ("in my opinion", "my experience"), not as a third-person biography. Public-source summaries must still be attributed to their sources, never converted into invented personal experience. Preserve approved functional contact URLs and referral codes; they are not editorial attribution.
 - Repository: Peligrim-Bro/Ok-ok, main. Hosting: Cloudflare Worker ok-ok only. Do not restore Netlify workflows.
 - Owner uses iPad/iPhone. Prefer direct GitHub updates and automatic Cloudflare deployment; do not ask the owner to upload replacement files when connector access works.
 - Preserve existing changes. Read main before edits; never force-push.

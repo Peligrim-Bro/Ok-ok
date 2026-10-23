@@ -1,9 +1,21 @@
-import {readFileSync,existsSync} from 'node:fs';
+import {readFileSync,existsSync,readdirSync} from 'node:fs';
 import {Script} from 'node:vm';
 import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
 import {verifyReleaseCache} from './release-cache.mjs';
 const html=readFileSync('site/public/index.html','utf8');
+// Owner approval is required before adding personal-name attribution to copy.
+// Existing approved functional routes/codes are not editorial name attribution.
+function checkPublicVoice(dir){
+ for(const entry of readdirSync(dir,{withFileTypes:true})){
+  const path=dir+'/'+entry.name;
+  if(entry.isDirectory()){checkPublicVoice(path);continue;}
+  if(!/\.(?:html|js|json|txt)$/.test(path))continue;
+  const copy=readFileSync(path,'utf8').replaceAll('TIMUR5494','').replaceAll('https://t.me/Khan_Timur','');
+  assert(!/тимур|(?<![a-z])timur(?![a-z])/i.test(copy),'Personal-name attribution needs separate owner approval: '+path);
+ }
+}
+checkPublicVoice('site/public');
 const startupSettings=JSON.parse(readFileSync('content/startup.json','utf8'));
 if(!startupSettings.portalEnabled){
  assert(!/portal-launch\.js|okok-portal-startup|data-okok-portal-pending/.test(html),'Disabled startup portal must not load or cover the site');
