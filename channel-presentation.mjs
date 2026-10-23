@@ -1,5 +1,11 @@
 // Optional, explicitly reviewed presentation. Plain text stays the dedup identity.
+import {BRAND,brandSignature} from './brand-copy.mjs';
 const fail = () => { throw Error('invalid_channel_presentation'); };
+export function channelText(post){
+ if(post.brandCTA===undefined)return post.text;
+ if(typeof post.text!=='string'||post.text.includes(BRAND.ru.motto))return fail();
+ return post.text+'\n\n'+brandSignature(post.brandCTA);
+}
 function uniqueSpan(text, phrase) {
   if (typeof phrase !== 'string' || !phrase.trim()) return fail();
   const offset = text.indexOf(phrase);
@@ -7,6 +13,7 @@ function uniqueSpan(text, phrase) {
   return {offset, length: phrase.length}; // Telegram uses UTF-16, as JS does.
 }
 export function channelPresentation(post) {
+  channelText(post); // Validate optional branding without changing legacy spans.
   const result = {}, rows = [];
   if (post.copyText !== undefined) {
     if (typeof post.copyText !== 'string' || post.copyText.length > 256) return fail();

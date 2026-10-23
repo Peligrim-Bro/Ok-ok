@@ -1,6 +1,6 @@
 import {createHash, timingSafeEqual} from 'node:crypto';
 import {CHANNEL, POSTS} from './channel-posts.mjs';
-import {channelPresentation} from './channel-presentation.mjs';
+import {channelPresentation,channelText} from './channel-presentation.mjs';
 const json = (v, status=200) => new Response(JSON.stringify(v), {status,headers:{'content-type':'application/json','cache-control':'no-store'}});
 const hash = text => createHash('sha256').update(text).digest('hex');
 async function api(env, method, body) {
@@ -20,7 +20,7 @@ async function photoBody(env, channelId, post) {
   const bytes=await image.arrayBuffer();
   if(!bytes.byteLength||bytes.byteLength>10000000)throw Error('comic_asset_size');
   const body=new FormData();
-  body.set('chat_id',String(channelId));body.set('caption',post.text);
+  body.set('chat_id',String(channelId));body.set('caption',channelText(post));
   const presentation=channelPresentation(post);
   if(presentation.entities)body.set('caption_entities',JSON.stringify(presentation.entities));
   if(presentation.reply_markup)body.set('reply_markup',JSON.stringify(presentation.reply_markup));
@@ -40,7 +40,8 @@ export function validatePosts(posts) {
   const ids = new Set();
   for(const p of posts) {
     if(!/^[a-z0-9-]{3,80}$/.test(p.id)||ids.has(p.id)||typeof p.text!=='string'||!p.text.trim()||p.text.length>4000||!Number.isFinite(Date.parse(p.publishAt))||!Number.isFinite(Date.parse(p.expiresAt))||Date.parse(p.expiresAt)<=Date.parse(p.publishAt)||typeof p.approved!=='boolean') throw Error('invalid_channel_post');
-    if(p.photo !== undefined && (typeof p.photo!=='string'||!/^https:\/\/www\.ok-ok\.click\/assets\/channel\/[a-z0-9-]+\.(?:png|jpg)$/.test(p.photo)||p.text.length>1024)) throw Error('invalid_channel_photo');
+    if(channelText(p).length>4000)throw Error('invalid_channel_post');
+    if(p.photo !== undefined && (typeof p.photo!=='string'||!/^https:\/\/www\.ok-ok\.click\/assets\/channel\/[a-z0-9-]+\.(?:png|jpg)$/.test(p.photo)||channelText(p).length>1024)) throw Error('invalid_channel_photo');
     channelPresentation(p);
     ids.add(p.id);
   }
@@ -86,7 +87,7 @@ export class ChannelPublisher {
         const channelId=await checkRights(this.env);
         const result=p.photo
           ? await api(this.env,'sendPhoto',await photoBody(this.env,channelId,p))
-          : await api(this.env,'sendMessage',{chat_id:channelId,text:p.text,link_preview_options:{is_disabled:false},...channelPresentation(p)});
+          : await api(this.env,'sendMessage',{chat_id:channelId,text:channelText(p),link_preview_options:{is_disabled:false},...channelPresentation(p)});
         if(!Number.isSafeInteger(result?.message_id)||result.message_id<=0||result.chat?.id!==channelId||result.chat?.type!=='channel')throw Error('invalid_delivery_receipt');
         const deliveredAt=Date.now();
         await this.ctx.storage.put(key,{state:'sent',messageId:result.message_id,chatId:channelId,

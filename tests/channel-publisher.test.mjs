@@ -2,6 +2,7 @@ import {test,afterEach} from 'node:test';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {ChannelPublisher,channelWebhook,checkRights,validatePosts} from '../channel-publisher.mjs';
+import {channelText} from '../channel-presentation.mjs';
 const realFetch=globalThis.fetch;
 afterEach(()=>globalThis.fetch=realFetch);
 const jpeg=new Uint8Array([255,216,255,217]);
@@ -15,6 +16,25 @@ function mock(fail=false){const calls=[];globalThis.fetch=async(url,init)=>{
 function store(){const map=new Map();const s={get:async k=>map.get(k),put:async(k,v)=>map.set(k,v),transaction:async f=>f(s)};return s;}
 const req=action=>new Request('https://internal',{method:'POST',body:JSON.stringify(action)});
 const post={id:'intro-1',text:'A reviewed post https://ok-ok.click/',approved:true,publishAt:'2026-01-01T00:00:00Z',expiresAt:'2099-01-01T00:00:00Z'};
+test('brand signature reaches text/photo payloads without changing body identity',async()=>{
+ const calls=mock(),d=new ChannelPublisher({storage:store()},env);await d.fetch(req({action:'start'}));
+ const branded={...post,brandCTA:'share'},photo={...post,id:'photo-brand',text:'Reviewed comic',brandCTA:'rate',photo:'https://www.ok-ok.click/assets/channel/oki-comic-001-super-soup.jpg'};
+ await d.fetch(req({action:'tick',posts:[branded,photo]}));
+ assert.equal(calls.find(c=>c.method==='sendMessage').body.text,channelText(branded));
+ assert.equal(calls.find(c=>c.method==='sendPhoto').body.caption,channelText(photo));
+ assert.equal(branded.text,post.text);
+});
+test('adding or changing branding cannot resend delivered content even with another ID',async()=>{
+ const calls=mock(),storage=store();let d=new ChannelPublisher({storage},env);await d.fetch(req({action:'start'}));
+ await d.fetch(req({action:'tick',posts:[post]}));d=new ChannelPublisher({storage},env);
+ await d.fetch(req({action:'tick',posts:[{...post,id:'another-slot',brandCTA:'share'}]}));
+ assert.equal(calls.filter(c=>c.method==='sendMessage').length,1);
+});
+test('final branded captions and text are checked before any delivery',()=>{
+ assert.throws(()=>validatePosts([{...post,text:'x'.repeat(3999),brandCTA:'share'}]));
+ assert.throws(()=>validatePosts([{...post,text:'x'.repeat(1000),brandCTA:'share',photo:'https://www.ok-ok.click/assets/channel/oki-comic-001-super-soup.jpg'}]));
+ assert.throws(()=>validatePosts([{...post,brandCTA:'invent'}]));
+});
 test('validates queue and rejects duplicate IDs or invalid expiry',()=>{
  assert.equal(validatePosts([post]).length,1);
  assert.throws(()=>validatePosts([post,post]));assert.throws(()=>validatePosts([{...post,expiresAt:post.publishAt}]));

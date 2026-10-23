@@ -7,6 +7,12 @@ authenticated owner's `/channel`; never replace TG_CHAT_ID (payment recipient).
 
 ## Content and illustrations
 
+- Brand mission approved 23 October 2026: use brand-copy.mjs and `brandCTA`
+  metadata for the contextual call plus «Твой опыт — чья-то безопасная поездка».
+  The signature belongs outside spoilers/expandable answers. Check final composed
+  caption length; preserve original IDs, bodies, exact URLs and delivery history.
+  Never add a second hand-written signature or resume paused video channels.
+
 - Russian, one concrete subject, honest headline, short paragraphs, useful action.
 - Check volatile facts against an opened primary source with its actual date.
   Personal verification requires the owner's corresponding confirmed visit.

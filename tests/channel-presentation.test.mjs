@@ -1,9 +1,27 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {channelPresentation} from '../channel-presentation.mjs';
+import {channelPresentation,channelText} from '../channel-presentation.mjs';
+import {BRAND} from '../brand-copy.mjs';
 
 test('legacy plain content is unchanged and HTML-like text stays literal',()=>{
  assert.deepEqual(channelPresentation({text:'A < B & C > D'}),{});
+});
+test('brand signature is outside existing entities and preserves original text, copy and URLs',()=>{
+ const url='https://ok-ok.click/?utm_source=telegram&ref=keep';
+ const p={text:'🌴 Заголовок\nA useful phrase\nОтвет\n'+url,brandCTA:'rate',copyText:'A useful phrase',buttons:[{text:'Сайт',url}],formatting:[{type:'spoiler',text:'Ответ'}]};
+ const original=p.text,out=channelText(p),presentation=channelPresentation(p);
+ assert.equal(p.text,original);assert(out.startsWith(original+'\n\n'));
+ assert(out.endsWith(BRAND.ru.cta.rate+'\n'+BRAND.ru.motto));
+ assert.equal(out.split(BRAND.ru.motto).length,2);
+ for(const e of presentation.entities)assert(e.offset+e.length<=original.length);
+ assert.equal(presentation.reply_markup.inline_keyboard[0][0].copy_text.text,p.copyText);
+ assert.equal(presentation.reply_markup.inline_keyboard[1][0].url,url);
+});
+test('all contextual signatures are explicit; unknown or duplicate branding is rejected',()=>{
+ for(const brandCTA of ['rate','share','warn'])assert(channelText({text:'Post',brandCTA}).includes(BRAND.ru.cta[brandCTA]));
+ assert.equal(channelText({text:'Historical post'}),'Historical post');
+ assert.throws(()=>channelText({text:'Post',brandCTA:'invent'}));
+ assert.throws(()=>channelText({text:BRAND.ru.motto,brandCTA:'share'}));
 });
 test('copying requires one exact, unambiguous phrase within the post',()=>{
  for(const p of [{text:'hello',copyText:'absent'},{text:'hello hello',copyText:'hello'},{text:'hello',copyText:''},{text:'x'.repeat(257),copyText:'x'.repeat(257)},{text:'hello',copyText:['hello']}])assert.throws(()=>channelPresentation(p));
