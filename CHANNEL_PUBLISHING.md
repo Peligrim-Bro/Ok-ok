@@ -1,5 +1,17 @@
 # Telegram channel publishing
 
+## Topic hashtags, owner 23 October 2026
+
+Every queued post needs 1–3 reviewed `topics` from channel-topics.mjs (normally
+2–3). Add metadata when replenishing; the queue rejects unmapped new entries.
+Use #Фразы with #Приветствия, #Ресторан or #Такси as appropriate; meal-specific
+tags are reserved for meal-specific material. No automatic keyword guessing.
+channelText appends the hashtags outside the original body/signature and the
+presentation supplies UTF-16 hashtag entities. Preserve content dedup, IDs,
+copy/source buttons and full caption limits. See docs/CHANNEL_TOPICS_2026-10-23.md.
+Already-delivered posts require separate observed edits; queue metadata does not
+edit history. Never overwrite an owner's manual changes from old source text.
+
 ## Brand signature, owner 23 October 2026
 
 From the 23 October 09:00 slot onward, future entries inherit `brandCTA` metadata

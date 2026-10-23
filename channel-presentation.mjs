@@ -1,10 +1,19 @@
 // Optional, explicitly reviewed presentation. Plain text stays the dedup identity.
 import {BRAND,brandSignature} from './brand-copy.mjs';
+import {topicTags} from './channel-topics.mjs';
 const fail = () => { throw Error('invalid_channel_presentation'); };
 export function channelText(post){
- if(post.brandCTA===undefined)return post.text;
- if(typeof post.text!=='string'||post.text.includes(BRAND.ru.motto))return fail();
- return post.text+'\n\n'+brandSignature(post.brandCTA);
+ let text=post.text;
+ if(post.brandCTA!==undefined){
+  if(typeof text!=='string'||text.includes(BRAND.ru.motto))return fail();
+  text+='\n\n'+brandSignature(post.brandCTA);
+ }
+ const tags=topicTags(post);
+ if(tags.length){
+  if(typeof text!=='string'||tags.some(tag=>text.includes(tag)))return fail();
+  text+='\n\n'+tags.join(' ');
+ }
+ return text;
 }
 function uniqueSpan(text, phrase) {
   if (typeof phrase !== 'string' || !phrase.trim()) return fail();
@@ -13,7 +22,7 @@ function uniqueSpan(text, phrase) {
   return {offset, length: phrase.length}; // Telegram uses UTF-16, as JS does.
 }
 export function channelPresentation(post) {
-  channelText(post); // Validate optional branding without changing legacy spans.
+  const composed=channelText(post); // Preserve legacy spans; tags go after the signature.
   const result = {}, rows = [];
   if (post.copyText !== undefined) {
     if (typeof post.copyText !== 'string' || post.copyText.length > 256) return fail();
@@ -48,6 +57,13 @@ export function channelPresentation(post) {
       if (entities[i].offset < entities[i - 1].offset + entities[i - 1].length) return fail();
     }
     if (entities.length) result.entities = entities;
+  }
+  const tags=topicTags(post);
+  if(tags.length){
+    let offset=composed.length-tags.join(' ').length;
+    result.entities=[...(result.entities||[]),...tags.map(tag=>{
+      const entity={type:'hashtag',offset,length:tag.length};offset+=tag.length+1;return entity;
+    })];
   }
   return result;
 }

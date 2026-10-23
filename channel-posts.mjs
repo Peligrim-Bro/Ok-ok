@@ -1,4 +1,5 @@
 // Only reviewed content belongs here. Dates are explicit, not a recurring mandate.
+import {REVIEWED_TOPICS,topicTags} from './channel-topics.mjs';
 export const CHANNEL = '@PattayaOk_Ok';
 export const POSTS = [{
   id:'okok-project-intro-20261015',
@@ -347,6 +348,11 @@ export const POSTS = [{
 }
 ];
 
+// Required editorial metadata. Never infer a meal or service from one keyword.
+for(const post of POSTS){
+ post.topics ??= REVIEWED_TOPICS[post.id];
+ if(!topicTags(post).length)throw Error('channel_topics_required:'+post.id);
+}
 // Reviewed presentation only. Keep the original IDs, bodies, times and dedup hashes.
 const copyPhrases = {
   'okok-english-spice-20261023': 'No chilli, please.',

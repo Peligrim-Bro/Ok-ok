@@ -2,6 +2,32 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {channelPresentation,channelText} from '../channel-presentation.mjs';
 import {BRAND} from '../brand-copy.mjs';
+import {POSTS} from '../channel-posts.mjs';
+
+test('all reviewed entries have short, explicit topics; universal restaurant phrases are not meal-specific',()=>{
+ assert.equal(POSTS.length,48);
+ for(const post of POSTS)assert(post.topics.length>=2&&post.topics.length<=3);
+ const spice=POSTS.find(p=>p.id==='okok-english-spice-20261023');
+ assert.deepEqual(spice.topics,['Фразы','Английский','Ресторан']);
+ assert(!spice.topics.some(t=>['Завтрак','Обед','Ужин'].includes(t)));
+});
+test('hashtags remain clickable UTF-16 entities after branding, with original hidden/copy/link content intact',()=>{
+ const url='https://ok-ok.click/?ref=preserve&lang=ru';
+ const p={text:'🌴 Фраза\nHello!\nОтвет\n'+url,brandCTA:'share',topics:['Фразы','Английский','Приветствия'],copyText:'Hello!',buttons:[{text:'Сайт',url}],formatting:[{type:'spoiler',text:'Ответ'}]};
+ const text=channelText(p),r=channelPresentation(p);
+ assert(text.endsWith('#Фразы #Английский #Приветствия'));
+ const tags=r.entities.filter(e=>e.type==='hashtag');assert.equal(tags.length,3);
+ assert.deepEqual(tags.map(e=>text.slice(e.offset,e.offset+e.length)),['#Фразы','#Английский','#Приветствия']);
+ assert(tags.every(e=>e.offset>text.indexOf(BRAND.ru.motto)));
+ assert.equal(r.entities[0].offset,p.text.indexOf('Ответ'));
+ assert.equal(r.reply_markup.inline_keyboard[0][0].copy_text.text,'Hello!');
+ assert.equal(r.reply_markup.inline_keyboard[1][0].url,url);
+});
+test('invalid, duplicated or already appended topic tags are rejected',()=>{
+ for(const topics of [[],['Фразы','Фразы'],['invent'],['Фразы','Английский','Ресторан','Ужин'],'Фразы'])assert.throws(()=>channelPresentation({text:'Post',topics}));
+ assert.throws(()=>channelText({text:'Post #Фразы',topics:['Фразы']}));
+ assert.equal(channelText({text:'Legacy'}),'Legacy');
+});
 
 test('legacy plain content is unchanged and HTML-like text stays literal',()=>{
  assert.deepEqual(channelPresentation({text:'A < B & C > D'}),{});
