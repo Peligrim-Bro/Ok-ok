@@ -27,7 +27,25 @@ export function channelPresentation(post) {
   if (post.copyText !== undefined) {
     if (typeof post.copyText !== 'string' || post.copyText.length > 256) return fail();
     uniqueSpan(post.text, post.copyText);
-    rows.push([{text: 'Скопировать фразу', copy_text: {text: post.copyText}}]);
+    if(post.copyButtons===undefined)rows.push([{text: 'Скопировать фразу', copy_text: {text: post.copyText}}]);
+  }
+  if(post.copyButtons!==undefined){
+    if(!Array.isArray(post.copyButtons)||post.copyButtons.length<1||post.copyButtons.length>3)return fail();
+    const labels=new Set(),phrases=new Set();
+    for(const button of post.copyButtons){
+      if(!button||Object.keys(button).some(k=>!['label','text','source'].includes(k))||
+        typeof button.label!=='string'||!button.label.trim()||button.label.length>40||/[\r\n\t]/.test(button.label)||
+        typeof button.text!=='string'||!button.text.trim()||button.text.length>256||
+        labels.has(button.label)||phrases.has(button.text))return fail();
+      // A reviewed source disambiguates a phrase repeated in quiz choices/answer.
+      // It is not sent to Telegram; formatting still addresses the original body.
+      const source=button.source===undefined?post.text:button.source;
+      if(button.source!==undefined)uniqueSpan(post.text,source);
+      uniqueSpan(source,button.text);
+      labels.add(button.label);phrases.add(button.text);
+      rows.push([{text:button.label,copy_text:{text:button.text}}]);
+    }
+    if(post.copyText!==undefined&&!phrases.has(post.copyText))return fail();
   }
   if (post.buttons !== undefined) {
     if (!Array.isArray(post.buttons) || post.buttons.length > 6) return fail();

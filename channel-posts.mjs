@@ -361,6 +361,23 @@ const copyPhrases = {
   'okok-english-separate-sauce-20261027': 'Could I have the sauce on the side, please?',
   'okok-meeting-point-20261027': 'We’re waiting by the main entrance.'
 };
+// Explicitly reviewed action labels; every copied phrase remains in the post.
+const copyActions={
+ 'okok-english-entrance-20261021':[
+  {label:'Найти вход',text:'Where is the entrance?'},
+  {label:'Уточнить: во дворе?',text:'Is it inside the courtyard?'}
+ ],
+ 'okok-english-spice-20261023':[
+  {label:'Без чили',text:'No chilli, please.'},
+  {label:'Не слишком остро',text:'Not too spicy, please.'}
+ ],
+ 'okok-menu-units-20261025':[{label:'Уточнить общую сумму',text:'How much is it altogether?'}],
+ 'okok-english-separate-sauce-20261027':[{label:'Попросить соус отдельно',text:'Could I have the sauce on the side, please?'}],
+ 'okok-meeting-point-20261027':[{label:'Сообщить место встречи',text:'We’re waiting by the main entrance.'}],
+ 'okok-written-address-20261028':[{label:'Попросить записать адрес',text:'Could you write down the address, please?'}],
+ 'okok-bill-quiz-20261028':[{label:'Попросить счёт',text:'Could we have the bill, please?',source:'Б — “Could we have the bill, please?” означает «Можно нам счёт, пожалуйста?». Menu — меню, water — вода.'}]
+};
+for(const post of POSTS)if(copyActions[post.id])post.copyButtons=copyActions[post.id];
 // Owner-approved mission from the next ordinary slot onward. Presentation only:
 // original text/photo identity, IDs, schedules and delivered messages stay intact.
 const ratePosts=new Set(['okok-photo-before-bite-20261023','okok-art-in-paradise-20261026','okok-opening-hours-20261026']);

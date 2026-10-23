@@ -1,5 +1,26 @@
 # Telegram channel publishing
 
+## Action-labelled copy buttons, owner 23 October 2026
+
+Use `copyButtons:[{label,text}]` for 1–3 reviewed phrases with short, specific
+Russian action labels (40 UTF-16 units maximum). Each button copies only its
+explicit text (1–256 UTF-16 units), present in the post with a visible translation.
+One button per row; retain all existing site/source/referral buttons after them.
+Do not guess phrases, promise a button sends a message, or add a callback handler.
+For identical text repeated in a quiz, an explicit unique `source` excerpt may
+identify the intended occurrence. It must appear once in the original post and
+contain the copied phrase once. Spoiler entities/answer text stay unchanged.
+Legacy `copyText` still works; with copyButtons it must match a selected phrase,
+so it cannot silently disappear. No second generic duplicate copy button.
+
+Future phrase posts use labels such as “Попросить счёт”, “Попросить соус отдельно”
+and “Сообщить место встречи”. Current scope adds nine buttons across seven source
+entries, including two already-published entries that are NOT edited by this
+source change. Preserve body/dedup identity, IDs, times, hashtags and signature.
+No extra posts, public tests, historical rewrites or AI requests are authorized
+by this presentation update. See docs/COPY_ACTIONS_2026-10-23.md and the separate
+network handoff docs/COPY_BUTTON_HANDOFF.md.
+
 ## Topic hashtags, owner 23 October 2026
 
 Every queued post needs 1–3 reviewed `topics` from channel-topics.mjs (normally

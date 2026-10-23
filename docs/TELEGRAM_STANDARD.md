@@ -36,6 +36,9 @@ authenticated owner's `/channel`; never replace TG_CHAT_ID (payment recipient).
 - Prefer useful site/map/source buttons with the exact reviewed URL in the post.
 - Copy one explicit, unambiguous, verified phrase; retain its visible translation.
   Several possible phrases require an editorial choice, not automatic guessing.
+  Owner update 23 October: 1–3 explicitly reviewed `copyButtons` may offer separate
+  phrases with action labels. Each copies exactly its own visible phrase; retain
+  source/site rows. A unique reviewed source excerpt resolves repeated quiz text.
 - Use spoilers only for verified optional answers; three choices need three answers.
   Keep critical costs, addresses, risks and source links outside hidden regions.
 - iPhone/iPad observation from the source network on 22 October: tapping one
@@ -66,9 +69,10 @@ presentation retains one exact OK-OK URL button, explicit reviewed source button
 and copy buttons together. It never guesses external URLs, hides critical facts,
 changes historical messages or appends advertising from the other channels.
 New entries inherit this typography through `channel-posts.mjs`; validate the
-finished `channelPresentation` output before approval. A second phrase in a post
-does not get copied automatically: the editor explicitly selected “No chilli,
-please.” for 23 October. The Russian translation stays visible.
+finished `channelPresentation` output before approval. The 23 October owner
+update explicitly selects separate “Не слишком остро” and “Без чили” buttons
+in source metadata; it does not edit that already-delivered post. Translations
+stay visible and no second phrase is guessed automatically.
 The 28 October evening language quiz has one optional answer under a spoiler;
 the prompt, choices, next action and site button stay visible.
 
