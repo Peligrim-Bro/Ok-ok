@@ -16,6 +16,23 @@ function mock(fail=false){const calls=[];globalThis.fetch=async(url,init)=>{
 function store(){const map=new Map();const s={get:async k=>map.get(k),put:async(k,v)=>map.set(k,v),transaction:async f=>f(s)};return s;}
 const req=action=>new Request('https://internal',{method:'POST',body:JSON.stringify(action)});
 const post={id:'intro-1',text:'A reviewed post https://ok-ok.click/',approved:true,publishAt:'2026-01-01T00:00:00Z',expiresAt:'2099-01-01T00:00:00Z'};
+test('multiple purpose-labelled copy actions reach text/photo and never alter delivery identity',async()=>{
+ for(const photo of [undefined,'https://www.ok-ok.click/assets/channel/oki-comic-001-super-soup.jpg']){
+  const calls=mock(),storage=store(),d=new ChannelPublisher({storage},env);
+  const url='https://ok-ok.click/?ref=keep';
+  const p={...post,photo,text:'Hello!\nNo chilli, please.\n'+url,topics:['Фразы','Ресторан'],brandCTA:'share',
+   copyButtons:[{label:'Привет',text:'Hello!'},{label:'Без чили',text:'No chilli, please.'}],buttons:[{text:'Сайт',url}]};
+  await d.fetch(req({action:'start'}));await d.fetch(req({action:'tick',posts:[p]}));
+  const body=calls.find(c=>c.method===(photo?'sendPhoto':'sendMessage')).body;
+  assert.equal(body.text||body.caption,channelText(p));
+  assert.deepEqual(body.reply_markup.inline_keyboard.map(row=>row[0].text),['Привет','Без чили','Сайт']);
+  assert.equal(body.reply_markup.inline_keyboard[0][0].copy_text.text,'Hello!');
+  assert.equal(body.reply_markup.inline_keyboard[1][0].copy_text.text,'No chilli, please.');
+  assert.equal(body.reply_markup.inline_keyboard[2][0].url,url);
+  await d.fetch(req({action:'tick',posts:[{...p,id:'new-actions',copyButtons:[{label:'Скопировать приветствие',text:'Hello!'}]}]}));
+  assert.equal(calls.filter(c=>c.method==='sendMessage'||c.method==='sendPhoto').length,1);
+ }
+});
 test('topic footer reaches both wire formats without changing dedup or source buttons',async()=>{
  for(const photo of [undefined,'https://www.ok-ok.click/assets/channel/oki-comic-001-super-soup.jpg']){
   const calls=mock(),storage=store(),d=new ChannelPublisher({storage},env);
