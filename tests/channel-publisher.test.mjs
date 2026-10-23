@@ -16,6 +16,22 @@ function mock(fail=false){const calls=[];globalThis.fetch=async(url,init)=>{
 function store(){const map=new Map();const s={get:async k=>map.get(k),put:async(k,v)=>map.set(k,v),transaction:async f=>f(s)};return s;}
 const req=action=>new Request('https://internal',{method:'POST',body:JSON.stringify(action)});
 const post={id:'intro-1',text:'A reviewed post https://ok-ok.click/',approved:true,publishAt:'2026-01-01T00:00:00Z',expiresAt:'2099-01-01T00:00:00Z'};
+test('topic footer reaches both wire formats without changing dedup or source buttons',async()=>{
+ for(const photo of [undefined,'https://www.ok-ok.click/assets/channel/oki-comic-001-super-soup.jpg']){
+  const calls=mock(),storage=store(),d=new ChannelPublisher({storage},env);
+  const p={...post,photo,topics:['Фразы','Такси']};
+  await d.fetch(req({action:'start'}));await d.fetch(req({action:'tick',posts:[p]}));
+  const body=calls.find(c=>c.method===(photo?'sendPhoto':'sendMessage')).body;
+  assert.equal(body.text||body.caption,post.text+'\n\n#Фразы #Такси');
+  assert.equal((body.entities||body.caption_entities).filter(e=>e.type==='hashtag').length,2);
+  await d.fetch(req({action:'tick',posts:[{...p,id:'another-id',topics:['Фразы','Приветствия']}]}));
+  assert.equal(calls.filter(c=>c.method==='sendMessage'||c.method==='sendPhoto').length,1);
+ }
+});
+test('topic footer cannot bypass final text/caption length checks',()=>{
+ assert.throws(()=>validatePosts([{...post,text:'x'.repeat(3999),topics:['Фразы']}]));
+ assert.throws(()=>validatePosts([{...post,text:'x'.repeat(1020),topics:['Фразы'],photo:'https://www.ok-ok.click/assets/channel/oki-comic-001-super-soup.jpg'}]));
+});
 test('brand signature reaches text/photo payloads without changing body identity',async()=>{
  const calls=mock(),d=new ChannelPublisher({storage:store()},env);await d.fetch(req({action:'start'}));
  const branded={...post,brandCTA:'share'},photo={...post,id:'photo-brand',text:'Reviewed comic',brandCTA:'rate',photo:'https://www.ok-ok.click/assets/channel/oki-comic-001-super-soup.jpg'};
