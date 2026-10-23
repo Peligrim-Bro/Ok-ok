@@ -1,5 +1,24 @@
 # Telegram channel publishing
 
+## Brand signature, owner 23 October 2026
+
+From the 23 October 09:00 slot onward, future entries inherit `brandCTA` metadata
+(`rate`, `share`, or `warn`; safe default `share`) from channel-posts.mjs. Choose
+it explicitly for new editorial entries: real place/visit discussions may use
+`rate`; checked scam/report topics may use `warn`; discoveries and fictional
+comics normally use `share`. Do not append a second manual signature.
+
+`channelText(post)` appends the contextual CTA and approved RU motto from
+brand-copy.mjs. The publisher sends this composed text/caption, checks its final
+UTF-16 length, and keeps the original `post.text`/photo hash and stable ID for
+deduplication. This presentation change never resends delivered content or edits
+old messages. Entities/copy/link buttons keep their original spans and URLs;
+the signature remains outside hidden answers. Long final captions fail validation
+instead of truncating useful content or links. See docs/BRAND_VOICE.md for captions.
+
+The schedule, enablement, bot credentials, receipts and paused video publishing
+are unchanged. Mocked sends prove payload construction, not a real Telegram send.
+
 ## Owner standard transferred on 22 October 2026
 
 Read `docs/TELEGRAM_STANDARD.md` before editing queue content, illustrations or

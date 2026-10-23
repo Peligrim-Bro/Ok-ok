@@ -2,9 +2,9 @@
  'use strict';
  const EMBED='https://embed.tawk.to/6ac5e0bddd1f0034bfdc8335/1k4afbpev';
  const copy={
-  ru:{button:'Написать автору',title:'Связаться с автором',lead:'Выберите тему обращения. Если автор не в сети, оставьте сообщение и email для ответа.',topics:['Реклама','Сотрудничество','Вопрос','Проблема на сайте'],loading:'Открываем чат…',error:'Чат пока не загрузился. Попробуйте ещё раз или откройте его отдельно.',fallback:'Открыть чат отдельно',close:'Закрыть',draft:'Здравствуйте! Тема обращения: '},
-  en:{button:'Message the author',title:'Contact the author',lead:'Choose a topic. If the author is offline, leave a message and your email for a reply.',topics:['Advertising','Partnership','Question','Website issue'],loading:'Opening chat…',error:'The chat has not loaded. Try again or open it separately.',fallback:'Open chat separately',close:'Close',draft:'Hello! My topic: '},
-  th:{button:'ติดต่อผู้ดูแล',title:'ติดต่อผู้ดูแล',lead:'เลือกหัวข้อ หากผู้ดูแลไม่ออนไลน์ กรุณาฝากข้อความและอีเมลเพื่อตอบกลับ',topics:['โฆษณา','ร่วมงาน','สอบถาม','ปัญหาเว็บไซต์'],loading:'กำลังเปิดแชต…',error:'แชตยังไม่โหลด ลองอีกครั้งหรือเปิดแชตแยกต่างหาก',fallback:'เปิดแชตแยกต่างหาก',close:'ปิด',draft:'สวัสดี! หัวข้อที่ต้องการติดต่อ: '}
+  ru:{button:'Написать автору',title:'Связаться с автором',lead:'Выберите тему. Если меня нет в сети, оставьте сообщение и email.',topics:['Реклама','Сотрудничество','Место или отзыв','Проблема на сайте'],loading:'Открываем чат…',error:'Чат пока не загрузился. Попробуйте ещё раз или откройте его отдельно.',fallback:'Открыть чат отдельно',close:'Закрыть',draft:'Здравствуйте! Тема обращения: '},
+  en:{button:'Message the author',title:'Contact the author',lead:'Choose a topic. Leave a message and email if I’m offline.',topics:['Advertising','Partnership','Place or review','Website issue'],loading:'Opening chat…',error:'The chat has not loaded. Try again or open it separately.',fallback:'Open chat separately',close:'Close',draft:'Hello! My topic: '},
+  th:{button:'ติดต่อผู้ดูแล',title:'ติดต่อผู้ดูแล',lead:'เลือกหัวข้อ ฝากข้อความและอีเมลไว้หากไม่ออนไลน์',topics:['โฆษณา','ร่วมงาน','สถานที่หรือรีวิว','ปัญหาเว็บไซต์'],loading:'กำลังเปิดแชต…',error:'แชตยังไม่โหลด ลองอีกครั้งหรือเปิดแชตแยกต่างหาก',fallback:'เปิดแชตแยกต่างหาก',close:'ปิด',draft:'สวัสดี! หัวข้อที่ต้องการติดต่อ: '}
  };
  const button=document.getElementById('authorChatButton'),dialog=document.getElementById('authorChatDialog');
  const status=document.getElementById('authorChatStatus'),fallback=document.getElementById('authorChatFallback');
