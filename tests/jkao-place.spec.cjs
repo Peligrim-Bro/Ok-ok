@@ -7,6 +7,8 @@ for(const lang of ['ru','en','th'])for(const theme of ['dark','light'])test(`J-K
  await page.goto('/');await page.locator('#installClose').click();
  await page.locator('nav.tab [data-tab="list"]').click();await page.locator('#q').fill('J-Kao');
  const card=page.locator('.card[data-open="jkao-seafood"]');
+ await expect(card).not.toContainText(/Тимур|Timur/i);
+ await expect(card.locator('.verdict')).toContainText({ru:'На мой вкус',en:'In my opinion',th:'ส่วนตัวคิดว่า'}[lang]);
  await expect(card).toHaveCount(1);await expect(card).toContainText('60–120');await expect(card).toContainText('120');await expect(card.locator('.stars')).toHaveCount(0);
  await expect(card.locator('.flag')).toHaveText({ru:'Первый визит · 16.10.2026',en:'First visit · 16 Oct 2026',th:'เยี่ยมชมครั้งแรก · 16 ต.ค. 2026'}[lang]);
  await expect.poll(()=>card.locator('img').evaluate(n=>n.naturalWidth)).toBeGreaterThan(0);
@@ -19,6 +21,8 @@ for(const lang of ['ru','en','th'])for(const theme of ['dark','light'])test(`J-K
  await page.screenshot({path:`quality-reports/jkao-card-${lang}-${theme}.png`});
  await card.locator('h3').click();await expect(sheet).toHaveClass(/open/);
  await expect(sheet).toContainText('J-Kao Seafood');await expect(sheet.locator('.stars')).toHaveCount(0);
+ await expect(sheet).not.toContainText(/Тимур|Timur/i);
+ await expect(sheet.locator('.owner-review')).toContainText({ru:'Впервые был здесь',en:'I first visited',th:'ไปครั้งแรก'}[lang]);
  await expect(sheet).toContainText({ru:'Воскресенье — выходной',en:'Closed Sundays',th:'หยุดวันอาทิตย์'}[lang]);
  await expect(sheet.locator('.owner-review')).toContainText('120');
  await expect(sheet.locator('.owner-review')).toContainText({ru:'жестковаты',en:'a little tough',th:'เหนียวไปหน่อย'}[lang]);

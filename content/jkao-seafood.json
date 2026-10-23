@@ -15,19 +15,19 @@
   "statusLabel": {"ru":"Часы не уточнены","en":"Hours unconfirmed","th":"ยังไม่ยืนยันเวลา"},
   "hoursText": {"ru":"Воскресенье — выходной; часы в другие дни не уточнены","en":"Closed Sundays; other opening hours unconfirmed","th":"หยุดวันอาทิตย์ ยังไม่ยืนยันเวลาเปิดปิดวันอื่น"},
   "blurb": {
-    "ru":"Простая еда, неплохие порции. В меню на фото — блюда по 60–70 бат. Том-ям за 120 бат: морепродуктов много, но жестковаты — впечатление Тимура.",
-    "en":"Simple food, decent portions; photographed dishes cost 60–70 baht. Timur's take: decent tom yum at 120 baht, plenty of seafood, but a little tough.",
-    "th":"อาหารเรียบง่าย ปริมาณใช้ได้ เมนูในภาพ 60–70 บาท Timur ว่าต้มยำ 120 บาทใช้ได้ อาหารทะเลเยอะแต่เหนียวไปหน่อย"
+    "ru":"Простая еда, неплохие порции. В меню на фото — блюда по 60–70 бат. На мой вкус, том-ям за 120 бат неплохой: морепродуктов много, но жестковаты.",
+    "en":"Simple food, decent portions; photographed dishes cost 60–70 baht. In my opinion, the 120-baht tom yum is decent: plenty of seafood, but a little tough.",
+    "th":"อาหารเรียบง่าย ปริมาณใช้ได้ เมนูในภาพ 60–70 บาท ส่วนตัวคิดว่าต้มยำ 120 บาทใช้ได้ อาหารทะเลเยอะแต่เหนียวไปหน่อย"
   },
   "conditions": {
-    "ru":"Кафе во дворе с парковкой. Адрес автора: 46/3, Muang Pattaya, Chon Buri 20250; VV6X+9Q. Фото вывески и меню — 16.10.2026. Условия уточняйте на месте.",
-    "en":"Courtyard cafe with parking. Author's address: 46/3, Muang Pattaya, Chon Buri 20250; VV6X+9Q. Sign and menu photos: 16 Oct 2026; confirm details locally.",
-    "th":"ร้านในลาน มีที่จอดรถ ที่อยู่จากผู้ดูแล: 46/3 Muang Pattaya, Chon Buri 20250; VV6X+9Q ภาพป้ายและเมนู 16 ต.ค. 2026 ควรสอบถามที่ร้าน"
+    "ru":"Кафе во дворе с парковкой. Адрес: 46/3, Muang Pattaya, Chon Buri 20250; VV6X+9Q. Фото вывески и меню — 16.10.2026. Условия уточняйте на месте.",
+    "en":"Courtyard cafe with parking. Address: 46/3, Muang Pattaya, Chon Buri 20250; VV6X+9Q. Sign and menu photos: 16 Oct 2026; confirm details locally.",
+    "th":"ร้านในลาน มีที่จอดรถ ที่อยู่: 46/3 Muang Pattaya, Chon Buri 20250; VV6X+9Q ภาพป้ายและเมนู 16 ต.ค. 2026 ควรสอบถามที่ร้าน"
   },
   "ownerReview": {
-    "ru":"Тимур: первый визит 16.10.2026. Дополнение 22.10: «Неплохой том-ям за 120 бат, много морепродуктов, но жестковаты». По его уточнению, в воскресенье закрыто.",
-    "en":"Timur: first visit 16 Oct 2026. Update, 22 Oct: decent tom yum, 120 baht; plenty of seafood, a little tough. He reports Sunday closure.",
-    "th":"Timur มาเยี่ยมครั้งแรก 16 ต.ค. 2026 เพิ่มข้อมูล 22 ต.ค.: ต้มยำ 120 บาทใช้ได้ อาหารทะเลเยอะแต่เหนียวไปหน่อย แจ้งว่าหยุดวันอาทิตย์"
+    "ru":"Впервые был здесь 16.10.2026. Дополняю 22.10: на мой вкус, том-ям за 120 бат неплохой. Морепродуктов много, но жестковаты. По воскресеньям закрыто.",
+    "en":"I first visited on 16 Oct 2026. My 22 Oct update: the 120-baht tom yum is decent in my opinion, with plenty of seafood, though a little tough. Closed Sundays.",
+    "th":"ไปครั้งแรกวันที่ 16 ต.ค. 2026 เพิ่มเติมวันที่ 22 ต.ค.: ส่วนตัวคิดว่าต้มยำ 120 บาทใช้ได้ อาหารทะเลเยอะแต่เหนียวไปหน่อย หยุดวันอาทิตย์"
   },
   "comments": []
 }
