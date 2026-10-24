@@ -1,137 +1,115 @@
 {
-  "verifiedAt": "2026-10-24",
+  "verifiedAt": "2026-10-25",
   "news": [
     {
       "category": "world",
-      "when": "23.10 · 🌍",
-      "href": "https://apnews.com/article/climate-change-flood-nepal-united-nations-cop31-187a3b7463eacd662dce6854d0c56eb1",
-      "publishedAt": "2026-10-23",
+      "when": "24.10 · 🌍",
+      "href": "https://focustaiwan.tw/society/202610240017",
+      "publishedAt": "2026-10-24",
       "nonWar": true,
-      "ru": "Фонд ООН предварительно выделил Непалу $20 млн после наводнений — свою первую выплату. Власти оценивают восстановление в $4,7 млрд.",
-      "en": "A UN fund provisionally allocated Nepal $20 million after the floods—its first payout. The government estimates recovery at $4.7 billion.",
-      "th": "กองทุนยูเอ็นจัดสรรเบื้องต้น 20 ล้านดอลลาร์ให้เนปาลหลังน้ำท่วม เป็นการจ่ายครั้งแรก ขณะที่รัฐประเมินค่าฟื้นฟู 4.7 พันล้านดอลลาร์",
+      "ru": "Champi отошёл от Тайваня: один погибший, 616 пострадавших, большинство травм лёгкие.",
+      "en": "Champi left Taiwan: one death and 616 injuries, mostly minor.",
+      "th": "ชอมปีออกจากไต้หวัน มีผู้เสียชีวิต 1 ราย บาดเจ็บ 616 ราย ส่วนใหญ่อาการเล็กน้อย",
       "sources": [
-        "https://apnews.com/article/climate-change-flood-nepal-united-nations-cop31-187a3b7463eacd662dce6854d0c56eb1"
+        "https://focustaiwan.tw/society/202610240017",
+        "https://www.reuters.com/business/environment/typhoon-champi-sweeps-past-taiwan-leaving-1-dead-500-injured-2026-10-24/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-24T06:30:00+07:00",
-        "sourceUrl": "https://apnews.com/article/climate-change-flood-nepal-united-nations-cop31-187a3b7463eacd662dce6854d0c56eb1",
-        "summary": "No comparable counters. Other pages repeated AP; syndication is neither independent breadth nor a global rank."
+        "observedAt": "2026-10-25T06:50:00+07:00",
+        "sourceUrl": "https://focustaiwan.tw/society/202610240017",
+        "summary": "No counters; Focus Taiwan, Reuters and AP covered it. No global rank."
       }
     },
     {
       "category": "thailand",
-      "when": "23.10 · 🇹🇭",
-      "href": "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-thailand-no-13-272-2026",
-      "publishedAt": "2026-10-23",
-      "ru": "TMD предупредила о сильных дождях 23–25 октября на востоке и юге, риске паводков и волнах выше трёх метров в грозах.",
-      "en": "TMD warned of heavy rain in the East and South on 23–25 October, flash floods and waves above three metres in storms.",
-      "th": "TMD เตือนฝนหนักภาคตะวันออกและใต้ 23–25 ตุลาคม เสี่ยงน้ำป่า และคลื่นสูงกว่า 3 เมตรในพายุฝน",
+      "when": "25.10 · 🇹🇭",
+      "href": "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-and-variable-weather-in-upper-thailand-no-4-276-2026",
+      "publishedAt": "2026-10-25",
+      "ru": "TMD: на юге сильные дожди до 28 октября; в грозах волны выше двух метров.",
+      "en": "TMD: heavy southern rain through 28 October; storm waves above two metres.",
+      "th": "TMD เตือนฝนหนักภาคใต้ถึง 28 ตุลาคม และคลื่นเกิน 2 เมตรในพายุฝน",
       "sources": [
-        "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-thailand-no-13-272-2026"
+        "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-and-variable-weather-in-upper-thailand-no-4-276-2026"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-24T06:30:00+07:00",
-        "sourceUrl": "https://www.nationthailand.com/news/general/40072664",
-        "summary": "No counts. Nation listed it No.2 Most Viewed; outlet-specific, not a national rank."
+        "observedAt": "2026-10-25T06:50:00+07:00",
+        "sourceUrl": "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-and-variable-weather-in-upper-thailand-no-4-276-2026",
+        "summary": "No counters; TMD's 05:00 update has no national discussion rank."
       }
     },
     {
       "category": "thailand",
-      "when": "22.10 · 🇹🇭",
-      "when": "23.10 · 🇹🇭",
-      "href": "https://www.thansettakij.com/business/tourism/672071",
-      "publishedAt": "2026-10-23",
-      "ru": "TAT и семь авиакомпаний дают скидку 500 бат на внутренний перелёт. Использовано 46 780 из 99 000 мест; бронирование — до 15 декабря.",
-      "en": "TAT and seven airlines offer 500 baht off a domestic flight. 46,780 of 99,000 seats were used; booking runs to 15 December.",
-      "th": "ททท.และ 7 สายการบินลดเที่ยวบินในประเทศ 500 บาท ใช้แล้ว 46,780 จาก 99,000 ที่นั่ง จองถึง 15 ธันวาคม",
+      "when": "24.10 · 🇹🇭",
+      "href": "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/553446",
+      "publishedAt": "2026-10-24",
+      "ru": "Global Wellness Summit пройдёт на Пхукете 10–13 ноября: профилактика, тайские практики, технологии.",
+      "en": "Phuket hosts the Global Wellness Summit on 10–13 November: prevention, Thai practice and technology.",
+      "th": "ภูเก็ตจัด Global Wellness Summit 10–13 พฤศจิกายน: การป้องกัน ภูมิปัญญาไทย เทคโนโลยี",
       "sources": [
-        "https://www.thansettakij.com/business/tourism/672071"
+        "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/553446"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-24T06:30:00+07:00",
-        "sourceUrl": "https://www.thansettakij.com/business/tourism/672071",
-        "summary": "No audience counters. 46,780 redemptions show uptake, not discussion or media rank."
+        "observedAt": "2026-10-25T06:50:00+07:00",
+        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/553446",
+        "summary": "PRD: 89 views versus 95, 64 and 103 on same-day items; not a national rank."
       }
     },
     {
       "category": "pattaya",
-      "when": "23.10 · Pattaya",
-      "href": "https://www.pattayamail.com/news/pattaya-tourism-association-offers-to-buy-back-blue-motorcycle-taxi-vests-569421",
-      "publishedAt": "2026-10-23",
-      "ru": "Туристическая ассоциация Паттайи рассматривает выкуп синих жилетов после отмены смены формы мототакси. Условия пока не объявлены.",
-      "en": "A Pattaya tourism association may buy back blue vests after the motorcycle-taxi uniform change was cancelled. Terms remain unannounced.",
-      "th": "สมาคมท่องเที่ยวพัทยาพิจารณารับซื้อเสื้อกั๊กสีน้ำเงินคืนหลังยกเลิกการเปลี่ยนเครื่องแบบวิน โดยยังไม่ประกาศเงื่อนไข",
+      "when": "24.10 · Pattaya",
+      "href": "https://www.pattayamail.com/latestnews/news/koh-larn-draws-holiday-crowds-during-thailands-three-day-break-569488",
+      "publishedAt": "2026-10-24",
+      "ru": "На пирсе Bali Hai выросли очереди на паромы до Ко Лана; стоит заложить больше времени.",
+      "en": "Koh Larn ferry queues grew at Bali Hai Pier; allow extra time.",
+      "th": "คิวเรือไปเกาะล้านที่แหลมบาลีฮายหนาแน่น ควรเผื่อเวลา",
       "sources": [
-        "https://www.pattayamail.com/news/pattaya-tourism-association-offers-to-buy-back-blue-motorcycle-taxi-vests-569421"
+        "https://www.pattayamail.com/latestnews/news/koh-larn-draws-holiday-crowds-during-thailands-three-day-break-569488"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-24T06:30:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/pattaya-tourism-association-offers-to-buy-back-blue-motorcycle-taxi-vests-569421",
-        "summary": "Pattaya Mail: 1,698 views/0 comments versus 1,330/0, 1,052/0 and 734/0. Unequal exposure; not a city rank."
+        "observedAt": "2026-10-25T06:50:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/latestnews/news/koh-larn-draws-holiday-crowds-during-thailands-three-day-break-569488",
+        "summary": "Pattaya Mail: 1,632 views/0 comments versus 507/0 and 310/0; not a city rank."
       }
     },
     {
       "category": "pattaya",
-      "when": "23.10 · Pattaya",
-      "href": "https://www.pattayamail.com/latestnews/news/pattaya-fireworks-festival-puts-hotel-rooms-traffic-and-beach-spots-in-focus-569438",
-      "publishedAt": "2026-10-23",
-      "ru": "Фестиваль фейерверков намечен на 27–28 ноября, 17:00–00:00. Beach Road планируют закрывать с 15:00; детали стоит сверять у города.",
-      "en": "The fireworks festival is set for 27–28 November, 5pm–midnight. Beach Road is due to close from 3pm; check city updates for details.",
-      "th": "เทศกาลพลุกำหนด 27–28 พฤศจิกายน 17.00–24.00 น. ถนนเลียบชายหาดจะปิดตั้งแต่ 15.00 น. ควรตรวจประกาศเมือง",
+      "when": "24.10 · Pattaya",
+      "href": "https://www.pattayamail.com/latestnews/news/holiday-traffic-snarls-choke-routes-into-chonburi-and-pattaya-569520",
+      "publishedAt": "2026-10-24",
+      "ru": "Поток на выходные и дорожные работы вызвали пробки на въезде в Чонбури и Паттайю.",
+      "en": "Holiday traffic and roadworks caused queues into Chonburi and Pattaya.",
+      "th": "รถช่วงวันหยุดและงานก่อสร้างทำให้เส้นทางเข้าชลบุรีและพัทยาติดขัด",
       "sources": [
-        "https://www.pattayamail.com/latestnews/news/pattaya-fireworks-festival-puts-hotel-rooms-traffic-and-beach-spots-in-focus-569438"
+        "https://www.pattayamail.com/latestnews/news/holiday-traffic-snarls-choke-routes-into-chonburi-and-pattaya-569520"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-24T06:30:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/latestnews/news/pattaya-fireworks-festival-puts-hotel-rooms-traffic-and-beach-spots-in-focus-569438",
-        "summary": "Pattaya Mail: 1,330 views/0 comments versus 1,698/0, 1,052/0 and 734/0. Not a city rank."
+        "observedAt": "2026-10-25T06:50:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/latestnews/news/holiday-traffic-snarls-choke-routes-into-chonburi-and-pattaya-569520",
+        "summary": "Pattaya Mail: 507 views/0 comments versus 1,632/0 and 310/0; not a city rank."
       }
     }
   ],
   "scams": [
     {
-      "id": "pea-refund-qr-pattaya-2026-10",
-      "title": {
-        "ru": "Ложный возврат депозита PEA через QR-код",
-        "en": "Fake PEA deposit refund via QR code",
-        "th": "หลอกคืนเงินประกัน PEA ผ่านคิวอาร์โค้ด"
-      },
-      "text": {
-        "ru": "Туристическая полиция сообщила о расследовании схемы, где звонящие выдавали себя за сотрудников Provincial Electricity Authority, обещали возврат депозита или замену счётчика и присылали QR-код для сбора банковских данных. Подозреваемые находятся под следствием; их виновность определяет суд.",
-        "en": "Tourist Police reported an investigation into callers impersonating Provincial Electricity Authority staff, offering a deposit refund or meter replacement and sending a QR code to collect banking details. The suspects remain under investigation; guilt is for the court to determine.",
-        "th": "ตำรวจท่องเที่ยวรายงานการสอบสวนกรณีผู้โทรแอบอ้างเป็นเจ้าหน้าที่การไฟฟ้าส่วนภูมิภาค เสนอคืนเงินประกันหรือเปลี่ยนมิเตอร์ แล้วส่งคิวอาร์โค้ดเพื่อเก็บข้อมูลธนาคาร ผู้ต้องสงสัยยังอยู่ระหว่างการสอบสวนและศาลเป็นผู้วินิจฉัยความผิด"
-      },
-      "do": {
-        "ru": "Не сканируйте QR-коды и не устанавливайте приложения по неожиданному звонку или SMS. Не сообщайте банковские данные; самостоятельно проверьте обращение через официальный сайт или контактный центр PEA.",
-        "en": "Do not scan QR codes or install apps after an unexpected call or text. Do not share banking details; verify the request independently through PEA's official website or contact centre.",
-        "th": "อย่าสแกนคิวอาร์โค้ดหรือติดตั้งแอปจากสายโทรหรือข้อความที่ไม่คาดคิด และอย่าให้ข้อมูลธนาคาร ควรตรวจสอบโดยตรงผ่านเว็บไซต์หรือศูนย์บริการทางการของ PEA"
-      },
-      "status": "reported-investigation",
-      "sources": [
-        "https://thepattayanews.com/2026/10/08/pattaya-tourist-police-arrest-four-people-in-mule-account-gang-linked-to-pea-impersonation-scam/"
-      ],
-      "verifiedAt": "2026-10-10"
-    },
-    {
       "id": "fake-cyber-police-recovery-pattaya-2026-10",
       "title": {
-        "ru": "Ложные «киберполицейские» обещают вернуть деньги",
-        "en": "Fake cyber police promise to recover money",
-        "th": "มิจฉาชีพอ้างเป็นตำรวจไซเบอร์เสนอช่วยทวงเงินคืน"
+        "ru": "QR-схемы от ложных PEA и киберполиции",
+        "en": "QR scams posing as PEA or cyber police",
+        "th": "คิวอาร์ปลอมอ้าง PEA หรือตำรวจไซเบอร์"
       },
       "text": {
-        "ru": "Полиция региона 2 и Паттайи сообщила о расследовании предполагаемого кол-центра, который выдавал себя за киберполицию и предлагал прежним жертвам мошенников вернуть деньги, присылая QR-коды. Задержаны три человека; число потерпевших и ущерб не подтверждены, расследование продолжается, виновность определяет суд.",
-        "en": "Provincial Police Region 2 and Pattaya police reported an investigation into an alleged call centre impersonating cyber police and offering previous scam victims help recovering money, including by sending QR codes. Three people were arrested; victim numbers and losses remain unconfirmed, the investigation continues, and guilt is for the court to determine.",
-        "th": "ตำรวจภูธรภาค 2 และตำรวจพัทยารายงานการสอบสวนคอลเซ็นเตอร์ต้องสงสัยที่แอบอ้างเป็นตำรวจไซเบอร์ เสนอช่วยผู้ที่เคยถูกหลอกให้ได้เงินคืนและส่งคิวอาร์โค้ด มีผู้ถูกจับกุม 3 คน แต่จำนวนผู้เสียหายและมูลค่าความเสียหายยังไม่ได้รับการยืนยัน คดียังอยู่ระหว่างสอบสวนและศาลเป็นผู้วินิจฉัยความผิด"
+        "ru": "8 и 14 октября полиция сообщила о расследованиях в Паттайе: звонящие выдавали себя за PEA или киберполицию, обещали возврат денег и присылали QR-коды. Виновность определяет суд.",
+        "en": "On 8 and 14 October, police reported Pattaya investigations into callers posing as PEA or cyber police, promising refunds and sending QR codes. Guilt is for the court.",
+        "th": "วันที่ 8 และ 14 ตุลาคม ตำรวจรายงานการสอบสวนในพัทยา กรณีผู้โทรอ้างเป็น PEA หรือตำรวจไซเบอร์ เสนอคืนเงินและส่งคิวอาร์โค้ด ศาลเป็นผู้วินิจฉัยความผิด"
       },
       "do": {
-        "ru": "Не доверяйте неожиданным предложениям «вернуть деньги», не сканируйте присланные QR-коды и не давайте доступ к банку. Самостоятельно свяжитесь с официальным подразделением полиции по контактам на его сайте.",
-        "en": "Do not trust unsolicited offers to recover money, scan supplied QR codes or grant banking access. Contact the relevant police unit independently using details from its official website.",
-        "th": "อย่าเชื่อข้อเสนอทวงเงินคืนที่ติดต่อมาโดยไม่ได้นัดหมาย อย่าสแกนคิวอาร์โค้ดที่ส่งมา หรือให้สิทธิ์เข้าถึงบัญชีธนาคาร ควรติดต่อหน่วยตำรวจที่เกี่ยวข้องเองผ่านช่องทางบนเว็บไซต์ทางการ"
+        "ru": "Не сканируйте присланный QR-код и не сообщайте банковские данные. Проверяйте обращение через официальный сайт ведомства.",
+        "en": "Do not scan supplied QR codes or share banking details. Verify requests through the agency’s official website.",
+        "th": "อย่าสแกนคิวอาร์โค้ดหรือให้ข้อมูลธนาคาร ตรวจสอบผ่านเว็บไซต์ทางการของหน่วยงาน"
       },
       "status": "reported-investigation",
       "sources": [
+        "https://thepattayanews.com/2026/10/08/pattaya-tourist-police-arrest-four-people-in-mule-account-gang-linked-to-pea-impersonation-scam/",
         "https://thepattayanews.com/2026/10/14/three-people-arrested-in-pattaya-call-centre-raid-over-alleged-fake-cyber-police-recovery-scam/"
       ],
       "verifiedAt": "2026-10-14"
@@ -181,7 +159,30 @@
         "https://www.police9.go.th/%E0%B8%95%E0%B8%B3%E0%B8%A3%E0%B8%A7%E0%B8%88%E0%B9%84%E0%B8%8B%E0%B9%80%E0%B8%9A%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%80%E0%B8%95%E0%B8%B7%E0%B8%AD%E0%B8%99-2/"
       ],
       "verifiedAt": "2026-10-19"
+    },
+    {
+      "id": "fake-scholarship-fees-thailand-2026-10",
+      "title": {
+        "ru": "Ложные платные стипендии",
+        "en": "Fake fee-based scholarships",
+        "th": "ทุนปลอมเรียกเก็บเงิน"
+      },
+      "text": {
+        "ru": "24 октября официальный центр предупредил: ложные страницы стипендий собирают документы и требуют предоплату.",
+        "en": "On 24 October, the official centre warned: fake scholarship pages seek documents and upfront fees.",
+        "th": "24 ตุลาคม ศูนย์ทางการเตือนว่าเพจทุนปลอมขอเอกสารและเงินล่วงหน้า"
+      },
+      "do": {
+        "ru": "Проверяйте стипендию на официальном сайте; не отправляйте документы или деньги по рекламе.",
+        "en": "Check official sites; never send documents or money through adverts.",
+        "th": "ตรวจสอบเว็บทางการ อย่าส่งเอกสารหรือเงินผ่านโฆษณา"
+      },
+      "status": "official-warning",
+      "sources": [
+        "https://www.antifakenewscenter.com/%E0%B8%AD%E0%B8%B2%E0%B8%8A%E0%B8%8D%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%AD%E0%B8%AD%E0%B8%99%E0%B9%84%E0%B8%A5%E0%B8%99%E0%B9%8C/fake-scholarships/"
+      ],
+      "verifiedAt": "2026-10-25"
     }
   ],
-  "selection": "Reviewed 2026-10-24 Asia/Bangkok: 1 world, 2 Thailand, 2 Pattaya; sources dated 23 October and already live. Later 24 October timestamps were excluded. Metrics and limits are in discussionEvidence. No distinct verified new scam; four active cards keep their dates. No Telegram sending."
+  "selection": "Reviewed 2026-10-25 Asia/Bangkok: 1 world, 2 Thailand, 2 Pattaya; source dates 24–25 October. Metrics are in discussionEvidence. Added the official 24 October scholarship warning; three earlier cards keep their dates; two QR investigations are consolidated. No Telegram sending."
 }
