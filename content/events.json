@@ -21,11 +21,11 @@
     "venue": "Terminal21 Pattaya Runway",
     "maps": "https://www.google.com/maps/search/?api=1&query=Terminal21+Pattaya+Runway",
     "source": "https://www.terminal21.co.th/pattaya/en/event/food-fun-fest-2026-is-back-en/",
-    "checkedAt": "2026-10-21"
+    "checkedAt": "2026-10-24"
   },
   {
     "id": "pattaya-bikini-beach-race-20261031",
-    "startAt": "2026-10-31T00:00:00+07:00",
+    "startAt": "2026-10-31T17:40:00+07:00",
     "endAt": "2026-11-01T00:00:00+07:00",
     "title": {
       "ru": "Pattaya Bikini Beach Race · ночной забег",
@@ -38,13 +38,13 @@
       "th": "งานวิ่งครบรอบ 10 ปี ระยะ 5 กม. บนชายหาดพัทยา พร้อมพระอาทิตย์ตก ดนตรี และความบันเทิงยามค่ำคืน จุดเริ่มต้นและเส้นชัยที่เซ็นทรัล พัทยา"
     },
     "when": {
-      "ru": "31 октября · время старта уточняй у организатора",
-      "en": "31 October · check start time with organiser",
-      "th": "31 ตุลาคม · ตรวจสอบเวลาเริ่มกับผู้จัด"
+      "ru": "31 октября · регистрация 16:30–17:00 · старт 17:40",
+      "en": "31 October · check-in 16:30–17:00 · start 17:40",
+      "th": "31 ตุลาคม · เช็กอิน 16:30–17:00 น. · ปล่อยตัว 17:40 น."
     },
     "venue": "Pattaya Beach · Central Pattaya",
     "maps": "https://www.google.com/maps/search/?api=1&query=Central+Pattaya+Beach",
-    "source": "https://race.thai.run/bikinirun2026",
-    "checkedAt": "2026-10-21"
+    "source": "https://www.centralpattaya.com/en/whats-happening/PTB-%F0%9D%91%A9%F0%9D%91%B0%F0%9D%91%B2%F0%9D%91%B0%F0%9D%91%B5%F0%9D%91%B0-%F0%9D%91%A9%F0%9D%91%AC%F0%9D%91%A8%F0%9D%91%AA%F0%9D%91%AF-%F0%9D%91%B9%F0%9D%91%A8%F0%9D%91%AA%F0%9D%91%AC-%F0%9D%9F%90%F0%9D%9F%8E%F0%9D%9F%90%F0%9D%9F%94",
+    "checkedAt": "2026-10-24"
   }
 ]
