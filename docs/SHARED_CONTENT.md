@@ -12,7 +12,7 @@ historical visit notes, conditions and unconfirmed hours preserved. It is not
 inserted into the publication queue. The editor checks factual changes, selects
 topics, a unique reviewed image and a future slot before approval.
 
-Existing place posts gain only `placeRef` metadata. Never regenerate approved
+New place drafts carry `placeRef` metadata. Existing posts are unchanged. Never regenerate approved
 post bodies from a changing place record: IDs/body/photo determine historical
 dedup, and Telegram history must not change through a catalogue edit. A corrected
 fact feeds new reviewed drafts, not silent historical edits or reposts.

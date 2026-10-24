@@ -3,20 +3,28 @@
 import jkao from './content/jkao-seafood.json' with {type:'json'};
 import musselana from './content/musselana-shabu.json' with {type:'json'};
 
-const places = new Map([jkao, musselana].map(place => [place.id, place]));
-export const SHARED_PLACE_IDS = Object.freeze([...places.keys()]);
+const places = [jkao, musselana];
+export const SHARED_PLACE_IDS = Object.freeze(places.map(place => place.id));
 
-export function getSharedPlace(id) {
-  const place = places.get(id);
+export function getSharedPlace(id, records = places) {
+  const place = records.find(place => place.id === id);
   if (!place) throw Error('unknown_shared_place:' + id);
   for (const key of ['name', 'maps', 'photos', 'blurb', 'conditions', 'hoursText', 'ownerReview']) {
     if (!place[key]) throw Error('incomplete_shared_place:' + id + ':' + key);
   }
+  if (!Array.isArray(place.photos) || !place.photos.length) throw Error('missing_place_photos:' + id);
+  const map = new URL(place.maps);
+  if (map.protocol !== 'https:' || map.username || map.password) throw Error('invalid_place_map:' + id);
+  for (const key of ['blurb', 'conditions', 'hoursText', 'ownerReview']) {
+    for (const lang of ['ru', 'en', 'th']) {
+      if (typeof place[key][lang] !== 'string' || !place[key][lang].trim()) throw Error('missing_place_translation:' + id);
+    }
+  }
   return structuredClone(place);
 }
 
-export function placeDraft(id) {
-  const place = getSharedPlace(id);
+export function placeDraft(id, records = places) {
+  const place = getSharedPlace(id, records);
   // Draft only: an editor selects a slot, topics, artwork and approvals.
   // Owner review/conditions retain the actual historical visit information.
   return {
