@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "project": "OK-OK.click",
+  "updatedAt": "2026-10-24",
+  "decisions": [
+    {"id":"hosting","status":"active","tags":["release"],"text":"Cloudflare Worker ok-ok only; preserve current deployment and all referrals.","sources":["AGENTS.md","OKOK_RULES.md"]},
+    {"id":"editorial-privacy","status":"active","tags":["content","channel"],"text":"No owner name in public copy without explicit approval. Personal visits only when owner confirmed; keep source and review dates.","sources":["docs/FEATURE_RULES.md"]},
+    {"id":"channel-isolation","status":"active","tags":["channel"],"text":"@PattayaOk_Ok uses its own bot/queue. Preserve IDs, original bodies, times and delivery dedup. No public test posts or blind retries.","sources":["CHANNEL_PUBLISHING.md"]},
+    {"id":"jkao-first","status":"active","tags":["content","catalogue"],"text":"J-Kao stays first. Current visit notes and unconfirmed hours come from its canonical content record.","sources":["content/jkao-seafood.json","scripts/apply-jkao-place.mjs"]},
+    {"id":"shared-content","status":"planned","tags":["content","channel"],"text":"Owner approved a common reviewed place source for website builds and channel drafts. Implement in the next checked stage; preserve approved post snapshots and dedup.","sources":["content/README.md","CHANNEL_PUBLISHING.md"]}
+  ],
+  "tasks": [
+    {"id":"shared-base-memory","status":"in_progress","tags":["content","channel","release"],"next":"Stage 1: file-based memory released via AGENTS. Stage 2: integrate shared place records and run branch QA before changing application main. Do not claim the common base deployed yet.","sources":["content/README.md","docs/PROJECT_MEMORY.md"]},
+    {"id":"channel-media-buffer","status":"needs_verification","tags":["channel"],"next":"Run the queue readiness audit at current Bangkok time; existing notes report missing separate illustrations for ordinary posts.","sources":["CHANNEL_PUBLISHING.md","scripts/audit-channel-queue.mjs"]},
+    {"id":"catalogue-assistant","status":"deferred","tags":["assistant"],"next":"Owner deferred the catalogue AI/RAG assistant. Resume only on a new instruction; no automatic API or dependency installation.","sources":["docs/PROJECT_MEMORY.md"]},
+    {"id":"selfie-tarot","status":"deferred","tags":["ideas"],"next":"Owner deferred selfie Tarot on 24 October. Windows Face ID is excluded.","sources":["docs/PROJECT_MEMORY.md"]}
+  ]
+}

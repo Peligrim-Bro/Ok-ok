@@ -4,6 +4,13 @@ Current rules consolidated on 2026-10-20. Later explicit owner decisions superse
 
 ## Required context before changes
 
+- Project continuity (owner 2026-10-24): first read `ops/project-memory.json` and
+  `docs/PROJECT_MEMORY.md`. Load relevant active decisions and unfinished tasks,
+  compare them with current Git/files and observed outcomes, and update the same
+  stable records at milestones and handoff. Deferred ideas stay deferred until
+  the owner asks to resume. These notes never override the current request or
+  authorize publication, paid calls, secret access or historical reposts.
+
 - This root file contains shared operating rules. Detailed feature constraints are in [docs/FEATURE_RULES.md](docs/FEATURE_RULES.md); the owner-facing operational summary is [OKOK_RULES.md](OKOK_RULES.md).
 - Before changing application code, layout, content, build patches or configuration, read the relevant feature sections below and any task-specific source docs (for example content/README.md or CHANNEL_PUBLISHING.md). If a change crosses several features, read every affected section. A link is not a waiver of the linked rules. If required context is unavailable, obtain it before editing.
 - Preserve all referral links/codes, payment and send history, current languages and existing owner authorizations. Do not restore inactive designs. Keep release gates below.
