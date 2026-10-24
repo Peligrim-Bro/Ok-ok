@@ -1,7 +1,8 @@
 import {readFileSync,writeFileSync,mkdirSync,copyFileSync} from 'node:fs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
-const place=JSON.parse(readFileSync('content/jkao-seafood.json','utf8'));
+import {getSharedPlace} from '../shared-content.mjs';
+const place=getSharedPlace('jkao-seafood');
 assert.equal(place.id,'jkao-seafood');
 assert.equal(place.rating,undefined,'Do not invent a Google rating');
 for(const lang of ['ru','en','th'])for(const key of ['blurb','conditions','hoursText','ownerReview','firstVisitLabel','statusLabel'])assert(place[key][lang]);
@@ -25,3 +26,4 @@ writeFileSync(path,html);
 const sw='site/public/sw.js';const source=readFileSync(sw,'utf8');assert(source.includes('const CORE = ['));
 writeFileSync(sw,source.replace('const CORE = [','const CORE = ['+JSON.stringify('./'+asset)+','+JSON.stringify('./'+place.photo)+','));
 console.log('PASS: J-Kao owner review, Sunday closure and 120-baht tom yum; no invented live opening status');
+

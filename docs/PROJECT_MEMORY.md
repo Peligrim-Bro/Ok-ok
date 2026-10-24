@@ -6,8 +6,9 @@ content, a user database, a model memory service or permission to act.
 
 At the beginning of project work read `ops/project-memory.json`. Select the
 decisions and open tasks relevant to the request, then read their source files.
-The next shared-content stage adds an optional local context-report command;
-that helper must not be assumed available until its checked release.
+Optionally run `node scripts/project-context.mjs` (or add `content`, `channel`,
+`catalogue`, `release`, `assistant`, `ideas`). It reads the current journal and
+source files, reports their hashes and never calls APIs or writes state.
 Read the cited rules, compare current Git and observed live outcomes, then act
 within the owner's current scope. A recorded date is not a fresh source check.
 

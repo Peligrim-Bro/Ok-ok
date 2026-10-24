@@ -1,5 +1,14 @@
 # Daily editorial updates
 
+## Shared place source
+
+`shared-content.mjs` reads the canonical J-Kao and Musselana place records for
+both website build patches and channel draft preparation. Run
+`node scripts/prepare-place-draft.mjs jkao-seafood` (or `musselana-shabu`) for an
+unapproved draft with a source snapshot. It does not enqueue or send a post.
+Review facts, image, topics and future slot before adding to the existing queue.
+Approved historical text remains immutable. See `docs/SHARED_CONTENT.md`.
+
 Edit only `content/editorial.json`; `scripts/apply-editorial.mjs` applies it at the end of the normal build. Cloudflare remains the only host. Read current main and AGENTS.md first; preserve unrelated changes.
 
 `verifiedAt`: local Asia/Bangkok ISO date. `news`: null preserves the previous digest; otherwise exactly five objects, categories `world` once, `thailand` twice, `pattaya` twice. Each has `when` (short date/category label), `href` (actual source article), `ru`, `en`, `th` (short original paraphrases), `publishedAt` (ISO date), `sources` (verified HTTPS links), `nonWar: true` for the world story. Optional `discussionEvidence` records observed comments/shares/trending rank with source URL and observation time; if unavailable explicitly record qualitative cross-outlet coverage, never invent counts or call it a proven global popularity ranking.

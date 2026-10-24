@@ -1,6 +1,7 @@
 import {readFileSync,writeFileSync,mkdirSync,copyFileSync,existsSync} from 'node:fs';
 import assert from 'node:assert/strict';
-const place=JSON.parse(readFileSync('content/musselana-shabu.json','utf8'));
+import {getSharedPlace} from '../shared-content.mjs';
+const place=getSharedPlace('musselana-shabu');
 assert.equal(place.id,'musselana-shabu');
 for(const lang of ['ru','en','th'])for(const key of ['blurb','conditions','hoursText','ownerReview'])assert(place[key][lang]);
 for(const photo of place.photos){
@@ -25,3 +26,4 @@ replace('<span class="${isOpenNow(hoursOf(p))?"ok":"off"}">${isOpenNow(hoursOf(p
 replace('<h3>${t().reviews}</h3>','<h3>${t().reviews}</h3>\n          ${p.ownerReview ? `<p class="owner-review">${L(p.ownerReview)}</p>` : ""}');
 writeFileSync(path,html);
 console.log('PASS: owner-recommended Musselana soup cart, OK badge, approximate hours, exact Plus Code and five owner photos');
+
