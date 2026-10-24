@@ -1,28 +1,28 @@
-# Shared content stage 2 — continuation
+# Shared content stage 2 — completed
 
 Owner authorized the common editorial source and file-based project memory on
-24 October 2026. Stage 1 is main commit 9c51d48c1cf36c867c5b6f0edec668159ab97daf.
-Stage 2 branch: feat/shared-editorial-base-20261024.
+24 October 2026. Stage 1: 9c51d48c1cf36c867c5b6f0edec668159ab97daf.
+Stage 2: PR #73, merged as bda015d2841a55aeeae901888f75a902d73647a6.
 
 Scope: two existing reviewed place records, both website build adapters,
 unapproved channel draft output, optional context report and regression checks.
 No Telegram sends, queue changes, credentials, paid calls or new services.
+Other catalogue datasets retain their roles; approved posts remain immutable.
 
-Local evidence: 49 shared-content/channel tests pass. Final npm run build passes
-all native gates. Baseline and candidate measure identical output sizes:
-454364 HTML bytes, 124937 gzip bytes, 924686 JS bytes, 29393496 static bytes.
-The downloaded ZIP was recovered from an existing local copy and its Git blob
-SHA matches current main (498e948a3ac88589816d7f4636897932170eaf2d).
-Transfer-only trailing newlines were normalized against main blob SHAs before
-the final build; no such normalization is part of the proposed commit.
+Evidence: 49 local shared-content/channel tests and final npm run build passed.
+Baseline/candidate output sizes were identical: 454364 HTML, 124937 gzip,
+924686 JS and 29393496 static bytes. CI run 40064871057 at tested head
+9cac01af302baa32d1789a713829096a3c7b45a1 passed all 142 browser tests,
+24 payment/catalogue tests and three Lighthouse runs. Their artifacts retain
+screenshots; selected RU/EN/TH dark/light phone/tablet/landscape and place/service
+screenshots were reviewed. Browser checks are emulation, not physical iOS tests.
 
-Local browser download is unavailable (invalid/truncated archive). Run the full
-browser suite and three Lighthouse runs in the existing PR GitHub workflow;
-inspect its screenshots and investigate failures before merging. Keep the
-candidate off main until required release checks pass. After merging, observe
-Workers Builds and exact /build-info.json commit before marking the task done.
+Workers Builds: ok-ok succeeded for the merge commit. Deployment run 40065634124
+passed exact live source verification and 11 public checks at 05:17 UTC on
+24 October. A separate /build-info.json read returned the same merge SHA.
+This note records that observed code release; inspect current main and live
+build-info again for later changes rather than treating historical evidence as
+current proof.
 
-Next: check PR QA, inspect screenshots, merge verified code, verify live release,
-then update ops/project-memory.json with actual evidence. Existing approved
-channel bodies/IDs/photos/times are unchanged. Catalogue assistant and selfie
-Tarot stay deferred.
+No pending stage-2 code changes. Catalogue assistant and selfie Tarot stay
+deferred. The separate channel media-buffer audit remains needs_verification.
