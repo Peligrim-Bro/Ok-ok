@@ -1,91 +1,92 @@
 {
-  "verifiedAt": "2026-10-25",
+  "verifiedAt": "2026-10-26",
   "news": [
     {
       "category": "world",
-      "when": "24.10 · 🌍",
-      "href": "https://focustaiwan.tw/society/202610240017",
-      "publishedAt": "2026-10-24",
+      "when": "25.10 · 🌍",
+      "href": "https://apnews.com/article/anthropic-moral-artificial-intelligence-religion-2bb91e3334fd6d732edf22288cabf4ec",
+      "publishedAt": "2026-10-25",
       "nonWar": true,
-      "ru": "Champi отошёл от Тайваня: один погибший, 616 пострадавших, большинство травм лёгкие.",
-      "en": "Champi left Taiwan: one death and 616 injuries, mostly minor.",
-      "th": "ชอมปีออกจากไต้หวัน มีผู้เสียชีวิต 1 ราย บาดเจ็บ 616 ราย ส่วนใหญ่อาการเล็กน้อย",
+      "ru": "ИИ-компании привлекают религиозных лидеров к этике моделей; учёные предостерегают от сведения веры к набору правил.",
+      "en": "AI firms are consulting faith leaders on model ethics; scholars warn against reducing religion to rules.",
+      "th": "บริษัท AI ปรึกษาผู้นำศาสนาเรื่องจริยธรรมโมเดล แต่นักวิชาการเตือนไม่ให้ลดศาสนาเหลือเพียงกฎ",
       "sources": [
-        "https://focustaiwan.tw/society/202610240017",
-        "https://www.reuters.com/business/environment/typhoon-champi-sweeps-past-taiwan-leaving-1-dead-500-injured-2026-10-24/"
+        "https://apnews.com/article/anthropic-moral-artificial-intelligence-religion-2bb91e3334fd6d732edf22288cabf4ec",
+        "https://abcnews.com/Technology/wireStory/companies-turn-faith-make-ai-morally-good-experts-128209665"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-25T06:50:00+07:00",
-        "sourceUrl": "https://focustaiwan.tw/society/202610240017",
-        "summary": "No counters; Focus Taiwan, Reuters and AP covered it. No global rank."
+        "observedAt": "2026-10-26T06:35:00+07:00",
+        "sourceUrl": "https://apnews.com/article/anthropic-moral-artificial-intelligence-religion-2bb91e3334fd6d732edf22288cabf4ec",
+        "summary": "No comparable counters; AP was syndicated by ABC, Boston Globe, CityNews and others. This shows reach, not independent coverage or a global rank."
+      }
+    },
+    {
+      "category": "thailand",
+      "when": "26.10 · 🇹🇭",
+      "href": "https://en.thairath.co.th/news/politic/2968212",
+      "publishedAt": "2026-10-26",
+      "ru": "Молодые листья риса Hom Mali 105 переработали в чай и порошок, создавая новый источник дохода для фермеров.",
+      "en": "Young Hom Mali 105 rice leaves have become tea and powder, creating a new income stream for farmers.",
+      "th": "ใบข้าวหอมมะลิ 105 อ่อนถูกพัฒนาเป็นชาและผง เพิ่มช่องทางรายได้ให้เกษตรกร",
+      "sources": [
+        "https://thailand.prd.go.th/en/page/item/index/id/10",
+        "https://en.thairath.co.th/news/politic/2968212"
+      ],
+      "discussionEvidence": {
+        "observedAt": "2026-10-26T06:35:00+07:00",
+        "sourceUrl": "https://en.thairath.co.th/news/politic/2968212",
+        "summary": "No comparable public counters; PRD and Thairath reported it the same day. No national rank."
       }
     },
     {
       "category": "thailand",
       "when": "25.10 · 🇹🇭",
-      "href": "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-and-variable-weather-in-upper-thailand-no-4-276-2026",
+      "href": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/553928",
       "publishedAt": "2026-10-25",
-      "ru": "TMD: на юге сильные дожди до 28 октября; в грозах волны выше двух метров.",
-      "en": "TMD: heavy southern rain through 28 October; storm waves above two metres.",
-      "th": "TMD เตือนฝนหนักภาคใต้ถึง 28 ตุลาคม และคลื่นเกิน 2 เมตรในพายุฝน",
+      "ru": "Премьер изложил курс на расширение торговли, чистую энергетику и продажу излишков солнечной электроэнергии в сеть.",
+      "en": "The prime minister outlined wider trade, clean energy and selling surplus rooftop-solar power to the grid.",
+      "th": "นายกฯ วางแนวทางขยายการค้า พลังงานสะอาด และขายไฟฟ้าโซลาร์ส่วนเกินเข้าระบบ",
       "sources": [
-        "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-and-variable-weather-in-upper-thailand-no-4-276-2026"
+        "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/553928"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-25T06:50:00+07:00",
-        "sourceUrl": "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-and-variable-weather-in-upper-thailand-no-4-276-2026",
-        "summary": "No counters; TMD's 05:00 update has no national discussion rank."
-      }
-    },
-    {
-      "category": "thailand",
-      "when": "24.10 · 🇹🇭",
-      "href": "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/553446",
-      "publishedAt": "2026-10-24",
-      "ru": "Global Wellness Summit пройдёт на Пхукете 10–13 ноября: профилактика, тайские практики, технологии.",
-      "en": "Phuket hosts the Global Wellness Summit on 10–13 November: prevention, Thai practice and technology.",
-      "th": "ภูเก็ตจัด Global Wellness Summit 10–13 พฤศจิกายน: การป้องกัน ภูมิปัญญาไทย เทคโนโลยี",
-      "sources": [
-        "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/553446"
-      ],
-      "discussionEvidence": {
-        "observedAt": "2026-10-25T06:50:00+07:00",
-        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/553446",
-        "summary": "PRD: 89 views versus 95, 64 and 103 on same-day items; not a national rank."
+        "observedAt": "2026-10-26T06:35:00+07:00",
+        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/553928",
+        "summary": "PRD showed 205 views; its page exposes no comparable same-section comment count or national rank."
       }
     },
     {
       "category": "pattaya",
-      "when": "24.10 · Pattaya",
-      "href": "https://www.pattayamail.com/latestnews/news/koh-larn-draws-holiday-crowds-during-thailands-three-day-break-569488",
-      "publishedAt": "2026-10-24",
-      "ru": "На пирсе Bali Hai выросли очереди на паромы до Ко Лана; стоит заложить больше времени.",
-      "en": "Koh Larn ferry queues grew at Bali Hai Pier; allow extra time.",
-      "th": "คิวเรือไปเกาะล้านที่แหลมบาลีฮายหนาแน่น ควรเผื่อเวลา",
+      "when": "25.10 · Pattaya",
+      "href": "https://www.pattayamail.com/latestnews/news/pattaya-raises-high-season-alert-with-boat-safety-inspections-569707",
+      "publishedAt": "2026-10-25",
+      "ru": "Перед высоким сезоном морские инспекторы проверили суда у пирса Южной Паттайи и напомнили о спасжилетах.",
+      "en": "Ahead of high season, marine officers checked boats at South Pattaya Pier and reinforced life-jacket use.",
+      "th": "ก่อนฤดูท่องเที่ยว เจ้าหน้าที่ตรวจเรือที่ท่าเรือพัทยาใต้และย้ำการสวมเสื้อชูชีพ",
       "sources": [
-        "https://www.pattayamail.com/latestnews/news/koh-larn-draws-holiday-crowds-during-thailands-three-day-break-569488"
+        "https://www.pattayamail.com/latestnews/news/pattaya-raises-high-season-alert-with-boat-safety-inspections-569707"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-25T06:50:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/latestnews/news/koh-larn-draws-holiday-crowds-during-thailands-three-day-break-569488",
-        "summary": "Pattaya Mail: 1,632 views/0 comments versus 507/0 and 310/0; not a city rank."
+        "observedAt": "2026-10-26T06:35:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/latestnews/news/pattaya-raises-high-season-alert-with-boat-safety-inspections-569707",
+        "summary": "Pattaya Mail: 976 views/0 comments versus 625/0 for its same-day beach-and-hotel report; not a city rank."
       }
     },
     {
       "category": "pattaya",
-      "when": "24.10 · Pattaya",
-      "href": "https://www.pattayamail.com/latestnews/news/holiday-traffic-snarls-choke-routes-into-chonburi-and-pattaya-569520",
-      "publishedAt": "2026-10-24",
-      "ru": "Поток на выходные и дорожные работы вызвали пробки на въезде в Чонбури и Паттайю.",
-      "en": "Holiday traffic and roadworks caused queues into Chonburi and Pattaya.",
-      "th": "รถช่วงวันหยุดและงานก่อสร้างทำให้เส้นทางเข้าชลบุรีและพัทยาติดขัด",
+      "when": "26.10 · Pattaya",
+      "href": "https://thepattayanews.com/2026/10/26/pattaya-hosts-end-polio-beach-run-to-mark-35-years-of-polio-eradication-campaign/",
+      "publishedAt": "2026-10-26",
+      "ru": "На пляже Паттайи прошёл End Polio Run с выставками о вакцинации и участием жителей, туристов и Rotary.",
+      "en": "Pattaya Beach hosted an End Polio Run with vaccination exhibits, residents, visitors and Rotary members.",
+      "th": "ชายหาดพัทยาจัด End Polio Run พร้อมนิทรรศการวัคซีน ชาวเมือง นักท่องเที่ยว และสมาชิกโรตารี",
       "sources": [
-        "https://www.pattayamail.com/latestnews/news/holiday-traffic-snarls-choke-routes-into-chonburi-and-pattaya-569520"
+        "https://thepattayanews.com/2026/10/26/pattaya-hosts-end-polio-beach-run-to-mark-35-years-of-polio-eradication-campaign/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-25T06:50:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/latestnews/news/holiday-traffic-snarls-choke-routes-into-chonburi-and-pattaya-569520",
-        "summary": "Pattaya Mail: 507 views/0 comments versus 1,632/0 and 310/0; not a city rank."
+        "observedAt": "2026-10-26T06:35:00+07:00",
+        "sourceUrl": "https://thepattayanews.com/2026/10/26/pattaya-hosts-end-polio-beach-run-to-mark-35-years-of-polio-eradication-campaign/",
+        "summary": "No public view/comment counter; a fresh local report, with no comparable citywide rank."
       }
     }
   ],
@@ -182,7 +183,30 @@
         "https://www.antifakenewscenter.com/%E0%B8%AD%E0%B8%B2%E0%B8%8A%E0%B8%8D%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%AD%E0%B8%AD%E0%B8%99%E0%B9%84%E0%B8%A5%E0%B8%99%E0%B9%8C/fake-scholarships/"
       ],
       "verifiedAt": "2026-10-25"
+    },
+    {
+      "id": "fake-tuition-invoice-thailand-2026-10",
+      "title": {
+        "ru": "Поддельные счета за обучение",
+        "en": "Fake tuition invoices",
+        "th": "ใบแจ้งค่าเทอมปลอม"
+      },
+      "text": {
+        "ru": "25 октября официальный центр предупредил: мошенники выдают SMS со ссылкой или QR-кодом за счёт учебного заведения.",
+        "en": "On 25 October, the official centre warned that scammers send SMS links or QR codes posing as school invoices.",
+        "th": "25 ตุลาคม ศูนย์ทางการเตือนว่า SMS แนบลิงก์หรือคิวอาร์โค้ดอาจปลอมเป็นใบแจ้งค่าเทอม"
+      },
+      "do": {
+        "ru": "До оплаты свяжитесь с учебным заведением по известному официальному каналу и проверьте получателя.",
+        "en": "Before paying, contact the school through a known official channel and verify the recipient.",
+        "th": "ก่อนชำระ ให้ติดต่อสถานศึกษาผ่านช่องทางทางการที่รู้จักและตรวจสอบผู้รับเงิน"
+      },
+      "status": "official-warning",
+      "sources": [
+        "https://www.antifakenewscenter.com/%E0%B8%AD%E0%B8%B2%E0%B8%8A%E0%B8%8D%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%AD%E0%B8%AD%E0%B8%99%E0%B9%84%E0%B8%A5%E0%B8%99%E0%B9%8C/fake-tuition-fee-invoice/"
+      ],
+      "verifiedAt": "2026-10-26"
     }
   ],
-  "selection": "Reviewed 2026-10-25 Asia/Bangkok: 1 world, 2 Thailand, 2 Pattaya; source dates 24–25 October. Metrics are in discussionEvidence. Added the official 24 October scholarship warning; three earlier cards keep their dates; two QR investigations are consolidated. No Telegram sending."
+  "selection": "Reviewed 2026-10-26 Asia/Bangkok: 1 world, 2 Thailand, 2 Pattaya; source dates 25–26 October. Metrics and limitations are in discussionEvidence. Added the official 25 October fake-tuition warning; four earlier cards keep their dates. No Telegram sending."
 }
