@@ -1732,6 +1732,6 @@ if(startupSettings.portalEnabled){
  copyFileSync('assets/halloween-2026.js','site/public/halloween-2026.js');
  const {createHash}=await import('node:crypto');
  const version=createHash('sha256').update(source).digest('hex').slice(0,12);
- page=page.replace('</body>','<script defer src="./halloween-2026.js?v='+version+'"></script>\\n</body>');
+ page=page.replace('</body>','<script defer src="./halloween-2026.js?v='+version+'"></script>\n</body>');
  writeFileSync(pagePath,page);
 }
