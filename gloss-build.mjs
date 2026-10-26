@@ -1720,3 +1720,18 @@ if(startupSettings.portalEnabled){
  if(/portal-launch\.js|okok-portal-startup|data-okok-portal-pending/.test(page))throw new Error('Disabled portal returned to the page');
  console.log('Startup portal paused: direct site opening, no cover or animation');
 }
+
+// Seasonal visual layer: isolated from catalogue, partners and navigation.
+{
+ const source=readFileSync('assets/halloween-2026.js','utf8');
+ if(!source.includes('okok-halloween-decor'))throw new Error('Halloween asset missing marker');
+ const pagePath='site/public/index.html';
+ let page=readFileSync(pagePath,'utf8');
+ if(!page.includes('</body>'))throw new Error('Halloween: closing body missing');
+ if(page.includes('halloween-2026.js'))throw new Error('Halloween already included');
+ copyFileSync('assets/halloween-2026.js','site/public/halloween-2026.js');
+ const {createHash}=await import('node:crypto');
+ const version=createHash('sha256').update(source).digest('hex').slice(0,12);
+ page=page.replace('</body>','<script defer src="./halloween-2026.js?v='+version+'"></script>\\n</body>');
+ writeFileSync(pagePath,page);
+}
