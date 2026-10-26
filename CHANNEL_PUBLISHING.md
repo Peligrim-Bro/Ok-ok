@@ -98,6 +98,15 @@ gaps, not a website outage. Source coverage alone does not confirm deployment,
 runtime enablement, numeric channel identity or delivery. Release evidence is
 recorded in the task note; only authenticated runtime receipts prove delivery.
 
+Offline text-queue checkpoint 26 October 2026: reviewed ordinary posts and
+separate illustrations cover every remaining ordinary slot from 26 October
+14:00 through 1 November 19:30. The 09:00 slot was inside the 30-minute guard
+and was not changed or backfilled. Audit found no ordinary slot/image gap,
+collision or exact image duplicate. The combined audit remains `ready:false`
+only for the separate 20:30 Oki slots on 29 October–1 November. Provenance,
+source/final SHA-256 and visual review are in
+`docs/CHANNEL_TEXT_BUFFER_20261026.md`; queue state still does not prove delivery.
+
 ## Rolling text queue (owner 19 October 2026)
 
 Maintain seven future calendar days of reviewed text posts. The existing daily

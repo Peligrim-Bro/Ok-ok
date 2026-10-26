@@ -32,16 +32,16 @@ test('malformed or conflicting copy actions are rejected before sending',()=>{
  for(const copyButtons of [[],[null],[{...good,label:''}],[{...good,label:'x'.repeat(41)}],[{...good,label:'bad\nlabel'}],[{...good,text:'absent'}],[{...good,text:'x'.repeat(257)}],[{...good,callback_data:'x'}],[good,good],Array(4).fill(good),[{label:'Пока',text:'Goodbye!'}]])assert.throws(()=>channelPresentation({...p,copyButtons}));
  assert.equal(channelPresentation({...p,copyButtons:[good]}).reply_markup.inline_keyboard[0][0].copy_text.text,'Hello!');
 });
-test('reviewed queue has nine purpose buttons in seven entries and preserves topic footers',()=>{
+test('reviewed queue has thirteen purpose buttons in eleven entries and preserves topic footers',()=>{
  const entries=POSTS.filter(p=>p.copyButtons);
- assert.equal(entries.length,7);assert.equal(entries.flatMap(p=>p.copyButtons).length,9);
+ assert.equal(entries.length,11);assert.equal(entries.flatMap(p=>p.copyButtons).length,13);
  for(const p of entries){const r=channelPresentation(p);assert.equal(r.reply_markup.inline_keyboard.filter(row=>row[0].copy_text).length,p.copyButtons.length);assert(r.entities.some(e=>e.type==='hashtag'));}
  const spice=entries.find(p=>p.id==='okok-english-spice-20261023');
  assert.deepEqual(spice.copyButtons.map(b=>b.text),['No chilli, please.','Not too spicy, please.']);
 });
 
 test('all reviewed entries have short, explicit topics; universal restaurant phrases are not meal-specific',()=>{
- assert.equal(POSTS.length,48);
+ assert.equal(POSTS.length,60);
  for(const post of POSTS)assert(post.topics.length>=2&&post.topics.length<=3);
  const spice=POSTS.find(p=>p.id==='okok-english-spice-20261023');
  assert.deepEqual(spice.topics,['Фразы','Английский','Ресторан']);
