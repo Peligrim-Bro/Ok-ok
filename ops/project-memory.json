@@ -83,14 +83,15 @@
     },
     {
       "id": "channel-media-buffer",
-      "status": "needs_verification",
+      "status": "in_progress",
       "tags": [
         "channel"
       ],
-      "next": "Run the queue readiness audit at current Bangkok time; existing notes report missing separate illustrations for ordinary posts.",
+      "next": "Ordinary text/media coverage is prepared through 1 November from main cb1e8b5; finish mandatory release checks, merge/deploy verification and observe receipts. Combined audit remains false only for separate 20:30 comics on 29 October–1 November.",
       "sources": [
         "CHANNEL_PUBLISHING.md",
-        "scripts/audit-channel-queue.mjs"
+        "scripts/audit-channel-queue.mjs",
+        "docs/CHANNEL_TEXT_BUFFER_20261026.md"
       ]
     },
     {

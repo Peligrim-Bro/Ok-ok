@@ -218,6 +218,7 @@ export const POSTS = [{
   "approved": true,
   "publishAt": "2026-10-26T14:00:00+07:00",
   "expiresAt": "2026-10-26T17:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-text-art-in-paradise-20261026.jpg",
   "text": "📷 Когда ты сам становишься частью картины\n\nArt in Paradise в Паттайе — музей оптических иллюзий и интерактивных 3D-картин. Здесь важен не только рисунок, но и то, где встать перед камерой.\n\nИдея для прогулки вдвоём: по очереди менять роли героя кадра и фотографа. Один сюжет — несколько ракурсов и совсем разные фотографии.\n\nОписание Туристического управления Таиланда:\nhttps://www.thailandtravel.or.jp/art-in-paradise/\n\nПеред визитом уточни актуальные условия посещения.\n\n🌴 https://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=art_in_paradise_20261026"
 },
 {
@@ -225,6 +226,7 @@ export const POSTS = [{
   "approved": true,
   "publishAt": "2026-10-26T19:30:00+07:00",
   "expiresAt": "2026-10-26T22:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-text-next-week-question-20261026.jpg",
   "text": "📝 Помоги выбрать следующую полезную тему\n\nЧто разобрать подробнее на OK-OK?\n\n🍜 небольшие места с понятным меню;\n📍 прогулку по одному району;\n🛵 как сравнивать предложения проката;\n🗣 короткие английские фразы для поездки.\n\nНапиши, чего тебе самому не хватало в первые дни в Паттайе. Из конкретных вопросов получаются самые полезные материалы.\n\n🌴 https://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=next_week_question_20261026"
 }
 ,
@@ -305,6 +307,7 @@ export const POSTS = [{
   "approved": true,
   "publishAt": "2026-10-27T09:00:00+07:00",
   "expiresAt": "2026-10-27T12:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-text-separate-sauce-20261027.jpg",
   "text": "🗣 Соус отдельно — коротко и понятно\n\n“Could I have the sauce on the side, please?”\n«Можно соус отдельно, пожалуйста?»\n\nТак можно попросить подать соус отдельно от блюда. Это просьба, а не обещание, что кухня сможет изменить подачу: дождись ответа перед заказом.\n\nСохрани фразу для следующего обеда. Места для прогулки и еды — на https://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=sauce_on_side_20261027"
 },
 {
@@ -312,6 +315,7 @@ export const POSTS = [{
   "approved": true,
   "publishAt": "2026-10-27T14:00:00+07:00",
   "expiresAt": "2026-10-27T17:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-text-walk-photo-game-20261027.jpg",
   "text": "🟡 Прогулка с маленьким заданием\n\nВыбери один цвет и попробуй заметить пять деталей этого цвета по дороге: цветок, дверь, лодку, чашку или узор на стене.\n\nНичего покупать и никуда специально ехать не нужно. Можно устроить мини-фотоохоту вдвоём и в конце сравнить находки. Снимай с безопасного места, не выходя ради кадра на дорогу.\n\nКакой цвет выберешь?\n\nОтправная точка для прогулки: https://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=colour_walk_20261027"
 },
 {
@@ -319,6 +323,7 @@ export const POSTS = [{
   "approved": true,
   "publishAt": "2026-10-27T19:30:00+07:00",
   "expiresAt": "2026-10-27T22:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-text-meeting-point-20261027.jpg",
   "text": "🤝 «Встретимся у пляжа» — иногда слишком большой адрес\n\nДля встречи удобнее отправить одну точку на карте, фото заметного ориентира и уточнение, с какой стороны ждать. Если у места несколько входов, договоритесь об одном заранее.\n\n“We’re waiting by the main entrance.”\n«Мы ждём у главного входа».\n\nМеньше поисков друг друга — больше времени вместе 🌴\n\nИдеи, куда встретиться и пойти дальше:\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=meeting_point_20261027"
 },
 {
@@ -333,18 +338,105 @@ export const POSTS = [{
 {
   id:'okok-offline-note-20261028', approved:true,
   publishAt:'2026-10-28T09:00:00+07:00', expiresAt:'2026-10-28T12:00:00+07:00',
+  photo:'https://www.ok-ok.click/assets/channel/okok-text-offline-note-20261028.jpg',
   text:'📱 Сохрани больше, чем название места\n\nПеред выходом сделай скриншот адреса, входа и контакта заведения. В заметке рядом запиши, что именно хочешь там посмотреть или заказать.\n\nСсылка пригодится для навигации, а скриншот — если страница не откроется без связи. Он не заменяет свежую проверку часов работы и не обновляется вместе с сайтом.\n\nВыбрать точку для прогулки:\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=offline_note_20261028'
 },
 {
   id:'okok-written-address-20261028', approved:true,
   publishAt:'2026-10-28T14:00:00+07:00', expiresAt:'2026-10-28T17:00:00+07:00',
+  photo:'https://www.ok-ok.click/assets/channel/okok-text-written-address-20261028.jpg',
   text:'🗣 Адрес лучше записать, чем запомнить на слух\n\n“Could you write down the address, please?”\n«Не могли бы вы записать адрес, пожалуйста?»\n\nФраза пригодится, если тебе объясняют, где находится нужное место. Попроси также показать точку на карте: написанный адрес и вход в здание могут потребовать отдельного уточнения.\n\nКнопка ниже копирует английскую фразу без кавычек.\n\nМеста и полезные контакты:\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=written_address_20261028'
 },
 {
   id:'okok-bill-quiz-20261028', approved:true,
   publishAt:'2026-10-28T19:30:00+07:00', expiresAt:'2026-10-28T22:30:00+07:00',
+  photo:'https://www.ok-ok.click/assets/channel/okok-text-bill-quiz-20261028.jpg',
   text:'🧩 Как попросить счёт по-английски?\n\nТы закончил обед и хочешь расплатиться. Какую фразу выберешь?\n\nА. Could we have the menu, please?\nБ. Could we have the bill, please?\nВ. Could we have some water, please?\n\nКоснись скрытого ответа:\nБ — “Could we have the bill, please?” означает «Можно нам счёт, пожалуйста?». Menu — меню, water — вода.\n\nПроверь себя, затем произнеси выбранную фразу вслух.\n\nМеста для следующего обеда:\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=bill_quiz_20261028',
   formatting:[{type:'spoiler',text:'Б — “Could we have the bill, please?” означает «Можно нам счёт, пожалуйста?». Menu — меню, water — вода.'}]
+},
+{
+  id:'okok-search-purpose-20261029', approved:true,
+  publishAt:'2026-10-29T09:00:00+07:00', expiresAt:'2026-10-29T12:00:00+07:00',
+  photo:'https://www.ok-ok.click/assets/channel/okok-text-search-purpose-20261029.jpg',
+  topics:['Места','Советы'], brandCTA:'share',
+  text:'🔎 Сначала цель — потом поиск\n\nПеред поиском места сформулируй один приоритет: тихо посидеть, быстро поесть, прогуляться у моря или найти точный сервис. Короткий запрос легче проверить, чем длинный список пожеланий.\n\nВ OK-OK можно начать с поиска и разделов, а затем открыть источник в карточке и уточнить актуальные условия.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\n🌴 https://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=search_purpose_20261029'
+},
+{
+  id:'okok-show-map-20261029', approved:true,
+  publishAt:'2026-10-29T14:00:00+07:00', expiresAt:'2026-10-29T17:00:00+07:00',
+  photo:'https://www.ok-ok.click/assets/channel/okok-text-show-map-20261029.jpg',
+  topics:['Фразы','Английский','Карты'], brandCTA:'share',
+  text:'🗺 Покажи точку на карте\n\n“Could you show me on the map, please?”\n«Покажите, пожалуйста, на карте».\n\nФраза полезна, когда устное объяснение дороги стало слишком сложным. После этого уточни вход или заметный ориентир: точка и реальный подход к зданию могут отличаться.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\n🌴 https://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=show_map_20261029'
+},
+{
+  id:'okok-useful-review-20261029', approved:true,
+  publishAt:'2026-10-29T19:30:00+07:00', expiresAt:'2026-10-29T22:30:00+07:00',
+  photo:'https://www.ok-ok.click/assets/channel/okok-text-useful-review-20261029.jpg',
+  topics:['Отзывы','Советы'], brandCTA:'rate',
+  text:'✍️ Отзыв, который помогает другому\n\nВместо «всё понравилось» назови одну конкретную деталь: удобно ли найти вход, шумно ли вечером, хватило ли места с ребёнком или сколько пришлось ждать.\n\nДобавь дату визита и отдели личное впечатление от факта. Так читатель поймёт, подходит ли место именно ему.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\n🌴 https://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=useful_review_20261029'
+},
+{
+  id:'okok-return-landmark-20261030', approved:true,
+  publishAt:'2026-10-30T09:00:00+07:00', expiresAt:'2026-10-30T12:00:00+07:00',
+  photo:'https://www.ok-ok.click/assets/channel/okok-text-return-landmark-20261030.jpg',
+  topics:['Маршруты','Советы'], brandCTA:'share',
+  text:'📍 Сфотографируй ориентир на обратный путь\n\nУ выхода из незнакомого места сними заметную деталь: цвет фасада, скульптуру, номер входа или противоположную сторону улицы. Геометка полезна, но фотография быстрее напомнит, что искать глазами.\n\nНе снимай людей крупным планом без разрешения и стой в безопасном месте.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\n🌴 https://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=return_landmark_20261030'
+},
+{
+  id:'okok-safe-stop-20261030', approved:true,
+  publishAt:'2026-10-30T14:00:00+07:00', expiresAt:'2026-10-30T17:00:00+07:00',
+  photo:'https://www.ok-ok.click/assets/channel/okok-text-safe-stop-20261030.jpg',
+  topics:['Фразы','Английский','Такси'], brandCTA:'share',
+  text:'🚕 Просьба остановить безопасно\n\n“Please stop here when it’s safe.”\n«Остановите здесь, когда будет безопасно».\n\nЛучше сказать заранее и дать водителю выбрать подходящее место, чем просить резко остановиться у нужной двери. Перед выходом проверь обстановку со своей стороны.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\n🌴 https://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=safe_stop_20261030'
+},
+{
+  id:'okok-next-day-card-20261030', approved:true,
+  publishAt:'2026-10-30T19:30:00+07:00', expiresAt:'2026-10-30T22:30:00+07:00',
+  photo:'https://www.ok-ok.click/assets/channel/okok-text-next-day-card-20261030.jpg',
+  topics:['Маршруты','Советы'], brandCTA:'share',
+  text:'🎒 Пять минут для завтрашней прогулки\n\nВечером положи рядом воду, головной убор, зарядку и небольшую защиту от дождя. Затем сохрани одну точку назначения и один запасной вариант поблизости.\n\nТак утром останется проверить актуальные условия, а не собирать план с нуля.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\n🌴 https://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=next_day_card_20261030'
+},
+{
+  id:'okok-evening-return-plan-20261031', approved:true,
+  publishAt:'2026-10-31T09:00:00+07:00', expiresAt:'2026-10-31T12:00:00+07:00',
+  photo:'https://www.ok-ok.click/assets/channel/okok-text-evening-return-20261031.jpg',
+  topics:['Маршруты','Безопасность'], brandCTA:'share',
+  text:'🎃 Вечерний маршрут начинается с возвращения\n\nЕсли планируешь долгую прогулку, заранее сохрани адрес проживания, заряди телефон и договорись с компанией о точке встречи на случай, если потеряетесь.\n\nПраздничное настроение не отменяет простой план домой. Актуальный транспорт и условия проверь перед выходом.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\n🌴 https://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=evening_return_20261031'
+},
+{
+  id:'okok-photo-request-20261031', approved:true,
+  publishAt:'2026-10-31T14:00:00+07:00', expiresAt:'2026-10-31T17:00:00+07:00',
+  photo:'https://www.ok-ok.click/assets/channel/okok-text-photo-request-20261031.jpg',
+  topics:['Фразы','Английский','Прогулки'], brandCTA:'share',
+  text:'📷 Попросить общий снимок\n\n“Could you take a photo of us, please?”\n«Не могли бы вы нас сфотографировать?»\n\nПередай телефон уже с открытой камерой и покажи один желаемый ракурс. После снимка поблагодари и сразу забери устройство.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\n🌴 https://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=photo_request_20261031'
+},
+{
+  id:'okok-halloween-colour-hunt-20261031', approved:true,
+  publishAt:'2026-10-31T19:30:00+07:00', expiresAt:'2026-10-31T22:30:00+07:00',
+  photo:'https://www.ok-ok.click/assets/channel/okok-text-halloween-hunt-20261031.jpg',
+  topics:['Прогулки','Советы'], brandCTA:'share',
+  text:'🟠 Фотоохота на три цвета\n\nНа вечерней прогулке найди три детали: оранжевую, фиолетовую и зелёную. Это могут быть фонарь, зонт, фрукт или элемент костюма.\n\nСоберите по три кадра и сравните подборки. Фотографируй с разрешения, не перекрывай проход и не выходи ради снимка на дорогу.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\n🌴 https://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=halloween_colour_hunt_20261031'
+},
+{
+  id:'okok-morning-bag-20261101', approved:true,
+  publishAt:'2026-11-01T09:00:00+07:00', expiresAt:'2026-11-01T12:00:00+07:00',
+  photo:'https://www.ok-ok.click/assets/channel/okok-text-morning-bag-20261101.jpg',
+  topics:['Маршруты','Советы'], brandCTA:'share',
+  text:'☀️ Быстрая проверка дневной сумки\n\nПеред выходом проверь четыре вещи: вода, защита от солнца, заряд телефона и складная сумка для покупок. Добавь адрес первой точки в заметки.\n\nНебольшая подготовка не заменяет проверку погоды и условий маршрута, но помогает не возвращаться за забытым.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\n🌴 https://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=morning_bag_20261101'
+},
+{
+  id:'okok-less-ice-20261101', approved:true,
+  publishAt:'2026-11-01T14:00:00+07:00', expiresAt:'2026-11-01T17:00:00+07:00',
+  photo:'https://www.ok-ok.click/assets/channel/okok-text-less-ice-20261101.jpg',
+  topics:['Фразы','Английский','Ресторан'], brandCTA:'share',
+  text:'🧊 Как попросить меньше льда\n\n“Less ice, please.”\n«Поменьше льда, пожалуйста».\n\nСкажи фразу во время заказа, а не после приготовления напитка. Это просьба: дождись подтверждения, потому что способ приготовления может отличаться.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\n🌴 https://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=less_ice_20261101'
+},
+{
+  id:'okok-share-trip-notes-20261101', approved:true,
+  publishAt:'2026-11-01T19:30:00+07:00', expiresAt:'2026-11-01T22:30:00+07:00',
+  photo:'https://www.ok-ok.click/assets/channel/okok-text-share-notes-20261101.jpg',
+  topics:['Отзывы','ОбратнаяСвязь'], brandCTA:'rate',
+  text:'📝 Одна полезная заметка после недели\n\nВспомни место, где тебе помогла конкретная деталь: тихий стол, понятный вход, удобный ориентир или внимательное предупреждение. Запиши что произошло и дату визита.\n\nТакой опыт можно отправить через «Написать автору» в OK-OK. Мы не превращаем личное мнение в гарантию и проверяем, что именно можно подтвердить.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\n🌴 https://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=share_trip_notes_20261101'
 }
 ];
 
@@ -360,6 +452,10 @@ const copyPhrases = {
   'okok-written-address-20261028': 'Could you write down the address, please?',
   'okok-english-separate-sauce-20261027': 'Could I have the sauce on the side, please?',
   'okok-meeting-point-20261027': 'We’re waiting by the main entrance.'
+  ,'okok-show-map-20261029': 'Could you show me on the map, please?'
+  ,'okok-safe-stop-20261030': 'Please stop here when it’s safe.'
+  ,'okok-photo-request-20261031': 'Could you take a photo of us, please?'
+  ,'okok-less-ice-20261101': 'Less ice, please.'
 };
 // Explicitly reviewed action labels; every copied phrase remains in the post.
 const copyActions={
@@ -376,6 +472,10 @@ const copyActions={
  'okok-meeting-point-20261027':[{label:'Сообщить место встречи',text:'We’re waiting by the main entrance.'}],
  'okok-written-address-20261028':[{label:'Попросить записать адрес',text:'Could you write down the address, please?'}],
  'okok-bill-quiz-20261028':[{label:'Попросить счёт',text:'Could we have the bill, please?',source:'Б — “Could we have the bill, please?” означает «Можно нам счёт, пожалуйста?». Menu — меню, water — вода.'}]
+ ,'okok-show-map-20261029':[{label:'Попросить показать карту',text:'Could you show me on the map, please?'}]
+ ,'okok-safe-stop-20261030':[{label:'Попросить остановить',text:'Please stop here when it’s safe.'}]
+ ,'okok-photo-request-20261031':[{label:'Попросить сделать фото',text:'Could you take a photo of us, please?'}]
+ ,'okok-less-ice-20261101':[{label:'Попросить меньше льда',text:'Less ice, please.'}]
 };
 for(const post of POSTS)if(copyActions[post.id])post.copyButtons=copyActions[post.id];
 // Owner-approved mission from the next ordinary slot onward. Presentation only:
