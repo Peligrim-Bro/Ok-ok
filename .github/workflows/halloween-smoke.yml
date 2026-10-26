@@ -1,0 +1,35 @@
+name: Halloween seasonal smoke test
+on:
+  pull_request:
+    paths:
+      - 'assets/halloween-2026.js'
+      - 'gloss-build.mjs'
+      - '.github/workflows/halloween-smoke.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Validate seasonal injection
+        run: |
+          node --check assets/halloween-2026.js
+          node --check site/public/halloween-2026.js
+          node --input-type=module <<'NODE'
+          import {readFileSync} from 'node:fs';
+          const page=readFileSync('site/public/index.html','utf8');
+          const script=readFileSync('site/public/halloween-2026.js','utf8');
+          if(!/<script defer src="\.\/halloween-2026\.js\?v=[a-f0-9]{12}"><\/script>/.test(page))throw Error('Seasonal script not included');
+          if(!script.includes('Asia/Bangkok')||!script.includes('day>1031')||!script.includes('pointer-events:none'))throw Error('Seasonal safeguards missing');
+          console.log('Halloween asset and safe integration verified');
+          NODE
+      - run: npm run check
