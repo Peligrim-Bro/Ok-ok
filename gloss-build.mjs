@@ -1708,7 +1708,7 @@ if(startupSettings.portalEnabled){
  const startup='<style id="okok-portal-startup">html[data-okok-portal-pending]::before{content:"";position:fixed;inset:0;background:#030510;z-index:2147483646;pointer-events:none}</style><script>try{if(!matchMedia("(prefers-reduced-motion: reduce)").matches&&!sessionStorage.getItem('+JSON.stringify(portalSessionKey)+')){document.documentElement.setAttribute("data-okok-portal-pending","");setTimeout(function(){document.documentElement.removeAttribute("data-okok-portal-pending")},4500)}}catch(e){}</script>';
  page=page.replace('</head>',startup+'\n</head>');
  writeFileSync('site/public/portal-launch.js',portalSource);
- page=page.replace('</body>','<style>'+readFileSync('assets/halloween-2026.css','utf8')+'</style><script defer src="'+portalURL+'"></script>\n</body>');
+ page=page.replace('</body>','<script defer src="'+portalURL+'"></script>\n</body>');
  const swPath='site/public/sw.js';
  const portalSW=readFileSync(swPath,'utf8');
  if(!portalSW.includes('const CORE = ['))throw new Error('Portal: offline assets anchor missing');
