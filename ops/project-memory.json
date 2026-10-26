@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "project": "OK-OK.click",
-  "updatedAt": "2026-10-24",
+  "updatedAt": "2026-10-27",
   "decisions": [
     {
       "id": "hosting",
@@ -62,6 +62,19 @@
       "sources": [
         "docs/SHARED_CONTENT.md",
         "shared-content.mjs"
+      ]
+    },
+    {
+      "id": "selected-editorial-craft",
+      "status": "active",
+      "tags": [
+        "content",
+        "channel"
+      ],
+      "text": "Owner approved selective craft on 27 October: source-backed concrete details, varied rhythm, Oki goal/obstacle/action/outcome and external-instruction isolation. Applies to future reviewed drafts; no imported jailbreak, runtime or queue change.",
+      "sources": [
+        "docs/BRAND_VOICE.md",
+        "AGENTS.md"
       ]
     }
   ],
