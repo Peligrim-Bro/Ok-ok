@@ -115,6 +115,18 @@
       "sources": [
         "docs/PROJECT_MEMORY.md"
       ]
+    },
+    {
+      "id": "halloween-2026",
+      "status": "needs_verification",
+      "tags": [
+        "release",
+        "layout"
+      ],
+      "next": "PR 77: build/check pass locally after CSS split; run/review full browser suite, Halloween screenshots and 3 Lighthouse runs before main. Initial CI exceeded JS budget by 803 bytes; budget unchanged.",
+      "sources": [
+        "docs/HALLOWEEN_2026_TASK.md"
+      ]
     }
   ]
 }
