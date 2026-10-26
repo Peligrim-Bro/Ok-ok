@@ -1,92 +1,90 @@
 {
-  "verifiedAt": "2026-10-26",
+  "verifiedAt": "2026-10-27",
   "news": [
     {
       "category": "world",
-      "when": "25.10 · 🌍",
-      "href": "https://apnews.com/article/anthropic-moral-artificial-intelligence-religion-2bb91e3334fd6d732edf22288cabf4ec",
-      "publishedAt": "2026-10-25",
+      "when": "27.10 · 🌍",
+      "href": "https://apnews.com/article/new-mexico-health-cybersecurity-hack-7a3593f8a3cee4ca895774ab1574919f",
+      "publishedAt": "2026-10-27",
       "nonWar": true,
-      "ru": "ИИ-компании привлекают религиозных лидеров к этике моделей; учёные предостерегают от сведения веры к набору правил.",
-      "en": "AI firms are consulting faith leaders on model ethics; scholars warn against reducing religion to rules.",
-      "th": "บริษัท AI ปรึกษาผู้นำศาสนาเรื่องจริยธรรมโมเดล แต่นักวิชาการเตือนไม่ให้ลดศาสนาเหลือเพียงกฎ",
+      "ru": "Сбой кибербезопасности в больничной сети Нью-Мексико перенаправил скорые и отменил приёмы.",
+      "en": "A cyber incident at New Mexico's hospital network diverted ambulances and cancelled appointments.",
+      "th": "เหตุไซเบอร์ในเครือข่ายโรงพยาบาลนิวเม็กซิโกทำให้ส่งรถพยาบาลไปที่อื่นและยกเลิกนัด",
       "sources": [
-        "https://apnews.com/article/anthropic-moral-artificial-intelligence-religion-2bb91e3334fd6d732edf22288cabf4ec",
-        "https://abcnews.com/Technology/wireStory/companies-turn-faith-make-ai-morally-good-experts-128209665"
+        "https://apnews.com/article/new-mexico-health-cybersecurity-hack-7a3593f8a3cee4ca895774ab1574919f"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-26T06:35:00+07:00",
-        "sourceUrl": "https://apnews.com/article/anthropic-moral-artificial-intelligence-religion-2bb91e3334fd6d732edf22288cabf4ec",
-        "summary": "No comparable counters; AP was syndicated by ABC, Boston Globe, CityNews and others. This shows reach, not independent coverage or a global rank."
+        "observedAt": "2026-10-27T06:25:00+07:00",
+        "sourceUrl": "https://apnews.com/article/new-mexico-health-cybersecurity-hack-7a3593f8a3cee4ca895774ab1574919f",
+        "summary": "No public counters; AP syndication shows reach, not a global rank."
       }
     },
     {
       "category": "thailand",
       "when": "26.10 · 🇹🇭",
-      "href": "https://en.thairath.co.th/news/politic/2968212",
+      "href": "https://apnews.com/article/thailand-phuket-flooding-mudslide-d3eb82e5f9dfeb6356804414e9e3be85",
       "publishedAt": "2026-10-26",
-      "ru": "Молодые листья риса Hom Mali 105 переработали в чай и порошок, создавая новый источник дохода для фермеров.",
-      "en": "Young Hom Mali 105 rice leaves have become tea and powder, creating a new income stream for farmers.",
-      "th": "ใบข้าวหอมมะลิ 105 อ่อนถูกพัฒนาเป็นชาและผง เพิ่มช่องทางรายได้ให้เกษตรกร",
+      "ru": "Паводки затронули все три района Пхукета; вода спадает, но риск оползней сохраняется.",
+      "en": "Floods hit all three Phuket districts; water is receding, but landslide risk remains.",
+      "th": "น้ำท่วมทั้งสามอำเภอของภูเก็ตเริ่มลด แต่ยังเสี่ยงดินถล่ม",
       "sources": [
-        "https://thailand.prd.go.th/en/page/item/index/id/10",
-        "https://en.thairath.co.th/news/politic/2968212"
+        "https://apnews.com/article/thailand-phuket-flooding-mudslide-d3eb82e5f9dfeb6356804414e9e3be85"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-26T06:35:00+07:00",
-        "sourceUrl": "https://en.thairath.co.th/news/politic/2968212",
-        "summary": "No comparable public counters; PRD and Thairath reported it the same day. No national rank."
+        "observedAt": "2026-10-27T06:25:00+07:00",
+        "sourceUrl": "https://apnews.com/article/thailand-phuket-flooding-mudslide-d3eb82e5f9dfeb6356804414e9e3be85",
+        "summary": "No public counters; multi-outlet coverage is not a national rank."
       }
     },
     {
       "category": "thailand",
-      "when": "25.10 · 🇹🇭",
-      "href": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/553928",
-      "publishedAt": "2026-10-25",
-      "ru": "Премьер изложил курс на расширение торговли, чистую энергетику и продажу излишков солнечной электроэнергии в сеть.",
-      "en": "The prime minister outlined wider trade, clean energy and selling surplus rooftop-solar power to the grid.",
-      "th": "นายกฯ วางแนวทางขยายการค้า พลังงานสะอาด และขายไฟฟ้าโซลาร์ส่วนเกินเข้าระบบ",
-      "sources": [
-        "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/553928"
-      ],
-      "discussionEvidence": {
-        "observedAt": "2026-10-26T06:35:00+07:00",
-        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/553928",
-        "summary": "PRD showed 205 views; its page exposes no comparable same-section comment count or national rank."
-      }
-    },
-    {
-      "category": "pattaya",
-      "when": "25.10 · Pattaya",
-      "href": "https://www.pattayamail.com/latestnews/news/pattaya-raises-high-season-alert-with-boat-safety-inspections-569707",
-      "publishedAt": "2026-10-25",
-      "ru": "Перед высоким сезоном морские инспекторы проверили суда у пирса Южной Паттайи и напомнили о спасжилетах.",
-      "en": "Ahead of high season, marine officers checked boats at South Pattaya Pier and reinforced life-jacket use.",
-      "th": "ก่อนฤดูท่องเที่ยว เจ้าหน้าที่ตรวจเรือที่ท่าเรือพัทยาใต้และย้ำการสวมเสื้อชูชีพ",
-      "sources": [
-        "https://www.pattayamail.com/latestnews/news/pattaya-raises-high-season-alert-with-boat-safety-inspections-569707"
-      ],
-      "discussionEvidence": {
-        "observedAt": "2026-10-26T06:35:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/latestnews/news/pattaya-raises-high-season-alert-with-boat-safety-inspections-569707",
-        "summary": "Pattaya Mail: 976 views/0 comments versus 625/0 for its same-day beach-and-hotel report; not a city rank."
-      }
-    },
-    {
-      "category": "pattaya",
-      "when": "26.10 · Pattaya",
-      "href": "https://thepattayanews.com/2026/10/26/pattaya-hosts-end-polio-beach-run-to-mark-35-years-of-polio-eradication-campaign/",
+      "when": "26.10 · 🇹🇭",
+      "href": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/554472",
       "publishedAt": "2026-10-26",
-      "ru": "На пляже Паттайи прошёл End Polio Run с выставками о вакцинации и участием жителей, туристов и Rotary.",
-      "en": "Pattaya Beach hosted an End Polio Run with vaccination exhibits, residents, visitors and Rotary members.",
-      "th": "ชายหาดพัทยาจัด End Polio Run พร้อมนิทรรศการวัคซีน ชาวเมือง นักท่องเที่ยว และสมาชิกโรตารี",
+      "ru": "Министры Таиланда и Малайзии обсуждают торговлю, развитие границы и транспортные связи.",
+      "en": "Thai and Malaysian ministers are discussing trade, border development and transport links.",
+      "th": "รัฐมนตรีไทยและมาเลเซียหารือการค้า การพัฒนาชายแดน และการคมนาคม",
       "sources": [
-        "https://thepattayanews.com/2026/10/26/pattaya-hosts-end-polio-beach-run-to-mark-35-years-of-polio-eradication-campaign/"
+        "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/554472"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-26T06:35:00+07:00",
-        "sourceUrl": "https://thepattayanews.com/2026/10/26/pattaya-hosts-end-polio-beach-run-to-mark-35-years-of-polio-eradication-campaign/",
-        "summary": "No public view/comment counter; a fresh local report, with no comparable citywide rank."
+        "observedAt": "2026-10-27T06:25:00+07:00",
+        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/554472",
+        "summary": "PRD: 112 views; no comparable comments or national rank."
+      }
+    },
+    {
+      "category": "pattaya",
+      "when": "27.10 · Pattaya",
+      "href": "https://www.pattayamail.com/news/pattaya-plans-tourist-help-center-at-bali-hai-pier-for-island-visitors-569845",
+      "publishedAt": "2026-10-27",
+      "ru": "На пирсе Бали Хай планируют центр туристической информации и экстренной помощи.",
+      "en": "Bali Hai Pier plans a tourist information and emergency-help centre.",
+      "th": "ท่าเรือบาลีฮายเตรียมศูนย์ข้อมูลและช่วยเหลือฉุกเฉินสำหรับนักท่องเที่ยว",
+      "sources": [
+        "https://www.pattayamail.com/news/pattaya-plans-tourist-help-center-at-bali-hai-pier-for-island-visitors-569845"
+      ],
+      "discussionEvidence": {
+        "observedAt": "2026-10-27T06:25:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/pattaya-plans-tourist-help-center-at-bali-hai-pier-for-island-visitors-569845",
+        "summary": "Pattaya Mail: 164 views/0 comments versus 47/0; not a city rank."
+      }
+    },
+    {
+      "category": "pattaya",
+      "when": "27.10 · Pattaya",
+      "href": "https://www.pattayamail.com/news/pattaya-prepares-to-clamp-lift-and-fine-motorcycles-occupying-public-parking-spaces-569873",
+      "publishedAt": "2026-10-27",
+      "ru": "Паттайя усилит контроль за прокатными мотоциклами на общественных парковках и тротуарах.",
+      "en": "Pattaya will tighten checks on rental motorcycles in public parking and on footpaths.",
+      "th": "พัทยาจะเข้มงวดรถเช่าที่ใช้ที่จอดสาธารณะและทางเท้า",
+      "sources": [
+        "https://www.pattayamail.com/news/pattaya-prepares-to-clamp-lift-and-fine-motorcycles-occupying-public-parking-spaces-569873"
+      ],
+      "discussionEvidence": {
+        "observedAt": "2026-10-27T06:25:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/pattaya-prepares-to-clamp-lift-and-fine-motorcycles-occupying-public-parking-spaces-569873",
+        "summary": "Pattaya Mail: 47 views/0 comments versus 164/0; not a city rank."
       }
     }
   ],
@@ -99,14 +97,14 @@
         "th": "คิวอาร์ปลอมอ้าง PEA หรือตำรวจไซเบอร์"
       },
       "text": {
-        "ru": "8 и 14 октября полиция сообщила о расследованиях в Паттайе: звонящие выдавали себя за PEA или киберполицию, обещали возврат денег и присылали QR-коды. Виновность определяет суд.",
-        "en": "On 8 and 14 October, police reported Pattaya investigations into callers posing as PEA or cyber police, promising refunds and sending QR codes. Guilt is for the court.",
-        "th": "วันที่ 8 และ 14 ตุลาคม ตำรวจรายงานการสอบสวนในพัทยา กรณีผู้โทรอ้างเป็น PEA หรือตำรวจไซเบอร์ เสนอคืนเงินและส่งคิวอาร์โค้ด ศาลเป็นผู้วินิจฉัยความผิด"
+        "ru": "8 и 14 октября полиция сообщила о расследованиях звонков от лже-PEA и киберполиции с обещанием возврата и QR-кодами. Виновность решает суд.",
+        "en": "Police reported 8 and 14 October probes into fake PEA or cyber-police refund calls with QR codes. Guilt is for the court.",
+        "th": "ตำรวจรายงานคดีวันที่ 8 และ 14 ตุลาคม กรณีอ้าง PEA หรือตำรวจไซเบอร์ เสนอคืนเงินผ่านคิวอาร์ ศาลเป็นผู้ตัดสินความผิด"
       },
       "do": {
-        "ru": "Не сканируйте присланный QR-код и не сообщайте банковские данные. Проверяйте обращение через официальный сайт ведомства.",
-        "en": "Do not scan supplied QR codes or share banking details. Verify requests through the agency’s official website.",
-        "th": "อย่าสแกนคิวอาร์โค้ดหรือให้ข้อมูลธนาคาร ตรวจสอบผ่านเว็บไซต์ทางการของหน่วยงาน"
+        "ru": "Не сканируйте чужой QR-код и не сообщайте банковские данные; сверяйтесь с официальным сайтом.",
+        "en": "Do not scan supplied QR codes or share bank details; verify on the official site.",
+        "th": "อย่าสแกนคิวอาร์หรือให้ข้อมูลธนาคาร ตรวจสอบกับเว็บทางการ"
       },
       "status": "reported-investigation",
       "sources": [
@@ -123,14 +121,14 @@
         "th": "งานและคำเชิญถ่ายทำปลอม"
       },
       "text": {
-        "ru": "Посольство Китая в Таиланде 16 октября предупредило своих граждан: ложные вакансии и приглашения на съёмки могут вести к удержанию и принудительному вывозу к Мьянме.",
-        "en": "On 16 October, China's embassy in Thailand warned its citizens that fake jobs and filming invitations may lead to detention and forced transfers toward Myanmar.",
-        "th": "สถานทูตจีนประจำไทยเตือนพลเมืองของตนเมื่อ 16 ตุลาคมว่างานและคำเชิญถ่ายทำปลอมอาจนำไปสู่การกักขังและส่งต่อไปชายแดนเมียนมา"
+        "ru": "16 октября посольство Китая предупредило: ложные вакансии и приглашения на съёмки могут вести к удержанию и вывозу к границе Мьянмы.",
+        "en": "On 16 October, China’s embassy warned that fake jobs and filming offers may lead to detention and transfer toward Myanmar.",
+        "th": "16 ตุลาคม สถานทูตจีนเตือนว่างานและคำเชิญถ่ายทำปลอมอาจนำไปสู่การกักขังและส่งต่อไปชายแดนเมียนมา"
       },
       "do": {
-        "ru": "Проверьте работодателя и адрес. Не отдавайте паспорт, откажитесь от необъяснимой поездки к границе. Сообщите планы близким. При угрозе обращайтесь в полицию и своё консульство.",
-        "en": "Verify the employer and workplace. Keep your passport; reject unexplained border-bound journeys. Share plans with trusted people. If threatened, contact police and your consulate.",
-        "th": "ตรวจสอบนายจ้างและที่ทำงาน เก็บหนังสือเดินทางไว้เอง ปฏิเสธเส้นทางไปชายแดนที่ไม่ชัดเจน แจ้งแผนแก่คนที่ไว้ใจ หากมีภัยให้ติดต่อตำรวจและกงสุลของตน"
+        "ru": "Проверяйте работодателя, не отдавайте паспорт и сообщайте маршрут близким; при угрозе звоните в полицию или консульство.",
+        "en": "Verify employers, keep your passport and share plans; if threatened, contact police or your consulate.",
+        "th": "ตรวจนายจ้าง เก็บหนังสือเดินทาง แจ้งแผนแก่คนไว้ใจ และติดต่อตำรวจหรือกงสุลเมื่อมีภัย"
       },
       "status": "official-warning",
       "sources": [
@@ -146,14 +144,14 @@
         "th": "เงินแลกสแกนใบหน้าและข้อมูลบัตร"
       },
       "text": {
-        "ru": "Киберполиция 17 октября предупредила: мошенники могут прикрываться государственной выплатой и предлагать деньги за скан лица и данные удостоверения личности. Эти данные могут использовать для открытия подставных счетов или заявок на кредит.",
-        "en": "Cyber Police warned on 17 October that scammers may invoke a government benefit and offer cash for a face scan and ID details. The data may be used to open mule accounts or apply for loans.",
-        "th": "ตำรวจไซเบอร์เตือนเมื่อ 17 ตุลาคมว่า มิจฉาชีพอาจอ้างโครงการสวัสดิการรัฐและเสนอเงินแลกกับการสแกนใบหน้าและข้อมูลบัตร ซึ่งอาจถูกนำไปเปิดบัญชีม้าหรือสมัครสินเชื่อ"
+        "ru": "17 октября киберполиция предупредила: деньги за скан лица и данные удостоверения могут быть приманкой для открытия подставных счетов или кредита.",
+        "en": "On 17 October, Cyber Police warned that cash for face scans and ID data may feed mule accounts or loan applications.",
+        "th": "17 ตุลาคม ตำรวจไซเบอร์เตือนว่าเงินแลกสแกนหน้าและข้อมูลบัตรอาจถูกใช้เปิดบัญชีม้าหรือขอสินเชื่อ"
       },
       "do": {
-        "ru": "Не сканируйте лицо и не передавайте удостоверение личности в обмен на деньги или подарок. Проверяйте льготы напрямую у госоргана; при подозрении прекратите контакт.",
-        "en": "Do not provide a face scan or ID in exchange for cash or gifts. Verify benefits directly with the government agency and end suspicious contact.",
-        "th": "อย่าสแกนใบหน้าหรือมอบข้อมูลบัตรเพื่อแลกเงินหรือของฟรี ตรวจสอบสิทธิ์กับหน่วยงานรัฐโดยตรง และหยุดติดต่อเมื่อพบพิรุธ"
+        "ru": "Не отдавайте биометрию и документы за деньги; проверяйте льготу у госоргана.",
+        "en": "Do not trade biometrics or ID for cash; verify benefits with the agency.",
+        "th": "อย่าแลกข้อมูลชีวมิติหรือบัตรกับเงิน ตรวจสอบสิทธิ์กับหน่วยงานรัฐ"
       },
       "status": "official-warning",
       "sources": [
@@ -206,7 +204,30 @@
         "https://www.antifakenewscenter.com/%E0%B8%AD%E0%B8%B2%E0%B8%8A%E0%B8%8D%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%AD%E0%B8%AD%E0%B8%99%E0%B9%84%E0%B8%A5%E0%B8%99%E0%B9%8C/fake-tuition-fee-invoice/"
       ],
       "verifiedAt": "2026-10-26"
+    },
+    {
+      "id": "fake-study-material-sales-thailand-2026-10",
+      "title": {
+        "ru": "Мошенники в учебных группах",
+        "en": "Scams in student groups",
+        "th": "มิจฉาชีพในกลุ่มเรียน"
+      },
+      "text": {
+        "ru": "26 октября официальный центр предупредил о дешёвых учебных материалах без доставки после оплаты.",
+        "en": "On 26 October, the official centre warned of cheap study materials not delivered after payment.",
+        "th": "26 ตุลาคม ศูนย์ทางการเตือนของเรียนราคาถูกที่ไม่ส่งหลังจ่ายเงิน"
+      },
+      "do": {
+        "ru": "Проверяйте продавца; платите с защитой покупателя.",
+        "en": "Check the seller; use buyer protection.",
+        "th": "ตรวจผู้ขายและใช้ระบบคุ้มครองผู้ซื้อ"
+      },
+      "status": "official-warning",
+      "sources": [
+        "https://www.antifakenewscenter.com/%E0%B8%AD%E0%B8%B2%E0%B8%8A%E0%B8%8D%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%AD%E0%B8%AD%E0%B8%99%E0%B9%84%E0%B8%A5%E0%B8%99%E0%B9%8C/study-guide/"
+      ],
+      "verifiedAt": "2026-10-27"
     }
   ],
-  "selection": "Reviewed 2026-10-26 Asia/Bangkok: 1 world, 2 Thailand, 2 Pattaya; source dates 25–26 October. Metrics and limitations are in discussionEvidence. Added the official 25 October fake-tuition warning; four earlier cards keep their dates. No Telegram sending."
+  "selection": "Reviewed 2026-10-27 Asia/Bangkok: 1 world, 2 Thailand, 2 Pattaya; sources 26–27 October. Evidence limits recorded. Added an official 26 October study-material warning; five earlier dates unchanged. No Telegram sending."
 }
