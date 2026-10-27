@@ -27,7 +27,12 @@ html=html.replace('navScam: "Скам"','navScam: "Не попадись"').repl
 const homeStart=html.indexOf('        <article class="scam" data-open-scam="jetski">');
 const homeEnd=html.indexOf('        <h3 style="margin:18px 0 8px">',homeStart);
 if(homeStart<0||homeEnd<0)throw Error('Safety home entry missing');
-html=html.slice(0,homeStart)+`        <article class="news"><h3>🛵 \${cityText('Байк вернул. А депозит?','Bike returned. Deposit withheld?','คืนรถแล้ว แต่ยังไม่ได้มัดจำคืน?')}</h3><p>\${cityText('Проверь условия до аренды — или открой порядок действий при споре.','Check the terms before renting, or see what to do in a dispute.','ตรวจเงื่อนไขก่อนเช่า หรือดูขั้นตอนเมื่อมีข้อโต้แย้ง')}</p><a class="btn call" href="#safety/bike-deposit">\${cityText('Не попадись →','Stay scam-aware →','รู้ทันก่อนพลาด →')}</a></article>\n`+html.slice(homeEnd);
+html=html.slice(0,homeStart)+html.slice(homeEnd);
+const homeAnchor='        <button class="btn map" type="button" data-openmap="1"';
+if(!html.includes(homeAnchor))throw Error('Home primary actions missing');
+html=html.replace(homeAnchor,`        <a id="homeSafety" class="btn call" href="#safety/bike-deposit" style="display:block;text-align:center;margin:0 0 10px">🛡 \${cityText('Байк и депозит: не попадись','Bike deposits: stay scam-aware','เช่ารถและเงินมัดจำ: รู้ทันก่อนพลาด')}</a>\n`+homeAnchor);
+html=html.replace('<h1>PattayaOK</h1>','<h1>OK-OK</h1>');
+html=html.replace('tagline: "Места, которым можно верить"','tagline: "Места и защита от скама"').replace('tagline: "Places you can actually trust"','tagline: "Places and scam awareness"').replace('tagline: "สถานที่ที่ไว้ใจได้"','tagline: "แนะนำสถานที่และรู้ทันกลโกง"');
 writeFileSync(page,html);
 const swPath='site/public/sw.js';let sw=readFileSync(swPath,'utf8').replace('const CORE = [','const CORE = ['+['ru','en','th'].map(lang=>JSON.stringify(url+'?lang='+lang)).join(',')+',');
 // Offline child navigation must return its own document, not the PWA shell.

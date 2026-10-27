@@ -17,7 +17,7 @@ await f.locator('[data-mode="before"]').click();
 }
 await f.locator('#copy').click();await expect(f.locator('#status')).not.toBeEmpty();
 await f.locator('#report').click();await expect(page.locator('#authorChatDialog')).toBeVisible();await page.locator('#authorChatClose').click();
-await page.locator('nav.tab [data-tab="home"]').click();await expect(page.locator('#safetyGuide')).toHaveCount(0);
+await page.locator('nav.tab [data-tab="home"]').click();await expect(page.locator('#safetyGuide')).toHaveCount(0);await expect(page.locator('header h1')).toHaveText('OK-OK');await expect(page.locator('#homeSafety')).toBeVisible();await page.screenshot({path:`quality-reports/safety-home-${lang}-${width}.png`});await page.locator('#homeSafety').click();await expect(f.locator('h1')).toBeVisible();
 });
 test('guide offline, hash navigation and city selection',async({page,context})=>{
 await page.addInitScript(()=>{localStorage.setItem('pok-install-seen','1');localStorage.setItem('pok-city','pattaya')});

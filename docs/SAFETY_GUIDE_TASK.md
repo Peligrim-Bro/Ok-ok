@@ -26,3 +26,9 @@ JS 924544. New browser coverage: languages, themes, phone/tablet/landscape,
 checklist persistence/reset, copied-text fallback, quiz, report dialog, direct
 hash navigation and offline reload. Await full CI, screenshot review and three
 Lighthouse runs before main. Then verify exact release SHA on Cloudflare.
+
+Owner steering: first-screen identity uses OK-OK wordmark and a short localized
+places/scam-awareness descriptor. One primary guide entry before map and other
+home actions replaces the lower teaser, with no duplicate call or extra header
+banner. Existing ad pricing, invoices and partner links unchanged. No paid
+safety badge, cashback promise or new free posting workflow is introduced.
