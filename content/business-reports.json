@@ -1,0 +1,288 @@
+{
+  "prepared": "2026-10-27",
+  "scope": "pattaya",
+  "records": [
+    {
+      "id": "speed-bike",
+      "name": "Speed Bike",
+      "city": "pattaya",
+      "category": "bikes",
+      "aliases": [
+        "спид байк",
+        "спидбайк"
+      ],
+      "website": "https://www.speedbikepattaya.com/",
+      "source": {
+        "url": "https://www.speedbikepattaya.com/",
+        "reviewed": "2026-10-27",
+        "kind": "business"
+      },
+      "fact": {
+        "ru": "На сайте указаны аренда байков в Паттайе, LINE speedbikepattaya и WhatsApp +66800475090.",
+        "en": "The website lists Pattaya bike rentals, LINE speedbikepattaya and WhatsApp +66800475090.",
+        "th": "เว็บไซต์ระบุบริการเช่ารถในพัทยา LINE speedbikepattaya และ WhatsApp +66800475090"
+      },
+      "rating": {
+        "value": "4.9 · 875",
+        "platform": "Google via Wanderlog",
+        "url": "https://wanderlog.com/place/details/6205784/speed-bike-motorbikes-rental-pattaya",
+        "reviewed": "2026-10-18"
+      },
+      "licenceClaim": null
+    },
+    {
+      "id": "dee-trip",
+      "name": "Dee Trip Motorbike Rental",
+      "city": "pattaya",
+      "category": "bikes",
+      "aliases": [
+        "ди трип",
+        "deetrip"
+      ],
+      "website": "https://deetrip-tours.my.canva.site/website-dee-trip",
+      "source": {
+        "url": "https://deetrip-tours.my.canva.site/website-dee-trip",
+        "reviewed": "2026-10-18",
+        "kind": "catalogue"
+      },
+      "fact": {
+        "ru": "В каталоге сохранены сайт проката и ссылка на отзывы. Содержимое сайта при повторном просмотре извлечь не удалось.",
+        "en": "The catalogue has a rental website and review link. The website content could not be extracted on recheck.",
+        "th": "แค็ตตาล็อกมีเว็บไซต์ร้านเช่าและลิงก์รีวิว แต่ดึงเนื้อหาเว็บไซต์ในการตรวจซ้ำไม่ได้"
+      },
+      "rating": {
+        "value": "4.9 · 77",
+        "platform": "Google via Wanderlog",
+        "url": "https://wanderlog.com/place/details/13125034/dee-trip-motorbike-rentaltour",
+        "reviewed": "2026-10-18"
+      },
+      "licenceClaim": null
+    },
+    {
+      "id": "take-it-easy",
+      "name": "Take it Easy · Car & Bike Rental",
+      "city": "pattaya",
+      "category": "bikes",
+      "aliases": [
+        "тэйк ит изи",
+        "take it easy"
+      ],
+      "website": "https://pattayarentacarandbike.com/",
+      "source": {
+        "url": "https://pattayarentacarandbike.com/rental_requirement/",
+        "reviewed": "2026-10-27",
+        "kind": "business"
+      },
+      "fact": {
+        "ru": "На странице условий указаны копия паспорта и депозит за байк 1 000 бат. Полные условия возврата нужно получить письменно.",
+        "en": "The requirements page lists a passport copy and a THB 1,000 bike deposit. Request the full refund terms in writing.",
+        "th": "หน้าเงื่อนไขระบุสำเนาพาสปอร์ตและมัดจำรถ 1,000 บาท ควรขอเงื่อนไขคืนเงินทั้งหมดเป็นลายลักษณ์อักษร"
+      },
+      "rating": {
+        "value": "4.8 · 13",
+        "platform": "Tripadvisor",
+        "url": "https://www.tripadvisor.com/Attraction_Review-g293919-d14141536-Reviews-Take_it_Easy_Bike_Car_Rental-Pattaya_Chonburi_Province.html",
+        "reviewed": "2026-10-18"
+      },
+      "licenceClaim": null
+    },
+    {
+      "id": "pattaya-bike-trip",
+      "name": "Pattaya Bike Trip",
+      "city": "pattaya",
+      "category": "bikes",
+      "aliases": [
+        "паттайя байк трип"
+      ],
+      "website": "https://pattayabiketrip.com/",
+      "source": {
+        "url": "https://pattayabiketrip.com/guide/deposit-insurance",
+        "reviewed": "2026-10-27",
+        "kind": "business"
+      },
+      "fact": {
+        "ru": "На сайте описаны депозит и страховка. Для Honda X-ADV 750 указано отдельное условие: оригинал паспорта или 20 000 бат.",
+        "en": "The site explains deposits and insurance. Honda X-ADV 750 has a separate condition: original passport or THB 20,000.",
+        "th": "เว็บไซต์อธิบายมัดจำและประกัน Honda X-ADV 750 มีเงื่อนไขแยก คือพาสปอร์ตตัวจริงหรือเงิน 20,000 บาท"
+      },
+      "rating": {
+        "value": "",
+        "platform": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Pattaya+Bike+Trip+257+104",
+        "reviewed": "2026-10-18"
+      },
+      "licenceClaim": null,
+      "attention": {
+        "ru": "В описании страховки исключены повреждение и кража байка. До бронирования уточни свою ответственность и денежную альтернативу залогу паспортом.",
+        "en": "The insurance description excludes bike damage and theft. Confirm your liability and a cash alternative to a passport deposit before booking.",
+        "th": "คำอธิบายประกันไม่คุ้มครองรถเสียหายหรือถูกขโมย ควรยืนยันความรับผิดและทางเลือกมัดจำเงินสดแทนพาสปอร์ตก่อนจอง"
+      }
+    },
+    {
+      "id": "zoride",
+      "name": "Zoride Motorbike Rental",
+      "city": "pattaya",
+      "category": "bikes",
+      "aliases": [
+        "зорайд"
+      ],
+      "website": "https://www.zoride.com/16769145/requirments-and-payment%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%AD%E0%B8%9A",
+      "source": {
+        "url": "https://www.zoride.com/16769145/requirments-and-payment%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%AD%E0%B8%9A",
+        "reviewed": "2026-10-27",
+        "kind": "business"
+      },
+      "fact": {
+        "ru": "На странице требований указаны копия паспорта и денежный депозит 1 000–2 000 бат в зависимости от модели.",
+        "en": "The requirements page lists a passport copy and a THB 1,000–2,000 cash deposit depending on the model.",
+        "th": "หน้าเงื่อนไขระบุสำเนาพาสปอร์ตและมัดจำเงินสด 1,000–2,000 บาทตามรุ่นรถ"
+      },
+      "rating": {
+        "value": "",
+        "platform": "Tripadvisor",
+        "url": "https://www.tripadvisor.com/Attraction_Review-g1226133-d12958579-Reviews-Zoride_Motorbike_Rental-Bang_Lamung_Chonburi_Province.html",
+        "reviewed": "2026-10-18"
+      },
+      "licenceClaim": null
+    },
+    {
+      "id": "tvs",
+      "name": "TVS Visa Services Pattaya",
+      "city": "pattaya",
+      "category": "visas",
+      "aliases": [
+        "твиэс",
+        "твс"
+      ],
+      "website": "https://www.tvsservicesthailand.com/All-Services",
+      "source": {
+        "url": "https://www.tvsservicesthailand.com/All-Services",
+        "reviewed": "2026-10-27",
+        "kind": "business"
+      },
+      "fact": {
+        "ru": "На сайте перечислены визовое сопровождение, продления и помощь с водительскими правами. Адрес указан на Pattaya 2nd Road, Soi 13.",
+        "en": "The website lists visa assistance, extensions and driving-licence assistance, with an address on Pattaya 2nd Road, Soi 13.",
+        "th": "เว็บไซต์ระบุบริการช่วยเหลือวีซ่า การต่ออายุ และใบขับขี่ พร้อมที่อยู่ Pattaya 2nd Road ซอย 13"
+      },
+      "rating": {
+        "value": "4.9 · 261",
+        "platform": "Google via Thai Visa Reviews",
+        "url": "https://thaivisareviews.com/agency/tvs-visa-services-pattaya",
+        "reviewed": "2026-10-18"
+      },
+      "licenceClaim": null
+    },
+    {
+      "id": "thai-visa-express",
+      "name": "Thai Visa Express",
+      "city": "pattaya",
+      "category": "visas",
+      "aliases": [
+        "тай виза экспресс"
+      ],
+      "website": "https://thaivisa-express.com/",
+      "source": {
+        "url": "https://thaivisa-express.com/",
+        "reviewed": "2026-10-27",
+        "kind": "business"
+      },
+      "fact": {
+        "ru": "Сайт описывает сопровождение тайских и британских виз и паспортов. Номер компании 0205552005366 опубликован самой организацией.",
+        "en": "The site describes Thai and UK visa and passport assistance. Company number 0205552005366 is published by the business itself.",
+        "th": "เว็บไซต์ระบุบริการช่วยเหลือวีซ่าไทย อังกฤษ และพาสปอร์ต บริษัทเผยแพร่เลขทะเบียน 0205552005366 เอง"
+      },
+      "rating": {
+        "value": "4.9 · 133",
+        "platform": "Google via Thai Visa Reviews",
+        "url": "https://thaivisareviews.com/agency/thai-visa-express",
+        "reviewed": "2026-10-18"
+      },
+      "licenceClaim": null,
+      "attention": {
+        "ru": "Регистрационный номер взят с сайта компании. Запись в государственном реестре отдельно не проверена.",
+        "en": "The registration number comes from the company website. The official registry entry has not been independently checked.",
+        "th": "เลขทะเบียนมาจากเว็บไซต์บริษัท ยังไม่ได้ตรวจเทียบกับทะเบียนทางการ"
+      }
+    },
+    {
+      "id": "pattaya-service-market",
+      "name": "Pattaya Service Market",
+      "city": "pattaya",
+      "category": "visas",
+      "aliases": [
+        "паттайя сервис маркет"
+      ],
+      "website": "https://pattayaservicemarket.com/",
+      "source": {
+        "url": "https://pattayaservicemarket.com/",
+        "reviewed": "2026-10-27",
+        "kind": "business"
+      },
+      "fact": {
+        "ru": "Сайт перечисляет визовое сопровождение и помощь с водительскими правами. Отзывы на сайте отобраны самой компанией.",
+        "en": "The website lists visa and driving-licence assistance. Reviews displayed on its website are selected by the company.",
+        "th": "เว็บไซต์ระบุบริการช่วยเหลือวีซ่าและใบขับขี่ รีวิวบนเว็บไซต์คัดเลือกโดยบริษัทเอง"
+      },
+      "rating": {
+        "value": "",
+        "platform": "Company website · Google review excerpts",
+        "url": "https://pattayaservicemarket.com/reviews/",
+        "reviewed": "2026-10-18"
+      },
+      "licenceClaim": null,
+      "attention": {
+        "ru": "Подборка отзывов на сайте компании не является независимой проверкой качества или гарантии возврата.",
+        "en": "A company-selected review collection does not independently verify service quality or refund guarantees.",
+        "th": "รีวิวที่บริษัทคัดเลือกไม่ใช่การตรวจยืนยันคุณภาพบริการหรือการรับประกันคืนเงินโดยอิสระ"
+      }
+    },
+    {
+      "id": "progress-language",
+      "name": "Progress Language School",
+      "city": "pattaya",
+      "category": "schools",
+      "aliases": [
+        "прогресс",
+        "прогресс школа",
+        "progress pattaya"
+      ],
+      "website": "https://progresspattaya.com/",
+      "source": {
+        "url": "https://progresspattaya.com/language-courses/",
+        "reviewed": "2026-10-27",
+        "kind": "business"
+      },
+      "fact": {
+        "ru": "Сайт предлагает тайский, английский и русский языки: групповые и индивидуальные занятия.",
+        "en": "The website offers Thai, English and Russian through group and private classes.",
+        "th": "เว็บไซต์เสนอภาษาไทย อังกฤษ และรัสเซีย แบบกลุ่มและส่วนตัว"
+      },
+      "licenceClaim": "ชบ 0003/2545"
+    },
+    {
+      "id": "plc-school",
+      "name": "PLC School Pattaya",
+      "city": "pattaya",
+      "category": "schools",
+      "aliases": [
+        "плс",
+        "плц",
+        "pattaya school of languages and computers",
+        "plc language school"
+      ],
+      "website": "https://plcpattaya.com/",
+      "source": {
+        "url": "https://plcpattaya.com/about/",
+        "reviewed": "2026-10-27",
+        "kind": "business"
+      },
+      "fact": {
+        "ru": "На сайте школа называется Pattaya School of Languages and Computers. Описаны языковые курсы и сопровождение обучения с ED-визой.",
+        "en": "The site names the school Pattaya School of Languages and Computers and describes language courses and ED study support.",
+        "th": "เว็บไซต์ใช้ชื่อ Pattaya School of Languages and Computers และอธิบายหลักสูตรภาษาและการช่วยเหลือเรื่องเรียนกับวีซ่า ED"
+      },
+      "licenceClaim": "self-declared"
+    }
+  ]
+}

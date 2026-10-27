@@ -143,13 +143,13 @@
     },
     {
       "id": "situation-safety-guide",
-      "status": "needs_verification",
+      "status": "done",
       "tags": [
         "content",
         "release",
         "layout"
       ],
-      "next": "Owner screenshot rejects oversized BEFORE layout after release. Compact correction implemented; new before-state screenshots and dock/reset assertions. Await build, full browser/Lighthouse, review and live verification.",
+      "next": "PR83 1b1ff098 released; CI40490400181 passed all 200 browser tests and Lighthouse. Deploy40491330218 verified exact SHA/11 checks. Native live AX checkbox/reset and compact canvas verified. See PR83 completion record.",
       "sources": [
         "docs/SAFETY_GUIDE_TASK.md"
       ]
@@ -165,6 +165,20 @@
       "next": "PR82 3d3ffcb released. CI40486467565: 200 browser tests and Lighthouse passed; Cloudflare40487379258 verified 11 checks. Live entry, answer and category+search verified. See PR82 completion record.",
       "sources": [
         "docs/NE_VEDIS_TASK.md"
+      ]
+    },
+    {
+      "id": "sourced-business-reports",
+      "status": "needs_verification",
+      "tags": [
+        "content",
+        "catalogue",
+        "release"
+      ],
+      "next": "Owner-approved first stage implemented: 10 Pattaya prepared source reports, matching by name/site and explicit selection, sources/dates/unknowns/copy/share. No arbitrary live web research or paid API. Local build/native tests pass; focused/full browser/Lighthouse/screenshots and live release pending.",
+      "sources": [
+        "docs/RESOURCE_CHECK_TASK.md",
+        "content/business-reports.json"
       ]
     }
   ]
