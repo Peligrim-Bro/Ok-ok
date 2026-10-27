@@ -169,13 +169,13 @@
     },
     {
       "id": "sourced-business-reports",
-      "status": "needs_verification",
+      "status": "done",
       "tags": [
         "content",
         "catalogue",
         "release"
       ],
-      "next": "First-stage data/search already released in PR84. Owner IMG3013: make return-to-home discoverable and reachable after long scrolling. Existing root link works in live AX; localized sticky home button implemented. Await navigation regression/full QA and live release.",
+      "next": "PR84 first-stage 10 sourced reports released; arbitrary whole-web research remains unconnected. PR85 home return released at7dafe15d: CI40518062907 attempt2 223 full tests passed; focused, payments and3 Lighthouse passed, screenshots reviewed. Deploy40520772753 success/exactSHA/11 checks. Native live home button remained visible at report bottom and click returned to root. Prior unchanged Oki/PWA timing failures recorded in PR85; no assertions weakened. See docs/RESOURCE_CHECK_TASK.md and PR85 completion record.",
       "sources": [
         "docs/RESOURCE_CHECK_TASK.md",
         "content/business-reports.json"

@@ -77,4 +77,13 @@ route was not reproduced. Replace that easy-to-miss text link with a localized
 44px home button, retain #back and the root href, and keep it sticky through long
 reports with safe-area clearance. No extra navigation stack or router change.
 Add return-to-home regression coverage from deep reports after full scroll, in
-RU/EN/TH, both themes, portrait/landscape and offline. Await final release checks.
+RU/EN/TH, both themes, portrait/landscape and offline.
+
+Completed in PR85: app merge 7dafe15d8d2998c2c0e4360dcf1f490b9d1be299.
+CI40518062907 attempt2 passed all223 browser tests, focused checks, payments and
+three Lighthouse audits. Attempt1 had two timing failures in unchanged Oki/PWA
+checks; same-source repeat passed without weakened assertions. Reviewed12 home
+return snapshots; Thai glyphs are limited by CI runner fonts. Cloudflare deploy
+40520772753 succeeded and verified exact appSHA with11 public checks. Native live
+AX verified the sticky button at the report bottom and click to https://ok-ok.click/.
+Physical iOS was not tested. This documentation-only completion changes no app files.
