@@ -1688,6 +1688,7 @@ await import('./scripts/apply-content-freshness.mjs');
 await import('./scripts/apply-oki-absence.mjs');
 await import('./scripts/apply-oki-place-guide.mjs');
 await import('./scripts/apply-brand-motto.mjs');
+await import('./scripts/apply-safety-guide.mjs');
 await import('./scripts/finalize-release-cache.mjs');
 
 // Owner paused the startup portal on 2026-10-17 pending refinement.

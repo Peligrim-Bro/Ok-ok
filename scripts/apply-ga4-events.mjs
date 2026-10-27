@@ -17,6 +17,7 @@ const tracker=String.raw`
     if(typeof window.gtag!=='function') return;
     window.gtag('event',name,{...params,transport_type:'beacon'});
   };
+  window.addEventListener('okok:safety',e=>send('safety_action',{action:e.detail.action,guide:'bike-deposit',mode:e.detail.mode}));
   const clean=s=>String(s||'').trim().replace(/\s+/g,' ').slice(0,100);
   const lang=()=>clean(document.documentElement.lang||localStorage.getItem('lang')||'ru');
   window.addEventListener('okok:catalogue',e=>{
