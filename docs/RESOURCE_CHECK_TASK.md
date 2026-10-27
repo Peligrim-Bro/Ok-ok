@@ -87,3 +87,17 @@ return snapshots; Thai glyphs are limited by CI runner fonts. Cloudflare deploy
 40520772753 succeeded and verified exact appSHA with11 public checks. Native live
 AX verified the sticky button at the report bottom and click to https://ok-ok.click/.
 Physical iOS was not tested. This documentation-only completion changes no app files.
+
+## Owner acceptance — 27 October 2026
+
+After IMG_3014 the owner clarified that the home button works: they had expected
+a familiar back arrow and initially overlooked the new button. They confirmed
+“Все работает”, “Все хорошо” and requested that the changes be recorded.
+Keep the released PR81–85 presentation and navigation as the accepted baseline.
+The extra top-frame/cache navigation workaround prepared during diagnosis was
+cancelled, its three local source/test edits restored, and no additional branch,
+PR or application deployment was created for it. Do not reopen it as a confirmed
+navigation defect. A familiar back-arrow cue is feedback for future design work,
+not an instruction to change the accepted screen now.
+This acceptance does not complete the separate Halloween PR77 or enable arbitrary
+whole-web business checking. Those retain their recorded scope and release gates.

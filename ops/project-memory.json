@@ -175,7 +175,7 @@
         "catalogue",
         "release"
       ],
-      "next": "PR84 first-stage 10 sourced reports released; arbitrary whole-web research remains unconnected. PR85 home return released at7dafe15d: CI40518062907 attempt2 223 full tests passed; focused, payments and3 Lighthouse passed, screenshots reviewed. Deploy40520772753 success/exactSHA/11 checks. Native live home button remained visible at report bottom and click returned to root. Prior unchanged Oki/PWA timing failures recorded in PR85; no assertions weakened. See docs/RESOURCE_CHECK_TASK.md and PR85 completion record.",
+      "next": "PR84 first-stage 10 sourced reports released; arbitrary whole-web research remains unconnected. PR85 home return released at7dafe15d: CI40518062907 attempt2 223 full tests passed; focused, payments and3 Lighthouse passed, screenshots reviewed. Deploy40520772753 success/exactSHA/11 checks. Native live home button remained visible at report bottom and click returned to root. Prior unchanged Oki/PWA timing failures recorded in PR85; no assertions weakened. See docs/RESOURCE_CHECK_TASK.md and PR85 completion record. Owner confirmed home return works on27 Oct after IMG3014; had expected a back arrow and overlooked the new home button. Current interface accepted. Extra navigation/cache workaround was cancelled before any branch, PR or deployment; do not resume it as a bug fix.",
       "sources": [
         "docs/RESOURCE_CHECK_TASK.md",
         "content/business-reports.json"
