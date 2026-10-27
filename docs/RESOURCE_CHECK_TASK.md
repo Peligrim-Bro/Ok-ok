@@ -48,3 +48,23 @@ Stage: local build/native source-matching tests pass. Run final focused reports,
 full browser suite and three Lighthouse runs, review images, then merge/deploy and
 verify live organization selection/report/copy path. Browser QA is emulated;
 physical iOS and third-party clipboard/Telegram apps are not implied tested.
+
+## Completion — 27 October 2026
+
+PR84 merged as 320f6c8cd52d64ed4856942f68c697ab7e953e08. Final app
+head21c3e3d8d3bae82aa5e39309b1ea80764ac0d8af; CI40514368549 passed216
+full browser tests,45 focused guide/centre/report tests, native/build checks,
+payments and3 Lighthouse runs. Search/report screenshots reviewed across languages,
+themes, phone/tablet/landscape; Thai glyphs in Linux snapshots depend on installed
+system fonts. Cloudflare deploy40515522654 succeeded and verified the exact app
+merge SHA plus11 live checks. Root budgets: HTML459821, gzip128264, JS924815.
+
+Live browser: home carousel -> checker; Progress -> one explicit candidate ->
+source-dated school report; unknown name -> coverage message/no generated verdict.
+Copy UI acknowledges writeText, but the cloud clipboard read returned empty, so
+a physical clipboard success is NOT claimed. Exact text and denied-copy fallback
+pass browser mocks; visible English text is always manually selectable.
+Canonical entry observed: https://ok-ok.click/ne-vedis/?lang=ru#check
+This closes the first-stage task. Whole-web arbitrary-business research, independent
+registry/licence/complaint checks and physical iOS remain outside this release.
+A documentation-only follow-up records completion without changing app files.

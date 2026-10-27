@@ -169,13 +169,13 @@
     },
     {
       "id": "sourced-business-reports",
-      "status": "needs_verification",
+      "status": "done",
       "tags": [
         "content",
         "catalogue",
         "release"
       ],
-      "next": "Owner-approved first stage implemented: 10 Pattaya prepared source reports, matching by name/site and explicit selection, sources/dates/unknowns/copy/share. No arbitrary live web research or paid API. Local build/native tests pass; focused/full browser/Lighthouse/screenshots and live release pending.",
+      "next": "First stage released by PR84, app merge320f6c8. CI40514368549: 216 full and45 focused browser tests, native/build and3 Lighthouse passed; deploy40515522654 verified exactSHA/11 checks. Live home entry, Progress search/selection/report and unknown-name fallback verified. 10 prepared Pattaya reports only; arbitrary live research is not connected. See docs/RESOURCE_CHECK_TASK.md and PR84.",
       "sources": [
         "docs/RESOURCE_CHECK_TASK.md",
         "content/business-reports.json"
