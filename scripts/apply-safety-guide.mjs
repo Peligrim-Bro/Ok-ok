@@ -50,7 +50,7 @@ const home=String.raw`
 <section class="home-panel" aria-labelledby="protection-title"><div class="panel-heading"><h2 id="protection-title">🛡 \${cityText('Не попадись','Stay scam-aware','รู้ทันกลโกง')}</h2><span>\${cityText('Листай →','Swipe →','เลื่อน →')}</span></div><div class="home-rail">
 <a id="homeSafety" class="home-tile safety-tile" href="#safety/bike-deposit"><span class="tile-symbol">🛵</span><strong>\${cityText('Перед арендой','Before renting','ก่อนเช่ารถ')}</strong><small>\${cityText('Байк и депозит: 5 проверок до оплаты','Bike deposits: 5 checks before paying','เงินมัดจำ: ตรวจ 5 ข้อก่อนจ่าย')}</small></a>
 <a class="home-tile" href="#safety/bike-deposit/after"><span class="tile-symbol">🧾</span><strong>\${cityText('Депозит удерживают?','Deposit withheld?','ถูกหักเงินมัดจำ?')}</strong><small>\${cityText('Что сохранить и куда обратиться','What to save and who to contact','เก็บหลักฐานอะไรและติดต่อใคร')}</small></a>
-<a class="home-tile" href="#safety/bike-deposit/quiz"><span class="tile-symbol">🔎</span><strong>\${cityText('Заметишь подвох?','Spot the warning sign','จับสัญญาณเตือน')}</strong><small>\${cityText('Одна ситуация — проверь себя','One scenario to test yourself','ลองตอบสถานการณ์สมมติ')}</small></a>
+<a class="home-tile" href="/ne-vedis/index.html?lang=\${lang}"><span class="tile-symbol">🔎</span><strong>\${cityText('Не Ведись','Stay Scam-Aware','รู้ทันกลโกง')}</strong><small>\${cityText('Тренажёр и база схем','Practice and scam patterns','แบบฝึกและรูปแบบกลโกง')}</small></a>
 </div></section>
 <section class="home-panel" aria-labelledby="places-title"><div class="panel-heading"><h2 id="places-title">🧭 \${cityText('Куда пойти','Where to go','ไปไหนดี')}</h2><span>\${cityText('Листай →','Swipe →','เลื่อน →')}</span></div><div class="home-rail places-rail">
 <button class="home-tile" type="button" data-spin="1"><span class="tile-symbol">✨</span><strong>\${cityText('Выбор дня','Daily pick','ตัวเลือกวันนี้')}</strong><small>\${cityText('50 идей без повторов','50 ideas, no repeats','50 ไอเดียไม่ซ้ำ')}</small></button>
@@ -64,7 +64,19 @@ html=html.slice(0,actionsStart)+home.replaceAll('\\${','${')+html.slice(actionsE
 html=html.replace('<h1>PattayaOK</h1>','<h1>OK-OK</h1>').replace(":'PattayaOK';",":'OK-OK';");
 html=html.replace('tagline: "Места, которым можно верить"','tagline: "Места и защита от скама"').replace('tagline: "Places you can actually trust"','tagline: "Places and scam awareness"').replace('tagline: "สถานที่ที่ไว้ใจได้"','tagline: "แนะนำสถานที่และรู้ทันกลโกง"');
 html=html.replace('</head>','<style id=\"okok-home-panels\">.home-panel{padding:14px;margin:0 0 14px;border:1px solid var(--line);border-radius:24px;background:var(--card)}.panel-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}.panel-heading h2{font-size:19px;margin:0}.panel-heading>span{font-size:12px;color:var(--muted)}.home-rail{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:3px 2px 10px;scrollbar-width:thin}.home-tile{flex:0 0 71%;min-width:0;scroll-snap-align:start;display:flex;flex-direction:column;align-items:flex-start;gap:6px;text-align:left;padding:14px;min-height:136px;border:1px solid var(--line);border-radius:19px;background:var(--card2);color:var(--text);font:inherit;text-decoration:none;cursor:pointer;box-shadow:inset 0 1px 1px #ffffff35}.home-tile strong{font-size:17px;line-height:1.25}.home-tile small{font-size:13px;line-height:1.4;color:var(--muted)}.home-tile[data-spin] small{color:inherit}.tile-symbol{font-size:25px;line-height:1.2}.home-tile:focus-visible{outline:3px solid var(--mint);outline-offset:-3px}.safety-tile{border-color:var(--mint)}.places-rail .home-tile{flex-basis:53%;min-height:118px}#homeFilters:not([open]){width:max-content;max-width:100%;margin:8px 0}#homeFilters:not([open]) #homeFiltersToggle{padding:0 38px;border-radius:14px}#homeFilters[open]{width:100%}@media(min-width:700px){.home-tile,.places-rail .home-tile{flex-basis:calc((100% - 20px)/3)}}@media(prefers-reduced-motion:reduce){.home-rail{scroll-behavior:auto}}</style></head>');
+// One self-contained centre serves website visitors and links opened from Telegram.
+mkdirSync('site/public/ne-vedis',{recursive:true});
+writeFileSync('site/public/ne-vedis/index.html',readFileSync('safety/ne-vedis.html','utf8'));
 writeFileSync(page,html);
-const swPath='site/public/sw.js';let sw=readFileSync(swPath,'utf8').replace('const CORE = [','const CORE = ['+JSON.stringify(warningURL)+',');
+const swPath='site/public/sw.js';let sw=readFileSync(swPath,'utf8').replace('const CORE = [','const CORE = ['+JSON.stringify('./ne-vedis/index.html')+','+JSON.stringify(warningURL)+',');
+// Keep centre navigation out of the shell cache (including Cloudflare clean URLs).
+sw=sw.replace('  if (request.mode === "navigate") {',`  if (request.mode === "navigate" && /^\\/ne-vedis(?:\\/|$)/.test(url.pathname)) {
+    e.respondWith(fetch(request).then(async res => {
+      if(res.ok) { const c=await caches.open(CACHE); await c.put("./ne-vedis/index.html",res.clone()); }
+      return res;
+    }).catch(async()=> (await caches.match("./ne-vedis/index.html")) || Response.error()));
+    return;
+  }
+  if (request.mode === "navigate") {`);
 writeFileSync(swPath,sw);
 console.log('PASS: self-contained safety guide and compact horizontal home panels');

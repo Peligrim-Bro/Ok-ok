@@ -105,7 +105,7 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npx playwright install chromium --only-shell
-      - run: npx playwright test tests/safety-guide.spec.cjs
+      - run: npx playwright test tests/safety-guide.spec.cjs tests/ne-vedis.spec.cjs
       - uses: actions/upload-artifact@v7
         if: always()
         with:

@@ -143,15 +143,28 @@
     },
     {
       "id": "situation-safety-guide",
+      "status": "done",
+      "tags": [
+        "content",
+        "release",
+        "layout"
+      ],
+      "next": "Guide recovery and home carousels released in PR81 aa83f33; full CI and Cloudflare deploy 40485038507 passed. Actual srcdoc content observed; live cloud-browser clicks were inconclusive. Follow-up centre tracked separately.",
+      "sources": [
+        "docs/SAFETY_GUIDE_TASK.md"
+      ]
+    },
+    {
+      "id": "ne-vedis-centre",
       "status": "needs_verification",
       "tags": [
         "content",
         "release",
         "layout"
       ],
-      "next": "First bike-deposit guide implemented; local build passes unchanged budgets. Full browser/Lighthouse and screenshots required before release. Housing/bars/exchange remain next stage.",
+      "next": "Owner-approved adaptation implemented: trainer and searchable schemes, no simulated scanner/XP/channel posts. Build passes; full browser/Lighthouse/screenshots and live release pending.",
       "sources": [
-        "docs/SAFETY_GUIDE_TASK.md"
+        "docs/NE_VEDIS_TASK.md"
       ]
     }
   ]
