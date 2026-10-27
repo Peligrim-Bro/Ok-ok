@@ -2,6 +2,7 @@ const {test,expect}=require('@playwright/test');
 for(const lang of ['ru','en','th'])for(const width of [360,390,768,844])test(`bike guide ${lang} ${width}`,async({page,context})=>{
 await page.setViewportSize({width,height:width===844?390:844});
 await page.addInitScript(lang=>{localStorage.setItem('pok-lang',lang);localStorage.setItem('pok-lang-set','1');localStorage.setItem('pok-install-seen','1');},lang);
+await page.addInitScript(()=>Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async()=>{throw new Error('clipboard unavailable')}}}));
 await page.goto('/?okok_test=1#safety/bike-deposit');
 const f=page.frameLocator('#safetyGuide');await expect(f.locator('h1')).toBeVisible();
 await f.locator('[data-check="0"]').check();await page.reload();await expect(f.locator('[data-check="0"]')).toBeChecked();
@@ -20,8 +21,8 @@ await f.locator('#report').click();await expect(page.locator('#authorChatDialog'
 await page.locator('nav.tab [data-tab="home"]').click();await expect(page.locator('#safetyGuide')).toHaveCount(0);await expect(page.locator('header h1')).toHaveText('OK-OK');await expect(page.locator('#homeSafety')).toBeVisible();await page.screenshot({path:`quality-reports/safety-home-${lang}-${width}.png`});await page.locator('#homeSafety').click();await expect(f.locator('h1')).toBeVisible();
 });
 test('guide offline, hash navigation and city selection',async({page,context})=>{
-await page.addInitScript(()=>{localStorage.setItem('pok-install-seen','1');localStorage.setItem('pok-city','pattaya')});
-await page.goto('/?okok_test=1');await page.evaluate(()=>navigator.serviceWorker.ready);
+await page.addInitScript(()=>{localStorage.setItem('pok-install-seen','1');localStorage.setItem('pok-lang','ru');localStorage.setItem('pok-lang-set','1');localStorage.setItem('okok-city','pattaya')});
+await page.goto('/?okok_test=1');await page.evaluate(async()=>{await navigator.serviceWorker.register('/sw.js');await navigator.serviceWorker.ready});await page.waitForFunction(()=>!!navigator.serviceWorker.controller);
 await page.locator('#citySelect').selectOption('phuket');
 await page.evaluate(()=>location.hash='safety/bike-deposit');const f=page.frameLocator('#safetyGuide');await expect(f.locator('h1')).toBeVisible();
 await page.reload();await expect(f.locator('h1')).toBeVisible();

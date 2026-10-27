@@ -17,6 +17,7 @@ const renderer=`    function renderScams() {
       if(e.data?.okokSafety==='report')$('authorChatButton')?.click();
     });
     function safetyRoute(){if(location.hash==='#safety/bike-deposit'){setTab('scam',false);history.replaceState({view:'tab',tab:'scam'},'');}}
+    document.addEventListener('click',e=>{if(e.target.closest('a[href=\"#safety/bike-deposit\"]')){e.preventDefault();if(location.hash==='#safety/bike-deposit')safetyRoute();else location.hash='safety/bike-deposit';}});
     window.addEventListener('hashchange',safetyRoute);setTimeout(safetyRoute,0);
 
 `;
@@ -31,7 +32,7 @@ html=html.slice(0,homeStart)+html.slice(homeEnd);
 const homeAnchor='        <button class="btn map" type="button" data-openmap="1"';
 if(!html.includes(homeAnchor))throw Error('Home primary actions missing');
 html=html.replace(homeAnchor,`        <a id="homeSafety" class="btn call" href="#safety/bike-deposit" style="display:block;text-align:center;margin:0 0 10px">🛡 \${cityText('Байк и депозит: не попадись','Bike deposits: stay scam-aware','เช่ารถและเงินมัดจำ: รู้ทันก่อนพลาด')}</a>\n`+homeAnchor);
-html=html.replace('<h1>PattayaOK</h1>','<h1>OK-OK</h1>');
+html=html.replace('<h1>PattayaOK</h1>','<h1>OK-OK</h1>').replace(":'PattayaOK';",":'OK-OK';");
 html=html.replace('tagline: "Места, которым можно верить"','tagline: "Места и защита от скама"').replace('tagline: "Places you can actually trust"','tagline: "Places and scam awareness"').replace('tagline: "สถานที่ที่ไว้ใจได้"','tagline: "แนะนำสถานที่และรู้ทันกลโกง"');
 writeFileSync(page,html);
 const swPath='site/public/sw.js';let sw=readFileSync(swPath,'utf8').replace('const CORE = [','const CORE = ['+['ru','en','th'].map(lang=>JSON.stringify(url+'?lang='+lang)).join(',')+',');
