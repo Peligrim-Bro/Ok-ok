@@ -1,90 +1,91 @@
 {
-  "verifiedAt": "2026-10-27",
+  "verifiedAt": "2026-10-28",
   "news": [
     {
       "category": "world",
       "when": "27.10 · 🌍",
-      "href": "https://apnews.com/article/new-mexico-health-cybersecurity-hack-7a3593f8a3cee4ca895774ab1574919f",
+      "href": "https://wmo.int/news/media-centre/greenhouse-gas-levels-once-again-reach-record-high",
       "publishedAt": "2026-10-27",
       "nonWar": true,
-      "ru": "Сбой кибербезопасности в больничной сети Нью-Мексико перенаправил скорые и отменил приёмы.",
-      "en": "A cyber incident at New Mexico's hospital network diverted ambulances and cancelled appointments.",
-      "th": "เหตุไซเบอร์ในเครือข่ายโรงพยาบาลนิวเม็กซิโกทำให้ส่งรถพยาบาลไปที่อื่นและยกเลิกนัด",
+      "ru": "ВМО: концентрации CO₂, метана и закиси азота обновили рекорды в 2025 году.",
+      "en": "WMO says CO₂, methane and nitrous oxide concentrations hit records in 2025.",
+      "th": "WMO ระบุว่า CO₂ มีเทน และไนตรัสออกไซด์ทำสถิติสูงสุดในปี 2025",
       "sources": [
-        "https://apnews.com/article/new-mexico-health-cybersecurity-hack-7a3593f8a3cee4ca895774ab1574919f"
+        "https://wmo.int/news/media-centre/greenhouse-gas-levels-once-again-reach-record-high",
+        "https://www.reuters.com/sustainability/cop/greenhouse-gases-hit-record-highs-further-rise-expected-with-el-nio-un-weather-2026-10-27/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-27T06:25:00+07:00",
-        "sourceUrl": "https://apnews.com/article/new-mexico-health-cybersecurity-hack-7a3593f8a3cee4ca895774ab1574919f",
-        "summary": "No public counters; AP syndication shows reach, not a global rank."
+        "observedAt": "2026-10-28T06:38:00+07:00",
+        "sourceUrl": "https://wmo.int/news/media-centre/greenhouse-gas-levels-once-again-reach-record-high",
+        "summary": "No public counters; WMO and Reuters coverage shows reach, not a global rank."
       }
     },
     {
       "category": "thailand",
-      "when": "26.10 · 🇹🇭",
-      "href": "https://apnews.com/article/thailand-phuket-flooding-mudslide-d3eb82e5f9dfeb6356804414e9e3be85",
-      "publishedAt": "2026-10-26",
-      "ru": "Паводки затронули все три района Пхукета; вода спадает, но риск оползней сохраняется.",
-      "en": "Floods hit all three Phuket districts; water is receding, but landslide risk remains.",
-      "th": "น้ำท่วมทั้งสามอำเภอของภูเก็ตเริ่มลด แต่ยังเสี่ยงดินถล่ม",
+      "when": "27.10 · 🇹🇭",
+      "href": "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-and-variable-weather-in-upper-thailand-no-9-281-2026",
+      "publishedAt": "2026-10-27",
+      "ru": "TMD предупреждает на 27–28 октября о сильных дождях, паводках и оползнях на юге.",
+      "en": "TMD warns of heavy southern rain, flash floods and landslides on 27–28 October.",
+      "th": "TMD เตือน 27–28 ตุลาคม ภาคใต้เสี่ยงฝนหนัก น้ำท่วม และดินถล่ม",
       "sources": [
-        "https://apnews.com/article/thailand-phuket-flooding-mudslide-d3eb82e5f9dfeb6356804414e9e3be85"
+        "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-and-variable-weather-in-upper-thailand-no-9-281-2026"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-27T06:25:00+07:00",
-        "sourceUrl": "https://apnews.com/article/thailand-phuket-flooding-mudslide-d3eb82e5f9dfeb6356804414e9e3be85",
-        "summary": "No public counters; multi-outlet coverage is not a national rank."
+        "observedAt": "2026-10-28T06:38:00+07:00",
+        "sourceUrl": "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-and-variable-weather-in-upper-thailand-no-9-281-2026",
+        "summary": "No public counters or national rank; current official advisory."
       }
     },
     {
       "category": "thailand",
-      "when": "26.10 · 🇹🇭",
-      "href": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/554472",
-      "publishedAt": "2026-10-26",
-      "ru": "Министры Таиланда и Малайзии обсуждают торговлю, развитие границы и транспортные связи.",
-      "en": "Thai and Malaysian ministers are discussing trade, border development and transport links.",
-      "th": "รัฐมนตรีไทยและมาเลเซียหารือการค้า การพัฒนาชายแดน และการคมนาคม",
+      "when": "27.10 · 🇹🇭",
+      "href": "https://thailand.prd.go.th/en/content/category/detail/id/52/iid/554820",
+      "publishedAt": "2026-10-27",
+      "ru": "В Чонбури и Районге одобрены четыре зоны EEC для технологичных отраслей.",
+      "en": "Four EEC zones in Chon Buri and Rayong were approved for advanced industries.",
+      "th": "อนุมัติเขต EEC ใหม่ 4 แห่งในชลบุรีและระยอง รองรับอุตสาหกรรมเทคโนโลยี",
       "sources": [
-        "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/554472"
+        "https://thailand.prd.go.th/en/content/category/detail/id/52/iid/554820"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-27T06:25:00+07:00",
-        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/554472",
-        "summary": "PRD: 112 views; no comparable comments or national rank."
+        "observedAt": "2026-10-28T06:38:00+07:00",
+        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/52/iid/554820",
+        "summary": "PRD: 86 views; no comparable comments or national rank."
       }
     },
     {
       "category": "pattaya",
-      "when": "27.10 · Pattaya",
-      "href": "https://www.pattayamail.com/news/pattaya-plans-tourist-help-center-at-bali-hai-pier-for-island-visitors-569845",
-      "publishedAt": "2026-10-27",
-      "ru": "На пирсе Бали Хай планируют центр туристической информации и экстренной помощи.",
-      "en": "Bali Hai Pier plans a tourist information and emergency-help centre.",
-      "th": "ท่าเรือบาลีฮายเตรียมศูนย์ข้อมูลและช่วยเหลือฉุกเฉินสำหรับนักท่องเที่ยว",
+      "when": "28.10 · Pattaya",
+      "href": "https://www.pattayamail.com/latestnews/news/pattaya-bikini-beach-race-marks-10th-anniversary-with-5000-runners-on-halloween-569995",
+      "publishedAt": "2026-10-28",
+      "ru": "Паттайя готовит пляжный забег 31 октября и временно освобождает часть пляжа.",
+      "en": "Pattaya is preparing a 31 October beach race and temporary beach clearance.",
+      "th": "พัทยาเตรียมงานวิ่งชายหาด 31 ตุลาคม และเคลียร์พื้นที่ชั่วคราว",
       "sources": [
-        "https://www.pattayamail.com/news/pattaya-plans-tourist-help-center-at-bali-hai-pier-for-island-visitors-569845"
+        "https://www.pattayamail.com/latestnews/news/pattaya-bikini-beach-race-marks-10th-anniversary-with-5000-runners-on-halloween-569995"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-27T06:25:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/pattaya-plans-tourist-help-center-at-bali-hai-pier-for-island-visitors-569845",
-        "summary": "Pattaya Mail: 164 views/0 comments versus 47/0; not a city rank."
+        "observedAt": "2026-10-28T06:38:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/latestnews/news/pattaya-bikini-beach-race-marks-10th-anniversary-with-5000-runners-on-halloween-569995",
+        "summary": "Pattaya Mail: 190 views/0 comments versus 189/0 for the Koh Larn safety report; not a city rank."
       }
     },
     {
       "category": "pattaya",
-      "when": "27.10 · Pattaya",
-      "href": "https://www.pattayamail.com/news/pattaya-prepares-to-clamp-lift-and-fine-motorcycles-occupying-public-parking-spaces-569873",
-      "publishedAt": "2026-10-27",
-      "ru": "Паттайя усилит контроль за прокатными мотоциклами на общественных парковках и тротуарах.",
-      "en": "Pattaya will tighten checks on rental motorcycles in public parking and on footpaths.",
-      "th": "พัทยาจะเข้มงวดรถเช่าที่ใช้ที่จอดสาธารณะและทางเท้า",
+      "when": "28.10 · Pattaya",
+      "href": "https://www.pattayamail.com/latestnews/news/watch-your-step-wear-your-life-jacket-pattaya-tourist-police-remind-koh-larn-visitors-569964",
+      "publishedAt": "2026-10-28",
+      "ru": "Туристическая полиция проверяет спасжилеты на лодках до Ко Лана и советует следить за погодой.",
+      "en": "Tourist Police check life jackets for Koh Larn boats and advise watching the weather.",
+      "th": "ตำรวจท่องเที่ยวตรวจเสื้อชูชีพเรือไปเกาะล้าน และแนะให้ดูสภาพอากาศ",
       "sources": [
-        "https://www.pattayamail.com/news/pattaya-prepares-to-clamp-lift-and-fine-motorcycles-occupying-public-parking-spaces-569873"
+        "https://www.pattayamail.com/latestnews/news/watch-your-step-wear-your-life-jacket-pattaya-tourist-police-remind-koh-larn-visitors-569964"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-27T06:25:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/pattaya-prepares-to-clamp-lift-and-fine-motorcycles-occupying-public-parking-spaces-569873",
-        "summary": "Pattaya Mail: 47 views/0 comments versus 164/0; not a city rank."
+        "observedAt": "2026-10-28T06:38:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/latestnews/news/watch-your-step-wear-your-life-jacket-pattaya-tourist-police-remind-koh-larn-visitors-569964",
+        "summary": "Pattaya Mail: 189 views/0 comments versus 190/0 for the beach-race report; not a city rank."
       }
     }
   ],
@@ -227,7 +228,30 @@
         "https://www.antifakenewscenter.com/%E0%B8%AD%E0%B8%B2%E0%B8%8A%E0%B8%8D%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%AD%E0%B8%AD%E0%B8%99%E0%B9%84%E0%B8%A5%E0%B8%99%E0%B9%8C/study-guide/"
       ],
       "verifiedAt": "2026-10-27"
+    },
+    {
+      "id": "fake-cib-asset-recovery-page-thailand-2026-10",
+      "title": {
+        "ru": "Фальшивая страница возврата активов CIB",
+        "en": "Fake CIB asset-recovery page",
+        "th": "เพจปลอมอ้าง CIB ติดตามคืนทรัพย์สิน"
+      },
+      "text": {
+        "ru": "27 октября официальный центр сообщил: страница возврата активов от имени CIB не принадлежит полиции и выманивает данные или деньги.",
+        "en": "On 27 October, the official centre said a CIB asset-recovery page is not a police channel and seeks data or money.",
+        "th": "27 ตุลาคม ศูนย์ทางการยืนยันว่าเพจอ้าง CIB คืนทรัพย์สินไม่ใช่ตำรวจ และหลอกข้อมูลหรือเงิน"
+      },
+      "do": {
+        "ru": "Проверяйте официальные каналы полиции и CIB; не передавайте данные и не платите за возврат.",
+        "en": "Check official police and CIB channels; do not share data or pay recovery fees.",
+        "th": "ตรวจช่องทางตำรวจและ CIB ทางการ อย่าให้ข้อมูลหรือจ่ายค่าติดตามทรัพย์สิน"
+      },
+      "status": "official-warning",
+      "sources": [
+        "https://www.antifakenewscenter.com/%E0%B8%AD%E0%B8%B2%E0%B8%8A%E0%B8%8D%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%AD%E0%B8%AD%E0%B8%99%E0%B9%84%E0%B8%A5%E0%B8%99%E0%B9%8C/asset-restitution-coordination-center/"
+      ],
+      "verifiedAt": "2026-10-28"
     }
   ],
-  "selection": "Reviewed 2026-10-27 Asia/Bangkok: 1 world, 2 Thailand, 2 Pattaya; sources 26–27 October. Evidence limits recorded. Added an official 26 October study-material warning; five earlier dates unchanged. No Telegram sending."
+  "selection": "Reviewed 2026-10-28 Asia/Bangkok: 1 world, 2 Thailand, 2 Pattaya; sources 27–28 October. Evidence limits recorded. Added the official 27 October fake-CIB recovery-page warning; six earlier dates unchanged. No Telegram sending."
 }
