@@ -56,7 +56,7 @@ function renderBusinessReport(r){
  phrase.value=UI['checkPhrase_'+r.category].en;
  ask.append(phrase,checkEl('p',UI['checkPhrase_'+r.category][lang],'muted'));
  const copy=checkEl('button',t('checkCopy'));copy.id='business-copy';copy.type='button';const status=checkEl('p','');status.id='business-copy-status';status.setAttribute('role','status');
- copy.onclick=async()=>{try{await navigator.clipboard.writeText(phrase.value);status.textContent=t('copied')}catch{status.textContent=t('checkCopyFallback');phrase.focus();phrase.select()}};
+ copy.onclick=async()=>{try{await navigator.clipboard.writeText(phrase.value);status.textContent=t('checkCopied')}catch{status.textContent=t('checkCopyFallback');phrase.focus();phrase.select()}};
  ask.append(copy,status);box.append(ask);
  const share=checkEl('button',t('checkShare'));share.id='business-share';share.type='button';
  const shareStatus=checkEl('p','');shareStatus.id='business-share-status';shareStatus.setAttribute('role','status');

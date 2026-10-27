@@ -38,3 +38,11 @@ test('cached reports remain available offline and source age is not restamped',a
  await context.setOffline(true);await page.reload();await expect(page.locator('#business-report-title')).toHaveText('Speed Bike');await expect(page.locator('.report-stamp')).toContainText('Offline: saved report');await expect(page.locator('#check-report')).toContainText('10/18/2026');
  await page.goto('/ne-vedis/index.html?lang=en#check/no-such-place');await expect(page.locator('#check-status')).toHaveText('No prepared report found.');await expect(page.locator('#check-report')).toBeHidden();
 });
+
+test('copy sends the visible English phrase only after user intent',async({page})=>{
+ await page.addInitScript(()=>{window.copiedPhrases=[];Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async text=>{window.copiedPhrases.push(text)}}});});
+ await page.goto('/ne-vedis/index.html?lang=en#check/progress-language');
+ expect(await page.evaluate(()=>window.copiedPhrases)).toEqual([]);
+ const visible=await page.locator('#business-phrase').inputValue();await page.locator('#business-copy').click();
+ expect(await page.evaluate(()=>window.copiedPhrases)).toEqual([visible]);await expect(page.locator('#business-copy-status')).toHaveText('Text copied');
+});
