@@ -32,3 +32,34 @@ places/scam-awareness descriptor. One primary guide entry before map and other
 home actions replaces the lower teaser, with no duplicate call or extra header
 banner. Existing ad pricing, invoices and partner links unchanged. No paid
 safety badge, cashback promise or new free posting workflow is introduced.
+
+## Production recovery and first-screen redesign — 27 October
+
+After PR 80 the owner reported a blank safety view in iOS PWA and rejected the
+vertical stack of full-width controls. Live cloud-browser inspection also saw
+an empty embedded document (chrome-error://chromewebdata/) for the external
+HTML URL. Exact platform failure cause is not established; local static-server
+checks did not reproduce it. Existing production verification covered the shell,
+not this interactive path.
+
+Replacement bundles the reviewed document as srcdoc with the shell, so its UI
+requires no separate HTML request. The secondary sourced warning dataset moves
+to content-hashed JSON, loaded on disclosure and precached. New tests abort all
+external safety HTML requests and still exercise the full guide and offline flow.
+Parent origin/frame-source message checks remain. Check the published UI path
+in a live browser after release; do not infer it from a source commit.
+
+Home: two labeled panels with native horizontal scroll/snap, no auto-rotation.
+Safety has before-rental, withheld-deposit and fictional quiz entries. Places
+has daily choice, map and tours using their existing handlers. Filter disclosure
+is compact when closed; all five bottom tabs and paid-ad behavior retained.
+
+Budget review: moving guide content into the shell removes a failure-prone
+navigation and shifts warnings out. Measured HTML 459016 (under unchanged
+460000), JS 924392 (under unchanged 925000), total site 31858100 (under unchanged
+33000000). Shell gzip rises from 124818 to about 127976 bytes (~2.5%); its budget
+is narrowly updated to 128500 for this explicit reliability/layout scope, with
+Lighthouse retained. No regression tests, privacy checks or other budgets removed.
+
+Current stage: local build/native checks pass. Await new focused browser tests,
+full browser suite, three Lighthouse runs, screenshot review and live verification.
