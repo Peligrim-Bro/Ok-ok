@@ -57,6 +57,7 @@ const home=String.raw`
 <button class="home-tile" type="button" data-openmap="1"><span class="tile-symbol">🗺</span><strong>\${cityText('На карте','On the map','บนแผนที่')}</strong><small>\${cityText('Места Паттайи на карте','Explore Pattaya places on a map','สำรวจสถานที่ในพัทยาบนแผนที่')}</small></button>
 <button class="home-tile" type="button" data-tours="1"><span class="tile-symbol">🎟</span><strong>\${cityText('Экскурсии','Tours','ทัวร์')}</strong><small>\${cityText('Открыть подборку','Open the selection','เปิดรายการแนะนำ')}</small></button>
 </div><div id="okMapSlot"></div></section>
+<p class="hint">\${cityText('Подборка — ориентир, не гарантия услуг. Цены и условия уточняй перед бронированием.','Suggestions are a starting point, not a service guarantee. Confirm prices and terms before booking.','รายการแนะนำเป็นข้อมูลเบื้องต้น ไม่ใช่การรับประกันบริการ โปรดยืนยันราคาและเงื่อนไขก่อนจอง')}</p>
 \${clockHTML(true)}
 `;
 html=html.slice(0,actionsStart)+home.replaceAll('\\${','${')+html.slice(actionsEnd);
