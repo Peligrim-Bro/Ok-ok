@@ -24,7 +24,7 @@ const renderer=`    function renderScams() {
 html=html.slice(0,start)+renderer+html.slice(end);
 // Thailand-wide checklist remains available in every selected city.
 html=html.replace('["home","list","shop","scam"].includes(tab)','["home","list","shop"].includes(tab)');
-html=html.replace('navScam: "Скам"','navScam: "Не попадись"').replace('navScam: "Scam"','navScam: "Stay alert"');
+html=html.replace('navScam: "Скам"','navScam: "Защита"').replace('navScam: "Scam"','navScam: "Safety"');
 const homeStart=html.indexOf('        <article class="scam" data-open-scam="jetski">');
 const homeEnd=html.indexOf('        <h3 style="margin:18px 0 8px">',homeStart);
 if(homeStart<0||homeEnd<0)throw Error('Safety home entry missing');
