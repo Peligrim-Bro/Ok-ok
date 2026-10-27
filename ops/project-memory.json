@@ -140,6 +140,19 @@
       "sources": [
         "docs/HALLOWEEN_2026_TASK.md"
       ]
+    },
+    {
+      "id": "situation-safety-guide",
+      "status": "needs_verification",
+      "tags": [
+        "content",
+        "release",
+        "layout"
+      ],
+      "next": "First bike-deposit guide implemented; local build passes unchanged budgets. Full browser/Lighthouse and screenshots required before release. Housing/bars/exchange remain next stage.",
+      "sources": [
+        "docs/SAFETY_GUIDE_TASK.md"
+      ]
     }
   ]
 }
