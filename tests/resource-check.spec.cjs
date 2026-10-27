@@ -2,7 +2,7 @@ const {test,expect}=require('@playwright/test');
 for(const lang of ['ru','en','th'])for(const width of [360,390,768,844])test(`resource report ${lang} ${width}`,async({page})=>{
  await page.setViewportSize({width,height:width===844?390:844});
  await page.goto('/ne-vedis/index.html?lang='+lang+'#check');
- await expect(page.locator('#check-input')).toBeVisible();
+ await expect(page.locator('#check-input')).toBeVisible();await expect(page.locator('main>h1')).toBeHidden();await page.screenshot({path:`quality-reports/resource-search-${lang}-${width}.png`});
  await page.locator('#check-input').fill('Progress Pattaya');await page.locator('#check-form button').click();
  await expect(page.locator('.business-match')).toHaveCount(1);await page.locator('.business-match').click();
  await expect(page.locator('#business-report-title')).toHaveText('Progress Language School');
