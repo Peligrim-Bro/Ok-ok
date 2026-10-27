@@ -45,7 +45,7 @@ function renderBusinessReport(r){
  box.append(facts);
  if(r.attention){const attention=checkEl('section',undefined,'panel');attention.append(checkEl('h3',t('checkAttention')),checkEl('p',l(r.attention)),checkLink(t('checkBusinessSource'),r.source.url));box.append(attention);}
  const reviews=checkEl('section',undefined,'panel');reviews.append(checkEl('h3',t('checkReviews')));
- if(r.rating){reviews.append(checkEl('p',r.rating.value?'★ '+r.rating.value+' · '+r.rating.platform:t('checkNoRating')),checkEl('p',t('checkSnapshot')+': '+checkDate(r.rating.reviewed),'muted'),checkLink(r.rating.platform,r.rating.url));}
+ if(r.rating){reviews.append(checkEl('p',r.rating.value?'★ '+r.rating.value+' · '+r.rating.platform:t('checkNoRating')),checkEl('p',t('checkSnapshot')+': '+checkDate(r.rating.reviewed)+(reportAge(r.rating.reviewed,checkToday())>30?' · '+t('checkStale'):''),'muted'),checkLink(r.rating.platform,r.rating.url));}
  else reviews.append(checkEl('p',t('checkNoRating')));
  reviews.append(checkEl('p',t('checkReviewsLimit'),'fineprint'));box.append(reviews);
  const unknown=checkEl('section',undefined,'panel');unknown.append(checkEl('h3',t('checkNotChecked')));

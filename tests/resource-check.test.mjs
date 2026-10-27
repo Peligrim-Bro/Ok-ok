@@ -7,6 +7,7 @@ test('business identity matching keeps names, aliases and source domains distinc
  assert.equal(findBusinesses(data.records,'спидбайк').records[0].id,'speed-bike');
  assert.equal(findBusinesses(data.records,'Progress Pattaya').records[0].id,'progress-language');
  assert.equal(findBusinesses(data.records,'https://speedbikepattaya.com/').records[0].id,'speed-bike');
+ assert.equal(findBusinesses(data.records,'speedbikepattaya.com').records[0].id,'speed-bike');
  assert.equal(findBusinesses(data.records,'https://speedbikepattaya.com.evil.example/').records.length,0);
  assert.equal(findBusinesses(data.records,'https://deetrip-tours.my.canva.site/other-company').records.length,0);
  assert.equal(findBusinesses(data.records,'https://www.google.com/maps/search/?api=1&query=Unknown+Business').records.length,0);

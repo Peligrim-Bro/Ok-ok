@@ -2,8 +2,8 @@
 export function normalizeBusiness(value){return String(value).normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').trim();}
 export function findBusinesses(records,input){
  const raw=String(input).trim().slice(0,200);if(!raw)return {records:[],invalid:false};
- if(/^(?:[a-z][a-z0-9+.-]*:|www\.)/i.test(raw)){
-  let u;try{u=new URL(raw.startsWith('www.')?'https://'+raw:raw);}catch{return {records:[],invalid:true};}
+ if(/^(?:[a-z][a-z0-9+.-]*:|www\.)/i.test(raw)||/^[a-z0-9.-]+\.[a-z]{2,}(?:[/?#]|$)/i.test(raw)){
+  let u;try{u=new URL(/^[a-z][a-z0-9+.-]*:/i.test(raw)?raw:'https://'+raw);}catch{return {records:[],invalid:true};}
   if(!['http:','https:'].includes(u.protocol)||u.username||u.password)return {records:[],invalid:true};
   const host=u.hostname.replace(/^www\./,'').toLowerCase();let path;try{path=decodeURIComponent(u.pathname).replace(/\/$/,'').toLowerCase()}catch{return {records:[],invalid:true}};
   return {invalid:false,records:records.filter(r=>[r.website,r.source.url,r.rating?.url].filter(Boolean).some(address=>{const a=new URL(address);const ap=decodeURIComponent(a.pathname).replace(/\/$/,'').toLowerCase();return a.hostname.replace(/^www\./,'').toLowerCase()===host&&(host==='google.com'?ap===path&&a.search===u.search:ap===path||(!host.endsWith('canva.site')&&ap===''));}))};
