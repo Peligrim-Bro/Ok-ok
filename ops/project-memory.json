@@ -169,13 +169,13 @@
     },
     {
       "id": "sourced-business-reports",
-      "status": "done",
+      "status": "needs_verification",
       "tags": [
         "content",
         "catalogue",
         "release"
       ],
-      "next": "First stage released by PR84, app merge320f6c8. CI40514368549: 216 full and45 focused browser tests, native/build and3 Lighthouse passed; deploy40515522654 verified exactSHA/11 checks. Live home entry, Progress search/selection/report and unknown-name fallback verified. 10 prepared Pattaya reports only; arbitrary live research is not connected. See docs/RESOURCE_CHECK_TASK.md and PR84.",
+      "next": "First-stage data/search already released in PR84. Owner IMG3013: make return-to-home discoverable and reachable after long scrolling. Existing root link works in live AX; localized sticky home button implemented. Await navigation regression/full QA and live release.",
       "sources": [
         "docs/RESOURCE_CHECK_TASK.md",
         "content/business-reports.json"

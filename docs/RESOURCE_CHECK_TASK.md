@@ -68,3 +68,13 @@ Canonical entry observed: https://ok-ok.click/ne-vedis/?lang=ru#check
 This closes the first-stage task. Whole-web arbitrary-business research, independent
 registry/licence/complaint checks and physical iOS remain outside this release.
 A documentation-only follow-up records completion without changing app files.
+
+## Home navigation clarification — IMG_3013, 27 October
+
+Owner cannot find a way from the standalone checker to the beginning. Native live
+AX click on the existing plain “На OK-OK” link did navigate to root/home; a broken
+route was not reproduced. Replace that easy-to-miss text link with a localized
+44px home button, retain #back and the root href, and keep it sticky through long
+reports with safe-area clearance. No extra navigation stack or router change.
+Add return-to-home regression coverage from deep reports after full scroll, in
+RU/EN/TH, both themes, portrait/landscape and offline. Await final release checks.
