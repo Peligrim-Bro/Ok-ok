@@ -71,3 +71,16 @@ only, run the unchanged full browser suite with two isolated workers, and allow
 20 minutes for full jobs. No test, assertion or scenario is omitted. Focused
 14 tests and payment coverage retain their normal single-worker config. Verify
 missing-library/parallel-state failures rather than masking them.
+
+## Compact checklist correction — owner screenshot IMG_3012, 27 October
+
+PR81/82 are released (3d3ffcb). The owner rejects oversized before-rental
+checklist, duplicate mode heading and black iframe canvas. Prior screenshots
+primarily showed the after-rental state and did not establish visual acceptance
+of the before-rental state. Compact typography and segmented mode control,
+shorter equivalent RU checks, reset/count in the panel header, explicit theme
+canvas and Safari text-size-adjust:100% (zoom remains enabled). Full document
+height now includes the centre link. No checklist storage IDs or functions reset.
+New regression assertions cover mode height, before-panel density, reset hit
+target above dock and nontransparent canvas; before screenshots in every existing
+language/theme/width case. Await final full CI and image review before main.
