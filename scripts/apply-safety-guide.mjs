@@ -50,7 +50,7 @@ const home=String.raw`
 <section class="home-panel" aria-labelledby="protection-title"><div class="panel-heading"><h2 id="protection-title">🛡 \${cityText('Не попадись','Stay scam-aware','รู้ทันกลโกง')}</h2><span>\${cityText('Листай →','Swipe →','เลื่อน →')}</span></div><div class="home-rail">
 <a id="homeSafety" class="home-tile safety-tile" href="#safety/bike-deposit"><span class="tile-symbol">🛵</span><strong>\${cityText('Перед арендой','Before renting','ก่อนเช่ารถ')}</strong><small>\${cityText('Байк и депозит: 5 проверок до оплаты','Bike deposits: 5 checks before paying','เงินมัดจำ: ตรวจ 5 ข้อก่อนจ่าย')}</small></a>
 <a class="home-tile" href="#safety/bike-deposit/after"><span class="tile-symbol">🧾</span><strong>\${cityText('Депозит удерживают?','Deposit withheld?','ถูกหักเงินมัดจำ?')}</strong><small>\${cityText('Что сохранить и куда обратиться','What to save and who to contact','เก็บหลักฐานอะไรและติดต่อใคร')}</small></a>
-<a class="home-tile" href="/ne-vedis/index.html?lang=\${lang}"><span class="tile-symbol">🔎</span><strong>\${cityText('Не Ведись','Stay Scam-Aware','รู้ทันกลโกง')}</strong><small>\${cityText('Тренажёр и база схем','Practice and scam patterns','แบบฝึกและรูปแบบกลโกง')}</small></a>
+<a class="home-tile" href="/ne-vedis/index.html?lang=\${lang}#check"><span class="tile-symbol">🔎</span><strong>\${cityText('Проверить','Check a place','ตรวจสอบ')}</strong><small>\${cityText('Прокат или школа','Rental or school','ร้านเช่าหรือโรงเรียน')}</small></a>
 </div></section>
 <section class="home-panel" aria-labelledby="places-title"><div class="panel-heading"><h2 id="places-title">🧭 \${cityText('Куда пойти','Where to go','ไปไหนดี')}</h2><span>\${cityText('Листай →','Swipe →','เลื่อน →')}</span></div><div class="home-rail places-rail">
 <button class="home-tile" type="button" data-spin="1"><span class="tile-symbol">✨</span><strong>\${cityText('Выбор дня','Daily pick','ตัวเลือกวันนี้')}</strong><small>\${cityText('50 идей без повторов','50 ideas, no repeats','50 ไอเดียไม่ซ้ำ')}</small></button>
@@ -72,7 +72,11 @@ writeFileSync('site/public/'+panelURL.slice(2),panelStyle[1]);
 html=html.replace(panelStyle[0],'<link rel="stylesheet" href="'+panelURL+'">');
 // One self-contained centre serves website visitors and links opened from Telegram.
 mkdirSync('site/public/ne-vedis',{recursive:true});
-writeFileSync('site/public/ne-vedis/index.html',readFileSync('safety/ne-vedis.html','utf8'));
+const reports=JSON.parse(readFileSync('content/business-reports.json','utf8'));
+for(const r of reports.records){if(!r.id||!['bikes','schools','visas'].includes(r.category))throw Error('Invalid business report');for(const l of ['ru','en','th'])if(!r.fact[l])throw Error('Missing report language');for(const address of [r.website,r.source.url,r.rating?.url].filter(Boolean))if(new URL(address).protocol!=='https:')throw Error('Unsafe report source');}
+const helpers=readFileSync('safety/resource-check.mjs','utf8').replace(/^export /gm,'');
+const checkUI=readFileSync('safety/resource-check-ui.mjs','utf8').replace('__BUSINESS_REPORTS__',()=>JSON.stringify(reports).replaceAll('<','\\u003c')).replace('__RESOURCE_CHECK_HELPERS__',()=>helpers);
+writeFileSync('site/public/ne-vedis/index.html',readFileSync('safety/ne-vedis.html','utf8').replace('__RESOURCE_CHECK_UI__',()=>checkUI));
 writeFileSync(page,html);
 const swPath='site/public/sw.js';let sw=readFileSync(swPath,'utf8').replace('const CORE = [','const CORE = ['+JSON.stringify(panelURL)+','+JSON.stringify('./ne-vedis/index.html')+','+JSON.stringify(warningURL)+',');
 // Keep centre navigation out of the shell cache (including Cloudflare clean URLs).

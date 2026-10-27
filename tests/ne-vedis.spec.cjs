@@ -35,5 +35,5 @@ test('centre works offline without replacing home shell cache',async({page,conte
  await page.addInitScript(()=>{localStorage.setItem('pok-lang','en');localStorage.setItem('pok-lang-set','1');localStorage.setItem('pok-install-seen','1')});
  await page.goto('/?okok_test=1');await page.evaluate(async()=>{await navigator.serviceWorker.register('/sw.js');await navigator.serviceWorker.ready});await page.waitForFunction(()=>!!navigator.serviceWorker.controller);
  await page.goto(entry+'?lang=en#catalog');await context.setOffline(true);await page.reload();await expect(page.locator('#catalog')).toBeVisible();await expect(page.locator('.trap')).toHaveCount(4);
- await page.goto('/?okok_test=1');await expect(page.locator('#homeSafety')).toBeVisible();await page.locator('a[href^="/ne-vedis/"]').click();await expect(page.locator('#question')).toBeVisible();
+ await page.goto('/?okok_test=1');await expect(page.locator('#homeSafety')).toBeVisible();await page.locator('a[href^="/ne-vedis/"]').click();await expect(page.locator('#check-input')).toBeVisible();await page.locator('#tab-trainer').click();await expect(page.locator('#question')).toBeVisible();
 });
