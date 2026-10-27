@@ -41,7 +41,7 @@ expect(await page.locator('.home-rail').first().evaluate(e=>e.scrollWidth>e.clie
 expect(await page.locator('#homeFiltersToggle').evaluate(e=>e.getBoundingClientRect().width)).toBeLessThan(200);
 await page.locator('a[href="#safety/bike-deposit/after"]').click();
 const f=page.frameLocator('#safetyGuide');await expect(f.locator('[data-mode="after"]')).toHaveAttribute('aria-pressed','true');
-await page.locator('nav.tab [data-tab="home"]').click();await page.locator('a[href="#safety/bike-deposit/quiz"]').click();await expect(f.locator('#answer')).toBeAttached();await expect(f.locator('details').first()).toHaveAttribute('open','');
+await page.locator('nav.tab [data-tab="home"]').click();await page.locator('a[href^="/ne-vedis/"]').click();await expect(page.locator('#question')).toBeVisible();await page.locator('#back').click();
 await page.locator('nav.tab [data-tab="home"]').click();await page.locator('[data-openmap]').click();await expect(page.locator('.pattaya-map')).toBeVisible();await page.locator('[data-openmap]').click();
 await page.locator('[data-spin]').click();await expect(page.locator('#spinMask')).toHaveClass(/on/);await page.locator('#spinClose').click();
 await page.locator('[data-tours]').click();await expect(page.locator('nav.tab [data-tab="list"]')).toHaveClass(/on/);
