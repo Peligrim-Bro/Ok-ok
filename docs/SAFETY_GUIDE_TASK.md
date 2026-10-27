@@ -63,3 +63,11 @@ Lighthouse retained. No regression tests, privacy checks or other budgets remove
 
 Current stage: local build/native checks pass. Await new focused browser tests,
 full browser suite, three Lighthouse runs, screenshot review and live verification.
+
+CI runtime follow-up: the runner spent ~7 minutes installing browsers/system
+dependencies before beginning the full suite. Ubuntu runner already supplies
+Chrome dependencies (Lighthouse passed). Install the Playwright headless shell
+only, run the unchanged full browser suite with two isolated workers, and allow
+20 minutes for full jobs. No test, assertion or scenario is omitted. Focused
+14 tests and payment coverage retain their normal single-worker config. Verify
+missing-library/parallel-state failures rather than masking them.
