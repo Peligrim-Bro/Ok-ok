@@ -11,6 +11,17 @@ await f.locator('#reset').click();await expect(f.locator('[data-check="0"]')).no
 for(const theme of ['light','dark']){
 if(await page.locator('html').getAttribute('data-theme')!==theme)await page.locator('#themeBtn').click();
 await expect(f.locator('html')).toHaveAttribute('data-theme',theme);
+// The reported failure was the BEFORE checklist, not only the after-rental panel.
+if(width<700){
+ const heights=await f.locator('[data-mode]').evaluateAll(ns=>ns.map(n=>n.getBoundingClientRect().height));
+ expect(Math.max(...heights)).toBeLessThanOrEqual(60);
+ expect(await f.locator('section[aria-labelledby="mode-title"]').evaluate(n=>n.getBoundingClientRect().height)).toBeLessThan(450);
+}
+expect(await f.locator('html').evaluate(n=>getComputedStyle(n).backgroundColor)).not.toBe('rgba(0, 0, 0, 0)');
+await page.screenshot({path:`quality-reports/safety-before-${lang}-${width}-${theme}.png`,fullPage:true});
+await f.locator('#reset').evaluate(n=>n.scrollIntoView({block:'center',behavior:'instant'}));
+expect(await page.locator('#safetyGuide').evaluate(frame=>{const r=frame.contentDocument.getElementById('reset').getBoundingClientRect(),f=frame.getBoundingClientRect(),x=f.left+r.left+r.width/2,y=f.top+r.top+r.height/2;return document.elementFromPoint(x,y)===frame;})).toBe(true);
+
 expect(await f.locator('body').evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
 await f.locator('[data-mode="after"]').click();await expect(f.locator('a[href="tel:1155"]')).toBeVisible();
 await f.locator('details').first().locator('summary').click();await f.locator('[data-answer="1"]').click();await expect(f.locator('#answer')).not.toBeEmpty();

@@ -143,26 +143,26 @@
     },
     {
       "id": "situation-safety-guide",
-      "status": "done",
-      "tags": [
-        "content",
-        "release",
-        "layout"
-      ],
-      "next": "Guide recovery and home carousels released in PR81 aa83f33; full CI and Cloudflare deploy 40485038507 passed. Actual srcdoc content observed; live cloud-browser clicks were inconclusive. Follow-up centre tracked separately.",
-      "sources": [
-        "docs/SAFETY_GUIDE_TASK.md"
-      ]
-    },
-    {
-      "id": "ne-vedis-centre",
       "status": "needs_verification",
       "tags": [
         "content",
         "release",
         "layout"
       ],
-      "next": "Owner-approved adaptation implemented: trainer and searchable schemes, no simulated scanner/XP/channel posts. Build passes; full browser/Lighthouse/screenshots and live release pending.",
+      "next": "Owner screenshot rejects oversized BEFORE layout after release. Compact correction implemented; new before-state screenshots and dock/reset assertions. Await build, full browser/Lighthouse, review and live verification.",
+      "sources": [
+        "docs/SAFETY_GUIDE_TASK.md"
+      ]
+    },
+    {
+      "id": "ne-vedis-centre",
+      "status": "done",
+      "tags": [
+        "content",
+        "release",
+        "layout"
+      ],
+      "next": "PR82 3d3ffcb released. CI40486467565: 200 browser tests and Lighthouse passed; Cloudflare40487379258 verified 11 checks. Live entry, answer and category+search verified. See PR82 completion record.",
       "sources": [
         "docs/NE_VEDIS_TASK.md"
       ]
