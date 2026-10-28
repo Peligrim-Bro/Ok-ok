@@ -274,3 +274,5 @@ Alpha-component measurement of forward-hand cell: main body bbox121,19..481,496;
 
 ## Original contextual dialogue
 Owner requests a livelier comic character. Add original short Russian lines for appliances/rest/walking and limited idle remarks, no copied dialogue/audio. No consecutive repeats within a context. Idle comments only in foreground and idle/rest, at most2 until next input, after18s quiet; never replace storage-error feedback. Action status remains a small caption; economy/reward messages retain priority. Text dialogue only; no automatic audio. Final verification pending.
+
+Verified dialogue application a8b30b2, final test source3a51d17: run40685939635/job122808179305 passed32 mobile scenarios/native/isolation checks and deployed Preview b8553f1b. Initial run caught a test observation window shorter than two idle intervals; corrected the observation period, not the dialogue cap. Live browser showed lamp line «Да будет свет. Счёт потом обсудим.» and walking line «Так. Важный обход владений.»; screenshot oki-dialogue-1793189859797.jpg reviewed. Text-only, no voice/audio added. Main unchanged. Full-site CI not claimed complete at this checkpoint.

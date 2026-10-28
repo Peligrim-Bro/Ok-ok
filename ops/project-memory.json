@@ -191,7 +191,7 @@
         "layout",
         "release"
       ],
-      "next": "Interaction polish d18c458 live Preview adf5db77.30 game+6 isolation/native checks passed,26 screenshots reviewed. Action atlas, SVG room/furniture, delayed effects, TV/fridge reactions and held rest poses. Live purchase/walking verified. Full CI40681938906 browser pending; other3 jobs passed. Main untouched; physical iPhone unclaimed.",
+      "next": "Original contextual dialogue live in Preview b8553f1b, final source3a51d17.32 mobile scenarios passed incl variation/reward priority/bounded idle. Live lamp/walk lines reviewed. Sprite bleed fix retained. Text only; main unchanged; full-site CI pending. Owner viewing next.",
       "sources": [
         "docs/OKI_HOUSE_TASK.md"
       ]
