@@ -48,12 +48,22 @@ jobs:
         run: npx playwright install --with-deps chromium webkit
       - name: Exercise touch layouts and game persistence in both engines
         run: npx playwright test --config=playwright.house.config.cjs --workers=2
+      - name: Publish isolated game Preview using existing project credentials
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'feature/oki-house-prototype-20261028'
+        shell: bash
+        env:
+          WORKERS_CI: '1'
+          WORKERS_CI_BRANCH: ${{ github.event.pull_request.head.ref }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: node scripts/portal-preview.mjs 2>&1 | tee quality-reports/oki-house-preview.log
       - uses: actions/upload-artifact@v7
         if: always()
         with:
           name: oki-house-mobile-reports
           path: |
             quality-reports/house-*.png
+            quality-reports/oki-house-preview.log
             playwright-house-report/
             test-results/
           retention-days: 14

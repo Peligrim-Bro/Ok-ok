@@ -111,3 +111,16 @@ Workers Builds - 2026-10-28 14:47. This is selection evidence, not proof of
 validity or successful Preview deployment. Retry the same guarded game branch
 with no application/configuration change and verify the new Preview outcome.
 No token value is requested, read or stored. Main remains untouched.
+
+## Existing GitHub credential route
+
+Cloudflare Builds retry1dacdc8 failed after owner selected a new token; its
+detailed log is not available through GitHub. Do not assume the new token
+fixed the separate Preview trigger. Use the already configured GitHub project
+credentials in the existing Oki House check workflow, after all20 mobile tests.
+The publish step requires pull_request + same repository + exact game branch;
+forks and unrelated branches cannot receive credentials or publish. It invokes
+only the guarded static Preview launcher, not production deploy. Existing
+CLOUDFLARE_API_TOKEN/ACCOUNT_ID secrets remain masked and are never read by the
+agent. Retain CLI output in the existing report artifact for diagnosis.
+Actual Preview result pending.

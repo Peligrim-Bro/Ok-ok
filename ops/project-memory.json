@@ -185,13 +185,13 @@
     },
     {
       "id": "oki-house-prototype",
-      "status": "needs_verification",
+      "status": "in_progress",
       "tags": [
         "game",
         "layout",
         "release"
       ],
-      "next": "IMG_0356: owner selected newly created Workers Builds token28 Oct14:47. Retry same isolated static game Preview; source43936aa uses only Builds-selected credential,6 isolation tests pass. Verify actual URL/content before claiming ready. Main untouched.",
+      "next": "Renewed Cloudflare Builds retry1dacdc8 still failed; new log unknown. Existing house check workflow now publishes isolated static Preview after20 mobile tests using already-configured GitHub project credentials, guarded to same-repo exact branch. No production deploy or new permissions. Observe actual outcome and URL.",
       "sources": [
         "docs/OKI_HOUSE_TASK.md"
       ]
