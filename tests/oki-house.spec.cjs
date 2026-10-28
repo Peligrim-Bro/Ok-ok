@@ -6,6 +6,7 @@ async function open(page){
  await page.goto('/oki-house.html');
  await expect(page.locator('#oki img')).toBeVisible();
  expect(await page.locator('#oki img').evaluate(n=>n.complete&&n.naturalWidth>0)).toBe(true);
+ expect(await page.evaluate(async()=>{const image=new Image();image.src='./oki-walk-v1.webp';await image.decode();return image.naturalWidth>0&&image.naturalHeight>0;})).toBe(true);
  expect(errors).toEqual([]);
 }
 async function tap(page,selector){await page.locator(selector).scrollIntoViewIfNeeded();await page.locator(selector).tap();}
@@ -91,4 +92,71 @@ test('invalid save recovers and blocked storage gives visible feedback',async({p
  await open(page);await expect(page.locator('#balance')).toHaveText('100');
  await page.evaluate(()=>{Storage.prototype.setItem=()=>{throw new Error('blocked storage');};});
  await tap(page,'#daily');await expect(page.locator('#speech')).toContainText('Не удалось сохранить');
+});
+
+async function frozenHouse(page,owned=['lamp']){
+ await page.setViewportSize({width:768,height:1024});
+ await page.clock.install({time:new Date('2026-10-28T10:00:00Z')});
+ await page.clock.pauseAt(new Date('2026-10-28T10:00:01Z'));
+ await page.addInitScript(({key,owned})=>localStorage.setItem(key,JSON.stringify({coins:50,owned})),{key,owned});
+ await open(page);
+ for(let i=0;i<3;i++)await tap(page,'#left');
+ await page.clock.runFor(6000);
+}
+async function okiBox(page){return page.locator('#oki').boundingBox();}
+test('approach has steady steps and lamp interaction waits for arrival',async({page},info)=>{
+ await frozenHouse(page);
+ const start=await okiBox(page);await tap(page,'[data-id=lamp]');
+ await expect(page.locator('#oki')).toHaveAttribute('data-motion','walking');
+ await expect(page.locator('[data-id=lamp]')).not.toHaveClass(/lit/);
+ await page.clock.runFor(240);const first=await okiBox(page);
+ expect(first.x-start.x).toBeGreaterThan(10);expect(first.x-start.x).toBeLessThan(40);
+ const pose=await page.locator('.walk-sprite').evaluate(n=>getComputedStyle(n).backgroundPosition);
+ await page.screenshot({path:`quality-reports/house-${info.project.name}-walking.png`,fullPage:true});
+ await page.clock.runFor(240);const second=await okiBox(page);
+ expect(second.x-first.x).toBeGreaterThan(10);expect(second.x-first.x).toBeLessThan(40);
+ expect(Math.abs((first.x-start.x)-(second.x-first.x))).toBeLessThan(5);
+ expect(await page.locator('.walk-sprite').evaluate(n=>getComputedStyle(n).backgroundPosition)).not.toBe(pose);
+ expect(second.y).toBeCloseTo(start.y,1);
+ await expect(page.locator('#oki')).toHaveAttribute('data-facing','right');
+ await expect(page.locator('[data-id=lamp]')).not.toHaveClass(/lit/);
+ await expect(page.locator('#speech')).toContainText('Иду');
+ await page.clock.runFor(4400);
+ await expect(page.locator('[data-id=lamp]')).toHaveClass(/lit/);
+ await expect(page.locator('#speech')).toContainText('включает лампу');
+ expect(await page.locator('#oki').getAttribute('data-motion')).not.toBe('walking');
+ const end=await okiBox(page),lamp=await page.locator('[data-id=lamp]').boundingBox();
+ expect(Math.abs(end.x+end.width/2-lamp.x-lamp.width/2)).toBeLessThan(2);
+ await insideRoom(page);expect((await state(page)).coins).toBe(50);
+});
+test('changing destination and manual walking cancel the previous interaction',async({page})=>{
+ await frozenHouse(page,['bed','lamp']);
+ await tap(page,'[data-id=lamp]');await page.clock.runFor(450);
+ const before=await okiBox(page);await tap(page,'[data-id=bed]');await page.clock.runFor(200);
+ await expect(page.locator('#oki')).toHaveAttribute('data-facing','left');
+ expect((await okiBox(page)).x).toBeLessThan(before.x);
+ await page.clock.runFor(6000);
+ await expect(page.locator('#speech')).toContainText('кровати');
+ await expect(page.locator('[data-id=lamp]')).not.toHaveClass(/lit/);
+ await tap(page,'[data-id=lamp]');await page.clock.runFor(200);await tap(page,'#left');await page.clock.runFor(6000);
+ await expect(page.locator('[data-id=lamp]')).not.toHaveClass(/lit/);
+ await expect(page.locator('#speech')).not.toContainText('лампу');
+ await insideRoom(page);
+});
+test('resize and shop rendering keep the pending approach attached to the object',async({page})=>{
+ await frozenHouse(page);await tap(page,'[data-id=lamp]');await page.clock.runFor(250);
+ await page.setViewportSize({width:320,height:568});await tap(page,'#daily');
+ await page.clock.runFor(6000);
+ await expect(page.locator('[data-id=lamp]')).toHaveClass(/lit/);await insideRoom(page);
+ const end=await okiBox(page),lamp=await page.locator('[data-id=lamp]').boundingBox();
+ expect(Math.abs(end.x+end.width/2-lamp.x-lamp.width/2)).toBeLessThan(2);
+ expect((await state(page)).coins).toBe(60);
+});
+test('reset cancels queued actions and restores the starting position',async({page})=>{
+ await frozenHouse(page);await tap(page,'[data-id=lamp]');await page.clock.runFor(250);
+ page.once('dialog',d=>d.accept());await tap(page,'#reset');const start=await okiBox(page);
+ await page.clock.runFor(6000);
+ await expect(page.locator('#oki')).toHaveAttribute('data-motion','idle');await expect(page.locator('.object')).toHaveCount(0);
+ await expect(page.locator('#speech')).toHaveText('Начинаем сначала!');
+ expect((await okiBox(page)).x).toBeCloseTo(start.x,1);expect((await state(page)).coins).toBe(100);await insideRoom(page);
 });

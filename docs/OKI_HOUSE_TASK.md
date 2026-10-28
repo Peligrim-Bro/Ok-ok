@@ -195,3 +195,36 @@ fixture. Live screenshot reviewed; only the browser test's local balance changed
 Existing user economy/save key remain unchanged. Payment/safety/Lighthouse jobs
 also passed; full-site browser job remains running at this checkpoint.
 No production publication. Physical iPhone acceptance is not claimed.
+
+
+## Walking controller — owner approved adaptation of the open source example
+
+Trigger: tapping furniture previously changed x and immediately started the
+interaction, with a fixed0.7s CSS slide. The walking state was never entered.
+Adapt the approach/arrival/action model and bounded stepping from dntrnk's
+MIT-licensed PSP Woody controller to browser JavaScript; attribution and full
+license are retained in THIRD_PARTY_NOTICES.md and the delivered inline code.
+No THQ Nordic assets are imported, and this is not a full PSP engine port.
+
+Use elapsed-time requestAnimationFrame movement at a character-scaled speed,
+with distance-driven six-frame walk animation and left/right facing. Determine
+approach points from actual furniture DOM bounds. Stop before starting an action;
+new destinations/manual movement cancel the old action. Resize recomputes the
+object goal; hidden-tab resume avoids a large time jump; reset cancels pending
+movement/timers and restores the start. Lamp light toggles only after arrival.
+Keep prices, coin rewards, purchased IDs and the v2 save key unchanged.
+
+Walk atlas: built-in imagegen, reference prototypes/assets/oki-game-v2.webp.
+Prompt: six equally sized right-facing walk frames in a3x2 transparent atlas,
+preserve pink/cyan glass identity, distinct hands/feet and fixed baseline.
+A second background extraction pass removes surrounding haze. Delivered as
+oki-walk-v1.webp1152x768 with alpha,224358 bytes. Runtime cell is square and
+keeps the source aspect ratio. Static Preview allowlist expands to exactly3
+assets; production bindings/routes remain excluded.
+
+Added deterministic browser checks for partial travel/steady speed, changing
+walk frames, floor height, arrival before lamp activation, target replacement,
+manual cancellation, responsive retargeting during a reward render and reset.
+Existing layout/economy/storage/furniture/reduced-motion coverage is retained.
+Local build/check and6 isolation tests passed before adding attribution text;
+final native/browser CI and live Preview review pending. Main remains untouched.

@@ -185,13 +185,13 @@
     },
     {
       "id": "oki-house-prototype",
-      "status": "needs_verification",
+      "status": "in_progress",
       "tags": [
         "game",
         "layout",
         "release"
       ],
-      "next": "Visual correction785e40c live in Preview: reference-based transparent WebP with distinct hands/feet, mounted wall sconce, removed no-real-payments copy. Run40654997032 passed native+6 isolation+20 mobile tests/deploy98206b7f.14 screenshots and live sprite/lamp purchase reviewed. Full-site browser job running; payment/safety/Lighthouse pass. Ready for owner visual acceptance; main untouched.",
+      "next": "Owner approved movement adaptation from MIT PSP recreation. Approach/arrival/action controller, timed walking atlas, cancellation/resize/reset and arrival-only lamp light implemented. Economy/save key unchanged. Six isolation tests and native build/check passed; final browser CI and live Preview review pending. See stable task note; keep off main.",
       "sources": [
         "docs/OKI_HOUSE_TASK.md"
       ]
