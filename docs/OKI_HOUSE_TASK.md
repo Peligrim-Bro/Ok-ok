@@ -103,3 +103,11 @@ Six offline tests pass, including stale portal token isolation. No credential
 values, permissions or account settings changed. If the selected Builds token
 also fails, actual Build settings need correction; do not guess its validity.
 Actual Preview outcome pending. Main remains untouched.
+
+## Owner renewed Builds credential — IMG_0356
+
+Owner confirms completion; screenshot shows selected API token named
+Workers Builds - 2026-10-28 14:47. This is selection evidence, not proof of
+validity or successful Preview deployment. Retry the same guarded game branch
+with no application/configuration change and verify the new Preview outcome.
+No token value is requested, read or stored. Main remains untouched.
