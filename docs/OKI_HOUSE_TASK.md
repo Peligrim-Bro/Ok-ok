@@ -124,3 +124,22 @@ only the guarded static Preview launcher, not production deploy. Existing
 CLOUDFLARE_API_TOKEN/ACCOUNT_ID secrets remain masked and are never read by the
 agent. Retain CLI output in the existing report artifact for diagnosis.
 Actual Preview result pending.
+
+## Verified working Preview
+
+Source2b2f60c6ce1b9564913339f47955c26867159f89, GitHub run40652801923,
+job122696626583: native build/check,6 isolation tests and20 Chromium/WebKit
+touch tests succeeded; isolated Wrangler preview upload succeeded.
+Preview URL:https://feature-oki-house-prototype-20261028-ok-ok.timurhansolo.workers.dev
+Unique deployment:https://29b48295-ok-ok.timurhansolo.workers.dev
+Actual cloud-browser visit redirected to /oki-house.html, displayed the game,
+100 coins, furniture shop and controls. Sprite completed loading with positive
+natural dimensions; live screenshot visually reviewed. No sign-in required.
+Only2 game assets uploaded; production backend and state remain separate.
+
+Working route: existing GitHub project credential via the guarded house check
+workflow. Cloudflare's separate Builds trigger still reports failure and is
+not claimed repaired; it no longer blocks obtaining a verified game Preview.
+No further account/token changes requested. Main remains unchanged; standalone
+prototype is ready for owner viewing, not a main release. Physical iPhone testing
+remains unclaimed. Further evidence-only commits do not change this tested code.
