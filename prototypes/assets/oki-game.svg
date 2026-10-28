@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 220" role="img" aria-label="Оки — игровой прототип">
+<defs><radialGradient id="skin" cx="36%" cy="22%" r="78%"><stop stop-color="#ffe0ff"/><stop offset=".42" stop-color="#f999ef"/><stop offset=".76" stop-color="#a15dea"/><stop offset="1" stop-color="#44c9f9"/></radialGradient><linearGradient id="body" x2="1" y2="1"><stop stop-color="#fd91f0"/><stop offset=".5" stop-color="#7e65e9"/><stop offset="1" stop-color="#39d8f7"/></linearGradient><filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="3"/></filter></defs>
+<g opacity=".55" filter="url(#glow)" fill="none" stroke="#fa73f9" stroke-width="9"><ellipse cx="80" cy="73" rx="58" ry="60"/><path d="M52 153L37 186M109 153L122 186"/></g>
+<g stroke="#7b4ec6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M58 151L50 190L40 202L61 206L73 171M100 151L108 190L99 204L123 205L117 187L109 151" fill="url(#body)"/>
+<path d="M51 146L28 157L18 142L9 150L18 174L61 167M108 146L132 159L143 142L152 152L146 174L104 169" fill="url(#body)"/>
+<path d="M57 130Q80 117 103 130L117 168Q80 185 43 168Z" fill="url(#body)"/>
+<ellipse cx="80" cy="75" rx="57" ry="59" fill="url(#skin)"/>
+<ellipse cx="23" cy="82" rx="13" ry="18" fill="url(#skin)"/><ellipse cx="137" cy="82" rx="13" ry="18" fill="url(#skin)"/>
+<path d="M72 21Q57 1 80 3Q104 4 92 26Q84 38 67 28" fill="url(#skin)"/>
+</g>
+<ellipse cx="56" cy="78" rx="15" ry="21" fill="#fff"/><ellipse cx="104" cy="78" rx="15" ry="21" fill="#fff"/><ellipse cx="59" cy="81" rx="10" ry="15" fill="#33b9f6"/><ellipse cx="101" cy="81" rx="10" ry="15" fill="#33b9f6"/><ellipse cx="61" cy="83" rx="5" ry="10" fill="#12366f"/><ellipse cx="99" cy="83" rx="5" ry="10" fill="#12366f"/><circle cx="64" cy="76" r="4" fill="#fff"/><circle cx="102" cy="76" r="4" fill="#fff"/>
+<ellipse cx="39" cy="103" rx="14" ry="10" fill="#ff61ad" opacity=".88"/><ellipse cx="121" cy="103" rx="14" ry="10" fill="#ff61ad" opacity=".88"/><ellipse cx="80" cy="98" rx="9" ry="7" fill="#ff76c5" stroke="#fff" stroke-width="2"/><path d="M66 111Q80 128 94 111Q80 118 66 111" fill="#722657" stroke="#ffecff" stroke-width="2"/><circle cx="80" cy="149" r="13" fill="#30a5ed" stroke="#fff" stroke-width="2"/><text x="80" y="154" fill="white" font-size="10" text-anchor="middle" font-family="sans-serif" font-weight="bold">OK</text>
+</svg>
