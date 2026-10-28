@@ -177,3 +177,18 @@ test('furniture has visible poses and appliance reactions',async({page},info)=>{
  }
  expect((await state(page)).coins).toBe(50);
 });
+test('Oki comments match the action, vary, and respect reward feedback',async({page})=>{
+ await frozenHouse(page,['plant','sofa']);
+ const comments=[];
+ for(let repeat=0;repeat<2;repeat++){
+  await tap(page,'[data-id=plant]');
+  for(let i=0;i<80;i++){await page.clock.runFor(100);if(await page.locator('#speech').getAttribute('data-dialogue')==='plant')break;}
+  await expect(page.locator('#speech')).toHaveAttribute('data-dialogue','plant');
+  comments.push(await page.locator('#speech').innerText());
+ }
+ expect(comments[0]).not.toBe(comments[1]);
+ await tap(page,'#daily');await page.clock.runFor(5000);await expect(page.locator('#speech')).toContainText('Ежедневная награда');
+ await page.clock.runFor(40000);await expect(page.locator('#speech')).toHaveAttribute('data-dialogue','idle');
+ const quiet=await page.locator('#speech').innerText();await page.clock.runFor(40000);expect(await page.locator('#speech').innerText()).toBe(quiet);
+ expect((await state(page)).coins).toBe(60);
+});
