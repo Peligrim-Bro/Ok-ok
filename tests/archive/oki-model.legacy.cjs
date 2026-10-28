@@ -1,3 +1,4 @@
+// Retired with the old pet by owner decision28 October; covered by oki-primary.spec.cjs.
 const {test,expect}=require('@playwright/test');
 async function modelPage(page,gender='boy',stage=3){
  await page.emulateMedia({reducedMotion:'reduce'});

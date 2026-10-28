@@ -1689,6 +1689,7 @@ await import('./scripts/apply-oki-absence.mjs');
 await import('./scripts/apply-oki-place-guide.mjs');
 await import('./scripts/apply-brand-motto.mjs');
 await import('./scripts/apply-safety-guide.mjs');
+await import('./scripts/apply-oki-house-primary.mjs');
 await import('./scripts/finalize-release-cache.mjs');
 
 // Owner paused the startup portal on 2026-10-17 pending refinement.
@@ -1746,3 +1747,5 @@ if(startupSettings.portalEnabled){
  copyFileSync(source,target);
  for(const name of ['oki-game-v2.webp','oki-walk-v1.webp','oki-actions-v1.webp'])copyFileSync('prototypes/assets/'+name,'site/public/'+name);
 }
+
+await import('./scripts/build-oki-house-locales.mjs');

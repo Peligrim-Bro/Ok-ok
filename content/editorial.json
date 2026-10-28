@@ -1,91 +1,91 @@
 {
-  "verifiedAt": "2026-10-28",
+  "verifiedAt": "2026-10-29",
   "news": [
     {
       "category": "world",
-      "when": "27.10 · 🌍",
-      "href": "https://wmo.int/news/media-centre/greenhouse-gas-levels-once-again-reach-record-high",
-      "publishedAt": "2026-10-27",
+      "when": "28.10 · 🌍",
+      "href": "https://www.who.int/news/item/28-10-2026-climate-change-is-a-growing-health-emergency--lancet-countdown-warns",
+      "publishedAt": "2026-10-28",
       "nonWar": true,
-      "ru": "ВМО: концентрации CO₂, метана и закиси азота обновили рекорды в 2025 году.",
-      "en": "WMO says CO₂, methane and nitrous oxide concentrations hit records in 2025.",
-      "th": "WMO ระบุว่า CO₂ มีเทน และไนตรัสออกไซด์ทำสถิติสูงสุดในปี 2025",
+      "ru": "Отчёт: климатический вред здоровью растёт быстрее мер защиты.",
+      "en": "Report: climate-related health harms are outpacing action.",
+      "th": "รายงานชี้ผลกระทบสุขภาพจากสภาพภูมิอากาศเร็วกว่าการรับมือ",
       "sources": [
-        "https://wmo.int/news/media-centre/greenhouse-gas-levels-once-again-reach-record-high",
-        "https://www.reuters.com/sustainability/cop/greenhouse-gases-hit-record-highs-further-rise-expected-with-el-nio-un-weather-2026-10-27/"
+        "https://www.who.int/news/item/28-10-2026-climate-change-is-a-growing-health-emergency--lancet-countdown-warns",
+        "https://lancetcountdown.org/2026-report/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-28T06:38:00+07:00",
-        "sourceUrl": "https://wmo.int/news/media-centre/greenhouse-gas-levels-once-again-reach-record-high",
-        "summary": "No public counters; WMO and Reuters coverage shows reach, not a global rank."
+        "observedAt": "2026-10-29T06:07:00+07:00",
+        "sourceUrl": "https://www.who.int/news/item/28-10-2026-climate-change-is-a-growing-health-emergency--lancet-countdown-warns",
+        "summary": "No public counters; WHO and Lancet Countdown coverage shows reach, not a global rank."
       }
     },
     {
       "category": "thailand",
-      "when": "27.10 · 🇹🇭",
-      "href": "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-and-variable-weather-in-upper-thailand-no-9-281-2026",
-      "publishedAt": "2026-10-27",
-      "ru": "TMD предупреждает на 27–28 октября о сильных дождях, паводках и оползнях на юге.",
-      "en": "TMD warns of heavy southern rain, flash floods and landslides on 27–28 October.",
-      "th": "TMD เตือน 27–28 ตุลาคม ภาคใต้เสี่ยงฝนหนัก น้ำท่วม และดินถล่ม",
+      "when": "28.10 · 🇹🇭",
+      "href": "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-and-variable-weather-in-upper-thailand-no-10-282-2026",
+      "publishedAt": "2026-10-28",
+      "ru": "TMD предупредил о ливнях, паводках, оползнях и волнах выше двух метров.",
+      "en": "TMD warned of heavy rain, floods, landslides and waves above two metres.",
+      "th": "TMD เตือนฝนหนัก น้ำท่วม ดินถล่ม และคลื่นสูงเกิน 2 เมตร",
       "sources": [
-        "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-and-variable-weather-in-upper-thailand-no-9-281-2026"
+        "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-and-variable-weather-in-upper-thailand-no-10-282-2026"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-28T06:38:00+07:00",
-        "sourceUrl": "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-and-variable-weather-in-upper-thailand-no-9-281-2026",
+        "observedAt": "2026-10-29T06:07:00+07:00",
+        "sourceUrl": "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-and-variable-weather-in-upper-thailand-no-10-282-2026",
         "summary": "No public counters or national rank; current official advisory."
       }
     },
     {
       "category": "thailand",
-      "when": "27.10 · 🇹🇭",
-      "href": "https://thailand.prd.go.th/en/content/category/detail/id/52/iid/554820",
-      "publishedAt": "2026-10-27",
-      "ru": "В Чонбури и Районге одобрены четыре зоны EEC для технологичных отраслей.",
-      "en": "Four EEC zones in Chon Buri and Rayong were approved for advanced industries.",
-      "th": "อนุมัติเขต EEC ใหม่ 4 แห่งในชลบุรีและระยอง รองรับอุตสาหกรรมเทคโนโลยี",
+      "when": "28.10 · 🇹🇭",
+      "href": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/555007",
+      "publishedAt": "2026-10-28",
+      "ru": "Таиланд и Малайзия ускорят пограничные транспортные, торговые и безопасностные проекты.",
+      "en": "Thailand and Malaysia will advance border transport, trade and security projects.",
+      "th": "ไทยและมาเลเซียจะเร่งโครงการคมนาคม การค้า และความมั่นคงชายแดน",
       "sources": [
-        "https://thailand.prd.go.th/en/content/category/detail/id/52/iid/554820"
+        "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/555007"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-28T06:38:00+07:00",
-        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/52/iid/554820",
-        "summary": "PRD: 86 views; no comparable comments or national rank."
+        "observedAt": "2026-10-29T06:07:00+07:00",
+        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/555007",
+        "summary": "PRD: 98 views; no comparable comments or national rank."
       }
     },
     {
       "category": "pattaya",
       "when": "28.10 · Pattaya",
-      "href": "https://www.pattayamail.com/latestnews/news/pattaya-bikini-beach-race-marks-10th-anniversary-with-5000-runners-on-halloween-569995",
+      "href": "https://www.pattayamail.com/news/pattaya-residents-ask-why-illegal-beach-mat-rentals-keep-returning-daily-570006",
       "publishedAt": "2026-10-28",
-      "ru": "Паттайя готовит пляжный забег 31 октября и временно освобождает часть пляжа.",
-      "en": "Pattaya is preparing a 31 October beach race and temporary beach clearance.",
-      "th": "พัทยาเตรียมงานวิ่งชายหาด 31 ตุลาคม และเคลียร์พื้นที่ชั่วคราว",
+      "ru": "В Паттайе изымают предположительно сдаваемые без разрешения пляжные коврики и стулья.",
+      "en": "Pattaya is seizing beach mats and chairs allegedly rented without permission.",
+      "th": "พัทยายึดเสื่อและเก้าอี้ชายหาดที่ถูกกล่าวหาว่าให้เช่าโดยไม่ได้รับอนุญาต",
       "sources": [
-        "https://www.pattayamail.com/latestnews/news/pattaya-bikini-beach-race-marks-10th-anniversary-with-5000-runners-on-halloween-569995"
+        "https://www.pattayamail.com/news/pattaya-residents-ask-why-illegal-beach-mat-rentals-keep-returning-daily-570006"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-28T06:38:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/latestnews/news/pattaya-bikini-beach-race-marks-10th-anniversary-with-5000-runners-on-halloween-569995",
-        "summary": "Pattaya Mail: 190 views/0 comments versus 189/0 for the Koh Larn safety report; not a city rank."
+        "observedAt": "2026-10-29T06:07:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/pattaya-residents-ask-why-illegal-beach-mat-rentals-keep-returning-daily-570006",
+        "summary": "Pattaya Mail: 1,328 views/0 comments versus 507/0 for the marathon traffic report; not a city rank."
       }
     },
     {
       "category": "pattaya",
       "when": "28.10 · Pattaya",
-      "href": "https://www.pattayamail.com/latestnews/news/watch-your-step-wear-your-life-jacket-pattaya-tourist-police-remind-koh-larn-visitors-569964",
+      "href": "https://www.pattayamail.com/news/pattaya-reviews-marathon-traffic-plan-to-reduce-disruption-for-residents-and-businesses-569992",
       "publishedAt": "2026-10-28",
-      "ru": "Туристическая полиция проверяет спасжилеты на лодках до Ко Лана и советует следить за погодой.",
-      "en": "Tourist Police check life jackets for Koh Larn boats and advise watching the weather.",
-      "th": "ตำรวจท่องเที่ยวตรวจเสื้อชูชีพเรือไปเกาะล้าน และแนะให้ดูสภาพอากาศ",
+      "ru": "Паттайя пересматривает движение марафона, чтобы уменьшить помехи и сохранить экстренный проезд.",
+      "en": "Pattaya is reviewing marathon traffic to reduce disruption and keep emergency access.",
+      "th": "พัทยาทบทวนจราจรมาราธอน เพื่อลดผลกระทบและเปิดทางฉุกเฉิน",
       "sources": [
-        "https://www.pattayamail.com/latestnews/news/watch-your-step-wear-your-life-jacket-pattaya-tourist-police-remind-koh-larn-visitors-569964"
+        "https://www.pattayamail.com/news/pattaya-reviews-marathon-traffic-plan-to-reduce-disruption-for-residents-and-businesses-569992"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-28T06:38:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/latestnews/news/watch-your-step-wear-your-life-jacket-pattaya-tourist-police-remind-koh-larn-visitors-569964",
-        "summary": "Pattaya Mail: 189 views/0 comments versus 190/0 for the beach-race report; not a city rank."
+        "observedAt": "2026-10-29T06:07:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/pattaya-reviews-marathon-traffic-plan-to-reduce-disruption-for-residents-and-businesses-569992",
+        "summary": "Pattaya Mail: 507 views/0 comments versus 1,328/0 for the beach-rental report; not a city rank."
       }
     }
   ],
@@ -253,5 +253,5 @@
       "verifiedAt": "2026-10-28"
     }
   ],
-  "selection": "Reviewed 2026-10-28 Asia/Bangkok: 1 world, 2 Thailand, 2 Pattaya; sources 27–28 October. Evidence limits recorded. Added the official 27 October fake-CIB recovery-page warning; six earlier dates unchanged. No Telegram sending."
+  "selection": "Reviewed 2026-10-29 Asia/Bangkok: 1 world, 2 Thailand, 2 Pattaya; sources 28 October. Evidence limits recorded. The 28 October fake-NACC page repeats the active recovery-page pattern, so seven scam cards and dates stay unchanged. No Telegram sending."
 }

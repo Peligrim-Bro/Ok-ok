@@ -205,7 +205,7 @@
         "layout",
         "release"
       ],
-      "next": "Owner approves House as primary OKI replacement and retires old3D pet. Dependency/performance baseline recorded; primary-entry migration, RU/EN/TH, stored-data preservation, Tetris dependencies and full release checks still required. Main e89ec097 unchanged; do not claim old3D removed yet.",
+      "next": "Owner requests clean-start replacement, no legacy currency/care/Tetris migration. Primary modal/localized House and retirement of3D implemented locally; native build/check pass. Final browser/CI, merge current editorial main, then release verification pending.",
       "sources": [
         "docs/OKI_HOUSE_TASK.md"
       ]

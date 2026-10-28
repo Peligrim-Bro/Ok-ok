@@ -1,3 +1,4 @@
+// Retired with the old pet by owner decision28 October; covered by oki-primary.spec.cjs.
 const {test,expect}=require('@playwright/test');
 const now=Date.parse('2026-10-22T10:00:00Z'),week=7*86400000;
 const pet={version:2,gender:'boy',careDays:190,careDay:'2026-10-22',crystals:231,owned:['neon','aurora'],skin:'aurora',shopUnlocked:true,quest:{feed:true,pet:true,play:true},food:70,mood:70,energy:70,hygiene:70,activity:70,last:now,giftDay:'2026-10-22',reminders:false};
