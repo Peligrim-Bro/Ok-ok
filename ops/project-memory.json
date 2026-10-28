@@ -185,13 +185,13 @@
     },
     {
       "id": "oki-house-prototype",
-      "status": "blocked",
+      "status": "in_progress",
       "tags": [
         "game",
         "layout",
         "release"
       ],
-      "next": "PR88 source31eb1b1:20/20 Chromium+WebKit touch tests,233/233 full browser tests, native/payment/safety checks,3 Lighthouse and Halloween smoke passed.14 game screenshots reviewed. Branch Cloudflare preview check fails without exposed log details; physical iPhone not available. Inspect authenticated build logs before any publication. Main e89ec097 unchanged. See docs/OKI_HOUSE_TASK.md for exact runs and existing unrelated Telegram test count issue.",
+      "next": "Owner IMG_0352 confirms Preview invokes missing scripts/portal-preview.mjs after successful build. Add guarded compatibility entrypoint + isolated static-only Oki House Preview;5 offline isolation tests pass. Native build/check and Cloudflare Preview verification pending. Existing application QA20+233 and3 Lighthouse passed; no main publication.",
       "sources": [
         "docs/OKI_HOUSE_TASK.md"
       ]

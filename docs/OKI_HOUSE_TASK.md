@@ -72,3 +72,22 @@ Next: inspect authenticated Cloudflare preview build logs, fix a demonstrated
 issue if any, then verify an actual preview. Keep draft/off main until the
 remaining preview/device acceptance is resolved. Later evidence-only edits to
 this note and project-memory do not change the tested application source.
+
+## Confirmed preview failure and fix — owner screenshot 28 October
+
+IMG_0352 shows build success followed by dashboard deploy command
+`node scripts/portal-preview.mjs`, which fails MODULE_NOT_FOUND because the old
+portal launcher exists only on experiment/portal-launch. This is a confirmed
+missing entrypoint, not an Apple/Google authentication or application-build error.
+
+Add that compatibility entrypoint on the existing game branch, guarded to
+Workers CI and the exact Oki House branch/account. It packages only the built
+oki-house.html and oki-game.svg, and invokes pinned Wrangler4.151.3 preview.
+A separate static-only preview handler serves those files; root redirects to the
+game. No production Worker imports, DO namespaces, cron, routes or backend
+secrets are included in its configuration. APIs and non-game files return404,
+mutations405. Production config/workflows remain unchanged. Existing configured
+Preview credential is used only at runtime; no credential is read or committed.
+Five offline isolation/guard/HTTP tests and native build/check pass. Actual
+Cloudflare Preview outcome pending. Existing game233+20 tests remain unchanged.
+No Cloudflare dashboard edit is required for the confirmed missing command.
