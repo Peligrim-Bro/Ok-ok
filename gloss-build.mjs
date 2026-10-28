@@ -1742,7 +1742,7 @@ if(startupSettings.portalEnabled){
  const source='prototypes/oki-house.html';
  const target='site/public/oki-house.html';
  const html=readFileSync(source,'utf8');
- if(!html.includes('okok-oki-house-v1')||!html.includes('<title>Дом Оки'))throw new Error('Oki House prototype invalid');
+ if(!html.includes('okok-oki-house-v2')||!html.includes('<title>Дом Оки'))throw new Error('Oki House prototype invalid');
  copyFileSync(source,target);
  copyFileSync('prototypes/assets/oki-game.svg','site/public/oki-game.svg');
 }

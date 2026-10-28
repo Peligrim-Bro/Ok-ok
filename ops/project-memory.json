@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "project": "OK-OK.click",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "decisions": [
     {
       "id": "hosting",
@@ -181,6 +181,19 @@
       "sources": [
         "docs/RESOURCE_CHECK_TASK.md",
         "content/business-reports.json"
+      ]
+    },
+    {
+      "id": "oki-house-prototype",
+      "status": "needs_verification",
+      "tags": [
+        "game",
+        "layout",
+        "release"
+      ],
+      "next": "PR88 test branch: fixed reproduced v1/v2 build failure and mobile bounds/touch/storage feedback. Native build passes; local Chrome download truncated. Run/review dedicated Chromium+WebKit touch CI and full existing quality/Lighthouse. No main release or physical iPhone test claimed.",
+      "sources": [
+        "docs/OKI_HOUSE_TASK.md"
       ]
     }
   ]
