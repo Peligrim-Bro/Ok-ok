@@ -267,4 +267,6 @@ Action atlas: built-in imagegen from approved standing reference, four poses (re
 
 
 ## Owner-reported sprite edge bleed — IMG_0359
-Owner likes the scene but sees detached hand fragments during actions. Confirmed source atlas overlap: curled-sleep feet extend into the forward-hand cell, with a thin upper-row foot strip at its top. Clip the transparent action-cell margin1% top/3% left and disable texture repeat. This preserves the current identity, scene, economy and atlas; no new generation. Native/mobile and screenshot verification pending.
+Owner likes the scene but sees detached hand fragments during actions. Confirmed source atlas overlap: curled-sleep feet extend into the forward-hand cell, with a thin upper-row foot strip at its top. Clip the transparent action-cell margin2.3% top/5% left and disable texture repeat. This preserves the current identity, scene, economy and atlas; no new generation. Native/mobile and screenshot verification pending.
+
+Alpha-component measurement of forward-hand cell: main body bbox121,19..481,496; unwanted fragments x0..21 and y0..9. The selected margins exceed those fragments while staying outside the main silhouette.
