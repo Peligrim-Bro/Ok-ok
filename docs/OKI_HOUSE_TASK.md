@@ -228,3 +228,30 @@ manual cancellation, responsive retargeting during a reward render and reset.
 Existing layout/economy/storage/furniture/reduced-motion coverage is retained.
 Local build/check and6 isolation tests passed before adding attribution text;
 final native/browser CI and live Preview review pending. Main remains untouched.
+
+
+## Walking verified in Preview
+
+Applicatione7eee4ce33059664bcbe43af1501436a4306151f.
+First transfer3a8bcb6 truncated the large build source through a connector output
+limit; native CI stopped before tests/deployment. Complete source restored in
+e7eee4c, local Git matches remote with no residual application changes.
+Run40659070641/job122717235288 passed native build/check,6 isolation tests and
+all28 Chromium/WebKit touch scenarios; Preview5ac1337b deployed successfully.
+Full quality run40659070655: all4 jobs succeeded, including full browser suite,
+payment/safety checks and3 Lighthouse runs.
+Artifact12803097709 contains16 final screenshots plus report/log; reviewed all
+six sizes per engine, furnished narrow views and both walking views. Walk frames
+show separate bent legs/feet and arm poses, no whole-body bob or cropped cells.
+Asset SHA256:44de04eef902c33f596ad5786331d7b576028153be4f2e8b7868ed2742711104.
+
+Verified live URL:
+https://feature-oki-house-prototype-20261028-ok-ok.timurhansolo.workers.dev/oki-house.html?v=e7eee4c
+Actual cloud browser retained70-coin owned-lamp progress from the prior version;
+left controls entered walking/left facing. Tapping the lamp initially showed
+«Иду к предмету: Лампа.» and walking, then reached the fixture and showed
+«Оки включает лампу!», lit=true and idle at the destination. Reviewed live
+screenshot oki-house-walking-1793177620338.jpg. No production publication;
+main remains e89ec097. Physical iPhone Safari testing remains unclaimed.
+Ready for owner viewing; reference fidelity/animation is still prototype-level,
+not a claim to reproduce the full original game or its interaction animations.

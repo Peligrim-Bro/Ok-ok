@@ -185,13 +185,13 @@
     },
     {
       "id": "oki-house-prototype",
-      "status": "in_progress",
+      "status": "needs_verification",
       "tags": [
         "game",
         "layout",
         "release"
       ],
-      "next": "Owner approved movement adaptation from MIT PSP recreation. Approach/arrival/action controller, timed walking atlas, cancellation/resize/reset and arrival-only lamp light implemented. Economy/save key unchanged. Six isolation tests and native build/check passed; final browser CI and live Preview review pending. See stable task note; keep off main.",
+      "next": "Walking e7eee4c verified live in Preview5ac1337b. Approach/arrival/action,6-frame walking, cancellation/resize/reset and arrival-only lamp light. Run40659070641:28 mobile scenarios +6 isolation/native passed; full quality40659070655 all4 jobs passed including3 Lighthouse.16 screenshots and live approach/light reviewed, existing70-coin save retained. Ready for owner viewing; main e89ec097 untouched, physical iPhone not claimed. See task note.",
       "sources": [
         "docs/OKI_HOUSE_TASK.md"
       ]
