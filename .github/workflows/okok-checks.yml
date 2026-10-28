@@ -27,7 +27,7 @@ jobs:
       - name: Build and enforce project, SEO, PWA and size checks
         run: npm run build
       - name: Check production verification failure detection
-        run: node --test tests/live-release.test.mjs tests/release-cache.test.mjs tests/weather-service.test.mjs tests/catalogue-analytics.test.mjs tests/resource-check.test.mjs
+        run: node --test tests/oki-house-offline.test.mjs tests/live-release.test.mjs tests/release-cache.test.mjs tests/weather-service.test.mjs tests/catalogue-analytics.test.mjs tests/resource-check.test.mjs
       - name: Install test browser
         run: npx playwright install chromium --only-shell
       - name: Check RU/EN/TH phone and tablet layout and offline PWA
