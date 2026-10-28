@@ -185,13 +185,13 @@
     },
     {
       "id": "oki-house-prototype",
-      "status": "needs_verification",
+      "status": "in_progress",
       "tags": [
         "game",
         "layout",
         "release"
       ],
-      "next": "Working static game Preview verified: source2b2f60c, GitHub40652801923 job122696626583 passed native+6 isolation+20 mobile tests and Wrangler preview. Live URL https://feature-oki-house-prototype-20261028-ok-ok.timurhansolo.workers.dev/oki-house.html loaded game+sprite. Ready for owner viewing; physical iPhone/main publication remain pending. Separate Cloudflare Builds trigger still fails; do not claim it repaired. Main untouched.",
+      "next": "Owner rejected angular SVG anatomy/reference mismatch and floating bulb. Replace with transparent full-body reference-based WebP sprite, larger room display, mounted wall sconce; remove no-real-payments copy as requested. Preserve economy/save.6 isolation tests pass; final browser/screenshot/live Preview verification pending. Main untouched.",
       "sources": [
         "docs/OKI_HOUSE_TASK.md"
       ]

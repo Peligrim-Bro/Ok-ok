@@ -36,9 +36,9 @@ jobs:
           const html=readFileSync('site/public/oki-house.html','utf8');
           if(!html.includes('okok-oki-house-v2'))throw Error('Oki House missing');
           if(!html.includes('state.coins-=price'))throw Error('Purchase logic missing');
-          if(!html.includes('oki-game.svg'))throw Error('Oki image missing from page');
-          const sprite=readFileSync('site/public/oki-game.svg','utf8');
-          if(!sprite.includes('<svg')||!sprite.includes('viewBox'))throw Error('Oki sprite invalid');
+          if(!html.includes('oki-game-v2.webp'))throw Error('Oki image missing from page');
+          const sprite=readFileSync('site/public/oki-game-v2.webp');
+          if(sprite.toString('ascii',0,4)!=='RIFF'||sprite.toString('ascii',8,12)!=='WEBP')throw Error('Oki WebP sprite invalid');
           const js=html.match(/<script>([\s\S]*?)<\/script>/)?.[1];
           if(!js)throw Error('Inline game JS missing');
           writeFileSync('/tmp/oki-house-check.js',js);

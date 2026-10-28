@@ -143,3 +143,39 @@ not claimed repaired; it no longer blocks obtaining a verified game Preview.
 No further account/token changes requested. Main remains unchanged; standalone
 prototype is ready for owner viewing, not a main release. Physical iPhone testing
 remains unclaimed. Further evidence-only commits do not change this tested code.
+
+## Owner visual correction — 28 October
+
+IMG_0357/0358 show inadequate angular SVG arms and an unmounted floating
+bulb. Earlier functional checks did not establish reference fidelity. Replace
+the game SVG with a full-body transparent raster sprite generated from the
+approved content/oki/invitation-illustrated-v2.webp identity: round pink glass
+head/forelock/cheeks/ears, blue eyes, cyan articulated limbs, rounded hands
+with fingers, separate feet, OK chest badge. No comic shirt is introduced.
+Built-in imagegen prompt: preserve approved identity, full-body neutral standing
+pose, anatomically distinct hands/feet, transparent background; cleanup preserves
+character and removes surrounding haze. Source PNG is retained in generation
+conversation. Delivery WebP512x768 preserves alpha; asset is versioned v2.
+
+Increase displayed sprite to82–116px width with matching bounds; remove body
+squashing during interactions. Lamp becomes a vector wall sconce with plate,
+arm and shade, placed to the right of the window; shop icon matches fixture.
+Prices, reward rules, owned lamp ID and save key remain unchanged. Owner also
+requested removal of the no-real-payments sentence: intro now reads
+«Обустрой дом Оки: выбирай мебель и выполняй задания.»
+
+Update static Preview allowlist/package and MIME/format checks to the WebP.
+Six isolation tests pass; final build/mobile checks, screenshots and live
+Preview pending. Main remains unchanged.
+
+Asset provenance:
+{
+  "content/oki/invitation-illustrated-v2.webp": {
+    "bytes": 34770,
+    "sha256": "0f918796556b2987dcb3b38130e884f6c3608db4fb19fe324dd46f8f1032cc81"
+  },
+  "prototypes/assets/oki-game-v2.webp": {
+    "bytes": 104792,
+    "sha256": "e16af2498becc20b76eb4f751751b00825fec5135bb650774e7f7c35bc20f196"
+  }
+}

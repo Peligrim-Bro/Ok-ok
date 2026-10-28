@@ -12,7 +12,7 @@ export function prepareHousePreview(root=process.cwd()){
  if(!html.includes('okok-oki-house-v2')||!html.includes('<title>Дом Оки'))throw Error('house_preview_build_required');
  const directory=resolve(root,'.oki-house-preview');
  mkdirSync(resolve(directory,'public'),{recursive:true});
- for(const name of ['oki-house.html','oki-game.svg'])copyFileSync(resolve(root,'site/public',name),resolve(directory,'public',name));
+ for(const name of ['oki-house.html','oki-game-v2.webp'])copyFileSync(resolve(root,'site/public',name),resolve(directory,'public',name));
  const config={name:'ok-ok',main:'../scripts/oki-house-preview-worker.mjs',compatibility_date:'2026-10-02',
   assets:{directory:'./public',binding:'ASSETS',run_worker_first:true,html_handling:'none'},previews:{}};
  const configPath=resolve(directory,'wrangler.json');
