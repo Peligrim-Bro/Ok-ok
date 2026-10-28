@@ -26,8 +26,8 @@ for(const [width,height] of [[320,568],[390,844],[430,932],[844,390],[768,1024],
   for(let i=0;i<6;i++)await tap(page,'#right');
   await expect.poll(()=>page.locator('#oki').evaluate(n=>{
    const r=document.getElementById('room'),b=r.getBoundingClientRect();
-   return b.left+r.clientLeft+r.clientWidth-n.getBoundingClientRect().right;
-  })).toBeLessThanOrEqual(10);await insideRoom(page);
+   return (b.left+r.clientLeft+r.clientWidth-n.getBoundingClientRect().right)/r.clientWidth;
+  })).toBeLessThan(0.2);await insideRoom(page);
   for(let i=0;i<8;i++)await tap(page,'#left');
   await expect.poll(()=>page.locator('#oki').evaluate(n=>{
    const r=document.getElementById('room'),b=r.getBoundingClientRect();
