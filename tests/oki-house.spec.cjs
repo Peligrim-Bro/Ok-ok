@@ -23,8 +23,16 @@ for(const [width,height] of [[320,568],[390,844],[430,932],[844,390],[768,1024],
   for(const id of ['left','interact','right','daily','reset']){
    const b=await page.locator('#'+id).boundingBox();expect(b.width).toBeGreaterThanOrEqual(44);expect(b.height).toBeGreaterThanOrEqual(44);
   }
-  for(let i=0;i<6;i++)await tap(page,'#right');await insideRoom(page);
-  for(let i=0;i<8;i++)await tap(page,'#left');await insideRoom(page);
+  for(let i=0;i<6;i++)await tap(page,'#right');
+  await expect.poll(()=>page.locator('#oki').evaluate(n=>{
+   const r=document.getElementById('room'),b=r.getBoundingClientRect();
+   return b.left+r.clientLeft+r.clientWidth-n.getBoundingClientRect().right;
+  })).toBeLessThanOrEqual(10);await insideRoom(page);
+  for(let i=0;i<8;i++)await tap(page,'#left');
+  await expect.poll(()=>page.locator('#oki').evaluate(n=>{
+   const r=document.getElementById('room'),b=r.getBoundingClientRect();
+   return (n.getBoundingClientRect().left-b.left-r.clientLeft)/r.clientWidth;
+  })).toBeLessThan(0.1);await insideRoom(page);
   await page.screenshot({path:`quality-reports/house-${info.project.name}-${width}x${height}.png`,fullPage:true});
  });
 }

@@ -40,3 +40,11 @@ has a stale fixed count27 versus current45 posts. No Telegram content or test
 was changed for this unrelated existing issue. Required native CI19/19 passed.
 An early concurrent local build/check read partial cache output; final sequential
 build followed by check passed. Use sequential builds/checks.
+
+## Second branch CI
+
+f3b29bf: prototype run40643974245 passed all20 touch scenarios in Chromium
+and WebKit. All14 screenshots reviewed, including both furnished narrow-room
+views: no clipped controls or furniture hit-target overlap. Added observable
+movement endpoint assertions before screenshots so stationary characters cannot
+pass the boundary check. Full final CI and three Lighthouse runs pending.
