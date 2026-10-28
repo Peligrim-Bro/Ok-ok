@@ -23,10 +23,16 @@ test('only pinned Wrangler preview is launched and failure is preserved',()=>{
   const result=runHousePreview({env,prepare:()=>'.oki-house-preview/wrangler.json',write:()=>{},run:(...args)=>{calls.push(args);return{status};}});
   assert.equal(result,status??1);assert.equal(calls.length,1);
   assert.deepEqual(calls[0].slice(0,2),['npx',['--yes','wrangler@4.151.3','preview','--config','.oki-house-preview/wrangler.json']]);
-  assert.equal(calls[0][2].env.CLOUDFLARE_API_TOKEN,env.PORTAL_PREVIEW_API_TOKEN);
+  assert.equal(calls[0][2].env.CLOUDFLARE_API_TOKEN,env.CLOUDFLARE_API_TOKEN);
  }
  const logs=[];assert.equal(runHousePreview({env:allowed,prepare:()=>{throw Error('private details');},write:s=>logs.push(s)}),1);
  assert(!logs.join().includes('private details'));
+});
+test('archived portal credential cannot override or replace the selected Builds token',()=>{
+ const calls=[];
+ assert.equal(runHousePreview({env:{...allowed,PORTAL_PREVIEW_API_TOKEN:'obsolete-portal-token'},prepare:()=>'.oki-house-preview/wrangler.json',run:(...args)=>{calls.push(args);return{status:0};},write:()=>{}}),0);
+ assert.equal(calls[0][2].env.CLOUDFLARE_API_TOKEN,allowed.CLOUDFLARE_API_TOKEN);
+ assert.equal(runHousePreview({env:{...allowed,CLOUDFLARE_API_TOKEN:undefined,PORTAL_PREVIEW_API_TOKEN:'obsolete-portal-token'},prepare:()=>assert.fail('must not reuse archived credential'),write:()=>{}}),1);
 });
 test('preview packages exactly two game assets and has no production bindings or routes',()=>{
  const root=mkdtempSync(join(tmpdir(),'oki-house-preview-'));

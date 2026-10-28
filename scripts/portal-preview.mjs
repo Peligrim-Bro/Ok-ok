@@ -23,13 +23,16 @@ export function runHousePreview({env=process.env,prepare=prepareHousePreview,run
  const emit=result=>write('OKI_HOUSE_PREVIEW '+result);
  if(env.WORKERS_CI!=='1'||env.WORKERS_CI_BRANCH!==HOUSE_BRANCH){emit('refused_non_preview_branch');return 1;}
  if(env.CLOUDFLARE_ACCOUNT_ID&&env.CLOUDFLARE_ACCOUNT_ID!==ACCOUNT){emit('refused_unexpected_account');return 1;}
- const token=env.PORTAL_PREVIEW_API_TOKEN??env.CLOUDFLARE_API_TOKEN;
+ // Use the credential selected in Workers Builds. The archived portal secret
+ // must never override it for this game branch.
+ const token=env.CLOUDFLARE_API_TOKEN;
  if(typeof token!=='string'||!token||token.trim()!==token||/[\r\n]/.test(token)){emit('preview_credential_unavailable');return 1;}
  try{
   const configPath=prepare();
+  emit('using_workers_builds_credential');
   emit('starting_static_game_preview');
   const result=run('npx',['--yes','wrangler@4.151.3','preview','--config',configPath],
-   {stdio:'inherit',env:{...env,CLOUDFLARE_API_TOKEN:token,CLOUDFLARE_ACCOUNT_ID:ACCOUNT}});
+   {stdio:'inherit',env:{...env,CLOUDFLARE_ACCOUNT_ID:ACCOUNT}});
   return Number.isInteger(result.status)?result.status:1;
  }catch{emit('failed_no_secret_details');return 1;}
 }

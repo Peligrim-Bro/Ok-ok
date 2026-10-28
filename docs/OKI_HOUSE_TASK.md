@@ -91,3 +91,15 @@ Preview credential is used only at runtime; no credential is read or committed.
 Five offline isolation/guard/HTTP tests and native build/check pass. Actual
 Cloudflare Preview outcome pending. Existing game233+20 tests remain unchanged.
 No Cloudflare dashboard edit is required for the confirmed missing command.
+
+## Preview credential failure — IMG_0353
+
+Owner screenshot confirms the restored entrypoint runs and invokes Wrangler,
+then Preview API returns10000 and /accounts returns9109 Invalid access token.
+Launcher had preferred archived PORTAL_PREVIEW_API_TOKEN over the selected
+Workers Builds CLOUDFLARE_API_TOKEN. Remove that override and its fallback;
+only the Builds-selected credential is used, with a non-secret source marker.
+Six offline tests pass, including stale portal token isolation. No credential
+values, permissions or account settings changed. If the selected Builds token
+also fails, actual Build settings need correction; do not guess its validity.
+Actual Preview outcome pending. Main remains untouched.

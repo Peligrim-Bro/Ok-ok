@@ -191,7 +191,7 @@
         "layout",
         "release"
       ],
-      "next": "Owner IMG_0352 confirms Preview invokes missing scripts/portal-preview.mjs after successful build. Add guarded compatibility entrypoint + isolated static-only Oki House Preview;5 offline isolation tests pass. Native build/check and Cloudflare Preview verification pending. Existing application QA20+233 and3 Lighthouse passed; no main publication.",
+      "next": "IMG_0353 confirms restored launcher reaches Wrangler but API rejects token10000/9109. Remove old PORTAL_PREVIEW_API_TOKEN override; use only selected Workers Builds credential.6 offline tests pass. Verify actual Preview; selected token validity remains unknown. Main unchanged.",
       "sources": [
         "docs/OKI_HOUSE_TASK.md"
       ]
