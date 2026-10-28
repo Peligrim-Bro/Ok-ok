@@ -185,13 +185,13 @@
     },
     {
       "id": "oki-house-prototype",
-      "status": "in_progress",
+      "status": "needs_verification",
       "tags": [
         "game",
         "layout",
         "release"
       ],
-      "next": "Interaction polish: action atlas, coherent furniture and room, TV/fridge reactions implemented. Final CI and live Preview pending; keep off main.",
+      "next": "Interaction polish d18c458 live Preview adf5db77.30 game+6 isolation/native checks passed,26 screenshots reviewed. Action atlas, SVG room/furniture, delayed effects, TV/fridge reactions and held rest poses. Live purchase/walking verified. Full CI40681938906 browser pending; other3 jobs passed. Main untouched; physical iPhone unclaimed.",
       "sources": [
         "docs/OKI_HOUSE_TASK.md"
       ]

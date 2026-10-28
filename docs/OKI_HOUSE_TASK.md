@@ -259,3 +259,8 @@ not a claim to reproduce the full original game or its interaction animations.
 
 ## Interaction polish in progress
 Owner requested finishing the prototype. Added reference-based action atlas (reach, sit, curled sleep, forward hand), coherent SVG furniture/window/floor, delayed touch effects, TV toggle and refrigerator door. Rest poses persist until a new command. Existing economy/save key unchanged. Local native and isolation checks complete; final CI/screenshots/live Preview pending.
+
+
+## Interaction polish verified
+Source d18c458de24379e5364f264d4ad8696031091d57. Run40681938908/job122794565237 passed native build/check,6 isolation checks and30 Chromium/WebKit scenarios, then deployed Preview adf5db77. All26 screenshots reviewed: six sizes per engine, furnished phone views, walking and10 interaction views. Sleep/seat poses and fridge/TV/lamp states visibly distinct. Live browser verified new room, SVG shop art, lamp purchase100→70 and walking toward fixture. URL /oki-house.html?v=d18c458. Full quality40681938906: payment/safety/three Lighthouse passed, full browser job pending at this checkpoint. No physical iPhone claim, no main merge.
+Action atlas: built-in imagegen from approved standing reference, four poses (reach high, seated, curled sleep, forward hand),2x2 transparent atlas; second pass cleans spacing. Delivery prototypes/assets/oki-actions-v1.webp1024x1024,214492 bytes. This remains a prototype; pointing at TV is a simple gesture, not a fully articulated appliance-specific animation.
