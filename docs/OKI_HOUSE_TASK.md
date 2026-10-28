@@ -27,3 +27,16 @@ Pending: final native checks, branch CI, screenshots and three Lighthouse runs.
 WebKit with mobile/touch emulation is not physical iPhone Safari testing.
 No physical-device service is configured or claimed. Review CI outcomes before
 calling this ready. Production unchanged.
+
+## First branch CI
+
+09f9e44: native build/check and Lighthouse passed. Prototype run40643539654
+passed 9 Chromium scenarios; furniture test reproduced fridge intercepting taps
+on the palm. Moved palm to a separate row and aligned its interaction position.
+WebKit failed to launch because a Chromium-only --no-sandbox argument was
+shared; scoped that argument to Chromium. Assertions were not weakened.
+Expanded optional local Node sweep:91/92 passed; unchanged channel-style test
+has a stale fixed count27 versus current45 posts. No Telegram content or test
+was changed for this unrelated existing issue. Required native CI19/19 passed.
+An early concurrent local build/check read partial cache output; final sequential
+build followed by check passed. Use sequential builds/checks.

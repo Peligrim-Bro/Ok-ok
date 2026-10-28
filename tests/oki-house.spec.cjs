@@ -64,6 +64,11 @@ test('all furniture stays usable and visible with touch and keyboard',async({pag
  await page.setViewportSize({width:320,height:568});
  await page.addInitScript(k=>localStorage.setItem(k,JSON.stringify({coins:50,owned:['bed','sofa','tv','plant','fridge','lamp']})),key);
  await page.emulateMedia({reducedMotion:'reduce'});await open(page);
+ const overlaps=await page.locator('.object').evaluateAll(nodes=>nodes.flatMap((a,i)=>nodes.slice(i+1).filter(b=>{
+  const x=a.getBoundingClientRect(),y=b.getBoundingClientRect();
+  return x.left<y.right&&y.left<x.right&&x.top<y.bottom&&y.top<x.bottom;
+ }).map(b=>[a.dataset.id,b.dataset.id])));
+ expect(overlaps).toEqual([]);
  for(const [id,mode] of [['bed','sleeping'],['sofa','sitting'],['tv','busy'],['plant','busy'],['fridge','busy'],['lamp','busy']]){
   const furniture=page.locator(`[data-id=${id}]`);const b=await furniture.boundingBox();
   expect(b.width).toBeGreaterThanOrEqual(44);expect(b.height).toBeGreaterThanOrEqual(44);
