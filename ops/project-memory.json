@@ -185,13 +185,13 @@
     },
     {
       "id": "oki-house-prototype",
-      "status": "in_progress",
+      "status": "needs_verification",
       "tags": [
         "game",
         "layout",
         "release"
       ],
-      "next": "Owner rejected angular SVG anatomy/reference mismatch and floating bulb. Replace with transparent full-body reference-based WebP sprite, larger room display, mounted wall sconce; remove no-real-payments copy as requested. Preserve economy/save.6 isolation tests pass; final browser/screenshot/live Preview verification pending. Main untouched.",
+      "next": "Visual correction785e40c live in Preview: reference-based transparent WebP with distinct hands/feet, mounted wall sconce, removed no-real-payments copy. Run40654997032 passed native+6 isolation+20 mobile tests/deploy98206b7f.14 screenshots and live sprite/lamp purchase reviewed. Full-site browser job running; payment/safety/Lighthouse pass. Ready for owner visual acceptance; main untouched.",
       "sources": [
         "docs/OKI_HOUSE_TASK.md"
       ]

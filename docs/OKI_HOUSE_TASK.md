@@ -179,3 +179,19 @@ Asset provenance:
     "sha256": "e16af2498becc20b76eb4f751751b00825fec5135bb650774e7f7c35bc20f196"
   }
 }
+
+## Visual correction verified in Preview
+
+Application785e40c2220614e2c7dce480b5109f5d16575e93. Run40654997032
+job122703761376 passed native build/check,6 isolation tests and20 mobile
+Chromium/WebKit scenarios; Preview deployment98206b7f succeeded. All14 final
+game screenshots reviewed, including furnished320px views. Updated sprite
+has distinct rounded hands/feet and reference facial features; wall sconce
+has visible mounting plate/arm/shade and is clear of the window.
+Live URL:/oki-house.html?v=785e40c on the existing branch Preview. Actual
+browser visit showed the requested intro without the real-payments claim,
+loaded512x768 WebP, and a successful30-coin lamp purchase rendered the mounted
+fixture. Live screenshot reviewed; only the browser test's local balance changed.
+Existing user economy/save key remain unchanged. Payment/safety/Lighthouse jobs
+also passed; full-site browser job remains running at this checkpoint.
+No production publication. Physical iPhone acceptance is not claimed.
