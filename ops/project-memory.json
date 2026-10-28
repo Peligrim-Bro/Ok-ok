@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "project": "OK-OK.click",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "decisions": [
     {
       "id": "hosting",
@@ -75,6 +75,20 @@
       "sources": [
         "docs/BRAND_VOICE.md",
         "AGENTS.md"
+      ]
+    },
+    {
+      "id": "oki-house-primary-2026-10-28",
+      "status": "active",
+      "tags": [
+        "game",
+        "layout",
+        "release"
+      ],
+      "decision": "Owner selects2D Oki House as primary OKI experience; retire former3D pet. Preserve earned data and unrelated progress, no currency conversion. Simplify and improve play; measure loading/runtime before lighter claims. Production migration not yet implemented.",
+      "sources": [
+        "docs/FEATURE_RULES.md",
+        "docs/OKI_HOUSE_TASK.md"
       ]
     }
   ],
@@ -181,6 +195,19 @@
       "sources": [
         "docs/RESOURCE_CHECK_TASK.md",
         "content/business-reports.json"
+      ]
+    },
+    {
+      "id": "oki-house-prototype",
+      "status": "in_progress",
+      "tags": [
+        "game",
+        "layout",
+        "release"
+      ],
+      "next": "Owner requests clean-start replacement, no legacy currency/care/Tetris migration. Primary modal/localized House and retirement of3D implemented locally; native build/check pass. Final browser/CI, merge current editorial main, then release verification pending.",
+      "sources": [
+        "docs/OKI_HOUSE_TASK.md"
       ]
     }
   ]

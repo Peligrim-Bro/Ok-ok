@@ -5,4 +5,6 @@ wrangler-telegram.json
 quality-reports/
 .lighthouseci/
 playwright-report/
+playwright-house-report/
 test-results/
+.oki-house-preview/

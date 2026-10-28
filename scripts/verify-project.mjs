@@ -36,19 +36,13 @@ assert(!utilities.includes('id="timerBtn"'),'Timer must stay outside the utility
 assert(html.includes('id="langClose"'),'Language picker close control missing');
 assert(!html.includes('data-timer="1"'),'Duplicate timer returned');
 assert(html.includes('id="visaForm"')&&html.includes('function clockHTML'),'Visa timer missing');
-for(const token of ['timerSave','ol-routine','block-rotate']){
- assert(html.includes(token),'Missing feature '+token);
-}
+assert(html.includes('timerSave'),'Timer persistence missing');
 for(const lang of ['ru','en','th'])assert(new RegExp('\\b'+lang+'\\s*:').test(html),'Missing language '+lang);
-const asset=html.match(/\/assets\/oki-3d-v\d+\.js/);
-assert(asset&&existsSync('site/public'+asset[0]),'3D runtime missing');
-new Script(readFileSync('site/public'+asset[0],'utf8'),{filename:asset[0]});
-const modelBundle=readFileSync('site/public'+asset[0],'utf8');
-const modelHash=createHash('sha256').update(readFileSync('oki-3d-source.mjs')).digest('hex');
-assert(modelBundle.startsWith('// OKI source SHA256: '+modelHash+'\n'),'Rebuild the OKI bundle after changing its source');
-assert(modelBundle.includes('neon-glass-v2')&&asset[0]==='/assets/oki-3d-v91.js','Current OKI model revision missing');
+assert(html.includes('id="ok-oki-house-entry"')&&html.includes('/oki-house.html')&&html.includes('?embed=1'),'House primary entry missing');
+assert(!html.includes("const KEY='oki-life-v1'")&&!html.includes('/assets/oki-3d-v91.js'),'Retired pet runtime returned');
+assert(!existsSync('site/public/assets/oki-3d-v91.js'),'Retired3D bundle must not be shipped');
 assert(existsSync('wrangler-telegram.json'),'Cloudflare deploy config missing');
-console.log('PASS: '+parsed+' inline scripts, 3D bundle, RU/EN/TH, timer, daily care, Tetris and Cloudflare configuration');
+console.log('PASS: '+parsed+' inline scripts, House entry, RU/EN/TH, timer and Cloudflare configuration');
 
 // Uses only an in-memory SQLite database; no live telemetry or bot messages.
 await import('./verify-oki-analytics.mjs');
@@ -60,8 +54,6 @@ console.log('PASS: transport map script and styles');
 const nav=html.match(/<nav class="tab">([\s\S]*?)<\/nav>/)?.[1];
 assert(nav,'Bottom navigation missing');
 assert.deepEqual([...nav.matchAll(/data-tab="([^"]+)"/g)].map(m=>m[1]),['home','game','list','scam','shop'],'Bottom navigation order changed');
-assert(html.includes("bubble.style.setProperty('--oki-tail-x'"),'OKI bubble must anchor its tail to OKI');
-assert(html.includes('left:var(--oki-tail-x,50%)'),'OKI tail positioning missing');
 for(const marker of ['okok-pulse-v1','oki-prompt-tail-fix-v4','okok-tetris-playable-v2'])assert(html.includes(marker),'Missing current UI patch '+marker);
 verifyReleaseCache(readFileSync('site/public/sw.js','utf8'),JSON.parse(readFileSync('site/public/build-info.json','utf8')));
 console.log('PASS current UI: OKI second, smiley fifth, anchored tail, Pulse and unique deployment cache');

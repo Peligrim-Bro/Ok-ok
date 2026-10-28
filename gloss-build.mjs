@@ -1689,6 +1689,7 @@ await import('./scripts/apply-oki-absence.mjs');
 await import('./scripts/apply-oki-place-guide.mjs');
 await import('./scripts/apply-brand-motto.mjs');
 await import('./scripts/apply-safety-guide.mjs');
+await import('./scripts/apply-oki-house-primary.mjs');
 await import('./scripts/finalize-release-cache.mjs');
 
 // Owner paused the startup portal on 2026-10-17 pending refinement.
@@ -1736,3 +1737,15 @@ if(startupSettings.portalEnabled){
  page=page.replace('</body>','<style>'+readFileSync('assets/halloween-2026.css','utf8')+'</style><script defer src="./halloween-2026.js?v='+version+'"></script>\n</body>');
  writeFileSync(pagePath,page);
 }
+
+// Standalone Oki House prototype. No navigation or existing mascot changes.
+{
+ const source='prototypes/oki-house.html';
+ const target='site/public/oki-house.html';
+ const html=readFileSync(source,'utf8');
+ if(!html.includes('okok-oki-house-v2')||!html.includes('<title>Дом Оки'))throw new Error('Oki House prototype invalid');
+ copyFileSync(source,target);
+ for(const name of ['oki-game-v2.webp','oki-walk-v1.webp','oki-actions-v1.webp'])copyFileSync('prototypes/assets/'+name,'site/public/'+name);
+}
+
+await import('./scripts/build-oki-house-locales.mjs');
