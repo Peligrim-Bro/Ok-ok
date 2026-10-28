@@ -9,6 +9,8 @@ on:
       - 'scripts/portal-preview.mjs'
       - 'scripts/oki-house-preview-worker.mjs'
       - 'tests/oki-house-preview.test.mjs'
+      - 'scripts/apply-oki-house-primary.mjs'
+      - 'tests/oki-house-offline.test.mjs'
       - 'gloss-build.mjs'
       - '.github/workflows/oki-house-check.yml'
   workflow_dispatch:
@@ -28,7 +30,7 @@ jobs:
       - run: npm run build
       - run: npm run check
       - name: Verify preview isolation and production guards offline
-        run: node --test tests/oki-house-preview.test.mjs
+        run: node --test tests/oki-house-preview.test.mjs tests/oki-house-offline.test.mjs
       - name: Validate standalone page and JS syntax
         run: |
           node --input-type=module <<'NODE'

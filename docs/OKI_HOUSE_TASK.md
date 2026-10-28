@@ -286,3 +286,9 @@ Initial dependency review: old inline care controller owns shop, crystals, rewar
 
 ## Primary game replacement — clean start authorized
 Owner explicitly rejects preservation/migration of old pet mechanics and asks to launch House. New primary OKI modal uses same-origin localized RU/EN/TH game frames with visible44px close, Escape and focus/scroll restoration. Legacy inline care controller, absence loader and3D asset removed from delivery; old browser tests archived with reasons and replaced by primary-game integration coverage. No legacy storage read/import/conversion; new House starts100 coins, saves only its own v2 state. Adds offline precache/navigation handling for House pages/assets. Main has newer29 October editorial; incorporate it before final checks. Local build/check passed: HTML402417 bytes, JavaScript369646 vs previous924692. Full browsers/Lighthouse/live release pending.
+
+
+## Primary replacement released; offline alias correction
+PR88 merged as de4832db23245dffa88d5e24edaf675fa4bc2917. Source03a8624 passed38 Chromium/WebKit scenarios and231 full browser scenarios; all4 quality jobs and3 Lighthouse passed. Reviewed29 game/entry and190 site layout/home screenshots. Main deploy40788526345/job123167652216 and Workers Builds: ok-ok succeeded; deployment verifier confirmed exact source and health endpoints. Live browser opened House through main OKI button, displayed fresh100 coins and empty room, with visible close. No legacy migration.
+
+Live Cloudflare canonicalizes /oki-house.html to /oki-house. Correct SW offline navigation matching for both paths and normalize cache keys to the existing .html precache entries in all3 languages. Six offline VM checks assert actual navigation returns game content rather than the main home fallback. Native build passed; follow-up browser/Lighthouse checks pending. This does not change visible game mechanics or assets.
