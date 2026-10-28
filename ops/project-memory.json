@@ -76,6 +76,20 @@
         "docs/BRAND_VOICE.md",
         "AGENTS.md"
       ]
+    },
+    {
+      "id": "oki-house-primary-2026-10-28",
+      "status": "active",
+      "tags": [
+        "game",
+        "layout",
+        "release"
+      ],
+      "decision": "Owner selects2D Oki House as primary OKI experience; retire former3D pet. Preserve earned data and unrelated progress, no currency conversion. Simplify and improve play; measure loading/runtime before lighter claims. Production migration not yet implemented.",
+      "sources": [
+        "docs/FEATURE_RULES.md",
+        "docs/OKI_HOUSE_TASK.md"
+      ]
     }
   ],
   "tasks": [
@@ -185,13 +199,13 @@
     },
     {
       "id": "oki-house-prototype",
-      "status": "needs_verification",
+      "status": "in_progress",
       "tags": [
         "game",
         "layout",
         "release"
       ],
-      "next": "Original contextual dialogue live in Preview b8553f1b, final source3a51d17.32 mobile scenarios passed incl variation/reward priority/bounded idle. Live lamp/walk lines reviewed. Sprite bleed fix retained. Text only; main unchanged; full-site CI pending. Owner viewing next.",
+      "next": "Owner approves House as primary OKI replacement and retires old3D pet. Dependency/performance baseline recorded; primary-entry migration, RU/EN/TH, stored-data preservation, Tetris dependencies and full release checks still required. Main e89ec097 unchanged; do not claim old3D removed yet.",
       "sources": [
         "docs/OKI_HOUSE_TASK.md"
       ]
