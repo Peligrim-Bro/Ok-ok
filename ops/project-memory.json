@@ -199,13 +199,13 @@
     },
     {
       "id": "oki-house-prototype",
-      "status": "in_progress",
+      "status": "done",
       "tags": [
         "game",
         "layout",
         "release"
       ],
-      "next": "Primary House released via PR88/de4832d; deploy and Workers Builds succeeded, live100-coin entry verified.38 game+231 full browser+3 Lighthouse passed. Follow-up fixes Cloudflare extensionless offline navigation;6 native checks pass, PR browser verification pending. No legacy migration.",
+      "next": "Clean-start House is primary on https://ok-ok.click/ via Game. PR88/de4832d and offline PR90/ec47a92 released; production/Workers Builds and exact live release checks succeeded.38 mobile+231 browser+3 Lighthouse+6 offline checks passed; live RU/EN/TH entry/close verified. Legacy3D/care/Tetris retired, no migration. Future game additions require a new scope; physical iPhone not claimed.",
       "sources": [
         "docs/OKI_HOUSE_TASK.md"
       ]
