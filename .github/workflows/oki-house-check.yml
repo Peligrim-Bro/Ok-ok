@@ -1,0 +1,35 @@
+name: Oki House prototype checks
+on:
+  pull_request:
+    paths:
+      - 'prototypes/oki-house.html'
+      - 'gloss-build.mjs'
+      - '.github/workflows/oki-house-check.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm run check
+      - name: Validate standalone page and JS syntax
+        run: |
+          node --input-type=module <<'NODE'
+          import {readFileSync,writeFileSync} from 'node:fs';
+          const html=readFileSync('site/public/oki-house.html','utf8');
+          if(!html.includes('okok-oki-house-v2'))throw Error('Oki House missing');
+          if(!html.includes('state.coins-=price'))throw Error('Purchase logic missing');
+          const js=html.match(/<script>([\s\S]*?)<\/script>/)?.[1];
+          if(!js)throw Error('Inline game JS missing');
+          writeFileSync('/tmp/oki-house-check.js',js);
+          NODE
+          node --check /tmp/oki-house-check.js
