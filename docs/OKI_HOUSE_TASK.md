@@ -270,3 +270,5 @@ Action atlas: built-in imagegen from approved standing reference, four poses (re
 Owner likes the scene but sees detached hand fragments during actions. Confirmed source atlas overlap: curled-sleep feet extend into the forward-hand cell, with a thin upper-row foot strip at its top. Clip the transparent action-cell margin2.3% top/5% left and disable texture repeat. This preserves the current identity, scene, economy and atlas; no new generation. Native/mobile and screenshot verification pending.
 
 Alpha-component measurement of forward-hand cell: main body bbox121,19..481,496; unwanted fragments x0..21 and y0..9. The selected margins exceed those fragments while staying outside the main silhouette.
+
+Verified fix0807bac: run40683467922/job122799796811 passed30 mobile scenarios and native/isolation checks, deployed Preview b2810f84. Reviewed WebKit forward-hand interaction screenshot: no detached left/top fragments; full hand/curl preserved. Alpha-component analysis confirms all4 main silhouettes remain outside clipped margins. Live URL /oki-house.html?v=0807bac loaded with70-coin save retained. Main unchanged.
