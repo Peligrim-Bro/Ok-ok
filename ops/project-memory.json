@@ -185,13 +185,13 @@
     },
     {
       "id": "oki-house-prototype",
-      "status": "needs_verification",
+      "status": "blocked",
       "tags": [
         "game",
         "layout",
         "release"
       ],
-      "next": "PR88 test branch: fixed reproduced v1/v2 build failure and mobile bounds/touch/storage feedback. Native build passes; local Chrome download truncated. Run/review dedicated Chromium+WebKit touch CI and full existing quality/Lighthouse. No main release or physical iPhone test claimed.",
+      "next": "PR88 source31eb1b1:20/20 Chromium+WebKit touch tests,233/233 full browser tests, native/payment/safety checks,3 Lighthouse and Halloween smoke passed.14 game screenshots reviewed. Branch Cloudflare preview check fails without exposed log details; physical iPhone not available. Inspect authenticated build logs before any publication. Main e89ec097 unchanged. See docs/OKI_HOUSE_TASK.md for exact runs and existing unrelated Telegram test count issue.",
       "sources": [
         "docs/OKI_HOUSE_TASK.md"
       ]

@@ -48,3 +48,27 @@ and WebKit. All14 screenshots reviewed, including both furnished narrow-room
 views: no clipped controls or furniture hit-target overlap. Added observable
 movement endpoint assertions before screenshots so stationary characters cannot
 pass the boundary check. Full final CI and three Lighthouse runs pending.
+
+## Final tested application state
+
+Tested source31eb1b1568fad8b17565fbf916b4a263d313fda8.
+- Prototype run40644395548:20/20 Chromium+WebKit touch scenarios passed,
+  including actual movement endpoint checks. All14 final screenshots reviewed;
+  empty/furnished rooms and portrait/landscape phone/tablet views remain usable.
+- Full quality run40644395671: all4 jobs succeeded. Full browser suite233/233
+  passed in7.1min; native checks, payment checks, safety/centre regressions and
+  all3 Lighthouse runs passed. Halloween smoke40644395438 also passed.
+- Main remained e89ec09788dce19e418ff8d26e1929f90aca16ce. No merge/deploy here.
+
+Unresolved: Workers Builds check122669779621 failed for the branch preview.
+Its GitHub output provides a build ID and dashboard link, no error text or
+annotations. No Cloudflare build-log connector is available. Do not invent the
+reason or infer a production outage. Build IDf2314adf-fb49-4e69-809d-1d4f24442ed5.
+Physical iPhone Safari/safe-area verification remains unavailable; WebKit touch
+emulation is accurately labelled. Existing optional stale Telegram count test
+remains recorded above, unrelated and unchanged.
+
+Next: inspect authenticated Cloudflare preview build logs, fix a demonstrated
+issue if any, then verify an actual preview. Keep draft/off main until the
+remaining preview/device acceptance is resolved. Later evidence-only edits to
+this note and project-memory do not change the tested application source.
