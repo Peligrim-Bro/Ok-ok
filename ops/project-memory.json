@@ -185,13 +185,13 @@
     },
     {
       "id": "oki-house-prototype",
-      "status": "needs_verification",
+      "status": "in_progress",
       "tags": [
         "game",
         "layout",
         "release"
       ],
-      "next": "Walking e7eee4c verified live in Preview5ac1337b. Approach/arrival/action,6-frame walking, cancellation/resize/reset and arrival-only lamp light. Run40659070641:28 mobile scenarios +6 isolation/native passed; full quality40659070655 all4 jobs passed including3 Lighthouse.16 screenshots and live approach/light reviewed, existing70-coin save retained. Ready for owner viewing; main e89ec097 untouched, physical iPhone not claimed. See task note.",
+      "next": "Interaction polish: action atlas, coherent furniture and room, TV/fridge reactions implemented. Final CI and live Preview pending; keep off main.",
       "sources": [
         "docs/OKI_HOUSE_TASK.md"
       ]

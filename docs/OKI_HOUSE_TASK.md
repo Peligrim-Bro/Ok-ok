@@ -255,3 +255,7 @@ screenshot oki-house-walking-1793177620338.jpg. No production publication;
 main remains e89ec097. Physical iPhone Safari testing remains unclaimed.
 Ready for owner viewing; reference fidelity/animation is still prototype-level,
 not a claim to reproduce the full original game or its interaction animations.
+
+
+## Interaction polish in progress
+Owner requested finishing the prototype. Added reference-based action atlas (reach, sit, curled sleep, forward hand), coherent SVG furniture/window/floor, delayed touch effects, TV toggle and refrigerator door. Rest poses persist until a new command. Existing economy/save key unchanged. Local native and isolation checks complete; final CI/screenshots/live Preview pending.

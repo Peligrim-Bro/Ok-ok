@@ -1744,5 +1744,5 @@ if(startupSettings.portalEnabled){
  const html=readFileSync(source,'utf8');
  if(!html.includes('okok-oki-house-v2')||!html.includes('<title>Дом Оки'))throw new Error('Oki House prototype invalid');
  copyFileSync(source,target);
- for(const name of ['oki-game-v2.webp','oki-walk-v1.webp'])copyFileSync('prototypes/assets/'+name,'site/public/'+name);
+ for(const name of ['oki-game-v2.webp','oki-walk-v1.webp','oki-actions-v1.webp'])copyFileSync('prototypes/assets/'+name,'site/public/'+name);
 }

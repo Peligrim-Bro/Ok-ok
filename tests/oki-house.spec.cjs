@@ -7,6 +7,7 @@ async function open(page){
  await expect(page.locator('#oki img')).toBeVisible();
  expect(await page.locator('#oki img').evaluate(n=>n.complete&&n.naturalWidth>0)).toBe(true);
  expect(await page.evaluate(async()=>{const image=new Image();image.src='./oki-walk-v1.webp';await image.decode();return image.naturalWidth>0&&image.naturalHeight>0;})).toBe(true);
+ expect(await page.evaluate(async()=>{const im=new Image();im.src='./oki-actions-v1.webp';await im.decode();return im.width>0;})).toBe(true);
  expect(errors).toEqual([]);
 }
 async function tap(page,selector){await page.locator(selector).scrollIntoViewIfNeeded();await page.locator(selector).tap();}
@@ -121,17 +122,17 @@ test('approach has steady steps and lamp interaction waits for arrival',async({p
  await expect(page.locator('#oki')).toHaveAttribute('data-facing','right');
  await expect(page.locator('[data-id=lamp]')).not.toHaveClass(/lit/);
  await expect(page.locator('#speech')).toContainText('Иду');
- await page.clock.runFor(4400);
+ await page.clock.runFor(6000);
  await expect(page.locator('[data-id=lamp]')).toHaveClass(/lit/);
  await expect(page.locator('#speech')).toContainText('включает лампу');
  expect(await page.locator('#oki').getAttribute('data-motion')).not.toBe('walking');
  const end=await okiBox(page),lamp=await page.locator('[data-id=lamp]').boundingBox();
- expect(Math.abs(end.x+end.width/2-lamp.x-lamp.width/2)).toBeLessThan(2);
+ expect(Math.abs(end.x+end.width*.78-lamp.x-lamp.width/2)).toBeLessThan(2);
  await insideRoom(page);expect((await state(page)).coins).toBe(50);
 });
 test('changing destination and manual walking cancel the previous interaction',async({page})=>{
  await frozenHouse(page,['bed','lamp']);
- await tap(page,'[data-id=lamp]');await page.clock.runFor(450);
+ await tap(page,'[data-id=lamp]');await page.clock.runFor(900);
  const before=await okiBox(page);await tap(page,'[data-id=bed]');await page.clock.runFor(200);
  await expect(page.locator('#oki')).toHaveAttribute('data-facing','left');
  expect((await okiBox(page)).x).toBeLessThan(before.x);
@@ -149,7 +150,7 @@ test('resize and shop rendering keep the pending approach attached to the object
  await page.clock.runFor(6000);
  await expect(page.locator('[data-id=lamp]')).toHaveClass(/lit/);await insideRoom(page);
  const end=await okiBox(page),lamp=await page.locator('[data-id=lamp]').boundingBox();
- expect(Math.abs(end.x+end.width/2-lamp.x-lamp.width/2)).toBeLessThan(2);
+ expect(Math.abs(end.x+end.width*.78-lamp.x-lamp.width/2)).toBeLessThan(2);
  expect((await state(page)).coins).toBe(60);
 });
 test('reset cancels queued actions and restores the starting position',async({page})=>{
@@ -159,4 +160,20 @@ test('reset cancels queued actions and restores the starting position',async({pa
  await expect(page.locator('#oki')).toHaveAttribute('data-motion','idle');await expect(page.locator('.object')).toHaveCount(0);
  await expect(page.locator('#speech')).toHaveText('Начинаем сначала!');
  expect((await okiBox(page)).x).toBeCloseTo(start.x,1);expect((await state(page)).coins).toBe(100);await insideRoom(page);
+});
+
+test('furniture has visible poses and appliance reactions',async({page},info)=>{
+ await frozenHouse(page,['bed','sofa','tv','plant','fridge','lamp']);
+ for(const [id,pose] of [['sofa','1'],['bed','2'],['fridge','3'],['tv','0'],['lamp','0']]){
+  await tap(page,'[data-id='+id+']');
+  for(let i=0;i<80;i++){await page.clock.runFor(100);if(await page.locator('#oki').getAttribute('data-action')===id)break;}
+  await page.clock.runFor(550);
+  await expect(page.locator('#oki')).toHaveAttribute('data-pose',pose);
+  if(id==='fridge')await expect(page.locator('[data-id=fridge]')).toHaveClass(/open/);
+  if(id==='tv')await expect(page.locator('[data-id=tv]')).toHaveClass(/on/);
+  if(id==='lamp')await expect(page.locator('[data-id=lamp]')).toHaveClass(/lit/);
+  await insideRoom(page);
+  await page.screenshot({path:`quality-reports/house-${info.project.name}-action-${id}.png`,fullPage:true});
+ }
+ expect((await state(page)).coins).toBe(50);
 });
