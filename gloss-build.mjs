@@ -1736,3 +1736,12 @@ if(startupSettings.portalEnabled){
  page=page.replace('</body>','<style>'+readFileSync('assets/halloween-2026.css','utf8')+'</style><script defer src="./halloween-2026.js?v='+version+'"></script>\n</body>');
  writeFileSync(pagePath,page);
 }
+
+// Standalone Oki House prototype. No navigation or existing mascot changes.
+{
+ const source='prototypes/oki-house.html';
+ const target='site/public/oki-house.html';
+ const html=readFileSync(source,'utf8');
+ if(!html.includes('okok-oki-house-v1')||!html.includes('<title>Дом Оки'))throw new Error('Oki House prototype invalid');
+ copyFileSync(source,target);
+}
