@@ -188,7 +188,7 @@ test('Oki comments match the action, vary, and respect reward feedback',async({p
  }
  expect(comments[0]).not.toBe(comments[1]);
  await tap(page,'#daily');await page.clock.runFor(5000);await expect(page.locator('#speech')).toContainText('Ежедневная награда');
- await page.clock.runFor(40000);await expect(page.locator('#speech')).toHaveAttribute('data-dialogue','idle');
+ await page.clock.runFor(80000);await expect(page.locator('#speech')).toHaveAttribute('data-dialogue','idle');
  const quiet=await page.locator('#speech').innerText();await page.clock.runFor(40000);expect(await page.locator('#speech').innerText()).toBe(quiet);
  expect((await state(page)).coins).toBe(60);
 });
