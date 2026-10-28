@@ -107,6 +107,20 @@ only for the separate 20:30 Oki slots on 29 October–1 November. Provenance,
 source/final SHA-256 and visual review are in
 `docs/CHANNEL_TEXT_BUFFER_20261026.md`; queue state still does not prove delivery.
 
+Offline text-queue checkpoint 27 October 2026: three reviewed ordinary entries
+and three distinct illustrations extend all 09:00, 14:00 and 19:30 slots through
+2 November. Provenance and SHA-256 are in
+`docs/CHANNEL_TEXT_BUFFER_20261027.md`. The combined audit may still report the
+separate missing 20:30 Oki slots; that is not an ordinary-text gap or delivery
+receipt.
+
+Offline text-queue checkpoint 28 October 2026: three reviewed ordinary entries
+and three distinct illustrations extend all 09:00, 14:00 and 19:30 slots through
+3 November. Provenance and SHA-256 are in
+`docs/CHANNEL_TEXT_BUFFER_20261028.md`. The combined audit may still report the
+separate missing 20:30 Oki slots; that is not an ordinary-text gap or delivery
+receipt.
+
 ## Rolling text queue (owner 19 October 2026)
 
 Maintain seven future calendar days of reviewed text posts. The existing daily

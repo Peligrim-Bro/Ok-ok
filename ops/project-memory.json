@@ -100,11 +100,13 @@
       "tags": [
         "channel"
       ],
-      "next": "Ordinary text/media coverage is prepared through 1 November from main cb1e8b5; finish mandatory release checks, merge/deploy verification and observe receipts. Combined audit remains false only for separate 20:30 comics on 29 October–1 November.",
+      "next": "Ordinary text/media coverage is prepared through 3 November from main dcbe79f; finish mandatory release checks, merge/deploy verification and observe receipts. Combined audit remains false only for separate 20:30 comics.",
       "sources": [
         "CHANNEL_PUBLISHING.md",
         "scripts/audit-channel-queue.mjs",
-        "docs/CHANNEL_TEXT_BUFFER_20261026.md"
+        "docs/CHANNEL_TEXT_BUFFER_20261026.md",
+        "docs/CHANNEL_TEXT_BUFFER_20261027.md",
+        "docs/CHANNEL_TEXT_BUFFER_20261028.md"
       ]
     },
     {

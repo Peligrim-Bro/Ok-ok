@@ -437,6 +437,48 @@ export const POSTS = [{
   photo:'https://www.ok-ok.click/assets/channel/okok-text-share-notes-20261101.jpg',
   topics:['Отзывы','ОбратнаяСвязь'], brandCTA:'rate',
   text:'📝 Одна полезная заметка после недели\n\nВспомни место, где тебе помогла конкретная деталь: тихий стол, понятный вход, удобный ориентир или внимательное предупреждение. Запиши что произошло и дату визита.\n\nТакой опыт можно отправить через «Написать автору» в OK-OK. Мы не превращаем личное мнение в гарантию и проверяем, что именно можно подтвердить.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\n🌴 https://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=share_trip_notes_20261101'
+},
+{
+  id:'okok-scooter-condition-20261102', approved:true,
+  publishAt:'2026-11-02T09:00:00+07:00', expiresAt:'2026-11-02T12:00:00+07:00',
+  photo:'https://www.ok-ok.click/assets/channel/okok-text-scooter-condition-20261102.jpg',
+  topics:['Байки','Советы'], brandCTA:'share',
+  text:'🛵 Зафиксируй состояние байка до поездки\n\nДо старта сними одним проходом обе стороны, зеркала, пластик и уровень топлива. Отдельно сфотографируй уже заметные царапины и проверь, что кадры сохранились.\n\nТакая запись не заменяет договор и правила проката, но оставляет понятную точку отсчёта. Условия и ответственность уточняй до оплаты.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\n🌴 https://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=scooter_condition_20261102'
+},
+{
+  id:'okok-quieter-table-20261102', approved:true,
+  publishAt:'2026-11-02T14:00:00+07:00', expiresAt:'2026-11-02T17:00:00+07:00',
+  photo:'https://www.ok-ok.click/assets/channel/okok-text-quieter-table-20261102.jpg',
+  topics:['Фразы','Английский','Ресторан'], brandCTA:'share',
+  text:'🗣 Как попросить столик потише\n\n“Could we sit somewhere quieter, please?”\n«Можно нам сесть где-нибудь потише, пожалуйста?»\n\nПокажи жестом, какой столик имеешь в виду, и дождись ответа сотрудника. Свободный стол может быть забронирован, поэтому фраза остаётся просьбой, а не требованием.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\n🌴 https://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=quieter_table_20261102'
+},
+{
+  id:'okok-pulse-private-20261102', approved:true,
+  publishAt:'2026-11-02T19:30:00+07:00', expiresAt:'2026-11-02T22:30:00+07:00',
+  photo:'https://www.ok-ok.click/assets/channel/okok-text-pulse-private-20261102.jpg',
+  topics:['Отзывы','Обновления'], brandCTA:'rate',
+  text:'💚 Что означает твоя отметка в Pulse\n\nОценка Pulse в OK-OK сейчас сохраняется на твоём устройстве. Это личная отметка, а не опубликованный отзыв и не общий рейтинг для других посетителей.\n\nЕсли хочешь передать полезный опыт проекту, открой «Написать автору» и добавь конкретную деталь и дату визита. Материал будет проверен отдельно.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\n🌴 https://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=pulse_private_20261102'
+},
+{
+  id:'okok-fragile-souvenir-20261103', approved:true,
+  publishAt:'2026-11-03T09:00:00+07:00', expiresAt:'2026-11-03T12:00:00+07:00',
+  photo:'https://www.ok-ok.click/assets/channel/okok-text-fragile-souvenir-20261103.jpg',
+  topics:['Советы','Безопасность'], brandCTA:'share',
+  text:'🧳 Хрупкий сувенир: упакуй без пустот\n\nНебольшую керамическую вещь оберни мягкой одеждой и положи в середину чемодана, подальше от стенок. Заполни свободное место вокруг, чтобы предмет не двигался при переноске.\n\nПеред дорогой уточни правила перевозчика: материал, размер и ручная кладь могут требовать отдельных условий.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\n🌴 https://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=fragile_souvenir_20261103'
+},
+{
+  id:'okok-repeat-slowly-20261103', approved:true,
+  publishAt:'2026-11-03T14:00:00+07:00', expiresAt:'2026-11-03T17:00:00+07:00',
+  photo:'https://www.ok-ok.click/assets/channel/okok-text-repeat-slowly-20261103.jpg',
+  topics:['Фразы','Английский','Советы'], brandCTA:'share',
+  text:'🗣 Если объясняют слишком быстро\n\n“Could you repeat that more slowly, please?”\n«Не могли бы вы повторить это помедленнее, пожалуйста?»\n\nФраза пригодится у стойки информации, в отеле или при уточнении дороги. После ответа повтори ключевую деталь своими словами, чтобы убедиться, что понял верно.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\n🌴 https://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=repeat_slowly_20261103'
+},
+{
+  id:'okok-check-entrance-20261103', approved:true,
+  publishAt:'2026-11-03T19:30:00+07:00', expiresAt:'2026-11-03T22:30:00+07:00',
+  photo:'https://www.ok-ok.click/assets/channel/okok-text-check-entrance-20261103.jpg',
+  topics:['Карты','Маршруты','Советы'], brandCTA:'share',
+  text:'📍 Точка на карте — ещё не вход\n\nПеред последним переходом остановись в безопасном месте и сравни точку с фасадом, номером входа или заметным ориентиром. Если описание прислал знакомый, уточни, с какой стороны он ждёт.\n\nНе переходи дорогу, глядя только в экран. Сначала оцени обстановку, затем продолжай маршрут.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\n🌴 https://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=check_entrance_20261103'
 }
 ];
 
@@ -456,6 +498,8 @@ const copyPhrases = {
   ,'okok-safe-stop-20261030': 'Please stop here when it’s safe.'
   ,'okok-photo-request-20261031': 'Could you take a photo of us, please?'
   ,'okok-less-ice-20261101': 'Less ice, please.'
+  ,'okok-quieter-table-20261102': 'Could we sit somewhere quieter, please?'
+  ,'okok-repeat-slowly-20261103': 'Could you repeat that more slowly, please?'
 };
 // Explicitly reviewed action labels; every copied phrase remains in the post.
 const copyActions={
@@ -476,6 +520,8 @@ const copyActions={
  ,'okok-safe-stop-20261030':[{label:'Попросить остановить',text:'Please stop here when it’s safe.'}]
  ,'okok-photo-request-20261031':[{label:'Попросить сделать фото',text:'Could you take a photo of us, please?'}]
  ,'okok-less-ice-20261101':[{label:'Попросить меньше льда',text:'Less ice, please.'}]
+ ,'okok-quieter-table-20261102':[{label:'Попросить тихий стол',text:'Could we sit somewhere quieter, please?'}]
+ ,'okok-repeat-slowly-20261103':[{label:'Попросить повторить медленнее',text:'Could you repeat that more slowly, please?'}]
 };
 for(const post of POSTS)if(copyActions[post.id])post.copyButtons=copyActions[post.id];
 // Owner-approved mission from the next ordinary slot onward. Presentation only:
