@@ -1,91 +1,91 @@
 {
-  "verifiedAt": "2026-10-29",
+  "verifiedAt": "2026-10-30",
   "news": [
     {
       "category": "world",
-      "when": "28.10 · 🌍",
-      "href": "https://www.who.int/news/item/28-10-2026-climate-change-is-a-growing-health-emergency--lancet-countdown-warns",
-      "publishedAt": "2026-10-28",
+      "when": "29.10 · 🌍",
+      "href": "https://www.unep.org/en/news-and-stories/press-release/nature-making-comeback-world-must-move-faster-meet-restoration",
+      "publishedAt": "2026-10-29",
       "nonWar": true,
-      "ru": "Отчёт: климатический вред здоровью растёт быстрее мер защиты.",
-      "en": "Report: climate-related health harms are outpacing action.",
-      "th": "รายงานชี้ผลกระทบสุขภาพจากสภาพภูมิอากาศเร็วกว่าการรับมือ",
+      "ru": "ООН: восстановление охватило 252 млн га, но темпы нужно ускорить.",
+      "en": "UN: restoration covers 252 million hectares, but progress must speed up.",
+      "th": "UN ระบุว่าการฟื้นฟูครอบคลุม 252 ล้านเฮกตาร์ แต่ต้องเร่งความคืบหน้า",
       "sources": [
-        "https://www.who.int/news/item/28-10-2026-climate-change-is-a-growing-health-emergency--lancet-countdown-warns",
-        "https://lancetcountdown.org/2026-report/"
+        "https://www.unep.org/en/news-and-stories/press-release/nature-making-comeback-world-must-move-faster-meet-restoration",
+        "https://www.reuters.com/sustainability/cop/un-says-ecosystem-restoration-efforts-must-be-rapidly-scaled-up-2026-10-29/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-29T06:07:00+07:00",
-        "sourceUrl": "https://www.who.int/news/item/28-10-2026-climate-change-is-a-growing-health-emergency--lancet-countdown-warns",
-        "summary": "No public counters; WHO and Lancet Countdown coverage shows reach, not a global rank."
+        "observedAt": "2026-10-30T06:45:00+07:00",
+        "sourceUrl": "https://www.unep.org/en/news-and-stories/press-release/nature-making-comeback-world-must-move-faster-meet-restoration",
+        "summary": "No public counters; primary UNEP reporting plus independent Reuters coverage shows reach, not a global rank."
       }
     },
     {
       "category": "thailand",
-      "when": "28.10 · 🇹🇭",
-      "href": "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-and-variable-weather-in-upper-thailand-no-10-282-2026",
-      "publishedAt": "2026-10-28",
-      "ru": "TMD предупредил о ливнях, паводках, оползнях и волнах выше двух метров.",
-      "en": "TMD warned of heavy rain, floods, landslides and waves above two metres.",
-      "th": "TMD เตือนฝนหนัก น้ำท่วม ดินถล่ม และคลื่นสูงเกิน 2 เมตร",
+      "when": "29.10 · 🇹🇭",
+      "href": "https://thailand.prd.go.th/en/content/category/detail/id/52/iid/555742",
+      "publishedAt": "2026-10-29",
+      "ru": "Ко Тао получил две международные награды за устойчивый туризм.",
+      "en": "Koh Tao received two international sustainable-tourism awards.",
+      "th": "เกาะเต่าได้รับสองรางวัลนานาชาติด้านการท่องเที่ยวยั่งยืน",
       "sources": [
-        "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-and-variable-weather-in-upper-thailand-no-10-282-2026"
+        "https://thailand.prd.go.th/en/content/category/detail/id/52/iid/555742"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-29T06:07:00+07:00",
-        "sourceUrl": "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-and-variable-weather-in-upper-thailand-no-10-282-2026",
-        "summary": "No public counters or national rank; current official advisory."
+        "observedAt": "2026-10-30T06:45:00+07:00",
+        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/52/iid/555742",
+        "summary": "PRD: 82 views; no comparable comments or national rank."
       }
     },
     {
       "category": "thailand",
-      "when": "28.10 · 🇹🇭",
-      "href": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/555007",
-      "publishedAt": "2026-10-28",
-      "ru": "Таиланд и Малайзия ускорят пограничные транспортные, торговые и безопасностные проекты.",
-      "en": "Thailand and Malaysia will advance border transport, trade and security projects.",
-      "th": "ไทยและมาเลเซียจะเร่งโครงการคมนาคม การค้า และความมั่นคงชายแดน",
+      "when": "29.10 · 🇹🇭",
+      "href": "https://www.thailand.go.th/public/index.php/useful-information-detail/bangkok-art-biennale-2026-opening-reception-sets-stage-for-citywide-art-festival",
+      "publishedAt": "2026-10-29",
+      "ru": "В Бангкоке стартовала биеннале: более 200 работ на 11 площадках.",
+      "en": "Bangkok Biennale opened with over 200 works across 11 venues.",
+      "th": "บางกอก อาร์ต เบียนนาเล่เปิดแล้ว มีผลงานกว่า 200 ชิ้นใน 11 แห่ง",
       "sources": [
-        "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/555007"
+        "https://www.thailand.go.th/public/index.php/useful-information-detail/bangkok-art-biennale-2026-opening-reception-sets-stage-for-citywide-art-festival"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-29T06:07:00+07:00",
-        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/48/iid/555007",
-        "summary": "PRD: 98 views; no comparable comments or national rank."
+        "observedAt": "2026-10-30T06:45:00+07:00",
+        "sourceUrl": "https://www.thailand.go.th/public/index.php/useful-information-detail/bangkok-art-biennale-2026-opening-reception-sets-stage-for-citywide-art-festival",
+        "summary": "Thailand.go.th: 156 views/0 comments; no national rank."
       }
     },
     {
       "category": "pattaya",
-      "when": "28.10 · Pattaya",
-      "href": "https://www.pattayamail.com/news/pattaya-residents-ask-why-illegal-beach-mat-rentals-keep-returning-daily-570006",
-      "publishedAt": "2026-10-28",
-      "ru": "В Паттайе изымают предположительно сдаваемые без разрешения пляжные коврики и стулья.",
-      "en": "Pattaya is seizing beach mats and chairs allegedly rented without permission.",
-      "th": "พัทยายึดเสื่อและเก้าอี้ชายหาดที่ถูกกล่าวหาว่าให้เช่าโดยไม่ได้รับอนุญาต",
+      "when": "29.10 · Pattaya",
+      "href": "https://www.pattayamail.com/latestnews/news/pattaya-tourism-leaders-unite-to-fill-the-citys-event-calendar-and-drive-business-570093",
+      "publishedAt": "2026-10-29",
+      "ru": "Город и турбизнес Паттайи согласуют фестивали, технологии и подготовку кадров.",
+      "en": "Pattaya city and tourism businesses are coordinating festivals, technology and training.",
+      "th": "เมืองพัทยาและธุรกิจท่องเที่ยวร่วมวางแผนเทศกาล เทคโนโลยี และพัฒนาบุคลากร",
       "sources": [
-        "https://www.pattayamail.com/news/pattaya-residents-ask-why-illegal-beach-mat-rentals-keep-returning-daily-570006"
+        "https://www.pattayamail.com/latestnews/news/pattaya-tourism-leaders-unite-to-fill-the-citys-event-calendar-and-drive-business-570093"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-29T06:07:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/pattaya-residents-ask-why-illegal-beach-mat-rentals-keep-returning-daily-570006",
-        "summary": "Pattaya Mail: 1,328 views/0 comments versus 507/0 for the marathon traffic report; not a city rank."
+        "observedAt": "2026-10-30T06:45:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/latestnews/news/pattaya-tourism-leaders-unite-to-fill-the-citys-event-calendar-and-drive-business-570093",
+        "summary": "Pattaya Mail: 1,395 views/0 comments versus 1,205/0 for the crane incident; not a city rank."
       }
     },
     {
       "category": "pattaya",
-      "when": "28.10 · Pattaya",
-      "href": "https://www.pattayamail.com/news/pattaya-reviews-marathon-traffic-plan-to-reduce-disruption-for-residents-and-businesses-569992",
-      "publishedAt": "2026-10-28",
-      "ru": "Паттайя пересматривает движение марафона, чтобы уменьшить помехи и сохранить экстренный проезд.",
-      "en": "Pattaya is reviewing marathon traffic to reduce disruption and keep emergency access.",
-      "th": "พัทยาทบทวนจราจรมาราธอน เพื่อลดผลกระทบและเปิดทางฉุกเฉิน",
+      "when": "29.10 · Pattaya",
+      "href": "https://www.pattayamail.com/news/crane-cable-snaps-in-east-pattaya-dropping-power-pole-onto-worker-570089",
+      "publishedAt": "2026-10-29",
+      "ru": "В Восточной Паттайе рабочего госпитализировали после падения опоры; причину обрыва троса выясняют.",
+      "en": "An East Pattaya worker was hospitalised after a pole fell; the cable failure is under investigation.",
+      "th": "คนงานพัทยาตะวันออกเข้าโรงพยาบาลหลังเสาไฟล้ม สาเหตุสายเครนขาดอยู่ระหว่างสอบสวน",
       "sources": [
-        "https://www.pattayamail.com/news/pattaya-reviews-marathon-traffic-plan-to-reduce-disruption-for-residents-and-businesses-569992"
+        "https://www.pattayamail.com/news/crane-cable-snaps-in-east-pattaya-dropping-power-pole-onto-worker-570089"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-29T06:07:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/pattaya-reviews-marathon-traffic-plan-to-reduce-disruption-for-residents-and-businesses-569992",
-        "summary": "Pattaya Mail: 507 views/0 comments versus 1,328/0 for the beach-rental report; not a city rank."
+        "observedAt": "2026-10-30T06:45:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/crane-cable-snaps-in-east-pattaya-dropping-power-pole-onto-worker-570089",
+        "summary": "Pattaya Mail: 1,205 views/0 comments versus 1,395/0 for the tourism report; not a city rank."
       }
     }
   ],
@@ -251,7 +251,30 @@
         "https://www.antifakenewscenter.com/%E0%B8%AD%E0%B8%B2%E0%B8%8A%E0%B8%8D%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%AD%E0%B8%AD%E0%B8%99%E0%B9%84%E0%B8%A5%E0%B8%99%E0%B9%8C/asset-restitution-coordination-center/"
       ],
       "verifiedAt": "2026-10-28"
+    },
+    {
+      "id": "fake-paotang-giveaway-thailand-2026-10",
+      "title": {
+        "ru": "Фальшивая раздача от имени Pao Tang",
+        "en": "Fake Pao Tang giveaway",
+        "th": "แจกเงินปลอมอ้างแอปเป๋าตัง"
+      },
+      "text": {
+        "ru": "29 октября официальный центр сообщил: Facebook-аккаунт с обещанием 3 000 бат от Pao Tang не связан с Krungthai Bank.",
+        "en": "On 29 October, the official centre said a Facebook account promising 3,000 baht from Pao Tang is not linked to Krungthai Bank.",
+        "th": "29 ตุลาคม ศูนย์ทางการยืนยันว่าบัญชี Facebook ที่อ้างแจก 3,000 บาทจากเป๋าตังไม่เกี่ยวกับธนาคารกรุงไทย"
+      },
+      "do": {
+        "ru": "Не переходите по ссылкам из такой рекламы; проверяйте акции в официальном приложении или у банка.",
+        "en": "Do not follow links in such adverts; verify offers in the official app or with the bank.",
+        "th": "อย่ากดลิงก์จากโฆษณา ตรวจสอบโปรโมชันในแอปทางการหรือกับธนาคาร"
+      },
+      "status": "official-warning",
+      "sources": [
+        "https://www.antifakenewscenter.com/%E0%B8%AD%E0%B8%B2%E0%B8%8A%E0%B8%8D%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%AD%E0%B8%AD%E0%B8%99%E0%B9%84%E0%B8%A5%E0%B8%99%E0%B9%8C/giving-away-money/"
+      ],
+      "verifiedAt": "2026-10-29"
     }
   ],
-  "selection": "Reviewed 2026-10-29 Asia/Bangkok: 1 world, 2 Thailand, 2 Pattaya; sources 28 October. Evidence limits recorded. The 28 October fake-NACC page repeats the active recovery-page pattern, so seven scam cards and dates stay unchanged. No Telegram sending."
+  "selection": "Reviewed 2026-10-30 Asia/Bangkok: 1 world, 2 Thailand, 2 Pattaya; all sources published 29 October. Public counters and limits recorded. Added the official 29 October fake Pao Tang giveaway warning; seven earlier active cards retain their dates. No Telegram sending."
 }
