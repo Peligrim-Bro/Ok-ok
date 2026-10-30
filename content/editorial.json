@@ -1,91 +1,94 @@
 {
-  "verifiedAt": "2026-10-30",
+  "verifiedAt": "2026-10-31",
   "news": [
     {
       "category": "world",
-      "when": "29.10 · 🌍",
-      "href": "https://www.unep.org/en/news-and-stories/press-release/nature-making-comeback-world-must-move-faster-meet-restoration",
-      "publishedAt": "2026-10-29",
+      "when": "30.10 · 🌍",
+      "href": "https://www.reuters.com/investigates/special-report/climate-heatstorms-pregnancy/",
+      "publishedAt": "2026-10-30",
       "nonWar": true,
-      "ru": "ООН: восстановление охватило 252 млн га, но темпы нужно ускорить.",
-      "en": "UN: restoration covers 252 million hectares, but progress must speed up.",
-      "th": "UN ระบุว่าการฟื้นฟูครอบคลุม 252 ล้านเฮกตาร์ แต่ต้องเร่งความคืบหน้า",
+      "ru": "Reuters: усиливающиеся волны жары связаны с ростом рисков для беременности во всём мире.",
+      "en": "Reuters: intensifying heatwaves are linked to higher pregnancy risks worldwide.",
+      "th": "รอยเตอร์สรายงานว่า คลื่นความร้อนที่รุนแรงขึ้นเชื่อมโยงกับความเสี่ยงต่อการตั้งครรภ์ที่สูงขึ้นทั่วโลก",
       "sources": [
-        "https://www.unep.org/en/news-and-stories/press-release/nature-making-comeback-world-must-move-faster-meet-restoration",
-        "https://www.reuters.com/sustainability/cop/un-says-ecosystem-restoration-efforts-must-be-rapidly-scaled-up-2026-10-29/"
+        "https://www.reuters.com/investigates/special-report/climate-heatstorms-pregnancy/",
+        "https://www.nature.com/articles/s41591-024-03395-8"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-30T06:45:00+07:00",
-        "sourceUrl": "https://www.unep.org/en/news-and-stories/press-release/nature-making-comeback-world-must-move-faster-meet-restoration",
-        "summary": "No public counters; primary UNEP reporting plus independent Reuters coverage shows reach, not a global rank."
+        "observedAt": "2026-10-31T06:13:00+07:00",
+        "sourceUrl": "https://www.reuters.com/investigates/special-report/climate-heatstorms-pregnancy/",
+        "summary": "No public engagement counters or comparable global rank. Selection reflects a new Reuters investigation using an original birth-record analysis and a review of nearly 200 studies, not a claim of worldwide popularity."
       }
     },
     {
       "category": "thailand",
-      "when": "29.10 · 🇹🇭",
-      "href": "https://thailand.prd.go.th/en/content/category/detail/id/52/iid/555742",
-      "publishedAt": "2026-10-29",
-      "ru": "Ко Тао получил две международные награды за устойчивый туризм.",
-      "en": "Koh Tao received two international sustainable-tourism awards.",
-      "th": "เกาะเต่าได้รับสองรางวัลนานาชาติด้านการท่องเที่ยวยั่งยืน",
+      "when": "30.10 · 🇹🇭",
+      "href": "https://www.bot.or.th/en/news-and-media/news/news-20261030.html",
+      "publishedAt": "2026-10-30",
+      "ru": "Банк Таиланда: экономика укрепилась в сентябре за счёт экспорта и инвестиций, но туризм ослаб.",
+      "en": "Bank of Thailand: exports and investment lifted September activity, while tourism softened.",
+      "th": "ธปท. ระบุว่าเศรษฐกิจเดือนกันยายนดีขึ้นจากการส่งออกและการลงทุน แต่กิจกรรมท่องเที่ยวชะลอลง",
       "sources": [
-        "https://thailand.prd.go.th/en/content/category/detail/id/52/iid/555742"
+        "https://www.bot.or.th/en/news-and-media/news/news-20261030.html",
+        "https://en.moneyandbanking.co.th/2026/283158/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-30T06:45:00+07:00",
-        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/52/iid/555742",
-        "summary": "PRD: 82 views; no comparable comments or national rank."
+        "observedAt": "2026-10-31T06:13:00+07:00",
+        "sourceUrl": "https://www.bot.or.th/en/news-and-media/news/news-20261030.html",
+        "summary": "No public counters on the central-bank release. Same-day independent financial coverage confirms broad economic relevance; no national discussion rank is claimed."
       }
     },
     {
       "category": "thailand",
-      "when": "29.10 · 🇹🇭",
-      "href": "https://www.thailand.go.th/public/index.php/useful-information-detail/bangkok-art-biennale-2026-opening-reception-sets-stage-for-citywide-art-festival",
-      "publishedAt": "2026-10-29",
-      "ru": "В Бангкоке стартовала биеннале: более 200 работ на 11 площадках.",
-      "en": "Bangkok Biennale opened with over 200 works across 11 venues.",
-      "th": "บางกอก อาร์ต เบียนนาเล่เปิดแล้ว มีผลงานกว่า 200 ชิ้นใน 11 แห่ง",
+      "when": "30.10 · 🇹🇭",
+      "href": "https://www.tatnews.org/2026/10/tat-spotlights-thai-wellness-as-phuket-hosts-global-wellness-summit-2026/",
+      "publishedAt": "2026-10-30",
+      "ru": "Пхукет примет Global Wellness Summit 10–13 ноября; TAT представит тайские оздоровительные маршруты.",
+      "en": "Phuket will host the Global Wellness Summit on 10–13 November, with TAT presenting Thai wellness routes.",
+      "th": "ภูเก็ตจะเป็นเจ้าภาพ Global Wellness Summit วันที่ 10–13 พ.ย. โดย ททท. นำเสนอเส้นทางสุขภาพแบบไทย",
       "sources": [
-        "https://www.thailand.go.th/public/index.php/useful-information-detail/bangkok-art-biennale-2026-opening-reception-sets-stage-for-citywide-art-festival"
+        "https://www.tatnews.org/2026/10/tat-spotlights-thai-wellness-as-phuket-hosts-global-wellness-summit-2026/",
+        "https://www.globalwellnesssummit.com/2026-global-wellness-summit/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-30T06:45:00+07:00",
-        "sourceUrl": "https://www.thailand.go.th/public/index.php/useful-information-detail/bangkok-art-biennale-2026-opening-reception-sets-stage-for-citywide-art-festival",
-        "summary": "Thailand.go.th: 156 views/0 comments; no national rank."
+        "observedAt": "2026-10-31T06:13:00+07:00",
+        "sourceUrl": "https://www.tatnews.org/2026/10/tat-spotlights-thai-wellness-as-phuket-hosts-global-wellness-summit-2026/",
+        "summary": "TAT: 52 views versus 16 for its same-day Diwali release; no public comment count or national rank. Independent syndication exists, but the figures are only a within-site comparison."
       }
     },
     {
       "category": "pattaya",
-      "when": "29.10 · Pattaya",
-      "href": "https://www.pattayamail.com/latestnews/news/pattaya-tourism-leaders-unite-to-fill-the-citys-event-calendar-and-drive-business-570093",
-      "publishedAt": "2026-10-29",
-      "ru": "Город и турбизнес Паттайи согласуют фестивали, технологии и подготовку кадров.",
-      "en": "Pattaya city and tourism businesses are coordinating festivals, technology and training.",
-      "th": "เมืองพัทยาและธุรกิจท่องเที่ยวร่วมวางแผนเทศกาล เทคโนโลยี และพัฒนาบุคลากร",
+      "when": "30.10 · Pattaya",
+      "href": "https://www.pattayamail.com/news/sudden-heavy-rain-floods-pattaya-roads-shuts-junction-and-disrupts-traffic-570161",
+      "publishedAt": "2026-10-30",
+      "ru": "Сильный дождь затопил дороги Паттайи, перекрыл перекрёсток Moom Aroi и нарушил движение.",
+      "en": "Heavy rain flooded Pattaya roads, closed Moom Aroi junction and disrupted traffic.",
+      "th": "ฝนหนักทำให้น้ำท่วมถนนพัทยา ปิดแยกมุมอร่อยและกระทบการจราจร",
       "sources": [
-        "https://www.pattayamail.com/latestnews/news/pattaya-tourism-leaders-unite-to-fill-the-citys-event-calendar-and-drive-business-570093"
+        "https://www.pattayamail.com/news/sudden-heavy-rain-floods-pattaya-roads-shuts-junction-and-disrupts-traffic-570161"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-30T06:45:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/latestnews/news/pattaya-tourism-leaders-unite-to-fill-the-citys-event-calendar-and-drive-business-570093",
-        "summary": "Pattaya Mail: 1,395 views/0 comments versus 1,205/0 for the crane incident; not a city rank."
+        "observedAt": "2026-10-31T06:13:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/sudden-heavy-rain-floods-pattaya-roads-shuts-junction-and-disrupts-traffic-570161",
+        "summary": "Pattaya Mail: 2,179 views/0 comments versus 1,253/0 for the Bali Hai land report; a same-site comparison, not a citywide rank."
       }
     },
     {
       "category": "pattaya",
-      "when": "29.10 · Pattaya",
-      "href": "https://www.pattayamail.com/news/crane-cable-snaps-in-east-pattaya-dropping-power-pole-onto-worker-570089",
-      "publishedAt": "2026-10-29",
-      "ru": "В Восточной Паттайе рабочего госпитализировали после падения опоры; причину обрыва троса выясняют.",
-      "en": "An East Pattaya worker was hospitalised after a pole fell; the cable failure is under investigation.",
-      "th": "คนงานพัทยาตะวันออกเข้าโรงพยาบาลหลังเสาไฟล้ม สาเหตุสายเครนขาดอยู่ระหว่างสอบสวน",
+      "when": "30.10 · Pattaya",
+      "href": "https://www.pattayamail.com/news/pattaya-sets-october-31-deadline-to-reclaim-public-land-near-bali-hai-pier-570232",
+      "publishedAt": "2026-10-30",
+      "ru": "Паттайя установила срок 31 октября для освобождения общественной земли у пирса Бали Хай.",
+      "en": "Pattaya set a 31 October deadline to clear public land near Bali Hai Pier.",
+      "th": "เมืองพัทยากำหนด 31 ต.ค. คืนพื้นที่สาธารณะใกล้ท่าเรือบาลีฮาย เพื่อทำทางเดินและติดไฟ",
       "sources": [
-        "https://www.pattayamail.com/news/crane-cable-snaps-in-east-pattaya-dropping-power-pole-onto-worker-570089"
+        "https://www.pattayamail.com/news/pattaya-sets-october-31-deadline-to-reclaim-public-land-near-bali-hai-pier-570232",
+        "https://thepattayanews.com/2026/10/30/pattaya-sets-october-31st-deadline-to-reclaim-public-land-near-waterfront-building-plans-new-walkway-and-lighting/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-30T06:45:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/crane-cable-snaps-in-east-pattaya-dropping-power-pole-onto-worker-570089",
-        "summary": "Pattaya Mail: 1,205 views/0 comments versus 1,395/0 for the tourism report; not a city rank."
+        "observedAt": "2026-10-31T06:13:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/pattaya-sets-october-31-deadline-to-reclaim-public-land-near-bali-hai-pier-570232",
+        "summary": "Pattaya Mail: 1,253 views/0 comments versus 2,179/0 for the flood report. Independent local coverage confirms reach; no citywide rank is claimed."
       }
     }
   ],
@@ -274,7 +277,30 @@
         "https://www.antifakenewscenter.com/%E0%B8%AD%E0%B8%B2%E0%B8%8A%E0%B8%8D%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%AD%E0%B8%AD%E0%B8%99%E0%B9%84%E0%B8%A5%E0%B8%99%E0%B9%8C/giving-away-money/"
       ],
       "verifiedAt": "2026-10-29"
+    },
+    {
+      "id": "trending-product-transfer-scam-thailand-2026-10",
+      "title": {
+        "ru": "Дешёвый трендовый товар — магазин исчезает после перевода",
+        "en": "Cheap trending product — shop vanishes after transfer",
+        "th": "ของฮิตราคาถูก ร้านหายหลังโอน"
+      },
+      "text": {
+        "ru": "30 октября официальный центр предупредил: мошенники используют ажиотаж и низкую цену, торопят с переводом, а затем закрывают магазин или не отправляют товар.",
+        "en": "On 30 October, the official centre warned that scammers exploit trends and low prices, rush bank transfers, then close the shop or never deliver.",
+        "th": "30 ตุลาคม ศูนย์ต่อต้านข่าวปลอมเตือนว่ามิจฉาชีพใช้กระแสสินค้าและราคาถูกเร่งให้โอน ก่อนปิดร้านหรือไม่ส่งของ"
+      },
+      "do": {
+        "ru": "Не переводите из-за фраз «осталось мало»; проверьте продавца и имя счёта, используйте защиту покупателя.",
+        "en": "Do not transfer because stock is “limited”; verify the seller and account name, and use buyer protection.",
+        "th": "อย่ารีบโอนเพราะคำว่าเหลือน้อย ตรวจชื่อบัญชีและผู้ขายผ่านแหล่งทางการ และใช้ระบบคุ้มครองผู้ซื้อ"
+      },
+      "status": "official-warning",
+      "sources": [
+        "https://www.antifakenewscenter.com/%E0%B8%AD%E0%B8%B2%E0%B8%8A%E0%B8%8D%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%AD%E0%B8%AD%E0%B8%99%E0%B9%84%E0%B8%A5%E0%B8%99%E0%B9%8C/trending-products/"
+      ],
+      "verifiedAt": "2026-10-30"
     }
   ],
-  "selection": "Reviewed 2026-10-30 Asia/Bangkok: 1 world, 2 Thailand, 2 Pattaya; all sources published 29 October. Public counters and limits recorded. Added the official 29 October fake Pao Tang giveaway warning; seven earlier active cards retain their dates. No Telegram sending."
+  "selection": "Reviewed 2026-10-31 Asia/Bangkok: exactly 1 world, 2 Thailand and 2 Pattaya stories, all published 30 October. Public counters and limitations recorded without global or citywide rank claims. Added the official 30 October trending-product transfer warning; eight earlier active cards retain their original dates. No Telegram sending."
 }
