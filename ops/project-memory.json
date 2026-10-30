@@ -209,6 +209,20 @@
       "sources": [
         "docs/OKI_HOUSE_TASK.md"
       ]
+    },
+    {
+      "id": "visa-quote-comparison",
+      "status": "needs_verification",
+      "tags": [
+        "catalogue",
+        "content",
+        "release"
+      ],
+      "next": "Owner30 Oct: two-quote form implemented and Telegram checklist drafted. Build/native passed; local browser/Lighthouse unavailable (no Chrome). Run existing PR CI, review screenshots before main. Draft not queued; unique illustration pending.",
+      "sources": [
+        "docs/VISA_QUOTES_TASK.md",
+        "docs/VISA_QUOTES_POST.md"
+      ]
     }
   ]
 }

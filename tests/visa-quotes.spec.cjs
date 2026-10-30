@@ -1,0 +1,22 @@
+const {test,expect}=require('@playwright/test');
+for(const lang of ['ru','en','th'])test(`visa quote entries survive navigation and clear ${lang}`,async({page})=>{
+ await page.addInitScript(l=>{localStorage.setItem('pok-lang',l);localStorage.setItem('pok-lang-set','1');localStorage.setItem('pok-install-seen','1');},lang);
+ await page.setViewportSize({width:390,height:844});
+ await page.goto('/',{waitUntil:'domcontentloaded'});
+ await page.locator('nav.tab [data-tab="list"]').click();
+ await page.locator('[data-service-section="visas"]').click();
+ await page.locator('.visa-comparison>summary').click();
+ await page.locator('#quote-0-name').fill('<Acme>');
+ await page.locator('#quote-0-total').fill('500 USD');
+ await expect(page.locator('#quote-1-total')).toHaveValue('');
+ await page.locator('[data-service-section="bikes"]').click();
+ await expect(page.locator('.visa-comparison')).toHaveCount(0);
+ await page.locator('[data-service-section="visas"]').click();
+ await page.locator('.visa-comparison>summary').click();
+ await expect(page.locator('#quote-0-name')).toHaveValue('<Acme>');
+ await expect(page.locator('#quote-0-total')).toHaveValue('500 USD');
+ await page.screenshot({path:`quality-reports/visa-quotes-${lang}.png`,fullPage:true});
+ await page.locator('#clearVisaQuotes').click();
+ await expect(page.locator('#quote-0-total')).toHaveValue('');
+ await expect(page.locator('#visaQuoteStatus')).not.toBeEmpty();
+});
