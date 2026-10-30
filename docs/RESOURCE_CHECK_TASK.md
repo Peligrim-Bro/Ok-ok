@@ -101,3 +101,7 @@ navigation defect. A familiar back-arrow cue is feedback for future design work,
 not an instruction to change the accepted screen now.
 This acceptance does not complete the separate Halloween PR77 or enable arbitrary
 whole-web business checking. Those retain their recorded scope and release gates.
+
+## Return navigation hardening — 30 October 2026
+
+Owner reported inability to leave Check again. Ordinary live standalone return worked in cloud Chrome; physical iOS failure not reproduced. Replace home glyph with familiar left arrow, fix return control to viewport with safe-area/header clearance and use native target=_top so an embedded checker exits its parent frame. No history dependency, cache reset, payment or content changes. Add embedded clean-URL and direct-report return tests; existing scroll/offline/language/theme cases remain. Pending final PR CI, screenshots and deployment.
