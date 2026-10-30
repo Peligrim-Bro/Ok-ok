@@ -18,3 +18,15 @@ test('home return works from a direct report without network or browser history'
  await page.goto('/ne-vedis/index.html?lang=ru#check/progress-language');await page.evaluate(async()=>{await navigator.serviceWorker.register('/sw.js');await navigator.serviceWorker.ready});await page.waitForFunction(()=>!!navigator.serviceWorker.controller);
  await context.setOffline(true);await page.reload();await page.evaluate(()=>scrollTo({top:document.documentElement.scrollHeight,behavior:'instant'}));await page.locator('#back').click();await expect(page.locator('#homeSafety')).toBeVisible();await expect(page.locator('nav.tab [data-tab="home"]')).toHaveClass(/on/);
 });
+
+for(const route of ['/ne-vedis/?lang=ru#check','/ne-vedis/index.html?lang=ru#check/progress-language'])test(`embedded centre exits top-level ${route}`,async({page})=>{
+ await page.goto('/?okok_test=1');
+ await page.setContent(`<iframe title="Embedded check" src="${route}" style="width:100%;height:500px"></iframe>`);
+ const frame=page.frameLocator('iframe');
+ await expect(frame.locator('#back')).toHaveAttribute('target','_top');
+ await expect(frame.locator('#back')).toContainText('←');
+ await frame.locator('#back').click();
+ await expect(page).toHaveURL(/\/$/);
+ await expect(page.locator('#homeSafety')).toBeVisible();
+ await expect(page.locator('iframe[title="Embedded check"]')).toHaveCount(0);
+});
