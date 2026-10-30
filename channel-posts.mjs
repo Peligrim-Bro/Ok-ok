@@ -480,6 +480,192 @@ export const POSTS = [{
   topics:['Карты','Маршруты','Советы'], brandCTA:'share',
   text:'📍 Точка на карте — ещё не вход\n\nПеред последним переходом остановись в безопасном месте и сравни точку с фасадом, номером входа или заметным ориентиром. Если описание прислал знакомый, уточни, с какой стороны он ждёт.\n\nНе переходи дорогу, глядя только в экран. Сначала оцени обстановку, затем продолжай маршрут.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\n🌴 https://ok-ok.click/?utm_source=telegram&utm_medium=social&utm_campaign=check_entrance_20261103'
 }
+,
+{
+  "id": "okok-oki-comic-011-quiet-bell-20261030",
+  "approved": true,
+  "publishAt": "2026-10-30T20:30:00+07:00",
+  "expiresAt": "2026-10-30T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-011-quiet-bell-20261030.jpg",
+  "topics": [
+    "Оки",
+    "Комиксы"
+  ],
+  "brandCTA": "share",
+  "text": "Приключения Оки #11 · Тихий колокольчик\n\nОки ждёт ветер, но у кота свой способ запустить колокольчик.\n\nВымышленная история. Иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=oki_011_20261030"
+},
+{
+  "id": "okok-oki-comic-012-shadow-lantern-20261031",
+  "approved": true,
+  "publishAt": "2026-10-31T20:30:00+07:00",
+  "expiresAt": "2026-10-31T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-012-shadow-lantern-20261031.jpg",
+  "topics": [
+    "Оки",
+    "Комиксы"
+  ],
+  "brandCTA": "share",
+  "text": "Приключения Оки #12 · Фонарь для тени\n\nТень ушла вместе с солнцем. Оки нашёл способ вернуть её в кадр.\n\nВымышленная история. Иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=oki_012_20261031"
+},
+{
+  "id": "okok-oki-comic-013-breakfast-guest-20261101",
+  "approved": true,
+  "publishAt": "2026-11-01T20:30:00+07:00",
+  "expiresAt": "2026-11-01T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-013-breakfast-guest-20261101.jpg",
+  "topics": [
+    "Оки",
+    "Комиксы"
+  ],
+  "brandCTA": "share",
+  "text": "Приключения Оки #13 · Завтрак для гостя\n\nОки накрыл стол для маленького гостя. Но меню тот выбрал сам.\n\nВымышленная история. Иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=oki_013_20261101"
+},
+{
+  "id": "okok-oki-comic-014-postcard-hunt-20261102",
+  "approved": true,
+  "publishAt": "2026-11-02T20:30:00+07:00",
+  "expiresAt": "2026-11-02T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-014-postcard-hunt-20261102.jpg",
+  "topics": [
+    "Оки",
+    "Комиксы"
+  ],
+  "brandCTA": "share",
+  "text": "Приключения Оки #14 · Охота за открыткой\n\nОки рисует море, а ветер и песок неожиданно становятся соавторами.\n\nВымышленная история. Иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=oki_014_20261102"
+},
+{
+  "id": "okok-oki-comic-015-secret-observer-20261103",
+  "approved": true,
+  "publishAt": "2026-11-03T20:30:00+07:00",
+  "expiresAt": "2026-11-03T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-015-secret-observer-20261103.jpg",
+  "topics": [
+    "Оки",
+    "Комиксы"
+  ],
+  "brandCTA": "share",
+  "text": "Приключения Оки #15 · Секретный наблюдатель\n\nОки ищет певца в саду. А тот уже занял лучшее место.\n\nВымышленная история. Иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=oki_015_20261103"
+},
+{
+  "id": "okok-oki-comic-016-big-catch-20261104",
+  "approved": true,
+  "publishAt": "2026-11-04T20:30:00+07:00",
+  "expiresAt": "2026-11-04T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-016-big-catch-20261104.jpg",
+  "topics": [
+    "Оки",
+    "Комиксы"
+  ],
+  "brandCTA": "share",
+  "text": "Приключения Оки #16 · Большой улов\n\nОки отправился за необычным уловом — и оставил берег чуть чище.\n\nВымышленная история. Иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=oki_016_20261104"
+},
+{
+  "id": "okok-oki-comic-017-sunset-bag-20261105",
+  "approved": true,
+  "publishAt": "2026-11-05T20:30:00+07:00",
+  "expiresAt": "2026-11-05T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-017-sunset-bag-20261105.jpg",
+  "topics": [
+    "Оки",
+    "Комиксы"
+  ],
+  "brandCTA": "share",
+  "text": "Приключения Оки #17 · Чемодан для заката\n\nОки собирается встречать закат. Что важнее: большой зонт или место для впечатлений?\n\nВымышленная история. Иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=oki_017_20261105"
+},
+{
+  "id": "okok-visa-quotes-20261104",
+  "approved": true,
+  "publishAt": "2026-11-04T09:00:00+07:00",
+  "expiresAt": "2026-11-04T12:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-text-visa-quotes-20261104.jpg",
+  "topics": [
+    "Визы",
+    "Советы",
+    "Бюджет"
+  ],
+  "brandCTA": "share",
+  "text": "Виза «под ключ»: что входит в цену?\n\nДо оплаты попроси письменную смету: тип визы и услуги, официальные сборы отдельно от работы исполнителя, доплаты, сроки и документы, возврат при отказе или отмене, подтверждение оплаты и возврат оригиналов.\n\nПустая строка — повод уточнить, а не считать услугу бесплатной.\n\nCould you send an itemised quote, including all fees and refund terms?\nПришлите подробную смету со всеми сборами и условиями возврата.\n\nСравнивай одинаковый состав. В OK-OK: «Места» → «Визы» → «Сравнить два визовых предложения».\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=visa_quotes_20261104",
+  "copyButtons": [
+    {
+      "label": "Запросить смету",
+      "text": "Could you send an itemised quote, including all fees and refund terms?"
+    }
+  ]
+},
+{
+  "id": "okok-bag-check-20261104",
+  "approved": true,
+  "publishAt": "2026-11-04T14:00:00+07:00",
+  "expiresAt": "2026-11-04T17:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-text-bag-check-20261104.jpg",
+  "topics": [
+    "Советы",
+    "Безопасность"
+  ],
+  "brandCTA": "share",
+  "text": "Перед уходом: три взгляда\n\nОплатил счёт — не спеши вставать. Посмотри на стол, на стул и под него: телефон, очки и сумка часто оказываются в разных местах.\n\nСобери вещи до того, как выйдешь к дороге или начнёшь вызывать такси. Пара спокойных движений удобнее возвращения через полгорода.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=bag_check_20261104"
+},
+{
+  "id": "okok-quieter-room-20261104",
+  "approved": true,
+  "publishAt": "2026-11-04T19:30:00+07:00",
+  "expiresAt": "2026-11-04T22:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-text-quieter-room-20261104.jpg",
+  "topics": [
+    "Фразы",
+    "Английский",
+    "Советы"
+  ],
+  "brandCTA": "share",
+  "text": "Как попросить номер потише\n\nIs there a quieter room available, please?\nЕсть ли свободный номер потише, пожалуйста?\n\nУточни, нужна ли доплата и можно ли сначала посмотреть расположение. Это просьба проверить варианты, а не обещание бесплатного переселения. Решение лучше получить до переноса вещей.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=quieter_room_20261104",
+  "copyButtons": [
+    {
+      "label": "Попросить номер потише",
+      "text": "Is there a quieter room available, please?"
+    }
+  ]
+},
+{
+  "id": "okok-receipt-note-20261105",
+  "approved": true,
+  "publishAt": "2026-11-05T09:00:00+07:00",
+  "expiresAt": "2026-11-05T12:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-text-receipt-note-20261105.jpg",
+  "topics": [
+    "Советы",
+    "Безопасность"
+  ],
+  "brandCTA": "share",
+  "text": "Чек, который потом можно найти\n\nПосле расчёта сохрани чек, а если снимаешь его на телефон — проверь резкость и весь лист в кадре. Рядом в заметке запиши, за что платил и когда.\n\nНе публикуй фото с чужими телефонами, номерами документов или платёжными реквизитами. Такая заметка помогает вспомнить детали, но сама по себе не гарантирует возврат денег.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=receipt_note_20261105"
+},
+{
+  "id": "okok-route-note-20261105",
+  "approved": true,
+  "publishAt": "2026-11-05T14:00:00+07:00",
+  "expiresAt": "2026-11-05T17:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-text-route-note-20261105.jpg",
+  "topics": [
+    "Карты",
+    "Маршруты",
+    "Советы"
+  ],
+  "brandCTA": "share",
+  "text": "Маршрут без прыжков между приложениями\n\nПеред выходом запиши название места, адрес и один заметный ориентир. Сохрани снимок нужного участка карты и проверь, что он открывается.\n\nСкриншот не строит маршрут и не показывает перекрытия. Если связь пропала, остановись в безопасном месте и сверяй детали, а не иди по экрану через дорогу.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=route_note_20261105"
+},
+{
+  "id": "okok-useful-find-20261105",
+  "approved": true,
+  "publishAt": "2026-11-05T19:30:00+07:00",
+  "expiresAt": "2026-11-05T22:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-text-useful-find-20261105.jpg",
+  "topics": [
+    "Отзывы",
+    "ОбратнаяСвязь",
+    "Советы"
+  ],
+  "brandCTA": "share",
+  "text": "Хорошая находка — это конкретная деталь\n\nХочешь поделиться местом с OK-OK? Вместо «там супер» напиши, что именно оказалось полезно, где вход и когда ты был. Если условие могло измениться — отметь это.\n\nОткрой «Написать автору» на сайте. Сообщение рассмотрят отдельно; отправка не означает, что отзыв уже опубликован. Чужие контакты и документы прикладывать не нужно.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=useful_find_20261105"
+}
 ];
 
 // Required editorial metadata. Never infer a meal or service from one keyword.

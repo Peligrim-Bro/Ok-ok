@@ -172,8 +172,7 @@ hours after publishAt. Ordinary 09:00, 14:00 and 19:30 text slots remain.
 Until 1 November 2026 publish only to Telegram; do not resume TikTok, YouTube or
 Metricool. No repeated routine owner approval is required for this comic task.
 Owner decision 20 October 2026: keep at least seven upcoming calendar days of
-finished, individually reviewed comic pages ready in the queue. The existing
-daily 10:00 Asia/Bangkok comic task replenishes missing future 20:30 slots;
+finished, individually reviewed comic pages ready in the queue. The combined morning “Пополнять OK-OK: посты и Оки” task replenishes missing future 20:30 slots (owner28 October);
 preserve existing episodes and delivery records. Warn if confirmed ready
 coverage falls below 48 hours. Scripts or unmerged PRs are not ready coverage.
 The seven-page buffer adds about 4.1 MB of JPEG assets to the former 27.8 MB
@@ -192,3 +191,7 @@ Text posts retain sendMessage and their existing
 text hashes. Ambiguous photo sends are never retried automatically or replaced
 with text. New comics require reviewed content; do not invent real visits,
 prices or documentary depictions. The approved published comic is the public Oki style reference.
+
+## Buffer checkpoint — 30 October 2026
+
+Thirteen new reviewed entries: seven distinct Oki pages #011–017 for30 October–5 November20:30 and six ordinary posts for4–5 November. Visa checklist is4 November09:00 with exact enquiry-copy button. Existing slots/media remain unchanged. Source/provenance and delivery hashes: docs/CHANNEL_BUFFER_20261030.md. Offline audit ready:true with no future gaps/collisions/missing/duplicate files. Deployment and actual Telegram delivery require separate evidence. Text and comic replenishment now share one morning automation; the separate comic task is paused. No automation changes are made by this source update.
