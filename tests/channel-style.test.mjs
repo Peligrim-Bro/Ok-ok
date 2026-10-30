@@ -5,7 +5,7 @@ import {channelPresentation} from '../channel-presentation.mjs';
 
 test('reviewed queue has one complete bold heading and preserves every exact site link',()=>{
   const batch=POSTS.filter(p=>Date.parse(p.publishAt)>=Date.parse('2026-10-22T14:00:00+07:00'));
-  assert.equal(batch.length,27);
+  assert.equal(batch.length,58);
   for(const p of batch){
     const presentation=channelPresentation(p), heading=p.text.split('\n')[0];
     assert.equal(presentation.entities.filter(e=>e.type==='bold'&&e.offset===0&&e.length===heading.length).length,1,p.id);

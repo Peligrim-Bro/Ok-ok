@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "project": "OK-OK.click",
-  "updatedAt": "2026-10-28",
+  "updatedAt": "2026-10-30",
   "decisions": [
     {
       "id": "hosting",
@@ -110,17 +110,18 @@
     },
     {
       "id": "channel-media-buffer",
-      "status": "in_progress",
+      "status": "needs_verification",
       "tags": [
         "channel"
       ],
-      "next": "Ordinary text/media coverage is prepared through 3 November from main dcbe79f; finish mandatory release checks, merge/deploy verification and observe receipts. Combined audit remains false only for separate 20:30 comics.",
+      "next": "Owner30 Oct:13 new reviewed entries close ordinary and comic seven-day coverage through5 Nov; local audit ready:true. Complete release checks and deployment; receipts/enablement remain separately observed.",
       "sources": [
         "CHANNEL_PUBLISHING.md",
         "scripts/audit-channel-queue.mjs",
         "docs/CHANNEL_TEXT_BUFFER_20261026.md",
         "docs/CHANNEL_TEXT_BUFFER_20261027.md",
-        "docs/CHANNEL_TEXT_BUFFER_20261028.md"
+        "docs/CHANNEL_TEXT_BUFFER_20261028.md",
+        "docs/CHANNEL_BUFFER_20261030.md"
       ]
     },
     {
