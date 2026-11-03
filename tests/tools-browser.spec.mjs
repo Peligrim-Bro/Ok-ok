@@ -159,7 +159,7 @@ test('Travel Reads age filters and three complete bilingual stories',async({page
  await expect(page.locator('.book:visible')).toHaveCount(1);
  await page.locator('[data-age="3-6"]').click();
  await expect(page.locator('#readerStory p')).toHaveCount(1);await expect(page.locator('#sceneProgress')).toContainText('1 / 8');
- await expect(page.locator('#readerStory')).toContainText('звёзд');await page.locator('#sceneNext').click();await expect(page.locator('#sceneProgress')).toContainText('2 / 8');
+ await expect(page.locator('#readerStory')).toContainText('звёзд');await page.locator('#sceneNext').click();await expect(page.locator('#sceneProgress')).toContainText('2 / 8');await expect(page.locator('#sceneTrack')).toHaveAttribute('aria-valuenow','2');
  await page.locator('#readerClose').click();
  await page.locator('[data-filter="7-10"]').click();
  await expect(page.locator('.book:visible')).toHaveCount(1);
