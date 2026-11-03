@@ -4,6 +4,9 @@ on:
     paths:
       - 'split-bill.html'
       - 'inspect.html'
+      - 'tools.html'
+      - 'scripts/apply-standalone-tools.mjs'
+      - 'gloss-build.mjs'
       - 'tools/**'
       - 'tests/*tools*'
       - 'tests/tools-browser.spec.mjs'
@@ -42,6 +45,14 @@ jobs:
           JS
         env:
           NODE_OPTIONS: --experimental-vm-modules
+      - name: Verify integrated site build
+        run: |
+          npm run build
+          test -f site/public/tools.html
+          test -f site/public/split-bill.html
+          test -f site/public/inspect.html
+          test -f site/public/tools/inspect-storage.mjs
+          grep -q okok-tools-link-v1 site/public/index.html
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
       - name: Browser smoke checks
