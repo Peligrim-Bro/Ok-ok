@@ -131,4 +131,6 @@ test('Travel Reads shelf loads on mobile and keeps bookmark locally',async({page
  await expect(page.locator('#readingProgress')).toHaveValue('last-passenger');
  await page.locator('#lang').click();
  await expect(page.locator('#title')).toHaveText('Travel Reads');
+ await expect(page.locator('#bookmarkLabel')).toHaveText('Save a book to your shelf');
+ await expect(page.locator('#readingProgress')).toHaveValue('last-passenger');
 });
