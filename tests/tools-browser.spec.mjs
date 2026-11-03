@@ -189,3 +189,16 @@ test('Travel Reads swipe advances scene and keeps progress after reopening',asyn
  await expect(page.locator('#sceneProgress')).toContainText('2 / 8');
  await expect(page.locator('#readerStory p')).toHaveClass(/turn/);
 });
+
+test('Travel Reads fits a narrow mobile viewport without horizontal page overflow',async({page})=>{
+ await page.setViewportSize({width:375,height:812});
+ await page.goto(url('/site/public/travel-reads.html'));
+ await page.locator('[data-age="3-6"]').click();
+ await expect(page.locator('#readerStory')).toBeVisible();
+ const dims=await page.evaluate(()=>({body:document.documentElement.scrollWidth,viewport:innerWidth,reader:document.getElementById('readerStory').getBoundingClientRect().width}));
+ expect(dims.body).toBeLessThanOrEqual(dims.viewport+1);
+ expect(dims.reader).toBeLessThanOrEqual(dims.viewport);
+ await page.locator('#sceneNext').click();
+ await expect(page.locator('#sceneProgress')).toContainText('2 / 8');
+ await expect(page.locator('#sceneTrack')).toHaveAttribute('aria-valuenow','2');
+});
