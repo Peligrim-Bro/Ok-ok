@@ -173,5 +173,19 @@ test('Travel Reads age filters and three complete bilingual stories',async({page
  await expect(page.locator('#book2')).toHaveText('Room Without a Guest');
  await page.locator('[data-age="adult"]').nth(1).click();
  await expect(page.locator('#readerStory p')).toHaveCount(1);await expect(page.locator('#sceneProgress')).toContainText('1 / 8');
- await expect(page.locator('#readerStory')).toContainText('Somchai');
+ await expect(page.locator('#readerStory')).toContainText('Pattaya');
+});
+
+test('Travel Reads swipe advances scene and keeps progress after reopening',async({page})=>{
+ await page.goto(url('/site/public/travel-reads.html'));
+ await page.locator('[data-age="3-6"]').click();
+ const area=page.locator('#readerStory');
+ await expect(page.locator('#sceneProgress')).toContainText('1 / 8');
+ await area.dispatchEvent('touchstart',{touches:[{clientX:270,clientY:240}]});
+ await area.dispatchEvent('touchend',{changedTouches:[{clientX:95,clientY:244}]});
+ await expect(page.locator('#sceneProgress')).toContainText('2 / 8');
+ await page.locator('#readerClose').click();
+ await page.locator('[data-age="3-6"]').click();
+ await expect(page.locator('#sceneProgress')).toContainText('2 / 8');
+ await expect(page.locator('#readerStory p')).toHaveClass(/turn/);
 });
