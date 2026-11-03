@@ -237,3 +237,15 @@ test('Travel Reads detective has a complete bilingual ending',async({page})=>{
  await expect(page.locator('#readerStory')).toContainText('sails away');
  await expect(page.locator('#sceneProgress')).toContainText('8 / 8');
 });
+
+test('Travel Reads labels all five books as readable, not coming soon',async({page})=>{
+ await page.goto(url('/site/public/travel-reads.html'));
+ await expect(page.locator('.book')).toHaveCount(5);
+ await expect(page.locator('#status1')).toContainText('Читать сейчас');
+ await expect(page.locator('#status2')).toContainText('Читать сейчас');
+ await expect(page.locator('#status3')).toContainText('Читать сейчас');
+ await expect(page.locator('#note')).toContainText('Пять коротких историй');
+ await page.locator('#lang').click();
+ await expect(page.locator('#status1')).toContainText('Read now');
+ await expect(page.locator('#status3')).toContainText('Read now');
+});
