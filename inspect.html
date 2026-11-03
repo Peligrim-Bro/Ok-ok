@@ -20,8 +20,18 @@ function render(){document.documentElement.lang=lang;document.querySelectorAll('
 views.forEach((v,i)=>{const box=document.createElement('div');box.className='slot';const name=document.createElement('strong');name.textContent=labels[lang].angles[i];box.append(name);const file=document.createElement('input');file.type='file';file.accept='image/*';file.setAttribute('aria-label',labels[lang].angles[i]);file.onchange=()=>capture(v,file.files?.[0]);box.append(file);const photo=store[mode].photos[v];if(photo){const image=document.createElement('img');image.src=photo.dataUrl;image.alt=labels[lang].angles[i];box.append(image);const remove=document.createElement('button');remove.textContent='×';remove.setAttribute('aria-label','Remove '+labels[lang].angles[i]);remove.onclick=()=>{delete store[mode].photos[v];save();render()};box.append(remove)}$('slots').append(box)})}
 let pendingSave=Promise.resolve();
 function save(){const snapshot=structuredClone(store);pendingSave=pendingSave.catch(()=>{}).then(()=>saveInspection(snapshot)).catch(()=>{$('status').textContent=lang==='ru'?'Не удалось сохранить фотографии на устройстве':'Could not save photos on this device'})}
-try{const s=await loadInspection();if(s?.START?.photos&&s?.RETURN?.photos)store=s}catch{
- try{const old=JSON.parse(localStorage.getItem('okok_inspect_v1')||'null');if(old?.START?.photos&&old?.RETURN?.photos){store=old;pendingSave=saveInspection(structuredClone(store)).then(()=>localStorage.removeItem('okok_inspect_v1')).catch(()=>{$('status').textContent=lang==='ru'?'Не удалось перенести данные осмотра':'Could not migrate inspection data'})}}catch{}
+try{
+ const s=await loadInspection();
+ if(s?.START?.photos&&s?.RETURN?.photos)store=s;
+ else{
+  const legacy=JSON.parse(localStorage.getItem('okok_inspect_v1')||'null');
+  if(legacy?.START?.photos&&legacy?.RETURN?.photos){
+   store=legacy;
+   pendingSave=saveInspection(structuredClone(store)).then(()=>localStorage.removeItem('okok_inspect_v1')).catch(()=>{$('status').textContent=lang==='ru'?'Не удалось перенести данные осмотра':'Could not migrate inspection data'});
+  }
+ }
+}catch{
+ $('status').textContent=lang==='ru'?'Локальное хранилище недоступно':'Local storage unavailable';
 }
 async function capture(view,file){if(!file)return;const token=epoch.capture(),targetMode=mode;if(!file.type.startsWith('image/')||file.size>15*1024*1024){$('status').textContent=msg('error');return}
 try{const url=URL.createObjectURL(file);const img=new Image();try{await new Promise((resolve,reject)=>{img.onload=resolve;img.onerror=reject;img.src=url})}finally{URL.revokeObjectURL(url)}
