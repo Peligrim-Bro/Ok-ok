@@ -108,14 +108,19 @@ test('mobile built-site navigation reaches both tools',async({page})=>{
  await expect(page).toHaveURL(/site\/public\/tools\.html$/);
 });
 
-test('built mobile homepage exposes a working Tools entry',async({page})=>{
+test('built mobile homepage shows compact tools and illustrated bookshelf without floating overlays',async({page})=>{
  await page.setViewportSize({width:390,height:844});
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto(url('/site/public/index.html'),{waitUntil:'domcontentloaded'});
- const link=page.locator('a.okok-tools-entry[href="./tools.html"]');
- await expect(link).toHaveCount(1);
- await expect(link).toBeVisible();
- await link.click({noWaitAfter:true,timeout:8000});
+ const panel=page.locator('#okok-new-home');
+ await expect(panel).toHaveCount(1);
+ await expect(panel.locator('a[href="./split-bill.html"]')).toBeVisible();
+ await expect(panel.locator('a[href="./inspect.html"]')).toBeVisible();
+ await expect(panel.locator('.okok-book-cover svg')).toHaveCount(3);
+ await expect(page.locator('.okok-tools-entry,#okok-reads-entry-v1')).toHaveCount(0);
+ const sizes=await panel.locator('.okok-book-link').evaluateAll(els=>els.map(el=>({right:el.getBoundingClientRect().right,scroll:document.documentElement.scrollWidth,width:innerWidth})));
+ expect(sizes.every(x=>x.right<=x.width+2)).toBe(true);
+ await panel.locator('a[href="./tools.html"]').first().click({noWaitAfter:true});
  await page.waitForURL(/site\/public\/tools\.html$/,{waitUntil:'commit',timeout:8000});
  await expect(page.locator('a[href="./split-bill.html"]')).toBeVisible();
  await expect(page.locator('a[href="./inspect.html"]')).toBeVisible();
