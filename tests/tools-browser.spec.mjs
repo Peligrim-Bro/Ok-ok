@@ -115,8 +115,8 @@ test('built mobile homepage exposes a working Tools entry',async({page})=>{
  const link=page.locator('a.okok-tools-entry[href="./tools.html"]');
  await expect(link).toHaveCount(1);
  await expect(link).toBeVisible();
- await link.click();
- await expect(page).toHaveURL(/site\/public\/tools\.html$/);
+ await link.click({noWaitAfter:true,timeout:8000});
+ await page.waitForURL(/site\/public\/tools\.html$/,{waitUntil:'commit',timeout:8000});
  await expect(page.locator('a[href="./split-bill.html"]')).toBeVisible();
  await expect(page.locator('a[href="./inspect.html"]')).toBeVisible();
 });
