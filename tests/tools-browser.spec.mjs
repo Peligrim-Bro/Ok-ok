@@ -214,3 +214,15 @@ test('Travel Reads supports keyboard page turning and Escape to shelf',async({pa
  await page.keyboard.press('Escape');
  await expect(page.locator('#reader')).toBeHidden();
 });
+
+test('Travel Reads thriller is complete in Russian and English',async({page})=>{
+ await page.goto(url('/site/public/travel-reads.html'));
+ await page.locator('.book').nth(2).click();
+ await expect(page.locator('#readerStory')).toContainText('Ильи');
+ await expect(page.locator('#sceneProgress')).toContainText('1 / 8');
+ for(let n=1;n<8;n++)await page.locator('#sceneNext').click();
+ await expect(page.locator('#readerStory')).toContainText('подменить');
+ await page.locator('#lang').click();
+ await expect(page.locator('#readerStory')).toContainText('replaced');
+ await expect(page.locator('#sceneProgress')).toContainText('8 / 8');
+});
