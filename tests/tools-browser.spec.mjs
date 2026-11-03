@@ -99,8 +99,11 @@ test('mobile built-site navigation reaches both tools',async({page})=>{
  await page.locator('a[href="./split-bill.html"]').click();
  await expect(page).toHaveURL(/site\/public\/split-bill\.html$/);
  await expect(page.locator('body')).toBeVisible();
- await page.goBack();
+ await page.locator('header a[href="./tools.html"]').click();
+ await expect(page).toHaveURL(/site\/public\/tools\.html$/);
  await page.locator('a[href="./inspect.html"]').click();
  await expect(page).toHaveURL(/site\/public\/inspect\.html$/);
  await expect(page.locator('body')).toBeVisible();
+ await page.locator('header a[href="./tools.html"]').click();
+ await expect(page).toHaveURL(/site\/public\/tools\.html$/);
 });
