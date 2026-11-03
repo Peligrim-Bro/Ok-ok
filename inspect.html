@@ -41,6 +41,7 @@ $('start').onclick=()=>modeTo('START');$('return').onclick=()=>modeTo('RETURN');
 $('pdf').onclick=async()=>{await pendingSave.catch(()=>{});const data=snapshotInspection(mode,store);if(views.slice(0,5).some(v=>!data.photos[v])){$('status').textContent=msg('required');return}$('pdf').disabled=true;$('status').textContent='…';
 try{const lib=await import('https://cdn.jsdelivr.net/npm/jspdf@2.5.2/+esm');const pdf=new lib.jsPDF({orientation:'portrait',unit:'mm',format:'a4'});const title='OK-OK INSPECT '+data.mode;
 const addText=(text,x,y,width=185,maxLines=2)=>{const bitmap=pdfTextImage(text,{maxLines});pdf.addImage(bitmap.dataUrl,'PNG',x,y,width,width*bitmap.ratio)};
+const addPhoto=(dataUrl,x,y)=>{const {width,height}=pdf.getImageProperties(dataUrl);const scale=Math.min(90/width,90/height);const w=width*scale,h=height*scale;pdf.addImage(dataUrl,'JPEG',x+(90-w)/2,y+(90-h)/2,w,h,undefined,'FAST')};
 const writeHeader=()=>{
  addText(title,12,10,185,1);
  addText('Date: '+new Date().toISOString(),12,20,185,1);
@@ -55,11 +56,11 @@ for(let i=0;i<5;i++){
  const idx=i<4?i:0;
  const x=12+(idx%2)*95,y=57+Math.floor(idx/2)*108;
  pdf.setFontSize(10);pdf.text(views[i].toUpperCase(),x,y);
- pdf.addImage(p.dataUrl,'JPEG',x,y+5,90,90,undefined,'FAST');
+ addPhoto(p.dataUrl,x,y+5);
 }
 if(data.photos.extra){
  pdf.setFontSize(10);pdf.text('EXTRA DAMAGE',108,57);
- pdf.addImage(data.photos.extra.dataUrl,'JPEG',108,62,90,90,undefined,'FAST');
+ addPhoto(data.photos.extra.dataUrl,108,62);
 }
 addText('Notes: '+data.damageNotes,12,273,185,2);
 const blob=pdf.output('blob');revoke();fallbackUrl=URL.createObjectURL(blob);$('openPdf').href=fallbackUrl;$('openPdf').hidden=false;const name='OKOK_INSPECT_'+data.mode+'_'+sanitizeInspectionFilename(data.plateNumber)+'.pdf';
