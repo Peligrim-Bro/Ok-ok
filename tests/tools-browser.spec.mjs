@@ -120,3 +120,15 @@ test('built mobile homepage exposes a working Tools entry',async({page})=>{
  await expect(page.locator('a[href="./split-bill.html"]')).toBeVisible();
  await expect(page.locator('a[href="./inspect.html"]')).toBeVisible();
 });
+
+test('Travel Reads shelf loads on mobile and keeps bookmark locally',async({page})=>{
+ await page.setViewportSize({width:390,height:844});
+ await page.goto(url('/site/public/travel-reads.html'));
+ await expect(page.locator('.book')).toHaveCount(3);
+ await expect(page.locator('#title')).toHaveText('Попутчик');
+ await page.locator('#readingProgress').selectOption('last-passenger');
+ await page.reload();
+ await expect(page.locator('#readingProgress')).toHaveValue('last-passenger');
+ await page.locator('#lang').click();
+ await expect(page.locator('#title')).toHaveText('Travel Reads');
+});
