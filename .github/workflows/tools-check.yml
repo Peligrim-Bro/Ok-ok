@@ -44,4 +44,4 @@ jobs:
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
       - name: Browser smoke checks
-        run: npx playwright test tests/tools-browser.spec.mjs --project=chromium --workers=1
+        run: npx playwright test tests/tools-browser.spec.mjs --browser=chromium --workers=1
