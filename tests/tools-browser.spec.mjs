@@ -249,3 +249,15 @@ test('Travel Reads labels all five books as readable, not coming soon',async({pa
  await expect(page.locator('#status1')).toContainText('Read now');
  await expect(page.locator('#status3')).toContainText('Read now');
 });
+
+test('Travel Reads bookmarks a kids story across language switch and reload',async({page})=>{
+ await page.goto(url('/site/public/travel-reads.html'));
+ await page.locator('#readingProgress').selectOption('fox');
+ await page.locator('#lang').click();
+ await expect(page.locator('#readingProgress')).toHaveValue('fox');
+ await expect(page.locator('#readingProgress option[value="fox"]')).toHaveText('The Little Fox and the Star Trail');
+ await page.reload();
+ await expect(page.locator('#readingProgress')).toHaveValue('fox');
+ await page.locator('[data-age="3-6"]').click();
+ await expect(page.locator('#sceneTrack')).toHaveAttribute('aria-valuemax','8');
+});
