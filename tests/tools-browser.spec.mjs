@@ -126,6 +126,21 @@ test('built mobile homepage shows compact tools and illustrated bookshelf withou
  await expect(page.locator('a[href="./inspect.html"]')).toBeVisible();
 });
 
+test('diagnose existing places filter and favorite placement in generated homepage',async({page})=>{
+ await page.setViewportSize({width:390,height:844});
+ await page.goto(url('/site/public/index.html'),{waitUntil:'domcontentloaded'});
+ const result=await page.evaluate(()=>{
+  const text=x=>(x.textContent||'').replace(/\\s+/g,' ').trim();
+  const items=[...document.querySelectorAll('button,a')];
+  const filter=items.find(x=>/^Фильтры$|^Filters$/i.test(text(x)));
+  const favorite=items.find(x=>/^(Моя любимая локация|Любимая локация|Favorite location)$/i.test(text(x)));
+  const places=[...document.querySelectorAll('h1,h2,h3,h4')].find(x=>/Куда пойти|Where to go/i.test(text(x)));
+  const details=x=>x?{tag:x.tagName,cls:x.className,html:x.outerHTML.slice(0,450),parent:x.parentElement?.outerHTML.slice(0,650)}:null;
+  return {filter:details(filter),favorite:details(favorite),places:details(places),panel:details(document.querySelector('#okok-new-home'))};
+ });
+ console.log('HOMEPAGE_PLACEMENT_DIAGNOSTIC',JSON.stringify(result));
+ expect(result.places).not.toBeNull();
+});
 test('Travel Reads shelf loads on mobile and keeps bookmark locally',async({page})=>{
  await page.setViewportSize({width:390,height:844});
  await page.goto(url('/site/public/travel-reads.html'));
