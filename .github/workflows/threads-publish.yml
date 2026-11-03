@@ -1,0 +1,65 @@
+name: Publish to Threads (manual test)
+
+on:
+  workflow_dispatch:
+    inputs:
+      text:
+        description: "Threads post text (max 500 characters)"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Publish text to Threads
+        env:
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          POST_TEXT: ${{ inputs.text }}
+        run: |
+          python3 - <<'PY'
+          import json, os, sys, urllib.parse, urllib.request, urllib.error
+          token = os.environ.get("THREADS_ACCESS_TOKEN", "")
+          text = os.environ.get("POST_TEXT", "").strip()
+          if not token:
+              sys.exit("Missing THREADS_ACCESS_TOKEN secret")
+          if not text or len(text) > 500:
+              sys.exit("Post must be 1-500 characters")
+
+          def call(path, params):
+              body = urllib.parse.urlencode(params).encode()
+              req = urllib.request.Request("https://graph.threads.net/v1.0/" + path, data=body, method="POST")
+              try:
+                  with urllib.request.urlopen(req, timeout=25) as response:
+                      return json.load(response)
+              except urllib.error.HTTPError as e:
+                  # Avoid logging tokens or response payloads containing sensitive data.
+                  sys.exit(f"Threads API returned HTTP {e.code} at {path.split('/')[-1]}")
+
+          profile_req = urllib.request.Request(
+              "https://graph.threads.net/v1.0/me?fields=id",
+              headers={"Authorization": "Bearer " + token},
+          )
+          try:
+              with urllib.request.urlopen(profile_req, timeout=25) as response:
+                  user_id = json.load(response)["id"]
+          except urllib.error.HTTPError as e:
+              sys.exit(f"Threads profile lookup returned HTTP {e.code}")
+
+          creation = call(f"{user_id}/threads", {
+              "media_type": "TEXT",
+              "text": text,
+              "access_token": token,
+          })
+          if "id" not in creation:
+              sys.exit("Threads did not return a creation ID")
+          published = call(f"{user_id}/threads_publish", {
+              "creation_id": creation["id"],
+              "access_token": token,
+          })
+          print("Published Threads post ID:", published.get("id", "(not returned)"))
+          PY
