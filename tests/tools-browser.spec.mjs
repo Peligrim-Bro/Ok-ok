@@ -37,3 +37,13 @@ test('SPLIT page loads without module errors',async({page})=>{
  await expect(page.locator('body')).toContainText('SPLIT');
  expect(errors).toEqual([]);
 });
+
+test('INSPECT blocks incomplete PDF and supports English',async({page})=>{
+ await page.goto(url('/inspect.html'));
+ await page.locator('#pdf').click();
+ await expect(page.locator('#status')).toContainText('Добавьте пять');
+ await page.locator('#lang').click();
+ await expect(page.locator('#pdf')).toHaveText('Create PDF');
+ await page.locator('#pdf').click();
+ await expect(page.locator('#status')).toContainText('Add all five');
+});
