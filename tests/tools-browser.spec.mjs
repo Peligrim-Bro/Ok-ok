@@ -47,3 +47,18 @@ test('INSPECT blocks incomplete PDF and supports English',async({page})=>{
  await page.locator('#pdf').click();
  await expect(page.locator('#status')).toContainText('Add all five');
 });
+
+test('INSPECT captures photo and keeps it after reload',async({page})=>{
+ await page.goto(url('/inspect.html'));
+ const image=await page.evaluate(()=>{
+  const canvas=document.createElement('canvas');canvas.width=240;canvas.height=120;
+  canvas.getContext('2d').fillRect(0,0,240,120);
+  return canvas.toDataURL('image/png').split(',')[1];
+ });
+ await page.locator('#slots input[type=file]').first().setInputFiles({name:'front.png',mimeType:'image/png',buffer:Buffer.from(image,'base64')});
+ await expect(page.locator('#progress')).toHaveText('1/5');
+ await expect(page.locator('#slots img')).toHaveCount(1);
+ await page.reload();
+ await expect(page.locator('#progress')).toHaveText('1/5');
+ await expect(page.locator('#slots img')).toHaveCount(1);
+});
