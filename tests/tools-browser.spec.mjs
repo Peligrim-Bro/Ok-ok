@@ -143,12 +143,13 @@ test('Travel Reads shelf loads on mobile and keeps bookmark locally',async({page
  await expect(page.locator('#fontSizeLabel')).toHaveText('Text: 90%');
 });
 
-test('Travel Reads opens accessible preview without inventing unpublished story',async({page})=>{
+test('Travel Reads opens completed detective and returns to shelf',async({page})=>{
  await page.goto(url('/site/public/travel-reads.html'));
  await page.locator('.book').first().click();
  await expect(page.locator('#reader')).toBeVisible();
  await expect(page.locator('#readerTitle')).toHaveText('Последний пассажир');
- await expect(page.locator('#readerStatus')).toContainText('ещё не опубликован');
+ await expect(page.locator('#readerStory')).toContainText('паром');
+ await expect(page.locator('#sceneProgress')).toContainText('1 / 8');
  await page.locator('#readerClose').click();
  await expect(page.locator('#reader')).toBeHidden();
 });
@@ -224,5 +225,15 @@ test('Travel Reads thriller is complete in Russian and English',async({page})=>{
  await expect(page.locator('#readerStory')).toContainText('подменить');
  await page.locator('#lang').click();
  await expect(page.locator('#readerStory')).toContainText('replaced');
+ await expect(page.locator('#sceneProgress')).toContainText('8 / 8');
+});
+
+test('Travel Reads detective has a complete bilingual ending',async({page})=>{
+ await page.goto(url('/site/public/travel-reads.html'));
+ await page.locator('.book').first().click();
+ for(let n=1;n<8;n++)await page.locator('#sceneNext').click();
+ await expect(page.locator('#readerStory')).toContainText('уплыл');
+ await page.locator('#lang').click();
+ await expect(page.locator('#readerStory')).toContainText('sails away');
  await expect(page.locator('#sceneProgress')).toContainText('8 / 8');
 });
