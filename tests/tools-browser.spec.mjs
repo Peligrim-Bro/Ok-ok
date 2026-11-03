@@ -140,6 +140,11 @@ test('diagnose existing places filter and favorite placement in generated homepa
  });
  console.log('HOMEPAGE_PLACEMENT_DIAGNOSTIC',JSON.stringify(result));
  expect(result.places).not.toBeNull();
+ await expect(page.locator('.home-panel[aria-labelledby="places-title"] .okok-places-filter')).toHaveCount(1);
+ await expect(page.locator('.home-panel[aria-labelledby="places-title"] .places-rail button[data-spot="1"]')).toHaveCount(1);
+ const sizes=await page.locator('.home-panel[aria-labelledby="places-title"] .places-rail button[data-spot="1"]').evaluate(el=>({width:el.getBoundingClientRect().width,parent:el.parentElement.getBoundingClientRect().width}));
+ expect(sizes.width).toBeLessThan(200);
+ expect(sizes.width).toBeLessThan(sizes.parent);
 });
 test('Travel Reads shelf loads on mobile and keeps bookmark locally',async({page})=>{
  await page.setViewportSize({width:390,height:844});
