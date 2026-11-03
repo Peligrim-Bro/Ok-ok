@@ -53,7 +53,7 @@ jobs:
           test -f site/public/inspect.html
           test -f site/public/tools/inspect-storage.mjs
           grep -q okok-tools-link-v1 site/public/index.html
-      - name: Install Chromium
-        run: npx playwright install --with-deps chromium
+      - name: Install Chromium and WebKit
+        run: npx playwright install --with-deps chromium webkit
       - name: Browser smoke checks
         run: npx playwright test --config=tests/tools-playwright.config.cjs
