@@ -8,6 +8,7 @@
 </main><script type="module">
 import {sanitizeInspectionFilename,createCaptureEpoch,snapshotInspection} from './tools/inspect-helpers.mjs';
 import {loadInspection,saveInspection} from './tools/inspect-storage.mjs';
+import {pdfTextImage} from './tools/inspect-pdf-text.mjs';
 const $=id=>document.getElementById(id),epoch=createCaptureEpoch();
 const labels={ru:{intro:'Осмотр байка до и после аренды. Данные остаются на устройстве.',rental:'Прокат',plate:'Госномер',odo:'Пробег',notes:'Замечания / повреждения',photos:'Фото байка',photoInfo:'Пять обязательных ракурсов. Время и режим фиксируются на снимке; GPS — только с разрешения.',pdf:'Создать PDF',clear:'Очистить этот осмотр',open:'Открыть PDF',angles:['Спереди','Справа','Сзади','Слева','Приборная панель','Дополнительное повреждение'],error:'Не удалось обработать фото',required:'Добавьте пять обязательных фото',saved:'PDF готов',fail:'PDF не создан',confirm:'Удалить данные только этого осмотра?',missing:'Для PDF нужен интернет при первой загрузке библиотеки'},en:{intro:'Inspect your rental bike before and after. Data stays on this device.',rental:'Rental company',plate:'License plate',odo:'Odometer',notes:'Notes / damage',photos:'Bike photos',photoInfo:'Five required views. Photos include timestamp and mode; GPS only with permission.',pdf:'Create PDF',clear:'Clear this inspection',open:'Open PDF',angles:['Front','Right','Back','Left','Dashboard','Additional damage'],error:'Could not process photo',required:'Add all five required photos',saved:'PDF ready',fail:'Could not create PDF',confirm:'Clear only this inspection?',missing:'First-time PDF library loading requires internet'}};
 const views=['front','right','back','left','dash','extra'];const fields=['rentalName','plateNumber','odometer','damageNotes'];
@@ -28,9 +29,30 @@ const ratio=Math.min(1,1200/Math.max(img.naturalWidth,img.naturalHeight)),canvas
 function modeTo(next){epoch.invalidate();mode=next;revoke();render()}
 $('start').onclick=()=>modeTo('START');$('return').onclick=()=>modeTo('RETURN');$('lang').onclick=()=>{lang=lang==='ru'?'en':'ru';localStorage.setItem('okok_lang',lang);render()};fields.forEach(f=>$(f).oninput=()=>{store[mode][f]=$(f).value;save()});$('clear').onclick=()=>{if(!confirm(msg('confirm')))return;epoch.invalidate();store[mode]=blank();save();revoke();render()};
 $('pdf').onclick=async()=>{await pendingSave.catch(()=>{});const data=snapshotInspection(mode,store);if(views.slice(0,5).some(v=>!data.photos[v])){$('status').textContent=msg('required');return}$('pdf').disabled=true;$('status').textContent='…';
-try{const lib=await import('https://cdn.jsdelivr.net/npm/jspdf@2.5.2/+esm');const pdf=new lib.jsPDF({orientation:'portrait',unit:'mm',format:'a4'});const title='OK-OK INSPECT '+data.mode;const writeHeader=()=>{pdf.setFontSize(16);pdf.text(title,12,15);pdf.setFontSize(10);pdf.text('Date: '+new Date().toISOString(),12,22);pdf.text('Rental: '+data.rentalName.replace(/[^\x20-\x7e]/g,'?').slice(0,70),12,28);pdf.text('Plate: '+data.plateNumber.replace(/[^\x20-\x7e]/g,'?').slice(0,70),12,34);pdf.text('Odometer: '+data.odometer.slice(0,40),12,40)};
-writeHeader();for(let i=0;i<views.length;i++){const p=data.photos[views[i]];if(!p)continue;if(i===4){pdf.addPage();writeHeader()}const idx=i<4?i:i-4;const x=12+(idx%2)*95,y=50+Math.floor(idx/2)*115;pdf.setFontSize(10);pdf.text(views[i].toUpperCase(),x,y);pdf.addImage(p.dataUrl,'JPEG',x,y+5,90,90,undefined,'FAST')}
-pdf.setFontSize(9);pdf.text('Notes: '+data.damageNotes.replace(/[^\x20-\x7e]/g,'?').slice(0,100),12,278);const blob=pdf.output('blob');revoke();fallbackUrl=URL.createObjectURL(blob);$('openPdf').href=fallbackUrl;$('openPdf').hidden=false;const name='OKOK_INSPECT_'+data.mode+'_'+sanitizeInspectionFilename(data.plateNumber)+'.pdf';
+try{const lib=await import('https://cdn.jsdelivr.net/npm/jspdf@2.5.2/+esm');const pdf=new lib.jsPDF({orientation:'portrait',unit:'mm',format:'a4'});const title='OK-OK INSPECT '+data.mode;
+const addText=(text,x,y,width=185,maxLines=2)=>{const bitmap=pdfTextImage(text,{maxLines});pdf.addImage(bitmap.dataUrl,'PNG',x,y,width,width*bitmap.ratio)};
+const writeHeader=()=>{
+ addText(title,12,10,185,1);
+ addText('Date: '+new Date().toISOString(),12,20,185,1);
+ addText('Rental: '+data.rentalName,12,28,185,1);
+ addText('Plate: '+data.plateNumber,12,36,185,1);
+ addText('Odometer: '+data.odometer,12,44,185,1);
+};
+writeHeader();
+for(let i=0;i<5;i++){
+ const p=data.photos[views[i]];if(!p)continue;
+ if(i===4){pdf.addPage();writeHeader()}
+ const idx=i<4?i:0;
+ const x=12+(idx%2)*95,y=57+Math.floor(idx/2)*108;
+ pdf.setFontSize(10);pdf.text(views[i].toUpperCase(),x,y);
+ pdf.addImage(p.dataUrl,'JPEG',x,y+5,90,90,undefined,'FAST');
+}
+if(data.photos.extra){
+ pdf.setFontSize(10);pdf.text('EXTRA DAMAGE',108,57);
+ pdf.addImage(data.photos.extra.dataUrl,'JPEG',108,62,90,90,undefined,'FAST');
+}
+addText('Notes: '+data.damageNotes,12,273,185,2);
+const blob=pdf.output('blob');revoke();fallbackUrl=URL.createObjectURL(blob);$('openPdf').href=fallbackUrl;$('openPdf').hidden=false;const name='OKOK_INSPECT_'+data.mode+'_'+sanitizeInspectionFilename(data.plateNumber)+'.pdf';
 if(navigator.canShare&&navigator.share&&navigator.canShare({files:[new File([blob],name,{type:'application/pdf'})]})){try{await navigator.share({files:[new File([blob],name,{type:'application/pdf'})],title})}catch(e){if(e.name!=='AbortError'){const a=document.createElement('a');a.href=fallbackUrl;a.download=name;a.click()}}}else{const a=document.createElement('a');a.href=fallbackUrl;a.download=name;a.click()}$('status').textContent=msg('saved')}catch(e){$('status').textContent=msg('fail')+' — '+msg('missing')}finally{$('pdf').disabled=false}};
 render();
 </script></body></html>
