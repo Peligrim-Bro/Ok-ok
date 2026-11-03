@@ -1,7 +1,7 @@
 import {readFileSync,writeFileSync,copyFileSync,mkdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 const root='site/public/';
-for(const name of ['split-bill.html','inspect.html','tools.html'])copyFileSync(name,root+name);
+for(const name of ['split-bill.html','inspect.html','tools.html','travel-reads.html'])copyFileSync(name,root+name);
 mkdirSync(root+'tools',{recursive:true});
 for(const name of ['split-math.mjs','split-ui-adapter.mjs','receipt-ocr.mjs','inspect-helpers.mjs','inspect-storage.mjs','inspect-pdf-text.mjs'])copyFileSync('tools/'+name,root+'tools/'+name);
 const path=root+'index.html';
@@ -14,4 +14,12 @@ if(!html.includes(marker)){
  html=html.replace('</head>',css+'</head>').replace('</body>',js+'</body>');
  writeFileSync(path,html);
 }
-console.log('OK-OK SPLIT / INSPECT preview tools linked');
+// Keep the reading shelf separate from practical travel tools.
+const shelfMarker='okok-reads-entry-v1';
+let homepage=readFileSync(path,'utf8');
+if(!homepage.includes(shelfMarker)){
+ const shelf='<a id="'+shelfMarker+'" href="./travel-reads.html" style="display:block;margin:10px 0;padding:15px;border:1px solid #b5a1ed;border-radius:16px;background:linear-gradient(110deg,#3d315e,#a35e65);color:white;text-decoration:none;font:600 16px system-ui,-apple-system,sans-serif;min-height:48px">📚 Попутчик · Travel Reads</a>';
+ homepage=homepage.replace('<a class="okok-tools-entry"',shelf+'<a class="okok-tools-entry"');
+ writeFileSync(path,homepage);
+}
+console.log('OK-OK travel tools and Travel Reads preview linked');
