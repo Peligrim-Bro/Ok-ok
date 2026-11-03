@@ -5,6 +5,7 @@ on:
       - 'split-bill.html'
       - 'inspect.html'
       - 'tools.html'
+      - 'travel-reads.html'
       - 'scripts/apply-standalone-tools.mjs'
       - 'gloss-build.mjs'
       - 'tools/**'
@@ -49,6 +50,8 @@ jobs:
         run: |
           npm run build
           test -f site/public/tools.html
+          test -f site/public/travel-reads.html
+          grep -q okok-reads-entry-v1 site/public/index.html
           test -f site/public/split-bill.html
           test -f site/public/inspect.html
           test -f site/public/tools/inspect-storage.mjs
