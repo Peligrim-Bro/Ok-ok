@@ -124,7 +124,7 @@ test('built mobile homepage exposes a working Tools entry',async({page})=>{
 test('Travel Reads shelf loads on mobile and keeps bookmark locally',async({page})=>{
  await page.setViewportSize({width:390,height:844});
  await page.goto(url('/site/public/travel-reads.html'));
- await expect(page.locator('.book')).toHaveCount(3);
+ await expect(page.locator('.book')).toHaveCount(5);
  await expect(page.locator('#title')).toHaveText('Попутчик');
  await page.locator('#readingProgress').selectOption('last-passenger');
  await page.reload();
@@ -181,8 +181,8 @@ test('Travel Reads swipe advances scene and keeps progress after reopening',asyn
  await page.locator('[data-age="3-6"]').click();
  const area=page.locator('#readerStory');
  await expect(page.locator('#sceneProgress')).toContainText('1 / 8');
- await area.dispatchEvent('touchstart',{touches:[{clientX:270,clientY:240}]});
- await area.dispatchEvent('touchend',{changedTouches:[{clientX:95,clientY:244}]});
+ await area.dispatchEvent('touchstart',{touches:[{identifier:1,target:null,clientX:270,clientY:240}]});
+ await area.dispatchEvent('touchend',{changedTouches:[{identifier:1,target:null,clientX:95,clientY:244}]});
  await expect(page.locator('#sceneProgress')).toContainText('2 / 8');
  await page.locator('#readerClose').click();
  await page.locator('[data-age="3-6"]').click();
