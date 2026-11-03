@@ -1,0 +1,40 @@
+name: OK-OK standalone tools checks
+on:
+  pull_request:
+    paths:
+      - 'split-bill.html'
+      - 'inspect.html'
+      - 'tools/**'
+      - 'tests/*tools*'
+      - 'tests/split-*'
+      - 'tests/inspect-*'
+      - 'tests/receipt-*'
+      - 'package.json'
+      - '.github/workflows/tools-check.yml'
+  workflow_dispatch:
+jobs:
+  tools:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run deterministic tool tests
+        run: npm run test:tools
+      - name: Check inline HTML module scripts
+        run: |
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          import vm from 'node:vm';
+          for (const file of ['split-bill.html','inspect.html']) {
+            const html=fs.readFileSync(file,'utf8');
+            const scripts=[...html.matchAll(/<script\s+type="module"[^>]*>([\s\S]*?)<\/script>/g)];
+            if(scripts.length!==1)throw Error(file+': expected one inline module script');
+            new vm.SourceTextModule(scripts[0][1]);
+            console.log(file+': syntax OK');
+          }
+          JS
+        env:
+          NODE_OPTIONS: --experimental-vm-modules
