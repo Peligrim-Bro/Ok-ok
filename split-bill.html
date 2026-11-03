@@ -7,14 +7,15 @@
 <h1>OK-OK SPLIT</h1><div class="row"><button id="itemsMode" class="active" data-t="itemsMode">По блюдам</button><button id="equalMode" data-t="equalMode">Поровну</button></div>
 <section id="equal" class="card"><label data-t="amount">Сумма до надбавок, ฿</label><div><input id="equalAmount" type="number" min="0" max="1000000" step=".01" inputmode="decimal"></div><p data-t="guests">Гостей</p><div class="row"><button id="minus">−</button><strong id="count">2</strong><button id="plus">+</button></div></section>
 <div id="itemMode"><section class="card"><h2 data-t="people">Участники</h2><div class="row"><input id="member" type="text" maxlength="30" placeholder="Имя"><button id="addMember" class="primary">+</button></div><div id="members" class="chips"></div></section>
-<section class="card"><h2 data-t="dishes">Блюда</h2><div class="row"><input id="itemName" type="text" maxlength="60" placeholder="Блюдо"><input id="itemPrice" type="number" min=".01" max="1000000" step=".01" inputmode="decimal" placeholder="฿"><button id="addItem" class="primary">+</button></div><p class="muted" data-t="scanNotice">Фото чека: OCR появится после отдельной проверки. Пока ввод вручную.</p><div id="itemList"></div></section></div>
+<section class="card"><h2 data-t="dishes">Блюда</h2><div class="row"><input id="itemName" type="text" maxlength="60" placeholder="Блюдо"><input id="itemPrice" type="number" min=".01" max="1000000" step=".01" inputmode="decimal" placeholder="฿"><button id="addItem" class="primary">+</button></div><p class="muted" data-t="scanNotice">Распознать фото чека (предложения требуют подтверждения).</p><div class="row"><input type="file" id="receipt" accept="image/*" aria-label="Receipt photo"><button id="scan">OCR</button></div><div id="ocrReview" class="item" hidden></div><div id="itemList"></div></section></div>
 <section class="card"><div class="between"><h2 data-t="fees">Налоги и сборы</h2><select id="taxMode"><option value="excluded">Сверху</option><option value="included">Включены</option></select></div><p class="muted" id="taxHint"></p><div class="row"><label><input id="service" type="checkbox"> Service 10%</label><label><input id="vat" type="checkbox"> VAT 7%</label></div><div class="row"><label><input type="radio" name="formula" value="compound" checked> ×1.10×1.07</label><label><input type="radio" name="formula" value="additive"> +17%</label></div><label data-t="tip">Чаевые</label><select id="tip"><option value="0">0%</option><option value="5">5%</option><option value="10">10%</option><option value="15">15%</option></select></section>
 <section class="card"><label data-t="pay">PromptPay / реквизиты (необязательно)</label><input id="pay" type="text" style="width:100%" maxlength="100" autocomplete="off"></section>
 <section class="card"><div class="between"><h2 data-t="result">Итого</h2><span id="total">0.00 ฿</span></div><p id="warning"></p><div id="shares"></div><div class="row"><button id="copy" data-t="copy">Копировать</button><button id="telegram" class="primary">Telegram</button></div><p id="status" class="muted" role="status"></p></section>
 </main><script type="module">
 import {calculateSplitFromUi,formatSatang,validateReceiptPrice} from './tools/split-ui-adapter.mjs';
+import {parseReceiptCandidates} from './tools/receipt-ocr.mjs';
 const $=id=>document.getElementById(id);
-const i18n={ru:{home:'На главную',itemsMode:'По блюдам',equalMode:'Поровну',amount:'Сумма до надбавок, ฿',guests:'Гостей',people:'Участники',dishes:'Блюда',fees:'Налоги и сборы',tip:'Чаевые',pay:'PromptPay / реквизиты (необязательно)',result:'Итого',copy:'Копировать',scanNotice:'Фото чека: OCR появится после отдельной проверки. Пока ввод вручную.',unassigned:'Не распределено',included:'Сборы уже включены в цены. Сверху добавляются только чаевые.',excluded:'Выбранные сборы добавляются сверху.',name:'Имя',dish:'Блюдо',invalid:'Проверьте цену и количество гостей',copied:'Скопировано',reset:'Очистить весь счёт?',select:'Выберите гостей для каждого блюда'},en:{home:'Home',itemsMode:'By items',equalMode:'Equally',amount:'Amount before extras, ฿',guests:'Guests',people:'Participants',dishes:'Items',fees:'Taxes and fees',tip:'Tip',pay:'PromptPay / payment details (optional)',result:'Total',copy:'Copy',scanNotice:'Receipt OCR will be added after separate verification. Enter items manually for now.',unassigned:'Unassigned',included:'Fees are already included in prices. Only tips are added.',excluded:'Selected fees are added on top.',name:'Name',dish:'Dish',invalid:'Check the amount and guest count',copied:'Copied',reset:'Clear the whole bill?',select:'Select guests for each item'}};
+const i18n={ru:{home:'На главную',itemsMode:'По блюдам',equalMode:'Поровну',amount:'Сумма до надбавок, ฿',guests:'Гостей',people:'Участники',dishes:'Блюда',fees:'Налоги и сборы',tip:'Чаевые',pay:'PromptPay / реквизиты (необязательно)',result:'Итого',copy:'Копировать',scanNotice:'Распознать фото чека. Проверьте каждую предложенную позицию.',unassigned:'Не распределено',included:'Сборы уже включены в цены. Сверху добавляются только чаевые.',excluded:'Выбранные сборы добавляются сверху.',name:'Имя',dish:'Блюдо',invalid:'Проверьте цену и количество гостей',copied:'Скопировано',reset:'Очистить весь счёт?',select:'Выберите гостей для каждого блюда'},en:{home:'Home',itemsMode:'By items',equalMode:'Equally',amount:'Amount before extras, ฿',guests:'Guests',people:'Participants',dishes:'Items',fees:'Taxes and fees',tip:'Tip',pay:'PromptPay / payment details (optional)',result:'Total',copy:'Copy',scanNotice:'Scan a receipt photo. Review every suggested item.',unassigned:'Unassigned',included:'Fees are already included in prices. Only tips are added.',excluded:'Selected fees are added on top.',name:'Name',dish:'Dish',invalid:'Check the amount and guest count',copied:'Copied',reset:'Clear the whole bill?',select:'Select guests for each item'}};
 let lang=localStorage.getItem('okok_lang')==='en'?'en':'ru',mode='items',members=[],items=[],people=2;
 const uid=()=>crypto.randomUUID?.()||String(Date.now()+Math.random());
 function translate(){const t=i18n[lang];document.documentElement.lang=lang;document.querySelectorAll('[data-t]').forEach(e=>e.textContent=t[e.dataset.t]);$('lang').textContent=lang==='ru'?'EN':'RU';$('member').placeholder=t.name;$('itemName').placeholder=t.dish;$('taxMode').options[0].textContent=lang==='ru'?'Сверху':'Add on';$('taxMode').options[1].textContent=lang==='ru'?'Включены':'Included';render();}
@@ -27,5 +28,31 @@ $('itemsMode').onclick=()=>{mode='items';render()};$('equalMode').onclick=()=>{m
 function summary(){const lines=['OK-OK SPLIT',i18n[lang].result+': '+$('total').textContent];$('shares').querySelectorAll('div,p').forEach(x=>lines.push(x.textContent));if($('warning').style.display==='block')lines.push($('warning').textContent);if($('pay').value.trim())lines.push('PromptPay: '+$('pay').value.trim());return lines.join('\n')}
 $('copy').onclick=async()=>{const text=summary();try{await navigator.clipboard.writeText(text);$('status').textContent=i18n[lang].copied}catch{window.prompt('Copy:',text)}};
 $('telegram').onclick=()=>{const url='https://t.me/share/url?url=&text='+encodeURIComponent(summary());window.location.href=url};
+$('scan').onclick=async()=>{
+ const file=$('receipt').files?.[0];
+ if(!file||!file.type.startsWith('image/')||file.size>15*1024*1024){$('status').textContent=lang==='ru'?'Выберите изображение до 15 МБ':'Choose an image under 15 MB';return}
+ $('scan').disabled=true;$('status').textContent=lang==='ru'?'Распознавание…':'Recognizing…';
+ let worker;
+ try {
+  const lib=await import('https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.esm.min.js');
+  worker=await lib.createWorker(['tha','eng','rus']);
+  const result=await worker.recognize(file);
+  const found=parseReceiptCandidates(result.data.text);
+  const box=$('ocrReview');box.replaceChildren();box.hidden=false;
+  box.append(el('p',lang==='ru'?'Проверьте название и цену перед добавлением':'Review names and prices before adding'));
+  for(const suggestion of found){
+   const row=el('div','','row');
+   const name=document.createElement('input');name.type='text';name.maxLength=60;name.value=suggestion.name;name.setAttribute('aria-label','Item name');
+   const price=document.createElement('input');price.type='number';price.min='.01';price.max='1000000';price.step='.01';price.value=String(suggestion.price);price.setAttribute('aria-label','Item price');
+   const add=el('button',lang==='ru'?'Добавить':'Add');
+   add.onclick=()=>{const p=validateReceiptPrice(price.value);if(p===null||!name.value.trim()){ $('status').textContent=i18n[lang].invalid;return}
+    for(let n=0;n<suggestion.quantity;n++)items.push({id:uid(),name:name.value.trim(),price:p,assignedIds:members.map(m=>m.id)});
+    row.remove();render();};
+   row.append(name,price,add);box.append(row);
+  }
+  $('status').textContent=found.length?'':(lang==='ru'?'Позиции не найдены — добавьте вручную':'No items found — add manually');
+ }catch(e){$('status').textContent=lang==='ru'?'OCR недоступен. Введите позиции вручную.':'OCR unavailable. Enter items manually.'}
+ finally{try{await worker?.terminate()}catch{}$('scan').disabled=false}
+};
 $('reset').onclick=()=>{if(!confirm(i18n[lang].reset))return;members=[];items=[];people=2;mode='items';['member','itemName','itemPrice','equalAmount','pay'].forEach(id=>$(id).value='');$('vat').checked=false;$('service').checked=false;$('taxMode').value='excluded';$('tip').value='0';document.querySelector('[name=formula][value=compound]').checked=true;render()};translate();
 </script></body></html>
