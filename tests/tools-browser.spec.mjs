@@ -227,7 +227,7 @@ test('Travel Reads thriller is complete in Russian and English',async({page})=>{
  await expect(page.locator('#readerStory')).toContainText('Ильи');
  await expect(page.locator('#sceneProgress')).toContainText('1 / 8');
  for(let n=1;n<8;n++)await page.locator('#sceneNext').click();
- await expect(page.locator('#readerStory')).toContainText('подменить');
+ await expect(page.locator('#readerStory')).toContainText('Ноп связался');
  await page.locator('#lang').click();
  await expect(page.locator('#readerStory')).toContainText('replaced');
  await expect(page.locator('#sceneProgress')).toContainText('8 / 8');
@@ -243,16 +243,14 @@ test('Travel Reads detective has a complete bilingual ending',async({page})=>{
  await expect(page.locator('#sceneProgress')).toContainText('8 / 8');
 });
 
-test('Travel Reads labels all five books as readable, not coming soon',async({page})=>{
+test('Travel Reads shows five illustrated covers without redundant labels',async({page})=>{
  await page.goto(url('/site/public/travel-reads.html'));
  await expect(page.locator('.book')).toHaveCount(5);
- await expect(page.locator('#status1')).toContainText('Читать сейчас');
- await expect(page.locator('#status2')).toContainText('Читать сейчас');
- await expect(page.locator('#status3')).toContainText('Читать сейчас');
- await expect(page.locator('#note')).toContainText('Пять коротких историй');
+ await expect(page.locator('.cover svg')).toHaveCount(5);
+ await expect(page.locator('.book .status,.book .genre')).toHaveCount(0);
+ await expect(page.locator('#book1')).toHaveText('Последний пассажир');
  await page.locator('#lang').click();
- await expect(page.locator('#status1')).toContainText('Read now');
- await expect(page.locator('#status3')).toContainText('Read now');
+ await expect(page.locator('#book1')).toHaveText('The Last Passenger');
 });
 
 test('Travel Reads bookmarks a kids story across language switch and reload',async({page})=>{
