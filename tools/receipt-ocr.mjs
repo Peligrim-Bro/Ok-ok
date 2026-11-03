@@ -5,7 +5,7 @@ export function parseReceiptCandidates(rawText) {
   for (const original of lines) {
     const line = original.replace(/\s+/g,' ').trim();
     if (line.length < 4 || /(?:subtotal|total|vat|tax|service|discount|change|cash|balance|รวมทั้งสิ้น|ยอดรวม|ภาษี|ส่วนลด|เงินทอน|итого|сдача)/i.test(line)) continue;
-    const quantityPrefix = line.match(/^(\\d{1,2})\\s*[x×]\\s+(.+)$/i);
+    const quantityPrefix = line.match(/^(\d{1,2})\s*[x×]\s+(.+)$/i);
     const normalized = quantityPrefix ? quantityPrefix[2] : line;
     const match = normalized.match(/^(.{2,90}?)\s+(?:(\d{1,2})\s*[x×]\s*)?([\d,]+(?:\.\d{1,2})?)\s*(?:฿|THB|บาท)?$/i);
     if (!match) continue;
