@@ -202,3 +202,15 @@ test('Travel Reads fits a narrow mobile viewport without horizontal page overflo
  await expect(page.locator('#sceneProgress')).toContainText('2 / 8');
  await expect(page.locator('#sceneTrack')).toHaveAttribute('aria-valuenow','2');
 });
+
+test('Travel Reads supports keyboard page turning and Escape to shelf',async({page})=>{
+ await page.goto(url('/site/public/travel-reads.html'));
+ await page.locator('[data-age="7-10"]').click();
+ await expect(page.locator('#sceneProgress')).toContainText('1 / 8');
+ await page.keyboard.press('ArrowRight');
+ await expect(page.locator('#sceneProgress')).toContainText('2 / 8');
+ await page.keyboard.press('ArrowLeft');
+ await expect(page.locator('#sceneProgress')).toContainText('1 / 8');
+ await page.keyboard.press('Escape');
+ await expect(page.locator('#reader')).toBeHidden();
+});
