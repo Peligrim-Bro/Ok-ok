@@ -62,3 +62,26 @@ test('INSPECT captures photo and keeps it after reload',async({page})=>{
  await expect(page.locator('#progress')).toHaveText('1/5');
  await expect(page.locator('#slots img')).toHaveCount(1);
 });
+
+test('INSPECT generates downloadable PDF with five photos and multilingual notes',async({page})=>{
+ await page.goto(url('/inspect.html'));
+ await page.locator('#plateNumber').fill('กข 1234');
+ await page.locator('#rentalName').fill('Прокат ทดสอบ');
+ await page.locator('#damageNotes').fill('Царапина слева / รอยขีดข่วน');
+ const image=await page.evaluate(()=>{
+  const canvas=document.createElement('canvas');canvas.width=240;canvas.height=120;
+  const ctx=canvas.getContext('2d');ctx.fillStyle='#f5ba32';ctx.fillRect(0,0,240,120);
+  return canvas.toDataURL('image/png').split(',')[1];
+ });
+ for(let i=0;i<5;i++){
+  await page.locator('#slots input[type=file]').nth(i).setInputFiles({name:'view'+i+'.png',mimeType:'image/png',buffer:Buffer.from(image,'base64')});
+  await expect(page.locator('#progress')).toHaveText((i+1)+'/5');
+ }
+ const [download]=await Promise.all([page.waitForEvent('download',{timeout:45000}),page.locator('#pdf').click()]);
+ expect(download.suggestedFilename()).toMatch(/^OKOK_INSPECT_START_.*\.pdf$/);
+ await expect(page.locator('#status')).toContainText('PDF готов');
+ const fs=await import('node:fs/promises');
+ const bytes=await fs.readFile(await download.path());
+ expect(bytes.subarray(0,5).toString()).toBe('%PDF-');
+ expect(bytes.length).toBeGreaterThan(10000);
+});
