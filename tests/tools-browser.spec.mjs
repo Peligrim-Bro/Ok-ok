@@ -137,9 +137,9 @@ test('Travel Reads shelf loads on mobile and keeps bookmark locally',async({page
  await expect(page.locator('#fontSizeLabel')).toHaveText('Text: 110%');
  await page.reload();
  await expect(page.locator('#fontSizeLabel')).toHaveText('Text: 110%');
- await page.locator('#fontUp').click({clickCount:5});
+ for(let i=0;i<5;i++)await page.locator('#fontUp').click();
  await expect(page.locator('#fontSizeLabel')).toHaveText('Text: 140%');
- await page.locator('#fontDown').click({clickCount:6});
+ for(let i=0;i<6;i++)await page.locator('#fontDown').click();
  await expect(page.locator('#fontSizeLabel')).toHaveText('Text: 90%');
 });
 
