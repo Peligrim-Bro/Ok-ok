@@ -142,3 +142,13 @@ test('Travel Reads shelf loads on mobile and keeps bookmark locally',async({page
  await page.locator('#fontDown').click({clickCount:6});
  await expect(page.locator('#fontSizeLabel')).toHaveText('Text: 90%');
 });
+
+test('Travel Reads opens accessible preview without inventing unpublished story',async({page})=>{
+ await page.goto(url('/site/public/travel-reads.html'));
+ await page.locator('.book').first().click();
+ await expect(page.locator('#reader')).toBeVisible();
+ await expect(page.locator('#readerTitle')).toHaveText('Последний пассажир');
+ await expect(page.locator('#readerStatus')).toContainText('ещё не опубликован');
+ await page.locator('#readerClose').click();
+ await expect(page.locator('#reader')).toBeHidden();
+});
