@@ -261,3 +261,16 @@ test('Travel Reads bookmarks a kids story across language switch and reload',asy
  await page.locator('[data-age="3-6"]').click();
  await expect(page.locator('#sceneTrack')).toHaveAttribute('aria-valuemax','8');
 });
+
+test('Travel Reads opens saved book at last reading position',async({page})=>{
+ await page.goto(url('/site/public/travel-reads.html'));
+ await expect(page.locator('#bookmarkOpen')).toBeDisabled();
+ await page.locator('#readingProgress').selectOption('fox');
+ await page.locator('#bookmarkOpen').click();
+ await page.locator('#sceneNext').click();
+ await expect(page.locator('#sceneProgress')).toContainText('2 / 8');
+ await page.reload();
+ await page.locator('#bookmarkOpen').click();
+ await expect(page.locator('#readerTitle')).toContainText('Лисёнок');
+ await expect(page.locator('#sceneProgress')).toContainText('2 / 8');
+});
