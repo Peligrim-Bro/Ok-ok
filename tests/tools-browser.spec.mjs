@@ -152,3 +152,26 @@ test('Travel Reads opens accessible preview without inventing unpublished story'
  await page.locator('#readerClose').click();
  await expect(page.locator('#reader')).toBeHidden();
 });
+
+test('Travel Reads age filters and three complete bilingual stories',async({page})=>{
+ await page.goto(url('/site/public/travel-reads.html'));
+ await page.locator('[data-filter="3-6"]').click();
+ await expect(page.locator('.book:visible')).toHaveCount(1);
+ await page.locator('[data-age="3-6"]').click();
+ await expect(page.locator('#readerStory p')).toHaveCount(8);
+ await expect(page.locator('#readerStory')).toContainText('звёзд');
+ await page.locator('#readerClose').click();
+ await page.locator('[data-filter="7-10"]').click();
+ await expect(page.locator('.book:visible')).toHaveCount(1);
+ await page.locator('[data-age="7-10"]').click();
+ await expect(page.locator('#readerStory p')).toHaveCount(8);
+ await page.locator('#readerClose').click();
+ await page.locator('[data-filter="adult"]').click();
+ await page.locator('[data-age="adult"]').nth(1).click();
+ await expect(page.locator('#readerStory p')).toHaveCount(8);
+ await page.locator('#lang').click();
+ await expect(page.locator('#book2')).toHaveText('Room Without a Guest');
+ await page.locator('[data-age="adult"]').nth(1).click();
+ await expect(page.locator('#readerStory p')).toHaveCount(8);
+ await expect(page.locator('#readerStory')).toContainText('Somchai');
+});
