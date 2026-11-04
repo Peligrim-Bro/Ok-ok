@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Оки — демо эффектов</title>
+<style>
+:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#0b1b3a;color:#fff;font:16px system-ui;text-align:center}main{max-width:650px;margin:auto;padding:22px 14px}h1{font-size:23px}.scene{position:relative;height:320px;overflow:hidden;border:3px solid #6c8fc0;border-radius:18px;background:linear-gradient(#152e55 0 70%,#685047 70%)}.window{position:absolute;left:8%;top:12%;width:42%;height:47%;border:8px solid #bb8c59;background:#214c75;overflow:hidden}.window:after{content:"";position:absolute;top:0;bottom:0;left:48%;width:7px;background:#bb8c59}.floor{position:absolute;bottom:0;width:100%;height:30%;background:repeating-linear-gradient(90deg,#8b634c 0 60px,#79543f 60px 64px)}.lamp{position:absolute;right:13%;top:20%;font-size:54px;filter:drop-shadow(0 0 12px #ffcf6d)}.oki{position:absolute;bottom:19%;left:43%;font-size:76px;filter:drop-shadow(0 6px 4px #17233c)}canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.controls{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin-top:18px}button{background:#f5c95a;color:#15233d;border:0;border-radius:12px;padding:12px 14px;font-weight:750;font-size:15px}button:focus-visible{outline:3px solid #fff}.note{color:#c3d2eb;font-size:13px;line-height:1.5}
+</style>
+<main><h1>Приключения Оки — FX лаборатория</h1>
+<div class="scene" id="scene"><div class="window"></div><div class="floor"></div><div class="lamp">💡</div><div class="oki" aria-label="Временный символ персонажа">🐵</div><canvas id="fx"></canvas></div>
+<div class="controls"><button id="rain">Дождь: выкл</button><button id="flies">Светлячки: выкл</button><button id="coin">+ Монета</button><button id="party">Достижение</button></div>
+<p class="note">Изолированный прототип визуальных эффектов. Это временная сцена с условным персонажем, не текущий дизайн Оки. Эффекты реализованы локально для проверки мобильного canvas; исходный PixelFX пока не подключён. Уважает настройку уменьшения движения.</p></main>
+<script>
+const c=document.getElementById('fx'),ctx=c.getContext('2d'),scene=document.getElementById('scene');
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+let rain=false,flies=false,particles=[],last=0;
+function resize(){const r=scene.getBoundingClientRect();c.width=Math.round(r.width*devicePixelRatio);c.height=Math.round(r.height*devicePixelRatio);ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0)}
+new ResizeObserver(resize).observe(scene);resize();
+const rand=(a,b)=>a+Math.random()*(b-a);
+function add(type,n){const r=scene.getBoundingClientRect();for(let i=0;i<n;i++)particles.push({type,x:rand(0,r.width),y:type==='rain'?rand(30,r.height*.54):rand(20,r.height*.7),vx:rand(-2,2),vy:rand(-3,-1),life:rand(.6,1.8),max:2,hue:rand(35,58)})}
+document.getElementById('rain').onclick=e=>{rain=!rain;e.target.textContent='Дождь: '+(rain?'вкл':'выкл')};
+document.getElementById('flies').onclick=e=>{flies=!flies;e.target.textContent='Светлячки: '+(flies?'вкл':'выкл')};
+document.getElementById('coin').onclick=()=>add('coin',reduce?1:12);
+document.getElementById('party').onclick=()=>add('confetti',reduce?4:55);
+function tick(t){const dt=Math.min((t-last)/1000||.016,.04);last=t;const w=scene.clientWidth,h=scene.clientHeight;ctx.clearRect(0,0,w,h);
+if(!reduce){if(rain&&Math.random()<.7)add('rain',2);if(flies&&Math.random()<.15)add('fly',1)}
+particles=particles.filter(p=>p.life>0);for(const p of particles){p.life-=dt;p.x+=p.vx*dt*45;p.y+=(p.type==='rain'?9:p.type==='confetti'?2:p.vy)*dt*45;ctx.globalAlpha=Math.min(1,p.life*1.5);if(p.type==='rain'){ctx.strokeStyle='#a4d5ff';ctx.beginPath();ctx.moveTo(p.x*.42+ w*.08,p.y*.46+h*.12);ctx.lineTo(p.x*.42+w*.08-3,p.y*.46+h*.12+9);ctx.stroke()}else if(p.type==='fly'){ctx.fillStyle='#f9ed92';ctx.shadowColor='#ffef80';ctx.shadowBlur=10;ctx.fillRect(p.x,p.y,3,3);ctx.shadowBlur=0}else if(p.type==='coin'){ctx.fillStyle='#f8c547';ctx.beginPath();ctx.ellipse(p.x,p.y,5+3*Math.abs(Math.sin(t/170)),8,0,0,Math.PI*2);ctx.fill()}else{ctx.fillStyle='hsl('+p.hue+' 95% 65%)';ctx.fillRect(p.x,p.y,6,4)}}ctx.globalAlpha=1;requestAnimationFrame(tick)}requestAnimationFrame(tick);
+</script></html>
