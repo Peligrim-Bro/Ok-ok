@@ -1,94 +1,90 @@
 {
-  "verifiedAt": "2026-10-31",
+  "verifiedAt": "2026-11-04",
   "news": [
     {
       "category": "world",
-      "when": "30.10 · 🌍",
-      "href": "https://www.reuters.com/investigates/special-report/climate-heatstorms-pregnancy/",
-      "publishedAt": "2026-10-30",
+      "when": "03.11 · 🌍",
+      "href": "https://www.esa.int/Space_in_Member_States/United_Kingdom/ESA_opens_its_new_AI_Hub",
+      "publishedAt": "2026-11-03",
+      "ru": "Европейское космическое агентство открыло в Великобритании центр ИИ для разработки спутниковой связи.",
+      "en": "The European Space Agency opened a UK AI hub to develop space-enabled communications.",
+      "th": "องค์การอวกาศยุโรปเปิดศูนย์ AI ในสหราชอาณาจักรเพื่อพัฒนาการสื่อสารผ่านดาวเทียม",
+      "sources": [
+        "https://www.esa.int/Space_in_Member_States/United_Kingdom/ESA_opens_its_new_AI_Hub"
+      ],
       "nonWar": true,
-      "ru": "Reuters: усиливающиеся волны жары связаны с ростом рисков для беременности во всём мире.",
-      "en": "Reuters: intensifying heatwaves are linked to higher pregnancy risks worldwide.",
-      "th": "รอยเตอร์สรายงานว่า คลื่นความร้อนที่รุนแรงขึ้นเชื่อมโยงกับความเสี่ยงต่อการตั้งครรภ์ที่สูงขึ้นทั่วโลก",
-      "sources": [
-        "https://www.reuters.com/investigates/special-report/climate-heatstorms-pregnancy/",
-        "https://www.nature.com/articles/s41591-024-03395-8"
-      ],
       "discussionEvidence": {
-        "observedAt": "2026-10-31T06:13:00+07:00",
-        "sourceUrl": "https://www.reuters.com/investigates/special-report/climate-heatstorms-pregnancy/",
-        "summary": "No public engagement counters or comparable global rank. Selection reflects a new Reuters investigation using an original birth-record analysis and a review of nearly 200 studies, not a claim of worldwide popularity."
+        "observedAt": "2026-11-04T15:23:36+07:00",
+        "sourceUrl": "https://www.esa.int/Space_in_Member_States/United_Kingdom/ESA_opens_its_new_AI_Hub",
+        "summary": "ESA displayed 8 views and 0 likes; no comparable global ranking."
       }
     },
     {
       "category": "thailand",
-      "when": "30.10 · 🇹🇭",
-      "href": "https://www.bot.or.th/en/news-and-media/news/news-20261030.html",
-      "publishedAt": "2026-10-30",
-      "ru": "Банк Таиланда: экономика укрепилась в сентябре за счёт экспорта и инвестиций, но туризм ослаб.",
-      "en": "Bank of Thailand: exports and investment lifted September activity, while tourism softened.",
-      "th": "ธปท. ระบุว่าเศรษฐกิจเดือนกันยายนดีขึ้นจากการส่งออกและการลงทุน แต่กิจกรรมท่องเที่ยวชะลอลง",
+      "when": "04.11 · 🇹🇭",
+      "href": "https://www.pattayamail.com/thailandnews/thailand-approves-5-8-billion-baht-budget-for-bangkok-rail-fares-capped-at-45-baht-570747",
+      "publishedAt": "2026-11-04",
+      "ru": "Кабмин Таиланда одобрил субсидии на единый тариф электричек Бангкока до 45 бат за поездку. Программа запланирована на 2027 год.",
+      "en": "Thailand approved subsidies for a Bangkok-area electric rail fare cap of 45 baht per journey, planned for 2027.",
+      "th": "ครม. อนุมัติงบอุดหนุนค่าโดยสารรถไฟฟ้าในกรุงเทพฯ และปริมณฑลไม่เกิน 45 บาทต่อเที่ยว มีกำหนดใช้ในปี 2570",
       "sources": [
-        "https://www.bot.or.th/en/news-and-media/news/news-20261030.html",
-        "https://en.moneyandbanking.co.th/2026/283158/"
+        "https://www.pattayamail.com/thailandnews/thailand-approves-5-8-billion-baht-budget-for-bangkok-rail-fares-capped-at-45-baht-570747"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-31T06:13:00+07:00",
-        "sourceUrl": "https://www.bot.or.th/en/news-and-media/news/news-20261030.html",
-        "summary": "No public counters on the central-bank release. Same-day independent financial coverage confirms broad economic relevance; no national discussion rank is claimed."
+        "observedAt": "2026-11-04T15:23:36+07:00",
+        "sourceUrl": "https://www.pattayamail.com/thailandnews/thailand-approves-5-8-billion-baht-budget-for-bangkok-rail-fares-capped-at-45-baht-570747",
+        "summary": "Pattaya Mail displayed 617 views and 0 comments; no cross-outlet ranking."
       }
     },
     {
       "category": "thailand",
-      "when": "30.10 · 🇹🇭",
-      "href": "https://www.tatnews.org/2026/10/tat-spotlights-thai-wellness-as-phuket-hosts-global-wellness-summit-2026/",
-      "publishedAt": "2026-10-30",
-      "ru": "Пхукет примет Global Wellness Summit 10–13 ноября; TAT представит тайские оздоровительные маршруты.",
-      "en": "Phuket will host the Global Wellness Summit on 10–13 November, with TAT presenting Thai wellness routes.",
-      "th": "ภูเก็ตจะเป็นเจ้าภาพ Global Wellness Summit วันที่ 10–13 พ.ย. โดย ททท. นำเสนอเส้นทางสุขภาพแบบไทย",
+      "when": "04.11 · 🇹🇭",
+      "href": "https://www.pattayamail.com/thailandnews/phuket-wants-to-reduce-road-accidents-among-thai-and-foreign-riders-570713",
+      "publishedAt": "2026-11-04",
+      "ru": "На Пхукете запустили кампанию по безопасности мотоциклистов для местных и иностранных водителей.",
+      "en": "Phuket launched a motorcycle safety campaign aimed at local and foreign riders.",
+      "th": "ภูเก็ตเปิดตัวโครงการรณรงค์ขับขี่รถจักรยานยนต์อย่างปลอดภัยสำหรับผู้ขับขี่ชาวไทยและชาวต่างชาติ",
       "sources": [
-        "https://www.tatnews.org/2026/10/tat-spotlights-thai-wellness-as-phuket-hosts-global-wellness-summit-2026/",
-        "https://www.globalwellnesssummit.com/2026-global-wellness-summit/"
+        "https://www.pattayamail.com/thailandnews/phuket-wants-to-reduce-road-accidents-among-thai-and-foreign-riders-570713"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-31T06:13:00+07:00",
-        "sourceUrl": "https://www.tatnews.org/2026/10/tat-spotlights-thai-wellness-as-phuket-hosts-global-wellness-summit-2026/",
-        "summary": "TAT: 52 views versus 16 for its same-day Diwali release; no public comment count or national rank. Independent syndication exists, but the figures are only a within-site comparison."
+        "observedAt": "2026-11-04T15:23:36+07:00",
+        "sourceUrl": "https://www.pattayamail.com/thailandnews/phuket-wants-to-reduce-road-accidents-among-thai-and-foreign-riders-570713",
+        "summary": "Relevant to travelers renting motorcycles; no comparable public discussion metrics verified."
       }
     },
     {
       "category": "pattaya",
-      "when": "30.10 · Pattaya",
-      "href": "https://www.pattayamail.com/news/sudden-heavy-rain-floods-pattaya-roads-shuts-junction-and-disrupts-traffic-570161",
-      "publishedAt": "2026-10-30",
-      "ru": "Сильный дождь затопил дороги Паттайи, перекрыл перекрёсток Moom Aroi и нарушил движение.",
-      "en": "Heavy rain flooded Pattaya roads, closed Moom Aroi junction and disrupted traffic.",
-      "th": "ฝนหนักทำให้น้ำท่วมถนนพัทยา ปิดแยกมุมอร่อยและกระทบการจราจร",
+      "when": "04.11 · Pattaya",
+      "href": "https://thepattayanews.com/2026/11/04/three-agencies-sign-mou-to-tackle-traffic-congestion-and-safety-at-watermelon-intersection-in-banglamung/",
+      "publishedAt": "2026-11-04",
+      "ru": "Два муниципалитета и полиция согласовали меры против пробок на перекрёстке Watermelon у Soi Banglamung 21.",
+      "en": "Two municipalities and local police agreed to coordinate traffic and safety at the Watermelon intersection near Soi Banglamung 21.",
+      "th": "เทศบาลสองแห่งและตำรวจลงนามร่วมกันจัดการจราจรและเพิ่มความปลอดภัยที่แยกแตงโม ซอยบางละมุง 21",
       "sources": [
-        "https://www.pattayamail.com/news/sudden-heavy-rain-floods-pattaya-roads-shuts-junction-and-disrupts-traffic-570161"
+        "https://thepattayanews.com/2026/11/04/three-agencies-sign-mou-to-tackle-traffic-congestion-and-safety-at-watermelon-intersection-in-banglamung/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-31T06:13:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/sudden-heavy-rain-floods-pattaya-roads-shuts-junction-and-disrupts-traffic-570161",
-        "summary": "Pattaya Mail: 2,179 views/0 comments versus 1,253/0 for the Bali Hai land report; a same-site comparison, not a citywide rank."
+        "observedAt": "2026-11-04T15:23:36+07:00",
+        "sourceUrl": "https://thepattayanews.com/2026/11/04/three-agencies-sign-mou-to-tackle-traffic-congestion-and-safety-at-watermelon-intersection-in-banglamung/",
+        "summary": "Selected for traffic relevance to Banglamung road users; no comparable public discussion metrics verified."
       }
     },
     {
       "category": "pattaya",
-      "when": "30.10 · Pattaya",
-      "href": "https://www.pattayamail.com/news/pattaya-sets-october-31-deadline-to-reclaim-public-land-near-bali-hai-pier-570232",
-      "publishedAt": "2026-10-30",
-      "ru": "Паттайя установила срок 31 октября для освобождения общественной земли у пирса Бали Хай.",
-      "en": "Pattaya set a 31 October deadline to clear public land near Bali Hai Pier.",
-      "th": "เมืองพัทยากำหนด 31 ต.ค. คืนพื้นที่สาธารณะใกล้ท่าเรือบาลีฮาย เพื่อทำทางเดินและติดไฟ",
+      "when": "04.11 · Pattaya",
+      "href": "https://thepattayanews.com/2026/11/04/unilever-donates-consumer-goods-to-father-ray-childrens-village-and-special-school-in-pattaya/",
+      "publishedAt": "2026-11-04",
+      "ru": "В Паттайе фонд Father Ray получил партию товаров для детской деревни и школы для детей с инвалидностью.",
+      "en": "Pattaya’s Father Ray Foundation received donated supplies for its children’s village and special school.",
+      "th": "มูลนิธิคุณพ่อเรย์ในพัทยาได้รับบริจาคของใช้สำหรับหมู่บ้านเด็กและโรงเรียนพิเศษ",
       "sources": [
-        "https://www.pattayamail.com/news/pattaya-sets-october-31-deadline-to-reclaim-public-land-near-bali-hai-pier-570232",
-        "https://thepattayanews.com/2026/10/30/pattaya-sets-october-31st-deadline-to-reclaim-public-land-near-waterfront-building-plans-new-walkway-and-lighting/"
+        "https://thepattayanews.com/2026/11/04/unilever-donates-consumer-goods-to-father-ray-childrens-village-and-special-school-in-pattaya/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-10-31T06:13:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/pattaya-sets-october-31-deadline-to-reclaim-public-land-near-bali-hai-pier-570232",
-        "summary": "Pattaya Mail: 1,253 views/0 comments versus 2,179/0 for the flood report. Independent local coverage confirms reach; no citywide rank is claimed."
+        "observedAt": "2026-11-04T15:23:36+07:00",
+        "sourceUrl": "https://thepattayanews.com/2026/11/04/unilever-donates-consumer-goods-to-father-ray-childrens-village-and-special-school-in-pattaya/",
+        "summary": "Selected for local community relevance; no comparable public discussion metrics verified."
       }
     }
   ],
