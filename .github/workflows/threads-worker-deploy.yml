@@ -51,7 +51,16 @@ jobs:
           trap cleanup EXIT
           printf '%s' "$key" | wrangler secret put THREADS_PUBLISH_KEY
           endpoint=https://okok-threads-auth.timurhansolo.workers.dev
-          result="$(curl --silent --show-error --max-time 40 -X POST \
-            -H "Authorization: Bearer $key" "$endpoint/publish-teaser")"
-          printf '%s\n' "$result"
+          body="$(mktemp)"
+          for attempt in 1 2 3 4 5 6; do
+            status="$(curl --silent --show-error --max-time 40 -X POST \
+              -H "Authorization: Bearer $key" -o "$body" -w '%{http_code}' "$endpoint/publish-teaser")"
+            if [[ "$status" != 404 || "$(cat "$body")" != "Not found" ]]; then
+              break
+            fi
+            sleep 5
+          done
+          cat "$body"
+          test "$status" = 200
+          result="$(cat "$body")"
           jq -e '.id | type == "string"' <<< "$result"
