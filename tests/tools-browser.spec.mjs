@@ -113,11 +113,18 @@ test('built mobile homepage exposes filters, tools and the book reader',async({p
   localStorage.setItem('pok-lang','ru');
   localStorage.setItem('pok-lang-set','1');
   localStorage.setItem('pok-install-seen','1');
+  localStorage.setItem('pok-spots',JSON.stringify([{id:'saved-test',title:'Saved test spot',lat:12.9,lng:100.9}]));
  });
  await page.goto(url('/site/public/index.html'),{waitUntil:'domcontentloaded'});
  const places=page.locator('section[aria-labelledby="places-title"]');
  const panel=page.locator('#okok-new-home');
- await expect(places.locator('.places-rail [data-spot]')).toBeVisible();
+ const favorite=places.locator('.places-rail [data-spot]');
+ await expect(favorite).toBeVisible();
+ await expect(page.locator('#app [data-spot]')).toHaveCount(1);
+ await expect(page.locator('#app .spot-card')).toHaveCount(0);
+ await favorite.click();
+ await expect(page.locator('#app .spot-card')).toContainText('Saved test spot');
+ await page.locator('nav.tab [data-tab="home"]').click();
  await places.locator('#homeFiltersToggle').click();
  await expect(places.locator('#filters')).toBeVisible();
  await places.locator('#filters [data-cat="food"]').click();
@@ -132,6 +139,20 @@ test('built mobile homepage exposes filters, tools and the book reader',async({p
  await expect(page.locator('#reader')).toBeVisible();
  await expect(page.locator('#readerTitle')).toHaveText('Последний пассажир');
 });
+test('Travel Reads back link clears the phone status bar and returns home',async({page})=>{
+ await page.setViewportSize({width:402,height:874});
+ await page.goto(url('/site/public/travel-reads.html'));
+ const back=page.locator('header a[href="./index.html"]');
+ const initial=await back.boundingBox();
+ expect(initial.height).toBeGreaterThanOrEqual(44);
+ // Model an iPhone status bar in the desktop browser runner.
+ await page.addStyleTag({content:'body{--shelf-safe-top:62px}body::after{content:"";position:fixed;inset:0 0 auto;height:62px;z-index:9999}'});
+ const shifted=await back.boundingBox();
+ expect(shifted.y-initial.y).toBe(62);
+ await back.click();
+ await expect(page).toHaveURL(/site\/public\/index\.html$/);
+});
+
 test('Travel Reads shelf loads on mobile and keeps bookmark locally',async({page})=>{
  await page.setViewportSize({width:390,height:844});
  await page.goto(url('/site/public/travel-reads.html'));

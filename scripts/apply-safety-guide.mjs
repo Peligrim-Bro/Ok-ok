@@ -82,6 +82,11 @@ const home=String.raw`
 \${clockHTML(true)}
 `;
 html=html.slice(0,actionsStart)+home.replaceAll('\\${','${')+html.slice(actionsEnd);
+// The Places carousel already links to saved spots. Remove the old home-only duplicate.
+const favoriteStart=html.indexOf('        ${(() => {\n          const fav = spots.find(',actionsStart);
+const favoriteEnd=html.indexOf('        })()}\n',favoriteStart);
+if(favoriteStart<0||favoriteEnd<0)throw Error('Legacy home favorite block missing');
+html=html.slice(0,favoriteStart)+html.slice(favoriteEnd+'        })()}\n'.length);
 // Keep the native filters and their existing listeners when home is redrawn.
 html=html.replace('<details id="homeFilters">','<div id="catalogFiltersSlot"></div><details id="homeFilters">');
 html=html.replace("const homeFilters=$('homeFilters');","const homeFilters=$('homeFilters'); $('catalogFiltersSlot').after(homeFilters);");
