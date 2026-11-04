@@ -309,3 +309,27 @@ test('Travel Reads opens saved book at last reading position',async({page})=>{
  await expect(page.locator('#readerTitle')).toContainText('Лисёнок');
  await expect(page.locator('#sceneProgress')).toContainText('2 / 8');
 });
+
+test('Receipt card opens the complete original text and returns to the shelf on mobile',async({page})=>{
+ await page.setViewportSize({width:320,height:740});
+ await page.goto(url('/site/public/travel-reads.html'));
+ const card=page.locator('#receipt-card');
+ await expect(card).toHaveCount(1);
+ await page.locator('[data-filter="3-6"]').click();
+ await expect(card).toBeHidden();
+ await page.locator('[data-filter="adult"]').click();
+ await expect(card).toBeVisible();
+ const cover=card.locator('img');
+ await expect.poll(()=>cover.evaluate(img=>img.naturalWidth)).toBeGreaterThan(0);
+ // Production serves the book from the site root; map that path to the built files in this fixture.
+ await page.route('**/books/receipt.html',route=>route.fulfill({path:'site/public/books/receipt.html',contentType:'text/html'}));
+ await card.getByRole('link',{name:'Читать'}).click();
+ await expect(page.locator('h1')).toHaveText('Квитанция на двоих');
+ const {readFile}=await import('node:fs/promises');
+ const [, ...original]=(await readFile('books/receipt.txt','utf8')).trimEnd().split('\n');
+ expect(await page.locator('.receipt-story > *').allTextContents()).toEqual(original);
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(320);
+ await page.route('**/travel-reads.html',route=>route.fulfill({path:'site/public/travel-reads.html',contentType:'text/html'}));
+ await page.getByRole('link',{name:'К полке'}).last().click();
+ await expect(page.locator('#receipt-card')).toBeVisible();
+});

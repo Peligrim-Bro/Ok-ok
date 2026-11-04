@@ -1,3 +1,4 @@
+import { addReceiptBook } from './apply-receipt-book.mjs';
 import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 
@@ -19,6 +20,7 @@ for (const id of [1, 2, 3, 4, 5]) {
   assets.push(name);
 }
 reader = reader.replace('.cover svg{', '.cover img{');
+reader = addReceiptBook(reader, root, assets);
 const close = '</script></body>';
 if (!reader.includes(close)) throw new Error('Missing book reader script anchor');
 writeFileSync(root + 'travel-reads.html', reader.replace(close, `
@@ -38,7 +40,11 @@ const worker = root + 'sw.js';
 let sw = readFileSync(worker, 'utf8');
 sw = sw.replace('const CORE = [', 'const CORE = [' + assets.map(asset => JSON.stringify('./' + asset)).join(',') + ',');
 // Standalone navigation must never replace the cached home shell.
-sw = sw.replace('  if (request.mode === "navigate") {', `  if (request.mode === "navigate" && /^\\/(?:tools|split-bill|inspect|travel-reads)(?:\\.html)?$/.test(url.pathname)) {
+sw = sw.replace('  if (request.mode === "navigate") {', `  if (request.mode === "navigate" && ['/books/receipt', '/books/receipt.html'].includes(url.pathname)) {
+    e.respondWith(fetch(request).catch(async () => await caches.match('./books/receipt.html') || Response.error()));
+    return;
+  }
+  if (request.mode === "navigate" && /^\\/(?:tools|split-bill|inspect|travel-reads)(?:\\.html)?$/.test(url.pathname)) {
     const page = url.pathname.endsWith('.html') ? url.pathname : url.pathname + '.html';
     e.respondWith(fetch(request).catch(async () => await caches.match(page) || Response.error()));
     return;
