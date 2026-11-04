@@ -40,8 +40,8 @@ const worker = root + 'sw.js';
 let sw = readFileSync(worker, 'utf8');
 sw = sw.replace('const CORE = [', 'const CORE = [' + assets.map(asset => JSON.stringify('./' + asset)).join(',') + ',');
 // Standalone navigation must never replace the cached home shell.
-sw = sw.replace('  if (request.mode === "navigate") {', `  if (request.mode === "navigate" && ['/books/receipt', '/books/receipt.html'].includes(url.pathname)) {
-    e.respondWith(fetch(request).catch(async () => await caches.match('./books/receipt.html') || Response.error()));
+sw = sw.replace('  if (request.mode === "navigate") {', `  if (request.mode === "navigate" && /^\\/books\\/(?:receipt|rain|change|keys|window)(?:\\.html)?$/.test(url.pathname)) {
+    e.respondWith(fetch(request).catch(async () => await caches.match(url.pathname.endsWith('.html') ? url.pathname : url.pathname + '.html') || Response.error()));
     return;
   }
   if (request.mode === "navigate" && /^\\/(?:tools|split-bill|inspect|travel-reads)(?:\\.html)?$/.test(url.pathname)) {

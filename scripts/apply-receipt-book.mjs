@@ -1,20 +1,17 @@
 import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 
 export function addReceiptBook(reader, root, assets) {
-  const [annotation, ...lines] = readFileSync('books/receipt.txt', 'utf8').trimEnd().split('\n');
-  const chapters = lines.filter(line => /^Глава \d+\./.test(line));
-  if (chapters.length !== 5 || !lines.at(-1).endsWith('Ее смена продолжалась.')) throw Error('Incomplete Receipt manuscript');
-
-  const escape = text => text.replace(/[&<>]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[char]));
-  const title = 'Квитанция на двоих';
-  const genre = 'Камерный детектив';
-  const cover = '<div class="receipt-cover"><img src="/books/receipt-cover.webp" alt=""><strong>' + title + '</strong></div>';
-  const card = '<section id="receipt-card" class="note receipt-card" lang="ru">' + cover +
-    '<div><h2>' + title + '</h2><p>' + genre + ' · RU</p><p>' + escape(annotation) +
-    '</p><a class="receipt-action" href="/books/receipt.html">Читать</a></div></section>';
+  const editions = [
+    ['receipt', 'Квитанция на двоих', 'Камерный детектив', 5, 'Ее смена продолжалась.'],
+    ['rain', 'Дождь на записи', 'Мистика', 4, 'ей действительно нечего было терять.'],
+    ['change', 'Сдачу оставьте себе', 'Психологический триллер', 4, 'Смена была окончена.'],
+    ['keys', 'Два одинаковых ключа', 'Детектив', 5, '«Черный список. Пожизненно».'],
+    ['window', 'Окно без моря', 'Мистический триллер', 5, 'И он ни на что не собирался ее менять.'],
+  ];
   const shelfEnd = '</article></section>';
-  if (!reader.includes(shelfEnd) || reader.includes('id="receipt-card"')) throw Error('Receipt shelf insertion failed');
-
+  if (!reader.includes(shelfEnd) || reader.includes('id="receipt-card"')) throw Error('Book shelf insertion failed');
+  mkdirSync(root + 'books', {recursive:true});
+  const cards = [];
   const css = `
 .receipt-card{display:grid;grid-template-columns:minmax(92px,155px) 1fr;gap:14px;align-items:start;margin-bottom:16px}
 .receipt-card[hidden]{display:none}.receipt-card h2,.receipt-card p{margin:0 0 8px}
@@ -24,13 +21,25 @@ export function addReceiptBook(reader, root, assets) {
 .receipt-action{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;border:1px solid #6dd8db;border-radius:12px}
 @media(max-width:360px){.receipt-card{grid-template-columns:1fr}.receipt-card .receipt-cover{max-width:155px}}
 `;
-  const head = reader.slice(0, reader.indexOf('</head>')).replace(/<title>[^<]+<\/title>/, '<title>' + title + ' · OK-OK</title>');
-  const story = lines.map(line => /^Глава \d+\./.test(line) ? '<h2>' + escape(line) + '</h2>' : '<p>' + escape(line) + '</p>').join('\n');
-  mkdirSync(root + 'books', {recursive:true});
-  for (const name of ['receipt-cover.webp','receipt-shelf.webp']) copyFileSync('books/' + name, root + 'books/' + name);
-  writeFileSync(root + 'books/receipt.html', head + '<style>' + css + '.receipt-lead{max-width:155px;margin:16px 0}.receipt-story{font-size:1.1rem}.receipt-story h2{margin:2em 0 0.7em}.receipt-story h2:first-child{margin-top:0}</style></head><body><main><header><a class="receipt-action" href="/travel-reads.html">← К полке</a></header><h1>' + title + '</h1><p>' + genre + '</p><p>' + escape(annotation) + '</p><div class="receipt-lead">' + cover + '</div><img class="story-illustration" src="/books/receipt-shelf.webp" width="900" height="600" alt="Алиса у пустой полки номер 42"><article class="reader-story receipt-story">' + story + '</article><a class="receipt-action" href="/travel-reads.html">← К полке</a></main></body></html>');
-  assets.push('books/receipt.html','books/receipt-cover.webp','books/receipt-shelf.webp');
+  for (const [slug, title, genre, count, ending] of editions) {
+    const [annotation, ...lines] = readFileSync('books/' + slug + '.txt', 'utf8').trimEnd().split('\n');
+    const chapters = lines.filter(line => /^Глава \d+\./.test(line));
+    if (!annotation || chapters.length !== count || !chapters.every((line,i)=>line.startsWith('Глава '+(i+1)+'.')) || !lines.at(-1).endsWith(ending)) throw Error('Incomplete manuscript: ' + slug);
+    const escape = text => text.replace(/[&<>]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[char]));
+    const cover = '<div class="receipt-cover"><img src="/books/' + slug + '-cover.webp" alt=""><strong>' + title + '</strong></div>';
+    const card = '<section id="' + slug + '-card" class="note receipt-card" lang="ru">' + cover +
+      '<div><h2>' + title + '</h2><p>' + genre + ' · RU</p><p>' + escape(annotation) +
+      '</p><a class="receipt-action" href="/books/' + slug + '.html">Читать</a></div></section>';
+    const head = reader.slice(0, reader.indexOf('</head>')).replace(/<title>[^<]+<\/title>/, '<title>' + title + ' · OK-OK</title>');
+    const story = lines.map(line => /^Глава \d+\./.test(line) ? '<h2>' + escape(line) + '</h2>' : '<p>' + escape(line) + '</p>').join('\n');
+    copyFileSync('books/' + slug + '-cover.webp', root + 'books/' + slug + '-cover.webp');
+    writeFileSync(root + 'books/' + slug + '.html', head + '<style>' + css + '.receipt-lead{max-width:155px;margin:16px 0}.receipt-story{font-size:1.1rem}.receipt-story h2{margin:2em 0 0.7em}.receipt-story h2:first-child{margin-top:0}</style></head><body><main><header><a class="receipt-action" href="/travel-reads.html">← К полке</a></header><h1>' + title + '</h1><p>' + genre + '</p><p>' + escape(annotation) + '</p><div class="receipt-lead">' + cover + '</div>' + (slug === 'receipt' ? '<img class="story-illustration" src="/books/receipt-shelf.webp" width="900" height="600" alt="Алиса у пустой полки номер 42">' : '') + '<article class="reader-story receipt-story">' + story + '</article><a class="receipt-action" href="/travel-reads.html">← К полке</a></main></body></html>');
+    assets.push('books/' + slug + '.html','books/' + slug + '-cover.webp');
+    cards.push(card);
+  }
+  copyFileSync('books/receipt-shelf.webp', root + 'books/receipt-shelf.webp');
+  assets.push('books/receipt-shelf.webp');
   return reader.replace('</head>', '<style>' + css + '</style></head>')
-    .replace(shelfEnd, shelfEnd + card)
-    .replace("activeFilter=b.dataset.filter;", "activeFilter=b.dataset.filter;document.getElementById('receipt-card').hidden=!['all','adult'].includes(activeFilter);");
+    .replace(shelfEnd, shelfEnd + cards.join(''))
+    .replace("activeFilter=b.dataset.filter;", "activeFilter=b.dataset.filter;document.querySelectorAll('.receipt-card').forEach(card=>card.hidden=!['all','adult'].includes(activeFilter));");
 }
