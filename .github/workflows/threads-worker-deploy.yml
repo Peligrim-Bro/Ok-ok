@@ -33,3 +33,25 @@ jobs:
           endpoint=https://okok-threads-auth.timurhansolo.workers.dev
           test "$(curl -sS -o /dev/null -w '%{http_code}' "$endpoint/callback")" = 400
           curl -sS "$endpoint/threads-check" | jq -e '.ok == true'
+      - name: Publish the approved Last Passenger teaser
+        if: github.ref == 'refs/heads/main' && github.run_attempt == 1 && contains(github.event.head_commit.message, '[publish last passenger]')
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          key="$(openssl rand -hex 32)"
+          echo "::add-mask::$key"
+          wrangler() {
+            npx --yes wrangler@4.151.3 "$@" --config workers/threads-auth/wrangler.json
+          }
+          cleanup() {
+            wrangler secret delete THREADS_PUBLISH_KEY
+          }
+          trap cleanup EXIT
+          printf '%s' "$key" | wrangler secret put THREADS_PUBLISH_KEY
+          endpoint=https://okok-threads-auth.timurhansolo.workers.dev
+          result="$(curl --silent --show-error --max-time 40 -X POST \
+            -H "Authorization: Bearer $key" "$endpoint/publish-teaser")"
+          printf '%s\n' "$result"
+          jq -e '.id | type == "string"' <<< "$result"
