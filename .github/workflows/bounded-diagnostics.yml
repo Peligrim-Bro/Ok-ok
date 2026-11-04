@@ -8,7 +8,7 @@ on:
         required: true
         type: choice
         options:
-          - project-check
+          - toolchain
           - build
 
 permissions:
@@ -35,7 +35,7 @@ jobs:
           DIAGNOSTIC_TARGET: ${{ inputs.target }}
         run: |
           case "$DIAGNOSTIC_TARGET" in
-            project-check) npm run check ;;
+            toolchain) node scripts/verify-toolchain.mjs ;;
             build) npm run build ;;
             *) echo "Unsupported target" >&2; exit 2 ;;
           esac
