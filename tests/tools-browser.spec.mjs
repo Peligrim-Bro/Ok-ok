@@ -10,7 +10,7 @@ test.beforeAll(async()=>{
   if(!file.startsWith(process.cwd()+'/')){res.writeHead(403).end();return}
   try{
    const body=await readFile(file);
-   res.setHeader('Content-Type',extname(file)==='.mjs'?'text/javascript':extname(file)==='.html'?'text/html':'text/plain');
+   res.setHeader('Content-Type',['.mjs','.js'].includes(extname(file))?'text/javascript':extname(file)==='.html'?'text/html':'text/plain');
    res.end(body);
   }catch{res.writeHead(404).end()}
  });
@@ -232,7 +232,7 @@ test('Travel Reads thriller is complete in Russian and English',async({page})=>{
  await expect(page.locator('#readerStory')).toContainText('Ильи');
  await expect(page.locator('#sceneProgress')).toContainText('1 / 8');
  for(let n=1;n<8;n++)await page.locator('#sceneNext').click();
- await expect(page.locator('#readerStory')).toContainText('Ноп связался');
+ await expect(page.locator('#readerStory')).toContainText('его доступ восстановили после проверки');
  await page.locator('#lang').click();
  await expect(page.locator('#readerStory')).toContainText('replaced');
  await expect(page.locator('#sceneProgress')).toContainText('8 / 8');

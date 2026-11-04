@@ -1,5 +1,6 @@
 /* Compact ceramic panels for the Pattaya home. */
 .home-panel {
+  min-width: 0;
   padding: clamp(9px, 2.5vw, 16px);
   margin-bottom: 9px;
   border-radius: 17px;
@@ -14,21 +15,21 @@ html:not([data-theme="light"]) .home-panel {
 .home-panel .panel-heading > span { flex-shrink: 0; }
 .home-caption { color: var(--muted); font-size: 13px; margin: 0 0 5px; }
 .home-panel .home-rail { gap: 7px; padding: 2px 1px 5px; scrollbar-width: thin; }
-.home-panel .home-tile { box-sizing: border-box; flex-basis: 57%; min-height: 91px; border-radius: 13px; padding: 8px 9px; gap: 3px; }
+.home-panel .home-tile { box-sizing: border-box; flex-basis: 57%; min-height: 91px; border-radius: 13px; padding: 8px 7px; gap: 3px; }
 .home-panel .home-tile + .home-tile { flex-basis: 40%; }
-.home-panel .home-tile strong { font-size: clamp(12px, 3.3vw, 17px); overflow-wrap: anywhere; }
+.home-panel .home-tile strong { font-size: clamp(11px, 3.1vw, 17px); overflow-wrap: anywhere; }
 .home-panel .home-tile small { font-size: clamp(11px, 3vw, 14px); line-height: 1.22; overflow-wrap: anywhere; }
 .home-panel .tile-symbol { font-size: clamp(20px, 5vw, 29px); }
 .home-panel .places-rail .home-tile { flex-basis: calc((100% - 14px) * .29); }
 .home-panel .places-rail .home-tile:first-child { flex-basis: calc((100% - 14px) * .42); }
-html body .home-panel .places-rail button.home-tile { --toy-shadow: inset 0 2px 8px #ffffff65; }
-html body .home-panel .places-rail [data-spin] { --toy-face: linear-gradient(#ffb394, #ff795e); --toy-ink: #221611; --toy-rim: #ffcfbd; }
-html body .home-panel .places-rail [data-openmap] { --toy-face: linear-gradient(#18677f, #074253); --toy-ink: #fff; --toy-rim: #6dc8dd; }
-html body .home-panel .places-rail [data-spot] { --toy-face: linear-gradient(#67538f, #3e2d65); --toy-ink: #fff; --toy-rim: #b79adb; }
+#app .home-panel .places-rail button.home-tile { --toy-shadow: inset 0 2px 8px #ffffff65; }
+#app .home-panel .places-rail [data-spin] { --toy-face: linear-gradient(#ffb394, #ff795e); --toy-ink: #221611; --toy-rim: #ffcfbd; }
+#app .home-panel .places-rail [data-openmap] { --toy-face: linear-gradient(#18677f, #074253); --toy-ink: #fff; --toy-rim: #6dc8dd; }
+#app .home-panel .places-rail [data-spot] { --toy-face: linear-gradient(#67538f, #3e2d65); --toy-ink: #fff; --toy-rim: #b79adb; }
 .home-panel .places-rail .home-tile small { color: inherit; }
 html body .home-panel #homeFilters { width: 100%; margin: 3px 0 0; }
 html body .home-panel #homeFiltersToggle { border: 1px solid #42d9df; border-radius: 16px; background: var(--card2); color: var(--text); box-shadow: inset 0 0 8px #35e9ff44; }
-.okok-new-home { display: grid; }
+.okok-new-home { display: grid; grid-template-columns: minmax(0, 1fr); }
 .home-panel .tool-tile { flex: 0 0 calc((100% - 35px)/6); min-width: 53px; min-height: 64px; align-items: center; justify-content: center; text-align: center; font-size: 11px; line-height: 1.15; padding: 4px 3px; overflow-wrap: anywhere; }
 .home-panel .tool-tile + .tool-tile { flex-basis: calc((100% - 35px)/6); }
 .home-panel .tool-tile:first-child { background: linear-gradient(#755fa8, #3d2c64); color: #fff; border-color: #9a7cd7; }
@@ -42,3 +43,6 @@ html body .home-panel #homeFiltersToggle { border: 1px solid #42d9df; border-rad
 
 .books-panel .panel-heading > a { color: var(--text); font-size: 12px; text-decoration: none; border-radius: 16px; background: var(--card2); padding: 4px 8px; text-align: center; }
 html body nav.tab button[data-tab="home"].on { --toy-face: linear-gradient(#91f8db, #2ccaa9 72%, #77e9cc); --toy-ink: #12352f; }
+
+.profile-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.profile-actions > * { min-height: 44px; }

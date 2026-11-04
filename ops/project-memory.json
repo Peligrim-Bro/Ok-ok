@@ -229,7 +229,7 @@
       "id": "mobile-home-reference",
       "status": "needs_verification",
       "tags": ["release", "home", "tools"],
-      "next": "4 Nov reference: mobile safety/places/tools/books layout integrated from the existing tools branch. Local build and tool unit tests passed. Review PR CI, mobile screenshots and offline reading before main. PR 98 diagnostics is separate.",
+      "next": "4 Nov reference: mobile safety/places/tools/books layout integrated from the existing tools branch. Draft PR 101: local build and tool unit tests passed. Chromium verified offline book entry, native filters and INSPECT PDF with local jsPDF. Review final mobile screenshots, full browser CI and Lighthouse before main. PR 98 diagnostics is separate.",
       "sources": ["home-reference.css", "scripts/apply-safety-guide.mjs", "scripts/apply-standalone-tools.mjs", "tests/mobile.spec.cjs"]
     }
   ]

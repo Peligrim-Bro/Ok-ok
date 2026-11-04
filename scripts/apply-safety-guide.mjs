@@ -99,6 +99,20 @@ html=html.replace('      if (e.target.closest("[data-tours]")) {',`      if (e.t
 html=html.replace('<h1>PattayaOK</h1>','<h1>OK-OK</h1>').replace(":'PattayaOK';",":'OK-OK';");
 html=html.replace('tagline: "Места, которым можно верить"','tagline: "Места и защита от скама"').replace('tagline: "Places you can actually trust"','tagline: "Places and scam awareness"').replace('tagline: "สถานที่ที่ไว้ใจได้"','tagline: "แนะนำสถานที่และรู้ทันกลโกง"');
 html=html.replace('</head>','<style id=\"okok-home-panels\">.home-panel{padding:14px;margin:0 0 14px;border:1px solid var(--line);border-radius:24px;background:var(--card)}.panel-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}.panel-heading h2{font-size:19px;margin:0}.panel-heading>span{font-size:12px;color:var(--muted)}.home-rail{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:3px 2px 10px;scrollbar-width:thin}.home-tile{flex:0 0 71%;min-width:0;scroll-snap-align:start;display:flex;flex-direction:column;align-items:flex-start;gap:6px;text-align:left;padding:14px;min-height:136px;border:1px solid var(--line);border-radius:19px;background:var(--card2);color:var(--text);font:inherit;text-decoration:none;cursor:pointer;box-shadow:inset 0 1px 1px #ffffff35}.home-tile strong{font-size:17px;line-height:1.25}.home-tile small{font-size:13px;line-height:1.4;color:var(--muted)}.home-tile[data-spin] small{color:inherit}.tile-symbol{font-size:25px;line-height:1.2}.home-tile:focus-visible{outline:3px solid var(--mint);outline-offset:-3px}.safety-tile{border-color:var(--mint)}.places-rail .home-tile{flex-basis:53%;min-height:118px}#homeFilters:not([open]){width:max-content;max-width:100%;margin:8px 0}#homeFilters:not([open]) #homeFiltersToggle{padding:0 38px;border-radius:14px}#homeFilters[open]{width:100%}@media(min-width:700px){.home-tile,.places-rail .home-tile{flex-basis:calc((100% - 20px)/3)}}@media(prefers-reduced-motion:reduce){.home-rail{scroll-behavior:auto}}</style></head>');
+// The fifth tab keeps its catalogue and exposes device-local shortcuts above it.
+const profile = `<section class="home-panel" aria-labelledby="profile-title">
+<h2 id="profile-title">\${cityText('Профиль','Profile','โปรไฟล์')}</h2>
+<p class="home-caption">\${cityText('Ваши инструменты и сохранённые данные на этом устройстве','Your tools and data saved on this device','เครื่องมือและข้อมูลที่บันทึกไว้บนอุปกรณ์นี้')}</p>
+<div class="profile-actions">
+\${city==='pattaya'?'<button class="btn map" type="button" data-spot="1">'+cityText('Любимые локации','Favorite spots','สถานที่โปรด')+'</button>':''}
+<a class="btn map" href="./tools.html">\${cityText('Полезное','Tools','เครื่องมือ')}</a>
+<a class="btn ghost" href="./travel-reads.html">\${cityText('Попутчик','Travel Reads','หนังสือระหว่างทาง')}</a>
+</div></section>`;
+html=html.replace('    function renderShop() {','    function profileHTML(){return `'+profile+'`;}\n    function renderShop() {');
+html=html.replace('<h2 style="margin:8px 0 6px">${t().shopsTitle}</h2>','${profileHTML()}<h2 style="margin:8px 0 6px">${t().shopsTitle}</h2>');
+html=html.replace("$('app').innerHTML=intro+'<div class=\"empty\">'+cityText", "$('app').innerHTML=(tab==='shop'?profileHTML():'')+intro+'<div class=\"empty\">'+cityText");
+for (const label of ['Профиль','Profile','โปรไฟล์']) html=html.replace('navShop: ""','navShop: "'+label+'"');
+html=html.replace(' class="quiet-leaf" aria-label="cannabis shops"',' class="quiet-leaf"');
 // Version panel CSS separately so new safety content stays within the shell budget.
 const panelStyle=html.match(/<style id="okok-home-panels">([\s\S]*?)<\/style>/);
 if(!panelStyle)throw Error('Home panel stylesheet missing');

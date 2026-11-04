@@ -26,6 +26,7 @@ for(const lang of ['ru','en','th'])for(const width of [390,768])test(`${lang} at
  await page.addInitScript(lang=>{localStorage.setItem('pok-lang',lang);localStorage.setItem('pok-lang-set','1');},lang);
  await page.goto('/',{waitUntil:'domcontentloaded'});
  await expect(page.locator('nav.tab button')).toHaveCount(5);
+ await expect(page.locator('nav.tab [data-tab="shop"]')).toHaveText({ru:'Профиль',en:'Profile',th:'โปรไฟล์'}[lang]);
  await expect(page.locator('#langBtn')).toHaveText(lang.toUpperCase());
  for(const id of ['moreBtn','themeBtn','langBtn'])expect((await page.locator('#'+id).boundingBox()).height).toBe(44);
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);

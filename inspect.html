@@ -5,7 +5,8 @@
 <section class="card"><label data-t="rental">Прокат</label><input id="rentalName" maxlength="100" autocomplete="off"><label data-t="plate">Госномер</label><input id="plateNumber" maxlength="40" autocomplete="off"><label data-t="odo">Пробег</label><input id="odometer" maxlength="30" inputmode="numeric"><label data-t="notes">Замечания / повреждения</label><textarea id="damageNotes" rows="3" maxlength="3000"></textarea></section>
 <section class="card"><h2 data-t="photos">Фото байка</h2><p class="muted" data-t="photoInfo">Пять обязательных ракурсов. Время и режим фиксируются на снимке; GPS пока не записывается.</p><div id="slots"></div></section>
 <section class="card"><div class="row"><button class="primary" id="pdf" data-t="pdf">Создать PDF</button><button id="clear" data-t="clear">Очистить этот осмотр</button></div><p id="status" role="status" class="muted"></p><a id="openPdf" hidden target="_blank" rel="noopener" data-t="open">Открыть PDF</a></section>
-</main><script type="module">
+</main><script src="./tools/vendor/jspdf.umd.min.js"></script>
+<script type="module">
 import {sanitizeInspectionFilename,createCaptureEpoch,snapshotInspection} from './tools/inspect-helpers.mjs';
 import {loadInspection,saveInspection} from './tools/inspect-storage.mjs';
 import {pdfTextImage} from './tools/inspect-pdf-text.mjs';
@@ -39,7 +40,7 @@ const ratio=Math.min(1,1200/Math.max(img.naturalWidth,img.naturalHeight)),canvas
 function modeTo(next){epoch.invalidate();mode=next;revoke();render()}
 $('start').onclick=()=>modeTo('START');$('return').onclick=()=>modeTo('RETURN');$('lang').onclick=()=>{lang=lang==='ru'?'en':'ru';localStorage.setItem('okok_lang',lang);render()};fields.forEach(f=>$(f).oninput=()=>{store[mode][f]=$(f).value;save()});$('clear').onclick=()=>{if(!confirm(msg('confirm')))return;epoch.invalidate();store[mode]=blank();save();revoke();render()};
 $('pdf').onclick=async()=>{await pendingSave.catch(()=>{});const data=snapshotInspection(mode,store);if(views.slice(0,5).some(v=>!data.photos[v])){$('status').textContent=msg('required');return}$('pdf').disabled=true;$('status').textContent='…';
-try{const lib=await import('https://cdn.jsdelivr.net/npm/jspdf@2.5.2/+esm');const pdf=new lib.jsPDF({orientation:'portrait',unit:'mm',format:'a4'});const title='OK-OK INSPECT '+data.mode;
+try{const pdf=new globalThis.jspdf.jsPDF({orientation:'portrait',unit:'mm',format:'a4'});const title='OK-OK INSPECT '+data.mode;
 const addText=(text,x,y,width=185,maxLines=2)=>{const bitmap=pdfTextImage(text,{maxLines});pdf.addImage(bitmap.dataUrl,'PNG',x,y,width,width*bitmap.ratio)};
 const addPhoto=(dataUrl,x,y)=>{const {width,height}=pdf.getImageProperties(dataUrl);const scale=Math.min(90/width,90/height);const w=width*scale,h=height*scale;pdf.addImage(dataUrl,'JPEG',x+(90-w)/2,y+(90-h)/2,w,h,undefined,'FAST')};
 const writeHeader=()=>{

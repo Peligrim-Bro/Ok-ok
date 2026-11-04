@@ -4,9 +4,10 @@ import { createHash } from 'node:crypto';
 const root = 'site/public/';
 const pages = ['split-bill.html', 'inspect.html', 'tools.html', 'travel-reads.html'];
 const modules = ['split-math', 'split-ui-adapter', 'receipt-ocr', 'inspect-helpers', 'inspect-storage', 'inspect-pdf-text'];
-mkdirSync(root + 'tools', { recursive: true });
-const assets = [...pages, ...modules.map(name => 'tools/' + name + '.mjs')];
+mkdirSync(root + 'tools/vendor', { recursive: true });
+const assets = [...pages, ...modules.map(name => 'tools/' + name + '.mjs'), 'tools/vendor/jspdf.umd.min.js'];
 for (const asset of assets) copyFileSync(asset, root + asset);
+copyFileSync('tools/vendor/jspdf-LICENSE.txt', root + 'tools/vendor/jspdf-LICENSE.txt');
 
 const reader = readFileSync('travel-reads.html', 'utf8');
 const close = '</script></body>';
