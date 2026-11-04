@@ -46,10 +46,10 @@ test('home panels replace button stack and all carousel entries work',async({pag
 await page.setViewportSize({width:390,height:844});
 await page.addInitScript(()=>{localStorage.setItem('pok-lang','ru');localStorage.setItem('pok-lang-set','1');localStorage.setItem('pok-install-seen','1')});
 await page.goto('/?okok_test=1');
-await expect(page.locator('.home-panel')).toHaveCount(2);
-await expect(page.locator('.home-rail')).toHaveCount(2);
+await expect(page.locator('.home-panel')).toHaveCount(4);
+await expect(page.locator('.home-rail')).toHaveCount(3);
 expect(await page.locator('.home-rail').first().evaluate(e=>e.scrollWidth>e.clientWidth)).toBe(true);
-expect(await page.locator('#homeFiltersToggle').evaluate(e=>e.getBoundingClientRect().width)).toBeLessThan(200);
+await expect(page.locator('#places-title').locator('..').locator('..').locator('#homeFiltersToggle')).toBeVisible();
 await page.locator('a[href="#safety/bike-deposit/after"]').click();
 const f=page.frameLocator('#safetyGuide');await expect(f.locator('[data-mode="after"]')).toHaveAttribute('aria-pressed','true');
 await page.locator('nav.tab [data-tab="home"]').click();await page.locator('a[href^="/ne-vedis/"]').click();await expect(page.locator('#check-input')).toBeVisible();await page.locator('#tab-trainer').click();await expect(page.locator('#question')).toBeVisible();await page.locator('#back').click();

@@ -49,18 +49,53 @@ if(actionsStart<0||actionsEnd<0)throw Error('Home primary action anchors missing
 const home=String.raw`
 <section class="home-panel" aria-labelledby="protection-title"><div class="panel-heading"><h2 id="protection-title">🛡 \${cityText('Не попадись','Stay scam-aware','รู้ทันกลโกง')}</h2><span>\${cityText('Листай →','Swipe →','เลื่อน →')}</span></div><div class="home-rail">
 <a id="homeSafety" class="home-tile safety-tile" href="#safety/bike-deposit"><span class="tile-symbol">🛵</span><strong>\${cityText('Перед арендой','Before renting','ก่อนเช่ารถ')}</strong><small>\${cityText('Байк и депозит: 5 проверок до оплаты','Bike deposits: 5 checks before paying','เงินมัดจำ: ตรวจ 5 ข้อก่อนจ่าย')}</small></a>
-<a class="home-tile" href="#safety/bike-deposit/after"><span class="tile-symbol">🧾</span><strong>\${cityText('Депозит удерживают?','Deposit withheld?','ถูกหักเงินมัดจำ?')}</strong><small>\${cityText('Что сохранить и куда обратиться','What to save and who to contact','เก็บหลักฐานอะไรและติดต่อใคร')}</small></a>
+<a class="home-tile" href="#safety/bike-deposit/after"><span class="tile-symbol">🧾</span><strong>\${cityText('Депозит и залог','Deposits','เงินมัดจำ')}</strong><small>\${cityText('Что сохранить и как вернуть','What to save and how to get it back','เก็บหลักฐานและขอเงินคืน')}</small></a>
 <a class="home-tile" href="/ne-vedis/index.html?lang=\${lang}#check"><span class="tile-symbol">🔎</span><strong>\${cityText('Проверить','Check a place','ตรวจสอบ')}</strong><small>\${cityText('Прокат или школа','Rental or school','ร้านเช่าหรือโรงเรียน')}</small></a>
 </div></section>
-<section class="home-panel" aria-labelledby="places-title"><div class="panel-heading"><h2 id="places-title">🧭 \${cityText('Куда пойти','Where to go','ไปไหนดี')}</h2><span>\${cityText('Листай →','Swipe →','เลื่อน →')}</span></div><div class="home-rail places-rail">
+<section class="home-panel" aria-labelledby="places-title"><div class="panel-heading"><h2 id="places-title">🧭 \${cityText('Куда пойти','Where to go','ไปไหนดี')}</h2><span>\${cityText('Листай →','Swipe →','เลื่อน →')}</span></div><p class="home-caption">\${cityText('Подборка мест, идеи и маршруты в Паттайе','Places, ideas and routes in Pattaya','สถานที่ ไอเดีย และเส้นทางในพัทยา')}</p><div class="home-rail places-rail">
 <button class="home-tile" type="button" data-spin="1"><span class="tile-symbol">✨</span><strong>\${cityText('Выбор дня','Daily pick','ตัวเลือกวันนี้')}</strong><small>\${cityText('50 идей без повторов','50 ideas, no repeats','50 ไอเดียไม่ซ้ำ')}</small></button>
-<button class="home-tile" type="button" data-openmap="1"><span class="tile-symbol">🗺</span><strong>\${cityText('На карте','On the map','บนแผนที่')}</strong><small>\${cityText('Места Паттайи на карте','Explore Pattaya places on a map','สำรวจสถานที่ในพัทยาบนแผนที่')}</small></button>
+<button class="home-tile" type="button" data-openmap="1"><span class="tile-symbol">🗺</span><strong>\${cityText('На карте','On the map','บนแผนที่')}</strong><small>\${cityText('Все места Паттайи','Explore Pattaya','สถานที่ในพัทยา')}</small></button>
+<button class="home-tile" type="button" data-spot="1"><span class="tile-symbol">♡</span><strong>\${cityText('Любимые локации','Favorite spots','สถานที่โปรด')}</strong><small>\${cityText('Ваш список','Your list','รายการของคุณ')}</small></button>
 <button class="home-tile" type="button" data-tours="1"><span class="tile-symbol">🎟</span><strong>\${cityText('Экскурсии','Tours','ทัวร์')}</strong><small>\${cityText('Открыть подборку','Open the selection','เปิดรายการแนะนำ')}</small></button>
-</div><div id="okMapSlot"></div></section>
+</div><div id="homeFilterSlot"></div><div id="okMapSlot"></div></section>
+<div class="okok-new-home" id="okok-new-home">
+<section class="home-panel" aria-labelledby="travel-tools-title">
+<div class="panel-heading"><h2 id="travel-tools-title">🧳 \${cityText('Инструменты для путешествий','Travel tools','เครื่องมือเดินทาง')}</h2><span>\${cityText('Листай →','Swipe →','เลื่อน →')}</span></div>
+<div class="home-rail">
+<a class="home-tile tool-tile" href="./split-bill.html"><img src="./assets/images/logo-ok.jpg" alt="" width="27" height="27">OK-OK SPLIT</a>
+<a class="home-tile tool-tile" href="https://www.google.com/travel/flights" target="_blank" rel="noopener"><span class="tile-symbol" aria-hidden="true">✈</span>\${cityText('Авиабилеты','Flights','เที่ยวบิน')}</a>
+<a class="home-tile tool-tile" href="https://nomads.com/" target="_blank" rel="noopener"><span class="tile-symbol" aria-hidden="true">🛏</span>\${cityText('Жильё','Stays','ที่พัก')}</a>
+<a class="home-tile tool-tile" href="https://12go.asia/?z=17095940" target="_blank" rel="noopener sponsored"><span class="tile-symbol" aria-hidden="true">🚘</span>\${cityText('Транспорт','Transport','การเดินทาง')}</a>
+<button class="home-tile tool-tile" type="button" data-home-exchange><span class="tile-symbol" aria-hidden="true">💱</span>\${cityText('Обмен валют','Currency exchange','แลกเงิน')}</button>
+<a class="home-tile tool-tile" href="./tools.html"><span class="tile-symbol" aria-hidden="true">•••</span>\${cityText('Ещё','More','เพิ่มเติม')}</a>
+</div></section>
+<section class="home-panel books-panel" aria-labelledby="books-title">
+<div class="panel-heading"><h2 id="books-title">📖 \${cityText('Попутчик','Travel Reads','หนังสือระหว่างทาง')}</h2><a href="./travel-reads.html">\${cityText('Книги в дорогу','Browse books','ดูหนังสือ')} →</a></div>
+<p class="home-caption">\${cityText('Детективы, мистика и триллеры в дорогу. После загрузки сайта можно читать офлайн.','Mysteries, supernatural stories and thrillers. Read offline once the site has loaded.','นิยายสืบสวน เรื่องลึกลับ และระทึกขวัญ อ่านออฟไลน์ได้หลังโหลดเว็บไซต์')}</p>
+<div class="okok-books">
+<a class="okok-book-link" href="./travel-reads.html?book=1"><img class="okok-book-cover" src="./tools/cover-1.svg" alt="" loading="lazy">\${cityText('Последний пассажир','The Last Passenger','ผู้โดยสารคนสุดท้าย')}<small>\${cityText('Детектив','Mystery','สืบสวน')}</small></a>
+<a class="okok-book-link" href="./travel-reads.html?book=2"><img class="okok-book-cover" src="./tools/cover-2.svg" alt="" loading="lazy">\${cityText('Номер без гостя','Room Without a Guest','ห้องพักไร้แขก')}<small>\${cityText('Мистика','Supernatural','เรื่องลึกลับ')}</small></a>
+<a class="okok-book-link" href="./travel-reads.html?book=3"><img class="okok-book-cover" src="./tools/cover-3.svg" alt="" loading="lazy">\${cityText('Чужой маршрут','The Wrong Route','ผิดเส้นทาง')}<small>\${cityText('Триллер','Thriller','ระทึกขวัญ')}</small></a>
+</div></section>
+</div>
 <p class="hint">\${cityText('Подборка — ориентир, не гарантия услуг. Цены и условия уточняй перед бронированием.','Suggestions are a starting point, not a service guarantee. Confirm prices and terms before booking.','รายการแนะนำเป็นข้อมูลเบื้องต้น ไม่ใช่การรับประกันบริการ โปรดยืนยันราคาและเงื่อนไขก่อนจอง')}</p>
 \${clockHTML(true)}
 `;
 html=html.slice(0,actionsStart)+home.replaceAll('\\${','${')+html.slice(actionsEnd);
+// Keep the native filters and their existing listeners when home is redrawn.
+html=html.replace('<details id="homeFilters">','<div id="catalogFiltersSlot"></div><details id="homeFilters">');
+html=html.replace("const homeFilters=$('homeFilters');","const homeFilters=$('homeFilters'); $('catalogFiltersSlot').after(homeFilters);");
+html=html.replace('if (tab === "home") renderHome();',`if (tab === "home") {
+        renderHome();
+        $('homeFilterSlot').append(homeFilters);
+      }`);
+html=html.replace('      if (e.target.closest("[data-tours]")) {',`      if (e.target.closest('[data-home-exchange]')) {
+        cat = 'cash';
+        setTab('list');
+        return;
+      }
+      if (e.target.closest("[data-tours]")) {`);
+
 html=html.replace('<h1>PattayaOK</h1>','<h1>OK-OK</h1>').replace(":'PattayaOK';",":'OK-OK';");
 html=html.replace('tagline: "Места, которым можно верить"','tagline: "Места и защита от скама"').replace('tagline: "Places you can actually trust"','tagline: "Places and scam awareness"').replace('tagline: "สถานที่ที่ไว้ใจได้"','tagline: "แนะนำสถานที่และรู้ทันกลโกง"');
 html=html.replace('</head>','<style id=\"okok-home-panels\">.home-panel{padding:14px;margin:0 0 14px;border:1px solid var(--line);border-radius:24px;background:var(--card)}.panel-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}.panel-heading h2{font-size:19px;margin:0}.panel-heading>span{font-size:12px;color:var(--muted)}.home-rail{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:3px 2px 10px;scrollbar-width:thin}.home-tile{flex:0 0 71%;min-width:0;scroll-snap-align:start;display:flex;flex-direction:column;align-items:flex-start;gap:6px;text-align:left;padding:14px;min-height:136px;border:1px solid var(--line);border-radius:19px;background:var(--card2);color:var(--text);font:inherit;text-decoration:none;cursor:pointer;box-shadow:inset 0 1px 1px #ffffff35}.home-tile strong{font-size:17px;line-height:1.25}.home-tile small{font-size:13px;line-height:1.4;color:var(--muted)}.home-tile[data-spin] small{color:inherit}.tile-symbol{font-size:25px;line-height:1.2}.home-tile:focus-visible{outline:3px solid var(--mint);outline-offset:-3px}.safety-tile{border-color:var(--mint)}.places-rail .home-tile{flex-basis:53%;min-height:118px}#homeFilters:not([open]){width:max-content;max-width:100%;margin:8px 0}#homeFilters:not([open]) #homeFiltersToggle{padding:0 38px;border-radius:14px}#homeFilters[open]{width:100%}@media(min-width:700px){.home-tile,.places-rail .home-tile{flex-basis:calc((100% - 20px)/3)}}@media(prefers-reduced-motion:reduce){.home-rail{scroll-behavior:auto}}</style></head>');

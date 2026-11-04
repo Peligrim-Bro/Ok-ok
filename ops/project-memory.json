@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "project": "OK-OK.click",
-  "updatedAt": "2026-10-30",
+  "updatedAt": "2026-11-04",
   "decisions": [
     {
       "id": "hosting",
@@ -224,6 +224,13 @@
         "docs/VISA_QUOTES_TASK.md",
         "docs/VISA_QUOTES_POST.md"
       ]
+    },
+    {
+      "id": "mobile-home-reference",
+      "status": "needs_verification",
+      "tags": ["release", "home", "tools"],
+      "next": "4 Nov reference: mobile safety/places/tools/books layout integrated from the existing tools branch. Local build and tool unit tests passed. Review PR CI, mobile screenshots and offline reading before main. PR 98 diagnostics is separate.",
+      "sources": ["home-reference.css", "scripts/apply-safety-guide.mjs", "scripts/apply-standalone-tools.mjs", "tests/mobile.spec.cjs"]
     }
   ]
 }
