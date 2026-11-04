@@ -1,52 +1,97 @@
-const teaser = "В 02:43 автобус остановился.\n\nДо остановки в салоне было двенадцать пассажиров. Теперь — одиннадцать. Двери не открывались. Место №17 пустое.\n\nКого бы ты расспросил первым — водителя или того, кто сидел рядом?\n\n«Последний пассажир» — первый детектив из «Попутчика».";
+import queue from "./queue.json";
 
-async function publishTeaser(env, headers) {
-  const api = "https://graph.threads.net/v1.0";
-  async function threads(path, method = "GET") {
-    const response = await fetch(api + path, {
-      method,
-      headers: { Authorization: `Bearer ${env.THREADS_ACCESS_TOKEN}` },
-      signal: AbortSignal.timeout(12000),
-    });
-    const data = await response.json();
-    if (!response.ok) {
-      throw new Error(`Threads HTTP ${response.status}, code ${data.error?.code ?? "unknown"}`);
-    }
-    return data;
+const API = "https://graph.threads.net/v1.0";
+
+async function threads(env, path, method = "GET") {
+  const response = await fetch(API + path, {
+    method,
+    headers: { Authorization: `Bearer ${env.THREADS_ACCESS_TOKEN}` },
+    signal: AbortSignal.timeout(12000),
+  });
+  const data = await response.json();
+  if (!response.ok) {
+    const error = new Error(`Threads HTTP ${response.status}, code ${data.error?.code ?? "unknown"}`);
+    error.status = response.status;
+    throw error;
+  }
+  return data;
+}
+
+export class ThreadsQueue {
+  constructor(state, env) {
+    this.storage = state.storage;
+    this.env = env;
   }
 
-  try {
-    const recent = await threads("/me/threads?fields=id,text,permalink&limit=25");
-    const existing = recent.data.find((post) => post.text === teaser);
+  async fetch(request) {
+    const { post } = await request.json();
+    const key = `post:${post.id}`;
+    const previous = await this.storage.get(key);
+    if (previous?.id) return Response.json(previous);
+
+    const recent = await threads(this.env, "/me/threads?fields=id,text,permalink&limit=50");
+    const existing = recent.data.find((item) => item.text === post.text);
     if (existing) {
-      return Response.json({ id: existing.id, permalink: existing.permalink }, { headers });
+      const receipt = { id: existing.id, permalink: existing.permalink };
+      await this.storage.put(key, receipt);
+      return Response.json(receipt);
     }
 
-    const query = new URLSearchParams({ media_type: "TEXT", text: teaser, auto_publish_text: "true" });
-    const published = await threads(`/me/threads?${query}`, "POST");
-    if (!published.id) {
-      return Response.json({ error: "Threads returned no post ID" }, { status: 502, headers });
+    const claimed = await this.storage.transaction(async (txn) => {
+      if (await txn.get(key)) return false;
+      await txn.put(key, { attemptedAt: new Date().toISOString() });
+      return true;
+    });
+    if (!claimed) {
+      return Response.json({ error: "Previous attempt awaits reconciliation" }, { status: 409 });
     }
 
-    return Response.json({ id: published.id }, { headers });
-  } catch (error) {
-    const message = error.message.startsWith("Threads HTTP ") ? error.message : "Threads request failed";
-    return Response.json({ error: message }, { status: 502, headers });
+    const query = new URLSearchParams({ media_type: "TEXT", text: post.text, auto_publish_text: "true" });
+    let published;
+    try {
+      published = await threads(this.env, `/me/threads?${query}`, "POST");
+    } catch (error) {
+      if (error.status >= 400 && error.status < 500) await this.storage.delete(key);
+      throw error;
+    }
+    if (!published.id) throw new Error("Threads returned no post ID");
+
+    const receipt = { id: published.id };
+    await this.storage.put(key, receipt);
+    try {
+      const details = await threads(this.env, `/${encodeURIComponent(published.id)}?fields=permalink`);
+      if (details.permalink) {
+        receipt.permalink = details.permalink;
+        await this.storage.put(key, receipt);
+      }
+    } catch (error) {
+      console.warn("Threads permalink lookup failed", post.id, error.message);
+    }
+    return Response.json(receipt);
   }
 }
 
 export default {
+  async scheduled(controller, env) {
+    const due = queue.filter((post) => {
+      const age = controller.scheduledTime - Date.parse(post.publishAt);
+      return age >= 0 && age < 8 * 60 * 60 * 1000;
+    });
+    const ledger = env.THREADS_QUEUE.getByName("production");
+    for (const post of due) {
+      const response = await ledger.fetch("https://queue.internal/publish", {
+        method: "POST",
+        body: JSON.stringify({ post }),
+      });
+      const receipt = await response.json();
+      if (!response.ok) throw new Error(`Threads slot ${post.id}: ${receipt.error}`);
+      console.log("Threads receipt", post.id, receipt);
+    }
+  },
+
   async fetch(request, env) {
     const url = new URL(request.url);
     const headers = { "Cache-Control": "no-store", "Referrer-Policy": "no-referrer" };
-
-    if (request.method === "POST" && url.pathname === "/publish-teaser") {
-      const key = env.THREADS_PUBLISH_KEY;
-      if (!key || request.headers.get("Authorization") !== `Bearer ${key}`) {
-        return new Response("Not found", { status: 404, headers });
-      }
-      return publishTeaser(env, headers);
-    }
 
     if (url.pathname === "/callback") {
       if (url.searchParams.has("error")) {
