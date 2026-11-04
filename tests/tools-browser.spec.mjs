@@ -10,7 +10,7 @@ test.beforeAll(async()=>{
   if(!file.startsWith(process.cwd()+'/')){res.writeHead(403).end();return}
   try{
    const body=await readFile(file);
-   res.setHeader('Content-Type',['.mjs','.js'].includes(extname(file))?'text/javascript':extname(file)==='.html'?'text/html':'text/plain');
+   res.setHeader('Content-Type',['.mjs','.js'].includes(extname(file))?'text/javascript':extname(file)==='.html'?'text/html':extname(file)==='.webp'?'image/webp':'text/plain');
    res.end(body);
   }catch{res.writeHead(404).end()}
  });
@@ -123,7 +123,8 @@ test('built mobile homepage exposes filters, tools and the book reader',async({p
  await places.locator('#filters [data-cat="food"]').click();
  await expect(places.locator('#homeFilters')).toHaveAttribute('open');
  await expect(panel.locator('a[href="./split-bill.html"]')).toBeVisible();
- await expect(panel.locator('.okok-book-cover')).toHaveCount(3);
+ await expect(panel.locator('a[href="./split-bill.html"] img')).toHaveAttribute('src','./assets/icons/icon-192-v80.png');
+ await expect(panel.locator('.okok-book-cover[src$="-cinema.webp"]')).toHaveCount(3);
  const sizes=await panel.locator('.okok-book-link').evaluateAll(links=>links.map(link=>link.getBoundingClientRect().right<=innerWidth+1));
  expect(sizes).toEqual([true,true,true]);
  await panel.locator('.okok-book-link').first().click();
@@ -251,7 +252,11 @@ test('Travel Reads detective has a complete bilingual ending',async({page})=>{
 test('Travel Reads shows five illustrated covers without redundant labels',async({page})=>{
  await page.goto(url('/site/public/travel-reads.html'));
  await expect(page.locator('.book')).toHaveCount(5);
- await expect(page.locator('.cover svg')).toHaveCount(5);
+ await expect(page.locator('.cover img[src$="-cinema.webp"]')).toHaveCount(3);
+ await expect(page.locator('.cover svg')).toHaveCount(2);
+ for (const cover of await page.locator('.cover img').all()) {
+  await expect.poll(() => cover.evaluate(img => img.naturalWidth)).toBeGreaterThan(0);
+ }
  await expect(page.locator('.book .status,.book .genre')).toHaveCount(0);
  await expect(page.locator('#book1')).toHaveText('Последний пассажир');
  await page.locator('#lang').click();
