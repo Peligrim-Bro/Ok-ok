@@ -11,16 +11,16 @@
 <script>
 const c=document.getElementById('fx'),ctx=c.getContext('2d'),scene=document.getElementById('scene');
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-let rain=false,flies=false,particles=[],last=0;
+let rain=false,flies=false,particles=[],last=0; const MAX_PARTICLES=100;
 function resize(){const r=scene.getBoundingClientRect();c.width=Math.round(r.width*devicePixelRatio);c.height=Math.round(r.height*devicePixelRatio);ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0)}
 new ResizeObserver(resize).observe(scene);resize();
 const rand=(a,b)=>a+Math.random()*(b-a);
-function add(type,n){const r=scene.getBoundingClientRect();for(let i=0;i<n;i++)particles.push({type,x:rand(0,r.width),y:type==='rain'?rand(30,r.height*.54):rand(20,r.height*.7),vx:rand(-2,2),vy:rand(-3,-1),life:rand(.6,1.8),max:2,hue:rand(35,58)})}
+function add(type,n){const r=scene.getBoundingClientRect();for(let i=0;i<n && particles.length<MAX_PARTICLES;i++)particles.push({type,x:type==='rain'||type==='fly'?rand(r.width*.1,r.width*.47):rand(0,r.width),y:type==='rain'||type==='fly'?rand(r.height*.15,r.height*.53):rand(20,r.height*.7),vx:rand(-2,2),vy:rand(-3,-1),life:rand(.6,1.8),max:2,hue:rand(35,58)})}
 document.getElementById('rain').onclick=e=>{rain=!rain;e.target.textContent='Дождь: '+(rain?'вкл':'выкл')};
 document.getElementById('flies').onclick=e=>{flies=!flies;e.target.textContent='Светлячки: '+(flies?'вкл':'выкл')};
 document.getElementById('coin').onclick=()=>add('coin',reduce?1:12);
 document.getElementById('party').onclick=()=>add('confetti',reduce?4:55);
 function tick(t){const dt=Math.min((t-last)/1000||.016,.04);last=t;const w=scene.clientWidth,h=scene.clientHeight;ctx.clearRect(0,0,w,h);
-if(!reduce){if(rain&&Math.random()<.7)add('rain',2);if(flies&&Math.random()<.15)add('fly',1)}
-particles=particles.filter(p=>p.life>0);for(const p of particles){p.life-=dt;p.x+=p.vx*dt*45;p.y+=(p.type==='rain'?9:p.type==='confetti'?2:p.vy)*dt*45;ctx.globalAlpha=Math.min(1,p.life*1.5);if(p.type==='rain'){ctx.strokeStyle='#a4d5ff';ctx.beginPath();ctx.moveTo(p.x*.42+ w*.08,p.y*.46+h*.12);ctx.lineTo(p.x*.42+w*.08-3,p.y*.46+h*.12+9);ctx.stroke()}else if(p.type==='fly'){ctx.fillStyle='#f9ed92';ctx.shadowColor='#ffef80';ctx.shadowBlur=10;ctx.fillRect(p.x,p.y,3,3);ctx.shadowBlur=0}else if(p.type==='coin'){ctx.fillStyle='#f8c547';ctx.beginPath();ctx.ellipse(p.x,p.y,5+3*Math.abs(Math.sin(t/170)),8,0,0,Math.PI*2);ctx.fill()}else{ctx.fillStyle='hsl('+p.hue+' 95% 65%)';ctx.fillRect(p.x,p.y,6,4)}}ctx.globalAlpha=1;requestAnimationFrame(tick)}requestAnimationFrame(tick);
+if(!reduce&&!document.hidden){if(rain&&Math.random()<.7)add('rain',2);if(flies&&Math.random()<.15)add('fly',1)}
+if(document.hidden){requestAnimationFrame(tick);return}particles=particles.filter(p=>p.life>0);for(const p of particles){p.life-=dt;p.x+=p.vx*dt*45;p.y+=(p.type==='rain'?9:p.type==='confetti'?2:p.vy)*dt*45;ctx.globalAlpha=Math.min(1,p.life*1.5);if(p.type==='rain'||p.type==='fly'){ctx.save();ctx.beginPath();ctx.rect(w*.08+8,h*.12+8,w*.42-16,h*.47-16);ctx.clip()}if(p.type==='rain'){ctx.strokeStyle='#a4d5ff';ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(p.x-3,p.y+9);ctx.stroke()}else if(p.type==='fly'){ctx.fillStyle='#f9ed92';ctx.shadowColor='#ffef80';ctx.shadowBlur=10;ctx.fillRect(p.x,p.y,3,3);ctx.shadowBlur=0}else if(p.type==='coin'){ctx.fillStyle='#f8c547';ctx.beginPath();ctx.ellipse(p.x,p.y,5+3*Math.abs(Math.sin(t/170)),8,0,0,Math.PI*2);ctx.fill()}else{ctx.fillStyle='hsl('+p.hue+' 95% 65%)';ctx.fillRect(p.x,p.y,6,4)}if(p.type==='rain'||p.type==='fly')ctx.restore()}ctx.globalAlpha=1;requestAnimationFrame(tick)}requestAnimationFrame(tick);
 </script></html>
