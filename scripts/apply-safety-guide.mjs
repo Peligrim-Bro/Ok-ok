@@ -62,7 +62,7 @@ const home=String.raw`
 <section class="home-panel" aria-labelledby="travel-tools-title">
 <div class="panel-heading"><h2 id="travel-tools-title">🧳 \${cityText('Инструменты для путешествий','Travel tools','เครื่องมือเดินทาง')}</h2><span>\${cityText('Листай →','Swipe →','เลื่อน →')}</span></div>
 <div class="home-rail">
-<a class="home-tile tool-tile" href="./split-bill.html"><img src="./assets/images/logo-ok.jpg" alt="" width="27" height="27">OK-OK SPLIT</a>
+<a class="home-tile tool-tile" href="./split-bill.html"><img src="./assets/icons/icon-192-v80.png" alt="" width="27" height="27">OK-OK SPLIT</a>
 <a class="home-tile tool-tile" href="https://www.google.com/travel/flights" target="_blank" rel="noopener"><span class="tile-symbol" aria-hidden="true">✈</span>\${cityText('Авиабилеты','Flights','เที่ยวบิน')}</a>
 <a class="home-tile tool-tile" href="https://nomads.com/" target="_blank" rel="noopener"><span class="tile-symbol" aria-hidden="true">🛏</span>\${cityText('Жильё','Stays','ที่พัก')}</a>
 <a class="home-tile tool-tile" href="https://12go.asia/?z=17095940" target="_blank" rel="noopener sponsored"><span class="tile-symbol" aria-hidden="true">🚘</span>\${cityText('Транспорт','Transport','การเดินทาง')}</a>
@@ -73,9 +73,9 @@ const home=String.raw`
 <div class="panel-heading"><h2 id="books-title">📖 \${cityText('Попутчик','Travel Reads','หนังสือระหว่างทาง')}</h2><a href="./travel-reads.html">\${cityText('Книги в дорогу','Browse books','ดูหนังสือ')} →</a></div>
 <p class="home-caption">\${cityText('Детективы, мистика и триллеры в дорогу. После загрузки сайта можно читать офлайн.','Mysteries, supernatural stories and thrillers. Read offline once the site has loaded.','นิยายสืบสวน เรื่องลึกลับ และระทึกขวัญ อ่านออฟไลน์ได้หลังโหลดเว็บไซต์')}</p>
 <div class="okok-books">
-<a class="okok-book-link" href="./travel-reads.html?book=1"><img class="okok-book-cover" src="./tools/cover-1.svg" alt="" loading="lazy">\${cityText('Последний пассажир','The Last Passenger','ผู้โดยสารคนสุดท้าย')}<small>\${cityText('Детектив','Mystery','สืบสวน')}</small></a>
-<a class="okok-book-link" href="./travel-reads.html?book=2"><img class="okok-book-cover" src="./tools/cover-2.svg" alt="" loading="lazy">\${cityText('Номер без гостя','Room Without a Guest','ห้องพักไร้แขก')}<small>\${cityText('Мистика','Supernatural','เรื่องลึกลับ')}</small></a>
-<a class="okok-book-link" href="./travel-reads.html?book=3"><img class="okok-book-cover" src="./tools/cover-3.svg" alt="" loading="lazy">\${cityText('Чужой маршрут','The Wrong Route','ผิดเส้นทาง')}<small>\${cityText('Триллер','Thriller','ระทึกขวัญ')}</small></a>
+<a class="okok-book-link" href="./travel-reads.html?book=1"><img class="okok-book-cover" src="./tools/cover-1-cinema.webp" alt="" loading="lazy">\${cityText('Последний пассажир','The Last Passenger','ผู้โดยสารคนสุดท้าย')}<small>\${cityText('Детектив','Mystery','สืบสวน')}</small></a>
+<a class="okok-book-link" href="./travel-reads.html?book=2"><img class="okok-book-cover" src="./tools/cover-2-cinema.webp" alt="" loading="lazy">\${cityText('Номер без гостя','Room Without a Guest','ห้องพักไร้แขก')}<small>\${cityText('Мистика','Supernatural','เรื่องลึกลับ')}</small></a>
+<a class="okok-book-link" href="./travel-reads.html?book=3"><img class="okok-book-cover" src="./tools/cover-3-cinema.webp" alt="" loading="lazy">\${cityText('Чужой маршрут','The Wrong Route','ผิดเส้นทาง')}<small>\${cityText('Триллер','Thriller','ระทึกขวัญ')}</small></a>
 </div></section>
 </div>
 <p class="hint">\${cityText('Подборка — ориентир, не гарантия услуг. Цены и условия уточняй перед бронированием.','Suggestions are a starting point, not a service guarantee. Confirm prices and terms before booking.','รายการแนะนำเป็นข้อมูลเบื้องต้น ไม่ใช่การรับประกันบริการ โปรดยืนยันราคาและเงื่อนไขก่อนจอง')}</p>

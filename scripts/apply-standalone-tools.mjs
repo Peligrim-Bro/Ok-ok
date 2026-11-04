@@ -9,25 +9,28 @@ const assets = [...pages, ...modules.map(name => 'tools/' + name + '.mjs'), 'too
 for (const asset of assets) copyFileSync(asset, root + asset);
 copyFileSync('tools/vendor/jspdf-LICENSE.txt', root + 'tools/vendor/jspdf-LICENSE.txt');
 
-const reader = readFileSync('travel-reads.html', 'utf8');
+let reader = readFileSync('travel-reads.html', 'utf8');
+for (const id of [1, 2, 3]) {
+  const name = 'tools/cover-' + id + '-cinema.webp';
+  const cover = new RegExp('(id="cover' + id + '">)<svg[\\s\\S]*?</svg>');
+  if (!cover.test(reader)) throw new Error('Missing illustrated book cover ' + id);
+  reader = reader.replace(cover, '$1<img src="./' + name + '" alt="" width="480" height="480">');
+  copyFileSync(name, root + name);
+  assets.push(name);
+}
+reader = reader.replace('.cover svg{', '.cover img,.cover svg{');
 const close = '</script></body>';
 if (!reader.includes(close)) throw new Error('Missing book reader script anchor');
 writeFileSync(root + 'travel-reads.html', reader.replace(close, `
 const requestedBook = new URLSearchParams(location.search).get('book');
 if (['1','2','3'].includes(requestedBook)) document.querySelectorAll('.book')[Number(requestedBook)-1].click();
 ` + close));
-for (const id of [1, 2, 3]) {
-  const svg = reader.match(new RegExp('id="cover' + id + '">(<svg[\\s\\S]*?</svg>)'))?.[1];
-  if (!svg) throw new Error('Missing illustrated book cover ' + id);
-  const name = 'tools/cover-' + id + '.svg';
-  writeFileSync(root + name, svg.replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" '));
-  assets.push(name);
-}
 
 const style = readFileSync('home-reference.css', 'utf8');
 const cssName = 'tools/home-' + createHash('sha256').update(style).digest('hex').slice(0, 12) + '.css';
 writeFileSync(root + cssName, style);
 assets.push(cssName);
+assets.push("assets/icons/icon-192-v80.png");
 const index = root + 'index.html';
 writeFileSync(index, readFileSync(index, 'utf8').replace('</head>', '<link rel="stylesheet" href="./' + cssName + '"></head>'));
 
