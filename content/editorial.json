@@ -1,90 +1,91 @@
 {
-  "verifiedAt": "2026-11-04",
+  "verifiedAt": "2026-11-05",
   "news": [
     {
       "category": "world",
-      "when": "03.11 · 🌍",
-      "href": "https://www.esa.int/Space_in_Member_States/United_Kingdom/ESA_opens_its_new_AI_Hub",
-      "publishedAt": "2026-11-03",
-      "ru": "Европейское космическое агентство открыло в Великобритании центр ИИ для разработки спутниковой связи.",
-      "en": "The European Space Agency opened a UK AI hub to develop space-enabled communications.",
-      "th": "องค์การอวกาศยุโรปเปิดศูนย์ AI ในสหราชอาณาจักรเพื่อพัฒนาการสื่อสารผ่านดาวเทียม",
+      "when": "04.11 · 🌍",
+      "href": "https://www.who.int/malaysia/news/detail-global/04-11-2026-six-climate-and-health-actions-could-save-1.6-million-lives-and-deliver-trillions-in-benefits-each-year",
+      "publishedAt": "2026-11-04",
+      "ru": "ВОЗ оценила: масштабирование шести мер в сфере климата и здоровья может предотвращать около 1,6 млн смертей в год. Это модельный сценарий с долгосрочными неопределённостями.",
+      "en": "WHO estimates that scaling six climate-and-health measures could prevent about 1.6 million deaths a year. This is a modelled scenario with long-term uncertainties.",
+      "th": "WHO ประเมินว่าการขยาย 6 มาตรการด้านภูมิอากาศและสุขภาพอาจป้องกันการเสียชีวิตได้ราว 1.6 ล้านคนต่อปี ตัวเลขนี้เป็นผลจากแบบจำลองและมีความไม่แน่นอนระยะยาว",
       "sources": [
-        "https://www.esa.int/Space_in_Member_States/United_Kingdom/ESA_opens_its_new_AI_Hub"
+        "https://www.who.int/malaysia/news/detail-global/04-11-2026-six-climate-and-health-actions-could-save-1.6-million-lives-and-deliver-trillions-in-benefits-each-year",
+        "https://www.euronews.com/2026/11/04/just-six-climate-actions-could-save-16-million-lives-a-year-who-says"
       ],
       "nonWar": true,
       "discussionEvidence": {
-        "observedAt": "2026-11-04T15:23:36+07:00",
-        "sourceUrl": "https://www.esa.int/Space_in_Member_States/United_Kingdom/ESA_opens_its_new_AI_Hub",
-        "summary": "ESA displayed 8 views and 0 likes; no comparable global ranking."
+        "observedAt": "2026-11-05T06:30:00+07:00",
+        "sourceUrl": "https://www.who.int/malaysia/news/detail-global/04-11-2026-six-climate-and-health-actions-could-save-1.6-million-lives-and-deliver-trillions-in-benefits-each-year",
+        "summary": "WHO primary report and same-day independent Euronews coverage were verified; neither page exposed comparable public discussion counters, so no global popularity rank is claimed."
       }
     },
     {
       "category": "thailand",
       "when": "04.11 · 🇹🇭",
-      "href": "https://www.pattayamail.com/thailandnews/thailand-approves-5-8-billion-baht-budget-for-bangkok-rail-fares-capped-at-45-baht-570747",
+      "href": "https://www.tatnews.org/2026/11/tat-unveils-2027-value-over-volume-strategy-at-wtm-london/",
       "publishedAt": "2026-11-04",
-      "ru": "Кабмин Таиланда одобрил субсидии на единый тариф электричек Бангкока до 45 бат за поездку. Программа запланирована на 2027 год.",
-      "en": "Thailand approved subsidies for a Bangkok-area electric rail fare cap of 45 baht per journey, planned for 2027.",
-      "th": "ครม. อนุมัติงบอุดหนุนค่าโดยสารรถไฟฟ้าในกรุงเทพฯ และปริมณฑลไม่เกิน 45 บาทต่อเที่ยว มีกำหนดใช้ในปี 2570",
+      "ru": "TAT представило стратегию туризма на 2027 год: рост доходов минимум на 5%, более широкое распределение туристов по регионам и акцент на содержательные поездки.",
+      "en": "TAT presented its 2027 tourism strategy, targeting at least 5% revenue growth, wider regional visitor distribution and more meaningful travel.",
+      "th": "ททท. เปิดยุทธศาสตร์ท่องเที่ยวปี 2570 ตั้งเป้ารายได้โตอย่างน้อย 5% กระจายนักท่องเที่ยวสู่เมืองรอง และเน้นการเดินทางที่มีความหมาย",
       "sources": [
-        "https://www.pattayamail.com/thailandnews/thailand-approves-5-8-billion-baht-budget-for-bangkok-rail-fares-capped-at-45-baht-570747"
+        "https://www.tatnews.org/2026/11/tat-unveils-2027-value-over-volume-strategy-at-wtm-london/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-04T15:23:36+07:00",
-        "sourceUrl": "https://www.pattayamail.com/thailandnews/thailand-approves-5-8-billion-baht-budget-for-bangkok-rail-fares-capped-at-45-baht-570747",
-        "summary": "Pattaya Mail displayed 617 views and 0 comments; no cross-outlet ranking."
+        "observedAt": "2026-11-05T06:30:00+07:00",
+        "sourceUrl": "https://www.tatnews.org/2026/11/tat-unveils-2027-value-over-volume-strategy-at-wtm-london/",
+        "summary": "TAT displayed 89 views. No comments or comparable national ranking were available."
       }
     },
     {
       "category": "thailand",
       "when": "04.11 · 🇹🇭",
-      "href": "https://www.pattayamail.com/thailandnews/phuket-wants-to-reduce-road-accidents-among-thai-and-foreign-riders-570713",
+      "href": "https://thailand.prd.go.th/en/content/category/detail/id/49/iid/557131",
       "publishedAt": "2026-11-04",
-      "ru": "На Пхукете запустили кампанию по безопасности мотоциклистов для местных и иностранных водителей.",
-      "en": "Phuket launched a motorcycle safety campaign aimed at local and foreign riders.",
-      "th": "ภูเก็ตเปิดตัวโครงการรณรงค์ขับขี่รถจักรยานยนต์อย่างปลอดภัยสำหรับผู้ขับขี่ชาวไทยและชาวต่างชาติ",
+      "ru": "Таиланд представил в АТЭС работу над ответственным ИИ, региональными связями и устойчивостью финансовых сервисов к мошенничеству.",
+      "en": "Thailand highlighted work on responsible AI, regional connectivity and fraud-resilient financial services at the APEC ministerial meeting.",
+      "th": "ไทยนำเสนอความคืบหน้าด้าน AI ที่รับผิดชอบ การเชื่อมโยงภูมิภาค และบริการการเงินที่ทนต่อการฉ้อโกงในการประชุมรัฐมนตรีเอเปค",
       "sources": [
-        "https://www.pattayamail.com/thailandnews/phuket-wants-to-reduce-road-accidents-among-thai-and-foreign-riders-570713"
+        "https://thailand.prd.go.th/en/content/category/detail/id/49/iid/557131"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-04T15:23:36+07:00",
-        "sourceUrl": "https://www.pattayamail.com/thailandnews/phuket-wants-to-reduce-road-accidents-among-thai-and-foreign-riders-570713",
-        "summary": "Relevant to travelers renting motorcycles; no comparable public discussion metrics verified."
+        "observedAt": "2026-11-05T06:30:00+07:00",
+        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/49/iid/557131",
+        "summary": "PRD displayed 131 views versus 78 for its same-day Bib Gourmand item; this is a within-site comparison, not a national rank."
       }
     },
     {
       "category": "pattaya",
       "when": "04.11 · Pattaya",
-      "href": "https://thepattayanews.com/2026/11/04/three-agencies-sign-mou-to-tackle-traffic-congestion-and-safety-at-watermelon-intersection-in-banglamung/",
+      "href": "https://www.pattayamail.com/latestnews/news/pattaya-develops-naklua-pier-into-a-community-tourism-destination-570833",
       "publishedAt": "2026-11-04",
-      "ru": "Два муниципалитета и полиция согласовали меры против пробок на перекрёстке Watermelon у Soi Banglamung 21.",
-      "en": "Two municipalities and local police agreed to coordinate traffic and safety at the Watermelon intersection near Soi Banglamung 21.",
-      "th": "เทศบาลสองแห่งและตำรวจลงนามร่วมกันจัดการจราจรและเพิ่มความปลอดภัยที่แยกแตงโม ซอยบางละมุง 21",
+      "ru": "Паттайя проверила проект плавучего пирса в Наклыа, который должен поддержать рыбаков и связать местный промысел с общественным пространством и туризмом.",
+      "en": "Pattaya reviewed a Naklua floating-pier project intended to support fishers and connect local livelihoods with public space and tourism.",
+      "th": "พัทยาตรวจโครงการท่าเรือลอยน้ำที่นาเกลือ ซึ่งมีเป้าหมายสนับสนุนชาวประมงและเชื่อมวิถีชุมชนกับพื้นที่สาธารณะและการท่องเที่ยว",
       "sources": [
-        "https://thepattayanews.com/2026/11/04/three-agencies-sign-mou-to-tackle-traffic-congestion-and-safety-at-watermelon-intersection-in-banglamung/"
+        "https://www.pattayamail.com/latestnews/news/pattaya-develops-naklua-pier-into-a-community-tourism-destination-570833"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-04T15:23:36+07:00",
-        "sourceUrl": "https://thepattayanews.com/2026/11/04/three-agencies-sign-mou-to-tackle-traffic-congestion-and-safety-at-watermelon-intersection-in-banglamung/",
-        "summary": "Selected for traffic relevance to Banglamung road users; no comparable public discussion metrics verified."
+        "observedAt": "2026-11-05T06:30:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/latestnews/news/pattaya-develops-naklua-pier-into-a-community-tourism-destination-570833",
+        "summary": "Pattaya Mail displayed 964 views and 0 comments, compared with 650/0 for the Rong Po bridge inspection and 216/0 for homeless outreach; no citywide rank is claimed."
       }
     },
     {
       "category": "pattaya",
       "when": "04.11 · Pattaya",
-      "href": "https://thepattayanews.com/2026/11/04/unilever-donates-consumer-goods-to-father-ray-childrens-village-and-special-school-in-pattaya/",
+      "href": "https://www.pattayamail.com/news/banglamung-checks-suspected-electrical-leak-on-key-northern-approach-to-pattaya-570792",
       "publishedAt": "2026-11-04",
-      "ru": "В Паттайе фонд Father Ray получил партию товаров для детской деревни и школы для детей с инвалидностью.",
-      "en": "Pattaya’s Father Ray Foundation received donated supplies for its children’s village and special school.",
-      "th": "มูลนิธิคุณพ่อเรย์ในพัทยาได้รับบริจาคของใช้สำหรับหมู่บ้านเด็กและโรงเรียนพิเศษ",
+      "ru": "После жалоб жителей власти и энергетики проверили пешеходный мост Rong Po на возможную утечку тока. Первичная проверка не выявила непосредственной опасности.",
+      "en": "Authorities inspected the Rong Po pedestrian bridge after reports of possible electrical leakage. The initial check found no immediate danger.",
+      "th": "หน่วยงานท้องถิ่นและการไฟฟ้าตรวจสะพานลอยร่องโปหลังมีรายงานไฟฟ้ารั่ว ผลตรวจเบื้องต้นไม่พบอันตรายเร่งด่วน",
       "sources": [
-        "https://thepattayanews.com/2026/11/04/unilever-donates-consumer-goods-to-father-ray-childrens-village-and-special-school-in-pattaya/"
+        "https://www.pattayamail.com/news/banglamung-checks-suspected-electrical-leak-on-key-northern-approach-to-pattaya-570792"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-04T15:23:36+07:00",
-        "sourceUrl": "https://thepattayanews.com/2026/11/04/unilever-donates-consumer-goods-to-father-ray-childrens-village-and-special-school-in-pattaya/",
-        "summary": "Selected for local community relevance; no comparable public discussion metrics verified."
+        "observedAt": "2026-11-05T06:30:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/banglamung-checks-suspected-electrical-leak-on-key-northern-approach-to-pattaya-570792",
+        "summary": "Pattaya Mail displayed 650 views and 0 comments, below the Naklua pier item at 964/0 and above homeless outreach at 216/0; no citywide rank is claimed."
       }
     }
   ],
@@ -296,7 +297,30 @@
         "https://www.antifakenewscenter.com/%E0%B8%AD%E0%B8%B2%E0%B8%8A%E0%B8%8D%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%AD%E0%B8%AD%E0%B8%99%E0%B9%84%E0%B8%A5%E0%B8%99%E0%B9%8C/trending-products/"
       ],
       "verifiedAt": "2026-10-30"
+    },
+    {
+      "id": "fake-free-trip-prize-thailand-2026-11",
+      "title": {
+        "ru": "«Бесплатная поездка» с доплатой по SMS",
+        "en": "“Free trip” SMS with a payment demand",
+        "th": "SMS รางวัลเที่ยวฟรีที่เรียกให้จ่ายเงิน"
+      },
+      "text": {
+        "ru": "4 ноября официальный центр предупредил: SMS о выигрыше бесплатной поездки может вести на поддельный сайт, собирать данные и требовать небольшую «доплату» за несуществующий приз.",
+        "en": "On 4 November, the official centre warned that a “free trip” prize SMS may lead to a fake site, collect personal data and demand a small fee for a prize that does not exist.",
+        "th": "4 พฤศจิกายน ศูนย์ทางการเตือนว่า SMS อ้างรางวัลเที่ยวฟรีอาจพาไปเว็บปลอม เก็บข้อมูลส่วนตัว และเรียกเก็บเงินส่วนต่างสำหรับรางวัลที่ไม่มีจริง"
+      },
+      "do": {
+        "ru": "Не открывайте ссылку из неожиданного SMS; проверьте акцию у организатора по известному официальному каналу и ничего не платите за получение выигрыша.",
+        "en": "Do not open links in unexpected SMS messages; verify the promotion through a known official channel and do not pay to receive a prize.",
+        "th": "อย่ากดลิงก์ใน SMS ที่ไม่คาดคิด ตรวจสอบกิจกรรมผ่านช่องทางทางการที่รู้จัก และอย่าจ่ายเงินเพื่อรับรางวัล"
+      },
+      "status": "official-warning",
+      "sources": [
+        "https://www.antifakenewscenter.com/%E0%B8%AD%E0%B8%B2%E0%B8%8A%E0%B8%8D%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%AD%E0%B8%AD%E0%B8%99%E0%B9%84%E0%B8%A5%E0%B8%99%E0%B9%8C/free-trip-prize/"
+      ],
+      "verifiedAt": "2026-11-04"
     }
   ],
-  "selection": "Reviewed 2026-10-31 Asia/Bangkok: exactly 1 world, 2 Thailand and 2 Pattaya stories, all published 30 October. Public counters and limitations recorded without global or citywide rank claims. Added the official 30 October trending-product transfer warning; eight earlier active cards retain their original dates. No Telegram sending."
+  "selection": "Reviewed 2026-11-05 Asia/Bangkok: exactly 1 world, 2 Thailand and 2 Pattaya stories, all published 4 November. Public counters and limitations are recorded without global, national or citywide rank claims. Added the official 4 November fake free-trip prize SMS warning; nine earlier active cards retain their original dates. No Telegram sending."
 }
