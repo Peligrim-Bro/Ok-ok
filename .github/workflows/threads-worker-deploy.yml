@@ -1,0 +1,35 @@
+name: Deploy OK-OK Threads Worker
+on:
+  push:
+    branches: [main, ops/threads-worker-deploy]
+    paths:
+      - '.github/workflows/threads-worker-deploy.yml'
+      - 'workers/threads-auth/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: okok-threads-worker-production
+  cancel-in-progress: false
+jobs:
+  deploy:
+    if: github.event_name == 'workflow_dispatch' || github.ref == 'refs/heads/main' || contains(github.event.head_commit.message, '[deploy threads]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+      - run: node --check workers/threads-auth/worker.mjs
+      - uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: '4.151.3'
+          command: deploy --config workers/threads-auth/wrangler.json
+      - name: Check the deployed callback and Threads token
+        run: |
+          endpoint=https://okok-threads-auth.timurhansolo.workers.dev
+          test "$(curl -sS -o /dev/null -w '%{http_code}' "$endpoint/callback")" = 400
+          curl -sS "$endpoint/threads-check" | jq -e '.ok == true'
