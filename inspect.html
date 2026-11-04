@@ -1,0 +1,69 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>OK-OK INSPECT</title><style>
+:root{font-family:system-ui,-apple-system,sans-serif;color-scheme:dark;background:#071b2b;color:#f0f9ff}*{box-sizing:border-box}body{margin:0;padding:12px 14px max(30px,env(safe-area-inset-bottom))}main{max-width:650px;margin:auto}header,.row,.between{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.between{justify-content:space-between}a{color:#67e8f9}.card{background:#103344;border:1px solid #365768;border-radius:16px;padding:16px;margin:12px 0}button,input,textarea{font:inherit;background:#071d2d;color:white;border:1px solid #5b7587;border-radius:10px;padding:10px;min-height:44px}button{cursor:pointer}button.active,button.primary{background:#57efc3;color:#04252b;font-weight:700}input:not([type=file]),textarea{width:100%;margin:5px 0 13px}input[type=file]{max-width:100%;width:100%}label{display:block;margin-top:10px}h1{margin:14px 0 4px}h2{font-size:18px}.muted{color:#bfd0db;font-size:13px}.slot{padding:10px 0;border-top:1px solid #375768}.slot img{display:block;max-width:100%;max-height:200px;object-fit:contain;margin:8px 0;border-radius:10px}#status{min-height:24px}button:focus-visible,input:focus-visible{outline:2px solid #57efc3}</style></head><body><main>
+<header class="between"><a href="./tools.html">← OK-OK Tools</a><button id="lang">EN</button></header><h1>OK-OK INSPECT</h1><p class="muted" data-t="intro">Осмотр байка до и после аренды. Данные остаются на устройстве.</p>
+<div class="row"><button id="start" class="active">START</button><button id="return">RETURN</button><strong id="progress">0/5</strong></div>
+<section class="card"><label data-t="rental">Прокат</label><input id="rentalName" maxlength="100" autocomplete="off"><label data-t="plate">Госномер</label><input id="plateNumber" maxlength="40" autocomplete="off"><label data-t="odo">Пробег</label><input id="odometer" maxlength="30" inputmode="numeric"><label data-t="notes">Замечания / повреждения</label><textarea id="damageNotes" rows="3" maxlength="3000"></textarea></section>
+<section class="card"><h2 data-t="photos">Фото байка</h2><p class="muted" data-t="photoInfo">Пять обязательных ракурсов. Время и режим фиксируются на снимке; GPS пока не записывается.</p><div id="slots"></div></section>
+<section class="card"><div class="row"><button class="primary" id="pdf" data-t="pdf">Создать PDF</button><button id="clear" data-t="clear">Очистить этот осмотр</button></div><p id="status" role="status" class="muted"></p><a id="openPdf" hidden target="_blank" rel="noopener" data-t="open">Открыть PDF</a></section>
+</main><script type="module">
+import {sanitizeInspectionFilename,createCaptureEpoch,snapshotInspection} from './tools/inspect-helpers.mjs';
+import {loadInspection,saveInspection} from './tools/inspect-storage.mjs';
+import {pdfTextImage} from './tools/inspect-pdf-text.mjs';
+const $=id=>document.getElementById(id),epoch=createCaptureEpoch();
+const labels={ru:{intro:'Осмотр байка до и после аренды. Данные остаются на устройстве.',rental:'Прокат',plate:'Госномер',odo:'Пробег',notes:'Замечания / повреждения',photos:'Фото байка',photoInfo:'Пять обязательных ракурсов. Время и режим фиксируются на снимке; GPS — только с разрешения.',pdf:'Создать PDF',clear:'Очистить этот осмотр',open:'Открыть PDF',angles:['Спереди','Справа','Сзади','Слева','Приборная панель','Дополнительное повреждение'],error:'Не удалось обработать фото',required:'Добавьте пять обязательных фото',saved:'PDF готов',fail:'PDF не создан',confirm:'Удалить данные только этого осмотра?',missing:'Для PDF нужен интернет при первой загрузке библиотеки'},en:{intro:'Inspect your rental bike before and after. Data stays on this device.',rental:'Rental company',plate:'License plate',odo:'Odometer',notes:'Notes / damage',photos:'Bike photos',photoInfo:'Five required views. Photos include timestamp and mode; GPS is not recorded yet.',pdf:'Create PDF',clear:'Clear this inspection',open:'Open PDF',angles:['Front','Right','Back','Left','Dashboard','Additional damage'],error:'Could not process photo',required:'Add all five required photos',saved:'PDF ready',fail:'Could not create PDF',confirm:'Clear only this inspection?',missing:'First-time PDF library loading requires internet'}};
+const views=['front','right','back','left','dash','extra'];const fields=['rentalName','plateNumber','odometer','damageNotes'];
+let lang=localStorage.getItem('okok_lang')==='en'?'en':'ru',mode='START',store={START:blank(),RETURN:blank()},fallbackUrl=null;
+function blank(){return {rentalName:'',plateNumber:'',odometer:'',damageNotes:'',photos:{}}}
+function msg(key){return labels[lang][key]}
+function revoke(){if(fallbackUrl){URL.revokeObjectURL(fallbackUrl);fallbackUrl=null}$('openPdf').hidden=true}
+function render(){document.documentElement.lang=lang;document.querySelectorAll('[data-t]').forEach(e=>e.textContent=msg(e.dataset.t));$('lang').textContent=lang==='ru'?'EN':'RU';$('start').classList.toggle('active',mode==='START');$('return').classList.toggle('active',mode==='RETURN');fields.forEach(f=>$(f).value=store[mode][f]);$('progress').textContent=views.slice(0,5).filter(v=>store[mode].photos[v]).length+'/5';$('slots').replaceChildren();
+views.forEach((v,i)=>{const box=document.createElement('div');box.className='slot';const name=document.createElement('strong');name.textContent=labels[lang].angles[i];box.append(name);const file=document.createElement('input');file.type='file';file.accept='image/*';file.setAttribute('aria-label',labels[lang].angles[i]);file.onchange=()=>capture(v,file.files?.[0]);box.append(file);const photo=store[mode].photos[v];if(photo){const image=document.createElement('img');image.src=photo.dataUrl;image.alt=labels[lang].angles[i];box.append(image);const remove=document.createElement('button');remove.textContent='×';remove.setAttribute('aria-label','Remove '+labels[lang].angles[i]);remove.onclick=()=>{delete store[mode].photos[v];save();render()};box.append(remove)}$('slots').append(box)})}
+let pendingSave=Promise.resolve();
+function save(){const snapshot=structuredClone(store);pendingSave=pendingSave.catch(()=>{}).then(()=>saveInspection(snapshot)).catch(()=>{$('status').textContent=lang==='ru'?'Не удалось сохранить фотографии на устройстве':'Could not save photos on this device'})}
+try{
+ const s=await loadInspection();
+ if(s?.START?.photos&&s?.RETURN?.photos)store=s;
+ else{
+  const legacy=JSON.parse(localStorage.getItem('okok_inspect_v1')||'null');
+  if(legacy?.START?.photos&&legacy?.RETURN?.photos){
+   store=legacy;
+   pendingSave=saveInspection(structuredClone(store)).then(()=>localStorage.removeItem('okok_inspect_v1')).catch(()=>{$('status').textContent=lang==='ru'?'Не удалось перенести данные осмотра':'Could not migrate inspection data'});
+  }
+ }
+}catch{
+ $('status').textContent=lang==='ru'?'Локальное хранилище недоступно':'Local storage unavailable';
+}
+async function capture(view,file){if(!file)return;const token=epoch.capture(),targetMode=mode;if(!file.type.startsWith('image/')||file.size>15*1024*1024){$('status').textContent=msg('error');return}
+try{const url=URL.createObjectURL(file);const img=new Image();try{await new Promise((resolve,reject)=>{img.onload=resolve;img.onerror=reject;img.src=url})}finally{URL.revokeObjectURL(url)}
+const ratio=Math.min(1,1200/Math.max(img.naturalWidth,img.naturalHeight)),canvas=document.createElement('canvas');canvas.width=Math.max(1,Math.round(img.naturalWidth*ratio));canvas.height=Math.max(1,Math.round(img.naturalHeight*ratio));const ctx=canvas.getContext('2d');ctx.drawImage(img,0,0,canvas.width,canvas.height);const stamp=new Date().toISOString()+' | '+targetMode+' | '+store[targetMode].plateNumber;ctx.fillStyle='rgba(0,0,0,.7)';ctx.fillRect(0,canvas.height-42,canvas.width,42);ctx.fillStyle='#fff';ctx.font='14px sans-serif';ctx.fillText(stamp.slice(0,95),10,canvas.height-15);const dataUrl=canvas.toDataURL('image/jpeg',.75);if(!epoch.isCurrent(token))return;store[targetMode].photos[view]={dataUrl,timestamp:new Date().toISOString()};save();render()}catch{$('status').textContent=msg('error')}}
+function modeTo(next){epoch.invalidate();mode=next;revoke();render()}
+$('start').onclick=()=>modeTo('START');$('return').onclick=()=>modeTo('RETURN');$('lang').onclick=()=>{lang=lang==='ru'?'en':'ru';localStorage.setItem('okok_lang',lang);render()};fields.forEach(f=>$(f).oninput=()=>{store[mode][f]=$(f).value;save()});$('clear').onclick=()=>{if(!confirm(msg('confirm')))return;epoch.invalidate();store[mode]=blank();save();revoke();render()};
+$('pdf').onclick=async()=>{await pendingSave.catch(()=>{});const data=snapshotInspection(mode,store);if(views.slice(0,5).some(v=>!data.photos[v])){$('status').textContent=msg('required');return}$('pdf').disabled=true;$('status').textContent='…';
+try{const lib=await import('https://cdn.jsdelivr.net/npm/jspdf@2.5.2/+esm');const pdf=new lib.jsPDF({orientation:'portrait',unit:'mm',format:'a4'});const title='OK-OK INSPECT '+data.mode;
+const addText=(text,x,y,width=185,maxLines=2)=>{const bitmap=pdfTextImage(text,{maxLines});pdf.addImage(bitmap.dataUrl,'PNG',x,y,width,width*bitmap.ratio)};
+const addPhoto=(dataUrl,x,y)=>{const {width,height}=pdf.getImageProperties(dataUrl);const scale=Math.min(90/width,90/height);const w=width*scale,h=height*scale;pdf.addImage(dataUrl,'JPEG',x+(90-w)/2,y+(90-h)/2,w,h,undefined,'FAST')};
+const writeHeader=()=>{
+ addText(title,12,10,185,1);
+ addText('Date: '+new Date().toISOString(),12,20,185,1);
+ addText('Rental: '+data.rentalName,12,28,185,1);
+ addText('Plate: '+data.plateNumber,12,36,185,1);
+ addText('Odometer: '+data.odometer,12,44,185,1);
+};
+writeHeader();
+for(let i=0;i<5;i++){
+ const p=data.photos[views[i]];if(!p)continue;
+ if(i===4){pdf.addPage();writeHeader()}
+ const idx=i<4?i:0;
+ const x=12+(idx%2)*95,y=57+Math.floor(idx/2)*108;
+ pdf.setFontSize(10);pdf.text(views[i].toUpperCase(),x,y);
+ addPhoto(p.dataUrl,x,y+5);
+}
+if(data.photos.extra){
+ pdf.setFontSize(10);pdf.text('EXTRA DAMAGE',108,57);
+ addPhoto(data.photos.extra.dataUrl,108,62);
+}
+addText('Notes: '+data.damageNotes,12,273,185,2);
+const blob=pdf.output('blob');revoke();fallbackUrl=URL.createObjectURL(blob);$('openPdf').href=fallbackUrl;$('openPdf').hidden=false;const name='OKOK_INSPECT_'+data.mode+'_'+sanitizeInspectionFilename(data.plateNumber)+'.pdf';
+if(navigator.canShare&&navigator.share&&navigator.canShare({files:[new File([blob],name,{type:'application/pdf'})]})){try{await navigator.share({files:[new File([blob],name,{type:'application/pdf'})],title})}catch(e){if(e.name!=='AbortError'){const a=document.createElement('a');a.href=fallbackUrl;a.download=name;a.click()}}}else{const a=document.createElement('a');a.href=fallbackUrl;a.download=name;a.click()}$('status').textContent=msg('saved')}catch(e){$('status').textContent=msg('fail')+' — '+msg('missing')}finally{$('pdf').disabled=false}};
+render();
+</script></body></html>

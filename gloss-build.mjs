@@ -1749,3 +1749,6 @@ if(startupSettings.portalEnabled){
 }
 
 await import('./scripts/build-oki-house-locales.mjs');
+
+// Preview-only standalone travel tools integration.
+await import('./scripts/apply-standalone-tools.mjs');

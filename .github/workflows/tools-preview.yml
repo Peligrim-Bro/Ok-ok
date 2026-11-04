@@ -1,0 +1,45 @@
+name: OK-OK isolated tools preview
+on:
+  push:
+    branches:
+      - feature/okok-tools-prep-2026-11-03
+    paths:
+      - 'travel-reads.html'
+      - 'tools.html'
+      - 'split-bill.html'
+      - 'inspect.html'
+      - 'scripts/apply-standalone-tools.mjs'
+      - 'cloudflare-tools-preview-worker.mjs'
+      - 'wrangler-tools-preview.json'
+      - '.github/workflows/tools-preview.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: okok-isolated-tools-preview
+  cancel-in-progress: false
+jobs:
+  preview:
+    if: github.ref == 'refs/heads/feature/okok-tools-prep-2026-11-03'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build static preview
+        run: npm run build
+      - name: Verify preview pages
+        run: |
+          test -f site/public/travel-reads.html
+          test -f site/public/tools.html
+          test -f site/public/split-bill.html
+          test -f site/public/inspect.html
+      - name: Deploy isolated preview Worker (never production ok-ok)
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: '4.151.3'
+          command: deploy --config wrangler-tools-preview.json
