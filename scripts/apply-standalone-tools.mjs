@@ -10,15 +10,15 @@ for (const asset of assets) copyFileSync(asset, root + asset);
 copyFileSync('tools/vendor/jspdf-LICENSE.txt', root + 'tools/vendor/jspdf-LICENSE.txt');
 
 let reader = readFileSync('travel-reads.html', 'utf8');
-for (const id of [1, 2, 3]) {
-  const name = 'tools/cover-' + id + '-cinema.webp';
+for (const id of [1, 2, 3, 4, 5]) {
+  const name = 'tools/cover-' + id + (id <= 3 ? '-cinema.webp' : '-storybook.webp');
   const cover = new RegExp('(id="cover' + id + '">)<svg[\\s\\S]*?</svg>');
   if (!cover.test(reader)) throw new Error('Missing illustrated book cover ' + id);
   reader = reader.replace(cover, '$1<img src="./' + name + '" alt="" width="480" height="480">');
   copyFileSync(name, root + name);
   assets.push(name);
 }
-reader = reader.replace('.cover svg{', '.cover img,.cover svg{');
+reader = reader.replace('.cover svg{', '.cover img{');
 const close = '</script></body>';
 if (!reader.includes(close)) throw new Error('Missing book reader script anchor');
 writeFileSync(root + 'travel-reads.html', reader.replace(close, `
