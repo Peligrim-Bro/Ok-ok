@@ -132,6 +132,20 @@ test('built mobile homepage exposes filters, tools and the book reader',async({p
  await expect(page.locator('#reader')).toBeVisible();
  await expect(page.locator('#readerTitle')).toHaveText('Последний пассажир');
 });
+test('Travel Reads back link clears the phone status bar and returns home',async({page})=>{
+ await page.setViewportSize({width:402,height:874});
+ await page.goto(url('/site/public/travel-reads.html'));
+ const back=page.locator('header a[href="./index.html"]');
+ const initial=await back.boundingBox();
+ expect(initial.height).toBeGreaterThanOrEqual(44);
+ // Model an iPhone status bar in the desktop browser runner.
+ await page.addStyleTag({content:'body{--shelf-safe-top:62px}body::after{content:"";position:fixed;inset:0 0 auto;height:62px;z-index:9999}'});
+ const shifted=await back.boundingBox();
+ expect(shifted.y-initial.y).toBe(62);
+ await back.click();
+ await expect(page).toHaveURL(/site\/public\/index\.html$/);
+});
+
 test('Travel Reads shelf loads on mobile and keeps bookmark locally',async({page})=>{
  await page.setViewportSize({width:390,height:844});
  await page.goto(url('/site/public/travel-reads.html'));
