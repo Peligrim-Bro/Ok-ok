@@ -10,5 +10,26 @@
       "enabled": true,
       "invocation_logs": true
     }
-  }
+  },
+  "triggers": {
+    "crons": [
+      "*/15 * * * *"
+    ]
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "THREADS_QUEUE",
+        "class_name": "ThreadsQueue"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1-threads-queue",
+      "new_sqlite_classes": [
+        "ThreadsQueue"
+      ]
+    }
+  ]
 }
