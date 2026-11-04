@@ -253,7 +253,8 @@ test('Travel Reads shows five illustrated covers without redundant labels',async
  await page.goto(url('/site/public/travel-reads.html'));
  await expect(page.locator('.book')).toHaveCount(5);
  await expect(page.locator('.cover img[src$="-cinema.webp"]')).toHaveCount(3);
- await expect(page.locator('.cover svg')).toHaveCount(2);
+ await expect(page.locator('#cover4 img')).toHaveAttribute('src','./tools/cover-4-storybook.webp');
+ await expect(page.locator('#cover5 img')).toHaveAttribute('src','./tools/cover-5-storybook.webp');
  for (const cover of await page.locator('.cover img').all()) {
   await expect.poll(() => cover.evaluate(img => img.naturalWidth)).toBeGreaterThan(0);
  }
