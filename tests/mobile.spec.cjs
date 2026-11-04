@@ -26,6 +26,7 @@ for(const lang of ['ru','en','th'])for(const width of [390,768])test(`${lang} at
  await page.addInitScript(lang=>{localStorage.setItem('pok-lang',lang);localStorage.setItem('pok-lang-set','1');},lang);
  await page.goto('/',{waitUntil:'domcontentloaded'});
  await expect(page.locator('nav.tab button')).toHaveCount(5);
+ await expect(page.locator('nav.tab [data-tab="shop"]')).toHaveText({ru:'Профиль',en:'Profile',th:'โปรไฟล์'}[lang]);
  await expect(page.locator('#langBtn')).toHaveText(lang.toUpperCase());
  for(const id of ['moreBtn','themeBtn','langBtn'])expect((await page.locator('#'+id).boundingBox()).height).toBe(44);
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
@@ -66,11 +67,11 @@ for(const lang of ['ru','en','th'])for(const width of [390,768])test(`${lang} at
   await page.evaluate(theme=>document.documentElement.dataset.theme=theme,theme);
   expect(await page.evaluate(()=>getComputedStyle(document.documentElement).getPropertyValue('--bg').trim())).toBe(theme==='dark'?'#061d27':'#eef5ef');
   const palette=await page.locator('[data-spin="1"]').first().evaluate(n=>({background:getComputedStyle(n).backgroundImage,shadow:getComputedStyle(n).boxShadow,color:getComputedStyle(n).color}));
-  expect(palette.background).toContain('243, 110, 69');
+  expect(palette.background).toContain('255, 121, 94');
   expect(palette.shadow).toContain('inset');
-  expect(palette.color).toBe('rgb(57, 24, 12)');
+  expect(palette.color).toBe('rgb(34, 22, 17)');
   const ordinary=await page.locator('[data-openmap="1"]').first().evaluate(n=>({background:getComputedStyle(n).backgroundImage,shadow:getComputedStyle(n).boxShadow}));
-  expect(ordinary.background).toContain(theme==='dark'?'24, 68, 85':'140, 189, 188');
+  expect(ordinary.background).toContain('24, 103, 127');
   expect(ordinary.shadow).toContain('inset');
   const cards=await page.locator('.news-card').evaluateAll(nodes=>nodes.map(n=>{
    const s=getComputedStyle(n),p=n.querySelector('p');return {width:n.getBoundingClientRect().width,gradient:s.backgroundImage,display:s.display,wrap:s.whiteSpace,textFits:p.scrollWidth<=p.clientWidth+1};
@@ -83,6 +84,23 @@ for(const lang of ['ru','en','th'])for(const width of [390,768])test(`${lang} at
  await expect(page.locator('#homeFiltersToggle')).not.toBeVisible();
  await expect(page.locator('body')).not.toContainText(/EX24.pro Thappraya|EX24.pro Naklua|EX24.pro Pratumnak|Supermao/i);
  await page.screenshot({path:`quality-reports/${lang}-${width}.png`,fullPage:false});
+});
+test('installed app can open the bookshelf offline without replacing the home shell',async({page,context})=>{
+ await page.addInitScript(()=>{
+  localStorage.setItem('pok-lang','ru');
+  localStorage.setItem('pok-lang-set','1');
+  localStorage.setItem('pok-install-seen','1');
+ });
+ await page.goto('/?okok_test=1');
+ await expect.poll(()=>page.evaluate(()=>!!navigator.serviceWorker.controller)).toBe(true);
+ await page.locator('.okok-book-link').first().click();
+ await expect(page.locator('#reader')).toBeVisible();
+ await context.setOffline(true);
+ await page.reload();
+ await expect(page.locator('#readerTitle')).toHaveText('Последний пассажир');
+ await page.goto('/');
+ await expect(page.locator('nav.tab button')).toHaveCount(5);
+ await expect(page.locator('#books-title')).toHaveText(/Попутчик/);
 });
 test('installed app can reopen the cached shell offline',async({page,context})=>{
  await page.goto('/');

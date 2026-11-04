@@ -1689,6 +1689,7 @@ await import('./scripts/apply-oki-absence.mjs');
 await import('./scripts/apply-oki-place-guide.mjs');
 await import('./scripts/apply-brand-motto.mjs');
 await import('./scripts/apply-safety-guide.mjs');
+await import('./scripts/apply-standalone-tools.mjs');
 await import('./scripts/apply-oki-house-primary.mjs');
 await import('./scripts/finalize-release-cache.mjs');
 
