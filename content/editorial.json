@@ -1,91 +1,91 @@
 {
-  "verifiedAt": "2026-11-05",
+  "verifiedAt": "2026-11-06",
   "news": [
     {
       "category": "world",
-      "when": "04.11 · 🌍",
-      "href": "https://www.who.int/malaysia/news/detail-global/04-11-2026-six-climate-and-health-actions-could-save-1.6-million-lives-and-deliver-trillions-in-benefits-each-year",
-      "publishedAt": "2026-11-04",
-      "ru": "ВОЗ оценила: масштабирование шести мер в сфере климата и здоровья может предотвращать около 1,6 млн смертей в год. Это модельный сценарий с долгосрочными неопределённостями.",
-      "en": "WHO estimates that scaling six climate-and-health measures could prevent about 1.6 million deaths a year. This is a modelled scenario with long-term uncertainties.",
-      "th": "WHO ประเมินว่าการขยาย 6 มาตรการด้านภูมิอากาศและสุขภาพอาจป้องกันการเสียชีวิตได้ราว 1.6 ล้านคนต่อปี ตัวเลขนี้เป็นผลจากแบบจำลองและมีความไม่แน่นอนระยะยาว",
+      "when": "05.11 · 🌍",
+      "href": "https://www.reuters.com/sustainability/cop/british-sport-under-prepared-climate-risks-costs-rise-report-says-2026-11-05/",
+      "publishedAt": "2026-11-05",
+      "ru": "Исследование BASIS показало, что все опрошенные британские спортивные организации столкнулись с экстремальной погодой в 2026 году, а 94% считают сектор недостаточно подготовленным. Выводы относятся к выборке исследования, а не ко всему мировому спорту.",
+      "en": "A BASIS study found that every surveyed British sports organisation was affected by extreme weather in 2026, while 94% said the sector was under-prepared. The findings describe the study sample, not all sport worldwide.",
+      "th": "การศึกษาของ BASIS พบว่าองค์กรกีฬาของอังกฤษที่สำรวจทั้งหมดได้รับผลกระทบจากสภาพอากาศสุดขั้วในปี 2026 และ 94% เห็นว่าภาคกีฬายังเตรียมพร้อมไม่เพียงพอ ผลนี้อ้างถึงกลุ่มตัวอย่าง ไม่ใช่วงการกีฬาทั่วโลกทั้งหมด",
       "sources": [
-        "https://www.who.int/malaysia/news/detail-global/04-11-2026-six-climate-and-health-actions-could-save-1.6-million-lives-and-deliver-trillions-in-benefits-each-year",
-        "https://www.euronews.com/2026/11/04/just-six-climate-actions-could-save-16-million-lives-a-year-who-says"
+        "https://www.reuters.com/sustainability/cop/british-sport-under-prepared-climate-risks-costs-rise-report-says-2026-11-05/",
+        "https://basis.org.uk/"
       ],
       "nonWar": true,
       "discussionEvidence": {
-        "observedAt": "2026-11-05T06:30:00+07:00",
-        "sourceUrl": "https://www.who.int/malaysia/news/detail-global/04-11-2026-six-climate-and-health-actions-could-save-1.6-million-lives-and-deliver-trillions-in-benefits-each-year",
-        "summary": "WHO primary report and same-day independent Euronews coverage were verified; neither page exposed comparable public discussion counters, so no global popularity rank is claimed."
+        "observedAt": "2026-11-06T06:25:00+07:00",
+        "sourceUrl": "https://www.reuters.com/sustainability/cop/british-sport-under-prepared-climate-risks-costs-rise-report-says-2026-11-05/",
+        "summary": "The Reuters report was independently republished by multiple outlets and BASIS identifies the report on its own site, but no comparable public discussion counters were exposed; no global popularity rank is claimed."
       }
     },
     {
       "category": "thailand",
-      "when": "04.11 · 🇹🇭",
-      "href": "https://www.tatnews.org/2026/11/tat-unveils-2027-value-over-volume-strategy-at-wtm-london/",
-      "publishedAt": "2026-11-04",
-      "ru": "TAT представило стратегию туризма на 2027 год: рост доходов минимум на 5%, более широкое распределение туристов по регионам и акцент на содержательные поездки.",
-      "en": "TAT presented its 2027 tourism strategy, targeting at least 5% revenue growth, wider regional visitor distribution and more meaningful travel.",
-      "th": "ททท. เปิดยุทธศาสตร์ท่องเที่ยวปี 2570 ตั้งเป้ารายได้โตอย่างน้อย 5% กระจายนักท่องเที่ยวสู่เมืองรอง และเน้นการเดินทางที่มีความหมาย",
+      "when": "05.11 · 🇹🇭",
+      "href": "https://www.tmd.go.th/en/warning-and-events/warning-storm/variable-weather-in-upper-thailand-and-heavy-to-very-heavy-rains-in-the-south-no-8-291-2026",
+      "publishedAt": "2026-11-05",
+      "ru": "Метеорологическая служба предупредила о грозах, порывистом ветре и местами сильных дождях в верхней части страны 5–7 ноября, а также об усилении дождей на юге 7–9 ноября.",
+      "en": "The Meteorological Department warned of thunderstorms, gusty winds and isolated heavy rain in upper Thailand on 5–7 November, followed by heavier rain in the South on 7–9 November.",
+      "th": "กรมอุตุนิยมวิทยาเตือนพายุฝนฟ้าคะนอง ลมกระโชกแรง และฝนหนักบางแห่งในประเทศไทยตอนบนช่วง 5–7 พฤศจิกายน ก่อนฝนเพิ่มขึ้นในภาคใต้ช่วง 7–9 พฤศจิกายน",
       "sources": [
-        "https://www.tatnews.org/2026/11/tat-unveils-2027-value-over-volume-strategy-at-wtm-london/"
+        "https://www.tmd.go.th/en/warning-and-events/warning-storm/variable-weather-in-upper-thailand-and-heavy-to-very-heavy-rains-in-the-south-no-8-291-2026"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-05T06:30:00+07:00",
-        "sourceUrl": "https://www.tatnews.org/2026/11/tat-unveils-2027-value-over-volume-strategy-at-wtm-london/",
-        "summary": "TAT displayed 89 views. No comments or comparable national ranking were available."
+        "observedAt": "2026-11-06T06:25:00+07:00",
+        "sourceUrl": "https://www.tmd.go.th/en/warning-and-events/warning-storm/variable-weather-in-upper-thailand-and-heavy-to-very-heavy-rains-in-the-south-no-8-291-2026",
+        "summary": "The official TMD advisory and same-day independent coverage were verified, but the official page exposed no comparable public engagement counter; no national rank is claimed."
       }
     },
     {
       "category": "thailand",
-      "when": "04.11 · 🇹🇭",
-      "href": "https://thailand.prd.go.th/en/content/category/detail/id/49/iid/557131",
-      "publishedAt": "2026-11-04",
-      "ru": "Таиланд представил в АТЭС работу над ответственным ИИ, региональными связями и устойчивостью финансовых сервисов к мошенничеству.",
-      "en": "Thailand highlighted work on responsible AI, regional connectivity and fraud-resilient financial services at the APEC ministerial meeting.",
-      "th": "ไทยนำเสนอความคืบหน้าด้าน AI ที่รับผิดชอบ การเชื่อมโยงภูมิภาค และบริการการเงินที่ทนต่อการฉ้อโกงในการประชุมรัฐมนตรีเอเปค",
+      "when": "05.11 · 🇹🇭",
+      "href": "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/557587",
+      "publishedAt": "2026-11-05",
+      "ru": "Новый прямой авиамаршрут через север Таиланда и Лаос сократил путь для 530 рейсов между Таиландом и Китаем. AEROTHAI сообщает об экономии топлива и планирует ещё три таких коридора.",
+      "en": "A new direct route over northern Thailand and Laos shortened 530 Thailand–China flights. AEROTHAI reports fuel savings and plans three more such corridors.",
+      "th": "เส้นทางบินตรงใหม่เหนือภาคเหนือของไทยและลาวช่วยลดระยะทางให้เที่ยวบินไทย–จีน 530 เที่ยว AEROTHAI รายงานว่าประหยัดเชื้อเพลิงและเตรียมพัฒนาอีก 3 เส้นทาง",
       "sources": [
-        "https://thailand.prd.go.th/en/content/category/detail/id/49/iid/557131"
+        "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/557587"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-05T06:30:00+07:00",
-        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/49/iid/557131",
-        "summary": "PRD displayed 131 views versus 78 for its same-day Bib Gourmand item; this is a within-site comparison, not a national rank."
+        "observedAt": "2026-11-06T06:25:00+07:00",
+        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/557587",
+        "summary": "PRD displayed 61 views when observed. No comments or comparable national ranking were available."
       }
     },
     {
       "category": "pattaya",
-      "when": "04.11 · Pattaya",
-      "href": "https://www.pattayamail.com/latestnews/news/pattaya-develops-naklua-pier-into-a-community-tourism-destination-570833",
-      "publishedAt": "2026-11-04",
-      "ru": "Паттайя проверила проект плавучего пирса в Наклыа, который должен поддержать рыбаков и связать местный промысел с общественным пространством и туризмом.",
-      "en": "Pattaya reviewed a Naklua floating-pier project intended to support fishers and connect local livelihoods with public space and tourism.",
-      "th": "พัทยาตรวจโครงการท่าเรือลอยน้ำที่นาเกลือ ซึ่งมีเป้าหมายสนับสนุนชาวประมงและเชื่อมวิถีชุมชนกับพื้นที่สาธารณะและการท่องเที่ยว",
+      "when": "06.11 · Pattaya",
+      "href": "https://www.pattayamail.com/news/chemical-tanker-leaks-corrosive-substance-after-crashing-into-guardrail-on-pattaya-bypass-570972",
+      "publishedAt": "2026-11-06",
+      "ru": "После аварии автоцистерны на трассе 36 произошла утечка коррозионного вещества. Службы перекрыли участок и рекомендовали избегать места происшествия и уходить из зоны запаха или испарений.",
+      "en": "A tanker crash on Highway 36 caused a corrosive-material leak. Responders closed the affected section and advised people to avoid the scene and move away from fumes or chemical odours.",
+      "th": "รถบรรทุกสารเคมีประสบอุบัติเหตุบนทางหลวง 36 ทำให้สารกัดกร่อนรั่วไหล เจ้าหน้าที่ปิดพื้นที่และแนะนำให้หลีกเลี่ยงจุดเกิดเหตุ รวมทั้งออกจากบริเวณที่มีกลิ่นหรือไอสารเคมี",
       "sources": [
-        "https://www.pattayamail.com/latestnews/news/pattaya-develops-naklua-pier-into-a-community-tourism-destination-570833"
+        "https://www.pattayamail.com/news/chemical-tanker-leaks-corrosive-substance-after-crashing-into-guardrail-on-pattaya-bypass-570972"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-05T06:30:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/latestnews/news/pattaya-develops-naklua-pier-into-a-community-tourism-destination-570833",
-        "summary": "Pattaya Mail displayed 964 views and 0 comments, compared with 650/0 for the Rong Po bridge inspection and 216/0 for homeless outreach; no citywide rank is claimed."
+        "observedAt": "2026-11-06T06:25:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/chemical-tanker-leaks-corrosive-substance-after-crashing-into-guardrail-on-pattaya-bypass-570972",
+        "summary": "Pattaya Mail displayed 239 views and 0 comments, compared with 231/0 for the city health-project item; these early within-site counts do not establish a citywide rank."
       }
     },
     {
       "category": "pattaya",
-      "when": "04.11 · Pattaya",
-      "href": "https://www.pattayamail.com/news/banglamung-checks-suspected-electrical-leak-on-key-northern-approach-to-pattaya-570792",
-      "publishedAt": "2026-11-04",
-      "ru": "После жалоб жителей власти и энергетики проверили пешеходный мост Rong Po на возможную утечку тока. Первичная проверка не выявила непосредственной опасности.",
-      "en": "Authorities inspected the Rong Po pedestrian bridge after reports of possible electrical leakage. The initial check found no immediate danger.",
-      "th": "หน่วยงานท้องถิ่นและการไฟฟ้าตรวจสะพานลอยร่องโปหลังมีรายงานไฟฟ้ารั่ว ผลตรวจเบื้องต้นไม่พบอันตรายเร่งด่วน",
+      "when": "06.11 · Pattaya",
+      "href": "https://www.pattayamail.com/latestnews/news/pattaya-approves-17-more-health-projects-to-benefit-residents-of-all-ages-570976",
+      "publishedAt": "2026-11-06",
+      "ru": "Городской фонд медицинской безопасности Паттайи одобрил финансирование ещё 17 проектов по профилактике заболеваний, физической активности и доступу к помощи для жителей разных возрастов.",
+      "en": "Pattaya’s Health Security Fund approved funding for 17 more projects covering disease prevention, physical activity and access to care for residents of different ages.",
+      "th": "กองทุนหลักประกันสุขภาพเมืองพัทยาอนุมัติงบเพิ่ม 17 โครงการ ครอบคลุมการป้องกันโรค การส่งเสริมกิจกรรมทางกาย และการเข้าถึงบริการของประชาชนหลายช่วงวัย",
       "sources": [
-        "https://www.pattayamail.com/news/banglamung-checks-suspected-electrical-leak-on-key-northern-approach-to-pattaya-570792"
+        "https://www.pattayamail.com/latestnews/news/pattaya-approves-17-more-health-projects-to-benefit-residents-of-all-ages-570976"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-05T06:30:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/banglamung-checks-suspected-electrical-leak-on-key-northern-approach-to-pattaya-570792",
-        "summary": "Pattaya Mail displayed 650 views and 0 comments, below the Naklua pier item at 964/0 and above homeless outreach at 216/0; no citywide rank is claimed."
+        "observedAt": "2026-11-06T06:25:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/latestnews/news/pattaya-approves-17-more-health-projects-to-benefit-residents-of-all-ages-570976",
+        "summary": "Pattaya Mail displayed 231 views and 0 comments, compared with 239/0 for the tanker-leak report; these early within-site counts do not establish a citywide rank."
       }
     }
   ],
@@ -320,7 +320,30 @@
         "https://www.antifakenewscenter.com/%E0%B8%AD%E0%B8%B2%E0%B8%8A%E0%B8%8D%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%AD%E0%B8%AD%E0%B8%99%E0%B9%84%E0%B8%A5%E0%B8%99%E0%B9%8C/free-trip-prize/"
       ],
       "verifiedAt": "2026-11-04"
+    },
+    {
+      "id": "fake-police-cyber-unit-page-thailand-2026-11",
+      "title": {
+        "ru": "Фальшивая страница «спецподразделения киберполиции»",
+        "en": "Fake “special cyber-police unit” page",
+        "th": "เพจปลอมอ้างหน่วยปฏิบัติการพิเศษปราบปรามภัยไซเบอร์"
+      },
+      "text": {
+        "ru": "5 ноября официальный центр сообщил: Facebook-страница, называющая себя «специальным подразделением по борьбе с киберугрозами», не принадлежит полиции или её ведомствам. Страница использует образ госоргана, чтобы вызвать доверие и получить персональные данные.",
+        "en": "On 5 November, the official centre said a Facebook page calling itself a “special cyber-threat suppression unit” does not belong to the police or any affiliated agency. It uses a government identity to gain trust and seek personal data.",
+        "th": "5 พฤศจิกายน ศูนย์ทางการแจ้งว่าเพจเฟซบุ๊กที่ใช้ชื่อ “หน่วยปฏิบัติการพิเศษปราบปรามภัยไซเบอร์” ไม่ใช่เพจของตำรวจหรือหน่วยงานในสังกัด และอาศัยชื่อหน่วยงานรัฐสร้างความน่าเชื่อถือเพื่อขอข้อมูลส่วนตัว"
+      },
+      "do": {
+        "ru": "Не передавайте данные странице из рекламы или сообщения. Найдите официальный канал полиции самостоятельно и проверьте название и отметки аккаунта до любого обращения.",
+        "en": "Do not give personal data to a page reached through an ad or message. Find the police’s official channel independently and verify the account name and credentials before engaging.",
+        "th": "อย่าให้ข้อมูลส่วนตัวแก่เพจที่พบจากโฆษณาหรือข้อความ ค้นหาช่องทางทางการของตำรวจด้วยตนเอง และตรวจสอบชื่อกับข้อมูลรับรองของบัญชีก่อนติดต่อ"
+      },
+      "status": "official-warning",
+      "sources": [
+        "https://www.antifakenewscenter.com/%E0%B8%AD%E0%B8%B2%E0%B8%8A%E0%B8%8D%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%AD%E0%B8%AD%E0%B8%99%E0%B9%84%E0%B8%A5%E0%B8%99%E0%B9%8C/fake-page-5/"
+      ],
+      "verifiedAt": "2026-11-05"
     }
   ],
-  "selection": "Reviewed 2026-11-05 Asia/Bangkok: exactly 1 world, 2 Thailand and 2 Pattaya stories, all published 4 November. Public counters and limitations are recorded without global, national or citywide rank claims. Added the official 4 November fake free-trip prize SMS warning; nine earlier active cards retain their original dates. No Telegram sending."
+  "selection": "Reviewed 2026-11-06 Asia/Bangkok: exactly 1 world, 2 Thailand and 2 Pattaya stories, published on 5–6 November. Public counters and explicit limitations are recorded without global, national or citywide rank claims. Added the official 5 November fake police cyber-unit page warning; ten earlier active cards retain their original dates. No Telegram sending."
 }
