@@ -21,16 +21,23 @@ ads=ads.slice(0,headStart)+ads.slice(headEnd);
 const start=ads.indexOf('  const freeCount = Math.max(0, data.slots - ads.length);');
 const end=ads.indexOf('  const mine = myOrder();',start);
 if(start<0||end<0)throw Error('Ad invitation anchors missing');
-ads=ads.slice(0,start)+`  const inviteWrap=h('div', {class:'okad-invitation-wrap'});
-  inviteWrap.append(h('button', { type: 'button', class: 'okad free okad-invitation', onclick: () => openOrder() },
-    h('span', { class: 'okad-invite-icon', 'aria-hidden': 'true', text: '…' }),
-    h('span', { class: 'okad-invite-copy' },
-      h('b', { text: tr('Заяви о себе', 'Get noticed', 'บอกให้โลกรู้') }),
-      h('span', { class: 'okad-invite-note', text: tr('Объявление, поздравление или просто привет.', 'An announcement, a celebration, or just a hello.', 'ประกาศ คำอวยพร หรือแค่ทักทายกัน') })),
-    h('span', { class: 'okad-invite-arrow', 'aria-hidden': 'true', text: '↗' })));
-  list.append(inviteWrap);
+ads=ads.slice(0,start)+`  const freeCount=Math.max(0,data.slots-ads.length);
+  const event=freeCount?currentEvent():null;
+  const eventSlots=event?1:0;
+  if(event)list.append(eventCard(event));
+  let inviteWrap=null;
+  if(freeCount>eventSlots){
+   inviteWrap=h('div', {class:'okad-invitation-wrap'});
+   inviteWrap.append(h('button', { type: 'button', class: 'okad free okad-invitation', onclick: () => openOrder() },
+     h('span', { class: 'okad-invite-icon', 'aria-hidden': 'true', text: '…' }),
+     h('span', { class: 'okad-invite-copy' },
+       h('b', { text: tr('Заяви о себе', 'Get noticed', 'บอกให้โลกรู้') }),
+       h('span', { class: 'okad-invite-note', text: tr('Объявление, поздравление или просто привет.', 'An announcement, a celebration, or just a hello.', 'ประกาศ คำอวยพร หรือแค่ทักทายกัน') })),
+     h('span', { class: 'okad-invite-arrow', 'aria-hidden': 'true', text: '↗' })));
+   list.append(inviteWrap);
+  }
   root.append(list);
-  mountInviteOki(inviteWrap);
+  if(inviteWrap)mountInviteOki(inviteWrap);
 `+ads.slice(end);
 replaceOnce('function paint() {',readFileSync('ad-invitation-oki.js','utf8').replaceAll('__OKI_INVITATION_ASSET__','/'+portraitAsset)+'\nfunction paint() {\n  inviteOkiCleanup();');
 // Keep the paid-placement disclosure inside the form, before any submission.
