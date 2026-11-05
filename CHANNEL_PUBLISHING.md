@@ -195,3 +195,12 @@ prices or documentary depictions. The approved published comic is the public Oki
 ## Buffer checkpoint — 30 October 2026
 
 Thirteen new reviewed entries: seven distinct Oki pages #011–017 for30 October–5 November20:30 and six ordinary posts for4–5 November. Visa checklist is4 November09:00 with exact enquiry-copy button. Existing slots/media remain unchanged. Source/provenance and delivery hashes: docs/CHANNEL_BUFFER_20261030.md. Offline audit ready:true with no future gaps/collisions/missing/duplicate files. Deployment and actual Telegram delivery require separate evidence. Text and comic replenishment now share one morning automation; the separate comic task is paused. No automation changes are made by this source update.
+
+## Buffer checkpoint — 5 November 2026
+
+Twenty-four reviewed entries fill 6–11 November: 18 ordinary posts at 09:00,
+14:00 and 19:30 plus six distinct Oki pages #18–23 at 20:30. Existing 5 November
+slots remain unchanged. Provenance, SHA-256 and visual review are in
+`docs/CHANNEL_BUFFER_20261105.md`. Offline audit is `ready:true` with no missing
+slot/image, collision or exact duplicate. This checkpoint does not prove
+deployment, runtime enablement or Telegram delivery. No automation is changed.
