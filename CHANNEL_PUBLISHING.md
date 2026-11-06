@@ -198,8 +198,8 @@ Thirteen new reviewed entries: seven distinct Oki pages #011–017 for30 October
 
 ## Buffer checkpoint — 5 November 2026
 
-Twenty-four reviewed entries fill 6–11 November: 18 ordinary posts at 09:00,
-14:00 and 19:30 plus six distinct Oki pages #18–23 at 20:30. Existing 5 November
+Twenty-eight reviewed entries fill 6–12 November: 21 ordinary posts at 09:00,
+14:00 and 19:30 plus seven distinct Oki pages #18–24 at 20:30. Existing 5 November
 slots remain unchanged. Provenance, SHA-256 and visual review are in
 `docs/CHANNEL_BUFFER_20261105.md`. Offline audit is `ready:true` with no missing
 slot/image, collision or exact duplicate. This checkpoint does not prove

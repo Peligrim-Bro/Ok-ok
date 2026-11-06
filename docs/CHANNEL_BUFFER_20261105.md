@@ -1,17 +1,17 @@
 # Telegram buffer review — 5 November 2026
 
 The combined batch fills ordinary 09:00, 14:00 and 19:30 slots and the Oki
-20:30 slot for 6–11 November 2026 (Asia/Bangkok). Existing 5 November entries
-were preserved. Built-in image generation produced 24 separate source scenes.
-Oki episode 001 was opened and visually inspected before generating #18–23.
+20:30 slot for 6–12 November 2026 (Asia/Bangkok). Existing 5 November entries
+were preserved. Built-in image generation produced 28 separate source scenes.
+Oki episode 001 was opened and visually inspected before generating #18–24.
 
-All source PNGs and delivery JPEGs were visually reviewed. The 18 ordinary
+All source PNGs and delivery JPEGs were visually reviewed. The 21 ordinary
 images are distinct fictional editorial scenes and are labelled as AI images in
 their posts. The six comics are different complete stories with readable Russian
 dialogue, issues #18–23, `ok-ok.click`, consistent pink/turquoise Oki and the
 same floral shirt, clear panel order and no material extra-limb error. No page
-asserts a real price, venue or visit. Delivery copies are proportional 900 px
-JPEGs; the source PNGs remain in the generation artifact store and are not
+asserts a real price, venue or visit. Delivery copies are proportional 640 px
+ordinary JPEGs and 720 px comic JPEGs; the source PNGs remain in the generation artifact store and are not
 published by the site.
 
 | Asset | Source SHA-256 | Delivery SHA-256 |
@@ -40,8 +40,12 @@ published by the site.
 | backup-contact | `45e19ff47103bfe46c5c8913b69fe6297431fe1c01b9be78b535200df6c12f0a` | `f540165bd68bc19620b519cd99e0021fb9ca3a9903129e2f67a5dfaed2e8bd0e` |
 | map-screenshot | `0105001974591845f8c8cb6b55764e32937ba0f4f9a5c51174e64c6cfa709c8d` | `a221df268ec8d6c82445d41a1b471c84515bbdb425f0f3b1e43e994a343b73d1` |
 | request-checklist | `3121c98727953d49fa46d14096940b4e40562519afa569125d3029c57b7187fb` | `8f7d0463e75cb9e88132beb2aa0feeee9b085be92db4445273689e4d5880e0b2` |
+| dry-documents | `3758c0ea2dd100cc7973f3697b99e97b936c30972c69d10333a2555bc2891727` | `8faa5e3a4cefccbfdd20d0a5aba4b26c8821340e78e429b66656b151ebee151b` |
+| pay-separately | `3995898a7839ae55927c6ccfb807657400d710c5e6ddeb6e7579e5e0db433599` | `1df6c681a392fa404c4ac5d7c2626d86214cfa10dbbcf9589e9ffda12428e4c4` |
+| useful-place-note | `be835e7eb0110969f081c616c76d742cf043c94f8b8b383ce785e2246f3392f5` | `e0d0f3bc7cc5c86b3b2e0514a9db07351cc90c429bbf9f008314cd6dfef99eae` |
+| comic-024 | `f49a1e7ad8d36e641691d6a433a36d0ec3556e00ced794dfe9b2972116a3b64d` | `397963a7b7f31eb7d4eeef9d3642c7954eab23f96afb0e842b2028e303e8c847` |
 
-Offline audit at `2026-11-05T08:19:00+07:00` reports `ready:true` with no
+Offline audit at `2026-11-06T08:38:08+07:00` reports `ready:true` with no
 missing slot, collision, missing image or exact image duplicate. This verifies
 the proposed source queue only; deployment and Telegram delivery require their
 own evidence.

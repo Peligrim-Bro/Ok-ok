@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "project": "OK-OK.click",
-  "updatedAt": "2026-11-05",
+  "updatedAt": "2026-11-06",
   "decisions": [
     {
       "id": "hosting",
@@ -114,7 +114,7 @@
       "tags": [
         "channel"
       ],
-      "next": "Owner 5 Nov: 24 new reviewed entries propose ordinary and comic coverage for 6–11 Nov; existing 5 Nov slots preserved. Local audit ready:true and native build/payment/channel tests pass at 32,498,263 bytes. Local full browser/Lighthouse are blocked by unavailable Chromium download; require PR CI before main. Runtime enablement and delivery receipts remain separately observed.",
+      "next": "Owner 6 Nov: PR107 now carries 28 reviewed entries for ordinary and comic coverage through 12 Nov; existing earlier slots preserved. Re-run local audit/build and required PR CI after merging fresh main. Runtime enablement and delivery receipts remain separately observed.",
       "sources": [
         "CHANNEL_PUBLISHING.md",
         "scripts/audit-channel-queue.mjs",

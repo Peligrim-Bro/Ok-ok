@@ -2,6 +2,7 @@ const {test,expect}=require('@playwright/test');
 const captions={ru:['Перейти к оплате','Проверить по TXID','Сумма перевода не совпадает'],en:['Continue to payment','Check by TXID','Transfer amount does not match'],th:['ไปชำระเงิน','ตรวจด้วย TXID','ยอดโอนไม่ตรง']};
 async function prepare(page,lang,legacy=false,theme='dark'){
  await page.emulateMedia({reducedMotion:'reduce'});await page.setViewportSize({width:390,height:844});
+ await page.route('**/assets/ads/events-data.js*',route=>route.fulfill({contentType:'application/javascript',body:'window.OKOK_EVENTS=[];'}));
  await page.addInitScript(({lang,legacy})=>{localStorage.setItem('pok-lang',lang);localStorage.setItem('pok-lang-set','1');localStorage.setItem('pok-install-seen','1');if(legacy)localStorage.setItem('ok-ad-order',JSON.stringify({id:'1234567890',token:'test-token'}));},{lang,legacy});
  const now=Date.now();let paid=false;
  const order={id:'1234567890',token:'test-token',amount:legacy===true?'15.00':'15.37',address:'TOfflineTestWalletNotForPayment',network:'TRC20',coin:'USDT',hours:24,title:'Cafe test',text:'Fresh breakfast and coffee every morning',label:'@cafetest',createdAt:now,graceEnd:now+86400000,startsAt:now,views:0,clicks:0};
@@ -54,4 +55,39 @@ test('a pending invoice changes to published after automatic status matching',as
  const control=await prepare(page,'en','current');
  await expect(page.locator('#okAdDialog .okad-amount')).toHaveText('15.37 USDT');
  control.paid();await expect(page.locator('#okAdDialog')).toContainText('Your ad is live',{timeout:12000});
+});
+
+async function prepareEventBoard(page,paidCount){
+ await page.addInitScript(()=>{localStorage.setItem('pok-install-seen','1');});
+ await page.route('**/assets/ads/events-data.js*',route=>route.fulfill({
+  contentType:'application/javascript',
+  body:`window.OKOK_EVENTS=[{
+   id:'test-current-event',startAt:new Date(Date.now()-3600000).toISOString(),endAt:new Date(Date.now()+86400000).toISOString(),
+   title:{ru:'Событие',en:'Event',th:'กิจกรรม'},text:{ru:'Описание',en:'Description',th:'รายละเอียด'},
+   when:{ru:'Сегодня',en:'Today',th:'วันนี้'},venue:'Pattaya Beach',maps:'https://maps.google.com/',source:'https://example.com/'
+  }];`
+ }));
+ const ads=Array.from({length:paidCount},(_,i)=>({id:`paid-${i}`,title:`Paid ${i}`,text:'Paid placement',href:'https://example.com/',label:'Contact',endAt:Date.now()+86400000}));
+ await page.route('**/api/ads/**',route=>route.fulfill({json:{slots:3,price:'15.00',minAmount:'15.01',maxAmount:'15.99',hours:24,ads,free:3-paidCount,t:Date.now()}}));
+ await page.goto('/',{waitUntil:'domcontentloaded'});
+ await expect(page.locator('#okAds')).toHaveAttribute('data-ready','1');
+}
+test('one event uses one free slot after paid ads',async({page})=>{
+ await prepareEventBoard(page,2);
+ await expect(page.locator('#okAds .okad:not(.okad-event):not(.free)')).toHaveCount(2);
+ await expect(page.locator('#okAds .okad-event')).toHaveCount(1);
+ await expect(page.locator('#okAds .okad.free')).toHaveCount(0);
+ await expect(page.locator('#okAds .okads-list > :nth-child(3)')).toHaveClass(/okad-event/);
+});
+test('event and invitation stay within three available slots',async({page})=>{
+ await prepareEventBoard(page,0);
+ await expect(page.locator('#okAds .okad-event')).toHaveCount(1);
+ await expect(page.locator('#okAds .okad.free')).toHaveCount(1);
+ await expect(page.locator('#okAds .okads-list > *')).toHaveCount(2);
+});
+test('three paid ads suppress every free-slot card',async({page})=>{
+ await prepareEventBoard(page,3);
+ await expect(page.locator('#okAds .okad-event')).toHaveCount(0);
+ await expect(page.locator('#okAds .okad.free')).toHaveCount(0);
+ await expect(page.locator('#okAds .okads-list > *')).toHaveCount(3);
 });

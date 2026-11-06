@@ -836,6 +836,35 @@ export const POSTS = [{
   "photo":"https://www.ok-ok.click/assets/channel/oki-comic-023-night-lantern-20261111.jpg",
   "topics":["Оки","Комиксы"],"brandCTA":"share",
   "text":"Приключения Оки #23 · Ночной фонарик\n\nСветлячок подсветил блокнот, а Оки превратил вечер в светящийся ананас. Рынок и события на странице вымышлены.\n\nВымышленная история с маскотом Оки, изображение создано с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_night_lantern_023"
+},
+{
+  "id":"okok-dry-documents-20261112","approved":true,
+  "publishAt":"2026-11-12T09:00:00+07:00","expiresAt":"2026-11-12T12:00:00+07:00",
+  "photo":"https://www.ok-ok.click/assets/channel/okok-text-dry-documents-20261112.jpg",
+  "topics":["Безопасность","Советы"],"brandCTA":"share",
+  "text":"Документы отдельно от мокрых вещей\n\nДля прогулки положи нужную карточку, копию адреса и бумажную заметку в закрывающийся прозрачный пакет. Телефон и оригиналы документов лучше не складывать вместе с бутылкой или мокрым полотенцем.\n\nПакет защищает от случайных брызг, но не делает содержимое водонепроницаемым. Проверь застёжку и не оставляй личные данные без присмотра.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=dry_documents_20261112"
+},
+{
+  "id":"okok-pay-separately-20261112","approved":true,
+  "publishAt":"2026-11-12T14:00:00+07:00","expiresAt":"2026-11-12T17:00:00+07:00",
+  "photo":"https://www.ok-ok.click/assets/channel/okok-text-pay-separately-20261112.jpg",
+  "topics":["Фразы","Английский","Ресторан"],"brandCTA":"share",
+  "text":"Как попросить отдельные счета\n\nCould we pay separately, please?\nМожно нам заплатить отдельно, пожалуйста?\n\nСпроси до расчёта и покажи, какие позиции относятся к каждому человеку. Возможность разделить оплату зависит от правил заведения, поэтому лучше получить ясный ответ заранее.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=pay_separately_20261112",
+  "copyButtons":[{"label":"Попросить раздельную оплату","text":"Could we pay separately, please?"}]
+},
+{
+  "id":"okok-useful-place-note-20261112","approved":true,
+  "publishAt":"2026-11-12T19:30:00+07:00","expiresAt":"2026-11-12T22:30:00+07:00",
+  "photo":"https://www.ok-ok.click/assets/channel/okok-text-useful-place-note-20261112.jpg",
+  "topics":["Места","Отзывы","Советы"],"brandCTA":"share",
+  "text":"Заметка о месте, которая пригодится позже\n\nЗапиши четыре вещи: точку на карте, где вход, когда ты был и что именно оказалось полезным. Если заметил ступеньки, пандус или сложный проход, опиши это без догадок.\n\nНе переносить старые часы работы и цены как текущие: условия меняются. На OK-OK находку можно отправить через «Написать автору» для отдельной проверки.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=useful_place_note_20261112"
+},
+{
+  "id":"okok-oki-comic-024-banana-compass-20261112","approved":true,
+  "publishAt":"2026-11-12T20:30:00+07:00","expiresAt":"2026-11-12T23:30:00+07:00",
+  "photo":"https://www.ok-ok.click/assets/channel/oki-comic-024-banana-compass-20261112.jpg",
+  "topics":["Оки","Комиксы"],"brandCTA":"share",
+  "text":"Приключения Оки #24 · Банановый компас\n\nБанан уверенно привёл Оки к перекусу, а потом указал курс на горизонт. Компас, пикник и маршрут существуют только в этой истории.\n\nВымышленная история с маскотом Оки, изображение создано с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_banana_compass_024"
 }
 ];
 
