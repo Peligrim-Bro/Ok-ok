@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "project": "OK-OK.click",
-  "updatedAt": "2026-11-04",
+  "updatedAt": "2026-11-06",
   "decisions": [
     {
       "id": "hosting",
@@ -114,14 +114,15 @@
       "tags": [
         "channel"
       ],
-      "next": "Owner30 Oct:13 new reviewed entries close ordinary and comic seven-day coverage through5 Nov; local audit ready:true. Complete release checks and deployment; receipts/enablement remain separately observed.",
+      "next": "Owner 6 Nov: PR107 now carries 28 reviewed entries for ordinary and comic coverage through 12 Nov; existing earlier slots preserved. Re-run local audit/build and required PR CI after merging fresh main. Runtime enablement and delivery receipts remain separately observed.",
       "sources": [
         "CHANNEL_PUBLISHING.md",
         "scripts/audit-channel-queue.mjs",
         "docs/CHANNEL_TEXT_BUFFER_20261026.md",
         "docs/CHANNEL_TEXT_BUFFER_20261027.md",
         "docs/CHANNEL_TEXT_BUFFER_20261028.md",
-        "docs/CHANNEL_BUFFER_20261030.md"
+        "docs/CHANNEL_BUFFER_20261030.md",
+        "docs/CHANNEL_BUFFER_20261105.md"
       ]
     },
     {
