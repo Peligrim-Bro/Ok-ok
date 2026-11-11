@@ -15,7 +15,7 @@ s=s.trim();let m=s.match(/^(-?\d{1,2}(?:\.\d+)?)\s*[,; ]\s*(-?\d{1,3}(?:\.\d+)?)
 if(m&&valid(+m[1],+m[2]))return [+m[1],+m[2]];
 let u;try{u=new URL(s)}catch{return null}
 if(u.protocol!=='https:'||!/(^|\.)(google\.[a-z.]+|googleapis\.com|goo\.gl)$/.test(u.hostname))return null;
-const parts=[u.searchParams.get('query'),u.searchParams.get('q'),u.searchParams.get('ll'),u.searchParams.get('center'),u.searchParams.get('destination'),u.pathname,u.hash].filter(Boolean).map(decodeURIComponent);
+const parts=[u.searchParams.get('query'),u.searchParams.get('q'),u.searchParams.get('ll'),u.searchParams.get('destination'),u.pathname,u.hash].filter(Boolean);
 for(const p of parts){m=p.match(/(?:@|!3d|^|[^\d.-])(-?\d{1,2}\.\d{3,})\s*(?:,|!4d|%2C|\s)\s*(-?\d{1,3}\.\d{3,})/i);if(m&&valid(+m[1],+m[2]))return [+m[1],+m[2]]}
 return null
 }
@@ -39,6 +39,6 @@ $('copy').onclick=()=>copy(value);$('copyName').onclick=()=>copy($('maps').href)
 $('status').textContent='Координаты найдены. Проверь, что метка совпадает с нужным входом или местом посадки.';$('status').className='hint';
 });
 async function copy(v){try{await navigator.clipboard.writeText(v);$('status').textContent='Скопировано';$('status').className='hint'}catch{$('status').textContent='Копирование недоступно. Выдели координаты вручную.';$('status').className='hint error'}}
-const incoming=new URLSearchParams(location.search).get('text');if(incoming){$('source').value=incoming;$('parse').click()}
+const params=new URLSearchParams(location.search);const incoming=params.get('text')||params.get('url');if(incoming){$('source').value=incoming;$('parse').click()}
 })();
 </script></body></html>
