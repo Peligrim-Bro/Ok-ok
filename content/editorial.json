@@ -1,91 +1,90 @@
 {
-  "verifiedAt": "2026-11-06",
+  "verifiedAt": "2026-11-11",
   "news": [
     {
       "category": "world",
-      "when": "05.11 · 🌍",
-      "href": "https://www.reuters.com/sustainability/cop/british-sport-under-prepared-climate-risks-costs-rise-report-says-2026-11-05/",
-      "publishedAt": "2026-11-05",
-      "ru": "Исследование BASIS показало, что все опрошенные британские спортивные организации столкнулись с экстремальной погодой в 2026 году, а 94% считают сектор недостаточно подготовленным. Выводы относятся к выборке исследования, а не ко всему мировому спорту.",
-      "en": "A BASIS study found that every surveyed British sports organisation was affected by extreme weather in 2026, while 94% said the sector was under-prepared. The findings describe the study sample, not all sport worldwide.",
-      "th": "การศึกษาของ BASIS พบว่าองค์กรกีฬาของอังกฤษที่สำรวจทั้งหมดได้รับผลกระทบจากสภาพอากาศสุดขั้วในปี 2026 และ 94% เห็นว่าภาคกีฬายังเตรียมพร้อมไม่เพียงพอ ผลนี้อ้างถึงกลุ่มตัวอย่าง ไม่ใช่วงการกีฬาทั่วโลกทั้งหมด",
+      "when": "10.11 · 🌍",
+      "href": "https://blogs.esa.int/cleanspace/2026/11/10/esa-life-cycle-assessment-lca-database-update/",
+      "publishedAt": "2026-11-10",
+      "ru": "ESA выпустило обновление базы экологической оценки космических проектов: версия 1.4.0 помогает сравнивать воздействие материалов, производства и эксплуатации на окружающую среду. Доступ предоставляется по лицензии.",
+      "en": "ESA has released version 1.4.0 of its space-project environmental assessment database. It helps compare the impacts of materials, manufacturing and operations; access requires a licence.",
+      "th": "ESA เผยแพร่ฐานข้อมูลประเมินผลกระทบสิ่งแวดล้อมของโครงการอวกาศรุ่น 1.4.0 เพื่อช่วยเปรียบเทียบผลจากวัสดุ การผลิต และการใช้งาน การเข้าถึงต้องได้รับใบอนุญาต",
       "sources": [
-        "https://www.reuters.com/sustainability/cop/british-sport-under-prepared-climate-risks-costs-rise-report-says-2026-11-05/",
-        "https://basis.org.uk/"
+        "https://blogs.esa.int/cleanspace/2026/11/10/esa-life-cycle-assessment-lca-database-update/"
       ],
-      "nonWar": true,
       "discussionEvidence": {
-        "observedAt": "2026-11-06T06:25:00+07:00",
-        "sourceUrl": "https://www.reuters.com/sustainability/cop/british-sport-under-prepared-climate-risks-costs-rise-report-says-2026-11-05/",
-        "summary": "The Reuters report was independently republished by multiple outlets and BASIS identifies the report on its own site, but no comparable public discussion counters were exposed; no global popularity rank is claimed."
+        "observedAt": "2026-11-11T18:50:11+07:00",
+        "sourceUrl": "https://blogs.esa.int/cleanspace/2026/11/10/esa-life-cycle-assessment-lca-database-update/",
+        "summary": "Official ESA page shows 0 comments; no cross-outlet popularity rank is claimed."
+      },
+      "nonWar": true
+    },
+    {
+      "category": "thailand",
+      "when": "11.11 · 🇹🇭",
+      "href": "https://www.pattayamail.com/latestnews/news/thailand-cuts-petrol-and-diesel-prices-from-november-11-following-global-oil-decline-571449",
+      "publishedAt": "2026-11-11",
+      "ru": "По сообщению Pattaya Mail, с 11 ноября большинство марок бензина и газохола в Таиланде подешевели на 0,50 бата за литр, обычный дизель — на 1 бат. Для E85 и B20 снижения не объявлено.",
+      "en": "Pattaya Mail reports that most petrol and gasohol grades in Thailand fell by 0.50 baht per litre from 11 November, while regular diesel fell by 1 baht. E85 and B20 were excluded from the reduction.",
+      "th": "Pattaya Mail รายงานว่า ตั้งแต่ 11 พฤศจิกายน เบนซินและแก๊สโซฮอล์ส่วนใหญ่ในไทยลดลง 0.50 บาทต่อลิตร ส่วนดีเซลธรรมดาลดลง 1 บาท โดย E85 และ B20 ไม่ได้ลดราคา",
+      "sources": [
+        "https://www.pattayamail.com/latestnews/news/thailand-cuts-petrol-and-diesel-prices-from-november-11-following-global-oil-decline-571449"
+      ],
+      "discussionEvidence": {
+        "observedAt": "2026-11-11T18:50:11+07:00",
+        "sourceUrl": "https://www.pattayamail.com/latestnews/news/thailand-cuts-petrol-and-diesel-prices-from-november-11-following-global-oil-decline-571449",
+        "summary": "Source article reviewed. Comparable public engagement metrics were unavailable; no popularity rank is claimed."
       }
     },
     {
       "category": "thailand",
-      "when": "05.11 · 🇹🇭",
-      "href": "https://www.tmd.go.th/en/warning-and-events/warning-storm/variable-weather-in-upper-thailand-and-heavy-to-very-heavy-rains-in-the-south-no-8-291-2026",
-      "publishedAt": "2026-11-05",
-      "ru": "Метеорологическая служба предупредила о грозах, порывистом ветре и местами сильных дождях в верхней части страны 5–7 ноября, а также об усилении дождей на юге 7–9 ноября.",
-      "en": "The Meteorological Department warned of thunderstorms, gusty winds and isolated heavy rain in upper Thailand on 5–7 November, followed by heavier rain in the South on 7–9 November.",
-      "th": "กรมอุตุนิยมวิทยาเตือนพายุฝนฟ้าคะนอง ลมกระโชกแรง และฝนหนักบางแห่งในประเทศไทยตอนบนช่วง 5–7 พฤศจิกายน ก่อนฝนเพิ่มขึ้นในภาคใต้ช่วง 7–9 พฤศจิกายน",
+      "when": "11.11 · 🇹🇭",
+      "href": "https://www.pattayamail.com/news/futurium-opens-doors-to-future-technologies-and-career-opportunities-571496",
+      "publishedAt": "2026-11-11",
+      "ru": "Научный центр Futurium в Патхумтхани представил интерактивные экспозиции технологий будущего. В зоне Job World посетители от 13 лет могут попробовать задания, связанные с 27 профессиями, сообщает NNT через Pattaya Mail.",
+      "en": "Futurium in Pathum Thani features interactive exhibits on future technologies. Its Job World zone lets visitors aged 13 and over try activities linked to 27 careers, according to NNT via Pattaya Mail.",
+      "th": "Futurium จ.ปทุมธานีมีนิทรรศการเทคโนโลยีแห่งอนาคตแบบมีส่วนร่วม โซน Job World เปิดให้ผู้มีอายุ 13 ปีขึ้นไปทดลองกิจกรรมเกี่ยวกับ 27 อาชีพ ตามรายงาน NNT ที่เผยแพร่โดย Pattaya Mail",
       "sources": [
-        "https://www.tmd.go.th/en/warning-and-events/warning-storm/variable-weather-in-upper-thailand-and-heavy-to-very-heavy-rains-in-the-south-no-8-291-2026"
+        "https://www.pattayamail.com/news/futurium-opens-doors-to-future-technologies-and-career-opportunities-571496"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-06T06:25:00+07:00",
-        "sourceUrl": "https://www.tmd.go.th/en/warning-and-events/warning-storm/variable-weather-in-upper-thailand-and-heavy-to-very-heavy-rains-in-the-south-no-8-291-2026",
-        "summary": "The official TMD advisory and same-day independent coverage were verified, but the official page exposed no comparable public engagement counter; no national rank is claimed."
-      }
-    },
-    {
-      "category": "thailand",
-      "when": "05.11 · 🇹🇭",
-      "href": "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/557587",
-      "publishedAt": "2026-11-05",
-      "ru": "Новый прямой авиамаршрут через север Таиланда и Лаос сократил путь для 530 рейсов между Таиландом и Китаем. AEROTHAI сообщает об экономии топлива и планирует ещё три таких коридора.",
-      "en": "A new direct route over northern Thailand and Laos shortened 530 Thailand–China flights. AEROTHAI reports fuel savings and plans three more such corridors.",
-      "th": "เส้นทางบินตรงใหม่เหนือภาคเหนือของไทยและลาวช่วยลดระยะทางให้เที่ยวบินไทย–จีน 530 เที่ยว AEROTHAI รายงานว่าประหยัดเชื้อเพลิงและเตรียมพัฒนาอีก 3 เส้นทาง",
-      "sources": [
-        "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/557587"
-      ],
-      "discussionEvidence": {
-        "observedAt": "2026-11-06T06:25:00+07:00",
-        "sourceUrl": "https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/557587",
-        "summary": "PRD displayed 61 views when observed. No comments or comparable national ranking were available."
+        "observedAt": "2026-11-11T18:50:11+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/futurium-opens-doors-to-future-technologies-and-career-opportunities-571496",
+        "summary": "Source article reviewed. Comparable public engagement metrics were unavailable; no popularity rank is claimed."
       }
     },
     {
       "category": "pattaya",
-      "when": "06.11 · Pattaya",
-      "href": "https://www.pattayamail.com/news/chemical-tanker-leaks-corrosive-substance-after-crashing-into-guardrail-on-pattaya-bypass-570972",
-      "publishedAt": "2026-11-06",
-      "ru": "После аварии автоцистерны на трассе 36 произошла утечка коррозионного вещества. Службы перекрыли участок и рекомендовали избегать места происшествия и уходить из зоны запаха или испарений.",
-      "en": "A tanker crash on Highway 36 caused a corrosive-material leak. Responders closed the affected section and advised people to avoid the scene and move away from fumes or chemical odours.",
-      "th": "รถบรรทุกสารเคมีประสบอุบัติเหตุบนทางหลวง 36 ทำให้สารกัดกร่อนรั่วไหล เจ้าหน้าที่ปิดพื้นที่และแนะนำให้หลีกเลี่ยงจุดเกิดเหตุ รวมทั้งออกจากบริเวณที่มีกลิ่นหรือไอสารเคมี",
+      "when": "10.11 · 📍",
+      "href": "https://thepattayanews.com/2026/11/10/deputy-pattaya-mayor-speeds-up-fix-for-subsiding-sukhumvit-road-after-drainage-works-full-repair-expected-in-three-months/",
+      "publishedAt": "2026-11-10",
+      "ru": "В Паттайе готовят укрепление просевших участков Сукхумвита после прокладки водоотвода. Сначала восстановят основание, затем уложат асфальт; предполагаемый срок ремонтного контракта — около трёх месяцев, сообщает The Pattaya News.",
+      "en": "Pattaya plans to stabilise subsiding sections of Sukhumvit Road following drainage works before resurfacing them. The proposed repair contract is expected to last about three months, The Pattaya News reports.",
+      "th": "พัทยาเตรียมเสริมฐานถนนสุขุมวิทที่ทรุดตัวหลังงานวางท่อระบายน้ำ ก่อนปูแอสฟัลต์ใหม่ โดยคาดว่าระยะเวลาสัญญาซ่อมจะประมาณสามเดือน ตามรายงาน The Pattaya News",
       "sources": [
-        "https://www.pattayamail.com/news/chemical-tanker-leaks-corrosive-substance-after-crashing-into-guardrail-on-pattaya-bypass-570972"
+        "https://thepattayanews.com/2026/11/10/deputy-pattaya-mayor-speeds-up-fix-for-subsiding-sukhumvit-road-after-drainage-works-full-repair-expected-in-three-months/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-06T06:25:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/chemical-tanker-leaks-corrosive-substance-after-crashing-into-guardrail-on-pattaya-bypass-570972",
-        "summary": "Pattaya Mail displayed 239 views and 0 comments, compared with 231/0 for the city health-project item; these early within-site counts do not establish a citywide rank."
+        "observedAt": "2026-11-11T18:50:11+07:00",
+        "sourceUrl": "https://thepattayanews.com/2026/11/10/deputy-pattaya-mayor-speeds-up-fix-for-subsiding-sukhumvit-road-after-drainage-works-full-repair-expected-in-three-months/",
+        "summary": "Source article reviewed. Comparable public engagement metrics were unavailable; no popularity rank is claimed."
       }
     },
     {
       "category": "pattaya",
-      "when": "06.11 · Pattaya",
-      "href": "https://www.pattayamail.com/latestnews/news/pattaya-approves-17-more-health-projects-to-benefit-residents-of-all-ages-570976",
-      "publishedAt": "2026-11-06",
-      "ru": "Городской фонд медицинской безопасности Паттайи одобрил финансирование ещё 17 проектов по профилактике заболеваний, физической активности и доступу к помощи для жителей разных возрастов.",
-      "en": "Pattaya’s Health Security Fund approved funding for 17 more projects covering disease prevention, physical activity and access to care for residents of different ages.",
-      "th": "กองทุนหลักประกันสุขภาพเมืองพัทยาอนุมัติงบเพิ่ม 17 โครงการ ครอบคลุมการป้องกันโรค การส่งเสริมกิจกรรมทางกาย และการเข้าถึงบริการของประชาชนหลายช่วงวัย",
+      "when": "11.11 · 📍",
+      "href": "https://thepattayanews.com/2026/11/11/pattaya-pushes-to-complete-long-delayed-eastern-stadium-now-targeting-october-2027-opening/",
+      "publishedAt": "2026-11-11",
+      "ru": "Власти Паттайи рассчитывают открыть первую очередь Восточного стадиона в октябре 2027 года. После корректировки проекта завершают крышу; далее планируют поле и более 20 тысяч мест. Это заявленный срок, а не подтверждённая дата открытия.",
+      "en": "Pattaya officials are targeting October 2027 for the first phase of Eastern Stadium. Roof work is nearing completion, with the pitch and over 20,000 seats to follow. This remains a target, not a confirmed opening date.",
+      "th": "เมืองพัทยาตั้งเป้าเปิดสนามกีฬาภาคตะวันออกระยะแรกในเดือนตุลาคม 2027 งานหลังคาใกล้เสร็จ ก่อนจัดทำสนามและติดตั้งที่นั่งกว่า 20,000 ที่ เป้าหมายนี้ยังไม่ใช่วันเปิดที่ยืนยันแล้ว",
       "sources": [
-        "https://www.pattayamail.com/latestnews/news/pattaya-approves-17-more-health-projects-to-benefit-residents-of-all-ages-570976"
+        "https://thepattayanews.com/2026/11/11/pattaya-pushes-to-complete-long-delayed-eastern-stadium-now-targeting-october-2027-opening/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-06T06:25:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/latestnews/news/pattaya-approves-17-more-health-projects-to-benefit-residents-of-all-ages-570976",
-        "summary": "Pattaya Mail displayed 231 views and 0 comments, compared with 239/0 for the tanker-leak report; these early within-site counts do not establish a citywide rank."
+        "observedAt": "2026-11-11T18:50:11+07:00",
+        "sourceUrl": "https://thepattayanews.com/2026/11/11/pattaya-pushes-to-complete-long-delayed-eastern-stadium-now-targeting-october-2027-opening/",
+        "summary": "Source article reviewed. Comparable public engagement metrics were unavailable; no popularity rank is claimed."
       }
     }
   ],
@@ -345,5 +344,6 @@
       "verifiedAt": "2026-11-05"
     }
   ],
-  "selection": "Reviewed 2026-11-06 Asia/Bangkok: exactly 1 world, 2 Thailand and 2 Pattaya stories, published on 5–6 November. Public counters and explicit limitations are recorded without global, national or citywide rank claims. Added the official 5 November fake police cyber-unit page warning; ten earlier active cards retain their original dates. No Telegram sending."
+  "selection": "Reviewed 2026-11-11 Asia/Bangkok: one non-war world story, two Thailand and two Pattaya stories published 10–11 November. Sources and dates checked; no popularity ranking claimed. Existing safety warnings retain their original verification dates. No Telegram sending."
 }
+
