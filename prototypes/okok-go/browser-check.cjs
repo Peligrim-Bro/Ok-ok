@@ -31,6 +31,11 @@ const assert=require('node:assert/strict');
   assert.equal(handoff.searchParams.get('dropOffLatitude'),'12.8924568');
   assert.equal(handoff.searchParams.get('dropOffLongitude'),'100.8779734');
   assert.equal(handoff.searchParams.has('pickUpLatitude'),false);
+  const second=new URL(await page.locator('#handoff-b').getAttribute('href'));
+  assert.equal(second.searchParams.get('dropOffLatitude'),'12.9500000');
+  assert.equal(second.searchParams.get('dropOffLongitude'),'100.8900000');
+  assert.equal(second.searchParams.get('dropOffAddress'),handoff.searchParams.get('dropOffAddress'));
+  assert.equal(second.searchParams.has('pickUpLatitude'),false);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
   await page.screenshot({path:'quality-reports/go-grab-'+width+'.png',fullPage:true});await page.close();
  }}finally{await browser.close()}

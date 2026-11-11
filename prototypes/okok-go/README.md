@@ -41,3 +41,6 @@ The owner supplied `https://maps.app.goo.gl/ZNZC9pypnDWWxn5GA?g_st=ic`. It redir
 
 ## Grab handoff experiment
 Owner authorized a physical iPhone handoff test. `/grab-test.html` isolates `grab://open` from `grab://open?screenType=BOOKING&vertical=Car&dropOffLatitude=...&dropOffLongitude=...`. Format originates from https://gist.github.com/dymx101/a6ca6ae9ef86daa90cc12d62e35ceb2f (2023), not current official documentation. No current iOS support is claimed. Uses previously resolved control coordinates 12.8924568,100.8779734; explicitly NOT Pupen. No pickup, time or market-specific taxiTypeId is set; user is instructed not to book. Must observe destination pin, not just application launch. Await physical result before integrating.
+
+### Second control B
+Owner requested a second distant control after iPhone screenshots showed the first destination near The Grand Jomtien. B uses 12.9500000,100.8900000, around 6.5 km north of A. Same dropoff label and all other parameters preserve a controlled test; no venue claim for B. User exits old booking screen, opens B, confirms real pickup if required, and observes destination map. Acceptance pending physical result.
