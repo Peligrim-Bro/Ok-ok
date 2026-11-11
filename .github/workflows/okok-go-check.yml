@@ -1,0 +1,21 @@
+name: OK-OK GO prototype checks
+on:
+  pull_request:
+    paths:
+      - 'prototypes/okok-go/**'
+      - '.github/workflows/okok-go-check.yml'
+  workflow_dispatch:
+jobs:
+  go-prototype:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Unit tests
+        run: node --test prototypes/okok-go/resolve-worker.test.mjs
+      - name: Prepare isolated preview assets
+        run: node prototypes/okok-go/build-preview.mjs
+      - name: Verify generated HTML
+        run: test -s prototypes/okok-go/preview-dist/index.html
