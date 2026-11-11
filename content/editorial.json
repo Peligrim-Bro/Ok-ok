@@ -1,90 +1,90 @@
 {
-  "verifiedAt": "2026-11-11",
+  "verifiedAt": "2026-11-12",
   "news": [
     {
       "category": "world",
-      "when": "10.11 · 🌍",
-      "href": "https://blogs.esa.int/cleanspace/2026/11/10/esa-life-cycle-assessment-lca-database-update/",
-      "publishedAt": "2026-11-10",
-      "ru": "ESA выпустило обновление базы экологической оценки космических проектов: версия 1.4.0 помогает сравнивать воздействие материалов, производства и эксплуатации на окружающую среду. Доступ предоставляется по лицензии.",
-      "en": "ESA has released version 1.4.0 of its space-project environmental assessment database. It helps compare the impacts of materials, manufacturing and operations; access requires a licence.",
-      "th": "ESA เผยแพร่ฐานข้อมูลประเมินผลกระทบสิ่งแวดล้อมของโครงการอวกาศรุ่น 1.4.0 เพื่อช่วยเปรียบเทียบผลจากวัสดุ การผลิต และการใช้งาน การเข้าถึงต้องได้รับใบอนุญาต",
+      "when": "11.11 · 🌍",
+      "href": "https://www.reuters.com/legal/litigation/meta-tiktok-join-google-push-back-indonesias-planned-ai-copyright-law-revisions-2026-11-11/",
+      "publishedAt": "2026-11-11",
+      "ru": "Meta и TikTok вслед за Google выступили против предложенных изменений закона об авторском праве Индонезии. Проект предусматривает выплаты издателям за показ новостного контента и отдельные правила для использования ИИ; обсуждение закона продолжается.",
+      "en": "Meta and TikTok have joined Google in opposing proposed changes to Indonesia's copyright law. The bill would introduce payments to publishers for displaying news content and rules for AI use; the proposal remains under debate.",
+      "th": "Meta และ TikTok ร่วมกับ Google คัดค้านข้อเสนอแก้กฎหมายลิขสิทธิ์ของอินโดนีเซีย ร่างกฎหมายกำหนดให้แพลตฟอร์มจ่ายค่าตอบแทนแก่สำนักข่าวและวางกติกาการใช้ AI โดยยังอยู่ระหว่างการพิจารณา",
       "sources": [
-        "https://blogs.esa.int/cleanspace/2026/11/10/esa-life-cycle-assessment-lca-database-update/"
+        "https://www.reuters.com/legal/litigation/meta-tiktok-join-google-push-back-indonesias-planned-ai-copyright-law-revisions-2026-11-11/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-11T18:50:11+07:00",
-        "sourceUrl": "https://blogs.esa.int/cleanspace/2026/11/10/esa-life-cycle-assessment-lca-database-update/",
-        "summary": "Official ESA page shows 0 comments; no cross-outlet popularity rank is claimed."
+        "observedAt": "2026-11-12T06:27:41+07:00",
+        "sourceUrl": "https://www.reuters.com/legal/litigation/meta-tiktok-join-google-push-back-indonesias-planned-ai-copyright-law-revisions-2026-11-11/",
+        "summary": "Reuters reported the topic from a parliamentary hearing. No comparable public comment/share counters or global popularity rank were available; no absolute ranking is claimed."
       },
       "nonWar": true
     },
     {
       "category": "thailand",
       "when": "11.11 · 🇹🇭",
-      "href": "https://www.pattayamail.com/latestnews/news/thailand-cuts-petrol-and-diesel-prices-from-november-11-following-global-oil-decline-571449",
+      "href": "https://www.tatnews.org/2026/11/her-majesty-the-queen-of-thailand-opens-global-wellness-summit-2026-in-phuket/",
       "publishedAt": "2026-11-11",
-      "ru": "По сообщению Pattaya Mail, с 11 ноября большинство марок бензина и газохола в Таиланде подешевели на 0,50 бата за литр, обычный дизель — на 1 бат. Для E85 и B20 снижения не объявлено.",
-      "en": "Pattaya Mail reports that most petrol and gasohol grades in Thailand fell by 0.50 baht per litre from 11 November, while regular diesel fell by 1 baht. E85 and B20 were excluded from the reduction.",
-      "th": "Pattaya Mail รายงานว่า ตั้งแต่ 11 พฤศจิกายน เบนซินและแก๊สโซฮอล์ส่วนใหญ่ในไทยลดลง 0.50 บาทต่อลิตร ส่วนดีเซลธรรมดาลดลง 1 บาท โดย E85 และ B20 ไม่ได้ลดราคา",
+      "ru": "На Пхукете открылся 20-й Global Wellness Summit. По данным TAT, четырёхдневная программа собрала около 600 специалистов и инвесторов для обсуждения долголетия, профилактической медицины, гостиничного сектора и инноваций.",
+      "en": "The 20th Global Wellness Summit has opened in Phuket. TAT says the four-day programme brings together around 600 specialists and investors to discuss longevity, preventive healthcare, hospitality and innovation.",
+      "th": "การประชุม Global Wellness Summit ครั้งที่ 20 เปิดขึ้นที่ภูเก็ต โดย ททท. ระบุว่างานสี่วันมีผู้เชี่ยวชาญและนักลงทุนราว 600 คน ร่วมหารือเรื่องอายุยืน การดูแลสุขภาพเชิงป้องกัน การบริการ และนวัตกรรม",
       "sources": [
-        "https://www.pattayamail.com/latestnews/news/thailand-cuts-petrol-and-diesel-prices-from-november-11-following-global-oil-decline-571449"
+        "https://www.tatnews.org/2026/11/her-majesty-the-queen-of-thailand-opens-global-wellness-summit-2026-in-phuket/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-11T18:50:11+07:00",
-        "sourceUrl": "https://www.pattayamail.com/latestnews/news/thailand-cuts-petrol-and-diesel-prices-from-november-11-following-global-oil-decline-571449",
-        "summary": "Source article reviewed. Comparable public engagement metrics were unavailable; no popularity rank is claimed."
+        "observedAt": "2026-11-12T06:27:41+07:00",
+        "sourceUrl": "https://www.tatnews.org/2026/11/her-majesty-the-queen-of-thailand-opens-global-wellness-summit-2026-in-phuket/",
+        "summary": "The official TAT page displayed 28 views. This is a source-page count, not a nationwide popularity ranking."
       }
     },
     {
       "category": "thailand",
-      "when": "11.11 · 🇹🇭",
-      "href": "https://www.pattayamail.com/news/futurium-opens-doors-to-future-technologies-and-career-opportunities-571496",
-      "publishedAt": "2026-11-11",
-      "ru": "Научный центр Futurium в Патхумтхани представил интерактивные экспозиции технологий будущего. В зоне Job World посетители от 13 лет могут попробовать задания, связанные с 27 профессиями, сообщает NNT через Pattaya Mail.",
-      "en": "Futurium in Pathum Thani features interactive exhibits on future technologies. Its Job World zone lets visitors aged 13 and over try activities linked to 27 careers, according to NNT via Pattaya Mail.",
-      "th": "Futurium จ.ปทุมธานีมีนิทรรศการเทคโนโลยีแห่งอนาคตแบบมีส่วนร่วม โซน Job World เปิดให้ผู้มีอายุ 13 ปีขึ้นไปทดลองกิจกรรมเกี่ยวกับ 27 อาชีพ ตามรายงาน NNT ที่เผยแพร่โดย Pattaya Mail",
+      "when": "12.11 · 🇹🇭",
+      "href": "https://www.pattayamail.com/latestnews/news/mass-starfish-stranding-leaves-karon-beach-in-phuket-covered-in-marine-life-571679",
+      "publishedAt": "2026-11-12",
+      "ru": "На пляже Карон на Пхукете утром 11 ноября обнаружили множество выброшенных на берег морских звёзд. С приливом их смыло обратно в море; официального объяснения причин массового выброса пока нет.",
+      "en": "Large numbers of starfish were found washed ashore at Karon Beach in Phuket on the morning of 11 November. The rising tide carried them back to sea; authorities have not yet provided an official explanation for the event.",
+      "th": "พบดาวทะเลจำนวนมากถูกคลื่นซัดขึ้นหาดกะรน จังหวัดภูเก็ต ในเช้าวันที่ 11 พฤศจิกายน ก่อนที่น้ำขึ้นจะพากลับลงทะเล ขณะนี้ยังไม่มีคำอธิบายอย่างเป็นทางการถึงสาเหตุ",
       "sources": [
-        "https://www.pattayamail.com/news/futurium-opens-doors-to-future-technologies-and-career-opportunities-571496"
+        "https://www.pattayamail.com/latestnews/news/mass-starfish-stranding-leaves-karon-beach-in-phuket-covered-in-marine-life-571679"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-11T18:50:11+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/futurium-opens-doors-to-future-technologies-and-career-opportunities-571496",
-        "summary": "Source article reviewed. Comparable public engagement metrics were unavailable; no popularity rank is claimed."
+        "observedAt": "2026-11-12T06:27:41+07:00",
+        "sourceUrl": "https://www.pattayamail.com/latestnews/news/mass-starfish-stranding-leaves-karon-beach-in-phuket-covered-in-marine-life-571679",
+        "summary": "The same-day listing displayed 0 comments and no stable public view counter. Social-media interest was reported by the source, but no comparable engagement total or ranking is claimed."
       }
     },
     {
       "category": "pattaya",
-      "when": "10.11 · 📍",
-      "href": "https://thepattayanews.com/2026/11/10/deputy-pattaya-mayor-speeds-up-fix-for-subsiding-sukhumvit-road-after-drainage-works-full-repair-expected-in-three-months/",
-      "publishedAt": "2026-11-10",
-      "ru": "В Паттайе готовят укрепление просевших участков Сукхумвита после прокладки водоотвода. Сначала восстановят основание, затем уложат асфальт; предполагаемый срок ремонтного контракта — около трёх месяцев, сообщает The Pattaya News.",
-      "en": "Pattaya plans to stabilise subsiding sections of Sukhumvit Road following drainage works before resurfacing them. The proposed repair contract is expected to last about three months, The Pattaya News reports.",
-      "th": "พัทยาเตรียมเสริมฐานถนนสุขุมวิทที่ทรุดตัวหลังงานวางท่อระบายน้ำ ก่อนปูแอสฟัลต์ใหม่ โดยคาดว่าระยะเวลาสัญญาซ่อมจะประมาณสามเดือน ตามรายงาน The Pattaya News",
+      "when": "12.11 · 📍",
+      "href": "https://www.pattayamail.com/news/thappraya-soi-10-south-pattaya-road-excavation-leads-to-fine-and-machinery-seizure-571664",
+      "publishedAt": "2026-11-12",
+      "ru": "Муниципальные инспекторы Паттайи остановили земляные работы на дороге в Thappraya Soi 10, которые, по их данным, велись без разрешения. Ответственному предписали явиться для уплаты штрафа; технику изъяли в рамках проверки.",
+      "en": "Pattaya municipal officers stopped road excavation in Thappraya Soi 10 that they said was being carried out without permission. The responsible person was referred for a fine, and the machinery was seized as part of the enforcement action.",
+      "th": "เจ้าหน้าที่เทศกิจพัทยาระงับการขุดถนนในซอยทัพพระยา 10 ซึ่งระบุว่าดำเนินการโดยไม่ได้รับอนุญาต ผู้รับผิดชอบถูกส่งไปดำเนินการเรื่องค่าปรับ และมีการยึดเครื่องจักรตามขั้นตอน",
       "sources": [
-        "https://thepattayanews.com/2026/11/10/deputy-pattaya-mayor-speeds-up-fix-for-subsiding-sukhumvit-road-after-drainage-works-full-repair-expected-in-three-months/"
+        "https://www.pattayamail.com/news/thappraya-soi-10-south-pattaya-road-excavation-leads-to-fine-and-machinery-seizure-571664"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-11T18:50:11+07:00",
-        "sourceUrl": "https://thepattayanews.com/2026/11/10/deputy-pattaya-mayor-speeds-up-fix-for-subsiding-sukhumvit-road-after-drainage-works-full-repair-expected-in-three-months/",
-        "summary": "Source article reviewed. Comparable public engagement metrics were unavailable; no popularity rank is claimed."
+        "observedAt": "2026-11-12T06:27:41+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/thappraya-soi-10-south-pattaya-road-excavation-leads-to-fine-and-machinery-seizure-571664",
+        "summary": "The same-day Pattaya Mail listing displayed 0 comments; a stable public view counter was not exposed. No citywide popularity rank is claimed."
       }
     },
     {
       "category": "pattaya",
-      "when": "11.11 · 📍",
-      "href": "https://thepattayanews.com/2026/11/11/pattaya-pushes-to-complete-long-delayed-eastern-stadium-now-targeting-october-2027-opening/",
-      "publishedAt": "2026-11-11",
-      "ru": "Власти Паттайи рассчитывают открыть первую очередь Восточного стадиона в октябре 2027 года. После корректировки проекта завершают крышу; далее планируют поле и более 20 тысяч мест. Это заявленный срок, а не подтверждённая дата открытия.",
-      "en": "Pattaya officials are targeting October 2027 for the first phase of Eastern Stadium. Roof work is nearing completion, with the pitch and over 20,000 seats to follow. This remains a target, not a confirmed opening date.",
-      "th": "เมืองพัทยาตั้งเป้าเปิดสนามกีฬาภาคตะวันออกระยะแรกในเดือนตุลาคม 2027 งานหลังคาใกล้เสร็จ ก่อนจัดทำสนามและติดตั้งที่นั่งกว่า 20,000 ที่ เป้าหมายนี้ยังไม่ใช่วันเปิดที่ยืนยันแล้ว",
+      "when": "12.11 · 📍",
+      "href": "https://www.pattayamail.com/news/crane-legs-on-jomtien-footpath-prompt-city-enforcement-action-571650",
+      "publishedAt": "2026-11-12",
+      "ru": "В Джомтьене муниципальные инспекторы зафиксировали опоры крана на пешеходной дорожке вдоль Second Road. Материалы направили для назначения штрафа; власти напомнили о риске повреждения плитки и препятствиях для пешеходов.",
+      "en": "Municipal officers in Jomtien recorded crane supports placed on the footpath along Second Road. The case was referred for a fine, with officials citing potential pavement damage and obstruction to pedestrians.",
+      "th": "เจ้าหน้าที่เทศกิจจอมเทียนตรวจพบขาค้ำรถเครนวางบนทางเท้าริมถนนสายสอง และส่งเรื่องเพื่อดำเนินการปรับ โดยระบุถึงความเสี่ยงต่อพื้นทางเท้าและการกีดขวางคนเดินเท้า",
       "sources": [
-        "https://thepattayanews.com/2026/11/11/pattaya-pushes-to-complete-long-delayed-eastern-stadium-now-targeting-october-2027-opening/"
+        "https://www.pattayamail.com/news/crane-legs-on-jomtien-footpath-prompt-city-enforcement-action-571650"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-11T18:50:11+07:00",
-        "sourceUrl": "https://thepattayanews.com/2026/11/11/pattaya-pushes-to-complete-long-delayed-eastern-stadium-now-targeting-october-2027-opening/",
-        "summary": "Source article reviewed. Comparable public engagement metrics were unavailable; no popularity rank is claimed."
+        "observedAt": "2026-11-12T06:27:41+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/crane-legs-on-jomtien-footpath-prompt-city-enforcement-action-571650",
+        "summary": "The same-day Pattaya Mail listing displayed 0 comments; a stable public view counter was not exposed. It was compared with the other selected local item, also at 0 comments, without claiming an absolute rank."
       }
     }
   ],
@@ -344,6 +344,5 @@
       "verifiedAt": "2026-11-05"
     }
   ],
-  "selection": "Reviewed 2026-11-11 Asia/Bangkok: one non-war world story, two Thailand and two Pattaya stories published 10–11 November. Sources and dates checked; no popularity ranking claimed. Existing safety warnings retain their original verification dates. No Telegram sending."
+  "selection": "Reviewed 2026-11-12 Asia/Bangkok: exactly one non-war world story, two Thailand and two Pattaya stories published 11–12 November. Public engagement evidence was limited to 28 TAT page views and 0-comment same-day Pattaya Mail listings; no global, national or citywide popularity ranking is claimed. No new independently verified official scam scheme was added; existing safety warnings retain their original dates. No Telegram sending."
 }
-
