@@ -24,7 +24,15 @@ const assert=require('node:assert/strict');
   await page.locator('#source').fill('https://maps.app.goo.gl/ZNZC9pypnDWWxn5GA?g_st=ic');await page.locator('#parse').click();
   await page.waitForFunction(()=>document.querySelector('#copy').textContent==='Скопировать адрес для Grab');
   assert.equal(await page.locator('#coords').textContent(),'Pupen Seafood, Na Chom Thian');
-  await page.screenshot({path:'quality-reports/go-place-'+width+'.png',fullPage:true});await page.close();
+  await page.screenshot({path:'quality-reports/go-place-'+width+'.png',fullPage:true});await page.route('https://go.test/grab-test.html',r=>r.fulfill({body:readFileSync('prototypes/okok-go/grab-test.html','utf8'),contentType:'text/html'}));
+  await page.goto('https://go.test/grab-test.html');
+  assert.equal(await page.locator('#launch').getAttribute('href'),'grab://open');
+  const handoff=new URL(await page.locator('#handoff').getAttribute('href'));
+  assert.equal(handoff.searchParams.get('dropOffLatitude'),'12.8924568');
+  assert.equal(handoff.searchParams.get('dropOffLongitude'),'100.8779734');
+  assert.equal(handoff.searchParams.has('pickUpLatitude'),false);
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+  await page.screenshot({path:'quality-reports/go-grab-'+width+'.png',fullPage:true});await page.close();
  }}finally{await browser.close()}
  console.log('390/768px input, error recovery and overflow pass; resolver mocked, not physical iOS');
 })().catch(e=>{console.error(e);process.exitCode=1});

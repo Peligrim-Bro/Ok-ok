@@ -38,3 +38,6 @@ Owner requested continuation and an isolated demo. Pin coordinates now take prec
 
 ## iPhone place-link correction
 The owner supplied `https://maps.app.goo.gl/ZNZC9pypnDWWxn5GA?g_st=ic`. It redirects to maps.google.com with q=Pupen Seafood/address and ftid, without coordinates. This exact host is now allowed; named-place responses preserve q+ftid in a Google Maps confirmation link and offer address copying. They never invent coordinates. Physical Grab search remains unverified.
+
+## Grab handoff experiment
+Owner authorized a physical iPhone handoff test. `/grab-test.html` isolates `grab://open` from `grab://open?screenType=BOOKING&vertical=Car&dropOffLatitude=...&dropOffLongitude=...`. Format originates from https://gist.github.com/dymx101/a6ca6ae9ef86daa90cc12d62e35ceb2f (2023), not current official documentation. No current iOS support is claimed. Uses previously resolved control coordinates 12.8924568,100.8779734; explicitly NOT Pupen. No pickup, time or market-specific taxiTypeId is set; user is instructed not to book. Must observe destination pin, not just application launch. Await physical result before integrating.
