@@ -1,6 +1,6 @@
 // Standalone Cloudflare Worker proof of concept. NOT deployed or routed in production.
 // Explicit allowlist and manual redirects prevent arbitrary URL fetches (SSRF).
-const allowed = host => host === 'maps.app.goo.gl' || host === 'goo.gl' || host === 'www.google.com' || host === 'google.com' || /^www\.google\.[a-z]{2,3}(?:\.[a-z]{2})?$/.test(host);
+const allowed = host => host === 'maps.google.com' || host === 'maps.app.goo.gl' || host === 'goo.gl' || host === 'www.google.com' || host === 'google.com' || /^www\.google\.[a-z]{2,3}(?:\.[a-z]{2})?$/.test(host);
 export function pointFrom(url) {
   const valid = (a,b) => Number.isFinite(a)&&Number.isFinite(b)&&Math.abs(a)<=90&&Math.abs(b)<=180;
   // Explicit destination pin wins over viewport centre. Never treat @ or ll as a pin.
@@ -26,6 +26,8 @@ export default {async fetch(request){
   for(let hop=0;hop<5;hop++){
     if(url.protocol!=='https:'||url.username||url.password||url.port||!allowed(url.hostname))return json({error:'unsupported_host'},400);
     const direct=pointFrom(url);if(direct)return json({...direct,source:'url',needsConfirmation:true});
+    const place=url.searchParams.get('q');
+    if(url.searchParams.has('ftid')&&place&&place.length<=1000){const map=new URL('https://www.google.com/maps');map.searchParams.set('q',place);map.searchParams.set('ftid',url.searchParams.get('ftid'));return json({placeText:place,mapsUrl:map.href,source:'google_maps_url',needsConfirmation:true});}
     if(!['maps.app.goo.gl','goo.gl'].includes(url.hostname)&&!url.pathname.startsWith('/maps'))return json({error:'unsupported_path'},400);
     let response;try{response=await fetch(url.toString(),{method:'GET',redirect:'manual',headers:{'accept':'text/html'},signal:AbortSignal.timeout(4500)})}catch{return json({error:'lookup_failed'},502)}
     await response.body?.cancel();

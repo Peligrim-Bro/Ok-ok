@@ -35,3 +35,6 @@ After deployment, retrieve the actual workers.dev/custom domain URL from the dep
 
 ## Continuation 11 November
 Owner requested continuation and an isolated demo. Pin coordinates now take precedence over viewport; viewport-only links fail closed. Same-origin resolver has a 20 requests/minute per-IP Cloudflare limiter, request size cap and redirect timeouts. Input links are disclosed as processed by the server/Google. Nine focused tests pass locally. PR check deploys only the exact same-repository development branch to `okok-go-preview`; no main merge or production Worker change. Deployment URL and physical Grab/Shortcut checks remain pending until observed. No booking handoff is claimed.
+
+## iPhone place-link correction
+The owner supplied `https://maps.app.goo.gl/ZNZC9pypnDWWxn5GA?g_st=ic`. It redirects to maps.google.com with q=Pupen Seafood/address and ftid, without coordinates. This exact host is now allowed; named-place responses preserve q+ftid in a Google Maps confirmation link and offer address copying. They never invent coordinates. Physical Grab search remains unverified.

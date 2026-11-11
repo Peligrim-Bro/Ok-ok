@@ -16,19 +16,22 @@ if(m&&valid(+m[1],+m[2]))return [+m[1],+m[2]];
 return null;
 }
 $('parse').addEventListener('click',async()=>{
-const raw=$('source').value.trim();let point=parse(raw);$('result').hidden=true;$('status').textContent='';
+const raw=$('source').value.trim();let point=parse(raw),place=null;$('result').hidden=true;$('status').textContent='';
 if(!point && /^https:\/\//i.test(raw)){
  $('status').textContent='Проверяю ссылку…';$('status').className='hint';$('parse').disabled=true;
  try {
   const response=await fetch('./api/resolve',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({url:raw})});
   const data=await response.json();
   if(response.ok&&valid(data.lat,data.lng))point=[data.lat,data.lng];
+  else if(response.ok&&typeof data.placeText==='string'&&typeof data.mapsUrl==='string'&&data.mapsUrl.startsWith('https://www.google.com/maps?'))place=data;
   else $('status').textContent='Ссылка не содержит доступных координат. Открой точку в Google Maps и скопируй координаты.';
  } catch { $('status').textContent='Обработчик коротких ссылок недоступен. Попробуй полную ссылку или координаты.'; }
  finally {$('parse').disabled=false;}
 }
-$('result').hidden=!point;
+$('result').hidden=!(point||place);
+if(place){$('coords').textContent=place.placeText;$('maps').href=place.mapsUrl;$('copy').textContent='Скопировать адрес для Grab';$('copy').onclick=()=>copy(place.placeText);$('copyName').onclick=()=>copy(place.mapsUrl);$('status').textContent='Место найдено. Google передал название и адрес без координат. Проверь место на карте; адрес можно скопировать в поиск Grab.';$('status').className='hint';return}
 if(!point){if(!$('status').textContent)$('status').textContent='Вставь ссылку Google Maps с меткой места или точные координаты.';$('status').className='hint error';return}
+$('copy').textContent='Скопировать координаты для Grab';
 const value=point.map(x=>x.toFixed(6)).join(', ');$('coords').textContent=value;
 $('maps').href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(value);
 $('copy').onclick=()=>copy(value);$('copyName').onclick=()=>copy($('maps').href);

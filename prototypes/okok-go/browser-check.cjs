@@ -19,7 +19,12 @@ const assert=require('node:assert/strict');
   assert.equal(await page.locator('#result').isVisible(),false);
   assert.equal(await page.locator('#parse').isEnabled(),true);
   await page.locator('#source').fill('nonsense');await page.locator('#parse').click();
-  assert.match(await page.locator('#status').textContent(),/^Вставь/);await page.close();
+  assert.match(await page.locator('#status').textContent(),/^Вставь/);
+  await page.route('https://go.test/api/resolve',r=>r.fulfill({json:{placeText:'Pupen Seafood, Na Chom Thian',mapsUrl:'https://www.google.com/maps?q=Pupen+Seafood&ftid=test'}}));
+  await page.locator('#source').fill('https://maps.app.goo.gl/ZNZC9pypnDWWxn5GA?g_st=ic');await page.locator('#parse').click();
+  await page.waitForFunction(()=>document.querySelector('#copy').textContent==='Скопировать адрес для Grab');
+  assert.equal(await page.locator('#coords').textContent(),'Pupen Seafood, Na Chom Thian');
+  await page.screenshot({path:'quality-reports/go-place-'+width+'.png',fullPage:true});await page.close();
  }}finally{await browser.close()}
  console.log('390/768px input, error recovery and overflow pass; resolver mocked, not physical iOS');
 })().catch(e=>{console.error(e);process.exitCode=1});
