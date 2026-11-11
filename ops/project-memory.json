@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "project": "OK-OK.click",
-  "updatedAt": "2026-11-06",
+  "updatedAt": "2026-11-11",
   "decisions": [
     {
       "id": "hosting",
@@ -254,6 +254,17 @@
         "docs/THREADS_BUFFER_20261106.md",
         "workers/threads-auth/queue.json",
         "workers/threads-auth/worker.mjs"
+      ]
+    },
+    {
+      "id": "okok-go-mvp",
+      "status": "in_progress",
+      "tags": [
+        "tools"
+      ],
+      "next": "Owner resumed 11 Nov. Draft PR112 separate preview only. Pin precedence, viewport rejection, resolver limits and error copy fixed; nine unit tests pass. Preview deployment and real-device Grab/Shortcut behavior pending. No main merge.",
+      "sources": [
+        "prototypes/okok-go/README.md"
       ]
     }
   ]

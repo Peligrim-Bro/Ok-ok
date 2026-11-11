@@ -3,26 +3,22 @@
 <style>
 :root{font-family:system-ui,-apple-system,sans-serif;color:#eef5ef;background:#061d27;color-scheme:dark}*{box-sizing:border-box}body{margin:0;padding:env(safe-area-inset-top) 16px env(safe-area-inset-bottom)}main{max-width:560px;margin:40px auto}h1{font-size:2rem;margin:0 0 8px}p{line-height:1.5;color:#bdd3cf}.panel{background:#103743;border:1px solid #285b62;border-radius:20px;padding:20px;margin-top:20px}label{display:block;font-weight:700;margin-bottom:10px}textarea{width:100%;min-height:115px;background:#061d27;color:#fff;border:1px solid #719b99;border-radius:12px;padding:12px;font:inherit;resize:vertical}button,a.action{display:block;width:100%;margin-top:12px;border:0;border-radius:12px;padding:15px;text-align:center;font:700 1rem system-ui;text-decoration:none;background:#57efc3;color:#062b2b;cursor:pointer;min-height:48px}.secondary{background:#244b55!important;color:#fff!important}.hint{font-size:.9rem}.error{color:#ffb5a6}#result[hidden]{display:none}code{overflow-wrap:anywhere}a{color:#57efc3}
 </style></head><body><main><h1>OK-OK GO</h1><p>Нашёл место в Google Maps? Передай точку в такси без поиска адреса заново.</p>
-<section class="panel"><label for="source">Ссылка Google Maps или координаты</label><textarea id="source" placeholder="Вставь ссылку Google Maps или 12.934, 100.881" autocomplete="off"></textarea><button id="parse">Найти координаты</button><p id="status" class="hint" role="status" aria-live="polite">Поддерживаются ссылки с координатами. Короткие ссылки обрабатываются сервером, когда он подключён.</p></section>
+<section class="panel"><label for="source">Ссылка Google Maps или координаты</label><textarea id="source" placeholder="Вставь ссылку Google Maps или 12.934, 100.881" autocomplete="off"></textarea><button id="parse">Найти координаты</button><p id="status" class="hint" role="status" aria-live="polite">Вставь ссылку из «Поделиться» в Google Maps. После обработки проверь метку.</p></section>
 <section class="panel" id="result" hidden><strong>Точка назначения</strong><p id="coords"></p><a id="maps" class="action secondary" target="_blank" rel="noopener noreferrer">Проверить на Google Maps</a><button id="copy">Скопировать координаты для Grab</button><button id="copyName" class="secondary">Скопировать ссылку на точку</button><p class="hint">Открой Grab и вставь координаты в поиск. Поддержка координат в поиске зависит от версии Grab и региона.</p></section>
-<p class="hint">Прототип: не заказывает поездку, не показывает цены и не отправляет введённые данные на сервер.</p></main>
+<p class="hint">Прототип: ссылки обрабатываются сервером и передаются Google для раскрытия. Поездка не заказывается; цены не показываются.</p></main>
 <script>
 (function(){
 const $=id=>document.getElementById(id);
 function valid(a,b){return Number.isFinite(a)&&Number.isFinite(b)&&Math.abs(a)<=90&&Math.abs(b)<=180}
 function parse(s){
-s=s.trim();let m=s.match(/^(-?\d{1,2}(?:\.\d+)?)\s*[,; ]\s*(-?\d{1,3}(?:\.\d+)?)$/);
+s=s.trim();const m=s.match(/^(-?\d+(?:\.\d+)?)\s*[,; ]\s*(-?\d+(?:\.\d+)?)$/);
 if(m&&valid(+m[1],+m[2]))return [+m[1],+m[2]];
-let u;try{u=new URL(s)}catch{return null}
-if(u.protocol!=='https:'||!/(^|\.)(google\.[a-z.]+|googleapis\.com|goo\.gl)$/.test(u.hostname))return null;
-const parts=[u.searchParams.get('query'),u.searchParams.get('q'),u.searchParams.get('ll'),u.searchParams.get('destination'),u.pathname,u.hash].filter(Boolean);
-for(const p of parts){m=p.match(/(?:@|!3d|^|[^\d.-])(-?\d{1,2}\.\d{3,})\s*(?:,|!4d|%2C|\s)\s*(-?\d{1,3}\.\d{3,})/i);if(m&&valid(+m[1],+m[2]))return [+m[1],+m[2]]}
-return null
+return null;
 }
 $('parse').addEventListener('click',async()=>{
-const raw=$('source').value.trim();let point=parse(raw);$('result').hidden=true;
-if(!point && /^https:\/\/(?:maps\.app\.goo\.gl|goo\.gl)\//i.test(raw)){
- $('status').textContent='Раскрываю короткую ссылку…';$('status').className='hint';$('parse').disabled=true;
+const raw=$('source').value.trim();let point=parse(raw);$('result').hidden=true;$('status').textContent='';
+if(!point && /^https:\/\//i.test(raw)){
+ $('status').textContent='Проверяю ссылку…';$('status').className='hint';$('parse').disabled=true;
  try {
   const response=await fetch('./api/resolve',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({url:raw})});
   const data=await response.json();
@@ -32,7 +28,7 @@ if(!point && /^https:\/\/(?:maps\.app\.goo\.gl|goo\.gl)\//i.test(raw)){
  finally {$('parse').disabled=false;}
 }
 $('result').hidden=!point;
-if(!point){$('status').textContent=/maps\.app\.goo\.gl|goo\.gl\/maps/i.test(raw)?'Это короткая ссылка: для её раскрытия нужен безопасный серверный обработчик. Пока открой ссылку в браузере и скопируй полную ссылку или координаты.':'Не удалось найти точные координаты. Вставь координаты или полную ссылку Google Maps с точкой.';$('status').className='hint error';return}
+if(!point){if(!$('status').textContent)$('status').textContent='Вставь ссылку Google Maps с меткой места или точные координаты.';$('status').className='hint error';return}
 const value=point.map(x=>x.toFixed(6)).join(', ');$('coords').textContent=value;
 $('maps').href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(value);
 $('copy').onclick=()=>copy(value);$('copyName').onclick=()=>copy($('maps').href);

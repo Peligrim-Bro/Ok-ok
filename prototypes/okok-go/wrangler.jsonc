@@ -5,6 +5,18 @@
   "assets": {
     "directory": "./preview-dist",
     "binding": "ASSETS",
-    "run_worker_first": ["/api/resolve"]
-  }
+    "run_worker_first": [
+      "/api/resolve"
+    ]
+  },
+  "ratelimits": [
+    {
+      "name": "RESOLVE_LIMITER",
+      "namespace_id": "112",
+      "simple": {
+        "limit": 20,
+        "period": 60
+      }
+    }
+  ]
 }
