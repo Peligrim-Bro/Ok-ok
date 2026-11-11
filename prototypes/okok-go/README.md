@@ -27,3 +27,8 @@ Create a Shortcuts action that accepts URLs from Share Sheet and opens `https://
 `node --test prototypes/okok-go/resolve-worker.test.mjs`
 
 Current status: router and preview configuration committed, but deployment, tests, real Google Maps shortlink expansion, physical iOS clipboard, and Grab deep link are NOT verified.
+
+## Opt-in deployment
+The repository now contains `.github/workflows/okok-go-preview-deploy.yml` which runs only by manual `workflow_dispatch`, and deploys the isolated Worker name `okok-go-preview` using the existing GitHub Cloudflare secrets. It never deploys the production `ok-ok` Worker. GitHub only exposes manual dispatch for workflows present on the default branch; therefore, this PR does not itself create a usable deploy button until the workflow is made available on the default branch. Do not merge the whole prototype merely to expose that button: first review the workflow and use a separately approved workflow-only change if desired.
+
+After deployment, retrieve the actual workers.dev/custom domain URL from the deployment log; do not assume it. Verify `GET /` returns HTML and `POST /api/resolve` handles both safe and hostile test cases before creating the iPhone Shortcut.
