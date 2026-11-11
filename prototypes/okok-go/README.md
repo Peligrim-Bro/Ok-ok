@@ -16,3 +16,14 @@ Status: draft PR, NOT deployed. No Grab/Bolt/inDrive deep-link support has been 
 
 ## Acceptance gate
 Test shortlinks (including unavailable coordinates), encoded map URLs, malicious redirect attempts, non-Google hosts, mobile clipboard fallback, physical iPhone/Android Grab behavior; run repo's required build, mobile browser suite and 3 Lighthouse passes before main. Preserve all current site features and payment/referral logic.
+
+## Isolated preview setup (not yet executed)
+From the repository root, use `cd prototypes/okok-go` then `npx wrangler dev --config wrangler.jsonc`. Open the local preview root; `POST /api/resolve` runs in the same origin. For remote testing, deploy the *separate* `okok-go-preview` worker only after security and test review. Do not change the production `ok-ok` Worker or merge the draft PR.
+
+## iPhone share workflow (once HTTPS preview is reachable)
+Create a Shortcuts action that accepts URLs from Share Sheet and opens `https://<verified-preview-host>/?url=<URL-encoded shared URL>`. The web page resolves the map link. This is a manual Shortcut, not a registered native share extension, and the preview host must be verified rather than assumed.
+
+## Run focused tests
+`node --test prototypes/okok-go/resolve-worker.test.mjs`
+
+Current status: router and preview configuration committed, but deployment, tests, real Google Maps shortlink expansion, physical iOS clipboard, and Grab deep link are NOT verified.
