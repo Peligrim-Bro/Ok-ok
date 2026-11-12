@@ -60,6 +60,8 @@
  function labels(){
   document.getElementById('authorContactNotes').innerHTML=notesHTML();
   button.textContent=t().button;
+  document.getElementById('communityChatLink').textContent=({ru:'Свои на OK-OK 💬',en:'OK-OK Community 💬',th:'ชุมชน OK-OK 💬'})[lang()];
+  document.getElementById('communityChatHint').textContent=({ru:'Общий чат в Telegram: вопросы, знакомства и советы.',en:'Our Telegram group: questions, meetups and tips.',th:'กลุ่ม Telegram: ถามคำถาม พบเพื่อน และแบ่งปันเคล็ดลับ'})[lang()];
   minimize.textContent=({ru:'Свернуть чат',en:'Minimize chat',th:'ย่อแชต'})[lang()];
   document.getElementById('authorChatTitle').textContent=t().title;
   document.getElementById('authorChatLead').textContent=t().lead;

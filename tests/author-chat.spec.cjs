@@ -77,3 +77,18 @@ test('minimizing restores the page after vendor scroll resets and callbacks',asy
  await button.click();await page.locator('#authorChatClose').click();
  await expect(button).toBeFocused();
 });
+
+for(const lang of ['ru','en','th'])test(`community opens the exact Telegram group without loading support: ${lang}`,async({page})=>{
+ await page.setViewportSize({width:390,height:844});
+ await page.addInitScript(lang=>{localStorage.setItem('pok-lang',lang);localStorage.setItem('pok-lang-set','1');},lang);
+ let vendorRequests=0;await page.route('https://embed.tawk.to/**',route=>{vendorRequests++;return route.abort();});
+ await page.goto('/');await page.locator('#installClose').click();
+ const link=page.locator('#communityChatLink');
+ await expect(link).toHaveText({ru:'Свои на OK-OK 💬',en:'OK-OK Community 💬',th:'ชุมชน OK-OK 💬'}[lang]);
+ await expect(link).toHaveAttribute('href','https://t.me/+PzbwNFr0aNE1ZDI6');
+ await expect(link).toHaveAttribute('target','_blank');
+ await expect(link).toHaveAttribute('rel',/noopener/);
+ await link.scrollIntoViewIfNeeded();expect(vendorRequests).toBe(0);
+ await page.screenshot({path:`quality-reports/community-${lang}.png`});
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
+});
