@@ -10,6 +10,8 @@ html=html.replace(anchor,`${anchor}
 <section class="wrap author-contact" aria-labelledby="authorContactTitle">
  <h2 id="authorContactTitle" data-i="notesTitle">От автора</h2>
  <div id="authorContactNotes"></div>
+ <a class="btn" id="communityChatLink" href="https://t.me/+PzbwNFr0aNE1ZDI6" target="_blank" rel="noopener noreferrer">Свои на OK-OK 💬</a>
+ <p id="communityChatHint">Общий чат в Telegram: вопросы, знакомства и советы.</p>
  <button class="btn" id="authorChatButton" type="button" aria-haspopup="dialog">Написать автору</button>
 ${dock}
 </section>

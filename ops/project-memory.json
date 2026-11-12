@@ -257,6 +257,20 @@
         "workers/threads-auth/worker.mjs",
         "docs/THREADS_REFRESH_20261111.md"
       ]
+    },
+    {
+      "id": "telegram-community",
+      "status": "needs_verification",
+      "tags": [
+        "release",
+        "layout"
+      ],
+      "next": "Owner12 Nov selected Telegram group instead of embedded Supabase chat. Exact approved invite https://t.me/+PzbwNFr0aNE1ZDI6. Local build/native passed; Chromium blocked by socket Operation not permitted. Run full PR browser suite, review screenshots and3 Lighthouse before main, then verify exact live release.",
+      "sources": [
+        "docs/COMMUNITY_CHAT_TASK.md",
+        "scripts/apply-author-chat.mjs",
+        "tests/author-chat.spec.cjs"
+      ]
     }
   ]
 }
