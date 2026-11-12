@@ -1,0 +1,38 @@
+name: OK-OK GO prototype checks
+on:
+  pull_request:
+    paths:
+      - 'prototypes/okok-go/**'
+      - '.github/workflows/okok-go-check.yml'
+  workflow_dispatch:
+jobs:
+  go-prototype:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Unit tests
+        run: node --test prototypes/okok-go/resolve-worker.test.mjs
+      - name: Prepare isolated preview assets
+        run: node prototypes/okok-go/build-preview.mjs
+      - name: Verify generated HTML
+        run: test -s prototypes/okok-go/preview-dist/index.html
+      - run: npm ci
+      - run: npx playwright install chromium --only-shell
+      - run: node prototypes/okok-go/browser-check.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: okok-go-mobile
+          path: quality-reports/go-*.png
+      - name: Deploy isolated preview for approved development branch
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'feature/okok-go-mvp-20261111'
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: '4.151.3'
+          workingDirectory: prototypes/okok-go
+          command: deploy --config wrangler.jsonc

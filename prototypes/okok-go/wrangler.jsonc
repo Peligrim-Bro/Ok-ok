@@ -1,0 +1,22 @@
+{
+  "name": "okok-go-preview",
+  "main": "./preview-worker.mjs",
+  "compatibility_date": "2026-11-11",
+  "assets": {
+    "directory": "./preview-dist",
+    "binding": "ASSETS",
+    "run_worker_first": [
+      "/api/resolve"
+    ]
+  },
+  "ratelimits": [
+    {
+      "name": "RESOLVE_LIMITER",
+      "namespace_id": "112",
+      "simple": {
+        "limit": 20,
+        "period": 60
+      }
+    }
+  ]
+}
