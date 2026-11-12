@@ -866,6 +866,420 @@ export const POSTS = [{
   "topics":["Оки","Комиксы"],"brandCTA":"share",
   "text":"Приключения Оки #24 · Банановый компас\n\nБанан уверенно привёл Оки к перекусу, а потом указал курс на горизонт. Компас, пикник и маршрут существуют только в этой истории.\n\nВымышленная история с маскотом Оки, изображение создано с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_banana_compass_024"
 }
+,
+{
+  "id": "okok-bike-return-20261113",
+  "approved": true,
+  "publishAt": "2026-11-13T09:00:00+07:00",
+  "expiresAt": "2026-11-13T12:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-bike-return-20261113.jpg",
+  "topics": [
+    "Советы",
+    "Паттайя"
+  ],
+  "brandCTA": "share",
+  "text": "Байк вернули. А акт остался?\n\nПосле возврата прокатного байка сохрани фото его состояния и подтверждение приёма. Если спор возникнет позже, переписку и снимки проще найти в одной папке.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=bike_return_20261113"
+},
+{
+  "id": "okok-table-outside-20261113",
+  "approved": true,
+  "publishAt": "2026-11-13T14:00:00+07:00",
+  "expiresAt": "2026-11-13T17:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-table-outside-20261113.jpg",
+  "topics": [
+    "Фразы",
+    "Английский",
+    "Советы"
+  ],
+  "brandCTA": "share",
+  "text": "Столик на улице — одним вопросом\n\nCould we sit outside, please?\nМожно нам сесть на улице, пожалуйста?\n\nСпроси до заказа. Так не придётся пересаживаться с тарелками и напитками.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=table_outside_20261113",
+  "copyButtons": [
+    {
+      "label": "Скопировать фразу",
+      "text": "Could we sit outside, please?"
+    }
+  ]
+},
+{
+  "id": "okok-book-evening-20261113",
+  "approved": true,
+  "publishAt": "2026-11-13T19:30:00+07:00",
+  "expiresAt": "2026-11-13T22:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-book-evening-20261113.jpg",
+  "topics": [
+    "Советы",
+    "Паттайя"
+  ],
+  "brandCTA": "share",
+  "text": "Вечер без ещё одного скролла\n\nОткрой «Попутчик» на OK-OK и выбери короткий детектив. Начни с одной главы: если зацепит — телефон наконец занят историей, а не бесконечной лентой.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=book_evening_20261113"
+},
+{
+  "id": "okok-oki-comic-025-20261113",
+  "approved": true,
+  "publishAt": "2026-11-13T20:30:00+07:00",
+  "expiresAt": "2026-11-13T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-025-20261113.jpg",
+  "topics": [
+    "Оки",
+    "Комиксы"
+  ],
+  "brandCTA": "share",
+  "text": "Приключения Оки #25 · Зонт для краба\n\nОки придумал сухой уголок для краба. Краб решил, что это новый транспорт.\n\nВымышленная история с маскотом Оки; изображение создано с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_025"
+},
+{
+  "id": "okok-rain-bag-20261114",
+  "approved": true,
+  "publishAt": "2026-11-14T09:00:00+07:00",
+  "expiresAt": "2026-11-14T12:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-rain-bag-20261114.jpg",
+  "topics": [
+    "Советы",
+    "Паттайя"
+  ],
+  "brandCTA": "share",
+  "text": "Дождь не читает ваши планы\n\nПеред прогулкой убери документы и зарядку во внутренний непромокаемый пакет. Мокрая сумка снаружи переживается легче, чем мокрый паспорт внутри.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=rain_bag_20261114"
+},
+{
+  "id": "okok-no-sugar-20261114",
+  "approved": true,
+  "publishAt": "2026-11-14T14:00:00+07:00",
+  "expiresAt": "2026-11-14T17:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-no-sugar-20261114.jpg",
+  "topics": [
+    "Фразы",
+    "Английский",
+    "Советы"
+  ],
+  "brandCTA": "share",
+  "text": "Сладость лучше обсудить до первого глотка\n\nNo added sugar, please.\nБез добавленного сахара, пожалуйста.\n\nЭто просьба не добавлять сахар, а не обещание, что в напитке его совсем нет. Если состав важен, уточни отдельно.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=no_sugar_20261114",
+  "copyButtons": [
+    {
+      "label": "Скопировать фразу",
+      "text": "No added sugar, please."
+    }
+  ]
+},
+{
+  "id": "okok-bill-detail-20261114",
+  "approved": true,
+  "publishAt": "2026-11-14T19:30:00+07:00",
+  "expiresAt": "2026-11-14T22:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-bill-detail-20261114.jpg",
+  "topics": [
+    "Советы",
+    "Паттайя"
+  ],
+  "brandCTA": "share",
+  "text": "Счёт сошёлся. Или просто выглядит убедительно?\n\nСверь позиции, количество и дополнительные начисления с меню. Если что-то непонятно, попроси объяснить строку до оплаты. Разделить расходы можно в OK-OK SPLIT.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=bill_detail_20261114"
+},
+{
+  "id": "okok-oki-comic-026-20261114",
+  "approved": true,
+  "publishAt": "2026-11-14T20:30:00+07:00",
+  "expiresAt": "2026-11-14T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-026-20261114.jpg",
+  "topics": [
+    "Оки",
+    "Комиксы"
+  ],
+  "brandCTA": "share",
+  "text": "Приключения Оки #26 · Кокосовый будильник\n\nКокос должен был разбудить одного Оки. План оказался слишком громким.\n\nВымышленная история с маскотом Оки; изображение создано с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_026"
+},
+{
+  "id": "okok-crossing-20261115",
+  "approved": true,
+  "publishAt": "2026-11-15T09:00:00+07:00",
+  "expiresAt": "2026-11-15T12:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-crossing-20261115.jpg",
+  "topics": [
+    "Советы",
+    "Паттайя"
+  ],
+  "brandCTA": "share",
+  "text": "Короткий путь бывает длиннее\n\nНе выходи на дорогу из-за припаркованного фургона. Сначала найди место с обзором в обе стороны. Даже на переходе дождись, пока транспорт действительно остановится.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=crossing_20261115"
+},
+{
+  "id": "okok-takeaway-20261115",
+  "approved": true,
+  "publishAt": "2026-11-15T14:00:00+07:00",
+  "expiresAt": "2026-11-15T17:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-takeaway-20261115.jpg",
+  "topics": [
+    "Фразы",
+    "Английский",
+    "Советы"
+  ],
+  "brandCTA": "share",
+  "text": "Ужин оказался сильнее аппетита\n\nCould I have this to take away, please?\nМожно упаковать это с собой, пожалуйста?\n\nУкажи на блюдо. Уточни, подходит ли упаковка для дороги; скоропортящуюся еду не оставляй надолго в жаре.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=takeaway_20261115",
+  "copyButtons": [
+    {
+      "label": "Скопировать фразу",
+      "text": "Could I have this to take away, please?"
+    }
+  ]
+},
+{
+  "id": "okok-photo-route-20261115",
+  "approved": true,
+  "publishAt": "2026-11-15T19:30:00+07:00",
+  "expiresAt": "2026-11-15T22:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-photo-route-20261115.jpg",
+  "topics": [
+    "Советы",
+    "Паттайя"
+  ],
+  "brandCTA": "share",
+  "text": "Маршрут по трём кадрам\n\nВо время прогулки сними общий вид, одну деталь и ориентир для обратного пути. Получится маленькая история места, а не двадцать одинаковых закатов. Не снимай людей крупно без согласия.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=photo_route_20261115"
+},
+{
+  "id": "okok-oki-comic-027-20261115",
+  "approved": true,
+  "publishAt": "2026-11-15T20:30:00+07:00",
+  "expiresAt": "2026-11-15T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-027-20261115.jpg",
+  "topics": [
+    "Оки",
+    "Комиксы"
+  ],
+  "brandCTA": "share",
+  "text": "Приключения Оки #27 · Воздушный змей\n\nЗмей взлетел. Ветка решила оставить его себе.\n\nВымышленная история с маскотом Оки; изображение создано с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_027"
+},
+{
+  "id": "okok-booking-name-20261116",
+  "approved": true,
+  "publishAt": "2026-11-16T09:00:00+07:00",
+  "expiresAt": "2026-11-16T12:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-booking-name-20261116.jpg",
+  "topics": [
+    "Советы",
+    "Паттайя"
+  ],
+  "brandCTA": "share",
+  "text": "Бронь есть. На кого?\n\nСохрани подтверждение бронирования и имя, на которое оно оформлено. Проверь адрес: у похожих названий бывают разные филиалы. Скрин с номером брони держи при себе, не публикуй его в открытом чате.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=booking_name_20261116"
+},
+{
+  "id": "okok-receipt-please-20261116",
+  "approved": true,
+  "publishAt": "2026-11-16T14:00:00+07:00",
+  "expiresAt": "2026-11-16T17:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-receipt-please-20261116.jpg",
+  "topics": [
+    "Фразы",
+    "Английский",
+    "Советы"
+  ],
+  "brandCTA": "share",
+  "text": "Маленькая бумажка, большое спокойствие\n\nCould I have a receipt, please?\nМожно чек, пожалуйста?\n\nДля важной покупки сохрани чек вместе с датой и перепиской. На фото не должны попасть чужие платёжные данные.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=receipt_please_20261116",
+  "copyButtons": [
+    {
+      "label": "Скопировать фразу",
+      "text": "Could I have a receipt, please?"
+    }
+  ]
+},
+{
+  "id": "okok-sunset-back-20261116",
+  "approved": true,
+  "publishAt": "2026-11-16T19:30:00+07:00",
+  "expiresAt": "2026-11-16T22:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-sunset-back-20261116.jpg",
+  "topics": [
+    "Советы",
+    "Паттайя"
+  ],
+  "brandCTA": "share",
+  "text": "Закат посмотрели. Обратно как?\n\nПеред выходом отметь место возвращения и подумай о дороге после темноты. Красивый берег и удобный вечерний маршрут — две разные задачи. Выбирай освещённый путь.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=sunset_back_20261116"
+},
+{
+  "id": "okok-oki-comic-028-20261116",
+  "approved": true,
+  "publishAt": "2026-11-16T20:30:00+07:00",
+  "expiresAt": "2026-11-16T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-028-20261116.jpg",
+  "topics": [
+    "Оки",
+    "Комиксы"
+  ],
+  "brandCTA": "share",
+  "text": "Приключения Оки #28 · Лист вместо карты\n\nЛист, ветер и ракушка: у навигации Оки новый интерфейс.\n\nВымышленная история с маскотом Оки; изображение создано с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_028"
+},
+{
+  "id": "okok-helmet-fit-20261117",
+  "approved": true,
+  "publishAt": "2026-11-17T09:00:00+07:00",
+  "expiresAt": "2026-11-17T12:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-helmet-fit-20261117.jpg",
+  "topics": [
+    "Советы",
+    "Паттайя"
+  ],
+  "brandCTA": "share",
+  "text": "Шлем должен держаться, а не просто присутствовать\n\nПеред поездкой проверь застёжку и посадку шлема по инструкции производителя. Если прокатный шлем болтается или повреждён, попроси другой. Фотография на память не заменяет нормальную защиту.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=helmet_fit_20261117"
+},
+{
+  "id": "okok-pay-card-20261117",
+  "approved": true,
+  "publishAt": "2026-11-17T14:00:00+07:00",
+  "expiresAt": "2026-11-17T17:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-pay-card-20261117.jpg",
+  "topics": [
+    "Фразы",
+    "Английский",
+    "Советы"
+  ],
+  "brandCTA": "share",
+  "text": "Карту принимают? Лучше узнать заранее\n\nDo you accept cards?\nВы принимаете карты?\n\nЗадай вопрос до заказа. Если оплата доступна только наличными, сначала уточни итоговую сумму и условия.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=pay_card_20261117",
+  "copyButtons": [
+    {
+      "label": "Скопировать фразу",
+      "text": "Do you accept cards?"
+    }
+  ]
+},
+{
+  "id": "okok-quiet-stop-20261117",
+  "approved": true,
+  "publishAt": "2026-11-17T19:30:00+07:00",
+  "expiresAt": "2026-11-17T22:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-quiet-stop-20261117.jpg",
+  "topics": [
+    "Советы",
+    "Паттайя"
+  ],
+  "brandCTA": "share",
+  "text": "Прогулке не нужен рекорд по километрам\n\nВыбери одну цель и одно место для паузы. Если устал — сократи маршрут без чувства, что «день пропал». Сохранённое место никуда не денется, а силы ещё пригодятся.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=quiet_stop_20261117"
+},
+{
+  "id": "okok-oki-comic-029-20261117",
+  "approved": true,
+  "publishAt": "2026-11-17T20:30:00+07:00",
+  "expiresAt": "2026-11-17T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-029-20261117.jpg",
+  "topics": [
+    "Оки",
+    "Комиксы"
+  ],
+  "brandCTA": "share",
+  "text": "Приключения Оки #29 · Мангровый концерт\n\nОки искал тишину, но попал в первый ряд тропического концерта.\n\nВымышленная история с маскотом Оки; изображение создано с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_029"
+},
+{
+  "id": "okok-rental-deposit-20261118",
+  "approved": true,
+  "publishAt": "2026-11-18T09:00:00+07:00",
+  "expiresAt": "2026-11-18T12:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-rental-deposit-20261118.jpg",
+  "topics": [
+    "Советы",
+    "Паттайя"
+  ],
+  "brandCTA": "share",
+  "text": "Залог обсуждают до передачи денег\n\nДо аренды попроси письменно указать размер залога, условия удержания и порядок возврата. Сфотографируй состояние вещи вместе с представителем проката. Не отправляй документы случайному аккаунту из переписки.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=rental_deposit_20261118"
+},
+{
+  "id": "okok-slower-again-20261118",
+  "approved": true,
+  "publishAt": "2026-11-18T14:00:00+07:00",
+  "expiresAt": "2026-11-18T17:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-slower-again-20261118.jpg",
+  "topics": [
+    "Фразы",
+    "Английский",
+    "Советы"
+  ],
+  "brandCTA": "share",
+  "text": "Когда «да-да» уже не помогает\n\nCould you say that again, please?\nПовторите, пожалуйста.\n\nЕсли ответ важен — лучше переспросить, чем угадывать. Можно попросить написать ключевое слово или сумму.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=slower_again_20261118",
+  "copyButtons": [
+    {
+      "label": "Скопировать фразу",
+      "text": "Could you say that again, please?"
+    }
+  ]
+},
+{
+  "id": "okok-shared-photo-20261118",
+  "approved": true,
+  "publishAt": "2026-11-18T19:30:00+07:00",
+  "expiresAt": "2026-11-18T22:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-shared-photo-20261118.jpg",
+  "topics": [
+    "Советы",
+    "Паттайя"
+  ],
+  "brandCTA": "share",
+  "text": "Фото в общий чат: сначала одна проверка\n\nПеред отправкой снимка увеличь его. Не видны ли номер комнаты, билет с кодом, банковская карта или чужой документ? Иногда обрезать край полезнее, чем добавить фильтр.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=shared_photo_20261118"
+},
+{
+  "id": "okok-oki-comic-030-20261118",
+  "approved": true,
+  "publishAt": "2026-11-18T20:30:00+07:00",
+  "expiresAt": "2026-11-18T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-030-20261118.jpg",
+  "topics": [
+    "Оки",
+    "Комиксы"
+  ],
+  "brandCTA": "share",
+  "text": "Приключения Оки #30 · Башня для ракушки\n\nБашня у самой воды прекрасна. До первой волны.\n\nВымышленная история с маскотом Оки; изображение создано с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_030"
+},
+{
+  "id": "okok-stairs-entry-20261119",
+  "approved": true,
+  "publishAt": "2026-11-19T09:00:00+07:00",
+  "expiresAt": "2026-11-19T12:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-stairs-entry-20261119.jpg",
+  "topics": [
+    "Советы",
+    "Паттайя"
+  ],
+  "brandCTA": "share",
+  "text": "У места бывает второй вход\n\nЕсли основной вход со ступеньками неудобен, заранее уточни наличие другого прохода. Фото фасада помогает объяснить, о каком входе речь. Не выдавай предполагаемый пандус за проверенный доступ.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=stairs_entry_20261119"
+},
+{
+  "id": "okok-water-bottle-20261119",
+  "approved": true,
+  "publishAt": "2026-11-19T14:00:00+07:00",
+  "expiresAt": "2026-11-19T17:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-water-bottle-20261119.jpg",
+  "topics": [
+    "Фразы",
+    "Английский",
+    "Советы"
+  ],
+  "brandCTA": "share",
+  "text": "Воду с собой — без пантомимы\n\nCould I have a bottle of water, please?\nМожно бутылку воды, пожалуйста?\n\nПокажи нужный объём и уточни цену. Простая фраза часто экономит больше времени, чем длинное объяснение жестами.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=water_bottle_20261119",
+  "copyButtons": [
+    {
+      "label": "Скопировать фразу",
+      "text": "Could I have a bottle of water, please?"
+    }
+  ]
+},
+{
+  "id": "okok-one-find-20261119",
+  "approved": true,
+  "publishAt": "2026-11-19T19:30:00+07:00",
+  "expiresAt": "2026-11-19T22:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-one-find-20261119.jpg",
+  "topics": [
+    "Советы",
+    "Паттайя"
+  ],
+  "brandCTA": "share",
+  "text": "Одной хорошей находки достаточно\n\nНашёл удобный вход, понятное меню или спокойную точку для паузы? Запиши, где это и когда был. Отправить находку для отдельной проверки можно через «Написать автору» на OK-OK.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=one_find_20261119"
+},
+{
+  "id": "okok-oki-comic-031-20261119",
+  "approved": true,
+  "publishAt": "2026-11-19T20:30:00+07:00",
+  "expiresAt": "2026-11-19T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-031-20261119.jpg",
+  "topics": [
+    "Оки",
+    "Комиксы"
+  ],
+  "brandCTA": "share",
+  "text": "Приключения Оки #31 · Ночной светлячок\n\nОдин потерянный карандаш, маленький помощник и новый рисунок.\n\nВымышленная история с маскотом Оки; изображение создано с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_031"
+}
 ];
 
 // Required editorial metadata. Never infer a meal or service from one keyword.
