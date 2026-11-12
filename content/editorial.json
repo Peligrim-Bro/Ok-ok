@@ -1,90 +1,90 @@
 {
-  "verifiedAt": "2026-11-12",
+  "verifiedAt": "2026-11-13",
   "news": [
     {
       "category": "world",
-      "when": "11.11 · 🌍",
-      "href": "https://www.reuters.com/legal/litigation/meta-tiktok-join-google-push-back-indonesias-planned-ai-copyright-law-revisions-2026-11-11/",
-      "publishedAt": "2026-11-11",
-      "ru": "Meta и TikTok вслед за Google выступили против предложенных изменений закона об авторском праве Индонезии. Проект предусматривает выплаты издателям за показ новостного контента и отдельные правила для использования ИИ; обсуждение закона продолжается.",
-      "en": "Meta and TikTok have joined Google in opposing proposed changes to Indonesia's copyright law. The bill would introduce payments to publishers for displaying news content and rules for AI use; the proposal remains under debate.",
-      "th": "Meta และ TikTok ร่วมกับ Google คัดค้านข้อเสนอแก้กฎหมายลิขสิทธิ์ของอินโดนีเซีย ร่างกฎหมายกำหนดให้แพลตฟอร์มจ่ายค่าตอบแทนแก่สำนักข่าวและวางกติกาการใช้ AI โดยยังอยู่ระหว่างการพิจารณา",
+      "when": "12.11 · 🌍",
+      "href": "https://apnews.com/article/cop31-climate-targets-fail-islands-warming-f3e3326d07ab4fbff40c37b605ecd66c",
+      "publishedAt": "2026-11-12",
+      "ru": "Лидеры стран, особенно уязвимых к изменению климата, на саммите ООН в Анталье призвали ускорить меры и увеличить финансирование адаптации. Новый анализ Climate Action Tracker показал, что прогресс в снижении прогнозируемого потепления остановился за последние пять лет.",
+      "en": "Leaders of countries highly vulnerable to climate change urged faster action and more adaptation finance at the UN summit in Antalya. A new Climate Action Tracker analysis found that progress in lowering projected warming has stalled over the past five years.",
+      "th": "ผู้นำประเทศที่เปราะบางต่อการเปลี่ยนแปลงสภาพภูมิอากาศเรียกร้องในการประชุมสหประชาชาติที่อันตัลยาให้เร่งมาตรการและเพิ่มเงินทุนเพื่อการปรับตัว ขณะที่ผลวิเคราะห์ใหม่ของ Climate Action Tracker ระบุว่าความคืบหน้าในการลดภาวะโลกร้อนที่คาดการณ์ไว้หยุดชะงักตลอดห้าปีที่ผ่านมา",
       "sources": [
-        "https://www.reuters.com/legal/litigation/meta-tiktok-join-google-push-back-indonesias-planned-ai-copyright-law-revisions-2026-11-11/"
+        "https://apnews.com/article/cop31-climate-targets-fail-islands-warming-f3e3326d07ab4fbff40c37b605ecd66c"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-12T06:27:41+07:00",
-        "sourceUrl": "https://www.reuters.com/legal/litigation/meta-tiktok-join-google-push-back-indonesias-planned-ai-copyright-law-revisions-2026-11-11/",
-        "summary": "Reuters reported the topic from a parliamentary hearing. No comparable public comment/share counters or global popularity rank were available; no absolute ranking is claimed."
+        "observedAt": "2026-11-13T06:58:00+07:00",
+        "sourceUrl": "https://apnews.com/article/cop31-climate-targets-fail-islands-warming-f3e3326d07ab4fbff40c37b605ecd66c",
+        "summary": "AP prominently covered the 12 November summit development, and an independent Guardian report covered the same Climate Action Tracker findings. Comparable public comment/share totals were unavailable, so no global popularity rank is claimed."
       },
       "nonWar": true
     },
     {
       "category": "thailand",
-      "when": "11.11 · 🇹🇭",
-      "href": "https://www.tatnews.org/2026/11/her-majesty-the-queen-of-thailand-opens-global-wellness-summit-2026-in-phuket/",
-      "publishedAt": "2026-11-11",
-      "ru": "На Пхукете открылся 20-й Global Wellness Summit. По данным TAT, четырёхдневная программа собрала около 600 специалистов и инвесторов для обсуждения долголетия, профилактической медицины, гостиничного сектора и инноваций.",
-      "en": "The 20th Global Wellness Summit has opened in Phuket. TAT says the four-day programme brings together around 600 specialists and investors to discuss longevity, preventive healthcare, hospitality and innovation.",
-      "th": "การประชุม Global Wellness Summit ครั้งที่ 20 เปิดขึ้นที่ภูเก็ต โดย ททท. ระบุว่างานสี่วันมีผู้เชี่ยวชาญและนักลงทุนราว 600 คน ร่วมหารือเรื่องอายุยืน การดูแลสุขภาพเชิงป้องกัน การบริการ และนวัตกรรม",
+      "when": "13.11 · 🇹🇭",
+      "href": "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-no-10-308-2026",
+      "publishedAt": "2026-11-13",
+      "ru": "Метеорологический департамент Таиланда выпустил финальное предупреждение о сильных и очень сильных дождях на юге 13 ноября. Особое внимание — Прачуапкхирикхану, Чумпхону и Сураттхани; возможны внезапные паводки, переливы и оползни.",
+      "en": "Thailand’s Meteorological Department issued its final advisory for heavy to very heavy rain in the South on 13 November. Prachuap Khiri Khan, Chumphon and Surat Thani face particular risk, including flash floods, overflows and landslides.",
+      "th": "กรมอุตุนิยมวิทยาออกประกาศฉบับสุดท้ายเรื่องฝนตกหนักถึงหนักมากในภาคใต้วันที่ 13 พฤศจิกายน โดยเฉพาะประจวบคีรีขันธ์ ชุมพร และสุราษฎร์ธานี ซึ่งเสี่ยงน้ำท่วมฉับพลัน น้ำล้นตลิ่ง และดินถล่ม",
       "sources": [
-        "https://www.tatnews.org/2026/11/her-majesty-the-queen-of-thailand-opens-global-wellness-summit-2026-in-phuket/"
+        "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-no-10-308-2026"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-12T06:27:41+07:00",
-        "sourceUrl": "https://www.tatnews.org/2026/11/her-majesty-the-queen-of-thailand-opens-global-wellness-summit-2026-in-phuket/",
-        "summary": "The official TAT page displayed 28 views. This is a source-page count, not a nationwide popularity ranking."
+        "observedAt": "2026-11-13T06:58:00+07:00",
+        "sourceUrl": "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-no-10-308-2026",
+        "summary": "This is the Thai Meteorological Department’s current official advisory, published and revised on 13 November. The page exposes no comparable public engagement counter; selection is based on immediate nationwide safety relevance, not a popularity rank."
       }
     },
     {
       "category": "thailand",
       "when": "12.11 · 🇹🇭",
-      "href": "https://www.pattayamail.com/latestnews/news/mass-starfish-stranding-leaves-karon-beach-in-phuket-covered-in-marine-life-571679",
+      "href": "https://thepattayanews.com/2026/11/12/chinese-premier-li-qiang-to-make-official-visit-to-thailand-from-november-13th-to-15th/",
       "publishedAt": "2026-11-12",
-      "ru": "На пляже Карон на Пхукете утром 11 ноября обнаружили множество выброшенных на берег морских звёзд. С приливом их смыло обратно в море; официального объяснения причин массового выброса пока нет.",
-      "en": "Large numbers of starfish were found washed ashore at Karon Beach in Phuket on the morning of 11 November. The rising tide carried them back to sea; authorities have not yet provided an official explanation for the event.",
-      "th": "พบดาวทะเลจำนวนมากถูกคลื่นซัดขึ้นหาดกะรน จังหวัดภูเก็ต ในเช้าวันที่ 11 พฤศจิกายน ก่อนที่น้ำขึ้นจะพากลับลงทะเล ขณะนี้ยังไม่มีคำอธิบายอย่างเป็นทางการถึงสาเหตุ",
+      "ru": "Премьер Госсовета КНР Ли Цян посетит Таиланд с официальным визитом 13–15 ноября по приглашению тайского правительства. Сообщение о визите опубликовано накануне его начала.",
+      "en": "Chinese Premier Li Qiang will make an official visit to Thailand from 13 to 15 November as a guest of the Thai government. The visit was announced on the eve of his arrival.",
+      "th": "นายกรัฐมนตรีหลี่ เฉียงของจีนมีกำหนดเยือนไทยอย่างเป็นทางการระหว่างวันที่ 13–15 พฤศจิกายน ในฐานะแขกของรัฐบาลไทย โดยมีการประกาศกำหนดการก่อนเริ่มการเยือนหนึ่งวัน",
       "sources": [
-        "https://www.pattayamail.com/latestnews/news/mass-starfish-stranding-leaves-karon-beach-in-phuket-covered-in-marine-life-571679"
+        "https://thepattayanews.com/2026/11/12/chinese-premier-li-qiang-to-make-official-visit-to-thailand-from-november-13th-to-15th/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-12T06:27:41+07:00",
-        "sourceUrl": "https://www.pattayamail.com/latestnews/news/mass-starfish-stranding-leaves-karon-beach-in-phuket-covered-in-marine-life-571679",
-        "summary": "The same-day listing displayed 0 comments and no stable public view counter. Social-media interest was reported by the source, but no comparable engagement total or ranking is claimed."
+        "observedAt": "2026-11-13T06:58:00+07:00",
+        "sourceUrl": "https://thepattayanews.com/2026/11/12/chinese-premier-li-qiang-to-make-official-visit-to-thailand-from-november-13th-to-15th/",
+        "summary": "The same-day national-news listing highlighted the official visit. No stable comparable public comment/share counter was available, so the item is selected for current national relevance without claiming a popularity rank."
       }
     },
     {
       "category": "pattaya",
       "when": "12.11 · 📍",
-      "href": "https://www.pattayamail.com/news/thappraya-soi-10-south-pattaya-road-excavation-leads-to-fine-and-machinery-seizure-571664",
+      "href": "https://www.pattayamail.com/latestnews/news/rotary-world-leaders-to-join-over-1200-delegates-at-2026-pattaya-institute-571683",
       "publishedAt": "2026-11-12",
-      "ru": "Муниципальные инспекторы Паттайи остановили земляные работы на дороге в Thappraya Soi 10, которые, по их данным, велись без разрешения. Ответственному предписали явиться для уплаты штрафа; технику изъяли в рамках проверки.",
-      "en": "Pattaya municipal officers stopped road excavation in Thappraya Soi 10 that they said was being carried out without permission. The responsible person was referred for a fine, and the machinery was seized as part of the enforcement action.",
-      "th": "เจ้าหน้าที่เทศกิจพัทยาระงับการขุดถนนในซอยทัพพระยา 10 ซึ่งระบุว่าดำเนินการโดยไม่ได้รับอนุญาต ผู้รับผิดชอบถูกส่งไปดำเนินการเรื่องค่าปรับ และมีการยึดเครื่องจักรตามขั้นตอน",
+      "ru": "На Pattaya Rotary Institute 20–22 ноября зарегистрировались более 1 200 участников из 24 стран. В программе в PEACH заявлены встречи по гуманитарным проектам, лидерству и международному сотрудничеству.",
+      "en": "More than 1,200 delegates from 24 countries have registered for the Pattaya Rotary Institute on 20–22 November. The PEACH programme includes sessions on humanitarian projects, leadership and international cooperation.",
+      "th": "มีผู้ลงทะเบียนมากกว่า 1,200 คนจาก 24 ประเทศเข้าร่วม Pattaya Rotary Institute ระหว่างวันที่ 20–22 พฤศจิกายนที่ PEACH โดยมีกิจกรรมด้านโครงการมนุษยธรรม ภาวะผู้นำ และความร่วมมือระหว่างประเทศ",
       "sources": [
-        "https://www.pattayamail.com/news/thappraya-soi-10-south-pattaya-road-excavation-leads-to-fine-and-machinery-seizure-571664"
+        "https://www.pattayamail.com/latestnews/news/rotary-world-leaders-to-join-over-1200-delegates-at-2026-pattaya-institute-571683"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-12T06:27:41+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/thappraya-soi-10-south-pattaya-road-excavation-leads-to-fine-and-machinery-seizure-571664",
-        "summary": "The same-day Pattaya Mail listing displayed 0 comments; a stable public view counter was not exposed. No citywide popularity rank is claimed."
+        "observedAt": "2026-11-13T06:58:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/latestnews/news/rotary-world-leaders-to-join-over-1200-delegates-at-2026-pattaya-institute-571683",
+        "summary": "The article displayed 1,612 views and 0 comments at observation time, higher than the other selected local item’s 1,585 views; these are page counters, not a citywide popularity ranking."
       }
     },
     {
       "category": "pattaya",
       "when": "12.11 · 📍",
-      "href": "https://www.pattayamail.com/news/crane-legs-on-jomtien-footpath-prompt-city-enforcement-action-571650",
+      "href": "https://www.pattayamail.com/news/pattaya-officials-keep-eagle-eyes-on-jomtien-beach-to-distinguish-public-space-misuse-571654",
       "publishedAt": "2026-11-12",
-      "ru": "В Джомтьене муниципальные инспекторы зафиксировали опоры крана на пешеходной дорожке вдоль Second Road. Материалы направили для назначения штрафа; власти напомнили о риске повреждения плитки и препятствиях для пешеходов.",
-      "en": "Municipal officers in Jomtien recorded crane supports placed on the footpath along Second Road. The case was referred for a fine, with officials citing potential pavement damage and obstruction to pedestrians.",
-      "th": "เจ้าหน้าที่เทศกิจจอมเทียนตรวจพบขาค้ำรถเครนวางบนทางเท้าริมถนนสายสอง และส่งเรื่องเพื่อดำเนินการปรับ โดยระบุถึงความเสี่ยงต่อพื้นทางเท้าและการกีดขวางคนเดินเท้า",
+      "ru": "Муниципальные инспекторы Паттайи расчистили участок пляжа Джомтьен, где личные вещи длительно занимали общественное пространство. Городские службы заявили, что продолжат следить за доступностью пляжа для жителей и гостей.",
+      "en": "Pattaya municipal officers cleared a section of Jomtien Beach where personal belongings had been occupying public space for an extended period. City officers said they would continue monitoring beach access for residents and visitors.",
+      "th": "เจ้าหน้าที่เทศกิจพัทยาเคลียร์พื้นที่ส่วนหนึ่งของหาดจอมเทียนที่มีสิ่งของส่วนตัววางกินพื้นที่สาธารณะเป็นเวลานาน และระบุว่าจะติดตามให้ชายหาดยังเข้าถึงได้สำหรับประชาชนและนักท่องเที่ยว",
       "sources": [
-        "https://www.pattayamail.com/news/crane-legs-on-jomtien-footpath-prompt-city-enforcement-action-571650"
+        "https://www.pattayamail.com/news/pattaya-officials-keep-eagle-eyes-on-jomtien-beach-to-distinguish-public-space-misuse-571654"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-12T06:27:41+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/crane-legs-on-jomtien-footpath-prompt-city-enforcement-action-571650",
-        "summary": "The same-day Pattaya Mail listing displayed 0 comments; a stable public view counter was not exposed. It was compared with the other selected local item, also at 0 comments, without claiming an absolute rank."
+        "observedAt": "2026-11-13T06:58:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/pattaya-officials-keep-eagle-eyes-on-jomtien-beach-to-distinguish-public-space-misuse-571654",
+        "summary": "The article displayed 1,585 views and 0 comments at observation time. This was compared with the other selected local item; no citywide popularity rank is claimed."
       }
     }
   ],
@@ -342,6 +342,29 @@
         "https://www.antifakenewscenter.com/%E0%B8%AD%E0%B8%B2%E0%B8%8A%E0%B8%8D%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%AD%E0%B8%AD%E0%B8%99%E0%B9%84%E0%B8%A5%E0%B8%99%E0%B9%8C/fake-page-5/"
       ],
       "verifiedAt": "2026-11-05"
+    },
+    {
+      "id": "romance-investment-app-pattaya-2026-11",
+      "title": {
+        "ru": "Знакомство с переходом в фальшивые инвестиции",
+        "en": "Online romance leading to a fake investment app",
+        "th": "สร้างความสัมพันธ์ก่อนชวนลงทุนผ่านแอปปลอม"
+      },
+      "text": {
+        "ru": "12 ноября СМИ сообщили о расследовании полиции в Нонгпры: предполагаемая схема начиналась со знакомства в соцсети, затем собеседник предлагал вложиться через поддельное инвестиционное приложение. Виновность устанавливает суд.",
+        "en": "On 12 November, media reported a police investigation in Nongprue into an alleged scheme that began with social-media contact and later directed targets to a fake investment app. Guilt is for the court to determine.",
+        "th": "วันที่ 12 พฤศจิกายน สื่อรายงานการสอบสวนของตำรวจในหนองปรือเกี่ยวกับขบวนการที่ถูกกล่าวหาว่าเริ่มจากการติดต่อผ่านโซเชียล ก่อนชวนเป้าหมายลงทุนผ่านแอปปลอม ศาลเป็นผู้ตัดสินความผิด"
+      },
+      "do": {
+        "ru": "Не устанавливайте инвестиционные приложения по ссылке нового знакомого и не переводите деньги ради обещанной прибыли; проверяйте лицензию и домен независимо.",
+        "en": "Do not install investment apps from a new contact’s link or transfer money for promised returns; independently verify the licence and domain.",
+        "th": "อย่าติดตั้งแอปลงทุนจากลิงก์ของคนรู้จักใหม่หรือโอนเงินตามคำสัญญาผลตอบแทน ควรตรวจสอบใบอนุญาตและโดเมนด้วยตนเอง"
+      },
+      "status": "reported-investigation",
+      "sources": [
+        "https://www.pattayamail.com/news/police-bust-love-investment-scam-base-in-pattaya-arrest-10-foreigners-571673"
+      ],
+      "verifiedAt": "2026-11-12"
     }
   ],
   "selection": "Reviewed 2026-11-12 Asia/Bangkok: exactly one non-war world story, two Thailand and two Pattaya stories published 11–12 November. Public engagement evidence was limited to 28 TAT page views and 0-comment same-day Pattaya Mail listings; no global, national or citywide popularity ranking is claimed. No new independently verified official scam scheme was added; existing safety warnings retain their original dates. No Telegram sending."
