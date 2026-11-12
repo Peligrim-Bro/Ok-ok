@@ -250,11 +250,12 @@
         "content",
         "threads"
       ],
-      "next": "6 Nov: queue adds 16 slots for12–19 Nov, preserving all14 old entries. 28 future posts cover6–19 Nov at12:30/19:00 Bangkok. Confirm merge deployment. Campaign image support blocked by text-only Worker (owner prohibits changes); public book pages inaccessible from this environment. No scheduled delivery receipts or metrics accessible; do not claim publication. See dated note.",
+      "next": "Owner12 Nov explicitly approved GitHub transfer and launch.15 future posts refreshed,3 reviewed illustrations;15 past entries unchanged. First image12 Nov19:00 Bangkok. Confirm CI, deploy and receipts; no extra public test.",
       "sources": [
         "docs/THREADS_BUFFER_20261106.md",
         "workers/threads-auth/queue.json",
-        "workers/threads-auth/worker.mjs"
+        "workers/threads-auth/worker.mjs",
+        "docs/THREADS_REFRESH_20261111.md"
       ]
     }
   ]
