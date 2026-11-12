@@ -24,7 +24,18 @@ export class ThreadsQueue {
   }
 
   async fetch(request) {
+    if (request.method === "GET") {
+      const receipts = await this.storage.list({ prefix: "post:" });
+      return Response.json(Array.from(receipts, ([key, value]) => ({
+        slot: key.slice(5), id: value.id ?? null, permalink: value.permalink ?? null,
+        pending: !value.id,
+      })));
+    }
     const { post } = await request.json();
+    if (post.imageUrl && (!post.imageReviewed || !post.altText ||
+        !post.imageUrl.startsWith("https://raw.githubusercontent.com/Peligrim-Bro/Ok-ok/"))) {
+      return Response.json({ error: "Unreviewed or invalid image" }, { status: 400 });
+    }
     const key = `post:${post.id}`;
     const previous = await this.storage.get(key);
     if (previous?.id) return Response.json(previous);
@@ -46,12 +57,29 @@ export class ThreadsQueue {
       return Response.json({ error: "Previous attempt awaits reconciliation" }, { status: 409 });
     }
 
-    const query = new URLSearchParams({ media_type: "TEXT", text: post.text, auto_publish_text: "true" });
+    const query = new URLSearchParams(post.imageUrl
+      ? { media_type: "IMAGE", text: post.text, image_url: post.imageUrl, alt_text: post.altText }
+      : { media_type: "TEXT", text: post.text, auto_publish_text: "true" });
     let published;
     try {
       published = await threads(this.env, `/me/threads?${query}`, "POST");
+      if (post.imageUrl) {
+        if (!published.id) throw new Error("Threads returned no image container ID");
+        await this.storage.put(key, { attemptedAt: new Date().toISOString(), containerId: published.id });
+        // Poll readiness without creating a second container or falling back to text.
+        let ready = false;
+        for (let attempt = 0; attempt < 5; attempt++) {
+          const status = await threads(this.env, `/${encodeURIComponent(published.id)}?fields=status,error_message`);
+          if (status.status === "FINISHED") { ready = true; break; }
+          if (["ERROR", "EXPIRED"].includes(status.status)) throw new Error("Threads image processing failed");
+          await new Promise((resolve) => setTimeout(resolve, 1500));
+        }
+        if (!ready) throw new Error("Threads image not ready; reconciliation required");
+        const publish = new URLSearchParams({ creation_id: published.id });
+        published = await threads(this.env, `/me/threads_publish?${publish}`, "POST");
+      }
     } catch (error) {
-      if (error.status >= 400 && error.status < 500) await this.storage.delete(key);
+      if (!post.imageUrl && error.status >= 400 && error.status < 500) await this.storage.delete(key);
       throw error;
     }
     if (!published.id) throw new Error("Threads returned no post ID");
@@ -101,6 +129,12 @@ export default {
         return new Response("Missing authorization code.", { status: 400, headers });
       }
       return new Response("Threads authorization received. Return to ChatGPT.", { headers });
+    }
+
+    if (request.method === "GET" && url.pathname === "/delivery-status") {
+      const ledger = env.THREADS_QUEUE.getByName("production");
+      const response = await ledger.fetch("https://queue.internal/receipts");
+      return Response.json({ receipts: await response.json() }, { headers });
     }
 
     if (request.method === "GET" && url.pathname === "/threads-check") {

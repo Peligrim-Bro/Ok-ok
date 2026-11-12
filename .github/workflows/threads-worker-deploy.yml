@@ -21,6 +21,7 @@ jobs:
         with:
           node-version: '22'
       - run: node --check workers/threads-auth/worker.mjs
+      - run: node --test workers/threads-auth/worker.test.mjs
       - uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
