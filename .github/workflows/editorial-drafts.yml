@@ -1,0 +1,53 @@
+name: Prepare editorial drafts
+on:
+  workflow_dispatch:
+    inputs:
+      run_ai:
+        description: 'Generate optional AI drafts (requires OPENAI_API_KEY secret)'
+        required: true
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  drafts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check generator syntax
+        run: |
+          node --check content-pipeline/generate.mjs
+          node --check content-pipeline/generate-ai.mjs
+      - name: Generate offline drafts
+        run: node content-pipeline/generate.mjs
+      - name: Verify output and publication gate
+        run: |
+          test -s content-pipeline/generated/latest.md
+          grep -q 'DRAFT ONLY' content-pipeline/generated/latest.md
+          node -e "if(require('./content-pipeline/drafts.json').publishing_enabled !== false) process.exit(1)"
+      - name: Generate AI drafts (explicit opt-in)
+        if: ${{ inputs.run_ai == true }}
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: gpt-4.1-mini
+        run: |
+          test -n "$OPENAI_API_KEY" || { echo 'OPENAI_API_KEY secret is missing'; exit 1; }
+          node content-pipeline/generate-ai.mjs
+          test -s content-pipeline/generated/ai-latest.md
+          grep -q 'DRAFT ONLY' content-pipeline/generated/ai-latest.md
+      - name: Save offline drafts
+        uses: actions/upload-artifact@v4
+        with:
+          name: editorial-drafts
+          path: content-pipeline/generated/latest.md
+          retention-days: 30
+      - name: Save AI drafts
+        if: ${{ inputs.run_ai == true }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: editorial-ai-drafts
+          path: content-pipeline/generated/ai-latest.md
+          retention-days: 30

@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "publishing_enabled": false,
+  "items": [
+    {
+      "id": "travel-001",
+      "channel": "ok-ok",
+      "status": "idea",
+      "topic": "How to verify an exchange rate before visiting a booth"
+    },
+    {
+      "id": "travel-002",
+      "channel": "ok-ok",
+      "status": "idea",
+      "topic": "Oki checks travel tips on ok-ok.click",
+      "requires_visual_reference": true
+    },
+    {
+      "id": "blog-001",
+      "channel": "personal",
+      "status": "idea",
+      "topic": "Website launch from $199: what to clarify before ordering"
+    }
+  ]
+}
