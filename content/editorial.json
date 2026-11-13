@@ -1,90 +1,90 @@
 {
-  "verifiedAt": "2026-11-13",
+  "verifiedAt": "2026-11-14",
   "news": [
     {
       "category": "world",
-      "when": "12.11 · 🌍",
-      "href": "https://apnews.com/article/cop31-climate-targets-fail-islands-warming-f3e3326d07ab4fbff40c37b605ecd66c",
-      "publishedAt": "2026-11-12",
-      "ru": "Лидеры стран, особенно уязвимых к изменению климата, на саммите ООН в Анталье призвали ускорить меры и увеличить финансирование адаптации. Новый анализ Climate Action Tracker показал, что прогресс в снижении прогнозируемого потепления остановился за последние пять лет.",
-      "en": "Leaders of countries highly vulnerable to climate change urged faster action and more adaptation finance at the UN summit in Antalya. A new Climate Action Tracker analysis found that progress in lowering projected warming has stalled over the past five years.",
-      "th": "ผู้นำประเทศที่เปราะบางต่อการเปลี่ยนแปลงสภาพภูมิอากาศเรียกร้องในการประชุมสหประชาชาติที่อันตัลยาให้เร่งมาตรการและเพิ่มเงินทุนเพื่อการปรับตัว ขณะที่ผลวิเคราะห์ใหม่ของ Climate Action Tracker ระบุว่าความคืบหน้าในการลดภาวะโลกร้อนที่คาดการณ์ไว้หยุดชะงักตลอดห้าปีที่ผ่านมา",
+      "when": "13.11 · 🌍",
+      "href": "https://apnews.com/article/microsoft-outage-outlook-email-365-status-down-d92547a821930290db2964388016979a",
+      "publishedAt": "2026-11-13",
+      "ru": "Глобальный сбой Microsoft 365 нарушил работу Outlook, Teams и Copilot у компаний, пользователей и ряда государственных служб. Microsoft связала проблему с техническим сбоем после изменения сети и сообщила о постепенном восстановлении сервисов.",
+      "en": "A global Microsoft 365 outage disrupted Outlook, Teams and Copilot for companies, users and some government services. Microsoft linked the problem to a technical issue following a network change and reported gradual service recovery.",
+      "th": "เหตุขัดข้องทั่วโลกของ Microsoft 365 กระทบ Outlook, Teams และ Copilot สำหรับบริษัท ผู้ใช้ และหน่วยงานรัฐบางแห่ง Microsoft ระบุว่าเกิดจากปัญหาทางเทคนิคหลังการปรับเครือข่าย และกำลังกู้คืนบริการอย่างต่อเนื่อง",
       "sources": [
-        "https://apnews.com/article/cop31-climate-targets-fail-islands-warming-f3e3326d07ab4fbff40c37b605ecd66c"
+        "https://apnews.com/article/microsoft-outage-outlook-email-365-status-down-d92547a821930290db2964388016979a"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-13T06:58:00+07:00",
-        "sourceUrl": "https://apnews.com/article/cop31-climate-targets-fail-islands-warming-f3e3326d07ab4fbff40c37b605ecd66c",
-        "summary": "AP prominently covered the 12 November summit development, and an independent Guardian report covered the same Climate Action Tracker findings. Comparable public comment/share totals were unavailable, so no global popularity rank is claimed."
+        "observedAt": "2026-11-14T06:33:00+07:00",
+        "sourceUrl": "https://apnews.com/article/microsoft-outage-outlook-email-365-status-down-d92547a821930290db2964388016979a",
+        "summary": "AP placed the outage among its leading business and technology stories and reported more than 130,000 user reports across 74 countries and territories during the disruption. Reuters also covered the outage in its global markets report. These are impact and coverage signals, not comparable article engagement totals or a global popularity rank."
       },
       "nonWar": true
     },
     {
       "category": "thailand",
       "when": "13.11 · 🇹🇭",
-      "href": "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-no-10-308-2026",
+      "href": "https://www.tatnews.org/2026/11/vijit-chao-phraya-2026-brings-a-month-long-spectacle-of-light-and-imagination-to-bangkoks-riverfront/",
       "publishedAt": "2026-11-13",
-      "ru": "Метеорологический департамент Таиланда выпустил финальное предупреждение о сильных и очень сильных дождях на юге 13 ноября. Особое внимание — Прачуапкхирикхану, Чумпхону и Сураттхани; возможны внезапные паводки, переливы и оползни.",
-      "en": "Thailand’s Meteorological Department issued its final advisory for heavy to very heavy rain in the South on 13 November. Prachuap Khiri Khan, Chumphon and Surat Thani face particular risk, including flash floods, overflows and landslides.",
-      "th": "กรมอุตุนิยมวิทยาออกประกาศฉบับสุดท้ายเรื่องฝนตกหนักถึงหนักมากในภาคใต้วันที่ 13 พฤศจิกายน โดยเฉพาะประจวบคีรีขันธ์ ชุมพร และสุราษฎร์ธานี ซึ่งเสี่ยงน้ำท่วมฉับพลัน น้ำล้นตลิ่ง และดินถล่ม",
+      "ru": "В Бангкоке стартовал фестиваль Vijit Chao Phraya 2026: до 13 декабря световые и звуковые инсталляции будут работать в 19 точках вдоль реки от моста Рамы VIII до моста Рамы III. Программа включает проекции, лазеры, дроны и плавучую световую композицию.",
+      "en": "Bangkok has launched Vijit Chao Phraya 2026, running through 13 December at 19 riverfront locations from Rama VIII Bridge to Rama III Bridge. The programme includes projection mapping, lasers, drones and a floating light installation.",
+      "th": "กรุงเทพฯ เปิดงาน Vijit Chao Phraya 2026 ซึ่งจัดถึงวันที่ 13 ธันวาคมใน 19 จุดริมแม่น้ำ ตั้งแต่สะพานพระราม 8 ถึงสะพานพระราม 3 พร้อมโปรเจกชันแมปปิง เลเซอร์ โดรน และงานแสงลอยน้ำ",
       "sources": [
-        "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-no-10-308-2026"
+        "https://www.tatnews.org/2026/11/vijit-chao-phraya-2026-brings-a-month-long-spectacle-of-light-and-imagination-to-bangkoks-riverfront/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-13T06:58:00+07:00",
-        "sourceUrl": "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-no-10-308-2026",
-        "summary": "This is the Thai Meteorological Department’s current official advisory, published and revised on 13 November. The page exposes no comparable public engagement counter; selection is based on immediate nationwide safety relevance, not a popularity rank."
+        "observedAt": "2026-11-14T06:33:00+07:00",
+        "sourceUrl": "https://www.tatnews.org/2026/11/vijit-chao-phraya-2026-brings-a-month-long-spectacle-of-light-and-imagination-to-bangkoks-riverfront/",
+        "summary": "The official TAT page displayed 0 views shortly after publication. This early source-page counter is not a national popularity ranking; selection is based on current official tourism relevance."
       }
     },
     {
       "category": "thailand",
-      "when": "12.11 · 🇹🇭",
-      "href": "https://thepattayanews.com/2026/11/12/chinese-premier-li-qiang-to-make-official-visit-to-thailand-from-november-13th-to-15th/",
-      "publishedAt": "2026-11-12",
-      "ru": "Премьер Госсовета КНР Ли Цян посетит Таиланд с официальным визитом 13–15 ноября по приглашению тайского правительства. Сообщение о визите опубликовано накануне его начала.",
-      "en": "Chinese Premier Li Qiang will make an official visit to Thailand from 13 to 15 November as a guest of the Thai government. The visit was announced on the eve of his arrival.",
-      "th": "นายกรัฐมนตรีหลี่ เฉียงของจีนมีกำหนดเยือนไทยอย่างเป็นทางการระหว่างวันที่ 13–15 พฤศจิกายน ในฐานะแขกของรัฐบาลไทย โดยมีการประกาศกำหนดการก่อนเริ่มการเยือนหนึ่งวัน",
+      "when": "13.11 · 🇹🇭",
+      "href": "https://www.pattayamail.com/thailandnews/thailand-prepares-345-specialist-firefighters-for-potentially-severe-2027-wildfire-season-571733",
+      "publishedAt": "2026-11-13",
+      "ru": "Департамент национальных парков Таиланда готовит 345 специалистов Fire Tiger в 15 оперативных центрах к пожароопасному сезону 2027 года. Для поиска очагов в удалённых лесах планируют использовать спутниковые данные и дроны с тепловыми датчиками.",
+      "en": "Thailand’s Department of National Parks is preparing 345 Fire Tiger specialists across 15 operations centres for the 2027 wildfire season. Satellite data and heat-detecting drones will help locate fires in remote forests.",
+      "th": "กรมอุทยานแห่งชาติเตรียมเจ้าหน้าที่ชุดเสือไฟ 345 นายใน 15 ศูนย์ปฏิบัติการสำหรับฤดูไฟป่าปี 2570 โดยจะใช้ข้อมูลดาวเทียมและโดรนตรวจจับความร้อนเพื่อค้นหาจุดไฟในพื้นที่ป่าห่างไกล",
       "sources": [
-        "https://thepattayanews.com/2026/11/12/chinese-premier-li-qiang-to-make-official-visit-to-thailand-from-november-13th-to-15th/"
+        "https://www.pattayamail.com/thailandnews/thailand-prepares-345-specialist-firefighters-for-potentially-severe-2027-wildfire-season-571733"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-13T06:58:00+07:00",
-        "sourceUrl": "https://thepattayanews.com/2026/11/12/chinese-premier-li-qiang-to-make-official-visit-to-thailand-from-november-13th-to-15th/",
-        "summary": "The same-day national-news listing highlighted the official visit. No stable comparable public comment/share counter was available, so the item is selected for current national relevance without claiming a popularity rank."
+        "observedAt": "2026-11-14T06:33:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/thailandnews/thailand-prepares-345-specialist-firefighters-for-potentially-severe-2027-wildfire-season-571733",
+        "summary": "The article displayed 573 views and 0 comments at observation time. This source-page count is not directly comparable with the TAT counter and no nationwide popularity rank is claimed."
       }
     },
     {
       "category": "pattaya",
-      "when": "12.11 · 📍",
-      "href": "https://www.pattayamail.com/latestnews/news/rotary-world-leaders-to-join-over-1200-delegates-at-2026-pattaya-institute-571683",
-      "publishedAt": "2026-11-12",
-      "ru": "На Pattaya Rotary Institute 20–22 ноября зарегистрировались более 1 200 участников из 24 стран. В программе в PEACH заявлены встречи по гуманитарным проектам, лидерству и международному сотрудничеству.",
-      "en": "More than 1,200 delegates from 24 countries have registered for the Pattaya Rotary Institute on 20–22 November. The PEACH programme includes sessions on humanitarian projects, leadership and international cooperation.",
-      "th": "มีผู้ลงทะเบียนมากกว่า 1,200 คนจาก 24 ประเทศเข้าร่วม Pattaya Rotary Institute ระหว่างวันที่ 20–22 พฤศจิกายนที่ PEACH โดยมีกิจกรรมด้านโครงการมนุษยธรรม ภาวะผู้นำ และความร่วมมือระหว่างประเทศ",
+      "when": "14.11 · 📍",
+      "href": "https://www.pattayamail.com/news/pattaya-mayor-acknowledges-tourism-slowdown-plans-major-events-for-high-season-571788",
+      "publishedAt": "2026-11-14",
+      "ru": "Мэр Паттайи признал замедление туристического потока: за первые девять месяцев года число посетителей Чонбури снизилось примерно на 2,08% по сравнению с тем же периодом 2025 года. Город рассчитывает поддержать бизнес серией крупных событий высокого сезона.",
+      "en": "Pattaya’s mayor acknowledged a tourism slowdown, with Chonburi visitor numbers down about 2.08% in the first nine months compared with the same period in 2025. The city plans a series of high-season events to support local businesses.",
+      "th": "นายกเมืองพัทยายอมรับว่าการท่องเที่ยวชะลอตัว โดยจำนวนนักท่องเที่ยวชลบุรีในช่วงเก้าเดือนแรกลดลงราว 2.08% เมื่อเทียบกับช่วงเดียวกันของปี 2568 เมืองเตรียมจัดกิจกรรมใหญ่ช่วงไฮซีซันเพื่อช่วยธุรกิจท้องถิ่น",
       "sources": [
-        "https://www.pattayamail.com/latestnews/news/rotary-world-leaders-to-join-over-1200-delegates-at-2026-pattaya-institute-571683"
+        "https://www.pattayamail.com/news/pattaya-mayor-acknowledges-tourism-slowdown-plans-major-events-for-high-season-571788"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-13T06:58:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/latestnews/news/rotary-world-leaders-to-join-over-1200-delegates-at-2026-pattaya-institute-571683",
-        "summary": "The article displayed 1,612 views and 0 comments at observation time, higher than the other selected local item’s 1,585 views; these are page counters, not a citywide popularity ranking."
+        "observedAt": "2026-11-14T06:33:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/pattaya-mayor-acknowledges-tourism-slowdown-plans-major-events-for-high-season-571788",
+        "summary": "The article displayed 63 views and 0 comments at observation time. It was compared with the other selected local item, which showed 116 views and 0 comments; no citywide popularity rank is claimed."
       }
     },
     {
       "category": "pattaya",
-      "when": "12.11 · 📍",
-      "href": "https://www.pattayamail.com/news/pattaya-officials-keep-eagle-eyes-on-jomtien-beach-to-distinguish-public-space-misuse-571654",
-      "publishedAt": "2026-11-12",
-      "ru": "Муниципальные инспекторы Паттайи расчистили участок пляжа Джомтьен, где личные вещи длительно занимали общественное пространство. Городские службы заявили, что продолжат следить за доступностью пляжа для жителей и гостей.",
-      "en": "Pattaya municipal officers cleared a section of Jomtien Beach where personal belongings had been occupying public space for an extended period. City officers said they would continue monitoring beach access for residents and visitors.",
-      "th": "เจ้าหน้าที่เทศกิจพัทยาเคลียร์พื้นที่ส่วนหนึ่งของหาดจอมเทียนที่มีสิ่งของส่วนตัววางกินพื้นที่สาธารณะเป็นเวลานาน และระบุว่าจะติดตามให้ชายหาดยังเข้าถึงได้สำหรับประชาชนและนักท่องเที่ยว",
+      "when": "14.11 · 📍",
+      "href": "https://www.pattayamail.com/news/oil-spill-cleanup-at-pattayas-north-beach-curve-prompts-motorist-caution-571763",
+      "publishedAt": "2026-11-14",
+      "ru": "На повороте у северной части пляжа Паттайи городские службы убрали разлив масла и выставили предупреждающие конусы. Водителей, особенно мотоциклистов, просят снизить скорость: на покрытии могли остаться скользкие следы.",
+      "en": "City crews cleaned an oil spill at Pattaya’s North Beach Curve and placed warning cones. Motorists, especially motorcycle riders, are advised to slow down because slippery residue may remain.",
+      "th": "เจ้าหน้าที่เมืองพัทยาทำความสะอาดคราบน้ำมันบริเวณโค้งชายหาดพัทยาเหนือและวางกรวยเตือน ผู้ขับขี่โดยเฉพาะรถจักรยานยนต์ควรลดความเร็ว เพราะอาจยังมีคราบลื่นบนผิวถนน",
       "sources": [
-        "https://www.pattayamail.com/news/pattaya-officials-keep-eagle-eyes-on-jomtien-beach-to-distinguish-public-space-misuse-571654"
+        "https://www.pattayamail.com/news/oil-spill-cleanup-at-pattayas-north-beach-curve-prompts-motorist-caution-571763"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-13T06:58:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/pattaya-officials-keep-eagle-eyes-on-jomtien-beach-to-distinguish-public-space-misuse-571654",
-        "summary": "The article displayed 1,585 views and 0 comments at observation time. This was compared with the other selected local item; no citywide popularity rank is claimed."
+        "observedAt": "2026-11-14T06:33:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/oil-spill-cleanup-at-pattayas-north-beach-curve-prompts-motorist-caution-571763",
+        "summary": "The article displayed 116 views and 0 comments at observation time, compared with 63 views and 0 comments for the other selected local item. These are early page counters, not a citywide popularity ranking."
       }
     }
   ],
@@ -367,5 +367,5 @@
       "verifiedAt": "2026-11-12"
     }
   ],
-  "selection": "Reviewed 2026-11-13 Asia/Bangkok: exactly one non-war world story, two Thailand and two Pattaya stories published 12–13 November. Comparable global and national engagement totals were unavailable; local Pattaya page counters were compared at 1,612 and 1,585 views with 0 comments, without claiming a global, national or citywide popularity rank. One new clearly attributed reported-investigation warning about romance-investment fraud was added with protective steps; existing active warnings retain their original dates. No Telegram sending."
+  "selection": "Reviewed 2026-11-14 Asia/Bangkok: exactly one non-war world story, two Thailand and two Pattaya stories published 13–14 November. Public metrics were limited to early source-page view/comment counters and outage-report totals; independent coverage was used where comparable engagement figures were unavailable, without claiming global, national or citywide popularity ranks. No new official or reliably corroborated scam warning dated 13–14 November was found, so all 12 active safety cards retain their original dates. No Telegram sending."
 }
