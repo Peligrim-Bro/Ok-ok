@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "project": "OK-OK.click",
-  "updatedAt": "2026-11-12",
+  "updatedAt": "2026-11-13",
   "decisions": [
     {
       "id": "hosting",
@@ -250,12 +250,13 @@
         "content",
         "threads"
       ],
-      "next": "Owner12 Nov explicitly approved GitHub transfer and launch.15 future posts refreshed,3 reviewed illustrations;15 past entries unchanged. First image12 Nov19:00 Bangkok. Confirm CI, deploy and receipts; no extra public test.",
+      "next": "13 Nov: first lightweight check found14 missing slots. Added only20–26 Nov12:30/19:00 Bangkok; all30 existing objects/media preserved. Confirm exact PR deploy and token health. IMAGE support exists; book public URL validation and delivery-status GET blocked by environment403. No named campaign ads/direct publishing. Fortnight metrics review due20 Nov.",
       "sources": [
         "docs/THREADS_BUFFER_20261106.md",
         "workers/threads-auth/queue.json",
         "workers/threads-auth/worker.mjs",
-        "docs/THREADS_REFRESH_20261111.md"
+        "docs/THREADS_REFRESH_20261111.md",
+        "docs/THREADS_BUFFER_20261113.md"
       ]
     },
     {
