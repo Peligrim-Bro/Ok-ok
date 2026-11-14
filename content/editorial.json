@@ -1,90 +1,90 @@
 {
-  "verifiedAt": "2026-11-14",
+  "verifiedAt": "2026-11-15",
   "news": [
     {
       "category": "world",
-      "when": "13.11 · 🌍",
-      "href": "https://apnews.com/article/microsoft-outage-outlook-email-365-status-down-d92547a821930290db2964388016979a",
-      "publishedAt": "2026-11-13",
-      "ru": "Глобальный сбой Microsoft 365 нарушил работу Outlook, Teams и Copilot у компаний, пользователей и ряда государственных служб. Microsoft связала проблему с техническим сбоем после изменения сети и сообщила о постепенном восстановлении сервисов.",
-      "en": "A global Microsoft 365 outage disrupted Outlook, Teams and Copilot for companies, users and some government services. Microsoft linked the problem to a technical issue following a network change and reported gradual service recovery.",
-      "th": "เหตุขัดข้องทั่วโลกของ Microsoft 365 กระทบ Outlook, Teams และ Copilot สำหรับบริษัท ผู้ใช้ และหน่วยงานรัฐบางแห่ง Microsoft ระบุว่าเกิดจากปัญหาทางเทคนิคหลังการปรับเครือข่าย และกำลังกู้คืนบริการอย่างต่อเนื่อง",
+      "when": "14.11 · 🌍",
+      "href": "https://apnews.com/article/microsoft-outage-outlook-email-365-recover-ca395c0f1e51af784b6d70afb6554f6a",
+      "publishedAt": "2026-11-14",
+      "ru": "Microsoft сообщила о полном восстановлении Microsoft 365 после многочасового глобального сбоя. Компания связала инцидент с технической проблемой при модернизации сетевой ёмкости и заявила, что признаков кибератаки не обнаружено.",
+      "en": "Microsoft said Microsoft 365 services were fully restored after a global outage lasting several hours. The company linked the incident to a technical issue during a network-capacity upgrade and said there was no indication of a cyberattack.",
+      "th": "Microsoft ระบุว่าบริการ Microsoft 365 กลับมาใช้งานได้ครบถ้วนแล้ว หลังเหตุขัดข้องทั่วโลกนานหลายชั่วโมง บริษัทเชื่อมโยงเหตุการณ์กับปัญหาทางเทคนิคระหว่างการเพิ่มขีดความสามารถของเครือข่าย และไม่พบสัญญาณว่าเป็นการโจมตีทางไซเบอร์",
       "sources": [
-        "https://apnews.com/article/microsoft-outage-outlook-email-365-status-down-d92547a821930290db2964388016979a"
+        "https://apnews.com/article/microsoft-outage-outlook-email-365-recover-ca395c0f1e51af784b6d70afb6554f6a"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-14T06:33:00+07:00",
-        "sourceUrl": "https://apnews.com/article/microsoft-outage-outlook-email-365-status-down-d92547a821930290db2964388016979a",
-        "summary": "AP placed the outage among its leading business and technology stories and reported more than 130,000 user reports across 74 countries and territories during the disruption. Reuters also covered the outage in its global markets report. These are impact and coverage signals, not comparable article engagement totals or a global popularity rank."
+        "observedAt": "2026-11-15T06:10:00+07:00",
+        "sourceUrl": "https://apnews.com/article/microsoft-outage-outlook-email-365-recover-ca395c0f1e51af784b6d70afb6554f6a",
+        "summary": "AP listed the restoration among its leading technology stories and reported outage reports from more than 70 countries and territories. Reuters independently covered the recovery trajectory. Comparable article comment/share totals were unavailable, so no global popularity rank is claimed."
       },
       "nonWar": true
     },
     {
       "category": "thailand",
-      "when": "13.11 · 🇹🇭",
-      "href": "https://www.tatnews.org/2026/11/vijit-chao-phraya-2026-brings-a-month-long-spectacle-of-light-and-imagination-to-bangkoks-riverfront/",
-      "publishedAt": "2026-11-13",
-      "ru": "В Бангкоке стартовал фестиваль Vijit Chao Phraya 2026: до 13 декабря световые и звуковые инсталляции будут работать в 19 точках вдоль реки от моста Рамы VIII до моста Рамы III. Программа включает проекции, лазеры, дроны и плавучую световую композицию.",
-      "en": "Bangkok has launched Vijit Chao Phraya 2026, running through 13 December at 19 riverfront locations from Rama VIII Bridge to Rama III Bridge. The programme includes projection mapping, lasers, drones and a floating light installation.",
-      "th": "กรุงเทพฯ เปิดงาน Vijit Chao Phraya 2026 ซึ่งจัดถึงวันที่ 13 ธันวาคมใน 19 จุดริมแม่น้ำ ตั้งแต่สะพานพระราม 8 ถึงสะพานพระราม 3 พร้อมโปรเจกชันแมปปิง เลเซอร์ โดรน และงานแสงลอยน้ำ",
+      "when": "14.11 · 🇹🇭",
+      "href": "https://www.nationthailand.com/news/general/40073501",
+      "publishedAt": "2026-11-14",
+      "ru": "После краткой остановки авиадвижения в США Минтранс Таиланда поручил AEROTHAI усилить наблюдение, проверить резервные системы, киберзащиту и планы непрерывности работы. Прямого влияния на тайскую аэронавигацию и подтверждённых отмен рейсов в стране не выявлено.",
+      "en": "After a brief US air-traffic ground stop, Thailand's Transport Ministry ordered AEROTHAI to step up monitoring and audit backup systems, cybersecurity and continuity plans. No direct impact on Thai air navigation or confirmed cancellations in Thailand was identified.",
+      "th": "หลังสหรัฐฯ ระงับเที่ยวบินชั่วคราว กระทรวงคมนาคมไทยสั่งให้ AEROTHAI เพิ่มการเฝ้าระวังและตรวจสอบระบบสำรอง ความมั่นคงไซเบอร์ และแผนความต่อเนื่องทางธุรกิจ เบื้องต้นไม่พบผลกระทบโดยตรงต่อระบบการบินของไทยหรือการยกเลิกเที่ยวบินที่ยืนยันแล้วในประเทศ",
       "sources": [
-        "https://www.tatnews.org/2026/11/vijit-chao-phraya-2026-brings-a-month-long-spectacle-of-light-and-imagination-to-bangkoks-riverfront/"
+        "https://www.nationthailand.com/news/general/40073501"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-14T06:33:00+07:00",
-        "sourceUrl": "https://www.tatnews.org/2026/11/vijit-chao-phraya-2026-brings-a-month-long-spectacle-of-light-and-imagination-to-bangkoks-riverfront/",
-        "summary": "The official TAT page displayed 0 views shortly after publication. This early source-page counter is not a national popularity ranking; selection is based on current official tourism relevance."
+        "observedAt": "2026-11-15T06:10:00+07:00",
+        "sourceUrl": "https://www.nationthailand.com/news/general/40073501",
+        "summary": "The source page exposed no stable public comment/share total. Selection is based on current nationwide transport-safety relevance and attributed official instructions, not a popularity ranking."
       }
     },
     {
       "category": "thailand",
-      "when": "13.11 · 🇹🇭",
-      "href": "https://www.pattayamail.com/thailandnews/thailand-prepares-345-specialist-firefighters-for-potentially-severe-2027-wildfire-season-571733",
-      "publishedAt": "2026-11-13",
-      "ru": "Департамент национальных парков Таиланда готовит 345 специалистов Fire Tiger в 15 оперативных центрах к пожароопасному сезону 2027 года. Для поиска очагов в удалённых лесах планируют использовать спутниковые данные и дроны с тепловыми датчиками.",
-      "en": "Thailand’s Department of National Parks is preparing 345 Fire Tiger specialists across 15 operations centres for the 2027 wildfire season. Satellite data and heat-detecting drones will help locate fires in remote forests.",
-      "th": "กรมอุทยานแห่งชาติเตรียมเจ้าหน้าที่ชุดเสือไฟ 345 นายใน 15 ศูนย์ปฏิบัติการสำหรับฤดูไฟป่าปี 2570 โดยจะใช้ข้อมูลดาวเทียมและโดรนตรวจจับความร้อนเพื่อค้นหาจุดไฟในพื้นที่ป่าห่างไกล",
+      "when": "14.11 · 🇹🇭",
+      "href": "https://www.nationthailand.com/news/general/40073495",
+      "publishedAt": "2026-11-14",
+      "ru": "По данным Национального управления водных ресурсов, водохранилища Таиланда заполнены на 82%, и общего запаса должно хватить до конца сухого сезона 2026–2027. При этом 18 средних водохранилищ остаются ниже 30%, а на юге сохраняются риски сильных дождей и высоких приливов.",
+      "en": "Thailand's Office of the National Water Resources said reservoirs were at 82% of capacity and national supplies should last through the 2026–27 dry season. However, 18 medium-sized reservoirs remain below 30%, while heavy rain and high-tide risks persist in the South.",
+      "th": "สำนักงานทรัพยากรน้ำแห่งชาติระบุว่าอ่างเก็บน้ำทั่วไทยมีน้ำร้อยละ 82 และปริมาณรวมเพียงพอถึงสิ้นฤดูแล้งปี 2569–2570 อย่างไรก็ตาม อ่างเก็บน้ำขนาดกลาง 18 แห่งยังต่ำกว่าร้อยละ 30 ขณะที่ภาคใต้ยังเสี่ยงฝนตกหนักและน้ำทะเลหนุนสูง",
       "sources": [
-        "https://www.pattayamail.com/thailandnews/thailand-prepares-345-specialist-firefighters-for-potentially-severe-2027-wildfire-season-571733"
+        "https://www.nationthailand.com/news/general/40073495"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-14T06:33:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/thailandnews/thailand-prepares-345-specialist-firefighters-for-potentially-severe-2027-wildfire-season-571733",
-        "summary": "The article displayed 573 views and 0 comments at observation time. This source-page count is not directly comparable with the TAT counter and no nationwide popularity rank is claimed."
+        "observedAt": "2026-11-15T06:10:00+07:00",
+        "sourceUrl": "https://www.nationthailand.com/news/general/40073495",
+        "summary": "The source page exposed no comparable public engagement counter. Selection is based on the current ONWR national water update and immediate regional weather relevance, without claiming a national popularity rank."
       }
     },
     {
       "category": "pattaya",
       "when": "14.11 · 📍",
-      "href": "https://www.pattayamail.com/news/pattaya-mayor-acknowledges-tourism-slowdown-plans-major-events-for-high-season-571788",
+      "href": "https://www.pattayamail.com/news/pattaya-levels-manhole-covers-and-improves-access-for-disabled-road-users-571804",
       "publishedAt": "2026-11-14",
-      "ru": "Мэр Паттайи признал замедление туристического потока: за первые девять месяцев года число посетителей Чонбури снизилось примерно на 2,08% по сравнению с тем же периодом 2025 года. Город рассчитывает поддержать бизнес серией крупных событий высокого сезона.",
-      "en": "Pattaya’s mayor acknowledged a tourism slowdown, with Chonburi visitor numbers down about 2.08% in the first nine months compared with the same period in 2025. The city plans a series of high-season events to support local businesses.",
-      "th": "นายกเมืองพัทยายอมรับว่าการท่องเที่ยวชะลอตัว โดยจำนวนนักท่องเที่ยวชลบุรีในช่วงเก้าเดือนแรกลดลงราว 2.08% เมื่อเทียบกับช่วงเดียวกันของปี 2568 เมืองเตรียมจัดกิจกรรมใหญ่ช่วงไฮซีซันเพื่อช่วยธุรกิจท้องถิ่น",
+      "ru": "На Soi Paniad Chang в Паттайе продолжают обновлять дорожное покрытие перед международным фестивалем фейерверков. Город также выравнивает люки, обустраивает пандусы и ровные пешеходные участки для людей с ограниченной мобильностью.",
+      "en": "Road resurfacing continues on Soi Paniad Chang ahead of Pattaya's international fireworks festival. The city is also levelling manhole covers and providing ramps and even pedestrian surfaces for people with limited mobility.",
+      "th": "พัทยาดำเนินการปรับผิวถนนซอยพาณิชย์ช้างก่อนเทศกาลพลุนานาชาติ พร้อมปรับฝาท่อให้เสมอผิวถนน และจัดทำทางลาดกับทางเดินระดับเดียวเพื่อเพิ่มความสะดวกแก่ผู้มีข้อจำกัดด้านการเคลื่อนไหว",
       "sources": [
-        "https://www.pattayamail.com/news/pattaya-mayor-acknowledges-tourism-slowdown-plans-major-events-for-high-season-571788"
+        "https://www.pattayamail.com/news/pattaya-levels-manhole-covers-and-improves-access-for-disabled-road-users-571804"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-14T06:33:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/pattaya-mayor-acknowledges-tourism-slowdown-plans-major-events-for-high-season-571788",
-        "summary": "The article displayed 63 views and 0 comments at observation time. It was compared with the other selected local item, which showed 116 views and 0 comments; no citywide popularity rank is claimed."
+        "observedAt": "2026-11-15T06:10:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/pattaya-levels-manhole-covers-and-improves-access-for-disabled-road-users-571804",
+        "summary": "The article displayed 1,185 views and 0 comments at observation time. It was compared with the other selected local item, which showed 1,761 views and 0 comments; these are source-page counters, not a citywide popularity ranking."
       }
     },
     {
       "category": "pattaya",
       "when": "14.11 · 📍",
-      "href": "https://www.pattayamail.com/news/oil-spill-cleanup-at-pattayas-north-beach-curve-prompts-motorist-caution-571763",
+      "href": "https://www.pattayamail.com/latestnews/news/from-nasa-technician-to-asian-stardom-david-lee-inspires-the-pattaya-city-expats-club-571906",
       "publishedAt": "2026-11-14",
-      "ru": "На повороте у северной части пляжа Паттайи городские службы убрали разлив масла и выставили предупреждающие конусы. Водителей, особенно мотоциклистов, просят снизить скорость: на покрытии могли остаться скользкие следы.",
-      "en": "City crews cleaned an oil spill at Pattaya’s North Beach Curve and placed warning cones. Motorists, especially motorcycle riders, are advised to slow down because slippery residue may remain.",
-      "th": "เจ้าหน้าที่เมืองพัทยาทำความสะอาดคราบน้ำมันบริเวณโค้งชายหาดพัทยาเหนือและวางกรวยเตือน ผู้ขับขี่โดยเฉพาะรถจักรยานยนต์ควรลดความเร็ว เพราะอาจยังมีคราบลื่นบนผิวถนน",
+      "ru": "В Pattaya City Expats Club прошла встреча с Дэвидом Ли, который рассказал о пути от технической работы в NASA к музыкальной карьере и международным развлекательным проектам. Основной темой выступления стали поддержка окружающих и восстановление после жизненных трудностей.",
+      "en": "Pattaya City Expats Club hosted David Lee, who described his path from technical work at NASA to a music career and international entertainment projects. His talk focused on support from others and rebuilding after personal setbacks.",
+      "th": "Pattaya City Expats Club จัดการบรรยายของเดวิด ลี ซึ่งเล่าถึงเส้นทางจากงานด้านเทคนิคที่ NASA สู่ดนตรีและธุรกิจบันเทิงระดับนานาชาติ โดยเน้นบทบาทของความช่วยเหลือจากผู้อื่นและการเริ่มต้นใหม่หลังอุปสรรคในชีวิต",
       "sources": [
-        "https://www.pattayamail.com/news/oil-spill-cleanup-at-pattayas-north-beach-curve-prompts-motorist-caution-571763"
+        "https://www.pattayamail.com/latestnews/news/from-nasa-technician-to-asian-stardom-david-lee-inspires-the-pattaya-city-expats-club-571906"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-14T06:33:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/oil-spill-cleanup-at-pattayas-north-beach-curve-prompts-motorist-caution-571763",
-        "summary": "The article displayed 116 views and 0 comments at observation time, compared with 63 views and 0 comments for the other selected local item. These are early page counters, not a citywide popularity ranking."
+        "observedAt": "2026-11-15T06:10:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/latestnews/news/from-nasa-technician-to-asian-stardom-david-lee-inspires-the-pattaya-city-expats-club-571906",
+        "summary": "The article displayed 1,761 views and 0 comments at observation time, compared with 1,185 views and 0 comments for the other selected local item. These are source-page counters, not a citywide popularity ranking."
       }
     }
   ],
@@ -367,5 +367,5 @@
       "verifiedAt": "2026-11-12"
     }
   ],
-  "selection": "Reviewed 2026-11-14 Asia/Bangkok: exactly one non-war world story, two Thailand and two Pattaya stories published 13–14 November. Public metrics were limited to early source-page view/comment counters and outage-report totals; independent coverage was used where comparable engagement figures were unavailable, without claiming global, national or citywide popularity ranks. No new official or reliably corroborated scam warning dated 13–14 November was found, so all 12 active safety cards retain their original dates. No Telegram sending."
+  "selection": "Reviewed 2026-11-15 Asia/Bangkok: exactly one non-war world story, two Thailand and two Pattaya stories published 14 November. Public engagement evidence was limited to Pattaya Mail view/comment counters, outage-report reach and cross-outlet coverage; no global, national or citywide popularity rank is claimed. Official Thai anti-scam sources exposed no new specific warning dated 14–15 November suitable for a new card, so all 12 active safety cards retain their original dates. No Telegram sending."
 }
