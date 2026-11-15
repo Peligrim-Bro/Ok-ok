@@ -1,118 +1,94 @@
 {
-  "verifiedAt": "2026-11-15",
+  "verifiedAt": "2026-11-16",
   "news": [
     {
       "category": "world",
-      "when": "14.11 · 🌍",
-      "href": "https://apnews.com/article/microsoft-outage-outlook-email-365-recover-ca395c0f1e51af784b6d70afb6554f6a",
-      "publishedAt": "2026-11-14",
-      "ru": "Microsoft сообщила о полном восстановлении Microsoft 365 после многочасового глобального сбоя. Компания связала инцидент с технической проблемой при модернизации сетевой ёмкости и заявила, что признаков кибератаки не обнаружено.",
-      "en": "Microsoft said Microsoft 365 services were fully restored after a global outage lasting several hours. The company linked the incident to a technical issue during a network-capacity upgrade and said there was no indication of a cyberattack.",
-      "th": "Microsoft ระบุว่าบริการ Microsoft 365 กลับมาใช้งานได้ครบถ้วนแล้ว หลังเหตุขัดข้องทั่วโลกนานหลายชั่วโมง บริษัทเชื่อมโยงเหตุการณ์กับปัญหาทางเทคนิคระหว่างการเพิ่มขีดความสามารถของเครือข่าย และไม่พบสัญญาณว่าเป็นการโจมตีทางไซเบอร์",
+      "when": "15.11 · 🌍",
+      "href": "https://www.reuters.com/podcasts/aviation-routers-spacex-cop31-young-male-voters-2026-11-15/",
+      "publishedAt": "2026-11-15",
+      "ru": "Корабль Starship после 22 часов на орбите впервые вернулся прямо к стартовой башне, где его захватили механические рычаги. Успешное возвращение верхней ступени стало важным испытанием на пути к полностью многоразовой ракете, хотя ускоритель в этой миссии поймать не удалось.",
+      "en": "Starship returned from a 22-hour orbital flight directly to its launch tower, where mechanical arms caught the spacecraft for the first time. The upper stage recovery was a major test toward a fully reusable rocket, although the booster was not caught on this mission.",
+      "th": "ยาน Starship กลับจากภารกิจในวงโคจรนาน 22 ชั่วโมงและลงสู่แขนกลของหอปล่อยได้เป็นครั้งแรก การกู้คืนยานส่วนบนเป็นก้าวสำคัญสู่จรวดที่นำกลับมาใช้ใหม่ได้ทั้งระบบ แม้ว่าบูสเตอร์ของเที่ยวบินนี้จะยังไม่สามารถรับกลับได้",
       "sources": [
-        "https://apnews.com/article/microsoft-outage-outlook-email-365-recover-ca395c0f1e51af784b6d70afb6554f6a"
+        "https://www.reuters.com/podcasts/aviation-routers-spacex-cop31-young-male-voters-2026-11-15/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-15T06:10:00+07:00",
-        "sourceUrl": "https://apnews.com/article/microsoft-outage-outlook-email-365-recover-ca395c0f1e51af784b6d70afb6554f6a",
-        "summary": "AP listed the restoration among its leading technology stories and reported outage reports from more than 70 countries and territories. Reuters independently covered the recovery trajectory. Comparable article comment/share totals were unavailable, so no global popularity rank is claimed."
+        "observedAt": "2026-11-16T06:05:27+07:00",
+        "sourceUrl": "https://www.reuters.com/podcasts/aviation-routers-spacex-cop31-young-male-voters-2026-11-15/",
+        "summary": "Reuters featured the milestone in its 15 November World News roundup and linked its detailed report. Comparable public comment/share totals were unavailable, so selection reflects prominent international coverage rather than a claimed global popularity rank."
       },
       "nonWar": true
     },
     {
       "category": "thailand",
-      "when": "14.11 · 🇹🇭",
-      "href": "https://www.nationthailand.com/news/general/40073501",
-      "publishedAt": "2026-11-14",
-      "ru": "После краткой остановки авиадвижения в США Минтранс Таиланда поручил AEROTHAI усилить наблюдение, проверить резервные системы, киберзащиту и планы непрерывности работы. Прямого влияния на тайскую аэронавигацию и подтверждённых отмен рейсов в стране не выявлено.",
-      "en": "After a brief US air-traffic ground stop, Thailand's Transport Ministry ordered AEROTHAI to step up monitoring and audit backup systems, cybersecurity and continuity plans. No direct impact on Thai air navigation or confirmed cancellations in Thailand was identified.",
-      "th": "หลังสหรัฐฯ ระงับเที่ยวบินชั่วคราว กระทรวงคมนาคมไทยสั่งให้ AEROTHAI เพิ่มการเฝ้าระวังและตรวจสอบระบบสำรอง ความมั่นคงไซเบอร์ และแผนความต่อเนื่องทางธุรกิจ เบื้องต้นไม่พบผลกระทบโดยตรงต่อระบบการบินของไทยหรือการยกเลิกเที่ยวบินที่ยืนยันแล้วในประเทศ",
+      "when": "15.11 · 🇹🇭",
+      "href": "https://www.nationthailand.com/news/general/40073539",
+      "publishedAt": "2026-11-15",
+      "ru": "Девять точек в Бангкоке и соседних провинциях превысили национальный норматив PM2.5 и достигли оранжевого уровня. Департамент по контролю загрязнений ожидает новый рост 19–20 ноября и советует следить за Air4Thai, сократить время на улице и использовать защитную маску.",
+      "en": "Nine locations in Bangkok and nearby provinces exceeded Thailand’s PM2.5 standard and reached the orange health-impact category. The Pollution Control Department expects another rise on 19–20 November and advises checking Air4Thai, limiting outdoor time and using a protective mask.",
+      "th": "พื้นที่ 9 จุดในกรุงเทพฯ และจังหวัดใกล้เคียงมีค่าฝุ่น PM2.5 เกินมาตรฐานและอยู่ในระดับสีส้ม กรมควบคุมมลพิษคาดว่าค่าฝุ่นจะสูงขึ้นอีกในวันที่ 19–20 พฤศจิกายน พร้อมแนะนำให้ติดตาม Air4Thai ลดเวลาอยู่กลางแจ้ง และสวมหน้ากากป้องกันฝุ่น",
       "sources": [
-        "https://www.nationthailand.com/news/general/40073501"
+        "https://www.nationthailand.com/news/general/40073539"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-15T06:10:00+07:00",
-        "sourceUrl": "https://www.nationthailand.com/news/general/40073501",
-        "summary": "The source page exposed no stable public comment/share total. Selection is based on current nationwide transport-safety relevance and attributed official instructions, not a popularity ranking."
+        "observedAt": "2026-11-16T06:05:27+07:00",
+        "sourceUrl": "https://www.nationthailand.com/news/general/40073539",
+        "summary": "The Nation listed this report at number 2 in its visible Most Viewed module at observation time, but did not expose a stable view or comment total. The position is a site-local snapshot, not a national popularity rank."
       }
     },
     {
       "category": "thailand",
-      "when": "14.11 · 🇹🇭",
-      "href": "https://www.nationthailand.com/news/general/40073495",
-      "publishedAt": "2026-11-14",
-      "ru": "По данным Национального управления водных ресурсов, водохранилища Таиланда заполнены на 82%, и общего запаса должно хватить до конца сухого сезона 2026–2027. При этом 18 средних водохранилищ остаются ниже 30%, а на юге сохраняются риски сильных дождей и высоких приливов.",
-      "en": "Thailand's Office of the National Water Resources said reservoirs were at 82% of capacity and national supplies should last through the 2026–27 dry season. However, 18 medium-sized reservoirs remain below 30%, while heavy rain and high-tide risks persist in the South.",
-      "th": "สำนักงานทรัพยากรน้ำแห่งชาติระบุว่าอ่างเก็บน้ำทั่วไทยมีน้ำร้อยละ 82 และปริมาณรวมเพียงพอถึงสิ้นฤดูแล้งปี 2569–2570 อย่างไรก็ตาม อ่างเก็บน้ำขนาดกลาง 18 แห่งยังต่ำกว่าร้อยละ 30 ขณะที่ภาคใต้ยังเสี่ยงฝนตกหนักและน้ำทะเลหนุนสูง",
+      "when": "15.11 · 🇹🇭",
+      "href": "https://www.pattayamail.com/thailandnews/thailand-launches-100-baht-travel-deals-to-attract-weekday-visitors-571997",
+      "publishedAt": "2026-11-15",
+      "ru": "TAT анонсировало восемь еженедельных онлайн-раундов с туристическими ваучерами по 100 бат с 15 декабря по 9 февраля. Предложения от более чем 170 участников будут действовать для поездок с понедельника по четверг; это отдельные промоваучеры, а не единая цена на все услуги.",
+      "en": "TAT announced eight weekly online rounds of 100-baht travel vouchers from 15 December to 9 February. Offers from more than 170 participating businesses are for Monday-to-Thursday travel; they are specific promotional vouchers, not a universal 100-baht price for every service.",
+      "th": "ททท. ประกาศจำหน่ายคูปองท่องเที่ยวราคา 100 บาททางออนไลน์ 8 รอบ ตั้งแต่ 15 ธันวาคมถึง 9 กุมภาพันธ์ โดยมีผู้ประกอบการเข้าร่วมกว่า 170 ราย และใช้เดินทางวันจันทร์ถึงพฤหัสบดี คูปองนี้เป็นโปรโมชันเฉพาะรายการ ไม่ใช่ราคากลาง 100 บาทสำหรับทุกบริการ",
       "sources": [
-        "https://www.nationthailand.com/news/general/40073495"
+        "https://www.pattayamail.com/thailandnews/thailand-launches-100-baht-travel-deals-to-attract-weekday-visitors-571997"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-15T06:10:00+07:00",
-        "sourceUrl": "https://www.nationthailand.com/news/general/40073495",
-        "summary": "The source page exposed no comparable public engagement counter. Selection is based on the current ONWR national water update and immediate regional weather relevance, without claiming a national popularity rank."
+        "observedAt": "2026-11-16T06:05:27+07:00",
+        "sourceUrl": "https://www.pattayamail.com/thailandnews/thailand-launches-100-baht-travel-deals-to-attract-weekday-visitors-571997",
+        "summary": "The article displayed 633 views and 0 comments at observation time. This source-page counter is useful only within the available Pattaya Mail sample and is not a national popularity ranking."
       }
     },
     {
       "category": "pattaya",
-      "when": "14.11 · 📍",
-      "href": "https://www.pattayamail.com/news/pattaya-levels-manhole-covers-and-improves-access-for-disabled-road-users-571804",
-      "publishedAt": "2026-11-14",
-      "ru": "На Soi Paniad Chang в Паттайе продолжают обновлять дорожное покрытие перед международным фестивалем фейерверков. Город также выравнивает люки, обустраивает пандусы и ровные пешеходные участки для людей с ограниченной мобильностью.",
-      "en": "Road resurfacing continues on Soi Paniad Chang ahead of Pattaya's international fireworks festival. The city is also levelling manhole covers and providing ramps and even pedestrian surfaces for people with limited mobility.",
-      "th": "พัทยาดำเนินการปรับผิวถนนซอยพาณิชย์ช้างก่อนเทศกาลพลุนานาชาติ พร้อมปรับฝาท่อให้เสมอผิวถนน และจัดทำทางลาดกับทางเดินระดับเดียวเพื่อเพิ่มความสะดวกแก่ผู้มีข้อจำกัดด้านการเคลื่อนไหว",
+      "when": "15.11 · 📍",
+      "href": "https://www.pattayamail.com/news/small-piece-of-paper-helps-pattaya-tourist-police-reunite-lithuanian-visitor-with-hotel-571927",
+      "publishedAt": "2026-11-15",
+      "ru": "Туристическая полиция Паттайи помогла гостю из Литвы, который не помнил название отеля и остался без телефона и ключа. Название на найденной в вещах бумажке позволило подтвердить бронь в отеле Джомтьена и организовать безопасное возвращение.",
+      "en": "Pattaya Tourist Police assisted a Lithuanian visitor who could not remember his hotel and had no phone or room key. A hotel name found on a small piece of paper helped staff confirm the Jomtien booking and arrange his safe return.",
+      "th": "ตำรวจท่องเที่ยวพัทยาช่วยนักท่องเที่ยวชาวลิทัวเนียที่จำชื่อโรงแรมไม่ได้และไม่มีโทรศัพท์หรือกุญแจห้อง กระดาษแผ่นเล็กที่มีชื่อโรงแรมช่วยให้เจ้าหน้าที่ยืนยันการจองในจอมเทียนและจัดรถส่งกลับที่พักอย่างปลอดภัย",
       "sources": [
-        "https://www.pattayamail.com/news/pattaya-levels-manhole-covers-and-improves-access-for-disabled-road-users-571804"
+        "https://www.pattayamail.com/news/small-piece-of-paper-helps-pattaya-tourist-police-reunite-lithuanian-visitor-with-hotel-571927"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-15T06:10:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/pattaya-levels-manhole-covers-and-improves-access-for-disabled-road-users-571804",
-        "summary": "The article displayed 1,185 views and 0 comments at observation time. It was compared with the other selected local item, which showed 1,761 views and 0 comments; these are source-page counters, not a citywide popularity ranking."
+        "observedAt": "2026-11-16T06:05:27+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/small-piece-of-paper-helps-pattaya-tourist-police-reunite-lithuanian-visitor-with-hotel-571927",
+        "summary": "The article displayed 1,683 views and 0 comments at observation time, compared with 1,764 views and 0 comments for the other selected Pattaya report. These are source-page counters, not a citywide popularity ranking."
       }
     },
     {
       "category": "pattaya",
-      "when": "14.11 · 📍",
-      "href": "https://www.pattayamail.com/latestnews/news/from-nasa-technician-to-asian-stardom-david-lee-inspires-the-pattaya-city-expats-club-571906",
-      "publishedAt": "2026-11-14",
-      "ru": "В Pattaya City Expats Club прошла встреча с Дэвидом Ли, который рассказал о пути от технической работы в NASA к музыкальной карьере и международным развлекательным проектам. Основной темой выступления стали поддержка окружающих и восстановление после жизненных трудностей.",
-      "en": "Pattaya City Expats Club hosted David Lee, who described his path from technical work at NASA to a music career and international entertainment projects. His talk focused on support from others and rebuilding after personal setbacks.",
-      "th": "Pattaya City Expats Club จัดการบรรยายของเดวิด ลี ซึ่งเล่าถึงเส้นทางจากงานด้านเทคนิคที่ NASA สู่ดนตรีและธุรกิจบันเทิงระดับนานาชาติ โดยเน้นบทบาทของความช่วยเหลือจากผู้อื่นและการเริ่มต้นใหม่หลังอุปสรรคในชีวิต",
+      "when": "15.11 · 📍",
+      "href": "https://www.pattayamail.com/news/pattaya-tourist-police-assist-foreign-couple-after-condo-washing-machine-fire-571923",
+      "publishedAt": "2026-11-15",
+      "ru": "Пожарные локализовали возгорание стиральной машины в квартире на пятом этаже кондоминиума на Soi Phra Tamnak 6. Владелец и партнёр успели выйти без травм; туристическая полиция помогла им и координировала дальнейшие действия со следователем.",
+      "en": "Firefighters contained a washing-machine fire in a fifth-floor condominium room on Soi Phra Tamnak 6. The owner and partner escaped without injury; Tourist Police assisted them and coordinated the next steps with the investigating officer.",
+      "th": "เจ้าหน้าที่ดับเพลิงควบคุมเหตุไฟไหม้เครื่องซักผ้าในห้องพักชั้น 5 ของคอนโดบนซอยพระตำหนัก 6 ได้ เจ้าของห้องและคู่ของเขาออกมาได้โดยไม่บาดเจ็บ ขณะที่ตำรวจท่องเที่ยวให้ความช่วยเหลือและประสานขั้นตอนต่อไปกับพนักงานสอบสวน",
       "sources": [
-        "https://www.pattayamail.com/latestnews/news/from-nasa-technician-to-asian-stardom-david-lee-inspires-the-pattaya-city-expats-club-571906"
+        "https://www.pattayamail.com/news/pattaya-tourist-police-assist-foreign-couple-after-condo-washing-machine-fire-571923"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-15T06:10:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/latestnews/news/from-nasa-technician-to-asian-stardom-david-lee-inspires-the-pattaya-city-expats-club-571906",
-        "summary": "The article displayed 1,761 views and 0 comments at observation time, compared with 1,185 views and 0 comments for the other selected local item. These are source-page counters, not a citywide popularity ranking."
+        "observedAt": "2026-11-16T06:05:27+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/pattaya-tourist-police-assist-foreign-couple-after-condo-washing-machine-fire-571923",
+        "summary": "The article displayed 1,764 views and 0 comments at observation time, compared with 1,683 views and 0 comments for the other selected Pattaya report. These are source-page counters, not a citywide popularity ranking."
       }
     }
   ],
   "scams": [
-    {
-      "id": "fake-cyber-police-recovery-pattaya-2026-10",
-      "title": {
-        "ru": "QR-схемы от ложных PEA и киберполиции",
-        "en": "QR scams posing as PEA or cyber police",
-        "th": "คิวอาร์ปลอมอ้าง PEA หรือตำรวจไซเบอร์"
-      },
-      "text": {
-        "ru": "8 и 14 октября полиция сообщила о расследованиях звонков от лже-PEA и киберполиции с обещанием возврата и QR-кодами. Виновность решает суд.",
-        "en": "Police reported 8 and 14 October probes into fake PEA or cyber-police refund calls with QR codes. Guilt is for the court.",
-        "th": "ตำรวจรายงานคดีวันที่ 8 และ 14 ตุลาคม กรณีอ้าง PEA หรือตำรวจไซเบอร์ เสนอคืนเงินผ่านคิวอาร์ ศาลเป็นผู้ตัดสินความผิด"
-      },
-      "do": {
-        "ru": "Не сканируйте чужой QR-код и не сообщайте банковские данные; сверяйтесь с официальным сайтом.",
-        "en": "Do not scan supplied QR codes or share bank details; verify on the official site.",
-        "th": "อย่าสแกนคิวอาร์หรือให้ข้อมูลธนาคาร ตรวจสอบกับเว็บทางการ"
-      },
-      "status": "reported-investigation",
-      "sources": [
-        "https://thepattayanews.com/2026/10/08/pattaya-tourist-police-arrest-four-people-in-mule-account-gang-linked-to-pea-impersonation-scam/",
-        "https://thepattayanews.com/2026/10/14/three-people-arrested-in-pattaya-call-centre-raid-over-alleged-fake-cyber-police-recovery-scam/"
-      ],
-      "verifiedAt": "2026-10-14"
-    },
     {
       "id": "fake-jobs-filming-invitations-thailand-2026-10",
       "title": {
@@ -365,7 +341,30 @@
         "https://www.pattayamail.com/news/police-bust-love-investment-scam-base-in-pattaya-arrest-10-foreigners-571673"
       ],
       "verifiedAt": "2026-11-12"
+    },
+    {
+      "id": "illegal-loan-app-data-access-thailand-2026-11",
+      "title": {
+        "ru": "Нелегальные кредитные приложения запрашивают данные телефона",
+        "en": "Illegal loan apps seeking phone-data access",
+        "th": "แอปเงินกู้นอกระบบขอเข้าถึงข้อมูลในโทรศัพท์"
+      },
+      "text": {
+        "ru": "DSI сообщило о расследовании приложений мгновенных займов без необходимого разрешения. По поступившим сообщениям, некоторые приложения требовали доступ к контактам и фотографиям, а затем могли использовать эти данные для угроз, давления и публичного унижения. DSI попросило Google и Apple сверять приложения со списком лицензированных операторов Банка Таиланда; описанные действия остаются предметом проверки.",
+        "en": "Thailand’s DSI reported an investigation into instant-loan apps operating without required authorisation. According to complaints, some apps demanded access to contacts and photos, then allegedly used that data for threats, harassment or public shaming. DSI asked Google and Apple to compare apps with the Bank of Thailand’s licensed-operator list; the reported conduct remains under investigation.",
+        "th": "DSI รายงานการตรวจสอบแอปเงินกู้ด่วนที่อาจดำเนินการโดยไม่ได้รับอนุญาต โดยมีข้อมูลร้องเรียนว่าแอปบางรายขอเข้าถึงรายชื่อผู้ติดต่อและรูปภาพ แล้วอาจนำข้อมูลไปข่มขู่ รบกวน หรือประจานผู้กู้ DSI ขอให้ Google และ Apple ตรวจสอบแอปกับรายชื่อผู้ประกอบการที่ได้รับอนุญาตจากธนาคารแห่งประเทศไทย ทั้งนี้พฤติการณ์ดังกล่าวยังอยู่ระหว่างการตรวจสอบ"
+      },
+      "do": {
+        "ru": "Перед установкой проверьте кредитора в официальном списке Банка Таиланда. Не давайте неизвестному приложению доступ к контактам и фотографиям; сохраните доказательства подозрительных требований и сообщите о приложении через официальные каналы DSI, Банка Таиланда или магазина приложений.",
+        "en": "Before installing, verify the lender on the Bank of Thailand’s official list. Do not give an unknown loan app access to contacts or photos; preserve evidence of suspicious demands and report the app through official DSI, Bank of Thailand or app-store channels.",
+        "th": "ก่อนติดตั้ง ให้ตรวจสอบผู้ให้กู้กับรายชื่อทางการของธนาคารแห่งประเทศไทย อย่าอนุญาตให้แอปเงินกู้ที่ไม่รู้จักเข้าถึงรายชื่อผู้ติดต่อหรือรูปภาพ เก็บหลักฐานคำขอที่น่าสงสัย และรายงานผ่านช่องทางทางการของ DSI ธนาคารแห่งประเทศไทย หรือร้านแอป"
+      },
+      "status": "reported-investigation",
+      "sources": [
+        "https://www.pattayamail.com/thailandnews/thailand-asks-google-and-apple-to-remove-illegal-loan-apps-from-their-stores-572000"
+      ],
+      "verifiedAt": "2026-11-16"
     }
   ],
-  "selection": "Reviewed 2026-11-15 Asia/Bangkok: exactly one non-war world story, two Thailand and two Pattaya stories published 14 November. Public engagement evidence was limited to Pattaya Mail view/comment counters, outage-report reach and cross-outlet coverage; no global, national or citywide popularity rank is claimed. Official Thai anti-scam sources exposed no new specific warning dated 14–15 November suitable for a new card, so all 12 active safety cards retain their original dates. No Telegram sending."
+  "selection": "Reviewed 2026-11-16 Asia/Bangkok: exactly one non-war world story, two Thailand and two Pattaya stories from sources dated 15 November. Pattaya Mail supplied visible article view/comment counters, while The Nation exposed a most-viewed position for the PM2.5 report; Reuters exposed no comparable public engagement total. These observations support relative selection only and do not establish a global, national or citywide popularity ranking. A newly attributed DSI investigation into unauthorized loan apps was added; the oldest card was retired to keep the active set at 12, and all retained cards keep their original dates. No Telegram sending."
 }
