@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "project": "OK-OK.click",
-  "updatedAt": "2026-11-13",
+  "updatedAt": "2026-11-16",
   "decisions": [
     {
       "id": "hosting",
@@ -114,7 +114,7 @@
       "tags": [
         "channel"
       ],
-      "next": "12 Nov: 28 reviewed source entries and distinct images extend ordinary/comic slots through19 Nov. All107 earlier entries preserved. Native build/queue audit/publisher tests pass; PR CI and exact production SHA pending. Runtime delivery unknown.",
+      "next": "16 Nov: 12 reviewed entries and distinct images fill only 20–22 Nov, extending ordinary/comic slots through 22 Nov. Offline audit ready:true; run mandatory project checks, PR CI and exact production deployment verification. Runtime delivery remains unknown.",
       "sources": [
         "CHANNEL_PUBLISHING.md",
         "scripts/audit-channel-queue.mjs",
@@ -123,7 +123,8 @@
         "docs/CHANNEL_TEXT_BUFFER_20261028.md",
         "docs/CHANNEL_BUFFER_20261030.md",
         "docs/CHANNEL_BUFFER_20261105.md",
-        "docs/CHANNEL_BUFFER_20261112.md"
+        "docs/CHANNEL_BUFFER_20261112.md",
+        "docs/CHANNEL_BUFFER_20261116.md"
       ]
     },
     {
