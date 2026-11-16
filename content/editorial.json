@@ -1,90 +1,90 @@
 {
-  "verifiedAt": "2026-11-16",
+  "verifiedAt": "2026-11-17",
   "news": [
     {
       "category": "world",
-      "when": "15.11 · 🌍",
-      "href": "https://www.reuters.com/podcasts/aviation-routers-spacex-cop31-young-male-voters-2026-11-15/",
-      "publishedAt": "2026-11-15",
-      "ru": "Корабль Starship после 22 часов на орбите впервые вернулся прямо к стартовой башне, где его захватили механические рычаги. Успешное возвращение верхней ступени стало важным испытанием на пути к полностью многоразовой ракете, хотя ускоритель в этой миссии поймать не удалось.",
-      "en": "Starship returned from a 22-hour orbital flight directly to its launch tower, where mechanical arms caught the spacecraft for the first time. The upper stage recovery was a major test toward a fully reusable rocket, although the booster was not caught on this mission.",
-      "th": "ยาน Starship กลับจากภารกิจในวงโคจรนาน 22 ชั่วโมงและลงสู่แขนกลของหอปล่อยได้เป็นครั้งแรก การกู้คืนยานส่วนบนเป็นก้าวสำคัญสู่จรวดที่นำกลับมาใช้ใหม่ได้ทั้งระบบ แม้ว่าบูสเตอร์ของเที่ยวบินนี้จะยังไม่สามารถรับกลับได้",
+      "when": "16.11 · Мир",
+      "href": "https://www.reuters.com/world/china/us-allies-team-up-protect-ai-tech-infrastructure-amid-china-rivalry-2026-11-16/",
+      "publishedAt": "2026-11-16",
+      "ru": "США и ещё девять стран подписали декларацию о совместной защите технологий и инфраструктуры цепочки поставок для ИИ. Рабочие группы займутся политикой, внедрением, безопасностью и устойчивостью поставок.",
+      "en": "The United States and nine other countries signed a declaration to coordinate protection of AI technology and supply-chain infrastructure. Working groups will cover policy, adoption, security and supply resilience.",
+      "th": "สหรัฐฯ และอีก 9 ประเทศลงนามปฏิญญาเพื่อประสานการคุ้มครองเทคโนโลยีและโครงสร้างพื้นฐานของห่วงโซ่อุปทาน AI โดยคณะทำงานจะดูแลด้านนโยบาย การนำไปใช้ ความปลอดภัย และความยืดหยุ่นของห่วงโซ่อุปทาน",
       "sources": [
-        "https://www.reuters.com/podcasts/aviation-routers-spacex-cop31-young-male-voters-2026-11-15/"
+        "https://www.reuters.com/world/china/us-allies-team-up-protect-ai-tech-infrastructure-amid-china-rivalry-2026-11-16/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-16T06:05:27+07:00",
-        "sourceUrl": "https://www.reuters.com/podcasts/aviation-routers-spacex-cop31-young-male-voters-2026-11-15/",
-        "summary": "Reuters featured the milestone in its 15 November World News roundup and linked its detailed report. Comparable public comment/share totals were unavailable, so selection reflects prominent international coverage rather than a claimed global popularity rank."
+        "observedAt": "2026-11-17T06:23:00+07:00",
+        "sourceUrl": "https://www.reuters.com/world/china/us-allies-team-up-protect-ai-tech-infrastructure-amid-china-rivalry-2026-11-16/",
+        "summary": "Reuters exposed no public comment, share or view count. Selection reflects a current multilateral technology-policy development; no comparable worldwide engagement metric or global popularity rank was available."
       },
       "nonWar": true
     },
     {
       "category": "thailand",
-      "when": "15.11 · 🇹🇭",
-      "href": "https://www.nationthailand.com/news/general/40073539",
-      "publishedAt": "2026-11-15",
-      "ru": "Девять точек в Бангкоке и соседних провинциях превысили национальный норматив PM2.5 и достигли оранжевого уровня. Департамент по контролю загрязнений ожидает новый рост 19–20 ноября и советует следить за Air4Thai, сократить время на улице и использовать защитную маску.",
-      "en": "Nine locations in Bangkok and nearby provinces exceeded Thailand’s PM2.5 standard and reached the orange health-impact category. The Pollution Control Department expects another rise on 19–20 November and advises checking Air4Thai, limiting outdoor time and using a protective mask.",
-      "th": "พื้นที่ 9 จุดในกรุงเทพฯ และจังหวัดใกล้เคียงมีค่าฝุ่น PM2.5 เกินมาตรฐานและอยู่ในระดับสีส้ม กรมควบคุมมลพิษคาดว่าค่าฝุ่นจะสูงขึ้นอีกในวันที่ 19–20 พฤศจิกายน พร้อมแนะนำให้ติดตาม Air4Thai ลดเวลาอยู่กลางแจ้ง และสวมหน้ากากป้องกันฝุ่น",
+      "when": "16.11 · Таиланд",
+      "href": "https://www.nationthailand.com/news/general/40073570",
+      "publishedAt": "2026-11-16",
+      "ru": "Департамент предотвращения бедствий предупредил 15 провинций центра и юга о сильных дождях 18–22 ноября, возможных паводках, оползнях и подтоплениях. Местным службам поручено подготовить технику и убежища.",
+      "en": "Thailand’s disaster agency warned 15 central and southern provinces of heavy rain from 18–22 November, with possible flash floods, landslides and waterlogging. Local teams were told to ready equipment and shelters.",
+      "th": "กรมป้องกันและบรรเทาสาธารณภัยเตือน 15 จังหวัดภาคกลางและภาคใต้ให้เฝ้าระวังฝนตกหนักช่วง 18–22 พฤศจิกายน ซึ่งอาจเกิดน้ำป่า ดินถล่ม และน้ำท่วมขัง พร้อมสั่งเตรียมอุปกรณ์และศูนย์พักพิง",
       "sources": [
-        "https://www.nationthailand.com/news/general/40073539"
+        "https://www.nationthailand.com/news/general/40073570"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-16T06:05:27+07:00",
-        "sourceUrl": "https://www.nationthailand.com/news/general/40073539",
-        "summary": "The Nation listed this report at number 2 in its visible Most Viewed module at observation time, but did not expose a stable view or comment total. The position is a site-local snapshot, not a national popularity rank."
+        "observedAt": "2026-11-17T06:23:00+07:00",
+        "sourceUrl": "https://www.nationthailand.com/news/general/40073570",
+        "summary": "The source exposed no comparable public comment, share or view total. Selection reflects the scope and immediacy of an official DDPM warning covering 15 provinces, not a national engagement ranking."
       }
     },
     {
       "category": "thailand",
-      "when": "15.11 · 🇹🇭",
-      "href": "https://www.pattayamail.com/thailandnews/thailand-launches-100-baht-travel-deals-to-attract-weekday-visitors-571997",
-      "publishedAt": "2026-11-15",
-      "ru": "TAT анонсировало восемь еженедельных онлайн-раундов с туристическими ваучерами по 100 бат с 15 декабря по 9 февраля. Предложения от более чем 170 участников будут действовать для поездок с понедельника по четверг; это отдельные промоваучеры, а не единая цена на все услуги.",
-      "en": "TAT announced eight weekly online rounds of 100-baht travel vouchers from 15 December to 9 February. Offers from more than 170 participating businesses are for Monday-to-Thursday travel; they are specific promotional vouchers, not a universal 100-baht price for every service.",
-      "th": "ททท. ประกาศจำหน่ายคูปองท่องเที่ยวราคา 100 บาททางออนไลน์ 8 รอบ ตั้งแต่ 15 ธันวาคมถึง 9 กุมภาพันธ์ โดยมีผู้ประกอบการเข้าร่วมกว่า 170 ราย และใช้เดินทางวันจันทร์ถึงพฤหัสบดี คูปองนี้เป็นโปรโมชันเฉพาะรายการ ไม่ใช่ราคากลาง 100 บาทสำหรับทุกบริการ",
+      "when": "16.11 · Таиланд",
+      "href": "https://www.nationthailand.com/news/general/40073577",
+      "publishedAt": "2026-11-16",
+      "ru": "Столичное управление водоснабжения заявило, что водопроводная вода в Бангкоке, Нонтхабури и Самутпракане не затронута сообщениями о загрязнении других рек: сырьё поступает из бассейнов Чао Прайи и Мэклонга и проверяется круглосуточно.",
+      "en": "The Metropolitan Waterworks Authority said tap water in Bangkok, Nonthaburi and Samut Prakan is unaffected by reported contamination in other rivers. Its raw water comes from the Chao Phraya and Mae Klong basins and is monitored around the clock.",
+      "th": "การประปานครหลวงยืนยันว่าน้ำประปาในกรุงเทพฯ นนทบุรี และสมุทรปราการไม่ได้รับผลกระทบจากข่าวการปนเปื้อนในแม่น้ำสายอื่น เพราะใช้น้ำดิบจากลุ่มเจ้าพระยาและแม่กลอง พร้อมตรวจสอบตลอด 24 ชั่วโมง",
       "sources": [
-        "https://www.pattayamail.com/thailandnews/thailand-launches-100-baht-travel-deals-to-attract-weekday-visitors-571997"
+        "https://www.nationthailand.com/news/general/40073577"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-16T06:05:27+07:00",
-        "sourceUrl": "https://www.pattayamail.com/thailandnews/thailand-launches-100-baht-travel-deals-to-attract-weekday-visitors-571997",
-        "summary": "The article displayed 633 views and 0 comments at observation time. This source-page counter is useful only within the available Pattaya Mail sample and is not a national popularity ranking."
+        "observedAt": "2026-11-17T06:23:00+07:00",
+        "sourceUrl": "https://www.nationthailand.com/news/general/40073577",
+        "summary": "The article appeared at No. 4 in The Nation's visible Most Viewed module at observation time; no exact view or comment count was exposed. This is a site-local snapshot, not a nationwide popularity ranking."
       }
     },
     {
       "category": "pattaya",
-      "when": "15.11 · 📍",
-      "href": "https://www.pattayamail.com/news/small-piece-of-paper-helps-pattaya-tourist-police-reunite-lithuanian-visitor-with-hotel-571927",
-      "publishedAt": "2026-11-15",
-      "ru": "Туристическая полиция Паттайи помогла гостю из Литвы, который не помнил название отеля и остался без телефона и ключа. Название на найденной в вещах бумажке позволило подтвердить бронь в отеле Джомтьена и организовать безопасное возвращение.",
-      "en": "Pattaya Tourist Police assisted a Lithuanian visitor who could not remember his hotel and had no phone or room key. A hotel name found on a small piece of paper helped staff confirm the Jomtien booking and arrange his safe return.",
-      "th": "ตำรวจท่องเที่ยวพัทยาช่วยนักท่องเที่ยวชาวลิทัวเนียที่จำชื่อโรงแรมไม่ได้และไม่มีโทรศัพท์หรือกุญแจห้อง กระดาษแผ่นเล็กที่มีชื่อโรงแรมช่วยให้เจ้าหน้าที่ยืนยันการจองในจอมเทียนและจัดรถส่งกลับที่พักอย่างปลอดภัย",
+      "when": "16.11 · Паттайя",
+      "href": "https://thepattayanews.com/2026/11/16/chauffeur-hits-russian-woman-crossing-jomtien-second-road-says-tree-shadows-blocked-his-view/",
+      "publishedAt": "2026-11-16",
+      "ru": "На Второй дороге Джомтьена автомобиль сбил 39-летнюю россиянку. Спасатели провели реанимацию и доставили её в больницу; полиция изучает записи камер, а сообщение о последующей смерти пока подано источником как предварительное.",
+      "en": "A car struck a 39-year-old Russian woman on Jomtien Second Road. Rescuers performed CPR and took her to hospital; police are reviewing CCTV, while the report describes news of her later death as preliminary.",
+      "th": "รถยนต์ชนหญิงชาวรัสเซียวัย 39 ปีบนถนนจอมเทียนสายสอง เจ้าหน้าที่กู้ภัยทำ CPR และนำส่งโรงพยาบาล ตำรวจกำลังตรวจสอบกล้องวงจรปิด ส่วนรายงานว่าเสียชีวิตภายหลังยังเป็นข้อมูลเบื้องต้นตามแหล่งข่าว",
       "sources": [
-        "https://www.pattayamail.com/news/small-piece-of-paper-helps-pattaya-tourist-police-reunite-lithuanian-visitor-with-hotel-571927"
+        "https://thepattayanews.com/2026/11/16/chauffeur-hits-russian-woman-crossing-jomtien-second-road-says-tree-shadows-blocked-his-view/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-16T06:05:27+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/small-piece-of-paper-helps-pattaya-tourist-police-reunite-lithuanian-visitor-with-hotel-571927",
-        "summary": "The article displayed 1,683 views and 0 comments at observation time, compared with 1,764 views and 0 comments for the other selected Pattaya report. These are source-page counters, not a citywide popularity ranking."
+        "observedAt": "2026-11-17T06:23:00+07:00",
+        "sourceUrl": "https://thepattayanews.com/2026/11/16/chauffeur-hits-russian-woman-crossing-jomtien-second-road-says-tree-shadows-blocked-his-view/",
+        "summary": "The publisher exposed no public view or comment total. The story was listed in both Top/Recent and Selected Top Articles on the Pattaya News homepage; those placements are editorial signals, not a citywide engagement rank."
       }
     },
     {
       "category": "pattaya",
-      "when": "15.11 · 📍",
-      "href": "https://www.pattayamail.com/news/pattaya-tourist-police-assist-foreign-couple-after-condo-washing-machine-fire-571923",
-      "publishedAt": "2026-11-15",
-      "ru": "Пожарные локализовали возгорание стиральной машины в квартире на пятом этаже кондоминиума на Soi Phra Tamnak 6. Владелец и партнёр успели выйти без травм; туристическая полиция помогла им и координировала дальнейшие действия со следователем.",
-      "en": "Firefighters contained a washing-machine fire in a fifth-floor condominium room on Soi Phra Tamnak 6. The owner and partner escaped without injury; Tourist Police assisted them and coordinated the next steps with the investigating officer.",
-      "th": "เจ้าหน้าที่ดับเพลิงควบคุมเหตุไฟไหม้เครื่องซักผ้าในห้องพักชั้น 5 ของคอนโดบนซอยพระตำหนัก 6 ได้ เจ้าของห้องและคู่ของเขาออกมาได้โดยไม่บาดเจ็บ ขณะที่ตำรวจท่องเที่ยวให้ความช่วยเหลือและประสานขั้นตอนต่อไปกับพนักงานสอบสวน",
+      "when": "16.11 · Паттайя",
+      "href": "https://thepattayanews.com/2026/11/16/french-tourist-crashes-motorcycle-into-electricity-pole-in-pattaya-refuses-to-go-to-hospital-despite-significant-injuries/",
+      "publishedAt": "2026-11-16",
+      "ru": "46-летний турист из Франции потерял управление мотоциклом и врезался в опору на Сои Мап Яй Лиа 11. Спасатели оказали первую помощь, но он отказался ехать в больницу; полиция занялась поиском его близких.",
+      "en": "A 46-year-old French tourist lost control of a motorcycle and hit a utility pole on Soi Mab Yai Lia 11. Rescuers gave first aid, but he declined hospital transport; police began trying to locate his relatives.",
+      "th": "นักท่องเที่ยวชาวฝรั่งเศสวัย 46 ปีเสียหลักขี่รถจักรยานยนต์ชนเสาไฟฟ้าในซอยมาบยายเลีย 11 เจ้าหน้าที่กู้ภัยปฐมพยาบาล แต่เขาปฏิเสธไปโรงพยาบาล และตำรวจพยายามติดต่อญาติ",
       "sources": [
-        "https://www.pattayamail.com/news/pattaya-tourist-police-assist-foreign-couple-after-condo-washing-machine-fire-571923"
+        "https://thepattayanews.com/2026/11/16/french-tourist-crashes-motorcycle-into-electricity-pole-in-pattaya-refuses-to-go-to-hospital-despite-significant-injuries/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-16T06:05:27+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/pattaya-tourist-police-assist-foreign-couple-after-condo-washing-machine-fire-571923",
-        "summary": "The article displayed 1,764 views and 0 comments at observation time, compared with 1,683 views and 0 comments for the other selected Pattaya report. These are source-page counters, not a citywide popularity ranking."
+        "observedAt": "2026-11-17T06:23:00+07:00",
+        "sourceUrl": "https://thepattayanews.com/2026/11/16/french-tourist-crashes-motorcycle-into-electricity-pole-in-pattaya-refuses-to-go-to-hospital-despite-significant-injuries/",
+        "summary": "The publisher exposed no public view or comment total. The story appeared in both Top/Recent and Selected Top Articles on the Pattaya News homepage; no comparable citywide engagement metric was available."
       }
     }
   ],
@@ -366,5 +366,5 @@
       "verifiedAt": "2026-11-16"
     }
   ],
-  "selection": "Reviewed 2026-11-16 Asia/Bangkok: exactly one non-war world story, two Thailand and two Pattaya stories from sources dated 15 November. Pattaya Mail supplied visible article view/comment counters, while The Nation exposed a most-viewed position for the PM2.5 report; Reuters exposed no comparable public engagement total. These observations support relative selection only and do not establish a global, national or citywide popularity ranking. A newly attributed DSI investigation into unauthorized loan apps was added; the oldest card was retired to keep the active set at 12, and all retained cards keep their original dates. No Telegram sending."
+  "selection": "Reviewed 2026-11-17 Asia/Bangkok: exactly one non-war world story, two Thailand and two Pattaya stories, all from sources dated 16 November. The Nation showed the Bangkok tap-water report at No. 4 in its visible Most Viewed module; the Pattaya publisher placed both local reports in Top/Recent and Selected Top Articles. Reuters and the other selected pages exposed no comparable public engagement totals. These observations support selection only and do not establish a global, national or citywide popularity ranking. Review of the fresh official anti-scam results found no new specific warning dated 16–17 November suitable for a new card, so all 12 active warnings and their original dates are preserved. No Telegram sending."
 }
