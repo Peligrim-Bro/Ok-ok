@@ -1279,6 +1279,129 @@ export const POSTS = [{
   ],
   "brandCTA": "share",
   "text": "Приключения Оки #31 · Ночной светлячок\n\nОдин потерянный карандаш, маленький помощник и новый рисунок.\n\nВымышленная история с маскотом Оки; изображение создано с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_031"
+},
+{
+  "id": "okok-destination-before-ride-20261120",
+  "approved": true,
+  "publishAt": "2026-11-20T09:00:00+07:00",
+  "expiresAt": "2026-11-20T12:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-destination-before-ride-20261120.jpg",
+  "topics": ["Карты", "Маршруты", "Советы"],
+  "brandCTA": "share",
+  "text": "Сначала точка, потом поездка\n\nПеред заказом транспорта сохрани точку назначения и отдельное фото нужного входа. Если водитель остановится с другой стороны здания, по снимку проще объяснить, куда подъехать.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=destination_before_ride_20261120"
+},
+{
+  "id": "okok-write-total-20261120",
+  "approved": true,
+  "publishAt": "2026-11-20T14:00:00+07:00",
+  "expiresAt": "2026-11-20T17:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-write-total-20261120.jpg",
+  "topics": ["Фразы", "Английский", "Бюджет"],
+  "brandCTA": "share",
+  "text": "Сумму лучше увидеть, чем расслышать\n\nCould you write the total down, please?\nЗапишите, пожалуйста, итоговую сумму.\n\nПроверь написанное до оплаты и сохрани чек, если он есть.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=write_total_20261120",
+  "copyButtons": [{"label": "Попросить записать сумму", "text": "Could you write the total down, please?"}]
+},
+{
+  "id": "okok-split-shared-items-20261120",
+  "approved": true,
+  "publishAt": "2026-11-20T19:30:00+07:00",
+  "expiresAt": "2026-11-20T22:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-split-shared-items-20261120.jpg",
+  "topics": ["Бюджет", "Обновления", "Советы"],
+  "brandCTA": "share",
+  "text": "Общие блюда — отдельная строка\n\nВ OK-OK SPLIT сначала отметь участников, затем общие и личные позиции. Инструмент помогает посчитать доли, но не проводит оплату: перед переводом ещё раз сверь итог с чеком.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=split_shared_items_20261120"
+},
+{
+  "id": "okok-oki-comic-032-backpack-character-20261120",
+  "approved": true,
+  "publishAt": "2026-11-20T20:30:00+07:00",
+  "expiresAt": "2026-11-20T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-032-backpack-character-20261120.jpg",
+  "topics": ["Оки", "Комиксы"],
+  "brandCTA": "share",
+  "text": "Приключения Оки #32 · Рюкзак с характером\n\nПара тропических находок — и рюкзак Оки сам готов к путешествию.\n\nВымышленная история с маскотом Оки; изображение создано с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_backpack_character_032"
+},
+{
+  "id": "okok-rental-scratch-photo-20261121",
+  "approved": true,
+  "publishAt": "2026-11-21T09:00:00+07:00",
+  "expiresAt": "2026-11-21T12:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-rental-scratch-photo-20261121.jpg",
+  "topics": ["Байки", "Безопасность", "Советы"],
+  "brandCTA": "share",
+  "text": "Царапина до поездки — в кадр\n\nПеред арендой сфотографируй уже имеющиеся повреждения вместе с представителем проката. Сохрани снимки и условия возврата до окончания аренды; фото дополняют договорённость, а не заменяют её.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=rental_scratch_photo_20261121"
+},
+{
+  "id": "okok-final-price-20261121",
+  "approved": true,
+  "publishAt": "2026-11-21T14:00:00+07:00",
+  "expiresAt": "2026-11-21T17:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-final-price-20261121.jpg",
+  "topics": ["Фразы", "Английский", "Бюджет"],
+  "brandCTA": "share",
+  "text": "Цена окончательная? Один короткий вопрос\n\nIs this the final price?\nЭто окончательная цена?\n\nУточни итог до оплаты, особенно если обсуждались дополнения или доставка.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=final_price_20261121",
+  "copyButtons": [{"label": "Уточнить итоговую цену", "text": "Is this the final price?"}]
+},
+{
+  "id": "okok-offline-return-plan-20261121",
+  "approved": true,
+  "publishAt": "2026-11-21T19:30:00+07:00",
+  "expiresAt": "2026-11-21T22:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-offline-return-plan-20261121.jpg",
+  "topics": ["Карты", "Маршруты", "Советы"],
+  "brandCTA": "share",
+  "text": "Обратный путь без одного процента заряда\n\nДо прогулки сохрани офлайн адрес, ориентир у входа и способ вернуться. Небольшая бумажная карточка и заряженный пауэрбанк полезнее, чем надежда на связь в последний момент.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=offline_return_plan_20261121"
+},
+{
+  "id": "okok-oki-comic-033-menu-boat-20261121",
+  "approved": true,
+  "publishAt": "2026-11-21T20:30:00+07:00",
+  "expiresAt": "2026-11-21T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-033-menu-boat-20261121.jpg",
+  "topics": ["Оки", "Комиксы"],
+  "brandCTA": "share",
+  "text": "Приключения Оки #33 · Лодка из меню\n\nБумажный кораблик Оки выдержал волну и пришвартовался прямо у десерта.\n\nВымышленная история с маскотом Оки; изображение создано с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_menu_boat_033"
+},
+{
+  "id": "okok-split-cash-20261122",
+  "approved": true,
+  "publishAt": "2026-11-22T09:00:00+07:00",
+  "expiresAt": "2026-11-22T12:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-split-cash-20261122.jpg",
+  "topics": ["Безопасность", "Бюджет", "Советы"],
+  "brandCTA": "share",
+  "text": "Не носи весь запас в одном месте\n\nНа прогулку возьми нужную сумму, а резерв и запасную карту храни отдельно. Не показывай содержимое кошелька на виду и не сохраняй коды рядом с картой.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=split_cash_20261122"
+},
+{
+  "id": "okok-which-entrance-20261122",
+  "approved": true,
+  "publishAt": "2026-11-22T14:00:00+07:00",
+  "expiresAt": "2026-11-22T17:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-which-entrance-20261122.jpg",
+  "topics": ["Фразы", "Английский", "Маршруты"],
+  "brandCTA": "share",
+  "text": "Когда входов несколько\n\nWhich entrance should I use?\nКаким входом мне воспользоваться?\n\nПокажи точку на карте и уточни вход до того, как обходить здание по кругу.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=which_entrance_20261122",
+  "copyButtons": [{"label": "Уточнить нужный вход", "text": "Which entrance should I use?"}]
+},
+{
+  "id": "okok-wet-entrance-20261122",
+  "approved": true,
+  "publishAt": "2026-11-22T19:30:00+07:00",
+  "expiresAt": "2026-11-22T22:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-wet-entrance-20261122.jpg",
+  "topics": ["Погода", "Безопасность", "Советы"],
+  "brandCTA": "share",
+  "text": "После дождя вход меняет характер\n\nУбери зонт, вытри подошву и не спеши на гладком полу. Вода у порога может быть незаметна из-за бликов — одна пауза безопаснее эффектного шага.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=wet_entrance_20261122"
+},
+{
+  "id": "okok-oki-comic-034-pineapple-shadow-20261122",
+  "approved": true,
+  "publishAt": "2026-11-22T20:30:00+07:00",
+  "expiresAt": "2026-11-22T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-034-pineapple-shadow-20261122.jpg",
+  "topics": ["Оки", "Комиксы"],
+  "brandCTA": "share",
+  "text": "Приключения Оки #34 · Тень ананаса\n\nОгромная колючая тень оказалась маленьким ананасом с большим талантом.\n\nВымышленная история с маскотом Оки; изображение создано с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_pineapple_shadow_034"
 }
 ];
 
