@@ -1,90 +1,90 @@
 {
-  "verifiedAt": "2026-11-17",
+  "verifiedAt": "2026-11-18",
   "news": [
     {
       "category": "world",
-      "when": "16.11 · Мир",
-      "href": "https://www.reuters.com/world/china/us-allies-team-up-protect-ai-tech-infrastructure-amid-china-rivalry-2026-11-16/",
-      "publishedAt": "2026-11-16",
-      "ru": "США и ещё девять стран подписали декларацию о совместной защите технологий и инфраструктуры цепочки поставок для ИИ. Рабочие группы займутся политикой, внедрением, безопасностью и устойчивостью поставок.",
-      "en": "The United States and nine other countries signed a declaration to coordinate protection of AI technology and supply-chain infrastructure. Working groups will cover policy, adoption, security and supply resilience.",
-      "th": "สหรัฐฯ และอีก 9 ประเทศลงนามปฏิญญาเพื่อประสานการคุ้มครองเทคโนโลยีและโครงสร้างพื้นฐานของห่วงโซ่อุปทาน AI โดยคณะทำงานจะดูแลด้านนโยบาย การนำไปใช้ ความปลอดภัย และความยืดหยุ่นของห่วงโซ่อุปทาน",
+      "when": "17.11 · Мир",
+      "href": "https://www.reuters.com/sustainability/cop/cop31-ai-pledge-fails-lure-us-big-tech-2026-11-17/",
+      "publishedAt": "2026-11-17",
+      "ru": "Поддержанную ООН инициативу по снижению климатического следа ИИ подписали 90 участников, но из крупнейших технологических компаний к ней пока присоединилась только Alibaba. Документ предлагает добровольно переходить на более чистую энергию, повышать эффективность инфраструктуры и учитывать выбросы.",
+      "en": "A UN-backed initiative to reduce AI’s climate footprint drew 90 endorsements, but Alibaba is so far the only major technology company to sign. The voluntary pledge calls for cleaner energy, more efficient infrastructure and emissions tracking.",
+      "th": "โครงการที่สหประชาชาติสนับสนุนเพื่อลดผลกระทบด้านสภาพภูมิอากาศจาก AI ได้รับการรับรอง 90 ราย แต่ในบรรดาบริษัทเทคโนโลยีรายใหญ่มีเพียง Alibaba ที่ลงนามในขณะนี้ โดยข้อตกลงแบบสมัครใจเสนอให้ใช้พลังงานสะอาด เพิ่มประสิทธิภาพโครงสร้างพื้นฐาน และติดตามการปล่อยก๊าซ",
       "sources": [
-        "https://www.reuters.com/world/china/us-allies-team-up-protect-ai-tech-infrastructure-amid-china-rivalry-2026-11-16/"
+        "https://www.reuters.com/sustainability/cop/cop31-ai-pledge-fails-lure-us-big-tech-2026-11-17/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-17T06:23:00+07:00",
-        "sourceUrl": "https://www.reuters.com/world/china/us-allies-team-up-protect-ai-tech-infrastructure-amid-china-rivalry-2026-11-16/",
-        "summary": "Reuters exposed no public comment, share or view count. Selection reflects a current multilateral technology-policy development; no comparable worldwide engagement metric or global popularity rank was available."
+        "observedAt": "2026-11-18T06:30:00+07:00",
+        "sourceUrl": "https://www.reuters.com/sustainability/cop/cop31-ai-pledge-fails-lure-us-big-tech-2026-11-17/",
+        "summary": "Reuters exposed no public view, share or comment count. Selection reflects a current UN-backed climate and technology initiative with 90 reported endorsements; no comparable worldwide engagement metric or global popularity rank was available."
       },
       "nonWar": true
     },
     {
       "category": "thailand",
-      "when": "16.11 · Таиланд",
-      "href": "https://www.nationthailand.com/news/general/40073570",
-      "publishedAt": "2026-11-16",
-      "ru": "Департамент предотвращения бедствий предупредил 15 провинций центра и юга о сильных дождях 18–22 ноября, возможных паводках, оползнях и подтоплениях. Местным службам поручено подготовить технику и убежища.",
-      "en": "Thailand’s disaster agency warned 15 central and southern provinces of heavy rain from 18–22 November, with possible flash floods, landslides and waterlogging. Local teams were told to ready equipment and shelters.",
-      "th": "กรมป้องกันและบรรเทาสาธารณภัยเตือน 15 จังหวัดภาคกลางและภาคใต้ให้เฝ้าระวังฝนตกหนักช่วง 18–22 พฤศจิกายน ซึ่งอาจเกิดน้ำป่า ดินถล่ม และน้ำท่วมขัง พร้อมสั่งเตรียมอุปกรณ์และศูนย์พักพิง",
+      "when": "18.11 · Таиланд",
+      "href": "https://www.pattayamail.com/thailandnews/anutin-and-trump-sign-joint-statement-on-thailand-us-trade-negotiations-572222",
+      "publishedAt": "2026-11-18",
+      "ru": "Таиланд и США подписали совместное заявление о прогрессе в переговорах по взаимной торговле. Это ещё не окончательное соглашение: сторонам предстоят юридическая доработка, внутренние процедуры и рассмотрение в парламенте Таиланда.",
+      "en": "Thailand and the United States signed a joint statement recording progress in reciprocal trade negotiations. It is not a final agreement: legal drafting, domestic procedures and consideration by Thailand’s parliament still remain.",
+      "th": "ไทยและสหรัฐฯ ลงนามแถลงการณ์ร่วมยืนยันความคืบหน้าการเจรจาการค้าต่างตอบแทน แต่ยังไม่ใช่ข้อตกลงฉบับสุดท้าย โดยยังต้องจัดทำถ้อยคำทางกฎหมาย ดำเนินขั้นตอนภายใน และเสนอให้รัฐสภาไทยพิจารณา",
       "sources": [
-        "https://www.nationthailand.com/news/general/40073570"
+        "https://www.pattayamail.com/thailandnews/anutin-and-trump-sign-joint-statement-on-thailand-us-trade-negotiations-572222"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-17T06:23:00+07:00",
-        "sourceUrl": "https://www.nationthailand.com/news/general/40073570",
-        "summary": "The source exposed no comparable public comment, share or view total. Selection reflects the scope and immediacy of an official DDPM warning covering 15 provinces, not a national engagement ranking."
+        "observedAt": "2026-11-18T06:30:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/thailandnews/anutin-and-trump-sign-joint-statement-on-thailand-us-trade-negotiations-572222",
+        "summary": "The source page displayed 356 views and 0 comments at observation time. These are publisher-local counters and do not establish a nationwide popularity ranking."
       }
     },
     {
       "category": "thailand",
-      "when": "16.11 · Таиланд",
-      "href": "https://www.nationthailand.com/news/general/40073577",
-      "publishedAt": "2026-11-16",
-      "ru": "Столичное управление водоснабжения заявило, что водопроводная вода в Бангкоке, Нонтхабури и Самутпракане не затронута сообщениями о загрязнении других рек: сырьё поступает из бассейнов Чао Прайи и Мэклонга и проверяется круглосуточно.",
-      "en": "The Metropolitan Waterworks Authority said tap water in Bangkok, Nonthaburi and Samut Prakan is unaffected by reported contamination in other rivers. Its raw water comes from the Chao Phraya and Mae Klong basins and is monitored around the clock.",
-      "th": "การประปานครหลวงยืนยันว่าน้ำประปาในกรุงเทพฯ นนทบุรี และสมุทรปราการไม่ได้รับผลกระทบจากข่าวการปนเปื้อนในแม่น้ำสายอื่น เพราะใช้น้ำดิบจากลุ่มเจ้าพระยาและแม่กลอง พร้อมตรวจสอบตลอด 24 ชั่วโมง",
+      "when": "18.11 · Таиланд",
+      "href": "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-no-7-315-2026",
+      "publishedAt": "2026-11-18",
+      "ru": "Метеодепартамент предупредил о сильных и местами очень сильных дождях на юге 18–22 ноября. В нижней части Сиамского залива ожидаются волны 2–3 метра и выше во время гроз; малым судам рекомендовано оставаться у берега.",
+      "en": "Thailand’s Meteorological Department warned of heavy to very heavy rain in the South from 18–22 November. Waves in the lower Gulf may reach 2–3 metres and higher in thunderstorms, and small boats should remain ashore.",
+      "th": "กรมอุตุนิยมวิทยาเตือนภาคใต้มีฝนตกหนักถึงหนักมากบางแห่งช่วง 18–22 พฤศจิกายน คลื่นในอ่าวไทยตอนล่างสูง 2–3 เมตรและมากกว่า 3 เมตรในบริเวณฝนฟ้าคะนอง โดยเรือเล็กควรงดออกจากฝั่ง",
       "sources": [
-        "https://www.nationthailand.com/news/general/40073577"
+        "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-no-7-315-2026"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-17T06:23:00+07:00",
-        "sourceUrl": "https://www.nationthailand.com/news/general/40073577",
-        "summary": "The article appeared at No. 4 in The Nation's visible Most Viewed module at observation time; no exact view or comment count was exposed. This is a site-local snapshot, not a nationwide popularity ranking."
+        "observedAt": "2026-11-18T06:30:00+07:00",
+        "sourceUrl": "https://www.tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-no-7-315-2026",
+        "summary": "The official TMD advisory exposed no public view, share or comment total. Selection reflects a same-day national weather warning with direct safety relevance, not an engagement ranking."
       }
     },
     {
       "category": "pattaya",
-      "when": "16.11 · Паттайя",
-      "href": "https://thepattayanews.com/2026/11/16/chauffeur-hits-russian-woman-crossing-jomtien-second-road-says-tree-shadows-blocked-his-view/",
-      "publishedAt": "2026-11-16",
-      "ru": "На Второй дороге Джомтьена автомобиль сбил 39-летнюю россиянку. Спасатели провели реанимацию и доставили её в больницу; полиция изучает записи камер, а сообщение о последующей смерти пока подано источником как предварительное.",
-      "en": "A car struck a 39-year-old Russian woman on Jomtien Second Road. Rescuers performed CPR and took her to hospital; police are reviewing CCTV, while the report describes news of her later death as preliminary.",
-      "th": "รถยนต์ชนหญิงชาวรัสเซียวัย 39 ปีบนถนนจอมเทียนสายสอง เจ้าหน้าที่กู้ภัยทำ CPR และนำส่งโรงพยาบาล ตำรวจกำลังตรวจสอบกล้องวงจรปิด ส่วนรายงานว่าเสียชีวิตภายหลังยังเป็นข้อมูลเบื้องต้นตามแหล่งข่าว",
+      "when": "18.11 · Паттайя",
+      "href": "https://www.pattayamail.com/news/chonburi-tourism-faces-a-changing-market-not-a-lost-destination-572247",
+      "publishedAt": "2026-11-18",
+      "ru": "Турофис TAT в Паттайе сообщил, что число иностранных туристов в Чонбури снизилось примерно на 2% год к году, тогда как внутренний туризм растёт. Новая кампания будет продвигать менее известные места и распределять поток за пределами центра Паттайи.",
+      "en": "TAT’s Pattaya office said foreign arrivals in Chonburi are down about 2% year on year while domestic tourism is growing. A new campaign will promote lesser-known attractions and spread visitors beyond central Pattaya.",
+      "th": "สำนักงาน ททท. พัทยาระบุว่านักท่องเที่ยวต่างชาติในชลบุรีลดลงราว 2% จากปีก่อน ขณะที่ตลาดไทยยังเติบโต โดยแคมเปญใหม่จะโปรโมตแหล่งท่องเที่ยวที่คนยังไม่ค่อยรู้จักและกระจายนักท่องเที่ยวออกจากใจกลางพัทยา",
       "sources": [
-        "https://thepattayanews.com/2026/11/16/chauffeur-hits-russian-woman-crossing-jomtien-second-road-says-tree-shadows-blocked-his-view/"
+        "https://www.pattayamail.com/news/chonburi-tourism-faces-a-changing-market-not-a-lost-destination-572247"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-17T06:23:00+07:00",
-        "sourceUrl": "https://thepattayanews.com/2026/11/16/chauffeur-hits-russian-woman-crossing-jomtien-second-road-says-tree-shadows-blocked-his-view/",
-        "summary": "The publisher exposed no public view or comment total. The story was listed in both Top/Recent and Selected Top Articles on the Pattaya News homepage; those placements are editorial signals, not a citywide engagement rank."
+        "observedAt": "2026-11-18T06:30:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/chonburi-tourism-faces-a-changing-market-not-a-lost-destination-572247",
+        "summary": "The source page displayed 304 views and 0 comments at observation time. Compared with 358 views for the other selected Pattaya report, this is a publisher-local snapshot, not a citywide popularity rank."
       }
     },
     {
       "category": "pattaya",
-      "when": "16.11 · Паттайя",
-      "href": "https://thepattayanews.com/2026/11/16/french-tourist-crashes-motorcycle-into-electricity-pole-in-pattaya-refuses-to-go-to-hospital-despite-significant-injuries/",
-      "publishedAt": "2026-11-16",
-      "ru": "46-летний турист из Франции потерял управление мотоциклом и врезался в опору на Сои Мап Яй Лиа 11. Спасатели оказали первую помощь, но он отказался ехать в больницу; полиция занялась поиском его близких.",
-      "en": "A 46-year-old French tourist lost control of a motorcycle and hit a utility pole on Soi Mab Yai Lia 11. Rescuers gave first aid, but he declined hospital transport; police began trying to locate his relatives.",
-      "th": "นักท่องเที่ยวชาวฝรั่งเศสวัย 46 ปีเสียหลักขี่รถจักรยานยนต์ชนเสาไฟฟ้าในซอยมาบยายเลีย 11 เจ้าหน้าที่กู้ภัยปฐมพยาบาล แต่เขาปฏิเสธไปโรงพยาบาล และตำรวจพยายามติดต่อญาติ",
+      "when": "18.11 · Паттайя",
+      "href": "https://www.pattayamail.com/news/singaporean-drug-suspects-arrested-at-pattaya-condo-after-cross-border-search-572243",
+      "publishedAt": "2026-11-18",
+      "ru": "В кондоминиуме Паттайи задержали двух граждан Сингапура за нарушение миграционных правил; один также разыскивается в Сингапуре по делу о наркотиках. Изъятые устройства изучают, а связанные с наркотиками утверждения остаются предметом расследования.",
+      "en": "Two Singaporean nationals were detained at a Pattaya condominium over immigration offences; one is also wanted in Singapore in a drug case. Seized devices are being examined, and the drug-related allegations remain under investigation.",
+      "th": "ชาวสิงคโปร์ 2 คนถูกควบคุมตัวที่คอนโดในพัทยาในคดีตรวจคนเข้าเมือง โดยหนึ่งในนั้นมีหมายจับจากสิงคโปร์ในคดียาเสพติด อุปกรณ์ที่ยึดได้ยังอยู่ระหว่างตรวจสอบ และข้อกล่าวหาเกี่ยวกับยาเสพติดยังอยู่ในขั้นสอบสวน",
       "sources": [
-        "https://thepattayanews.com/2026/11/16/french-tourist-crashes-motorcycle-into-electricity-pole-in-pattaya-refuses-to-go-to-hospital-despite-significant-injuries/"
+        "https://www.pattayamail.com/news/singaporean-drug-suspects-arrested-at-pattaya-condo-after-cross-border-search-572243"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-17T06:23:00+07:00",
-        "sourceUrl": "https://thepattayanews.com/2026/11/16/french-tourist-crashes-motorcycle-into-electricity-pole-in-pattaya-refuses-to-go-to-hospital-despite-significant-injuries/",
-        "summary": "The publisher exposed no public view or comment total. The story appeared in both Top/Recent and Selected Top Articles on the Pattaya News homepage; no comparable citywide engagement metric was available."
+        "observedAt": "2026-11-18T06:30:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/singaporean-drug-suspects-arrested-at-pattaya-condo-after-cross-border-search-572243",
+        "summary": "The source page displayed 358 views and 0 comments at observation time, compared with 304 views for the selected Chonburi tourism report. These source-page counters do not establish a citywide popularity ranking."
       }
     }
   ],
@@ -366,5 +366,5 @@
       "verifiedAt": "2026-11-16"
     }
   ],
-  "selection": "Reviewed 2026-11-17 Asia/Bangkok: exactly one non-war world story, two Thailand and two Pattaya stories, all from sources dated 16 November. The Nation showed the Bangkok tap-water report at No. 4 in its visible Most Viewed module; the Pattaya publisher placed both local reports in Top/Recent and Selected Top Articles. Reuters and the other selected pages exposed no comparable public engagement totals. These observations support selection only and do not establish a global, national or citywide popularity ranking. Review of the fresh official anti-scam results found no new specific warning dated 16–17 November suitable for a new card, so all 12 active warnings and their original dates are preserved. No Telegram sending."
+  "selection": "Reviewed 2026-11-18 Asia/Bangkok: exactly one non-war world story, two Thailand and two Pattaya stories from sources dated 17–18 November, with four items published on the current Bangkok calendar date. Pattaya Mail exposed publisher-local view/comment counters for three selected reports; Reuters and the official TMD advisory exposed no comparable public engagement totals. These observations support relative selection only and do not establish a global, national or citywide popularity ranking. The official ACSC dashboard showed November category statistics but no new specific scam warning dated 17–18 November suitable for a new card, so all 12 active warnings and their original dates are preserved. No Telegram sending."
 }
