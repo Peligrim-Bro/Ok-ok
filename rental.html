@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#0b1b3a" />
+    <meta
+      name="description"
+      content="OK-OK rental calculator: upfront costs, monthly bills and apartment comparison."
+    />
+    <title>OK-OK · Аренда</title>
+    <link rel="stylesheet" href="./tools/rental.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <a href="/" id="home">← OK-OK</a>
+        <div class="actions">
+          <button id="theme" type="button" aria-label="Theme">◐</button
+          ><button id="lang" type="button">EN</button>
+        </div>
+      </header>
+      <h1 data-t="title">Посчитать аренду</h1>
+      <p data-t="intro">Все суммы — в батах. Условия берём из договора.</p>
+      <nav class="tabs" aria-label="Apartments">
+        <button type="button" id="tabA" aria-pressed="true">A</button
+        ><button type="button" id="tabB" aria-pressed="false">B</button
+        ><button type="button" id="compare" data-t="compare">Сравнить</button>
+      </nav>
+      <p id="example" data-t="example">
+        Показан пример, не рыночные тарифы. Измените все условия под свою
+        квартиру.
+      </p>
+      <section class="result" aria-labelledby="result-title">
+        <h2 id="result-title" data-t="result">Ваш расчёт</h2>
+        <div id="totals" aria-live="polite" aria-atomic="true"></div>
+      </section>
+      <section id="editor">
+        <h2 id="apartment">Квартира A</h2>
+        <form id="rentalForm" novalidate>
+          <div id="baseFields"></div>
+          <details>
+            <summary data-t="utilities">Коммунальные и доплаты</summary>
+            <p data-t="unknown">
+              Не знаете значение — оставьте пустым. Нет платежа — укажите 0.
+            </p>
+            <div id="utilityFields"></div>
+          </details>
+          <p id="error" role="alert"></p>
+        </form>
+        <p data-t="advanceNote">
+          Предоплата — вся аренда, которую платите при въезде, включая первый
+          месяц. Ещё раз аренду к ней не прибавляем.
+        </p>
+      </section>
+      <section id="comparison" hidden>
+        <h2 data-t="comparison">Сравнение квартир</h2>
+        <div id="comparisonBody"></div>
+        <button type="button" id="edit" data-t="edit">Изменить условия</button>
+      </section>
+      <div class="footer-actions">
+        <button class="primary" type="button" id="export" data-t="export">
+          Сохранить картинкой</button
+        ><button type="button" id="reset" data-t="reset">
+          Очистить квартиру</button
+        ><button type="button" id="demo" data-t="demo">Загрузить пример</button>
+      </div>
+      <p id="status" role="status"></p>
+      <div id="imageFallback" hidden>
+        <p data-t="imageHint">
+          Если файл не скачался, удерживайте изображение и сохраните его.
+        </p>
+        <a id="imageDownload" download="okok-rental.png" data-t="download"
+          >Скачать PNG</a
+        ><img id="resultImage" alt="" />
+      </div>
+      <footer>
+        <p data-t="privacy">
+          Расчёт сохраняется только в этом браузере. Без регистрации.
+        </p>
+        <p data-t="depositNote">
+          Депозит показан отдельно: его возврат зависит от договора и состояния
+          жилья. Коммунальные — оценка по вашему расходу.
+        </p>
+      </footer>
+      <noscript
+        >Для расчёта включите JavaScript. / Enable JavaScript to
+        calculate.</noscript
+      >
+    </main>
+    <script type="module" src="./tools/rental-ui.mjs"></script>
+  </body>
+</html>

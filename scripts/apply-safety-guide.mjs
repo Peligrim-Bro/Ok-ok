@@ -67,6 +67,7 @@ const home=String.raw`
 <a class="home-tile tool-tile" href="https://nomads.com/" target="_blank" rel="noopener"><span class="tile-symbol" aria-hidden="true">🛏</span>\${cityText('Жильё','Stays','ที่พัก')}</a>
 <a class="home-tile tool-tile" href="https://12go.asia/?z=17095940" target="_blank" rel="noopener sponsored"><span class="tile-symbol" aria-hidden="true">🚘</span>\${cityText('Транспорт','Transport','การเดินทาง')}</a>
 <button class="home-tile tool-tile" type="button" data-home-exchange><span class="tile-symbol" aria-hidden="true">💱</span>\${cityText('Обмен валют','Currency exchange','แลกเงิน')}</button>
+<a class="home-tile tool-tile" href="./rental.html"><span class="tile-symbol" aria-hidden="true">⌂</span>\${cityText('Посчитать аренду','Calculate rent','คำนวณค่าเช่า')}</a>
 <a class="home-tile tool-tile" href="./tools.html"><span class="tile-symbol" aria-hidden="true">•••</span>\${cityText('Ещё','More','เพิ่มเติม')}</a>
 </div></section>
 <section class="home-panel books-panel" aria-labelledby="books-title">

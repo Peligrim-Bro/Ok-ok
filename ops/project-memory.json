@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "project": "OK-OK.click",
-  "updatedAt": "2026-11-16",
+  "updatedAt": "2026-11-18",
   "decisions": [
     {
       "id": "hosting",
@@ -272,6 +272,22 @@
         "docs/COMMUNITY_CHAT_TASK.md",
         "scripts/apply-author-chat.mjs",
         "tests/author-chat.spec.cjs"
+      ]
+    },
+    {
+      "id": "rental-calculator",
+      "status": "needs_verification",
+      "tags": [
+        "tools",
+        "layout",
+        "release"
+      ],
+      "next": "PR125: initial and font follow-up CI each passed282 browser tests and3 Lighthouse runs. Reviewed screenshots found optional Thai font timing; final swap plus explicit font-loading assertion prepared. Local build/tools8 pass and cloud-browser Thai glyphs visually verified. Await final PR CI, screenshot review and exact Cloudflare deployment before done.",
+      "sources": [
+        "docs/RENTAL_CALCULATOR_TASK.md",
+        "rental.html",
+        "tools/rental-math.mjs",
+        "tools/rental-ui.mjs"
       ]
     }
   ]

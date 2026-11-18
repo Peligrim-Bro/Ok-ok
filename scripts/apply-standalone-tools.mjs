@@ -3,10 +3,10 @@ import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 
 const root = 'site/public/';
-const pages = ['split-bill.html', 'inspect.html', 'tools.html', 'travel-reads.html'];
-const modules = ['split-math', 'split-ui-adapter', 'receipt-ocr', 'inspect-helpers', 'inspect-storage', 'inspect-pdf-text'];
+const pages = ['split-bill.html', 'inspect.html', 'tools.html', 'travel-reads.html', 'rental.html'];
+const modules = ['split-math', 'split-ui-adapter', 'receipt-ocr', 'inspect-helpers', 'inspect-storage', 'inspect-pdf-text', 'rental-math', 'rental-ui'];
 mkdirSync(root + 'tools/vendor', { recursive: true });
-const assets = [...pages, ...modules.map(name => 'tools/' + name + '.mjs'), 'tools/vendor/jspdf.umd.min.js'];
+const assets = [...pages, ...modules.map(name => 'tools/' + name + '.mjs'), 'tools/vendor/jspdf.umd.min.js', 'tools/rental.css', 'tools/rental-font-OFL.txt'];
 for (const asset of assets) copyFileSync(asset, root + asset);
 copyFileSync('tools/vendor/jspdf-LICENSE.txt', root + 'tools/vendor/jspdf-LICENSE.txt');
 
@@ -44,7 +44,7 @@ sw = sw.replace('  if (request.mode === "navigate") {', `  if (request.mode === 
     e.respondWith(fetch(request).catch(async () => await caches.match(url.pathname.endsWith('.html') ? url.pathname : url.pathname + '.html') || Response.error()));
     return;
   }
-  if (request.mode === "navigate" && /^\\/(?:tools|split-bill|inspect|travel-reads)(?:\\.html)?$/.test(url.pathname)) {
+  if (request.mode === "navigate" && /^\\/(?:tools|split-bill|inspect|travel-reads|rental)(?:\\.html)?$/.test(url.pathname)) {
     const page = url.pathname.endsWith('.html') ? url.pathname : url.pathname + '.html';
     e.respondWith(fetch(request).catch(async () => await caches.match(page) || Response.error()));
     return;
