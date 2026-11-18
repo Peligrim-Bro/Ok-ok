@@ -276,13 +276,13 @@
     },
     {
       "id": "rental-calculator",
-      "status": "in_progress",
+      "status": "needs_verification",
       "tags": [
         "tools",
         "layout",
         "release"
       ],
-      "next": "18 Nov owner approved Figma hkRXoxLdkuHO80PxgWm4ny. RU/EN/TH browser-local calculator, apartment comparison and PNG implemented in feat/rental-calculator-20261118. Build and 29 native tests pass. Local Chromium socket blocked; full browser suite, screenshots and three Lighthouse runs required through PR CI before main.",
+      "next": "PR125: initial and font follow-up CI each passed282 browser tests and3 Lighthouse runs. Reviewed screenshots found optional Thai font timing; final swap plus explicit font-loading assertion prepared. Local build/tools8 pass and cloud-browser Thai glyphs visually verified. Await final PR CI, screenshot review and exact Cloudflare deployment before done.",
       "sources": [
         "docs/RENTAL_CALCULATOR_TASK.md",
         "rental.html",
