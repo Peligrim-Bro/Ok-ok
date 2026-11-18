@@ -21,3 +21,7 @@ CI44218119291 and44219357308 each passed282 browser tests plus all four jobs and
 Owner reports home link under iPhone system status bar after release. Confirmed source cause: viewport-fit=cover paired with body padding-top:20px; only bottom safe area was handled. Original browser matrix changed screen sizes with zero safe-area env values and checked horizontal overflow, missing this geometry.
 
 Fix: add all four browser safe-area insets to content padding; home link has a48px minimum tap target. Tests override actual Chromium env values with Emulation.setSafeAreaInsetsOverride:59px portrait top,59px landscape sides, tablet top/bottom. Assert home and language geometry across RU/EN/TH and both themes; rotate in place, scroll and click home. No financial/calculation changes. Local build/native passed; browser launch unavailable locally, use PR CI for full suite/three Lighthouse and screenshots before main. Physical iPhone remains unverified.
+
+### Safe-area release evidence
+
+PR126 merged as8180de7674684f9a987825a09dc4e652a06fbeea. CI44238955136:283 browser tests passed, including all20 rental tests, plus all four jobs and three Lighthouse. Downloaded artifact14398668323; visually reviewed six portrait headers (RU/EN/TH, both themes) and rotation landscape screenshot. Home/header controls stay below59px top inset and inside59px side insets. Deploy44240070669 succeeded with exact-source production checks. Final Workers Builds status and public CSS confirmation recorded in PR126. Physical iPhone is not claimed.

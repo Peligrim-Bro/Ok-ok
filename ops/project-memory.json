@@ -276,13 +276,13 @@
     },
     {
       "id": "rental-calculator",
-      "status": "needs_verification",
+      "status": "done",
       "tags": [
         "tools",
         "layout",
         "release"
       ],
-      "next": "PR125 released d2cdcb3, but owner18 Nov reports home link under iPhone system status bar. Confirmed missing top safe area in rental.css. Follow-up adds all four insets and48px home target; actual browser env override tests across18 layout combinations plus rotation/home navigation. Local build/native passed; run final PR browser/Lighthouse, review screenshots and verify production before done.",
+      "next": "PR126 safe-area fix released8180de7 after PR125. CI44238955136 passed283 browser tests/20 rental cases and3 Lighthouse. Reviewed all six RU/EN/TH-theme portrait headers and landscape rotation screenshot with real browser env overrides. Deploy44240070669 exact-source checks succeeded; final Workers/live CSS receipts in PR126. Physical iPhone remains unverified. Preserve four insets and48px home target.",
       "sources": [
         "docs/RENTAL_CALCULATOR_TASK.md",
         "rental.html",
