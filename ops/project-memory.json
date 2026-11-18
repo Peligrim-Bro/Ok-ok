@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "project": "OK-OK.click",
-  "updatedAt": "2026-11-16",
+  "updatedAt": "2026-11-18",
   "decisions": [
     {
       "id": "hosting",
@@ -272,6 +272,22 @@
         "docs/COMMUNITY_CHAT_TASK.md",
         "scripts/apply-author-chat.mjs",
         "tests/author-chat.spec.cjs"
+      ]
+    },
+    {
+      "id": "rental-calculator",
+      "status": "in_progress",
+      "tags": [
+        "tools",
+        "layout",
+        "release"
+      ],
+      "next": "18 Nov owner approved Figma hkRXoxLdkuHO80PxgWm4ny. RU/EN/TH browser-local calculator, apartment comparison and PNG implemented in feat/rental-calculator-20261118. Build and 29 native tests pass. Local Chromium socket blocked; full browser suite, screenshots and three Lighthouse runs required through PR CI before main.",
+      "sources": [
+        "docs/RENTAL_CALCULATOR_TASK.md",
+        "rental.html",
+        "tools/rental-math.mjs",
+        "tools/rental-ui.mjs"
       ]
     }
   ]
