@@ -282,7 +282,7 @@
         "layout",
         "release"
       ],
-      "next": "PR125: initial and font follow-up CI each passed282 browser tests and3 Lighthouse runs. Reviewed screenshots found optional Thai font timing; final swap plus explicit font-loading assertion prepared. Local build/tools8 pass and cloud-browser Thai glyphs visually verified. Await final PR CI, screenshot review and exact Cloudflare deployment before done.",
+      "next": "PR125 released d2cdcb3, but owner18 Nov reports home link under iPhone system status bar. Confirmed missing top safe area in rental.css. Follow-up adds all four insets and48px home target; actual browser env override tests across18 layout combinations plus rotation/home navigation. Local build/native passed; run final PR browser/Lighthouse, review screenshots and verify production before done.",
       "sources": [
         "docs/RENTAL_CALCULATOR_TASK.md",
         "rental.html",
