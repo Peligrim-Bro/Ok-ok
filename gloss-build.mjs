@@ -1750,3 +1750,9 @@ if(startupSettings.portalEnabled){
 }
 
 await import('./scripts/build-oki-house-locales.mjs');
+
+// Standalone Pattaya evening landing, served from the same origin as the catalogue.
+{
+  const { cpSync } = await import('node:fs');
+  cpSync('prototypes/pattaya-evening', 'site/public/first-evening', { recursive: true });
+}
