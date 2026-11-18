@@ -349,9 +349,9 @@ function render() {
     input.setAttribute("aria-describedby", "error");
     input.addEventListener("input", () => {
       state[active][f] = input.value;
-      sample[active] = false;
-      example = false;
-      $("example").hidden = true;
+      // Keep the example warning until the user explicitly clears this apartment.
+      example = sample[active];
+      $("example").hidden = !example;
       hideImage();
       persist();
       update();
@@ -362,6 +362,7 @@ function render() {
   $("apartment").textContent = t("apartment") + " " + active;
   $("example").hidden = !example;
   $("editor").hidden = comparing;
+  $("totals").closest("section").hidden = comparing;
   $("comparison").hidden = !comparing;
   $("result-title").textContent = t("result") + " · " + active;
   for (const key of ["A", "B"]) {
@@ -425,6 +426,7 @@ $("demo").onclick = () => {
 };
 $("export").onclick = async () => {
   try {
+    if (lang === "th") await document.fonts.load("28px OKOKThai", t("title"));
     const canvas = document.createElement("canvas");
     canvas.width = 1000;
     const text = [
@@ -443,7 +445,7 @@ $("export").onclick = async () => {
       ...(example ? [t("example")] : []),
     ];
     const ctx = canvas.getContext("2d");
-    ctx.font = "28px system-ui";
+    ctx.font = lang === "th" ? "28px OKOKThai, system-ui" : "28px system-ui";
     const wrapped = [];
     for (const row of text) {
       let line = "";
@@ -459,7 +461,7 @@ $("export").onclick = async () => {
     canvas.height = 100 + wrapped.length * 42;
     ctx.fillStyle = "#0b1b3a";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.font = "28px system-ui";
+    ctx.font = lang === "th" ? "28px OKOKThai, system-ui" : "28px system-ui";
     ctx.fillStyle = "#f4f8fc";
     wrapped.forEach((s, i) => ctx.fillText(s, 60, 65 + i * 42));
     const blob = await new Promise((resolve) =>
