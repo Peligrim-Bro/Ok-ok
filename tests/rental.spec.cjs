@@ -47,6 +47,11 @@ for (const lang of ["ru", "en", "th"])
         await page.goto("/rental.html");
         await expect(page.locator("html")).toHaveAttribute("lang", lang);
         await page.locator("#compare").click();
+        if (lang === "th") {
+          const fonts = await page.evaluate(async () => { await document.fonts.load("16px OKOKThai", "คำนวณ"); return {family:getComputedStyle(document.documentElement).fontFamily, loaded:document.fonts.check("16px OKOKThai", "คำนวณ")}; });
+          expect(fonts.family).toContain("OKOKThai");
+          expect(fonts.loaded).toBeTruthy();
+        }
         expect(
           await page.evaluate(
             () => document.documentElement.scrollWidth <= innerWidth,
