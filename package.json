@@ -12,7 +12,7 @@
     "check": "node scripts/verify-project.mjs && node scripts/verify-quality.mjs",
     "test:mobile": "playwright test",
     "audit": "lhci autorun",
-    "test:tools": "node --test tests/split-math.test.mjs tests/split-ui-adapter.test.mjs tests/inspect-helpers.test.mjs tests/receipt-ocr.test.mjs"
+    "test:tools": "node --test tests/split-math.test.mjs tests/split-ui-adapter.test.mjs tests/inspect-helpers.test.mjs tests/receipt-ocr.test.mjs tests/rental-math.test.mjs"
   },
   "overrides": {
     "tmp": "0.2.7",
