@@ -6,7 +6,7 @@ const root = 'site/public/';
 const pages = ['split-bill.html', 'inspect.html', 'tools.html', 'travel-reads.html', 'rental.html'];
 const modules = ['split-math', 'split-ui-adapter', 'receipt-ocr', 'inspect-helpers', 'inspect-storage', 'inspect-pdf-text', 'rental-math', 'rental-ui'];
 mkdirSync(root + 'tools/vendor', { recursive: true });
-const assets = [...pages, ...modules.map(name => 'tools/' + name + '.mjs'), 'tools/vendor/jspdf.umd.min.js', 'tools/rental.css'];
+const assets = [...pages, ...modules.map(name => 'tools/' + name + '.mjs'), 'tools/vendor/jspdf.umd.min.js', 'tools/rental.css', 'tools/rental-font-OFL.txt'];
 for (const asset of assets) copyFileSync(asset, root + asset);
 copyFileSync('tools/vendor/jspdf-LICENSE.txt', root + 'tools/vendor/jspdf-LICENSE.txt');
 
