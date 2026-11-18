@@ -33,7 +33,10 @@
 }
 body {
   margin: 0;
-  padding: 20px 20px max(30px, env(safe-area-inset-bottom));
+  padding: calc(20px + env(safe-area-inset-top, 0px))
+    calc(20px + env(safe-area-inset-right, 0px))
+    calc(30px + env(safe-area-inset-bottom, 0px))
+    calc(20px + env(safe-area-inset-left, 0px));
 }
 main {
   max-width: 760px;
@@ -53,6 +56,12 @@ header {
 }
 a {
   color: var(--accent);
+}
+#home {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 10px 0;
 }
 button,
 input,
