@@ -216,3 +216,15 @@ source/final SHA-256 and visual review are in
 slot/image, collision or exact duplicate through 22 November. This checkpoint
 does not prove deployment, runtime enablement or Telegram delivery. No
 automation or schedule is changed.
+
+## Buffer checkpoint — 19 November 2026
+
+The lightweight joint check found only four complete future days, 19–22
+November. Twelve reviewed entries fill only the missing 23–25 November slots:
+nine ordinary posts at 09:00, 14:00 and 19:30 plus three distinct Oki pages
+#35–37 at 20:30. Existing entries and media remain unchanged. Provenance,
+source/final SHA-256 and visual review are in
+`docs/CHANNEL_BUFFER_20261119.md`. The offline audit must show no missing
+slot/image, collision or exact duplicate through 25 November before release.
+This checkpoint does not prove deployment, runtime enablement or Telegram
+delivery. No automation or schedule is changed.
