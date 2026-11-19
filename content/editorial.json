@@ -1,90 +1,90 @@
 {
-  "verifiedAt": "2026-11-19",
+  "verifiedAt": "2026-11-20",
   "news": [
     {
       "category": "world",
-      "when": "18.11 · Мир",
-      "href": "https://www.reuters.com/sustainability/climate-energy/net-zero-is-essential-it-is-no-longer-enough--ecmii-2026-11-18/",
-      "publishedAt": "2026-11-18",
-      "ru": "В авторской колонке Reuters климатолог Йохан Рокстрём пишет, что достижения нулевых чистых выбросов уже недостаточно без защиты природных систем и проверяемого удаления углекислого газа. Он отдельно предупреждает: удаление CO₂ не должно оправдывать продолжение выбросов.",
-      "en": "In a Reuters commentary, climate scientist Johan Rockström argues that reaching net zero is no longer sufficient without protecting natural systems and verifiable carbon removal. He also warns that CO₂ removal must not excuse continued emissions.",
-      "th": "ในบทความแสดงความคิดเห็นของ Reuters โยฮัน ร็อกสตรอม นักวิทยาศาสตร์ภูมิอากาศ ระบุว่าการบรรลุการปล่อยสุทธิเป็นศูนย์เพียงอย่างเดียวไม่เพียงพอ หากไม่มีการปกป้องระบบธรรมชาติและการกำจัดคาร์บอนไดออกไซด์ที่ตรวจสอบได้ พร้อมเตือนว่าการกำจัด CO₂ ไม่ควรถูกใช้เป็นข้ออ้างให้ปล่อยก๊าซต่อไป",
+      "when": "19.11 · Мир",
+      "href": "https://www.reuters.com/world/china/global-markets-view-europe-2026-11-19/",
+      "publishedAt": "2026-11-19",
+      "ru": "Anthropic готовится к биржевому дебюту после размещения акций по 83 доллара и привлечения 81 миллиарда долларов. Reuters отмечает высокий спрос на бумаги, но также сохраняющиеся сомнения инвесторов в окупаемости огромных расходов на инфраструктуру искусственного интеллекта.",
+      "en": "Anthropic is preparing for its stock-market debut after pricing shares at $83 and raising $81 billion. Reuters reports strong demand while investors continue to question whether massive spending on artificial-intelligence infrastructure will deliver sufficient returns.",
+      "th": "Anthropic เตรียมเข้าซื้อขายในตลาดหุ้น หลังตั้งราคาหุ้นที่ 83 ดอลลาร์และระดมทุนได้ 81,000 ล้านดอลลาร์ Reuters รายงานว่าความต้องการซื้อแข็งแกร่ง แต่ผู้ลงทุนยังตั้งคำถามว่าการใช้จ่ายมหาศาลกับโครงสร้างพื้นฐาน AI จะให้ผลตอบแทนคุ้มค่าหรือไม่",
       "sources": [
-        "https://www.reuters.com/sustainability/climate-energy/net-zero-is-essential-it-is-no-longer-enough--ecmii-2026-11-18/"
+        "https://www.reuters.com/world/china/global-markets-view-europe-2026-11-19/"
       ],
       "nonWar": true,
       "discussionEvidence": {
-        "observedAt": "2026-11-19T06:20:00+07:00",
-        "sourceUrl": "https://www.reuters.com/sustainability/climate-energy/net-zero-is-essential-it-is-no-longer-enough--ecmii-2026-11-18/",
-        "summary": "Reuters exposed no public view, share or comment count. No comparable cross-outlet engagement metric was available in the single review batch; selection reflects current COP31 policy relevance and the author’s climate-science role, not a global popularity ranking."
+        "observedAt": "2026-11-20T06:07:00+07:00",
+        "sourceUrl": "https://www.reuters.com/world/china/global-markets-view-europe-2026-11-19/",
+        "summary": "Reuters exposed no public view, share or comment count. No comparable global engagement metric was available in the single review batch; selection reflects the reported scale of the IPO and broad market relevance, not a worldwide popularity ranking."
+      }
+    },
+    {
+      "category": "thailand",
+      "when": "20.11 · Таиланд",
+      "href": "https://www.pattayamail.com/thailandnews/thailand-explores-huawei-ai-technology-to-modernize-ports-and-logistics-572416",
+      "publishedAt": "2026-11-20",
+      "ru": "Транспортная делегация Таиланда изучила решения Huawei для автоматизации портов: планирование заходов судов с помощью ИИ, дистанционное управление кранами и цифровые двойники. Ведомство рассматривает их возможное применение в портах Лаем-Чабанг и Бангкока, но решение о внедрении ещё не объявлено.",
+      "en": "A Thai transport delegation reviewed Huawei systems for port automation, including AI vessel scheduling, remote crane operation and digital twins. Officials are considering possible use at Laem Chabang and Bangkok ports, but no deployment decision has been announced.",
+      "th": "คณะผู้แทนด้านคมนาคมของไทยศึกษาระบบของ Huawei สำหรับท่าเรืออัตโนมัติ ทั้งการจัดตารางเรือด้วย AI การควบคุมเครนจากระยะไกล และดิจิทัลทวิน โดยอยู่ระหว่างพิจารณาความเหมาะสมสำหรับท่าเรือแหลมฉบังและท่าเรือกรุงเทพ แต่ยังไม่มีการประกาศตัดสินใจนำมาใช้",
+      "sources": [
+        "https://www.pattayamail.com/thailandnews/thailand-explores-huawei-ai-technology-to-modernize-ports-and-logistics-572416"
+      ],
+      "discussionEvidence": {
+        "observedAt": "2026-11-20T06:07:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/thailandnews/thailand-explores-huawei-ai-technology-to-modernize-ports-and-logistics-572416",
+        "summary": "The source page displayed 322 views and 0 comments. The official TMD source exposed no comparable public counter, so this publisher-local figure does not establish a nationwide popularity rank."
       }
     },
     {
       "category": "thailand",
       "when": "19.11 · Таиланд",
-      "href": "https://www.pattayamail.com/thailandnews/thailand-denies-opening-its-entire-market-to-us-goods-under-trade-deal-572382",
+      "href": "https://tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-no-10-318-2026",
       "publishedAt": "2026-11-19",
-      "ru": "Министр торговли Таиланда заявила, что обсуждаемое соглашение с США не означает свободный доступ для всех американских товаров. Для чувствительной сельхозпродукции сохранятся квоты и защитные меры, а документ ещё должен пройти юридическую проверку и внутренние процедуры.",
-      "en": "Thailand’s commerce minister said the proposed US trade agreement does not grant unrestricted access to every American product. Quotas and safeguards would remain for sensitive farm goods, while the deal still requires legal review and domestic procedures.",
-      "th": "รัฐมนตรีว่าการกระทรวงพาณิชย์ของไทยระบุว่า ข้อตกลงการค้ากับสหรัฐฯ ที่อยู่ระหว่างหารือไม่ได้เปิดตลาดให้สินค้าสหรัฐฯ ทุกชนิดโดยไม่มีข้อจำกัด สินค้าเกษตรอ่อนไหวยังคงมีโควตาและมาตรการคุ้มครอง และข้อตกลงยังต้องผ่านการตรวจทางกฎหมายและขั้นตอนภายในประเทศ",
+      "ru": "Метеодепартамент Таиланда предупредил о сильных и очень сильных дождях на юге 19–22 ноября с риском паводков и оползней. В нижней части Сиамского залива ожидаются волны 2–3 метра и выше во время гроз; малым судам рекомендовано оставаться у берега.",
+      "en": "Thailand’s Meteorological Department warned of heavy to very heavy southern rain on 19–22 November, with flood and landslide risks. Lower Gulf waves may reach 2–3 metres and higher in storms, and small boats are advised to remain ashore.",
+      "th": "กรมอุตุนิยมวิทยาเตือนภาคใต้มีฝนตกหนักถึงหนักมากช่วง 19–22 พฤศจิกายน เสี่ยงน้ำท่วมและดินถล่ม อ่าวไทยตอนล่างมีคลื่นสูง 2–3 เมตรและสูงกว่านั้นในบริเวณฝนฟ้าคะนอง โดยเรือเล็กควรงดออกจากฝั่ง",
       "sources": [
-        "https://www.pattayamail.com/thailandnews/thailand-denies-opening-its-entire-market-to-us-goods-under-trade-deal-572382"
+        "https://tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-no-10-318-2026"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-19T06:20:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/thailandnews/thailand-denies-opening-its-entire-market-to-us-goods-under-trade-deal-572382",
-        "summary": "The source page displayed 107 views and 0 comments. The other selected Thailand source, TMD, exposed no comparable public counter, so this publisher-local figure does not establish a nationwide popularity rank."
-      }
-    },
-    {
-      "category": "thailand",
-      "when": "18.11 · Таиланд",
-      "href": "https://tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-no-8-316-2026",
-      "publishedAt": "2026-11-18",
-      "ru": "Метеодепартамент Таиланда предупредил о сильных и очень сильных дождях на юге 18–22 ноября с риском внезапных паводков и оползней. В нижней части Сиамского залива ожидаются волны 2–3 метра и выше в грозах; малым судам рекомендовано оставаться у берега.",
-      "en": "Thailand’s Meteorological Department warned of heavy to very heavy southern rain on 18–22 November, with flash-flood and landslide risks. Lower Gulf waves may reach 2–3 metres and higher in storms, and small boats are advised to remain ashore.",
-      "th": "กรมอุตุนิยมวิทยาเตือนว่าภาคใต้จะมีฝนตกหนักถึงหนักมากในช่วง 18–22 พฤศจิกายน เสี่ยงน้ำท่วมฉับพลันและดินถล่ม ขณะที่อ่าวไทยตอนล่างมีคลื่นสูง 2–3 เมตรและสูงกว่านั้นในบริเวณฝนฟ้าคะนอง โดยเรือเล็กควรงดออกจากฝั่ง",
-      "sources": [
-        "https://tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-no-8-316-2026"
-      ],
-      "discussionEvidence": {
-        "observedAt": "2026-11-19T06:20:00+07:00",
-        "sourceUrl": "https://tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-no-8-316-2026",
+        "observedAt": "2026-11-20T06:07:00+07:00",
+        "sourceUrl": "https://tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-no-10-318-2026",
         "summary": "The official TMD advisory exposed no public view, share or comment total. Selection reflects a current official safety warning with direct national relevance; no comparable engagement rank was available."
       }
     },
     {
       "category": "pattaya",
-      "when": "19.11 · Паттайя",
-      "href": "https://www.pattayamail.com/latestnews/news/pattaya-tourism-faces-turning-point-amid-rising-airfares-and-tougher-competition-572300",
-      "publishedAt": "2026-11-19",
-      "ru": "Федерация туризма Чонбури призвала Паттайю активнее работать с внутренними и ближними рынками, деловым туризмом и молодёжной аудиторией. Её президент признал замедление спроса и предложил оценивать городские фестивали по тому, привлекают ли они приезжих и дают ли эффект местному бизнесу.",
-      "en": "The Chonburi Tourism Federation urged Pattaya to focus more on domestic and short-haul markets, business travel and younger visitors. Its president acknowledged slower demand and called for city festivals to be judged by whether they attract visitors and benefit local businesses.",
-      "th": "สหพันธ์การท่องเที่ยวจังหวัดชลบุรีเสนอให้พัทยาให้ความสำคัญกับตลาดในประเทศและตลาดระยะใกล้ การท่องเที่ยวเชิงธุรกิจ และนักเดินทางรุ่นใหม่มากขึ้น ประธานสหพันธ์ยอมรับว่าความต้องการชะลอตัว และเสนอให้ประเมินเทศกาลของเมืองจากความสามารถในการดึงนักท่องเที่ยวและสร้างประโยชน์แก่ธุรกิจท้องถิ่น",
+      "when": "20.11 · Паттайя",
+      "href": "https://www.pattayamail.com/news/pattaya-outlines-2027-development-plan-focusing-on-quality-of-life-improvements-572443",
+      "publishedAt": "2026-11-20",
+      "ru": "Городской комитет Паттайи рассмотрел проект плана на 2027 финансовый год: 341 новый проект и 172 уже выполняющихся. Среди приоритетов названы инфраструктура, качество жизни, туризм, защита окружающей среды и более эффективное управление городом.",
+      "en": "Pattaya’s development committee reviewed a draft 2027 fiscal plan containing 341 new projects and 172 already under way. Priorities include infrastructure, quality of life, tourism, environmental protection and more efficient city administration.",
+      "th": "คณะกรรมการพัฒนาเมืองพัทยาพิจารณาร่างแผนปีงบประมาณ 2570 ซึ่งมีโครงการใหม่ 341 โครงการและโครงการที่กำลังดำเนินการ 172 โครงการ โดยให้ความสำคัญกับโครงสร้างพื้นฐาน คุณภาพชีวิต การท่องเที่ยว สิ่งแวดล้อม และการบริหารเมืองที่มีประสิทธิภาพขึ้น",
       "sources": [
-        "https://www.pattayamail.com/latestnews/news/pattaya-tourism-faces-turning-point-amid-rising-airfares-and-tougher-competition-572300"
+        "https://www.pattayamail.com/news/pattaya-outlines-2027-development-plan-focusing-on-quality-of-life-improvements-572443"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-19T06:20:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/latestnews/news/pattaya-tourism-faces-turning-point-amid-rising-airfares-and-tougher-competition-572300",
-        "summary": "The source page displayed 269 views and 0 comments, compared with 217 views and 0 comments for the selected Pattaya boat-safety report. These publisher-local counters do not establish a citywide popularity rank."
+        "observedAt": "2026-11-20T06:07:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/pattaya-outlines-2027-development-plan-focusing-on-quality-of-life-improvements-572443",
+        "summary": "The source page displayed 258 views and 0 comments, compared with 222 views and 0 comments for the selected public-space report. These publisher-local counters do not establish a citywide popularity rank."
       }
     },
     {
       "category": "pattaya",
-      "when": "19.11 · Паттайя",
-      "href": "https://www.pattayamail.com/news/pattaya-checks-boat-operators-for-drugs-and-physical-fitness-572308",
-      "publishedAt": "2026-11-19",
-      "ru": "В порту Бали Хай ведомства провели выборочные тесты на наркотики и проверку физического состояния 50 судоводителей и членов экипажей пассажирских катеров. Морское управление Паттайи объяснило проверку снижением рисков для пассажиров и контролем безопасности перевозок.",
-      "en": "Authorities at Bali Hai Pier carried out random drug screening and fitness checks on 50 passenger-boat operators and crew members. Pattaya’s Harbour Office said the operation was intended to reduce passenger risks and strengthen transport safety oversight.",
-      "th": "หน่วยงานที่ท่าเรือแหลมบาลีฮายสุ่มตรวจสารเสพติดและตรวจความพร้อมทางร่างกายของผู้ควบคุมเรือและลูกเรือโดยสาร 50 คน สำนักงานเจ้าท่าภูมิภาคสาขาพัทยาระบุว่า การตรวจมีเป้าหมายเพื่อลดความเสี่ยงของผู้โดยสารและยกระดับการกำกับดูแลความปลอดภัย",
+      "when": "20.11 · Паттайя",
+      "href": "https://www.pattayamail.com/news/pattaya-warns-businesses-to-remove-chairs-and-objects-blocking-public-spaces-572461",
+      "publishedAt": "2026-11-20",
+      "ru": "Муниципальные инспекторы Паттайи потребовали от предпринимателей убрать стулья и другие вещи с общественных участков перед заведениями. Город предупредил, что повторное перекрытие пространства может привести к более строгим мерам.",
+      "en": "Pattaya municipal inspectors instructed businesses to remove chairs and other belongings from public areas outside their premises. The city warned that repeated obstruction of shared space could lead to stricter enforcement.",
+      "th": "เจ้าหน้าที่เทศกิจเมืองพัทยาสั่งให้ผู้ประกอบการนำเก้าอี้และสิ่งของออกจากพื้นที่สาธารณะหน้าร้าน พร้อมเตือนว่าหากกีดขวางพื้นที่ส่วนรวมซ้ำ อาจถูกดำเนินการเข้มงวดขึ้น",
       "sources": [
-        "https://www.pattayamail.com/news/pattaya-checks-boat-operators-for-drugs-and-physical-fitness-572308"
+        "https://www.pattayamail.com/news/pattaya-warns-businesses-to-remove-chairs-and-objects-blocking-public-spaces-572461"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-19T06:20:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/pattaya-checks-boat-operators-for-drugs-and-physical-fitness-572308",
-        "summary": "The source page displayed 217 views and 0 comments, compared with 269 views and 0 comments for the selected Pattaya tourism report. These publisher-local counters do not establish a citywide popularity rank."
+        "observedAt": "2026-11-20T06:07:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/pattaya-warns-businesses-to-remove-chairs-and-objects-blocking-public-spaces-572461",
+        "summary": "The source page displayed 222 views and 0 comments, compared with 258 views and 0 comments for the selected Pattaya development-plan report. These publisher-local counters do not establish a citywide popularity rank."
       }
     }
   ],
