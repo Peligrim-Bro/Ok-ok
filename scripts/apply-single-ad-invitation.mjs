@@ -24,18 +24,16 @@ if(start<0||end<0)throw Error('Ad invitation anchors missing');
 ads=ads.slice(0,start)+`  const freeCount=Math.max(0,data.slots-ads.length);
   const event=freeCount?currentEvent():null;
   const eventSlots=event?1:0;
-  if(event)list.append(eventCard(event));
   let inviteWrap=null;
   if(freeCount>eventSlots){
    inviteWrap=h('div', {class:'okad-invitation-wrap'});
-   inviteWrap.append(h('button', { type: 'button', class: 'okad free okad-invitation', onclick: () => openOrder() },
-     h('span', { class: 'okad-invite-icon', 'aria-hidden': 'true', text: '…' }),
-     h('span', { class: 'okad-invite-copy' },
-       h('b', { text: tr('Заяви о себе', 'Get noticed', 'บอกให้โลกรู้') }),
-       h('span', { class: 'okad-invite-note', text: tr('Объявление, поздравление или просто привет.', 'An announcement, a celebration, or just a hello.', 'ประกาศ คำอวยพร หรือแค่ทักทายกัน') })),
-     h('span', { class: 'okad-invite-arrow', 'aria-hidden': 'true', text: '↗' })));
+   inviteWrap.append(h('button', {
+     type:'button', class:'okad-invitation', onclick:()=>openOrder(),
+     text:tr('Заяви о себе','Get noticed','บอกให้โลกรู้')
+   }));
    list.append(inviteWrap);
   }
+  if(event)list.append(eventCard(event));
   root.append(list);
   if(inviteWrap)mountInviteOki(inviteWrap);
 `+ads.slice(end);
@@ -47,10 +45,10 @@ replaceOnce("tr('Разместить объявление', 'Place an ad', 'ล
 writeFileSync(path,ads);
 console.log('Single ad invitation ready; pricing disclosed after opening.');
 
-// A single glossy message card, with no business-only framing or idle animation.
+// Keep the invitation inline and preserve Oki’s existing peek animation.
 const cssPath='site/public/assets/ads/ads.css';
 const css=readFileSync(cssPath,'utf8')+String.raw`
-/* okok-personal-invitation-v1 */
+/* okok-personal-invitation-text-v2 */
 html body #okAds .okads-list{margin-bottom:0}
 html body .hint.okad-oki-underlay-hidden{opacity:0;pointer-events:none}
 html body #okAds .okad-invitation-wrap{--oki-rise:88px;position:relative;padding:0;isolation:isolate;min-width:0;scroll-margin-block:110px}
@@ -70,26 +68,13 @@ html body #okAds button.okad-oki-close{position:absolute;right:0;top:0;width:44p
 @keyframes okad-oki-point-left{0%,100%{transform:rotate(0deg) translateY(0)}45%,62%{transform:rotate(-9deg) translateY(3px)}}
 @keyframes okad-oki-point-right{0%,100%{transform:rotate(0deg) translateY(0)}45%,62%{transform:rotate(9deg) translateY(3px)}}
 @keyframes okad-oki-say{to{opacity:1}}
-html body #okAds .okad.okad-invitation{
- position:relative;z-index:1;width:100%;
- display:grid;grid-template-columns:52px minmax(0,1fr) 30px;gap:12px;align-items:center;
- min-height:128px;padding:18px 16px;box-sizing:border-box;text-align:left;isolation:isolate;overflow:hidden;
- border:1px solid var(--toy-rim)!important;border-radius:20px;
- background:radial-gradient(ellipse at 0% 100%,#57efc329,transparent 65%),radial-gradient(ellipse at 100% 0%,#ff936b33,transparent 65%),linear-gradient(135deg,var(--card),var(--bg))!important;
- color:var(--text)!important;box-shadow:inset 0 2px 1px #ffffff66,inset 0 -2px 1px #00000026,0 8px 18px #00000024!important;
- transition:transform .18s ease,border-color .18s ease;
+html body #okAds button.okad-invitation{
+ position:relative;z-index:1;display:inline-flex;align-items:center;min-height:44px;
+ padding:0 4px;border:0!important;border-radius:0!important;background:transparent!important;
+ color:var(--text)!important;box-shadow:none!important;text-shadow:none;font:inherit;
+ font-weight:700;text-decoration:underline;text-underline-offset:.2em;cursor:pointer;
 }
-html body #okAds .okad-invitation::before{content:'';position:absolute;inset:7px;border:1px solid #ffffff24;border-radius:14px;pointer-events:none;z-index:-1}
-html body #okAds .okad-invite-icon{position:relative;display:grid;place-items:center;width:48px;height:44px;border-radius:15px;transform:rotate(-8deg);font-size:21px;letter-spacing:1px;font-weight:800;color:#082c29;background:radial-gradient(ellipse at 25% 0%,#ffffffcc,transparent 70%),linear-gradient(145deg,#98ffe0,#28c8ae);box-shadow:inset 0 2px 1px #ffffffcc,inset 0 -3px 3px #048e8980,0 6px 10px #00000026}
-html body #okAds .okad-invite-icon::after{content:'';position:absolute;width:12px;height:12px;left:10px;bottom:-5px;background:#38d1b6;clip-path:polygon(0 0,100% 0,0 100%)}
-html body #okAds .okad-invite-copy{display:grid;gap:6px;min-width:0}
-html body #okAds .okad-invite-copy b{font-size:19px;line-height:1.2;letter-spacing:-.025em;overflow-wrap:anywhere}
-html body #okAds .okad-invite-note{font-size:12px;line-height:1.45;font-weight:500;color:var(--muted);overflow-wrap:anywhere}
-html body #okAds .okad-invite-arrow{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:linear-gradient(145deg,#ffc18f,#ff8b71);box-shadow:inset 0 1px 1px #ffffffb3,0 3px 7px #00000026;color:#40241e;font-size:20px;font-weight:700}
-@media(hover:hover){html body #okAds .okad-invitation:hover{transform:translateY(-2px)}}
-html body #okAds .okad-invitation:active{transform:scale(.985)}
-@media(max-width:350px){html body #okAds .okad.okad-invitation{grid-template-columns:40px minmax(0,1fr) 26px;gap:9px;padding:16px 12px}html body #okAds .okad-invite-icon{width:37px;height:38px;font-size:18px;border-radius:12px}html body #okAds .okad-invite-copy b{font-size:17px}html body #okAds .okad-invite-arrow{width:26px;height:26px;font-size:18px}}
-@media(prefers-reduced-motion:reduce){html body #okAds .okad.okad-invitation{transition:none;transform:none}html body #okAds :is(.okad-oki-rig,.okad-oki-head,.okad-oki-hand){animation:none;transition:none;transform:none;translate:none;rotate:none}html body #okAds .okad-oki-speech{animation:none;opacity:1}}
+@media(prefers-reduced-motion:reduce){html body #okAds :is(.okad-oki-rig,.okad-oki-head,.okad-oki-hand){animation:none;transition:none;transform:none;translate:none;rotate:none}html body #okAds .okad-oki-speech{animation:none;opacity:1}}
 `;
 writeFileSync(cssPath,css);
 const version=createHash('sha256').update(css).digest('hex').slice(0,16);
