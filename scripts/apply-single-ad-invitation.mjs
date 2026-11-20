@@ -18,25 +18,16 @@ const headStart=ads.indexOf("  root.append(h('div', { class: 'okads-head' }");
 const headEnd=ads.indexOf('\n  if (!data)',headStart);
 if(headStart<0||headEnd<0)throw Error('Ad heading anchor missing');
 ads=ads.slice(0,headStart)+ads.slice(headEnd);
-const start=ads.indexOf('  const freeCount = Math.max(0, data.slots - ads.length);');
-const end=ads.indexOf('  const mine = myOrder();',start);
+const start=ads.indexOf('  if (!data)',headStart);
+const end=ads.indexOf('\n}\n',start);
 if(start<0||end<0)throw Error('Ad invitation anchors missing');
-ads=ads.slice(0,start)+`  const freeCount=Math.max(0,data.slots-ads.length);
-  const event=freeCount?currentEvent():null;
-  const eventSlots=event?1:0;
-  let inviteWrap=null;
-  if(freeCount>eventSlots){
-   inviteWrap=h('div', {class:'okad-invitation-wrap'});
-   inviteWrap.append(h('button', {
-     type:'button', class:'okad-invitation', onclick:()=>openOrder(),
-     text:tr('Заяви о себе','Get noticed','บอกให้โลกรู้')
-   }));
-   list.append(inviteWrap);
-  }
-  if(event)list.append(eventCard(event));
-  root.append(list);
-  if(inviteWrap)mountInviteOki(inviteWrap);
-`+ads.slice(end);
+ads=ads.slice(0,start)+`  const inviteWrap=h('div', {class:'okad-invitation-wrap'});
+  inviteWrap.append(h('button', {
+    type:'button', class:'okad-invitation', onclick:()=>openOrder(),
+    text:tr('Заяви о себе','Get noticed','บอกให้โลกรู้')
+  }));
+  root.append(inviteWrap);
+  mountInviteOki(inviteWrap);`+ads.slice(end);
 replaceOnce('function paint() {',readFileSync('ad-invitation-oki.js','utf8').replaceAll('__OKI_INVITATION_ASSET__','/'+portraitAsset)+'\nfunction paint() {\n  inviteOkiCleanup();');
 // Keep the paid-placement disclosure inside the form, before any submission.
 replaceOnce("h('p', { class: 'hint', text: tr(`${price} USDT за ${hours} часов. Текст проверяется до оплаты.`, `${price} USDT for ${hours} hours. The text is checked before payment.`, `${price} USDT ต่อ ${hours} ชั่วโมง ตรวจข้อความก่อนชำระ`) }), form)",
@@ -48,8 +39,8 @@ console.log('Single ad invitation ready; pricing disclosed after opening.');
 // Keep the invitation inline and preserve Oki’s existing peek animation.
 const cssPath='site/public/assets/ads/ads.css';
 const css=readFileSync(cssPath,'utf8')+String.raw`
-/* okok-personal-invitation-text-v2 */
-html body #okAds .okads-list{margin-bottom:0}
+/* okok-personal-invitation-chip-v3 */
+html body #okAds{padding:0;border:0;background:none;box-shadow:none;overflow:visible}
 html body .hint.okad-oki-underlay-hidden{opacity:0;pointer-events:none}
 html body #okAds .okad-invitation-wrap{--oki-rise:88px;position:relative;padding:0;isolation:isolate;min-width:0;scroll-margin-block:110px}
 html body #okAds .okad-oki-peek{position:absolute;left:0;right:0;top:calc(-1 * var(--oki-rise));height:var(--oki-rise);overflow:hidden;pointer-events:none;z-index:2}
@@ -70,9 +61,9 @@ html body #okAds button.okad-oki-close{position:absolute;right:0;top:0;width:44p
 @keyframes okad-oki-say{to{opacity:1}}
 html body #okAds button.okad-invitation{
  position:relative;z-index:1;display:inline-flex;align-items:center;min-height:44px;
- padding:0 4px;border:0!important;border-radius:0!important;background:transparent!important;
+ padding:0 14px;border:1px solid var(--line)!important;border-radius:999px!important;background:var(--card)!important;
  color:var(--text)!important;box-shadow:none!important;text-shadow:none;font:inherit;
- font-weight:700;text-decoration:underline;text-underline-offset:.2em;cursor:pointer;
+ font-weight:700;cursor:pointer;
 }
 @media(prefers-reduced-motion:reduce){html body #okAds :is(.okad-oki-rig,.okad-oki-head,.okad-oki-hand){animation:none;transition:none;transform:none;translate:none;rotate:none}html body #okAds .okad-oki-speech{animation:none;opacity:1}}
 `;
