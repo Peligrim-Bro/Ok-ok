@@ -293,12 +293,12 @@
     },
     {
       "id": "threads-auto-replies",
-      "status": "in_progress",
+      "status": "needs_verification",
       "tags": [
         "threads",
         "automation"
       ],
-      "next": "Owner21Nov: implement narrow automatic replies and Telegram review with existing @workforwriters1_bot; 19 worker tests,25 native checks, build and bot/permission preflights passed. Comments only09:00,15:00,21:00 Bangkok per owner21Nov. Deploy isolated Worker branch; keep main unchanged because inherited website ad checks fail. Secret provisioning and observed activation pending. Preserve OFFSCRIPT, post receipts, website and cron.",
+      "next": "LIVE21Nov14:11Bangkok: enabled/configured true; scans09:00/15:00/21:00 Bangkok.19 worker tests; deploy44878678968 source5f946a3; bot setup44879036155 verified webhook and private notice. First real new-comment reply receipt pending. Main unchanged; PR135 unmerged due inherited website ad checks; do not overwrite live branch deployment with older main Worker. Preserve /threads_off. See task note.",
       "sources": [
         "docs/THREADS_REPLIES_TASK.md",
         "workers/threads-auth/replies.mjs"
