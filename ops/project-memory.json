@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "project": "OK-OK.click",
-  "updatedAt": "2026-11-19",
+  "updatedAt": "2026-11-21",
   "decisions": [
     {
       "id": "hosting",
@@ -289,6 +289,19 @@
         "rental.html",
         "tools/rental-math.mjs",
         "tools/rental-ui.mjs"
+      ]
+    },
+    {
+      "id": "threads-auto-replies",
+      "status": "in_progress",
+      "tags": [
+        "threads",
+        "automation"
+      ],
+      "next": "Owner21Nov: implement narrow automatic replies and Telegram review with existing @workforwriters1_bot; 15 worker tests and bot/permission preflights passed. Final QA, deployment, secret provisioning and observed activation pending. Preserve OFFSCRIPT, post receipts, website and cron.",
+      "sources": [
+        "docs/THREADS_REPLIES_TASK.md",
+        "workers/threads-auth/replies.mjs"
       ]
     }
   ]

@@ -1,4 +1,6 @@
 import queue from "./queue.json";
+import { ThreadsReplies } from "./replies.mjs";
+export { ThreadsReplies };
 
 const API = "https://graph.threads.net/v1.0";
 
@@ -100,7 +102,12 @@ export class ThreadsQueue {
 }
 
 export default {
-  async scheduled(controller, env) {
+  async scheduled(controller, env, ctx) {
+    // Independent failure domain: reply processing cannot stop the post queue.
+    ctx.waitUntil((async () => {
+      const result = await env.THREADS_REPLIES.getByName("production").fetch("https://replies.internal/tick", { method: "POST" });
+      if (!result.ok) console.warn("Threads reply tick failed", result.status);
+    })());
     const due = queue.filter((post) => {
       const age = controller.scheduledTime - Date.parse(post.publishAt);
       return age >= 0 && age < 8 * 60 * 60 * 1000;
@@ -120,6 +127,26 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     const headers = { "Cache-Control": "no-store", "Referrer-Policy": "no-referrer" };
+
+    if (["/telegram-review", "/reply-setup"].includes(url.pathname) && request.method === "POST") {
+      const expected = env.THREADS_REVIEW_WEBHOOK_SECRET;
+      const supplied = request.headers.get("X-Telegram-Bot-Api-Secret-Token") || "";
+      if (!expected || supplied.length !== expected.length) return new Response("Forbidden", { status: 403, headers });
+      let difference = 0;
+      for (let i = 0; i < expected.length; i++) difference |= expected.charCodeAt(i) ^ supplied.charCodeAt(i);
+      if (difference) return new Response("Forbidden", { status: 403, headers });
+      if (url.pathname === "/reply-setup") {
+        return env.THREADS_REPLIES.getByName("production").fetch("https://replies.internal/activate", { method: "POST" });
+      }
+      const body = await request.text();
+      if (body.length > 65536) return new Response("Too large", { status: 413, headers });
+      return env.THREADS_REPLIES.getByName("production").fetch("https://replies.internal/update", { method: "POST", body });
+    }
+
+    if (request.method === "GET" && url.pathname === "/reply-status") {
+      const result = await env.THREADS_REPLIES.getByName("production").fetch("https://replies.internal/status");
+      return new Response(result.body, { status: result.status, headers: { ...headers, "Content-Type": "application/json" } });
+    }
 
     if (url.pathname === "/callback") {
       if (url.searchParams.has("error")) {

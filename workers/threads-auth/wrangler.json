@@ -4,6 +4,9 @@
   "compatibility_date": "2026-11-04",
   "workers_dev": true,
   "keep_vars": true,
+  "vars": {
+    "THREADS_REPLIES_ENABLED": "true"
+  },
   "observability": {
     "enabled": true,
     "logs": {
@@ -21,7 +24,8 @@
       {
         "name": "THREADS_QUEUE",
         "class_name": "ThreadsQueue"
-      }
+      },
+      { "name": "THREADS_REPLIES", "class_name": "ThreadsReplies" }
     ]
   },
   "migrations": [
@@ -30,6 +34,7 @@
       "new_sqlite_classes": [
         "ThreadsQueue"
       ]
-    }
+    },
+    { "tag": "v2-threads-replies", "new_sqlite_classes": ["ThreadsReplies"] }
   ]
 }

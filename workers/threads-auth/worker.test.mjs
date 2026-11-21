@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-const source=readFileSync(new URL('./worker.mjs',import.meta.url),'utf8').replace('import queue from "./queue.json";', 'const queue=[];');
+const source=readFileSync(new URL('./worker.mjs',import.meta.url),'utf8').replace('import queue from "./queue.json";', 'const queue=[];').replace('"./replies.mjs"',JSON.stringify(new URL('./replies.mjs',import.meta.url).href));
 const {ThreadsQueue}=await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
 function storage(){const map=new Map();return {get:async k=>map.get(k),put:async(k,v)=>map.set(k,structuredClone(v)),delete:async k=>map.delete(k),list:async()=>map,transaction:async fn=>fn({get:async k=>map.get(k),put:async(k,v)=>map.set(k,v)})};}
 const post={id:'future-slot',text:'Example',imageUrl:'https://raw.githubusercontent.com/Peligrim-Bro/Ok-ok/main/media/example.jpg',imageReviewed:true,altText:'Illustration'};
