@@ -127,3 +127,20 @@ test('missing owner configuration remains off and makes no requests',async()=>{
   const engine=new ThreadsReplies({storage:storage()},{THREADS_ACCESS_TOKEN:'mock'});
   assert.equal((await tick(engine)).status,200);assert.equal(called,false);
 });
+test('provisioning validates reads, initializes once, and preserves an owner stop',async()=>{
+ const f=fixture();f.store.map.delete('enabled');f.store.map.delete('startedAt');
+ const activate=()=>f.engine.fetch(new Request('https://internal/activate',{method:'POST'}));
+ assert.equal((await activate()).status,200);assert.equal(await f.engine.enabled(),true);
+ assert.equal(posts(f.calls).length,0);
+ f.store.map.set('enabled',false);await activate();assert.equal(await f.engine.enabled(),false);
+});
+test('changed preview rejects stale approval and accepts only latest revision',async()=>{
+ const f=fixture({replies:[reply('200','Спорный вопрос?')]});await tick(f.engine);
+ await update(f.engine,ownerMessage('/reply 200 Первый'));
+ const second=ownerMessage('/reply 200 Исправленный');second.update_id=2;
+ await update(f.engine,second);
+ const cb=(seq,revision)=>({update_id:seq,callback_query:{id:'cb',from:{id:42},message:{chat:{id:42,type:'private'}},data:'tr:approve:200:'+revision}});
+ await update(f.engine,cb(3,1));assert.equal(posts(f.calls).length,0);
+ await update(f.engine,cb(4,2));assert.equal(posts(f.calls).length,1);
+ assert.equal(new URLSearchParams(posts(f.calls)[0].init.body).get('text'),'Исправленный');
+});

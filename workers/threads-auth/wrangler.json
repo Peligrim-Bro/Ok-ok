@@ -4,9 +4,6 @@
   "compatibility_date": "2026-11-04",
   "workers_dev": true,
   "keep_vars": true,
-  "vars": {
-    "THREADS_REPLIES_ENABLED": "true"
-  },
   "observability": {
     "enabled": true,
     "logs": {

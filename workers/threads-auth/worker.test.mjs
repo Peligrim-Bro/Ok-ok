@@ -2,7 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 const source=readFileSync(new URL('./worker.mjs',import.meta.url),'utf8').replace('import queue from "./queue.json";', 'const queue=[];').replace('"./replies.mjs"',JSON.stringify(new URL('./replies.mjs',import.meta.url).href));
-const {ThreadsQueue}=await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
+const {ThreadsQueue,default:worker}=await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
 function storage(){const map=new Map();return {get:async k=>map.get(k),put:async(k,v)=>map.set(k,structuredClone(v)),delete:async k=>map.delete(k),list:async()=>map,transaction:async fn=>fn({get:async k=>map.get(k),put:async(k,v)=>map.set(k,v)})};}
 const post={id:'future-slot',text:'Example',imageUrl:'https://raw.githubusercontent.com/Peligrim-Bro/Ok-ok/main/media/example.jpg',imageReviewed:true,altText:'Illustration'};
 const req=p=>new Request('https://internal/publish',{method:'POST',body:JSON.stringify({post:p})});
@@ -37,4 +37,15 @@ test('unreviewed media is rejected; legacy text still auto publishes',async()=>{
  assert.equal(calls.length,0);
  await q.fetch(req({id:'text',text:'Plain text'}));
  assert.ok(calls.some(x=>x.includes('auto_publish_text=true')));
+});
+test('Telegram webhook rejects missing or wrong secrets before forwarding',async()=>{
+ let forwarded=0;
+ const env={THREADS_REVIEW_WEBHOOK_SECRET:'secret-value',THREADS_REPLIES:{getByName:()=>({fetch:async()=>{forwarded++;return Response.json({ok:true});}})}};
+ for(const secret of ['', 'wrong-secret','secret-valuX']){
+  const response=await worker.fetch(new Request('https://worker/telegram-review',{method:'POST',headers:{'X-Telegram-Bot-Api-Secret-Token':secret},body:'{}'}),env);
+  assert.equal(response.status,403);
+ }
+ assert.equal(forwarded,0);
+ assert.equal((await worker.fetch(new Request('https://worker/telegram-review',{method:'POST',headers:{'X-Telegram-Bot-Api-Secret-Token':'secret-value'},body:'{}'}),env)).status,200);
+ assert.equal(forwarded,1);
 });

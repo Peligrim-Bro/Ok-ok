@@ -80,6 +80,8 @@ export class ThreadsReplies {
     }
     if (path === '/activate' && request.method === 'POST') {
       if (!this.configured()) return Response.json({ ok: false }, { status: 503 });
+      try { await this.readiness(); }
+      catch { return Response.json({ ok: false, reason: 'Threads reply reading unconfirmed' }, { status: 502 }); }
       // Provisioning can initialize once; redeploys must preserve the owner's stop.
       if (await this.storage.get('enabled') === undefined) {
         await this.storage.put('startedAt', new Date().toISOString());
@@ -101,10 +103,6 @@ export class ThreadsReplies {
     if (path !== '/tick' || request.method !== 'POST') return new Response('Not found', { status: 404 });
     if (!this.configured()) return Response.json({ configured: false, enabled: false });
     try {
-      if (await this.storage.get('enabled') === undefined && this.env.THREADS_REPLIES_ENABLED === 'true') {
-        await this.storage.put('startedAt', new Date().toISOString());
-        await this.storage.put('enabled', true);
-      }
       if (!await this.enabled()) return Response.json({ enabled: false });
       const stats = await this.scan();
       await this.storage.put('stats', { ...stats, checkedAt: new Date().toISOString(), ok: true });
@@ -113,6 +111,20 @@ export class ThreadsReplies {
       // Do not log request objects, Telegram URLs, tokens, or private comments.
       await this.storage.put('stats', { checkedAt: new Date().toISOString(), ok: false, reason: error.message });
       return Response.json({ ok: false, reason: error.message }, { status: 502 });
+    }
+  }
+
+  async readiness() {
+    const posts = await this.meta('/me/threads?fields=id,text,is_reply,has_replies&limit=50');
+    if (!Array.isArray(posts.data)) throw new Error('Invalid owned posts response');
+    const root = posts.data.find(p => !p.is_reply && p.has_replies);
+    if (!root) return;
+    const replies = await this.meta(`/${root.id}/conversation?fields=id,text,username,timestamp,root_post,replied_to,is_reply,is_reply_owned_by_me,hide_status&limit=10`);
+    if (!Array.isArray(replies.data)) throw new Error('Invalid conversation response');
+    const target = replies.data.find(r => r.is_reply_owned_by_me === false);
+    if (target) {
+      await this.meta(`/${target.id}?fields=id,text,root_post,is_reply,is_reply_owned_by_me,hide_status`);
+      await this.meta(`/${target.id}/replies?fields=id,is_reply_owned_by_me&limit=1`);
     }
   }
 
