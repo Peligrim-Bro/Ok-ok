@@ -25,12 +25,16 @@ jobs:
       - run: node --check workers/threads-auth/replies.mjs
       - run: node --test workers/threads-auth/*.test.mjs
   deploy:
-    if: github.ref == 'refs/heads/main'
+    # Release this isolated Worker from the reviewed owner branch while leaving
+    # main and the website unchanged. All ordinary main deployments still work.
+    if: github.ref == 'refs/heads/main' || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'feature/threads-auto-replies')
     needs: test
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
       - uses: actions/setup-node@v7
         with:
           node-version: '22'

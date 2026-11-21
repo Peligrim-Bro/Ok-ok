@@ -49,3 +49,11 @@ test('Telegram webhook rejects missing or wrong secrets before forwarding',async
  assert.equal((await worker.fetch(new Request('https://worker/telegram-review',{method:'POST',headers:{'X-Telegram-Bot-Api-Secret-Token':'secret-value'},body:'{}'}),env)).status,200);
  assert.equal(forwarded,1);
 });
+test('comments are checked exactly three times per day without changing publication cron',async()=>{
+ const ticks=[],pending=[];
+ const env={THREADS_QUEUE:{getByName:()=>({})},THREADS_REPLIES:{getByName:()=>({fetch:async()=>{ticks.push(true);return Response.json({ok:true});}})}};
+ for(let quarter=0;quarter<96;quarter++){
+  await worker.scheduled({scheduledTime:Date.UTC(2026,10,21,0,quarter*15)},env,{waitUntil:p=>pending.push(p)});
+ }
+ await Promise.all(pending);assert.equal(ticks.length,3);
+});

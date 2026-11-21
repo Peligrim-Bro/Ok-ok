@@ -298,7 +298,7 @@
         "threads",
         "automation"
       ],
-      "next": "Owner21Nov: implement narrow automatic replies and Telegram review with existing @workforwriters1_bot; 15 worker tests and bot/permission preflights passed. Final QA, deployment, secret provisioning and observed activation pending. Preserve OFFSCRIPT, post receipts, website and cron.",
+      "next": "Owner21Nov: implement narrow automatic replies and Telegram review with existing @workforwriters1_bot; 19 worker tests,25 native checks, build and bot/permission preflights passed. Comments only09:00,15:00,21:00 Bangkok per owner21Nov. Deploy isolated Worker branch; keep main unchanged because inherited website ad checks fail. Secret provisioning and observed activation pending. Preserve OFFSCRIPT, post receipts, website and cron.",
       "sources": [
         "docs/THREADS_REPLIES_TASK.md",
         "workers/threads-auth/replies.mjs"

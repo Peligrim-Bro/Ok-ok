@@ -75,6 +75,7 @@ export class ThreadsReplies {
     if (path === '/status') {
       const stats = await this.storage.get('stats');
       return Response.json({ configured: this.configured(), enabled: await this.enabled(),
+        schedule: { timezone: 'Asia/Bangkok', times: ['09:00', '15:00', '21:00'] },
         startedAt: await this.storage.get('startedAt') || null,
         moderationErrorAt: await this.storage.get('moderationErrorAt') || null, ...stats });
     }
@@ -149,7 +150,7 @@ export class ThreadsReplies {
         await this.storage.put('enabled', true);
       }
       if (text.startsWith('/threads_off')) await this.storage.put('enabled', false);
-      await this.notify(`Threads: ${await this.enabled() ? 'автоответы включены' : 'автоответы выключены'}. Проверка каждые 15 минут.\n/threads_on — включить\n/threads_off — остановить\n/threads_status — статус\nСпорный комментарий: /reply ID текст ответа, затем кнопка подтверждения.`);
+      await this.notify(`Threads: ${await this.enabled() ? 'автоответы включены' : 'автоответы выключены'}. Проверка в 09:00, 15:00, 21:00 по Бангкоку.\n/threads_on — включить\n/threads_off — остановить\n/threads_status — статус\nСпорный комментарий: /reply ID текст ответа, затем кнопка подтверждения.`);
       return;
     }
     const manual = !cb && text.match(/^\/reply\s+(\d+)\s+([\s\S]+)$/);

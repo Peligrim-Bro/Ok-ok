@@ -104,10 +104,15 @@ export class ThreadsQueue {
 export default {
   async scheduled(controller, env, ctx) {
     // Independent failure domain: reply processing cannot stop the post queue.
-    ctx.waitUntil((async () => {
-      const result = await env.THREADS_REPLIES.getByName("production").fetch("https://replies.internal/tick", { method: "POST" });
-      if (!result.ok) console.warn("Threads reply tick failed", result.status);
-    })());
+    // Owner21Nov: comments only at09:00,15:00,21:00 Asia/Bangkok.
+    // Retain the quarter-hour cron for the independent publication queue.
+    const time = new Date(controller.scheduledTime);
+    if ([2, 8, 14].includes(time.getUTCHours()) && time.getUTCMinutes() === 0) {
+      ctx.waitUntil((async () => {
+        const result = await env.THREADS_REPLIES.getByName("production").fetch("https://replies.internal/tick", { method: "POST" });
+        if (!result.ok) console.warn("Threads reply tick failed", result.status);
+      })());
+    }
     const due = queue.filter((post) => {
       const age = controller.scheduledTime - Date.parse(post.publishAt);
       return age >= 0 && age < 8 * 60 * 60 * 1000;
