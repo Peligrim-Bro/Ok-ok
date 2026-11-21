@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "project": "OK-OK.click",
-  "updatedAt": "2026-11-19",
+  "updatedAt": "2026-11-21",
   "decisions": [
     {
       "id": "hosting",
@@ -110,11 +110,11 @@
     },
     {
       "id": "channel-media-buffer",
-      "status": "needs_verification",
+      "status": "blocked",
       "tags": [
         "channel"
       ],
-      "next": "19 Nov: 12 reviewed entries and distinct images fill only 23–25 Nov, extending ordinary/comic slots through 25 Nov. Run offline audit, mandatory project checks, PR CI and exact production deployment verification. Runtime delivery remains unknown.",
+      "next": "21 Nov checkpoint after two fix attempts: 12 reviewed entries and distinct images prepare 26–28 Nov; offline audit ready:true and channel/payment tests pass, but native build is blocked because siteBytes 33,229,833 exceeds the fixed 33,000,000 budget by 229,833 bytes. Keep off main; resume by reducing only new technical copies or removing another expired public-build asset without changing originals, budget, UI or schedule. Runtime delivery remains unknown.",
       "sources": [
         "CHANNEL_PUBLISHING.md",
         "scripts/audit-channel-queue.mjs",
@@ -125,7 +125,8 @@
         "docs/CHANNEL_BUFFER_20261105.md",
         "docs/CHANNEL_BUFFER_20261112.md",
         "docs/CHANNEL_BUFFER_20261116.md",
-        "docs/CHANNEL_BUFFER_20261119.md"
+        "docs/CHANNEL_BUFFER_20261119.md",
+        "docs/CHANNEL_BUFFER_20261121.md"
       ]
     },
     {
