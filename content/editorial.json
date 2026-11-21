@@ -1,90 +1,90 @@
 {
-  "verifiedAt": "2026-11-20",
+  "verifiedAt": "2026-11-21",
   "news": [
     {
       "category": "world",
-      "when": "19.11 · Мир",
-      "href": "https://www.reuters.com/world/china/global-markets-view-europe-2026-11-19/",
-      "publishedAt": "2026-11-19",
-      "ru": "Anthropic готовится к биржевому дебюту после размещения акций по 83 доллара и привлечения 81 миллиарда долларов. Reuters отмечает высокий спрос на бумаги, но также сохраняющиеся сомнения инвесторов в окупаемости огромных расходов на инфраструктуру искусственного интеллекта.",
-      "en": "Anthropic is preparing for its stock-market debut after pricing shares at $83 and raising $81 billion. Reuters reports strong demand while investors continue to question whether massive spending on artificial-intelligence infrastructure will deliver sufficient returns.",
-      "th": "Anthropic เตรียมเข้าซื้อขายในตลาดหุ้น หลังตั้งราคาหุ้นที่ 83 ดอลลาร์และระดมทุนได้ 81,000 ล้านดอลลาร์ Reuters รายงานว่าความต้องการซื้อแข็งแกร่ง แต่ผู้ลงทุนยังตั้งคำถามว่าการใช้จ่ายมหาศาลกับโครงสร้างพื้นฐาน AI จะให้ผลตอบแทนคุ้มค่าหรือไม่",
+      "when": "20.11 · Мир",
+      "href": "https://www.reuters.com/business/finance/ai-tech-rout-prompts-us-investors-rush-into-value-stocks-2026-11-20/",
+      "publishedAt": "2026-11-20",
+      "ru": "Резкое снижение акций технологических компаний подтолкнуло инвесторов в США к облигациям и более дешёвым акциям стоимости. Reuters сообщил, что Nasdaq потерял более 5% за день, а акции Anthropic завершили сессию падением более чем на 8% после рекордного биржевого дебюта.",
+      "en": "A sharp technology-stock selloff pushed US investors toward bonds and lower-priced value shares. Reuters reported that the Nasdaq lost more than 5% in the session, while Anthropic finished more than 8% lower one day after its record market debut.",
+      "th": "แรงขายหุ้นเทคโนโลยีอย่างหนักทำให้นักลงทุนสหรัฐหันไปหาพันธบัตรและหุ้นคุณค่าที่มีราคาต่ำกว่า Reuters รายงานว่า Nasdaq ลดลงมากกว่า 5% ในวันเดียว ขณะที่หุ้น Anthropic ปิดลดลงกว่า 8% หลังเข้าตลาดด้วยสถิติสูงเพียงหนึ่งวัน",
       "sources": [
-        "https://www.reuters.com/world/china/global-markets-view-europe-2026-11-19/"
+        "https://www.reuters.com/business/finance/ai-tech-rout-prompts-us-investors-rush-into-value-stocks-2026-11-20/"
       ],
       "nonWar": true,
       "discussionEvidence": {
-        "observedAt": "2026-11-20T06:07:00+07:00",
-        "sourceUrl": "https://www.reuters.com/world/china/global-markets-view-europe-2026-11-19/",
-        "summary": "Reuters exposed no public view, share or comment count. No comparable global engagement metric was available in the single review batch; selection reflects the reported scale of the IPO and broad market relevance, not a worldwide popularity ranking."
+        "observedAt": "2026-11-21T06:55:00+07:00",
+        "sourceUrl": "https://www.reuters.com/business/finance/ai-tech-rout-prompts-us-investors-rush-into-value-stocks-2026-11-20/",
+        "summary": "Reuters exposed no public view, share or comment count. No comparable global engagement metric was available in the single review batch; selection reflects the scale of the reported market move and its broad financial relevance, not a worldwide popularity ranking."
       }
     },
     {
       "category": "thailand",
       "when": "20.11 · Таиланд",
-      "href": "https://www.pattayamail.com/thailandnews/thailand-explores-huawei-ai-technology-to-modernize-ports-and-logistics-572416",
+      "href": "https://www.reuters.com/world/asia-pacific/thailand-must-keep-us-major-trade-partner-pm-says-2026-11-20/",
       "publishedAt": "2026-11-20",
-      "ru": "Транспортная делегация Таиланда изучила решения Huawei для автоматизации портов: планирование заходов судов с помощью ИИ, дистанционное управление кранами и цифровые двойники. Ведомство рассматривает их возможное применение в портах Лаем-Чабанг и Бангкока, но решение о внедрении ещё не объявлено.",
-      "en": "A Thai transport delegation reviewed Huawei systems for port automation, including AI vessel scheduling, remote crane operation and digital twins. Officials are considering possible use at Laem Chabang and Bangkok ports, but no deployment decision has been announced.",
-      "th": "คณะผู้แทนด้านคมนาคมของไทยศึกษาระบบของ Huawei สำหรับท่าเรืออัตโนมัติ ทั้งการจัดตารางเรือด้วย AI การควบคุมเครนจากระยะไกล และดิจิทัลทวิน โดยอยู่ระหว่างพิจารณาความเหมาะสมสำหรับท่าเรือแหลมฉบังและท่าเรือกรุงเทพ แต่ยังไม่มีการประกาศตัดสินใจนำมาใช้",
+      "ru": "Премьер-министр Анутин Чарнвиракул заявил, что Таиланд намерен сохранить США ключевым торговым партнёром. Переговоры предусматривают возможное снижение американского тарифа с 12,5% до 10%, однако совместное заявление ещё не является окончательным соглашением.",
+      "en": "Prime Minister Anutin Charnvirakul said Thailand intends to retain the United States as a major trading partner. Talks include a possible cut in the US tariff from 12.5% to 10%, but the joint statement is not yet a final agreement.",
+      "th": "นายกรัฐมนตรีอนุทิน ชาญวีรกูลกล่าวว่าไทยตั้งใจรักษาสหรัฐให้เป็นคู่ค้ารายสำคัญ การเจรจารวมถึงความเป็นไปได้ที่จะลดภาษีสหรัฐจาก 12.5% เหลือ 10% แต่แถลงการณ์ร่วมยังไม่ใช่ข้อตกลงฉบับสุดท้าย",
       "sources": [
-        "https://www.pattayamail.com/thailandnews/thailand-explores-huawei-ai-technology-to-modernize-ports-and-logistics-572416"
+        "https://www.reuters.com/world/asia-pacific/thailand-must-keep-us-major-trade-partner-pm-says-2026-11-20/"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-20T06:07:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/thailandnews/thailand-explores-huawei-ai-technology-to-modernize-ports-and-logistics-572416",
-        "summary": "The source page displayed 322 views and 0 comments. The official TMD source exposed no comparable public counter, so this publisher-local figure does not establish a nationwide popularity rank."
+        "observedAt": "2026-11-21T06:55:00+07:00",
+        "sourceUrl": "https://www.reuters.com/world/asia-pacific/thailand-must-keep-us-major-trade-partner-pm-says-2026-11-20/",
+        "summary": "Reuters exposed no public view, share or comment count. Selection reflects direct national economic relevance and independently reported trade figures; no comparable nationwide engagement ranking was available."
       }
     },
     {
       "category": "thailand",
-      "when": "19.11 · Таиланд",
-      "href": "https://tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-no-10-318-2026",
-      "publishedAt": "2026-11-19",
-      "ru": "Метеодепартамент Таиланда предупредил о сильных и очень сильных дождях на юге 19–22 ноября с риском паводков и оползней. В нижней части Сиамского залива ожидаются волны 2–3 метра и выше во время гроз; малым судам рекомендовано оставаться у берега.",
-      "en": "Thailand’s Meteorological Department warned of heavy to very heavy southern rain on 19–22 November, with flood and landslide risks. Lower Gulf waves may reach 2–3 metres and higher in storms, and small boats are advised to remain ashore.",
-      "th": "กรมอุตุนิยมวิทยาเตือนภาคใต้มีฝนตกหนักถึงหนักมากช่วง 19–22 พฤศจิกายน เสี่ยงน้ำท่วมและดินถล่ม อ่าวไทยตอนล่างมีคลื่นสูง 2–3 เมตรและสูงกว่านั้นในบริเวณฝนฟ้าคะนอง โดยเรือเล็กควรงดออกจากฝั่ง",
+      "when": "20.11 · Таиланд",
+      "href": "https://www.tmd.go.th/media/forecast/daily-forecast/2026-11-20_23_eng_1.pdf",
+      "publishedAt": "2026-11-20",
+      "ru": "Метеодепартамент Таиланда прогнозирует на 21 ноября похолодание на 1–4 °C в верхней части страны и сильные либо очень сильные дожди в ряде южных провинций. Малым судам в нижней части Сиамского залива рекомендовано оставаться у берега до 22 ноября.",
+      "en": "Thailand’s Meteorological Department forecasts a 1–4 °C temperature drop across the upper country on 21 November and heavy to very heavy rain in parts of the South. Small boats in the lower Gulf are advised to remain ashore through 22 November.",
+      "th": "กรมอุตุนิยมวิทยาคาดว่า 21 พฤศจิกายน อุณหภูมิในประเทศไทยตอนบนจะลดลง 1–4 องศาเซลเซียส และภาคใต้บางแห่งมีฝนตกหนักถึงหนักมาก โดยเรือเล็กในอ่าวไทยตอนล่างควรงดออกจากฝั่งถึง 22 พฤศจิกายน",
       "sources": [
-        "https://tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-no-10-318-2026"
+        "https://www.tmd.go.th/media/forecast/daily-forecast/2026-11-20_23_eng_1.pdf"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-20T06:07:00+07:00",
-        "sourceUrl": "https://tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-no-10-318-2026",
-        "summary": "The official TMD advisory exposed no public view, share or comment total. Selection reflects a current official safety warning with direct national relevance; no comparable engagement rank was available."
+        "observedAt": "2026-11-21T06:55:00+07:00",
+        "sourceUrl": "https://www.tmd.go.th/media/forecast/daily-forecast/2026-11-20_23_eng_1.pdf",
+        "summary": "The official TMD bulletin exposed no public view, share or comment total. Selection reflects current nationwide safety relevance from a primary government source; no comparable engagement rank was available."
       }
     },
     {
       "category": "pattaya",
       "when": "20.11 · Паттайя",
-      "href": "https://www.pattayamail.com/news/pattaya-outlines-2027-development-plan-focusing-on-quality-of-life-improvements-572443",
+      "href": "https://www.pattayamail.com/news/jomtien-beach-expansion-reaches-lifeguard-zone-aims-for-50-metre-wide-shoreline-572433",
       "publishedAt": "2026-11-20",
-      "ru": "Городской комитет Паттайи рассмотрел проект плана на 2027 финансовый год: 341 новый проект и 172 уже выполняющихся. Среди приоритетов названы инфраструктура, качество жизни, туризм, защита окружающей среды и более эффективное управление городом.",
-      "en": "Pattaya’s development committee reviewed a draft 2027 fiscal plan containing 341 new projects and 172 already under way. Priorities include infrastructure, quality of life, tourism, environmental protection and more efficient city administration.",
-      "th": "คณะกรรมการพัฒนาเมืองพัทยาพิจารณาร่างแผนปีงบประมาณ 2570 ซึ่งมีโครงการใหม่ 341 โครงการและโครงการที่กำลังดำเนินการ 172 โครงการ โดยให้ความสำคัญกับโครงสร้างพื้นฐาน คุณภาพชีวิต การท่องเที่ยว สิ่งแวดล้อม และการบริหารเมืองที่มีประสิทธิภาพขึ้น",
+      "ru": "Вторая очередь расширения пляжа Джомтьен дошла до зоны спасателей. Проект должен увеличить ширину берега до 30–50 метров на участке 2,85 километра, укрепить защиту от эрозии и создать больше общественного пространства; завершение намечено на июль 2027 года.",
+      "en": "The second phase of Jomtien Beach’s expansion has reached the lifeguard zone. The project aims to widen a 2.85-kilometre stretch to 30–50 metres, strengthen erosion protection and add public space, with completion planned for July 2027.",
+      "th": "โครงการขยายหาดจอมเทียนระยะที่สองมาถึงบริเวณหน่วยกู้ภัยแล้ว โดยมีเป้าหมายขยายชายหาดช่วง 2.85 กิโลเมตรให้กว้าง 30–50 เมตร ลดการกัดเซาะและเพิ่มพื้นที่สาธารณะ คาดแล้วเสร็จในเดือนกรกฎาคม 2570",
       "sources": [
-        "https://www.pattayamail.com/news/pattaya-outlines-2027-development-plan-focusing-on-quality-of-life-improvements-572443"
+        "https://www.pattayamail.com/news/jomtien-beach-expansion-reaches-lifeguard-zone-aims-for-50-metre-wide-shoreline-572433"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-20T06:07:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/pattaya-outlines-2027-development-plan-focusing-on-quality-of-life-improvements-572443",
-        "summary": "The source page displayed 258 views and 0 comments, compared with 222 views and 0 comments for the selected public-space report. These publisher-local counters do not establish a citywide popularity rank."
+        "observedAt": "2026-11-21T06:55:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/jomtien-beach-expansion-reaches-lifeguard-zone-aims-for-50-metre-wide-shoreline-572433",
+        "summary": "The source page displayed 1,447 views and 0 comments, compared with 969 views and 0 comments for the selected sidewalk-enforcement report. These publisher-local counters do not establish a citywide popularity rank."
       }
     },
     {
       "category": "pattaya",
       "when": "20.11 · Паттайя",
-      "href": "https://www.pattayamail.com/news/pattaya-warns-businesses-to-remove-chairs-and-objects-blocking-public-spaces-572461",
+      "href": "https://www.pattayamail.com/news/pattaya-officials-fine-sidewalk-vendor-selling-goods-along-sukhumvit-road-572451",
       "publishedAt": "2026-11-20",
-      "ru": "Муниципальные инспекторы Паттайи потребовали от предпринимателей убрать стулья и другие вещи с общественных участков перед заведениями. Город предупредил, что повторное перекрытие пространства может привести к более строгим мерам.",
-      "en": "Pattaya municipal inspectors instructed businesses to remove chairs and other belongings from public areas outside their premises. The city warned that repeated obstruction of shared space could lead to stricter enforcement.",
-      "th": "เจ้าหน้าที่เทศกิจเมืองพัทยาสั่งให้ผู้ประกอบการนำเก้าอี้และสิ่งของออกจากพื้นที่สาธารณะหน้าร้าน พร้อมเตือนว่าหากกีดขวางพื้นที่ส่วนรวมซ้ำ อาจถูกดำเนินการเข้มงวดขึ้น",
+      "ru": "Муниципальные инспекторы Наклыа оштрафовали продавца, торговавшего с коляски на тротуаре вдоль Сукхумвит-роуд. Власти напомнили, что общественные проходы должны оставаться свободными для пешеходов.",
+      "en": "Naklua municipal officers fined a sidecar vendor who was trading from a pavement along Sukhumvit Road. Officials reiterated that public walkways must remain clear for pedestrians.",
+      "th": "เจ้าหน้าที่เทศกิจนาเกลือปรับผู้ค้ารถพ่วงข้างที่ขายของบนทางเท้าริมถนนสุขุมวิท พร้อมย้ำว่าทางสาธารณะต้องเปิดให้คนเดินเท้าใช้งานได้สะดวก",
       "sources": [
-        "https://www.pattayamail.com/news/pattaya-warns-businesses-to-remove-chairs-and-objects-blocking-public-spaces-572461"
+        "https://www.pattayamail.com/news/pattaya-officials-fine-sidewalk-vendor-selling-goods-along-sukhumvit-road-572451"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-20T06:07:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/pattaya-warns-businesses-to-remove-chairs-and-objects-blocking-public-spaces-572461",
-        "summary": "The source page displayed 222 views and 0 comments, compared with 258 views and 0 comments for the selected Pattaya development-plan report. These publisher-local counters do not establish a citywide popularity rank."
+        "observedAt": "2026-11-21T06:55:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/pattaya-officials-fine-sidewalk-vendor-selling-goods-along-sukhumvit-road-572451",
+        "summary": "The source page displayed 969 views and 0 comments, compared with 1,447 views and 0 comments for the selected Jomtien Beach expansion report. These publisher-local counters do not establish a citywide popularity rank."
       }
     }
   ],
@@ -367,5 +367,5 @@
       "verifiedAt": "2026-11-16"
     }
   ],
-  "selection": "Reviewed 2026-11-18 Asia/Bangkok: exactly one non-war world story, two Thailand and two Pattaya stories from sources dated 17–18 November, with four items published on the current Bangkok calendar date. Pattaya Mail exposed publisher-local view/comment counters for three selected reports; Reuters and the official TMD advisory exposed no comparable public engagement totals. These observations support relative selection only and do not establish a global, national or citywide popularity ranking. The official ACSC dashboard showed November category statistics but no new specific scam warning dated 17–18 November suitable for a new card, so all 12 active warnings and their original dates are preserved. No Telegram sending."
+  "selection": "Reviewed 2026-11-21 Asia/Bangkok: exactly one non-war world story, two Thailand and two Pattaya stories, all from primary reports dated 20 November and within the previous Bangkok calendar date. Pattaya Mail exposed publisher-local view/comment counters for both selected local reports; Reuters and the official TMD bulletin exposed no comparable public engagement totals. These observations support relative selection only and do not establish a global, national or citywide popularity ranking. The single anti-scam search batch found no distinct new official warning or clearly corroborated investigation beyond the active Pattaya romance-investment/call-centre case already represented in the digest, so all 12 active warnings and their original dates are preserved. No Telegram sending."
 }
