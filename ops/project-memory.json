@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "project": "OK-OK.click",
-  "updatedAt": "2026-11-19",
+  "updatedAt": "2026-11-21",
   "decisions": [
     {
       "id": "hosting",
@@ -289,6 +289,19 @@
         "rental.html",
         "tools/rental-math.mjs",
         "tools/rental-ui.mjs"
+      ]
+    },
+    {
+      "id": "threads-auto-replies",
+      "status": "needs_verification",
+      "tags": [
+        "threads",
+        "automation"
+      ],
+      "next": "LIVE21Nov14:11Bangkok: enabled/configured true; scans09:00/15:00/21:00 Bangkok.19 worker tests; deploy44878678968 source5f946a3; bot setup44879036155 verified webhook and private notice. First real new-comment reply receipt pending. Main unchanged; PR135 unmerged due inherited website ad checks; do not overwrite live branch deployment with older main Worker. Preserve /threads_off. See task note.",
+      "sources": [
+        "docs/THREADS_REPLIES_TASK.md",
+        "workers/threads-auth/replies.mjs"
       ]
     }
   ]
