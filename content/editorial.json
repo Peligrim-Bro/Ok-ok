@@ -1,90 +1,90 @@
 {
-  "verifiedAt": "2026-11-21",
+  "verifiedAt": "2026-11-22",
   "news": [
     {
       "category": "world",
-      "when": "20.11 · Мир",
-      "href": "https://www.reuters.com/business/finance/ai-tech-rout-prompts-us-investors-rush-into-value-stocks-2026-11-20/",
-      "publishedAt": "2026-11-20",
-      "ru": "Резкое снижение акций технологических компаний подтолкнуло инвесторов в США к облигациям и более дешёвым акциям стоимости. Reuters сообщил, что Nasdaq потерял более 5% за день, а акции Anthropic завершили сессию падением более чем на 8% после рекордного биржевого дебюта.",
-      "en": "A sharp technology-stock selloff pushed US investors toward bonds and lower-priced value shares. Reuters reported that the Nasdaq lost more than 5% in the session, while Anthropic finished more than 8% lower one day after its record market debut.",
-      "th": "แรงขายหุ้นเทคโนโลยีอย่างหนักทำให้นักลงทุนสหรัฐหันไปหาพันธบัตรและหุ้นคุณค่าที่มีราคาต่ำกว่า Reuters รายงานว่า Nasdaq ลดลงมากกว่า 5% ในวันเดียว ขณะที่หุ้น Anthropic ปิดลดลงกว่า 8% หลังเข้าตลาดด้วยสถิติสูงเพียงหนึ่งวัน",
+      "when": "21.11 · Мир",
+      "href": "https://www.streetinsider.com/Reuters/South%2BKorea%27s%2BLee%2Bsays%2Bspeed%2Bis%2Bvital%2Bin%2BAI%2Brace%2Bon%2Bdata%2Bcentre%2Bvisit/27382858.html",
+      "publishedAt": "2026-11-21",
+      "ru": "Президент Южной Кореи Ли Чжэ Мён призвал ускорить развитие инфраструктуры искусственного интеллекта во время посещения строящегося дата-центра в Ульсане. Совместный проект SK Group и Amazon Web Services должен начать работу во второй половине 2027 года и поддержать инвестиции за пределами Сеула.",
+      "en": "South Korean President Lee Jae Myung urged faster development of AI infrastructure while visiting a data centre under construction in Ulsan. The SK Group and Amazon Web Services project is due to start operating in the second half of 2027 and is intended to support investment beyond Seoul.",
+      "th": "ประธานาธิบดีอี แจ-มย็องของเกาหลีใต้เรียกร้องให้เร่งพัฒนาโครงสร้างพื้นฐานปัญญาประดิษฐ์ ระหว่างเยี่ยมชมศูนย์ข้อมูลที่กำลังก่อสร้างในเมืองอุลซาน โครงการร่วมของ SK Group และ Amazon Web Services มีกำหนดเริ่มดำเนินงานในช่วงครึ่งหลังของปี 2027 และมุ่งกระจายการลงทุนนอกกรุงโซล",
       "sources": [
-        "https://www.reuters.com/business/finance/ai-tech-rout-prompts-us-investors-rush-into-value-stocks-2026-11-20/"
+        "https://www.streetinsider.com/Reuters/South%2BKorea%27s%2BLee%2Bsays%2Bspeed%2Bis%2Bvital%2Bin%2BAI%2Brace%2Bon%2Bdata%2Bcentre%2Bvisit/27382858.html"
       ],
       "nonWar": true,
       "discussionEvidence": {
-        "observedAt": "2026-11-21T06:55:00+07:00",
-        "sourceUrl": "https://www.reuters.com/business/finance/ai-tech-rout-prompts-us-investors-rush-into-value-stocks-2026-11-20/",
-        "summary": "Reuters exposed no public view, share or comment count. No comparable global engagement metric was available in the single review batch; selection reflects the scale of the reported market move and its broad financial relevance, not a worldwide popularity ranking."
+        "observedAt": "2026-11-22T06:27:45+07:00",
+        "sourceUrl": "https://www.streetinsider.com/Reuters/South%2BKorea%27s%2BLee%2Bsays%2Bspeed%2Bis%2Bvital%2Bin%2BAI%2Brace%2Bon%2Bdata%2Bcentre%2Bvisit/27382858.html",
+        "summary": "The accessible Reuters syndication displayed 0 shares but no public view or comment count. No comparable global engagement totals were available in the single review batch; selection reflects the international significance of AI infrastructure investment and does not claim a worldwide popularity ranking."
       }
     },
     {
       "category": "thailand",
-      "when": "20.11 · Таиланд",
-      "href": "https://www.reuters.com/world/asia-pacific/thailand-must-keep-us-major-trade-partner-pm-says-2026-11-20/",
-      "publishedAt": "2026-11-20",
-      "ru": "Премьер-министр Анутин Чарнвиракул заявил, что Таиланд намерен сохранить США ключевым торговым партнёром. Переговоры предусматривают возможное снижение американского тарифа с 12,5% до 10%, однако совместное заявление ещё не является окончательным соглашением.",
-      "en": "Prime Minister Anutin Charnvirakul said Thailand intends to retain the United States as a major trading partner. Talks include a possible cut in the US tariff from 12.5% to 10%, but the joint statement is not yet a final agreement.",
-      "th": "นายกรัฐมนตรีอนุทิน ชาญวีรกูลกล่าวว่าไทยตั้งใจรักษาสหรัฐให้เป็นคู่ค้ารายสำคัญ การเจรจารวมถึงความเป็นไปได้ที่จะลดภาษีสหรัฐจาก 12.5% เหลือ 10% แต่แถลงการณ์ร่วมยังไม่ใช่ข้อตกลงฉบับสุดท้าย",
+      "when": "21.11 · Таиланд",
+      "href": "https://www.pattayamail.com/thailandnews/thai-pm-and-chinese-president-xi-discuss-water-pollution-trade-and-regional-security-572535",
+      "publishedAt": "2026-11-21",
+      "ru": "Премьер-министр Таиланда Анутин Чарнвиракул и председатель КНР Си Цзиньпин обсудили трансграничное загрязнение воды, торговлю и инвестиции после саммита АТЭС. Таиланд предложил усилить совместный контроль качества воды и расширить экономическое сотрудничество.",
+      "en": "Thai Prime Minister Anutin Charnvirakul and Chinese President Xi Jinping discussed cross-border water pollution, trade and investment after the APEC summit. Thailand proposed closer joint water-quality monitoring and broader economic cooperation.",
+      "th": "นายกรัฐมนตรีอนุทิน ชาญวีรกูลและประธานาธิบดีสี จิ้นผิงหารือเรื่องมลพิษทางน้ำข้ามพรมแดน การค้า และการลงทุนหลังการประชุมเอเปค ไทยเสนอให้เพิ่มความร่วมมือด้านการติดตามคุณภาพน้ำและขยายความร่วมมือทางเศรษฐกิจ",
       "sources": [
-        "https://www.reuters.com/world/asia-pacific/thailand-must-keep-us-major-trade-partner-pm-says-2026-11-20/"
+        "https://www.pattayamail.com/thailandnews/thai-pm-and-chinese-president-xi-discuss-water-pollution-trade-and-regional-security-572535"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-21T06:55:00+07:00",
-        "sourceUrl": "https://www.reuters.com/world/asia-pacific/thailand-must-keep-us-major-trade-partner-pm-says-2026-11-20/",
-        "summary": "Reuters exposed no public view, share or comment count. Selection reflects direct national economic relevance and independently reported trade figures; no comparable nationwide engagement ranking was available."
+        "observedAt": "2026-11-22T06:27:45+07:00",
+        "sourceUrl": "https://www.pattayamail.com/thailandnews/thai-pm-and-chinese-president-xi-discuss-water-pollution-trade-and-regional-security-572535",
+        "summary": "The source page displayed 590 views and 0 comments, compared with 628 views and 0 comments for the selected southern flood-readiness report. These publisher-local counters are comparable only within the same site and do not establish a nationwide popularity ranking."
       }
     },
     {
       "category": "thailand",
-      "when": "20.11 · Таиланд",
-      "href": "https://www.tmd.go.th/media/forecast/daily-forecast/2026-11-20_23_eng_1.pdf",
-      "publishedAt": "2026-11-20",
-      "ru": "Метеодепартамент Таиланда прогнозирует на 21 ноября похолодание на 1–4 °C в верхней части страны и сильные либо очень сильные дожди в ряде южных провинций. Малым судам в нижней части Сиамского залива рекомендовано оставаться у берега до 22 ноября.",
-      "en": "Thailand’s Meteorological Department forecasts a 1–4 °C temperature drop across the upper country on 21 November and heavy to very heavy rain in parts of the South. Small boats in the lower Gulf are advised to remain ashore through 22 November.",
-      "th": "กรมอุตุนิยมวิทยาคาดว่า 21 พฤศจิกายน อุณหภูมิในประเทศไทยตอนบนจะลดลง 1–4 องศาเซลเซียส และภาคใต้บางแห่งมีฝนตกหนักถึงหนักมาก โดยเรือเล็กในอ่าวไทยตอนล่างควรงดออกจากฝั่งถึง 22 พฤศจิกายน",
+      "when": "21.11 · Таиланд",
+      "href": "https://www.pattayamail.com/thailandnews/southern-provinces-ordered-to-maintain-flood-readiness-through-mid-december-572545",
+      "publishedAt": "2026-11-21",
+      "ru": "Департамент предупреждения и ликвидации последствий стихийных бедствий поручил 14 южным провинциям сохранять повышенную готовность к наводнениям до середины декабря. Власти должны проверять дренаж, готовить убежища и планы эвакуации, а также заранее предупреждать жителей об опасных осадках и стоке.",
+      "en": "Thailand’s disaster-prevention department told all 14 southern provinces to maintain heightened flood readiness through mid-December. Authorities must inspect drainage, prepare shelters and evacuation plans, and issue early warnings for hazardous rainfall and runoff.",
+      "th": "กรมป้องกันและบรรเทาสาธารณภัยสั่งให้ทั้ง 14 จังหวัดภาคใต้คงระดับความพร้อมรับน้ำท่วมสูงสุดถึงกลางเดือนธันวาคม หน่วยงานต้องตรวจระบบระบายน้ำ เตรียมศูนย์พักพิงและแผนอพยพ พร้อมแจ้งเตือนฝนและน้ำหลากล่วงหน้า",
       "sources": [
-        "https://www.tmd.go.th/media/forecast/daily-forecast/2026-11-20_23_eng_1.pdf"
+        "https://www.pattayamail.com/thailandnews/southern-provinces-ordered-to-maintain-flood-readiness-through-mid-december-572545"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-21T06:55:00+07:00",
-        "sourceUrl": "https://www.tmd.go.th/media/forecast/daily-forecast/2026-11-20_23_eng_1.pdf",
-        "summary": "The official TMD bulletin exposed no public view, share or comment total. Selection reflects current nationwide safety relevance from a primary government source; no comparable engagement rank was available."
+        "observedAt": "2026-11-22T06:27:45+07:00",
+        "sourceUrl": "https://www.pattayamail.com/thailandnews/southern-provinces-ordered-to-maintain-flood-readiness-through-mid-december-572545",
+        "summary": "The source page displayed 628 views and 0 comments, compared with 590 views and 0 comments for the selected Thailand–China water-pollution and trade report. These publisher-local counters are comparable only within the same site and do not establish a nationwide popularity ranking."
       }
     },
     {
       "category": "pattaya",
-      "when": "20.11 · Паттайя",
-      "href": "https://www.pattayamail.com/news/jomtien-beach-expansion-reaches-lifeguard-zone-aims-for-50-metre-wide-shoreline-572433",
-      "publishedAt": "2026-11-20",
-      "ru": "Вторая очередь расширения пляжа Джомтьен дошла до зоны спасателей. Проект должен увеличить ширину берега до 30–50 метров на участке 2,85 километра, укрепить защиту от эрозии и создать больше общественного пространства; завершение намечено на июль 2027 года.",
-      "en": "The second phase of Jomtien Beach’s expansion has reached the lifeguard zone. The project aims to widen a 2.85-kilometre stretch to 30–50 metres, strengthen erosion protection and add public space, with completion planned for July 2027.",
-      "th": "โครงการขยายหาดจอมเทียนระยะที่สองมาถึงบริเวณหน่วยกู้ภัยแล้ว โดยมีเป้าหมายขยายชายหาดช่วง 2.85 กิโลเมตรให้กว้าง 30–50 เมตร ลดการกัดเซาะและเพิ่มพื้นที่สาธารณะ คาดแล้วเสร็จในเดือนกรกฎาคม 2570",
+      "when": "21.11 · Паттайя",
+      "href": "https://www.pattayamail.com/latestnews/news/pattaya-immigration-assists-elderly-british-visitor-with-mobility-difficulties-572484",
+      "publishedAt": "2026-11-21",
+      "ru": "Сотрудники иммиграционной службы Паттайи помогли пожилому британскому посетителю с ограниченной подвижностью пройти процедуру продления пребывания. Случай подчёркивает доступность помощи для людей, которым трудно самостоятельно передвигаться по офису.",
+      "en": "Pattaya immigration officers helped an elderly British visitor with limited mobility complete an extension-of-stay procedure. The case highlights assistance available to people who have difficulty moving through the office independently.",
+      "th": "เจ้าหน้าที่ตรวจคนเข้าเมืองพัทยาช่วยผู้สูงอายุชาวอังกฤษที่มีข้อจำกัดด้านการเคลื่อนไหวดำเนินขั้นตอนขออยู่ต่อ เหตุการณ์นี้สะท้อนการช่วยเหลือผู้ที่ไม่สะดวกเดินทางภายในสำนักงานด้วยตนเอง",
       "sources": [
-        "https://www.pattayamail.com/news/jomtien-beach-expansion-reaches-lifeguard-zone-aims-for-50-metre-wide-shoreline-572433"
+        "https://www.pattayamail.com/latestnews/news/pattaya-immigration-assists-elderly-british-visitor-with-mobility-difficulties-572484"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-21T06:55:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/jomtien-beach-expansion-reaches-lifeguard-zone-aims-for-50-metre-wide-shoreline-572433",
-        "summary": "The source page displayed 1,447 views and 0 comments, compared with 969 views and 0 comments for the selected sidewalk-enforcement report. These publisher-local counters do not establish a citywide popularity rank."
+        "observedAt": "2026-11-22T06:27:45+07:00",
+        "sourceUrl": "https://www.pattayamail.com/latestnews/news/pattaya-immigration-assists-elderly-british-visitor-with-mobility-difficulties-572484",
+        "summary": "The source page displayed 907 views and 0 comments, compared with 838 views and 0 comments for the selected Koh Larn traffic-safety report. These publisher-local counters do not establish a citywide popularity ranking."
       }
     },
     {
       "category": "pattaya",
-      "when": "20.11 · Паттайя",
-      "href": "https://www.pattayamail.com/news/pattaya-officials-fine-sidewalk-vendor-selling-goods-along-sukhumvit-road-572451",
-      "publishedAt": "2026-11-20",
-      "ru": "Муниципальные инспекторы Наклыа оштрафовали продавца, торговавшего с коляски на тротуаре вдоль Сукхумвит-роуд. Власти напомнили, что общественные проходы должны оставаться свободными для пешеходов.",
-      "en": "Naklua municipal officers fined a sidecar vendor who was trading from a pavement along Sukhumvit Road. Officials reiterated that public walkways must remain clear for pedestrians.",
-      "th": "เจ้าหน้าที่เทศกิจนาเกลือปรับผู้ค้ารถพ่วงข้างที่ขายของบนทางเท้าริมถนนสุขุมวิท พร้อมย้ำว่าทางสาธารณะต้องเปิดให้คนเดินเท้าใช้งานได้สะดวก",
+      "when": "21.11 · Паттайя",
+      "href": "https://www.pattayamail.com/news/koh-larn-repairs-traffic-bollards-on-steep-tawaen-beach-descent-amid-ongoing-safety-concerns-572505",
+      "publishedAt": "2026-11-21",
+      "ru": "На Ко Лане восстановили повреждённые гибкие столбики, разделяющие полосы на крутом спуске к пляжу Таваен. Местные службы рассчитывают снизить риск столкновений на участке, где песок и уклон требуют от водителей особенно осторожной скорости.",
+      "en": "Koh Larn authorities repaired damaged flexible bollards separating lanes on the steep descent to Tawaen Beach. Local officials aim to reduce collision risks on a route where the gradient and loose sand require drivers to slow down and take extra care.",
+      "th": "เกาะล้านซ่อมเสาล้มลุกแบ่งช่องทางที่ชำรุดบนทางลาดชันลงหาดตาแหวน เพื่อช่วยลดความเสี่ยงการชนในจุดที่มีทั้งความลาดชันและทรายบนผิวถนน ผู้ขับขี่ควรลดความเร็วและใช้ความระมัดระวังเป็นพิเศษ",
       "sources": [
-        "https://www.pattayamail.com/news/pattaya-officials-fine-sidewalk-vendor-selling-goods-along-sukhumvit-road-572451"
+        "https://www.pattayamail.com/news/koh-larn-repairs-traffic-bollards-on-steep-tawaen-beach-descent-amid-ongoing-safety-concerns-572505"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-21T06:55:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/pattaya-officials-fine-sidewalk-vendor-selling-goods-along-sukhumvit-road-572451",
-        "summary": "The source page displayed 969 views and 0 comments, compared with 1,447 views and 0 comments for the selected Jomtien Beach expansion report. These publisher-local counters do not establish a citywide popularity rank."
+        "observedAt": "2026-11-22T06:27:45+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/koh-larn-repairs-traffic-bollards-on-steep-tawaen-beach-descent-amid-ongoing-safety-concerns-572505",
+        "summary": "The source page displayed 838 views and 0 comments, compared with 907 views and 0 comments for the selected immigration-assistance report. These publisher-local counters do not establish a citywide popularity ranking."
       }
     }
   ],
@@ -367,5 +367,5 @@
       "verifiedAt": "2026-11-16"
     }
   ],
-  "selection": "Reviewed 2026-11-21 Asia/Bangkok: exactly one non-war world story, two Thailand and two Pattaya stories, all from primary reports dated 20 November and within the previous Bangkok calendar date. Pattaya Mail exposed publisher-local view/comment counters for both selected local reports; Reuters and the official TMD bulletin exposed no comparable public engagement totals. These observations support relative selection only and do not establish a global, national or citywide popularity ranking. The single anti-scam search batch found no distinct new official warning or clearly corroborated investigation beyond the active Pattaya romance-investment/call-centre case already represented in the digest, so all 12 active warnings and their original dates are preserved. No Telegram sending."
+  "selection": "Reviewed 2026-11-22 Asia/Bangkok: exactly one non-war world story, two Thailand and two Pattaya stories, all from reports dated 21 November and within the previous Bangkok calendar date. Pattaya Mail exposed publisher-local view/comment counters for all four Thailand and Pattaya reports; the accessible Reuters syndication exposed a share count but no comparable views or comments. These observations support relative selection only and do not establish a global, national or citywide popularity ranking. The single anti-scam search batch found no distinct new official warning or clearly corroborated investigation dated 21–22 November beyond the active schemes already represented in the digest, so all 12 active warnings and their original dates are preserved. No Telegram sending."
 }
