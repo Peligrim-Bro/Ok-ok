@@ -1,0 +1,57 @@
+name: Check Threads reply permissions
+on:
+  pull_request:
+    branches: [main]
+    paths: [.github/workflows/threads-reply-permissions-check.yml]
+permissions: {}
+jobs:
+  check:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'diagnostics/threads-reply-permissions'
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Check access without posting or deploying
+        env:
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import re
+          from urllib.error import HTTPError
+          from urllib.parse import urlencode
+          from urllib.request import Request, urlopen
+
+          token = os.environ.get("THREADS_ACCESS_TOKEN")
+          if not token:
+              raise SystemExit("THREADS_ACCESS_TOKEN is unavailable in GitHub Actions")
+
+          def get(path, params):
+              url = "https://graph.threads.net" + path + "?" + urlencode(params)
+              request = Request(url, headers={"Authorization": "Bearer " + token})
+              try:
+                  with urlopen(request, timeout=15) as response:
+                      return json.load(response)
+              except HTTPError as error:
+                  print(f"Meta returned HTTP {error.code}")
+              except Exception:
+                  print("Meta request failed")
+              return {}
+
+          debug = get("/debug_token", {"input_token": token}).get("data", {})
+          scopes = debug.get("scopes")
+          if debug.get("is_valid") is True and isinstance(scopes, list):
+              for scope in ("threads_read_replies", "threads_manage_replies", "threads_content_publish"):
+                  print(f"{scope}={scope in scopes}")
+          else:
+              print("Granted scopes could not be determined")
+
+          posts = get("/v1.0/me/threads", {"fields": "id", "limit": 1}).get("data", [])
+          post_id = str(posts[0].get("id", "")) if posts else ""
+          if not re.fullmatch(r"[0-9]+", post_id):
+              raise SystemExit("Could not select an owned post to test reply reading")
+          result = get(f"/v1.0/{post_id}/replies", {"fields": "id", "limit": 1})
+          if not isinstance(result.get("data"), list):
+              raise SystemExit("Reply reading could not be verified")
+          print("Reply reading confirmed")
+          PY
