@@ -90,6 +90,20 @@
         "docs/FEATURE_RULES.md",
         "docs/OKI_HOUSE_TASK.md"
       ]
+    },
+    {
+      "id": "advertising-invitation-disabled",
+      "status": "active",
+      "tags": [
+        "release",
+        "layout"
+      ],
+      "text": "Owner 22 Nov explicitly removed the advertising invitation and forbids restoration until a new direct instruction. Supersedes older editorial instructions to preserve it. No unrelated changes without explicit owner instruction.",
+      "sources": [
+        "AGENTS.md",
+        "scripts/apply-single-ad-invitation.mjs",
+        "scripts/verify-project.mjs"
+      ]
     }
   ],
   "tasks": [
@@ -292,14 +306,14 @@
       ]
     },
     {
-      "id": "compact-invitation-release-checks",
+      "id": "advertising-disabled-release-checks",
       "status": "needs_verification",
       "tags": [
-        "release",
-        "layout"
+        "release"
       ],
-      "next": "PR #132, base 6b4ce12: align obsolete homepage advertising assertions and SPLIT return route with current UI. Keep mobile, payment and Lighthouse checks. Local build and project verification pass; GitHub browser checks required. Native Workers Builds detail requires dashboard sign-in; GitHub direct production deploy previously succeeded independently. Compact invitation still offers placement on the homepage, which no longer renders paid cards; separate owner decision requested before changing invoice availability. Do not merge while release checks fail.",
+      "next": "PR132 resumes after owner removal: button/board stay absent, invoice backend/history unchanged. Local build/native passed. Browser absence matrix, existing mocked invoice coverage and tools return route await GitHub checks. Native Workers Builds still fails; detail requires Cloudflare dashboard sign-in. No restoration or settings changes.",
       "sources": [
+        "tests/ad-invitation-oki.spec.cjs",
         "tests/ads-payments.spec.cjs",
         "tests/mobile.spec.cjs",
         "tests/tools-browser.spec.mjs"
