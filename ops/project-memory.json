@@ -304,6 +304,20 @@
         "tools/rental-math.mjs",
         "tools/rental-ui.mjs"
       ]
+    },
+    {
+      "id": "advertising-disabled-release-checks",
+      "status": "needs_verification",
+      "tags": [
+        "release"
+      ],
+      "next": "PR132 resumes after owner removal: button/board stay absent, invoice backend/history unchanged. Local build/native passed. Browser absence matrix, existing mocked invoice coverage and tools return route await GitHub checks. Native Workers Builds still fails; detail requires Cloudflare dashboard sign-in. No restoration or settings changes.",
+      "sources": [
+        "tests/ad-invitation-oki.spec.cjs",
+        "tests/ads-payments.spec.cjs",
+        "tests/mobile.spec.cjs",
+        "tests/tools-browser.spec.mjs"
+      ]
     }
   ]
 }

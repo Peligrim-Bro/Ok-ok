@@ -1,90 +1,90 @@
 {
-  "verifiedAt": "2026-11-20",
+  "verifiedAt": "2026-11-22",
   "news": [
     {
       "category": "world",
-      "when": "19.11 · Мир",
-      "href": "https://www.reuters.com/world/china/global-markets-view-europe-2026-11-19/",
-      "publishedAt": "2026-11-19",
-      "ru": "Anthropic готовится к биржевому дебюту после размещения акций по 83 доллара и привлечения 81 миллиарда долларов. Reuters отмечает высокий спрос на бумаги, но также сохраняющиеся сомнения инвесторов в окупаемости огромных расходов на инфраструктуру искусственного интеллекта.",
-      "en": "Anthropic is preparing for its stock-market debut after pricing shares at $83 and raising $81 billion. Reuters reports strong demand while investors continue to question whether massive spending on artificial-intelligence infrastructure will deliver sufficient returns.",
-      "th": "Anthropic เตรียมเข้าซื้อขายในตลาดหุ้น หลังตั้งราคาหุ้นที่ 83 ดอลลาร์และระดมทุนได้ 81,000 ล้านดอลลาร์ Reuters รายงานว่าความต้องการซื้อแข็งแกร่ง แต่ผู้ลงทุนยังตั้งคำถามว่าการใช้จ่ายมหาศาลกับโครงสร้างพื้นฐาน AI จะให้ผลตอบแทนคุ้มค่าหรือไม่",
+      "when": "21.11 · Мир",
+      "href": "https://www.streetinsider.com/Reuters/South%2BKorea%27s%2BLee%2Bsays%2Bspeed%2Bis%2Bvital%2Bin%2BAI%2Brace%2Bon%2Bdata%2Bcentre%2Bvisit/27382858.html",
+      "publishedAt": "2026-11-21",
+      "ru": "Президент Южной Кореи Ли Чжэ Мён призвал ускорить развитие инфраструктуры искусственного интеллекта во время посещения строящегося дата-центра в Ульсане. Совместный проект SK Group и Amazon Web Services должен начать работу во второй половине 2027 года и поддержать инвестиции за пределами Сеула.",
+      "en": "South Korean President Lee Jae Myung urged faster development of AI infrastructure while visiting a data centre under construction in Ulsan. The SK Group and Amazon Web Services project is due to start operating in the second half of 2027 and is intended to support investment beyond Seoul.",
+      "th": "ประธานาธิบดีอี แจ-มย็องของเกาหลีใต้เรียกร้องให้เร่งพัฒนาโครงสร้างพื้นฐานปัญญาประดิษฐ์ ระหว่างเยี่ยมชมศูนย์ข้อมูลที่กำลังก่อสร้างในเมืองอุลซาน โครงการร่วมของ SK Group และ Amazon Web Services มีกำหนดเริ่มดำเนินงานในช่วงครึ่งหลังของปี 2027 และมุ่งกระจายการลงทุนนอกกรุงโซล",
       "sources": [
-        "https://www.reuters.com/world/china/global-markets-view-europe-2026-11-19/"
+        "https://www.streetinsider.com/Reuters/South%2BKorea%27s%2BLee%2Bsays%2Bspeed%2Bis%2Bvital%2Bin%2BAI%2Brace%2Bon%2Bdata%2Bcentre%2Bvisit/27382858.html"
       ],
       "nonWar": true,
       "discussionEvidence": {
-        "observedAt": "2026-11-20T06:07:00+07:00",
-        "sourceUrl": "https://www.reuters.com/world/china/global-markets-view-europe-2026-11-19/",
-        "summary": "Reuters exposed no public view, share or comment count. No comparable global engagement metric was available in the single review batch; selection reflects the reported scale of the IPO and broad market relevance, not a worldwide popularity ranking."
+        "observedAt": "2026-11-22T06:27:45+07:00",
+        "sourceUrl": "https://www.streetinsider.com/Reuters/South%2BKorea%27s%2BLee%2Bsays%2Bspeed%2Bis%2Bvital%2Bin%2BAI%2Brace%2Bon%2Bdata%2Bcentre%2Bvisit/27382858.html",
+        "summary": "The accessible Reuters syndication displayed 0 shares but no public view or comment count. No comparable global engagement totals were available in the single review batch; selection reflects the international significance of AI infrastructure investment and does not claim a worldwide popularity ranking."
       }
     },
     {
       "category": "thailand",
-      "when": "20.11 · Таиланд",
-      "href": "https://www.pattayamail.com/thailandnews/thailand-explores-huawei-ai-technology-to-modernize-ports-and-logistics-572416",
-      "publishedAt": "2026-11-20",
-      "ru": "Транспортная делегация Таиланда изучила решения Huawei для автоматизации портов: планирование заходов судов с помощью ИИ, дистанционное управление кранами и цифровые двойники. Ведомство рассматривает их возможное применение в портах Лаем-Чабанг и Бангкока, но решение о внедрении ещё не объявлено.",
-      "en": "A Thai transport delegation reviewed Huawei systems for port automation, including AI vessel scheduling, remote crane operation and digital twins. Officials are considering possible use at Laem Chabang and Bangkok ports, but no deployment decision has been announced.",
-      "th": "คณะผู้แทนด้านคมนาคมของไทยศึกษาระบบของ Huawei สำหรับท่าเรืออัตโนมัติ ทั้งการจัดตารางเรือด้วย AI การควบคุมเครนจากระยะไกล และดิจิทัลทวิน โดยอยู่ระหว่างพิจารณาความเหมาะสมสำหรับท่าเรือแหลมฉบังและท่าเรือกรุงเทพ แต่ยังไม่มีการประกาศตัดสินใจนำมาใช้",
+      "when": "21.11 · Таиланд",
+      "href": "https://www.pattayamail.com/thailandnews/thai-pm-and-chinese-president-xi-discuss-water-pollution-trade-and-regional-security-572535",
+      "publishedAt": "2026-11-21",
+      "ru": "Премьер-министр Таиланда Анутин Чарнвиракул и председатель КНР Си Цзиньпин обсудили трансграничное загрязнение воды, торговлю и инвестиции после саммита АТЭС. Таиланд предложил усилить совместный контроль качества воды и расширить экономическое сотрудничество.",
+      "en": "Thai Prime Minister Anutin Charnvirakul and Chinese President Xi Jinping discussed cross-border water pollution, trade and investment after the APEC summit. Thailand proposed closer joint water-quality monitoring and broader economic cooperation.",
+      "th": "นายกรัฐมนตรีอนุทิน ชาญวีรกูลและประธานาธิบดีสี จิ้นผิงหารือเรื่องมลพิษทางน้ำข้ามพรมแดน การค้า และการลงทุนหลังการประชุมเอเปค ไทยเสนอให้เพิ่มความร่วมมือด้านการติดตามคุณภาพน้ำและขยายความร่วมมือทางเศรษฐกิจ",
       "sources": [
-        "https://www.pattayamail.com/thailandnews/thailand-explores-huawei-ai-technology-to-modernize-ports-and-logistics-572416"
+        "https://www.pattayamail.com/thailandnews/thai-pm-and-chinese-president-xi-discuss-water-pollution-trade-and-regional-security-572535"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-20T06:07:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/thailandnews/thailand-explores-huawei-ai-technology-to-modernize-ports-and-logistics-572416",
-        "summary": "The source page displayed 322 views and 0 comments. The official TMD source exposed no comparable public counter, so this publisher-local figure does not establish a nationwide popularity rank."
+        "observedAt": "2026-11-22T06:27:45+07:00",
+        "sourceUrl": "https://www.pattayamail.com/thailandnews/thai-pm-and-chinese-president-xi-discuss-water-pollution-trade-and-regional-security-572535",
+        "summary": "The source page displayed 590 views and 0 comments, compared with 628 views and 0 comments for the selected southern flood-readiness report. These publisher-local counters are comparable only within the same site and do not establish a nationwide popularity ranking."
       }
     },
     {
       "category": "thailand",
-      "when": "19.11 · Таиланд",
-      "href": "https://tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-no-10-318-2026",
-      "publishedAt": "2026-11-19",
-      "ru": "Метеодепартамент Таиланда предупредил о сильных и очень сильных дождях на юге 19–22 ноября с риском паводков и оползней. В нижней части Сиамского залива ожидаются волны 2–3 метра и выше во время гроз; малым судам рекомендовано оставаться у берега.",
-      "en": "Thailand’s Meteorological Department warned of heavy to very heavy southern rain on 19–22 November, with flood and landslide risks. Lower Gulf waves may reach 2–3 metres and higher in storms, and small boats are advised to remain ashore.",
-      "th": "กรมอุตุนิยมวิทยาเตือนภาคใต้มีฝนตกหนักถึงหนักมากช่วง 19–22 พฤศจิกายน เสี่ยงน้ำท่วมและดินถล่ม อ่าวไทยตอนล่างมีคลื่นสูง 2–3 เมตรและสูงกว่านั้นในบริเวณฝนฟ้าคะนอง โดยเรือเล็กควรงดออกจากฝั่ง",
+      "when": "21.11 · Таиланд",
+      "href": "https://www.pattayamail.com/thailandnews/southern-provinces-ordered-to-maintain-flood-readiness-through-mid-december-572545",
+      "publishedAt": "2026-11-21",
+      "ru": "Департамент предупреждения и ликвидации последствий стихийных бедствий поручил 14 южным провинциям сохранять повышенную готовность к наводнениям до середины декабря. Власти должны проверять дренаж, готовить убежища и планы эвакуации, а также заранее предупреждать жителей об опасных осадках и стоке.",
+      "en": "Thailand’s disaster-prevention department told all 14 southern provinces to maintain heightened flood readiness through mid-December. Authorities must inspect drainage, prepare shelters and evacuation plans, and issue early warnings for hazardous rainfall and runoff.",
+      "th": "กรมป้องกันและบรรเทาสาธารณภัยสั่งให้ทั้ง 14 จังหวัดภาคใต้คงระดับความพร้อมรับน้ำท่วมสูงสุดถึงกลางเดือนธันวาคม หน่วยงานต้องตรวจระบบระบายน้ำ เตรียมศูนย์พักพิงและแผนอพยพ พร้อมแจ้งเตือนฝนและน้ำหลากล่วงหน้า",
       "sources": [
-        "https://tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-no-10-318-2026"
+        "https://www.pattayamail.com/thailandnews/southern-provinces-ordered-to-maintain-flood-readiness-through-mid-december-572545"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-20T06:07:00+07:00",
-        "sourceUrl": "https://tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-no-10-318-2026",
-        "summary": "The official TMD advisory exposed no public view, share or comment total. Selection reflects a current official safety warning with direct national relevance; no comparable engagement rank was available."
+        "observedAt": "2026-11-22T06:27:45+07:00",
+        "sourceUrl": "https://www.pattayamail.com/thailandnews/southern-provinces-ordered-to-maintain-flood-readiness-through-mid-december-572545",
+        "summary": "The source page displayed 628 views and 0 comments, compared with 590 views and 0 comments for the selected Thailand–China water-pollution and trade report. These publisher-local counters are comparable only within the same site and do not establish a nationwide popularity ranking."
       }
     },
     {
       "category": "pattaya",
-      "when": "20.11 · Паттайя",
-      "href": "https://www.pattayamail.com/news/pattaya-outlines-2027-development-plan-focusing-on-quality-of-life-improvements-572443",
-      "publishedAt": "2026-11-20",
-      "ru": "Городской комитет Паттайи рассмотрел проект плана на 2027 финансовый год: 341 новый проект и 172 уже выполняющихся. Среди приоритетов названы инфраструктура, качество жизни, туризм, защита окружающей среды и более эффективное управление городом.",
-      "en": "Pattaya’s development committee reviewed a draft 2027 fiscal plan containing 341 new projects and 172 already under way. Priorities include infrastructure, quality of life, tourism, environmental protection and more efficient city administration.",
-      "th": "คณะกรรมการพัฒนาเมืองพัทยาพิจารณาร่างแผนปีงบประมาณ 2570 ซึ่งมีโครงการใหม่ 341 โครงการและโครงการที่กำลังดำเนินการ 172 โครงการ โดยให้ความสำคัญกับโครงสร้างพื้นฐาน คุณภาพชีวิต การท่องเที่ยว สิ่งแวดล้อม และการบริหารเมืองที่มีประสิทธิภาพขึ้น",
+      "when": "21.11 · Паттайя",
+      "href": "https://www.pattayamail.com/latestnews/news/pattaya-immigration-assists-elderly-british-visitor-with-mobility-difficulties-572484",
+      "publishedAt": "2026-11-21",
+      "ru": "Сотрудники иммиграционной службы Паттайи помогли пожилому британскому посетителю с ограниченной подвижностью пройти процедуру продления пребывания. Случай подчёркивает доступность помощи для людей, которым трудно самостоятельно передвигаться по офису.",
+      "en": "Pattaya immigration officers helped an elderly British visitor with limited mobility complete an extension-of-stay procedure. The case highlights assistance available to people who have difficulty moving through the office independently.",
+      "th": "เจ้าหน้าที่ตรวจคนเข้าเมืองพัทยาช่วยผู้สูงอายุชาวอังกฤษที่มีข้อจำกัดด้านการเคลื่อนไหวดำเนินขั้นตอนขออยู่ต่อ เหตุการณ์นี้สะท้อนการช่วยเหลือผู้ที่ไม่สะดวกเดินทางภายในสำนักงานด้วยตนเอง",
       "sources": [
-        "https://www.pattayamail.com/news/pattaya-outlines-2027-development-plan-focusing-on-quality-of-life-improvements-572443"
+        "https://www.pattayamail.com/latestnews/news/pattaya-immigration-assists-elderly-british-visitor-with-mobility-difficulties-572484"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-20T06:07:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/pattaya-outlines-2027-development-plan-focusing-on-quality-of-life-improvements-572443",
-        "summary": "The source page displayed 258 views and 0 comments, compared with 222 views and 0 comments for the selected public-space report. These publisher-local counters do not establish a citywide popularity rank."
+        "observedAt": "2026-11-22T06:27:45+07:00",
+        "sourceUrl": "https://www.pattayamail.com/latestnews/news/pattaya-immigration-assists-elderly-british-visitor-with-mobility-difficulties-572484",
+        "summary": "The source page displayed 907 views and 0 comments, compared with 838 views and 0 comments for the selected Koh Larn traffic-safety report. These publisher-local counters do not establish a citywide popularity ranking."
       }
     },
     {
       "category": "pattaya",
-      "when": "20.11 · Паттайя",
-      "href": "https://www.pattayamail.com/news/pattaya-warns-businesses-to-remove-chairs-and-objects-blocking-public-spaces-572461",
-      "publishedAt": "2026-11-20",
-      "ru": "Муниципальные инспекторы Паттайи потребовали от предпринимателей убрать стулья и другие вещи с общественных участков перед заведениями. Город предупредил, что повторное перекрытие пространства может привести к более строгим мерам.",
-      "en": "Pattaya municipal inspectors instructed businesses to remove chairs and other belongings from public areas outside their premises. The city warned that repeated obstruction of shared space could lead to stricter enforcement.",
-      "th": "เจ้าหน้าที่เทศกิจเมืองพัทยาสั่งให้ผู้ประกอบการนำเก้าอี้และสิ่งของออกจากพื้นที่สาธารณะหน้าร้าน พร้อมเตือนว่าหากกีดขวางพื้นที่ส่วนรวมซ้ำ อาจถูกดำเนินการเข้มงวดขึ้น",
+      "when": "21.11 · Паттайя",
+      "href": "https://www.pattayamail.com/news/koh-larn-repairs-traffic-bollards-on-steep-tawaen-beach-descent-amid-ongoing-safety-concerns-572505",
+      "publishedAt": "2026-11-21",
+      "ru": "На Ко Лане восстановили повреждённые гибкие столбики, разделяющие полосы на крутом спуске к пляжу Таваен. Местные службы рассчитывают снизить риск столкновений на участке, где песок и уклон требуют от водителей особенно осторожной скорости.",
+      "en": "Koh Larn authorities repaired damaged flexible bollards separating lanes on the steep descent to Tawaen Beach. Local officials aim to reduce collision risks on a route where the gradient and loose sand require drivers to slow down and take extra care.",
+      "th": "เกาะล้านซ่อมเสาล้มลุกแบ่งช่องทางที่ชำรุดบนทางลาดชันลงหาดตาแหวน เพื่อช่วยลดความเสี่ยงการชนในจุดที่มีทั้งความลาดชันและทรายบนผิวถนน ผู้ขับขี่ควรลดความเร็วและใช้ความระมัดระวังเป็นพิเศษ",
       "sources": [
-        "https://www.pattayamail.com/news/pattaya-warns-businesses-to-remove-chairs-and-objects-blocking-public-spaces-572461"
+        "https://www.pattayamail.com/news/koh-larn-repairs-traffic-bollards-on-steep-tawaen-beach-descent-amid-ongoing-safety-concerns-572505"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-20T06:07:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/pattaya-warns-businesses-to-remove-chairs-and-objects-blocking-public-spaces-572461",
-        "summary": "The source page displayed 222 views and 0 comments, compared with 258 views and 0 comments for the selected Pattaya development-plan report. These publisher-local counters do not establish a citywide popularity rank."
+        "observedAt": "2026-11-22T06:27:45+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/koh-larn-repairs-traffic-bollards-on-steep-tawaen-beach-descent-amid-ongoing-safety-concerns-572505",
+        "summary": "The source page displayed 838 views and 0 comments, compared with 907 views and 0 comments for the selected immigration-assistance report. These publisher-local counters do not establish a citywide popularity ranking."
       }
     }
   ],
@@ -367,5 +367,5 @@
       "verifiedAt": "2026-11-16"
     }
   ],
-  "selection": "Reviewed 2026-11-18 Asia/Bangkok: exactly one non-war world story, two Thailand and two Pattaya stories from sources dated 17–18 November, with four items published on the current Bangkok calendar date. Pattaya Mail exposed publisher-local view/comment counters for three selected reports; Reuters and the official TMD advisory exposed no comparable public engagement totals. These observations support relative selection only and do not establish a global, national or citywide popularity ranking. The official ACSC dashboard showed November category statistics but no new specific scam warning dated 17–18 November suitable for a new card, so all 12 active warnings and their original dates are preserved. No Telegram sending."
+  "selection": "Reviewed 2026-11-22 Asia/Bangkok: exactly one non-war world story, two Thailand and two Pattaya stories, all from reports dated 21 November and within the previous Bangkok calendar date. Pattaya Mail exposed publisher-local view/comment counters for all four Thailand and Pattaya reports; the accessible Reuters syndication exposed a share count but no comparable views or comments. These observations support relative selection only and do not establish a global, national or citywide popularity ranking. The single anti-scam search batch found no distinct new official warning or clearly corroborated investigation dated 21–22 November beyond the active schemes already represented in the digest, so all 12 active warnings and their original dates are preserved. No Telegram sending."
 }
