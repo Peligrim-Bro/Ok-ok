@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "project": "OK-OK.click",
-  "updatedAt": "2026-11-19",
+  "updatedAt": "2026-11-22",
   "decisions": [
     {
       "id": "hosting",
@@ -289,6 +289,20 @@
         "rental.html",
         "tools/rental-math.mjs",
         "tools/rental-ui.mjs"
+      ]
+    },
+    {
+      "id": "compact-invitation-release-checks",
+      "status": "needs_verification",
+      "tags": [
+        "release",
+        "layout"
+      ],
+      "next": "PR #132, base 6b4ce12: align obsolete homepage advertising assertions and SPLIT return route with current UI. Keep mobile, payment and Lighthouse checks. Local build and project verification pass; GitHub browser checks required. Native Workers Builds detail requires dashboard sign-in; GitHub direct production deploy previously succeeded independently. Compact invitation still offers placement on the homepage, which no longer renders paid cards; separate owner decision requested before changing invoice availability. Do not merge while release checks fail.",
+      "sources": [
+        "tests/ads-payments.spec.cjs",
+        "tests/mobile.spec.cjs",
+        "tests/tools-browser.spec.mjs"
       ]
     }
   ]

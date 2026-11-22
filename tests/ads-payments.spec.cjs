@@ -16,15 +16,12 @@ async function prepare(page,lang,legacy=false,theme='dark'){
   await route.fulfill({status:200,contentType:'application/json',body:JSON.stringify(body)});
  });
  await page.goto('/',{waitUntil:'domcontentloaded'});
- await expect(page.locator('#okAds .okad.free')).toHaveCount(1);
- await expect(page.locator('#okAds .okad.free')).toBeVisible();
- await expect(page.locator('#okAds')).not.toContainText(/USDT|Платн|Paid|เสียเงิน/);
- await expect(page.locator('#okAds .okad-example, #okAds .okad-event, #okAds > .btn.call')).toHaveCount(0);
+ const adSection=page.locator('#okAds');
+ const invitation=adSection.getByRole('button',{name:{ru:'Заяви о себе',en:'Get noticed',th:'บอกให้โลกรู้'}[lang],exact:true});
+ await expect(invitation).toBeVisible();
+ await expect(adSection).not.toContainText(/USDT|Платн|Paid|เสียเงิน/);
+ await expect(adSection.locator('.okads-list, .okad, .okads-head')).toHaveCount(0);
  if(await page.locator('html').getAttribute('data-theme')!==theme)await page.locator('#themeBtn').click();
- const invitation=page.locator('#okAds .okad.free');
- await expect(invitation).toContainText({ru:'Объявление, поздравление или просто привет.',en:'An announcement, a celebration, or just a hello.',th:'ประกาศ คำอวยพร หรือแค่ทักทายกัน'}[lang]);
- await expect(invitation).not.toContainText(/бизнес|своём деле|business|ธุรกิจ/i);
- expect(await invitation.evaluate(n=>getComputedStyle(n).display)).toBe('grid');
  await invitation.screenshot({path:`quality-reports/invitation-${lang}-${theme}.png`});
  await page.setViewportSize({width:320,height:568});
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
@@ -57,7 +54,7 @@ test('a pending invoice changes to published after automatic status matching',as
  control.paid();await expect(page.locator('#okAdDialog')).toContainText('Your ad is live',{timeout:12000});
 });
 
-async function prepareEventBoard(page,paidCount){
+async function prepareRetiredBoardFixture(page,paidCount){
  await page.addInitScript(()=>{localStorage.setItem('pok-install-seen','1');});
  await page.route('**/assets/ads/events-data.js*',route=>route.fulfill({
   contentType:'application/javascript',
@@ -70,24 +67,14 @@ async function prepareEventBoard(page,paidCount){
  const ads=Array.from({length:paidCount},(_,i)=>({id:`paid-${i}`,title:`Paid ${i}`,text:'Paid placement',href:'https://example.com/',label:'Contact',endAt:Date.now()+86400000}));
  await page.route('**/api/ads/**',route=>route.fulfill({json:{slots:3,price:'15.00',minAmount:'15.01',maxAmount:'15.99',hours:24,ads,free:3-paidCount,t:Date.now()}}));
  await page.goto('/',{waitUntil:'domcontentloaded'});
- await expect(page.locator('#okAds')).toHaveAttribute('data-ready','1');
+ await expect(page.locator('#okAds .okad-invitation')).toBeVisible();
+ // Evaluate the UI once the mocked inventory has actually been consumed.
+ await page.evaluate(()=>window.OKAds.refresh());
 }
-test('one event uses one free slot after paid ads',async({page})=>{
- await prepareEventBoard(page,2);
- await expect(page.locator('#okAds .okad:not(.okad-event):not(.free)')).toHaveCount(2);
- await expect(page.locator('#okAds .okad-event')).toHaveCount(1);
- await expect(page.locator('#okAds .okad.free')).toHaveCount(0);
- await expect(page.locator('#okAds .okads-list > :nth-child(3)')).toHaveClass(/okad-event/);
-});
-test('event and invitation stay within three available slots',async({page})=>{
- await prepareEventBoard(page,0);
- await expect(page.locator('#okAds .okad-event')).toHaveCount(1);
- await expect(page.locator('#okAds .okad.free')).toHaveCount(1);
- await expect(page.locator('#okAds .okads-list > *')).toHaveCount(2);
-});
-test('three paid ads suppress every free-slot card',async({page})=>{
- await prepareEventBoard(page,3);
- await expect(page.locator('#okAds .okad-event')).toHaveCount(0);
- await expect(page.locator('#okAds .okad.free')).toHaveCount(0);
- await expect(page.locator('#okAds .okads-list > *')).toHaveCount(3);
+for(const paidCount of [0,2,3])test(`homepage keeps one invitation and no retired board with ${paidCount} paid slots`,async({page})=>{
+ await prepareRetiredBoardFixture(page,paidCount);
+ const adSection=page.locator('#okAds');
+ await expect(adSection.locator('.okad-invitation')).toHaveCount(1);
+ await expect(adSection.locator('.okads-list, .okad, .okads-head')).toHaveCount(0);
+ await expect(adSection).not.toContainText(/Paid placement|Описание|USDT/);
 });
