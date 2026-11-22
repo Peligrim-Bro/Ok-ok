@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "project": "OK-OK.click",
-  "updatedAt": "2026-11-19",
+  "updatedAt": "2026-11-22",
   "decisions": [
     {
       "id": "hosting",
@@ -89,6 +89,20 @@
       "sources": [
         "docs/FEATURE_RULES.md",
         "docs/OKI_HOUSE_TASK.md"
+      ]
+    },
+    {
+      "id": "advertising-invitation-disabled",
+      "status": "active",
+      "tags": [
+        "release",
+        "layout"
+      ],
+      "text": "Owner 22 Nov explicitly removed the advertising invitation and forbids restoration until a new direct instruction. Supersedes older editorial instructions to preserve it. No unrelated changes without explicit owner instruction.",
+      "sources": [
+        "AGENTS.md",
+        "scripts/apply-single-ad-invitation.mjs",
+        "scripts/verify-project.mjs"
       ]
     }
   ],

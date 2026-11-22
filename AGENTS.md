@@ -2,6 +2,11 @@
 
 Current rules consolidated on 2026-10-20. Later explicit owner decisions supersede earlier decisions on the same subject only; preserve unrelated constraints and existing authorizations. Historical text remains available in Git.
 
+## Owner lock — 2026-11-22
+
+- The advertising invitation/button «Заяви о себе» / «Get noticed» / «บอกให้โลกรู้» is removed. Do not restore it, the three-ad board, or the event board until the owner explicitly requests restoration. Older editorial instructions to preserve that invitation are superseded.
+- No unrequested changes: obtain an explicit owner instruction for each new change. Do not treat general stability permission as permission to change features. Preserve payment/send history and unrelated work.
+
 ## Required context before changes
 
 - Project continuity (owner 2026-10-24): first read `ops/project-memory.json` and
