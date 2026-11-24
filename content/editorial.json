@@ -1,90 +1,91 @@
 {
-  "verifiedAt": "2026-11-20",
+  "verifiedAt": "2026-11-24",
   "news": [
     {
       "category": "world",
-      "when": "19.11 · Мир",
-      "href": "https://www.reuters.com/world/china/global-markets-view-europe-2026-11-19/",
-      "publishedAt": "2026-11-19",
-      "ru": "Anthropic готовится к биржевому дебюту после размещения акций по 83 доллара и привлечения 81 миллиарда долларов. Reuters отмечает высокий спрос на бумаги, но также сохраняющиеся сомнения инвесторов в окупаемости огромных расходов на инфраструктуру искусственного интеллекта.",
-      "en": "Anthropic is preparing for its stock-market debut after pricing shares at $83 and raising $81 billion. Reuters reports strong demand while investors continue to question whether massive spending on artificial-intelligence infrastructure will deliver sufficient returns.",
-      "th": "Anthropic เตรียมเข้าซื้อขายในตลาดหุ้น หลังตั้งราคาหุ้นที่ 83 ดอลลาร์และระดมทุนได้ 81,000 ล้านดอลลาร์ Reuters รายงานว่าความต้องการซื้อแข็งแกร่ง แต่ผู้ลงทุนยังตั้งคำถามว่าการใช้จ่ายมหาศาลกับโครงสร้างพื้นฐาน AI จะให้ผลตอบแทนคุ้มค่าหรือไม่",
+      "when": "23.11 · Мир",
+      "href": "https://www.reuters.com/world/china/global-markets-view-europe-2026-11-23/",
+      "publishedAt": "2026-11-23",
+      "ru": "Мировые рынки начали неделю разнонаправленно после ноябрьской распродажи акций технологических и полупроводниковых компаний, связанных с искусственным интеллектом. Инвесторы оценивают, оправдают ли будущие доходы крупные расходы на дата-центры: американские фьючерсы отскочили, а давление на азиатские площадки сохранилось.",
+      "en": "Global markets opened the week mixed after a November sell-off in technology and semiconductor companies linked to artificial intelligence. Investors are weighing whether future returns will justify heavy data-centre spending: US futures rebounded while pressure persisted across Asian markets.",
+      "th": "ตลาดโลกเปิดสัปดาห์อย่างผสมผสาน หลังหุ้นเทคโนโลยีและเซมิคอนดักเตอร์ที่เกี่ยวข้องกับปัญญาประดิษฐ์ถูกขายออกในเดือนพฤศจิกายน นักลงทุนกำลังประเมินว่ารายได้ในอนาคตจะคุ้มกับการลงทุนศูนย์ข้อมูลจำนวนมากหรือไม่ โดยฟิวเจอร์สสหรัฐฟื้นตัว ขณะที่ตลาดเอเชียยังเผชิญแรงกดดัน",
       "sources": [
-        "https://www.reuters.com/world/china/global-markets-view-europe-2026-11-19/"
+        "https://www.reuters.com/world/china/global-markets-view-europe-2026-11-23/",
+        "https://www.mdjonline.com/news/national/us-futures-climb-and-world-shares-are-mixed-as-big-tech-stocks-fall-in-asia/article_de821d48-3c5b-50ad-a27a-9b3588c0c22b.html"
       ],
       "nonWar": true,
       "discussionEvidence": {
-        "observedAt": "2026-11-20T06:07:00+07:00",
-        "sourceUrl": "https://www.reuters.com/world/china/global-markets-view-europe-2026-11-19/",
-        "summary": "Reuters exposed no public view, share or comment count. No comparable global engagement metric was available in the single review batch; selection reflects the reported scale of the IPO and broad market relevance, not a worldwide popularity ranking."
+        "observedAt": "2026-11-24T06:29:25+07:00",
+        "sourceUrl": "https://www.reuters.com/world/china/global-markets-view-europe-2026-11-23/",
+        "summary": "Reuters and an independently accessible Associated Press market report both covered the broad AI-stock sell-off on 23 November. Neither accessible page exposed comparable public view, share or comment totals, so selection reflects cross-outlet coverage and financial relevance only; it does not claim a global popularity ranking."
       }
     },
     {
       "category": "thailand",
-      "when": "20.11 · Таиланд",
-      "href": "https://www.pattayamail.com/thailandnews/thailand-explores-huawei-ai-technology-to-modernize-ports-and-logistics-572416",
-      "publishedAt": "2026-11-20",
-      "ru": "Транспортная делегация Таиланда изучила решения Huawei для автоматизации портов: планирование заходов судов с помощью ИИ, дистанционное управление кранами и цифровые двойники. Ведомство рассматривает их возможное применение в портах Лаем-Чабанг и Бангкока, но решение о внедрении ещё не объявлено.",
-      "en": "A Thai transport delegation reviewed Huawei systems for port automation, including AI vessel scheduling, remote crane operation and digital twins. Officials are considering possible use at Laem Chabang and Bangkok ports, but no deployment decision has been announced.",
-      "th": "คณะผู้แทนด้านคมนาคมของไทยศึกษาระบบของ Huawei สำหรับท่าเรืออัตโนมัติ ทั้งการจัดตารางเรือด้วย AI การควบคุมเครนจากระยะไกล และดิจิทัลทวิน โดยอยู่ระหว่างพิจารณาความเหมาะสมสำหรับท่าเรือแหลมฉบังและท่าเรือกรุงเทพ แต่ยังไม่มีการประกาศตัดสินใจนำมาใช้",
+      "when": "23.11 · Таиланд",
+      "href": "https://www.tmd.go.th/media/forecast/daily-forecast/2026-11-23_06_eng_1.pdf",
+      "publishedAt": "2026-11-23",
+      "ru": "Метеорологический департамент Таиланда предупредил: 24–25 ноября на севере страны станет прохладнее и ветренее, а на юге усилятся дожди, местами до сильных и очень сильных. Жителям районов у склонов, водотоков и низин советуют следить за риском внезапных паводков и переливов.",
+      "en": "Thailand’s Meteorological Department warned that 24–25 November will bring cooler, windier conditions to the upper country and heavier rain, locally very heavy, in the South. People near foothills, waterways and low-lying areas are advised to monitor the risk of flash floods and overflows.",
+      "th": "กรมอุตุนิยมวิทยาเตือนว่า วันที่ 24–25 พฤศจิกายน ภาคบนจะมีอากาศเย็นลงและลมแรงขึ้น ส่วนภาคใต้จะมีฝนเพิ่มและอาจมีฝนตกหนักถึงหนักมาก ประชาชนบริเวณเชิงเขา ทางน้ำไหลผ่าน และพื้นที่ลุ่มควรติดตามความเสี่ยงน้ำท่วมฉับพลันและน้ำล้นตลิ่ง",
       "sources": [
-        "https://www.pattayamail.com/thailandnews/thailand-explores-huawei-ai-technology-to-modernize-ports-and-logistics-572416"
+        "https://www.tmd.go.th/media/forecast/daily-forecast/2026-11-23_06_eng_1.pdf"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-20T06:07:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/thailandnews/thailand-explores-huawei-ai-technology-to-modernize-ports-and-logistics-572416",
-        "summary": "The source page displayed 322 views and 0 comments. The official TMD source exposed no comparable public counter, so this publisher-local figure does not establish a nationwide popularity rank."
+        "observedAt": "2026-11-24T06:29:25+07:00",
+        "sourceUrl": "https://www.tmd.go.th/media/forecast/daily-forecast/2026-11-23_06_eng_1.pdf",
+        "summary": "The official TMD bulletin exposed no public engagement counters. No comparable metrics were available for this government warning; selection is based on immediate nationwide safety relevance for 24–25 November and does not claim a popularity rank."
       }
     },
     {
       "category": "thailand",
-      "when": "19.11 · Таиланд",
-      "href": "https://tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-no-10-318-2026",
-      "publishedAt": "2026-11-19",
-      "ru": "Метеодепартамент Таиланда предупредил о сильных и очень сильных дождях на юге 19–22 ноября с риском паводков и оползней. В нижней части Сиамского залива ожидаются волны 2–3 метра и выше во время гроз; малым судам рекомендовано оставаться у берега.",
-      "en": "Thailand’s Meteorological Department warned of heavy to very heavy southern rain on 19–22 November, with flood and landslide risks. Lower Gulf waves may reach 2–3 metres and higher in storms, and small boats are advised to remain ashore.",
-      "th": "กรมอุตุนิยมวิทยาเตือนภาคใต้มีฝนตกหนักถึงหนักมากช่วง 19–22 พฤศจิกายน เสี่ยงน้ำท่วมและดินถล่ม อ่าวไทยตอนล่างมีคลื่นสูง 2–3 เมตรและสูงกว่านั้นในบริเวณฝนฟ้าคะนอง โดยเรือเล็กควรงดออกจากฝั่ง",
+      "when": "24.11 · Таиланд",
+      "href": "https://www.pattayamail.com/thailandnews/anutin-meets-five-major-automakers-to-discuss-investment-and-thailand-production-572821",
+      "publishedAt": "2026-11-24",
+      "ru": "Премьер-министр Анутин Чарнвиракул встретился с представителями Toyota, Mitsubishi, Isuzu, BYD и Great Wall Motor. Стороны обсудили дальнейшие инвестиции, закупку тайских комплектующих, передачу технологий, подготовку кадров и инфраструктуру зарядки для укрепления автомобильного производства в стране.",
+      "en": "Prime Minister Anutin Charnvirakul met representatives of Toyota, Mitsubishi, Isuzu, BYD and Great Wall Motor. The talks covered further investment, sourcing Thai parts, technology transfer, workforce skills and charging infrastructure to strengthen automotive manufacturing in the country.",
+      "th": "นายกรัฐมนตรีอนุทิน ชาญวีรกูลพบผู้แทนจาก Toyota, Mitsubishi, Isuzu, BYD และ Great Wall Motor เพื่อหารือการลงทุนเพิ่มเติม การใช้ชิ้นส่วนไทย การถ่ายทอดเทคโนโลยี การพัฒนาทักษะแรงงาน และโครงสร้างพื้นฐานสถานีชาร์จ เพื่อเสริมความแข็งแกร่งให้อุตสาหกรรมยานยนต์ในประเทศ",
       "sources": [
-        "https://tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-no-10-318-2026"
+        "https://www.pattayamail.com/thailandnews/anutin-meets-five-major-automakers-to-discuss-investment-and-thailand-production-572821"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-20T06:07:00+07:00",
-        "sourceUrl": "https://tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-no-10-318-2026",
-        "summary": "The official TMD advisory exposed no public view, share or comment total. Selection reflects a current official safety warning with direct national relevance; no comparable engagement rank was available."
+        "observedAt": "2026-11-24T06:29:25+07:00",
+        "sourceUrl": "https://www.pattayamail.com/thailandnews/anutin-meets-five-major-automakers-to-discuss-investment-and-thailand-production-572821",
+        "summary": "The publisher page displayed 99 views and 0 comments at observation. The official TMD bulletin selected alongside it had no counter, so the metrics are not directly comparable and do not establish a nationwide popularity ranking."
       }
     },
     {
       "category": "pattaya",
-      "when": "20.11 · Паттайя",
-      "href": "https://www.pattayamail.com/news/pattaya-outlines-2027-development-plan-focusing-on-quality-of-life-improvements-572443",
-      "publishedAt": "2026-11-20",
-      "ru": "Городской комитет Паттайи рассмотрел проект плана на 2027 финансовый год: 341 новый проект и 172 уже выполняющихся. Среди приоритетов названы инфраструктура, качество жизни, туризм, защита окружающей среды и более эффективное управление городом.",
-      "en": "Pattaya’s development committee reviewed a draft 2027 fiscal plan containing 341 new projects and 172 already under way. Priorities include infrastructure, quality of life, tourism, environmental protection and more efficient city administration.",
-      "th": "คณะกรรมการพัฒนาเมืองพัทยาพิจารณาร่างแผนปีงบประมาณ 2570 ซึ่งมีโครงการใหม่ 341 โครงการและโครงการที่กำลังดำเนินการ 172 โครงการ โดยให้ความสำคัญกับโครงสร้างพื้นฐาน คุณภาพชีวิต การท่องเที่ยว สิ่งแวดล้อม และการบริหารเมืองที่มีประสิทธิภาพขึ้น",
+      "when": "24.11 · Паттайя",
+      "href": "https://www.pattayamail.com/latestnews/news/pattaya-allocates-800-fireworks-festival-stalls-prioritizing-local-traders-572741",
+      "publishedAt": "2026-11-24",
+      "ru": "Паттайя распределила 800 торговых мест для Международного фестиваля фейерверков: 600 предназначены местным жителям через регистрацию и жеребьёвку, ещё 200 — ведомствам и общественным организациям. Город также уточняет правила передачи мест после обсуждения объявлений о перепродаже.",
+      "en": "Pattaya allocated 800 trading spaces for the International Fireworks Festival: 600 for local residents through registration and a lottery, and 200 for public agencies and community groups. The city is also clarifying transfer rules after online discussion of resale advertisements.",
+      "th": "พัทยาจัดสรรพื้นที่ค้าขาย 800 จุดสำหรับเทศกาลพลุนานาชาติ โดย 600 จุดให้ชาวพัทยาผ่านการลงทะเบียนและจับสลาก และอีก 200 จุดสำหรับหน่วยงานรัฐกับเครือข่ายชุมชน เมืองกำลังทบทวนความชัดเจนของกติกาการโอนสิทธิ หลังมีการพูดถึงประกาศขายสิทธิทางออนไลน์",
       "sources": [
-        "https://www.pattayamail.com/news/pattaya-outlines-2027-development-plan-focusing-on-quality-of-life-improvements-572443"
+        "https://www.pattayamail.com/latestnews/news/pattaya-allocates-800-fireworks-festival-stalls-prioritizing-local-traders-572741"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-20T06:07:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/pattaya-outlines-2027-development-plan-focusing-on-quality-of-life-improvements-572443",
-        "summary": "The source page displayed 258 views and 0 comments, compared with 222 views and 0 comments for the selected public-space report. These publisher-local counters do not establish a citywide popularity rank."
+        "observedAt": "2026-11-24T06:29:25+07:00",
+        "sourceUrl": "https://www.pattayamail.com/latestnews/news/pattaya-allocates-800-fireworks-festival-stalls-prioritizing-local-traders-572741",
+        "summary": "The publisher page displayed 247 views and 0 comments, compared with 166 views and 0 comments for the selected Jomtien swimming report. These same-site counters are locally comparable only and do not establish a citywide popularity ranking."
       }
     },
     {
       "category": "pattaya",
-      "when": "20.11 · Паттайя",
-      "href": "https://www.pattayamail.com/news/pattaya-warns-businesses-to-remove-chairs-and-objects-blocking-public-spaces-572461",
-      "publishedAt": "2026-11-20",
-      "ru": "Муниципальные инспекторы Паттайи потребовали от предпринимателей убрать стулья и другие вещи с общественных участков перед заведениями. Город предупредил, что повторное перекрытие пространства может привести к более строгим мерам.",
-      "en": "Pattaya municipal inspectors instructed businesses to remove chairs and other belongings from public areas outside their premises. The city warned that repeated obstruction of shared space could lead to stricter enforcement.",
-      "th": "เจ้าหน้าที่เทศกิจเมืองพัทยาสั่งให้ผู้ประกอบการนำเก้าอี้และสิ่งของออกจากพื้นที่สาธารณะหน้าร้าน พร้อมเตือนว่าหากกีดขวางพื้นที่ส่วนรวมซ้ำ อาจถูกดำเนินการเข้มงวดขึ้น",
+      "when": "24.11 · Паттайя",
+      "href": "https://www.pattayamail.com/latestnews/news/pattaya-hosts-thailand-open-water-swimming-championships-at-jomtien-beach-572786",
+      "publishedAt": "2026-11-24",
+      "ru": "На пляже Джомтьен завершился третий этап чемпионата Таиланда по плаванию на открытой воде. Тайские и зарубежные спортсмены соревновались на дистанциях 1, 3, 5 и 10 километров; организаторы обеспечили спасателей, медиков и меры безопасности на воде.",
+      "en": "Jomtien Beach hosted the third series of Thailand’s Open Water Swimming Championships. Thai and international athletes competed over 1, 3, 5 and 10 kilometres, with rescue staff, medical teams and water-safety measures deployed throughout the event.",
+      "th": "หาดจอมเทียนเป็นเจ้าภาพการแข่งขันว่ายน้ำมาราธอนชิงชนะเลิศแห่งประเทศไทย ซีรีส์ที่ 3 นักกีฬาไทยและต่างชาติเข้าแข่งขันระยะ 1, 3, 5 และ 10 กิโลเมตร โดยมีเจ้าหน้าที่กู้ภัย ทีมแพทย์ และมาตรการความปลอดภัยทางน้ำตลอดงาน",
       "sources": [
-        "https://www.pattayamail.com/news/pattaya-warns-businesses-to-remove-chairs-and-objects-blocking-public-spaces-572461"
+        "https://www.pattayamail.com/latestnews/news/pattaya-hosts-thailand-open-water-swimming-championships-at-jomtien-beach-572786"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-20T06:07:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/pattaya-warns-businesses-to-remove-chairs-and-objects-blocking-public-spaces-572461",
-        "summary": "The source page displayed 222 views and 0 comments, compared with 258 views and 0 comments for the selected Pattaya development-plan report. These publisher-local counters do not establish a citywide popularity rank."
+        "observedAt": "2026-11-24T06:29:25+07:00",
+        "sourceUrl": "https://www.pattayamail.com/latestnews/news/pattaya-hosts-thailand-open-water-swimming-championships-at-jomtien-beach-572786",
+        "summary": "The publisher page displayed 166 views and 0 comments, compared with 247 views and 0 comments for the selected festival-stall report. These same-site counters are locally comparable only and do not establish a citywide popularity ranking."
       }
     }
   ],
@@ -367,5 +368,5 @@
       "verifiedAt": "2026-11-16"
     }
   ],
-  "selection": "Reviewed 2026-11-18 Asia/Bangkok: exactly one non-war world story, two Thailand and two Pattaya stories from sources dated 17–18 November, with four items published on the current Bangkok calendar date. Pattaya Mail exposed publisher-local view/comment counters for three selected reports; Reuters and the official TMD advisory exposed no comparable public engagement totals. These observations support relative selection only and do not establish a global, national or citywide popularity ranking. The official ACSC dashboard showed November category statistics but no new specific scam warning dated 17–18 November suitable for a new card, so all 12 active warnings and their original dates are preserved. No Telegram sending."
+  "selection": "Reviewed 2026-11-24 Asia/Bangkok: exactly one non-war world story, two Thailand and two Pattaya stories, all published on the current or previous Bangkok calendar date. Publisher-local view/comment counters were recorded where exposed; the Reuters/AP market coverage and official TMD bulletin exposed no comparable public engagement totals, and the stated qualitative evidence does not establish global, national or citywide popularity. The single anti-scam search batch found no distinct new official warning or clearly corroborated investigation dated 23–24 November beyond the active schemes already represented, so all 12 active warnings and their original verification dates are preserved. No Telegram sending."
 }

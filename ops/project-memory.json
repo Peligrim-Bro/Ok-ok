@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "project": "OK-OK.click",
-  "updatedAt": "2026-11-21",
+  "updatedAt": "2026-11-24",
   "decisions": [
     {
       "id": "hosting",
@@ -90,6 +90,20 @@
         "docs/FEATURE_RULES.md",
         "docs/OKI_HOUSE_TASK.md"
       ]
+    },
+    {
+      "id": "advertising-invitation-disabled",
+      "status": "active",
+      "tags": [
+        "release",
+        "layout"
+      ],
+      "text": "Owner 22 Nov explicitly removed the advertising invitation and forbids restoration until a new direct instruction. Supersedes older editorial instructions to preserve it. No unrelated changes without explicit owner instruction.",
+      "sources": [
+        "AGENTS.md",
+        "scripts/apply-single-ad-invitation.mjs",
+        "scripts/verify-project.mjs"
+      ]
     }
   ],
   "tasks": [
@@ -110,11 +124,11 @@
     },
     {
       "id": "channel-media-buffer",
-      "status": "blocked",
+      "status": "needs_verification",
       "tags": [
         "channel"
       ],
-      "next": "21 Nov checkpoint after two fix attempts: 12 reviewed entries and distinct images prepare 26–28 Nov; offline audit ready:true and channel/payment tests pass, but native build is blocked because siteBytes 33,229,833 exceeds the fixed 33,000,000 budget by 229,833 bytes. Keep off main; resume by reducing only new technical copies or removing another expired public-build asset without changing originals, budget, UI or schedule. Runtime delivery remains unknown.",
+      "next": "24 Nov: existing PR preserves reviewed 26–28 Nov entries; eight new reviewed entries and distinct images add 29–30 Nov, targeting seven complete days through 30 Nov. Run offline audit, mandatory project checks, PR CI and exact production deployment verification. Runtime delivery remains unknown.",
       "sources": [
         "CHANNEL_PUBLISHING.md",
         "scripts/audit-channel-queue.mjs",
@@ -126,7 +140,8 @@
         "docs/CHANNEL_BUFFER_20261112.md",
         "docs/CHANNEL_BUFFER_20261116.md",
         "docs/CHANNEL_BUFFER_20261119.md",
-        "docs/CHANNEL_BUFFER_20261121.md"
+        "docs/CHANNEL_BUFFER_20261121.md",
+        "docs/CHANNEL_BUFFER_20261124.md"
       ]
     },
     {
@@ -290,6 +305,20 @@
         "rental.html",
         "tools/rental-math.mjs",
         "tools/rental-ui.mjs"
+      ]
+    },
+    {
+      "id": "advertising-disabled-release-checks",
+      "status": "needs_verification",
+      "tags": [
+        "release"
+      ],
+      "next": "PR132 resumes after owner removal: button/board stay absent, invoice backend/history unchanged. Local build/native passed. Browser absence matrix, existing mocked invoice coverage and tools return route await GitHub checks. Native Workers Builds still fails; detail requires Cloudflare dashboard sign-in. No restoration or settings changes.",
+      "sources": [
+        "tests/ad-invitation-oki.spec.cjs",
+        "tests/ads-payments.spec.cjs",
+        "tests/mobile.spec.cjs",
+        "tests/tools-browser.spec.mjs"
       ]
     }
   ]

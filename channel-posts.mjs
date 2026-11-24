@@ -1648,6 +1648,88 @@ export const POSTS = [{
   "topics": ["Оки", "Комиксы"],
   "brandCTA": "share",
   "text": "Приключения Оки #40 · Зонт-дирижёр\n\nДождь отбил ритм, ветер раскрыл зонт, а Оки превратил всё это в короткий концерт.\n\nВымышленная история с маскотом Оки; изображение создано с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_umbrella_conductor_040"
+},
+{
+  "id": "okok-checkin-utilities-20261129",
+  "approved": true,
+  "publishAt": "2026-11-29T09:00:00+07:00",
+  "expiresAt": "2026-11-29T12:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-checkin-utilities-20261129.jpg",
+  "topics": ["Безопасность", "Бюджет", "Советы"],
+  "brandCTA": "share",
+  "text": "Два снимка при заселении — меньше путаницы потом\n\nСфотографируй показания счётчика и состояние пульта кондиционера для своих заметок, если они относятся к расчёту или приёму жилья. Не публикуй адрес и номера приборов; условия оплаты всё равно сверяй с договором.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=checkin_utilities_20261129"
+},
+{
+  "id": "okok-spell-that-20261129",
+  "approved": true,
+  "publishAt": "2026-11-29T14:00:00+07:00",
+  "expiresAt": "2026-11-29T17:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-spell-that-20261129.jpg",
+  "topics": ["Фразы", "Английский", "Советы"],
+  "brandCTA": "share",
+  "text": "Если название не расслышал\n\nCould you spell that, please?\nПродиктуйте это по буквам, пожалуйста.\n\nСверь записанное слово на экране или бумаге до того, как искать адрес, бронирование или нужную услугу. Одна уточняющая фраза быстрее нескольких догадок.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=spell_that_20261129",
+  "copyButtons": [{"label": "Попросить продиктовать", "text": "Could you spell that, please?"}]
+},
+{
+  "id": "okok-room-final-sweep-20261129",
+  "approved": true,
+  "publishAt": "2026-11-29T19:30:00+07:00",
+  "expiresAt": "2026-11-29T22:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-room-final-sweep-20261129.jpg",
+  "topics": ["Безопасность", "Советы", "Паттайя"],
+  "brandCTA": "share",
+  "text": "Перед выездом пройди комнату по кругу\n\nНачни от двери и проверь ящики, сейф, розетки, ванную и пространство под кроватью. Закрой чемодан только после полного круга — так взгляд не скачет между вещами и меньше шансов забыть зарядку или очки.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=room_final_sweep_20261129"
+},
+{
+  "id": "okok-oki-comic-041-gecko-guard-20261129",
+  "approved": true,
+  "publishAt": "2026-11-29T20:30:00+07:00",
+  "expiresAt": "2026-11-29T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-041-gecko-guard-20261129.jpg",
+  "topics": ["Оки", "Комиксы"],
+  "brandCTA": "share",
+  "text": "Приключения Оки #41 · Геккон-охранник\n\nОки оставил шляпу на минуту, а вернулся уже к самой маленькой охране в Паттайе.\n\nВымышленная история с маскотом Оки; изображение создано с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_gecko_guard_041"
+},
+{
+  "id": "okok-offline-return-card-20261130",
+  "approved": true,
+  "publishAt": "2026-11-30T09:00:00+07:00",
+  "expiresAt": "2026-11-30T12:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-offline-return-card-20261130.jpg",
+  "topics": ["Карты", "Маршруты", "Советы"],
+  "brandCTA": "share",
+  "text": "Адрес возвращения должен работать без интернета\n\nСохрани скриншот точки, название жилья и фотографию входа до прогулки. Держи эту карточку доступной офлайн, но без номера комнаты и лишних личных данных — её можно показать водителю, если связь пропадёт.\n\nСюжетная иллюстрация создана с помощью ИИ; место вымышленное.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=offline_return_card_20261130"
+},
+{
+  "id": "okok-sit-outside-20261130",
+  "approved": true,
+  "publishAt": "2026-11-30T14:00:00+07:00",
+  "expiresAt": "2026-11-30T17:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-sit-outside-20261130.jpg",
+  "topics": ["Фразы", "Английский", "Ресторан"],
+  "brandCTA": "share",
+  "text": "Если хочется столик снаружи\n\nCould we sit outside, please?\nМожно нам сесть снаружи, пожалуйста?\n\nСначала уточни, свободна ли наружная зона, затем покажи количество гостей. Если начинается дождь или мешает жара, спокойно попроси другой столик.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=sit_outside_20261130",
+  "copyButtons": [{"label": "Попросить столик снаружи", "text": "Could we sit outside, please?"}]
+},
+{
+  "id": "okok-separate-cash-pouches-20261130",
+  "approved": true,
+  "publishAt": "2026-11-30T19:30:00+07:00",
+  "expiresAt": "2026-11-30T22:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-separate-cash-pouches-20261130.jpg",
+  "topics": ["Безопасность", "Бюджет", "Советы"],
+  "brandCTA": "share",
+  "text": "Не держи весь запас в одном кармане\n\nОставь небольшую сумму на текущие расходы отдельно от резервных денег. Не пересчитывай наличные на виду и не клади документы вместе со всем запасом — потеря одной сумки не должна лишать тебя сразу всего.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=separate_cash_pouches_20261130"
+},
+{
+  "id": "okok-oki-comic-042-coconut-lift-20261130",
+  "approved": true,
+  "publishAt": "2026-11-30T20:30:00+07:00",
+  "expiresAt": "2026-11-30T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-042-coconut-lift-20261130.jpg",
+  "topics": ["Оки", "Комиксы"],
+  "brandCTA": "share",
+  "text": "Приключения Оки #42 · Кокосовый лифт\n\nКраб подал Оки самый маленький лифт — и пикник наконец спустился на первый этаж.\n\nВымышленная история с маскотом Оки; изображение создано с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_coconut_lift_042"
 }
 ];
 

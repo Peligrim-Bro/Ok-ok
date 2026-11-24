@@ -88,7 +88,12 @@ test('INSPECT generates downloadable PDF with five photos and multilingual notes
 
 test('mobile built-site navigation reaches both tools',async({page})=>{
  await page.setViewportSize({width:390,height:844});
- await page.goto(url('/site/public/tools.html'));
+ await page.addInitScript(()=>{
+  localStorage.setItem('pok-lang','ru');
+  localStorage.setItem('pok-lang-set','1');
+  localStorage.setItem('pok-install-seen','1');
+ });
+ await page.goto('/tools.html');
  await expect(page.locator('h1')).toHaveText('Полезное');
  await expect(page.locator('a[href="./split-bill.html"]')).toBeVisible();
  await expect(page.locator('a[href="./inspect.html"]')).toBeVisible();
@@ -97,15 +102,17 @@ test('mobile built-site navigation reaches both tools',async({page})=>{
  await page.locator('#lang').click();
  await expect(page.locator('h1')).toHaveText('เครื่องมือ');
  await page.locator('a[href="./split-bill.html"]').click();
- await expect(page).toHaveURL(/site\/public\/split-bill\.html$/);
+ await expect(page).toHaveURL(/\/split-bill\.html$/);
  await expect(page.locator('body')).toBeVisible();
- await page.locator('header a[href="./tools.html"]').click();
- await expect(page).toHaveURL(/site\/public\/tools\.html$/);
+ await page.locator('header a[href="/"]').click();
+ await expect(page).toHaveURL(new URL('/',page.url()).href);
+ await page.locator('#okok-new-home [aria-labelledby="travel-tools-title"] a[href="./tools.html"]').click();
+ await expect(page).toHaveURL(/\/tools\.html$/);
  await page.locator('a[href="./inspect.html"]').click();
- await expect(page).toHaveURL(/site\/public\/inspect\.html$/);
+ await expect(page).toHaveURL(/\/inspect\.html$/);
  await expect(page.locator('body')).toBeVisible();
  await page.locator('header a[href="./tools.html"]').click();
- await expect(page).toHaveURL(/site\/public\/tools\.html$/);
+ await expect(page).toHaveURL(/\/tools\.html$/);
 });
 
 test('built mobile homepage exposes filters, tools and the book reader',async({page})=>{
