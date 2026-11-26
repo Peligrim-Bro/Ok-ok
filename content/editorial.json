@@ -1,90 +1,90 @@
 {
-  "verifiedAt": "2026-11-26",
+  "verifiedAt": "2026-11-27",
   "news": [
     {
       "category": "world",
-      "when": "25.11 · Мир",
-      "href": "https://www.reuters.com/world/china/global-markets-global-markets-2026-11-25/",
-      "publishedAt": "2026-11-25",
-      "ru": "Мировые фондовые рынки снизились после предложения США ввести новые пошлины для 14 торговых партнёров. Технологический сектор оказался под дополнительным давлением: глобальный индекс MSCI потерял 0,6%, а Nasdaq завершил день снижением на 0,62%.",
-      "en": "Global stock markets fell after the United States proposed new tariffs on 14 trading partners. Technology shares faced additional pressure: MSCI’s global index lost 0.6%, while the Nasdaq closed 0.62% lower.",
-      "th": "ตลาดหุ้นทั่วโลกลดลงหลังสหรัฐฯ เสนอเก็บภาษีนำเข้ารอบใหม่กับคู่ค้า 14 ประเทศ หุ้นเทคโนโลยีถูกกดดันเพิ่มเติม โดยดัชนีหุ้นโลกของ MSCI ลดลง 0.6% และ Nasdaq ปิดลบ 0.62%",
+      "when": "26.11 · Мир",
+      "href": "https://www.reuters.com/world/china/five-takeaways-trumps-new-tariffs-2026-11-26/",
+      "publishedAt": "2026-11-26",
+      "ru": "США предложили новые пошлины на импорт из 14 торговых партнёров. Для Китая ставка составит 20%, а для Таиланда, Малайзии, Индонезии, Камбоджи и Бангладеш предусмотрен предел 18%; меры смогут вступить в силу только после публичных слушаний 25 января.",
+      "en": "The United States proposed new tariffs on imports from 14 trading partners. China would face a 20% rate, while Thailand, Malaysia, Indonesia, Cambodia and Bangladesh would have an 18% cap; the measures cannot take effect until after a public hearing on 25 January.",
+      "th": "สหรัฐฯ เสนอเก็บภาษีนำเข้ารอบใหม่จากคู่ค้า 14 ประเทศ โดยจีนอาจถูกเก็บในอัตรา 20% ส่วนไทย มาเลเซีย อินโดนีเซีย กัมพูชา และบังกลาเทศกำหนดเพดานไว้ที่ 18% มาตรการจะยังไม่เริ่มก่อนการรับฟังความคิดเห็นสาธารณะวันที่ 25 มกราคม",
       "sources": [
-        "https://www.reuters.com/world/china/global-markets-global-markets-2026-11-25/"
+        "https://www.reuters.com/world/china/five-takeaways-trumps-new-tariffs-2026-11-26/"
       ],
       "nonWar": true,
       "discussionEvidence": {
-        "observedAt": "2026-11-26T07:00:00+07:00",
-        "sourceUrl": "https://www.reuters.com/world/china/global-markets-global-markets-2026-11-25/",
-        "summary": "Reuters exposed no public view, share or comment totals. No directly comparable cross-outlet engagement metrics were available in the single review batch; selection reflects broad international economic relevance and does not claim a global popularity ranking."
+        "observedAt": "2026-11-27T06:55:00+07:00",
+        "sourceUrl": "https://www.reuters.com/world/china/five-takeaways-trumps-new-tariffs-2026-11-26/",
+        "summary": "Reuters exposed no public view, share or comment totals, and the single review batch provided no directly comparable cross-outlet engagement metric. Selection reflects the policy’s direct effect on 14 trading partners, including Thailand, and does not claim a global popularity ranking."
       }
     },
     {
       "category": "thailand",
       "when": "26.11 · Таиланд",
-      "href": "https://www.pattayamail.com/thailandnews/informal-workers-make-up-nearly-two-thirds-of-thailands-workforce-study-finds-573081",
+      "href": "https://www.pattayamail.com/latestnews/news/thailand-cuts-petrol-and-gasohol-e10-prices-by-70-satang-e20-by-50-satang-from-thursday-573056",
       "publishedAt": "2026-11-26",
-      "ru": "Исследование PIER показало, что неформальная занятость охватывает почти две трети работающих жителей Таиланда. Авторы отмечают нестабильность доходов и пробелы в социальной защите и предлагают переносимые льготы, которые сохраняются при смене работы.",
-      "en": "PIER research found that informal employment accounts for nearly two-thirds of Thailand’s workforce. The study highlights unstable income and gaps in social protection, and recommends portable benefits that remain available when workers change jobs.",
-      "th": "งานวิจัยของ PIER ระบุว่าแรงงานนอกระบบมีสัดส่วนเกือบสองในสามของผู้มีงานทำในไทย งานวิจัยชี้ถึงรายได้ที่ไม่แน่นอนและช่องว่างด้านการคุ้มครองทางสังคม พร้อมเสนอสิทธิประโยชน์ที่ติดตามตัวแรงงานเมื่อเปลี่ยนงาน",
+      "ru": "В Таиланде с 26 ноября снизили розничные цены на бензин и Gasohol E10 на 70 сатангов за литр, а E20 — на 50 сатангов. Цены на E85 и дизель не изменились; решение комитета топливного фонда связано со снижением мировых цен на нефть.",
+      "en": "Thailand cut retail petrol and Gasohol E10 prices by 70 satang per litre and E20 by 50 satang from 26 November. E85 and diesel prices were unchanged; the Fuel Fund committee linked the decision to lower global oil prices.",
+      "th": "ไทยปรับลดราคาขายปลีกน้ำมันเบนซินและแก๊สโซฮอล์ E10 ลงลิตรละ 70 สตางค์ และ E20 ลง 50 สตางค์ ตั้งแต่วันที่ 26 พฤศจิกายน ส่วน E85 และดีเซลคงราคาเดิม โดยคณะกรรมการกองทุนน้ำมันเชื้อเพลิงระบุว่าปัจจัยหลักคือราคาน้ำมันโลกที่ลดลง",
       "sources": [
-        "https://www.pattayamail.com/thailandnews/informal-workers-make-up-nearly-two-thirds-of-thailands-workforce-study-finds-573081"
+        "https://www.pattayamail.com/latestnews/news/thailand-cuts-petrol-and-gasohol-e10-prices-by-70-satang-e20-by-50-satang-from-thursday-573056"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-26T07:00:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/thailandnews/informal-workers-make-up-nearly-two-thirds-of-thailands-workforce-study-finds-573081",
-        "summary": "The publisher page displayed 251 views and 0 comments, compared with 177 views and 0 comments for the selected Sai River report. These same-site counters are locally comparable only and do not establish a nationwide popularity ranking."
+        "observedAt": "2026-11-27T06:55:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/latestnews/news/thailand-cuts-petrol-and-gasohol-e10-prices-by-70-satang-e20-by-50-satang-from-thursday-573056",
+        "summary": "The publisher page displayed 1,081 views and 0 comments, compared with 55 views and 0 comments for the selected Bang Pakong bridge report. These same-site counters are locally comparable only and do not establish a nationwide popularity ranking."
       }
     },
     {
       "category": "thailand",
-      "when": "26.11 · Таиланд",
-      "href": "https://www.pattayamail.com/thailandnews/thailand-health-minister-inspects-sai-river-contamination-and-visits-affected-communities-573084",
-      "publishedAt": "2026-11-26",
-      "ru": "Министр здравоохранения Таиланда посетил район Мае Сай в Чианграе, где продолжают контролировать загрязнение реки Сай тяжёлыми металлами. Власти проверили фильтрацию питьевой воды и обсудили с жителями медицинское наблюдение и меры предосторожности.",
-      "en": "Thailand’s health minister visited Mae Sai in Chiang Rai, where authorities continue monitoring heavy-metal contamination in the Sai River. Officials reviewed drinking-water filtration and discussed health surveillance and precautions with affected communities.",
-      "th": "รัฐมนตรีว่าการกระทรวงสาธารณสุขลงพื้นที่แม่สาย จังหวัดเชียงราย ซึ่งยังมีการติดตามการปนเปื้อนโลหะหนักในแม่น้ำสาย เจ้าหน้าที่ตรวจระบบกรองน้ำดื่มและหารือกับชุมชนเรื่องการเฝ้าระวังสุขภาพและข้อควรระวัง",
+      "when": "27.11 · Таиланд",
+      "href": "https://www.pattayamail.com/news/cargo-barges-swept-into-historic-bang-pakong-bridge-causing-collapse-573202",
+      "publishedAt": "2026-11-27",
+      "ru": "Четыре гружёные рисом баржи сорвало с места сильным приливом на реке Банг Паконг в Чаченгсау. Они повредили сохранившуюся часть исторического моста 1949 года и оборудование мониторинга; действующий автомобильный мост после первичного осмотра оставили открытым.",
+      "en": "A strong incoming tide swept four rice-laden barges into the remaining section of a historic 1949 bridge over the Bang Pakong River in Chachoengsao. The collision damaged monitoring equipment, while the active road bridge remained open after an initial inspection.",
+      "th": "กระแสน้ำขึ้นแรงพัดเรือบรรทุกข้าว 4 ลำชนส่วนที่เหลือของสะพานประวัติศาสตร์ปี 2492 เหนือแม่น้ำบางปะกง จังหวัดฉะเชิงเทรา ทำให้อุปกรณ์ตรวจวัดเสียหาย ส่วนสะพานถนนที่ใช้งานอยู่ยังเปิดได้หลังการตรวจสอบเบื้องต้น",
       "sources": [
-        "https://www.pattayamail.com/thailandnews/thailand-health-minister-inspects-sai-river-contamination-and-visits-affected-communities-573084"
+        "https://www.pattayamail.com/news/cargo-barges-swept-into-historic-bang-pakong-bridge-causing-collapse-573202"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-26T07:00:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/thailandnews/thailand-health-minister-inspects-sai-river-contamination-and-visits-affected-communities-573084",
-        "summary": "The publisher page displayed 177 views and 0 comments, compared with 251 views and 0 comments for the selected informal-work report. These same-site counters are locally comparable only and do not establish a nationwide popularity ranking."
+        "observedAt": "2026-11-27T06:55:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/cargo-barges-swept-into-historic-bang-pakong-bridge-causing-collapse-573202",
+        "summary": "The publisher page displayed 55 views and 0 comments, compared with 1,081 views and 0 comments for the selected national fuel-price report. These same-site counters are locally comparable only and do not establish a nationwide popularity ranking."
       }
     },
     {
       "category": "pattaya",
-      "when": "26.11 · Паттайя",
-      "href": "https://www.pattayamail.com/news/jomtien-enforces-ban-on-sky-lanterns-and-fireworks-for-safer-festivities-573059",
-      "publishedAt": "2026-11-26",
-      "ru": "Муниципальные инспекторы Джомтьена усилили проверки продавцов небесных фонариков и фейерверков перед праздником Лой Кратонг. Запрещённые изделия будут изымать: власти объясняют ограничения риском пожаров, травм и ущерба домам.",
-      "en": "Jomtien municipal officers stepped up inspections of vendors selling sky lanterns and fireworks before Loy Krathong. Prohibited items will be confiscated, with officials citing risks of fires, injuries and damage to homes.",
-      "th": "เจ้าหน้าที่เทศกิจจอมเทียนเพิ่มการตรวจร้านค้าที่จำหน่ายโคมลอยและดอกไม้ไฟก่อนวันลอยกระทง โดยจะยึดสินค้าต้องห้าม เจ้าหน้าที่ระบุว่ามาตรการนี้ช่วยลดความเสี่ยงจากไฟไหม้ การบาดเจ็บ และความเสียหายต่อบ้านเรือน",
+      "when": "27.11 · Паттайя",
+      "href": "https://www.pattayamail.com/news/pattaya-launches-1-84-billion-baht-flood-prevention-project-in-2027-573199",
+      "publishedAt": "2026-11-27",
+      "ru": "Паттайя готовит четырёхэтапное расширение ливневой системы. Первые два этапа стоимостью около 1,84 млрд бат должны начаться в начале 2027 года и отводить воду через канал Южной Паттайи; завершение этой части планируется к 2029 году.",
+      "en": "Pattaya is preparing a four-phase drainage expansion. The first two phases, budgeted at about 1.84 billion baht, are expected to start in early 2027 and direct stormwater through the South Pattaya Canal, with completion targeted for 2029.",
+      "th": "พัทยาเตรียมขยายระบบระบายน้ำ 4 ระยะ โดยสองระยะแรกใช้งบประมาณรวมราว 1.84 พันล้านบาท คาดว่าจะเริ่มต้นต้นปี 2570 และระบายน้ำผ่านคลองพัทยาใต้ ตั้งเป้าเสร็จในปี 2572",
       "sources": [
-        "https://www.pattayamail.com/news/jomtien-enforces-ban-on-sky-lanterns-and-fireworks-for-safer-festivities-573059"
+        "https://www.pattayamail.com/news/pattaya-launches-1-84-billion-baht-flood-prevention-project-in-2027-573199"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-26T07:00:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/jomtien-enforces-ban-on-sky-lanterns-and-fireworks-for-safer-festivities-573059",
-        "summary": "The publisher page displayed 250 views and 0 comments, compared with 237 views and 0 comments for the selected East Pattaya speed-bump report. These same-site counters are locally comparable only and do not establish a citywide popularity ranking."
+        "observedAt": "2026-11-27T06:55:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/pattaya-launches-1-84-billion-baht-flood-prevention-project-in-2027-573199",
+        "summary": "The publisher page displayed 209 views and 0 comments, compared with 199 views and 0 comments for the selected South Pattaya Pier inspection. These same-site counters are locally comparable only and do not establish a citywide popularity ranking."
       }
     },
     {
       "category": "pattaya",
-      "when": "26.11 · Паттайя",
-      "href": "https://www.pattayamail.com/news/east-pattaya-residents-seek-urgent-fixes-to-noisy-poorly-visible-speed-bumps-573039",
-      "publishedAt": "2026-11-26",
-      "ru": "Жители района Mab Yai Lia 53 в Восточной Паттайе попросили проверить плохо заметные лежачие полицейские. Ночью из-за слабого освещения и отсутствия яркой разметки водители поздно замечают препятствия, а удары автомобилей создают постоянный шум.",
-      "en": "Residents of Mab Yai Lia 53 in East Pattaya have asked authorities to inspect poorly visible speed bumps. Weak lighting and missing bright markings mean drivers often notice them too late at night, producing repeated impact noise.",
-      "th": "ชาวซอยมาบยายเลีย 53 ในพัทยาตะวันออกขอให้หน่วยงานตรวจสอบลูกระนาดที่มองเห็นไม่ชัด แสงสว่างไม่เพียงพอและไม่มีสีสะท้อนเด่นทำให้ผู้ขับขี่เห็นช้าในเวลากลางคืน จนเกิดเสียงกระแทกรบกวนซ้ำ ๆ",
+      "when": "27.11 · Паттайя",
+      "href": "https://www.pattayamail.com/latestnews/news/pattaya-checks-boat-safety-before-a-day-at-sea-turns-into-regret-573209",
+      "publishedAt": "2026-11-27",
+      "ru": "В Южной Паттайе морские службы проверили пассажирские суда перед выходом в море. Инспекторы сверяли документы операторов и регистрацию, состояние судов, двигатели и спасательное оборудование; перевозчикам напомнили выдавать всем пассажирам спасательные жилеты.",
+      "en": "Marine authorities inspected passenger boats at South Pattaya Pier before departure. Officers checked operator documents, registration, vessel condition, engines and safety equipment, and reminded carriers that every passenger must wear a life jacket.",
+      "th": "หน่วยงานทางทะเลตรวจเรือโดยสารที่ท่าเรือพัทยาใต้ก่อนออกเดินทาง เจ้าหน้าที่ตรวจใบอนุญาตผู้ควบคุมเรือ ทะเบียน สภาพเรือ เครื่องยนต์ และอุปกรณ์ความปลอดภัย พร้อมย้ำให้ผู้โดยสารทุกคนสวมเสื้อชูชีพ",
       "sources": [
-        "https://www.pattayamail.com/news/east-pattaya-residents-seek-urgent-fixes-to-noisy-poorly-visible-speed-bumps-573039"
+        "https://www.pattayamail.com/latestnews/news/pattaya-checks-boat-safety-before-a-day-at-sea-turns-into-regret-573209"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-26T07:00:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/east-pattaya-residents-seek-urgent-fixes-to-noisy-poorly-visible-speed-bumps-573039",
-        "summary": "The publisher page displayed 237 views and 0 comments, compared with 250 views and 0 comments for the selected Jomtien safety report. These same-site counters are locally comparable only and do not establish a citywide popularity ranking."
+        "observedAt": "2026-11-27T06:55:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/latestnews/news/pattaya-checks-boat-safety-before-a-day-at-sea-turns-into-regret-573209",
+        "summary": "The publisher page displayed 199 views and 0 comments, compared with 209 views and 0 comments for the selected flood-prevention project. These same-site counters are locally comparable only and do not establish a citywide popularity ranking."
       }
     }
   ],
@@ -367,5 +367,5 @@
       "verifiedAt": "2026-11-16"
     }
   ],
-  "selection": "Reviewed 2026-11-26 Asia/Bangkok: exactly one non-war world story, two Thailand and two Pattaya stories. Four were published on the current Bangkok calendar date and the world report on the previous date, all within the required window. Same-publisher view/comment counters were compared where exposed; Reuters exposed no comparable public engagement totals, so the stated limitation does not establish global, national or citywide popularity. One new clearly attributed cyber-police investigation was added with its honest 2026-11-24 source date and reported-investigation status; the oldest October warning was retired to keep 12 active cards. No Telegram sending."
+  "selection": "Reviewed 2026-11-27 Asia/Bangkok: exactly one non-war world story, two Thailand and two Pattaya stories. Four were published on the current Bangkok calendar date and one on the previous date, all within the required window. Same-publisher view/comment counters were compared where exposed; Reuters exposed no comparable public engagement totals, so the stated limitation does not establish global, national or citywide popularity. The single anti-scam search batch and the official ACSC warning page exposed no distinct new warning dated 26–27 November; all 12 active warnings and their original verification dates are preserved. No Telegram sending."
 }
