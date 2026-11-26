@@ -5,3 +5,6 @@ Owner requests images/GIFs. Only unsent26Nov12:30/19:00 slots changed; all42 ear
 Native GIPHY TEXT container uses separate publish, no bare fallback. Unreviewed/mixed attachments and bare future posts from26Nov rejected before Meta calls. Queue regression enforces reviewed visuals. Receipts/auto replies/3daily reply checks/secrets preserved. No paid service/scheduler.
 
 23 local tests pass, including GIF transport/ambiguous failure/queue guard. Official source https://developers.facebook.com/documentation/threads/posts; GIF source https://giphy.com/gifs/studiosoriginals-DPH2d2WQsvTVEDVa2p. No public test posts. Isolated deployment pending: verify /media-status and deploy before claiming release. Actual media receipts await scheduled12:30/19:00Bangkok delivery. Queue ends26Nov; subsequent refills need distinct relevant reviewed visuals and tests. Main/site untouched.
+
+## Verified release
+26Nov: isolated Worker deployment45727417492 succeeded at source82389e05cfed2504f3bda1d6df6d8d174bc3555e. Live /media-status confirms visualRequired=true and26Nov12:30 IMAGE /19:00 GIF. All23 worker tests passed. Actual media publication receipts await those normal scheduled times; do not claim already posted. Main/site untouched.
