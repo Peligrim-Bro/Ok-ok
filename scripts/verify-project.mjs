@@ -91,3 +91,9 @@ assert(headerStyle,'Compact header sizing patch missing');
 assert(headerStyle.includes('grid-template-rows:44px;grid-auto-rows:44px'),'Utility grid rows must stay compact');
 assert(headerStyle.includes('.top-actions>:is(#themeBtn,#langBtn,#moreBtn){height:44px!important;min-height:44px!important;max-height:44px!important'),'All three visible utility controls must have bounded height');
 console.log('PASS: utility buttons and grid rows locked to 44px');
+
+// Owner lock 2026-11-22: no advertising invitation until explicit restoration.
+const adRuntime=readFileSync('site/public/assets/ads/ads.js','utf8');
+assert(adRuntime.includes('root.hidden=true;'),'Owner-disabled advertising invitation must stay hidden');
+assert(!/class\s*:\s*['"]okad-invitation['"]/.test(adRuntime),'Owner-disabled advertising invitation returned');
+console.log('PASS: owner-disabled advertising invitation remains absent');

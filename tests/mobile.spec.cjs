@@ -13,11 +13,13 @@ test('late ad loading keeps primary home actions in place',async({page})=>{
  await page.evaluate(()=>document.fonts.ready);
  const primary=page.locator('[data-tours="1"]').first();
  await expect(primary).toBeVisible();
+ const adSection=page.locator('#okAds');
+ await expect(adSection).toBeHidden();
  const before=await primary.boundingBox();
- const adHeight=(await page.locator('#okAds').boundingBox()).height;
  release();
- await expect(page.locator('#okAds .okads-list')).toBeVisible();
- expect((await page.locator('#okAds').boundingBox()).height).toBeGreaterThan(adHeight);
+ await page.evaluate(()=>window.OKAds.refresh());
+ await expect(adSection).toBeHidden();
+ await expect(page.locator('.okad-invitation, #okAds .okads-list')).toHaveCount(0);
  expect(Math.abs((await primary.boundingBox()).y-before.y)).toBeLessThan(1);
  await page.screenshot({path:'quality-reports/stable-home.png',fullPage:false});
 });

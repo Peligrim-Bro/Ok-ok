@@ -21,16 +21,8 @@ ads=ads.slice(0,headStart)+ads.slice(headEnd);
 const start=ads.indexOf('  if (!data)',headStart);
 const end=ads.indexOf('\n}\n',start);
 if(start<0||end<0)throw Error('Ad invitation anchors missing');
-ads=ads.slice(0,start)+`  const inviteWrap=h('div', {class:'okad-invitation-wrap'});
-  inviteWrap.append(h('button', {
-    type:'button', class:'okad-invitation', onclick:()=>openOrder()
-  },
-    h('span', {class:'okad-invite-icon', 'aria-hidden':'true', text:'…'}),
-    h('span', {class:'okad-invite-copy'}, h('b', {text:tr('Заяви о себе','Get noticed','บอกให้โลกรู้')})),
-    h('span', {class:'okad-invite-arrow', 'aria-hidden':'true', text:'↗'})
-  ));
-  root.append(inviteWrap);
-  mountInviteOki(inviteWrap);`+ads.slice(end);
+// Owner 2026-11-22: remove the advertising invitation; preserve existing invoice handling.
+ads=ads.slice(0,start)+`  root.hidden=true;`+ads.slice(end);
 replaceOnce('function paint() {',readFileSync('ad-invitation-oki.js','utf8').replaceAll('__OKI_INVITATION_ASSET__','/'+portraitAsset)+'\nfunction paint() {\n  inviteOkiCleanup();');
 // Keep the paid-placement disclosure inside the form, before any submission.
 replaceOnce("h('p', { class: 'hint', text: tr(`${price} USDT за ${hours} часов. Текст проверяется до оплаты.`, `${price} USDT for ${hours} hours. The text is checked before payment.`, `${price} USDT ต่อ ${hours} ชั่วโมง ตรวจข้อความก่อนชำระ`) }), form)",

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "project": "OK-OK.click",
-  "updatedAt": "2026-11-21",
+  "updatedAt": "2026-11-24",
   "decisions": [
     {
       "id": "hosting",
@@ -90,6 +90,20 @@
         "docs/FEATURE_RULES.md",
         "docs/OKI_HOUSE_TASK.md"
       ]
+    },
+    {
+      "id": "advertising-invitation-disabled",
+      "status": "active",
+      "tags": [
+        "release",
+        "layout"
+      ],
+      "text": "Owner 22 Nov explicitly removed the advertising invitation and forbids restoration until a new direct instruction. Supersedes older editorial instructions to preserve it. No unrelated changes without explicit owner instruction.",
+      "sources": [
+        "AGENTS.md",
+        "scripts/apply-single-ad-invitation.mjs",
+        "scripts/verify-project.mjs"
+      ]
     }
   ],
   "tasks": [
@@ -114,7 +128,7 @@
       "tags": [
         "channel"
       ],
-      "next": "19 Nov: 12 reviewed entries and distinct images fill only 23–25 Nov, extending ordinary/comic slots through 25 Nov. Run offline audit, mandatory project checks, PR CI and exact production deployment verification. Runtime delivery remains unknown.",
+      "next": "24 Nov: existing PR preserves reviewed 26–28 Nov entries; eight new reviewed entries and distinct images add 29–30 Nov, targeting seven complete days through 30 Nov. Run offline audit, mandatory project checks, PR CI and exact production deployment verification. Runtime delivery remains unknown.",
       "sources": [
         "CHANNEL_PUBLISHING.md",
         "scripts/audit-channel-queue.mjs",
@@ -125,7 +139,9 @@
         "docs/CHANNEL_BUFFER_20261105.md",
         "docs/CHANNEL_BUFFER_20261112.md",
         "docs/CHANNEL_BUFFER_20261116.md",
-        "docs/CHANNEL_BUFFER_20261119.md"
+        "docs/CHANNEL_BUFFER_20261119.md",
+        "docs/CHANNEL_BUFFER_20261121.md",
+        "docs/CHANNEL_BUFFER_20261124.md"
       ]
     },
     {
@@ -292,16 +308,28 @@
       ]
     },
     {
-      "id": "threads-auto-replies",
+      "id": "advertising-disabled-release-checks",
       "status": "needs_verification",
       "tags": [
-        "threads",
-        "automation"
+        "release"
       ],
-      "next": "LIVE21Nov14:11Bangkok: enabled/configured true; scans09:00/15:00/21:00 Bangkok.19 worker tests; deploy44878678968 source5f946a3; bot setup44879036155 verified webhook and private notice. First real new-comment reply receipt pending. Main unchanged; PR135 unmerged due inherited website ad checks; do not overwrite live branch deployment with older main Worker. Preserve /threads_off. See task note.",
+      "next": "PR132 resumes after owner removal: button/board stay absent, invoice backend/history unchanged. Local build/native passed. Browser absence matrix, existing mocked invoice coverage and tools return route await GitHub checks. Native Workers Builds still fails; detail requires Cloudflare dashboard sign-in. No restoration or settings changes.",
       "sources": [
-        "docs/THREADS_REPLIES_TASK.md",
-        "workers/threads-auth/replies.mjs"
+        "tests/ad-invitation-oki.spec.cjs",
+        "tests/ads-payments.spec.cjs",
+        "tests/mobile.spec.cjs",
+        "tests/tools-browser.spec.mjs"
+      ]
+    },
+    {
+      "id": "threads-media-repair",
+      "status": "needs_verification",
+      "tags": [
+        "threads"
+      ],
+      "next": "Owner26Nov: two unsent posts now reviewed IMAGE/GIF; native GIPHY publishing, future visual guard and23 tests implemented. Isolated deployment pending. Main and website unchanged.",
+      "sources": [
+        "docs/THREADS_MEDIA_TASK.md"
       ]
     }
   ]

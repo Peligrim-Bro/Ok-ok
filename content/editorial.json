@@ -1,116 +1,116 @@
 {
-  "verifiedAt": "2026-11-20",
+  "verifiedAt": "2026-11-26",
   "news": [
     {
       "category": "world",
-      "when": "19.11 · Мир",
-      "href": "https://www.reuters.com/world/china/global-markets-view-europe-2026-11-19/",
-      "publishedAt": "2026-11-19",
-      "ru": "Anthropic готовится к биржевому дебюту после размещения акций по 83 доллара и привлечения 81 миллиарда долларов. Reuters отмечает высокий спрос на бумаги, но также сохраняющиеся сомнения инвесторов в окупаемости огромных расходов на инфраструктуру искусственного интеллекта.",
-      "en": "Anthropic is preparing for its stock-market debut after pricing shares at $83 and raising $81 billion. Reuters reports strong demand while investors continue to question whether massive spending on artificial-intelligence infrastructure will deliver sufficient returns.",
-      "th": "Anthropic เตรียมเข้าซื้อขายในตลาดหุ้น หลังตั้งราคาหุ้นที่ 83 ดอลลาร์และระดมทุนได้ 81,000 ล้านดอลลาร์ Reuters รายงานว่าความต้องการซื้อแข็งแกร่ง แต่ผู้ลงทุนยังตั้งคำถามว่าการใช้จ่ายมหาศาลกับโครงสร้างพื้นฐาน AI จะให้ผลตอบแทนคุ้มค่าหรือไม่",
+      "when": "25.11 · Мир",
+      "href": "https://www.reuters.com/world/china/global-markets-global-markets-2026-11-25/",
+      "publishedAt": "2026-11-25",
+      "ru": "Мировые фондовые рынки снизились после предложения США ввести новые пошлины для 14 торговых партнёров. Технологический сектор оказался под дополнительным давлением: глобальный индекс MSCI потерял 0,6%, а Nasdaq завершил день снижением на 0,62%.",
+      "en": "Global stock markets fell after the United States proposed new tariffs on 14 trading partners. Technology shares faced additional pressure: MSCI’s global index lost 0.6%, while the Nasdaq closed 0.62% lower.",
+      "th": "ตลาดหุ้นทั่วโลกลดลงหลังสหรัฐฯ เสนอเก็บภาษีนำเข้ารอบใหม่กับคู่ค้า 14 ประเทศ หุ้นเทคโนโลยีถูกกดดันเพิ่มเติม โดยดัชนีหุ้นโลกของ MSCI ลดลง 0.6% และ Nasdaq ปิดลบ 0.62%",
       "sources": [
-        "https://www.reuters.com/world/china/global-markets-view-europe-2026-11-19/"
+        "https://www.reuters.com/world/china/global-markets-global-markets-2026-11-25/"
       ],
       "nonWar": true,
       "discussionEvidence": {
-        "observedAt": "2026-11-20T06:07:00+07:00",
-        "sourceUrl": "https://www.reuters.com/world/china/global-markets-view-europe-2026-11-19/",
-        "summary": "Reuters exposed no public view, share or comment count. No comparable global engagement metric was available in the single review batch; selection reflects the reported scale of the IPO and broad market relevance, not a worldwide popularity ranking."
+        "observedAt": "2026-11-26T07:00:00+07:00",
+        "sourceUrl": "https://www.reuters.com/world/china/global-markets-global-markets-2026-11-25/",
+        "summary": "Reuters exposed no public view, share or comment totals. No directly comparable cross-outlet engagement metrics were available in the single review batch; selection reflects broad international economic relevance and does not claim a global popularity ranking."
       }
     },
     {
       "category": "thailand",
-      "when": "20.11 · Таиланд",
-      "href": "https://www.pattayamail.com/thailandnews/thailand-explores-huawei-ai-technology-to-modernize-ports-and-logistics-572416",
-      "publishedAt": "2026-11-20",
-      "ru": "Транспортная делегация Таиланда изучила решения Huawei для автоматизации портов: планирование заходов судов с помощью ИИ, дистанционное управление кранами и цифровые двойники. Ведомство рассматривает их возможное применение в портах Лаем-Чабанг и Бангкока, но решение о внедрении ещё не объявлено.",
-      "en": "A Thai transport delegation reviewed Huawei systems for port automation, including AI vessel scheduling, remote crane operation and digital twins. Officials are considering possible use at Laem Chabang and Bangkok ports, but no deployment decision has been announced.",
-      "th": "คณะผู้แทนด้านคมนาคมของไทยศึกษาระบบของ Huawei สำหรับท่าเรืออัตโนมัติ ทั้งการจัดตารางเรือด้วย AI การควบคุมเครนจากระยะไกล และดิจิทัลทวิน โดยอยู่ระหว่างพิจารณาความเหมาะสมสำหรับท่าเรือแหลมฉบังและท่าเรือกรุงเทพ แต่ยังไม่มีการประกาศตัดสินใจนำมาใช้",
+      "when": "26.11 · Таиланд",
+      "href": "https://www.pattayamail.com/thailandnews/informal-workers-make-up-nearly-two-thirds-of-thailands-workforce-study-finds-573081",
+      "publishedAt": "2026-11-26",
+      "ru": "Исследование PIER показало, что неформальная занятость охватывает почти две трети работающих жителей Таиланда. Авторы отмечают нестабильность доходов и пробелы в социальной защите и предлагают переносимые льготы, которые сохраняются при смене работы.",
+      "en": "PIER research found that informal employment accounts for nearly two-thirds of Thailand’s workforce. The study highlights unstable income and gaps in social protection, and recommends portable benefits that remain available when workers change jobs.",
+      "th": "งานวิจัยของ PIER ระบุว่าแรงงานนอกระบบมีสัดส่วนเกือบสองในสามของผู้มีงานทำในไทย งานวิจัยชี้ถึงรายได้ที่ไม่แน่นอนและช่องว่างด้านการคุ้มครองทางสังคม พร้อมเสนอสิทธิประโยชน์ที่ติดตามตัวแรงงานเมื่อเปลี่ยนงาน",
       "sources": [
-        "https://www.pattayamail.com/thailandnews/thailand-explores-huawei-ai-technology-to-modernize-ports-and-logistics-572416"
+        "https://www.pattayamail.com/thailandnews/informal-workers-make-up-nearly-two-thirds-of-thailands-workforce-study-finds-573081"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-20T06:07:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/thailandnews/thailand-explores-huawei-ai-technology-to-modernize-ports-and-logistics-572416",
-        "summary": "The source page displayed 322 views and 0 comments. The official TMD source exposed no comparable public counter, so this publisher-local figure does not establish a nationwide popularity rank."
+        "observedAt": "2026-11-26T07:00:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/thailandnews/informal-workers-make-up-nearly-two-thirds-of-thailands-workforce-study-finds-573081",
+        "summary": "The publisher page displayed 251 views and 0 comments, compared with 177 views and 0 comments for the selected Sai River report. These same-site counters are locally comparable only and do not establish a nationwide popularity ranking."
       }
     },
     {
       "category": "thailand",
-      "when": "19.11 · Таиланд",
-      "href": "https://tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-no-10-318-2026",
-      "publishedAt": "2026-11-19",
-      "ru": "Метеодепартамент Таиланда предупредил о сильных и очень сильных дождях на юге 19–22 ноября с риском паводков и оползней. В нижней части Сиамского залива ожидаются волны 2–3 метра и выше во время гроз; малым судам рекомендовано оставаться у берега.",
-      "en": "Thailand’s Meteorological Department warned of heavy to very heavy southern rain on 19–22 November, with flood and landslide risks. Lower Gulf waves may reach 2–3 metres and higher in storms, and small boats are advised to remain ashore.",
-      "th": "กรมอุตุนิยมวิทยาเตือนภาคใต้มีฝนตกหนักถึงหนักมากช่วง 19–22 พฤศจิกายน เสี่ยงน้ำท่วมและดินถล่ม อ่าวไทยตอนล่างมีคลื่นสูง 2–3 เมตรและสูงกว่านั้นในบริเวณฝนฟ้าคะนอง โดยเรือเล็กควรงดออกจากฝั่ง",
+      "when": "26.11 · Таиланд",
+      "href": "https://www.pattayamail.com/thailandnews/thailand-health-minister-inspects-sai-river-contamination-and-visits-affected-communities-573084",
+      "publishedAt": "2026-11-26",
+      "ru": "Министр здравоохранения Таиланда посетил район Мае Сай в Чианграе, где продолжают контролировать загрязнение реки Сай тяжёлыми металлами. Власти проверили фильтрацию питьевой воды и обсудили с жителями медицинское наблюдение и меры предосторожности.",
+      "en": "Thailand’s health minister visited Mae Sai in Chiang Rai, where authorities continue monitoring heavy-metal contamination in the Sai River. Officials reviewed drinking-water filtration and discussed health surveillance and precautions with affected communities.",
+      "th": "รัฐมนตรีว่าการกระทรวงสาธารณสุขลงพื้นที่แม่สาย จังหวัดเชียงราย ซึ่งยังมีการติดตามการปนเปื้อนโลหะหนักในแม่น้ำสาย เจ้าหน้าที่ตรวจระบบกรองน้ำดื่มและหารือกับชุมชนเรื่องการเฝ้าระวังสุขภาพและข้อควรระวัง",
       "sources": [
-        "https://tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-no-10-318-2026"
+        "https://www.pattayamail.com/thailandnews/thailand-health-minister-inspects-sai-river-contamination-and-visits-affected-communities-573084"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-20T06:07:00+07:00",
-        "sourceUrl": "https://tmd.go.th/en/warning-and-events/warning-storm/heavy-to-very-heavy-rains-in-the-south-no-10-318-2026",
-        "summary": "The official TMD advisory exposed no public view, share or comment total. Selection reflects a current official safety warning with direct national relevance; no comparable engagement rank was available."
+        "observedAt": "2026-11-26T07:00:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/thailandnews/thailand-health-minister-inspects-sai-river-contamination-and-visits-affected-communities-573084",
+        "summary": "The publisher page displayed 177 views and 0 comments, compared with 251 views and 0 comments for the selected informal-work report. These same-site counters are locally comparable only and do not establish a nationwide popularity ranking."
       }
     },
     {
       "category": "pattaya",
-      "when": "20.11 · Паттайя",
-      "href": "https://www.pattayamail.com/news/pattaya-outlines-2027-development-plan-focusing-on-quality-of-life-improvements-572443",
-      "publishedAt": "2026-11-20",
-      "ru": "Городской комитет Паттайи рассмотрел проект плана на 2027 финансовый год: 341 новый проект и 172 уже выполняющихся. Среди приоритетов названы инфраструктура, качество жизни, туризм, защита окружающей среды и более эффективное управление городом.",
-      "en": "Pattaya’s development committee reviewed a draft 2027 fiscal plan containing 341 new projects and 172 already under way. Priorities include infrastructure, quality of life, tourism, environmental protection and more efficient city administration.",
-      "th": "คณะกรรมการพัฒนาเมืองพัทยาพิจารณาร่างแผนปีงบประมาณ 2570 ซึ่งมีโครงการใหม่ 341 โครงการและโครงการที่กำลังดำเนินการ 172 โครงการ โดยให้ความสำคัญกับโครงสร้างพื้นฐาน คุณภาพชีวิต การท่องเที่ยว สิ่งแวดล้อม และการบริหารเมืองที่มีประสิทธิภาพขึ้น",
+      "when": "26.11 · Паттайя",
+      "href": "https://www.pattayamail.com/news/jomtien-enforces-ban-on-sky-lanterns-and-fireworks-for-safer-festivities-573059",
+      "publishedAt": "2026-11-26",
+      "ru": "Муниципальные инспекторы Джомтьена усилили проверки продавцов небесных фонариков и фейерверков перед праздником Лой Кратонг. Запрещённые изделия будут изымать: власти объясняют ограничения риском пожаров, травм и ущерба домам.",
+      "en": "Jomtien municipal officers stepped up inspections of vendors selling sky lanterns and fireworks before Loy Krathong. Prohibited items will be confiscated, with officials citing risks of fires, injuries and damage to homes.",
+      "th": "เจ้าหน้าที่เทศกิจจอมเทียนเพิ่มการตรวจร้านค้าที่จำหน่ายโคมลอยและดอกไม้ไฟก่อนวันลอยกระทง โดยจะยึดสินค้าต้องห้าม เจ้าหน้าที่ระบุว่ามาตรการนี้ช่วยลดความเสี่ยงจากไฟไหม้ การบาดเจ็บ และความเสียหายต่อบ้านเรือน",
       "sources": [
-        "https://www.pattayamail.com/news/pattaya-outlines-2027-development-plan-focusing-on-quality-of-life-improvements-572443"
+        "https://www.pattayamail.com/news/jomtien-enforces-ban-on-sky-lanterns-and-fireworks-for-safer-festivities-573059"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-20T06:07:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/pattaya-outlines-2027-development-plan-focusing-on-quality-of-life-improvements-572443",
-        "summary": "The source page displayed 258 views and 0 comments, compared with 222 views and 0 comments for the selected public-space report. These publisher-local counters do not establish a citywide popularity rank."
+        "observedAt": "2026-11-26T07:00:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/jomtien-enforces-ban-on-sky-lanterns-and-fireworks-for-safer-festivities-573059",
+        "summary": "The publisher page displayed 250 views and 0 comments, compared with 237 views and 0 comments for the selected East Pattaya speed-bump report. These same-site counters are locally comparable only and do not establish a citywide popularity ranking."
       }
     },
     {
       "category": "pattaya",
-      "when": "20.11 · Паттайя",
-      "href": "https://www.pattayamail.com/news/pattaya-warns-businesses-to-remove-chairs-and-objects-blocking-public-spaces-572461",
-      "publishedAt": "2026-11-20",
-      "ru": "Муниципальные инспекторы Паттайи потребовали от предпринимателей убрать стулья и другие вещи с общественных участков перед заведениями. Город предупредил, что повторное перекрытие пространства может привести к более строгим мерам.",
-      "en": "Pattaya municipal inspectors instructed businesses to remove chairs and other belongings from public areas outside their premises. The city warned that repeated obstruction of shared space could lead to stricter enforcement.",
-      "th": "เจ้าหน้าที่เทศกิจเมืองพัทยาสั่งให้ผู้ประกอบการนำเก้าอี้และสิ่งของออกจากพื้นที่สาธารณะหน้าร้าน พร้อมเตือนว่าหากกีดขวางพื้นที่ส่วนรวมซ้ำ อาจถูกดำเนินการเข้มงวดขึ้น",
+      "when": "26.11 · Паттайя",
+      "href": "https://www.pattayamail.com/news/east-pattaya-residents-seek-urgent-fixes-to-noisy-poorly-visible-speed-bumps-573039",
+      "publishedAt": "2026-11-26",
+      "ru": "Жители района Mab Yai Lia 53 в Восточной Паттайе попросили проверить плохо заметные лежачие полицейские. Ночью из-за слабого освещения и отсутствия яркой разметки водители поздно замечают препятствия, а удары автомобилей создают постоянный шум.",
+      "en": "Residents of Mab Yai Lia 53 in East Pattaya have asked authorities to inspect poorly visible speed bumps. Weak lighting and missing bright markings mean drivers often notice them too late at night, producing repeated impact noise.",
+      "th": "ชาวซอยมาบยายเลีย 53 ในพัทยาตะวันออกขอให้หน่วยงานตรวจสอบลูกระนาดที่มองเห็นไม่ชัด แสงสว่างไม่เพียงพอและไม่มีสีสะท้อนเด่นทำให้ผู้ขับขี่เห็นช้าในเวลากลางคืน จนเกิดเสียงกระแทกรบกวนซ้ำ ๆ",
       "sources": [
-        "https://www.pattayamail.com/news/pattaya-warns-businesses-to-remove-chairs-and-objects-blocking-public-spaces-572461"
+        "https://www.pattayamail.com/news/east-pattaya-residents-seek-urgent-fixes-to-noisy-poorly-visible-speed-bumps-573039"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-20T06:07:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/pattaya-warns-businesses-to-remove-chairs-and-objects-blocking-public-spaces-572461",
-        "summary": "The source page displayed 222 views and 0 comments, compared with 258 views and 0 comments for the selected Pattaya development-plan report. These publisher-local counters do not establish a citywide popularity rank."
+        "observedAt": "2026-11-26T07:00:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/east-pattaya-residents-seek-urgent-fixes-to-noisy-poorly-visible-speed-bumps-573039",
+        "summary": "The publisher page displayed 237 views and 0 comments, compared with 250 views and 0 comments for the selected Jomtien safety report. These same-site counters are locally comparable only and do not establish a citywide popularity ranking."
       }
     }
   ],
   "scams": [
     {
-      "id": "fake-jobs-filming-invitations-thailand-2026-10",
+      "id": "fake-hospital-police-gold-inspection-thailand-2026-11",
       "title": {
-        "ru": "Ложные вакансии и приглашения на съёмки",
-        "en": "Fake jobs and filming invitations",
-        "th": "งานและคำเชิญถ่ายทำปลอม"
+        "ru": "Лжебольница и «полиция» требуют ценности на проверку",
+        "en": "Fake hospital and police demand valuables for inspection",
+        "th": "มิจฉาชีพแอบอ้างโรงพยาบาลและตำรวจ ขอทรัพย์สินไปตรวจสอบ"
       },
       "text": {
-        "ru": "16 октября посольство Китая предупредило: ложные вакансии и приглашения на съёмки могут вести к удержанию и вывозу к границе Мьянмы.",
-        "en": "On 16 October, China’s embassy warned that fake jobs and filming offers may lead to detention and transfer toward Myanmar.",
-        "th": "16 ตุลาคม สถานทูตจีนเตือนว่างานและคำเชิญถ่ายทำปลอมอาจนำไปสู่การกักขังและส่งต่อไปชายแดนเมียนมา"
+        "ru": "Киберполиция расследует схему: звонящий представляется сотрудником больницы, затем переводит человека в поддельный LINE «полицейского участка». Лжесотрудники полиции и AMLO обвиняют собеседника в отмывании денег и требуют передать ценности для «проверки». По сообщению Pattaya Mail со ссылкой на киберполицию, предполагаемый курьер задержан; организаторов и роли участников ещё устанавливают.",
+        "en": "Cyber police are investigating a scheme in which a caller poses as hospital staff and directs the target to a fake police-station LINE account. Impersonators claiming to be police and AMLO officials allege money laundering and demand valuables for “inspection.” Pattaya Mail, citing cyber police, reported an alleged courier’s arrest; organizers and participants’ roles remain under investigation.",
+        "th": "ตำรวจไซเบอร์กำลังสอบสวนกลโกงที่ผู้โทรแอบอ้างเป็นเจ้าหน้าที่โรงพยาบาล ก่อนพาเป้าหมายไปยังบัญชี LINE ปลอมของสถานีตำรวจ ผู้แอบอ้างเป็นตำรวจและเจ้าหน้าที่ ปปง. กล่าวหาว่าเกี่ยวข้องกับการฟอกเงินและขอให้ส่งมอบทรัพย์สินเพื่อ “ตรวจสอบ” Pattaya Mail รายงานโดยอ้างตำรวจไซเบอร์ว่ามีการจับกุมผู้ต้องสงสัยว่าเป็นผู้รับทรัพย์แล้ว ส่วนผู้จัดการขบวนการและบทบาทของผู้เกี่ยวข้องยังอยู่ระหว่างการสอบสวน"
       },
       "do": {
-        "ru": "Проверяйте работодателя, не отдавайте паспорт и сообщайте маршрут близким; при угрозе звоните в полицию или консульство.",
-        "en": "Verify employers, keep your passport and share plans; if threatened, contact police or your consulate.",
-        "th": "ตรวจนายจ้าง เก็บหนังสือเดินทาง แจ้งแผนแก่คนไว้ใจ และติดต่อตำรวจหรือกงสุลเมื่อมีภัย"
+        "ru": "Не передавайте деньги, золото или другие ценности для доказательства невиновности. Завершите звонок и самостоятельно свяжитесь с ведомством по официальному номеру; консультация киберполиции — 1441.",
+        "en": "Never hand over money, gold or other valuables to prove innocence. End the call and contact the agency through an independently verified official number; Thailand’s cybercrime hotline is 1441.",
+        "th": "อย่าส่งมอบเงิน ทองคำ หรือทรัพย์สินเพื่อพิสูจน์ความบริสุทธิ์ วางสายแล้วติดต่อหน่วยงานผ่านหมายเลขทางการที่ตรวจสอบเอง หากต้องการคำปรึกษาเรื่องอาชญากรรมออนไลน์ โทร 1441"
       },
-      "status": "official-warning",
+      "status": "reported-investigation",
       "sources": [
-        "https://th.china-embassy.gov.cn/sgxw/202610/t20261016_12042063.html"
+        "https://www.pattayamail.com/news/teen-posing-as-police-officer-arrested-in-bangkok-gold-scam-sting-572783"
       ],
-      "verifiedAt": "2026-10-18"
+      "verifiedAt": "2026-11-24"
     },
     {
       "id": "face-scan-for-cash-thailand-2026-10",
@@ -367,5 +367,5 @@
       "verifiedAt": "2026-11-16"
     }
   ],
-  "selection": "Reviewed 2026-11-18 Asia/Bangkok: exactly one non-war world story, two Thailand and two Pattaya stories from sources dated 17–18 November, with four items published on the current Bangkok calendar date. Pattaya Mail exposed publisher-local view/comment counters for three selected reports; Reuters and the official TMD advisory exposed no comparable public engagement totals. These observations support relative selection only and do not establish a global, national or citywide popularity ranking. The official ACSC dashboard showed November category statistics but no new specific scam warning dated 17–18 November suitable for a new card, so all 12 active warnings and their original dates are preserved. No Telegram sending."
+  "selection": "Reviewed 2026-11-26 Asia/Bangkok: exactly one non-war world story, two Thailand and two Pattaya stories. Four were published on the current Bangkok calendar date and the world report on the previous date, all within the required window. Same-publisher view/comment counters were compared where exposed; Reuters exposed no comparable public engagement totals, so the stated limitation does not establish global, national or citywide popularity. One new clearly attributed cyber-police investigation was added with its honest 2026-11-24 source date and reported-investigation status; the oldest October warning was retired to keep 12 active cards. No Telegram sending."
 }
