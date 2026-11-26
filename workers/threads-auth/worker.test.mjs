@@ -57,3 +57,42 @@ test('comments are checked exactly three times per day without changing publicat
  }
  await Promise.all(pending);assert.equal(ticks.length,3);
 });
+test('reviewed GIF uses native attachment and publishes one container, not bare text',async()=>{
+ const calls=[];globalThis.fetch=async url=>{calls.push(String(url));return Response.json(url.includes('/me/threads?fields=')?{data:[]}:url.includes('threads_publish')?{id:'gif-post'}:url.includes('fields=status')?{status:'FINISHED'}:url.includes('fields=permalink')?{permalink:'https://threads.net/gif'}:{id:'gif-container'});};
+ const q=new ThreadsQueue({storage:storage()},{THREADS_ACCESS_TOKEN:'mock'});
+ const p={id:'gif',publishAt:'2026-11-26T19:00:00+07:00',text:'Book',gifAttachment:{provider:'GIPHY',gif_id:'DPH2d2WQsvTVEDVa2p'},gifReviewed:true,altText:'Book animation'};
+ const receipt=await (await q.fetch(req(p))).json();await q.fetch(req(p));
+ assert.equal(receipt.attachment,'GIF');
+ const create=calls.find(x=>x.includes('gif_attachment='));assert.ok(create);
+ assert.equal(new URL(create).searchParams.get('auto_publish_text'),null);
+ assert.deepEqual(JSON.parse(new URL(create).searchParams.get('gif_attachment')),p.gifAttachment);
+ assert.equal(calls.filter(x=>x.includes('threads_publish')).length,1);
+});
+test('future bare posts, mixed media and unreviewed GIF never reach Meta',async()=>{
+ let count=0;globalThis.fetch=async()=>{count++;throw Error('unexpected request');};
+ const q=new ThreadsQueue({storage:storage()},{THREADS_ACCESS_TOKEN:'mock'});
+ for(const p of [
+  {id:'bare',text:'Bare',publishAt:'2026-11-27T12:30:00+07:00'},
+  {id:'unreviewed',gifAttachment:{provider:'GIPHY',gif_id:'abc'}},
+  {...post,gifAttachment:{provider:'GIPHY',gif_id:'abc'},gifReviewed:true},
+  {id:'bad',gifAttachment:{provider:'OTHER',gif_id:'abc'},gifReviewed:true,altText:'GIF'}
+ ]) assert.equal((await q.fetch(req(p))).status,400);
+ assert.equal(count,0);
+});
+test('GIF timeout cannot retry publication or downgrade to text',async()=>{
+ let creates=0;globalThis.fetch=async url=>{
+  if(url.includes('/me/threads?fields='))return Response.json({data:[]});
+  if(url.includes('fields=status'))return Response.json({status:'FINISHED'});
+  if(url.includes('threads_publish'))throw Error('ambiguous');
+  creates++;return Response.json({id:'container'});
+ };
+ const q=new ThreadsQueue({storage:storage()},{THREADS_ACCESS_TOKEN:'mock'});
+ const p={id:'uncertain-gif',text:'Book',gifAttachment:{provider:'GIPHY',gif_id:'abc'},gifReviewed:true,altText:'Book'};
+ await assert.rejects(q.fetch(req(p)),/ambiguous/);assert.equal((await q.fetch(req(p))).status,409);assert.equal(creates,1);
+});
+test('all queued posts after visual cutover have reviewed media; historical slots unchanged',()=>{
+ const queue=JSON.parse(readFileSync(new URL('./queue.json',import.meta.url),'utf8'));
+ for(const p of queue.filter(x=>Date.parse(x.publishAt)>=Date.parse('2026-11-26T00:00:00+07:00'))){
+  assert.ok(p.imageUrl&&p.imageReviewed&&p.altText || p.gifAttachment&&p.gifReviewed&&p.altText,p.id);
+ }
+});
