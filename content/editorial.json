@@ -1,116 +1,116 @@
 {
-  "verifiedAt": "2026-11-25",
+  "verifiedAt": "2026-11-26",
   "news": [
     {
       "category": "world",
-      "when": "24.11 · Мир",
-      "href": "https://www.reuters.com/world/europe/german-ifo-business-sentiment-rises-november-2026-11-24/",
-      "publishedAt": "2026-11-24",
-      "ru": "Деловые настроения в Германии улучшились седьмой месяц подряд: индекс института Ifo вырос в ноябре с 90,1 до 90,6 пункта. Оценки текущей ситуации и ожиданий повысились, однако рост сосредоточен в услугах и торговле, тогда как промышленность и строительство ослабли.",
-      "en": "German business sentiment improved for a seventh consecutive month, with the Ifo index rising from 90.1 to 90.6 in November. Current conditions and expectations strengthened, although gains were concentrated in services and trade while manufacturing and construction weakened.",
-      "th": "ความเชื่อมั่นทางธุรกิจของเยอรมนีดีขึ้นเป็นเดือนที่ 7 ติดต่อกัน โดยดัชนี Ifo เดือนพฤศจิกายนเพิ่มจาก 90.1 เป็น 90.6 คะแนน ทั้งภาวะปัจจุบันและความคาดหวังปรับดีขึ้น แต่การฟื้นตัวยังกระจุกตัวในภาคบริการและการค้า ขณะที่ภาคการผลิตและก่อสร้างอ่อนลง",
+      "when": "25.11 · Мир",
+      "href": "https://www.reuters.com/world/china/global-markets-global-markets-2026-11-25/",
+      "publishedAt": "2026-11-25",
+      "ru": "Мировые фондовые рынки снизились после предложения США ввести новые пошлины для 14 торговых партнёров. Технологический сектор оказался под дополнительным давлением: глобальный индекс MSCI потерял 0,6%, а Nasdaq завершил день снижением на 0,62%.",
+      "en": "Global stock markets fell after the United States proposed new tariffs on 14 trading partners. Technology shares faced additional pressure: MSCI’s global index lost 0.6%, while the Nasdaq closed 0.62% lower.",
+      "th": "ตลาดหุ้นทั่วโลกลดลงหลังสหรัฐฯ เสนอเก็บภาษีนำเข้ารอบใหม่กับคู่ค้า 14 ประเทศ หุ้นเทคโนโลยีถูกกดดันเพิ่มเติม โดยดัชนีหุ้นโลกของ MSCI ลดลง 0.6% และ Nasdaq ปิดลบ 0.62%",
       "sources": [
-        "https://www.reuters.com/world/europe/german-ifo-business-sentiment-rises-november-2026-11-24/"
+        "https://www.reuters.com/world/china/global-markets-global-markets-2026-11-25/"
       ],
       "nonWar": true,
       "discussionEvidence": {
-        "observedAt": "2026-11-25T06:10:00+07:00",
-        "sourceUrl": "https://www.reuters.com/world/europe/german-ifo-business-sentiment-rises-november-2026-11-24/",
-        "summary": "The accessible Reuters report exposed no public view, share or comment totals, and the review batch did not provide comparable cross-outlet engagement metrics. Selection reflects the fresh Ifo economic indicator and its international relevance only; it does not claim a global popularity ranking."
+        "observedAt": "2026-11-26T07:00:00+07:00",
+        "sourceUrl": "https://www.reuters.com/world/china/global-markets-global-markets-2026-11-25/",
+        "summary": "Reuters exposed no public view, share or comment totals. No directly comparable cross-outlet engagement metrics were available in the single review batch; selection reflects broad international economic relevance and does not claim a global popularity ranking."
       }
     },
     {
       "category": "thailand",
-      "when": "24.11 · Таиланд",
-      "href": "https://www.tmd.go.th/media/forecast/daily-forecast/2026-11-24_12_eng_1.pdf",
-      "publishedAt": "2026-11-24",
-      "ru": "Метеорологический департамент Таиланда сообщил о похолодании на 1–3 °C и сильном ветре на северо-востоке страны. На юге сохраняется риск сильных дождей, внезапных паводков и переливов, а волны в нижней части Сиамского залива во время гроз могут превышать два метра.",
-      "en": "Thailand’s Meteorological Department forecast a 1–3°C temperature drop and strong winds in the Northeast. Heavy rain, flash floods and overflows remain possible in the South, while waves in the lower Gulf may exceed two metres during thunderstorms.",
-      "th": "กรมอุตุนิยมวิทยาคาดว่าภาคตะวันออกเฉียงเหนือจะมีอุณหภูมิลดลง 1–3 องศาเซลเซียสและมีลมแรง ส่วนภาคใต้ยังเสี่ยงฝนตกหนัก น้ำท่วมฉับพลัน และน้ำล้นตลิ่ง ขณะที่คลื่นในอ่าวไทยตอนล่างอาจสูงเกิน 2 เมตรในบริเวณที่มีฝนฟ้าคะนอง",
+      "when": "26.11 · Таиланд",
+      "href": "https://www.pattayamail.com/thailandnews/informal-workers-make-up-nearly-two-thirds-of-thailands-workforce-study-finds-573081",
+      "publishedAt": "2026-11-26",
+      "ru": "Исследование PIER показало, что неформальная занятость охватывает почти две трети работающих жителей Таиланда. Авторы отмечают нестабильность доходов и пробелы в социальной защите и предлагают переносимые льготы, которые сохраняются при смене работы.",
+      "en": "PIER research found that informal employment accounts for nearly two-thirds of Thailand’s workforce. The study highlights unstable income and gaps in social protection, and recommends portable benefits that remain available when workers change jobs.",
+      "th": "งานวิจัยของ PIER ระบุว่าแรงงานนอกระบบมีสัดส่วนเกือบสองในสามของผู้มีงานทำในไทย งานวิจัยชี้ถึงรายได้ที่ไม่แน่นอนและช่องว่างด้านการคุ้มครองทางสังคม พร้อมเสนอสิทธิประโยชน์ที่ติดตามตัวแรงงานเมื่อเปลี่ยนงาน",
       "sources": [
-        "https://www.tmd.go.th/media/forecast/daily-forecast/2026-11-24_12_eng_1.pdf"
+        "https://www.pattayamail.com/thailandnews/informal-workers-make-up-nearly-two-thirds-of-thailands-workforce-study-finds-573081"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-25T06:10:00+07:00",
-        "sourceUrl": "https://www.tmd.go.th/media/forecast/daily-forecast/2026-11-24_12_eng_1.pdf",
-        "summary": "The official TMD bulletin exposed no public engagement counters. No directly comparable metrics were available; selection is based on immediate public-safety relevance and does not claim a nationwide popularity ranking."
+        "observedAt": "2026-11-26T07:00:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/thailandnews/informal-workers-make-up-nearly-two-thirds-of-thailands-workforce-study-finds-573081",
+        "summary": "The publisher page displayed 251 views and 0 comments, compared with 177 views and 0 comments for the selected Sai River report. These same-site counters are locally comparable only and do not establish a nationwide popularity ranking."
       }
     },
     {
       "category": "thailand",
-      "when": "24.11 · Таиланд",
-      "href": "https://www.pattayamail.com/thailandnews/thailands-traditional-chud-thai-costume-awaits-unesco-heritage-decision-on-2-december-572809",
-      "publishedAt": "2026-11-24",
-      "ru": "ЮНЕСКО рассмотрит заявку Таиланда на включение традиционного костюма Chud Thai в список нематериального культурного наследия 2 декабря. Министерство культуры планирует общенациональную акцию с традиционной одеждой и прямую трансляцию заседания.",
-      "en": "UNESCO will consider Thailand’s nomination of the traditional Chud Thai costume for its Intangible Cultural Heritage list on 2 December. The Culture Ministry plans a nationwide traditional-dress campaign and a livestream of the committee session.",
-      "th": "ยูเนสโกจะพิจารณาคำเสนอขึ้นทะเบียน “ชุดไทย” เป็นมรดกวัฒนธรรมที่จับต้องไม่ได้ในวันที่ 2 ธันวาคม กระทรวงวัฒนธรรมเตรียมกิจกรรมสวมชุดไทยทั่วประเทศและถ่ายทอดสดการประชุมของคณะกรรมการ",
+      "when": "26.11 · Таиланд",
+      "href": "https://www.pattayamail.com/thailandnews/thailand-health-minister-inspects-sai-river-contamination-and-visits-affected-communities-573084",
+      "publishedAt": "2026-11-26",
+      "ru": "Министр здравоохранения Таиланда посетил район Мае Сай в Чианграе, где продолжают контролировать загрязнение реки Сай тяжёлыми металлами. Власти проверили фильтрацию питьевой воды и обсудили с жителями медицинское наблюдение и меры предосторожности.",
+      "en": "Thailand’s health minister visited Mae Sai in Chiang Rai, where authorities continue monitoring heavy-metal contamination in the Sai River. Officials reviewed drinking-water filtration and discussed health surveillance and precautions with affected communities.",
+      "th": "รัฐมนตรีว่าการกระทรวงสาธารณสุขลงพื้นที่แม่สาย จังหวัดเชียงราย ซึ่งยังมีการติดตามการปนเปื้อนโลหะหนักในแม่น้ำสาย เจ้าหน้าที่ตรวจระบบกรองน้ำดื่มและหารือกับชุมชนเรื่องการเฝ้าระวังสุขภาพและข้อควรระวัง",
       "sources": [
-        "https://www.pattayamail.com/thailandnews/thailands-traditional-chud-thai-costume-awaits-unesco-heritage-decision-on-2-december-572809"
+        "https://www.pattayamail.com/thailandnews/thailand-health-minister-inspects-sai-river-contamination-and-visits-affected-communities-573084"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-25T06:10:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/thailandnews/thailands-traditional-chud-thai-costume-awaits-unesco-heritage-decision-on-2-december-572809",
-        "summary": "The publisher page displayed 947 views and 0 comments at observation. The official TMD bulletin selected alongside it exposed no counter, so the metrics are not directly comparable and do not establish a nationwide popularity ranking."
+        "observedAt": "2026-11-26T07:00:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/thailandnews/thailand-health-minister-inspects-sai-river-contamination-and-visits-affected-communities-573084",
+        "summary": "The publisher page displayed 177 views and 0 comments, compared with 251 views and 0 comments for the selected informal-work report. These same-site counters are locally comparable only and do not establish a nationwide popularity ranking."
       }
     },
     {
       "category": "pattaya",
-      "when": "24.11 · Паттайя",
-      "href": "https://www.pattayamail.com/news/nongprue-mayor-checks-road-and-drainage-upgrades-along-chaiyaphon-vithi-road-572758",
-      "publishedAt": "2026-11-24",
-      "ru": "В Нонгпры проверили ход ремонта дороги Chaiyaphon Vithi в Восточной Паттайе. Проект включает новое асфальтовое покрытие, железобетонные водоотводные трубы и колодцы; власти рассчитывают уменьшить подтопления и повысить безопасность движения.",
-      "en": "Nongprue officials inspected road and drainage upgrades along Chaiyaphon Vithi Road in East Pattaya. The project includes new asphalt, reinforced-concrete drainage pipes and manholes, with the aim of reducing flooding and improving road safety.",
-      "th": "เทศบาลหนองปรือตรวจความคืบหน้าการปรับปรุงถนนชัยพรวิถีในพัทยาตะวันออก โครงการประกอบด้วยการปูยางมะตอยใหม่ วางท่อระบายน้ำคอนกรีตเสริมเหล็ก และบ่อพัก เพื่อช่วยลดน้ำท่วมและเพิ่มความปลอดภัยในการสัญจร",
+      "when": "26.11 · Паттайя",
+      "href": "https://www.pattayamail.com/news/jomtien-enforces-ban-on-sky-lanterns-and-fireworks-for-safer-festivities-573059",
+      "publishedAt": "2026-11-26",
+      "ru": "Муниципальные инспекторы Джомтьена усилили проверки продавцов небесных фонариков и фейерверков перед праздником Лой Кратонг. Запрещённые изделия будут изымать: власти объясняют ограничения риском пожаров, травм и ущерба домам.",
+      "en": "Jomtien municipal officers stepped up inspections of vendors selling sky lanterns and fireworks before Loy Krathong. Prohibited items will be confiscated, with officials citing risks of fires, injuries and damage to homes.",
+      "th": "เจ้าหน้าที่เทศกิจจอมเทียนเพิ่มการตรวจร้านค้าที่จำหน่ายโคมลอยและดอกไม้ไฟก่อนวันลอยกระทง โดยจะยึดสินค้าต้องห้าม เจ้าหน้าที่ระบุว่ามาตรการนี้ช่วยลดความเสี่ยงจากไฟไหม้ การบาดเจ็บ และความเสียหายต่อบ้านเรือน",
       "sources": [
-        "https://www.pattayamail.com/news/nongprue-mayor-checks-road-and-drainage-upgrades-along-chaiyaphon-vithi-road-572758"
+        "https://www.pattayamail.com/news/jomtien-enforces-ban-on-sky-lanterns-and-fireworks-for-safer-festivities-573059"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-25T06:10:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/nongprue-mayor-checks-road-and-drainage-upgrades-along-chaiyaphon-vithi-road-572758",
-        "summary": "The publisher page displayed 1,369 views and 0 comments, compared with 805 views and 0 comments for the selected damaged-manhole report. These same-site counters are locally comparable only and do not establish a citywide popularity ranking."
+        "observedAt": "2026-11-26T07:00:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/jomtien-enforces-ban-on-sky-lanterns-and-fireworks-for-safer-festivities-573059",
+        "summary": "The publisher page displayed 250 views and 0 comments, compared with 237 views and 0 comments for the selected East Pattaya speed-bump report. These same-site counters are locally comparable only and do not establish a citywide popularity ranking."
       }
     },
     {
       "category": "pattaya",
-      "when": "24.11 · Паттайя",
-      "href": "https://www.pattayamail.com/news/damaged-manhole-cover-poses-danger-to-motorists-on-route-7-near-pattaya-572752",
-      "publishedAt": "2026-11-24",
-      "ru": "На параллельной дороге у трассы №7 в районе Нонг Пла Лай повреждена крышка колодца, опасная прежде всего для мотоциклистов. Водителям советуют снизить скорость и внимательно следить за покрытием, пока службы не осмотрят и не отремонтируют участок.",
-      "en": "A damaged manhole cover on the parallel road beside Route 7 in Nong Pla Lai poses a particular risk to motorcyclists. Drivers are advised to slow down and watch the road surface until the relevant authorities inspect and repair the site.",
-      "th": "ฝาท่อชำรุดบนถนนคู่ขนานมอเตอร์เวย์หมายเลข 7 บริเวณหนองปลาไหลอาจเป็นอันตราย โดยเฉพาะต่อผู้ขับขี่รถจักรยานยนต์ ผู้ใช้ถนนควรลดความเร็วและสังเกตพื้นผิวถนนจนกว่าหน่วยงานที่เกี่ยวข้องจะตรวจสอบและซ่อมแซม",
+      "when": "26.11 · Паттайя",
+      "href": "https://www.pattayamail.com/news/east-pattaya-residents-seek-urgent-fixes-to-noisy-poorly-visible-speed-bumps-573039",
+      "publishedAt": "2026-11-26",
+      "ru": "Жители района Mab Yai Lia 53 в Восточной Паттайе попросили проверить плохо заметные лежачие полицейские. Ночью из-за слабого освещения и отсутствия яркой разметки водители поздно замечают препятствия, а удары автомобилей создают постоянный шум.",
+      "en": "Residents of Mab Yai Lia 53 in East Pattaya have asked authorities to inspect poorly visible speed bumps. Weak lighting and missing bright markings mean drivers often notice them too late at night, producing repeated impact noise.",
+      "th": "ชาวซอยมาบยายเลีย 53 ในพัทยาตะวันออกขอให้หน่วยงานตรวจสอบลูกระนาดที่มองเห็นไม่ชัด แสงสว่างไม่เพียงพอและไม่มีสีสะท้อนเด่นทำให้ผู้ขับขี่เห็นช้าในเวลากลางคืน จนเกิดเสียงกระแทกรบกวนซ้ำ ๆ",
       "sources": [
-        "https://www.pattayamail.com/news/damaged-manhole-cover-poses-danger-to-motorists-on-route-7-near-pattaya-572752"
+        "https://www.pattayamail.com/news/east-pattaya-residents-seek-urgent-fixes-to-noisy-poorly-visible-speed-bumps-573039"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-25T06:10:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/damaged-manhole-cover-poses-danger-to-motorists-on-route-7-near-pattaya-572752",
-        "summary": "The publisher page displayed 805 views and 0 comments, compared with 1,369 views and 0 comments for the selected Nongprue road-and-drainage report. These same-site counters are locally comparable only and do not establish a citywide popularity ranking."
+        "observedAt": "2026-11-26T07:00:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/east-pattaya-residents-seek-urgent-fixes-to-noisy-poorly-visible-speed-bumps-573039",
+        "summary": "The publisher page displayed 237 views and 0 comments, compared with 250 views and 0 comments for the selected Jomtien safety report. These same-site counters are locally comparable only and do not establish a citywide popularity ranking."
       }
     }
   ],
   "scams": [
     {
-      "id": "fake-jobs-filming-invitations-thailand-2026-10",
+      "id": "fake-hospital-police-gold-inspection-thailand-2026-11",
       "title": {
-        "ru": "Ложные вакансии и приглашения на съёмки",
-        "en": "Fake jobs and filming invitations",
-        "th": "งานและคำเชิญถ่ายทำปลอม"
+        "ru": "Лжебольница и «полиция» требуют ценности на проверку",
+        "en": "Fake hospital and police demand valuables for inspection",
+        "th": "มิจฉาชีพแอบอ้างโรงพยาบาลและตำรวจ ขอทรัพย์สินไปตรวจสอบ"
       },
       "text": {
-        "ru": "16 октября посольство Китая предупредило: ложные вакансии и приглашения на съёмки могут вести к удержанию и вывозу к границе Мьянмы.",
-        "en": "On 16 October, China’s embassy warned that fake jobs and filming offers may lead to detention and transfer toward Myanmar.",
-        "th": "16 ตุลาคม สถานทูตจีนเตือนว่างานและคำเชิญถ่ายทำปลอมอาจนำไปสู่การกักขังและส่งต่อไปชายแดนเมียนมา"
+        "ru": "Киберполиция расследует схему: звонящий представляется сотрудником больницы, затем переводит человека в поддельный LINE «полицейского участка». Лжесотрудники полиции и AMLO обвиняют собеседника в отмывании денег и требуют передать ценности для «проверки». По сообщению Pattaya Mail со ссылкой на киберполицию, предполагаемый курьер задержан; организаторов и роли участников ещё устанавливают.",
+        "en": "Cyber police are investigating a scheme in which a caller poses as hospital staff and directs the target to a fake police-station LINE account. Impersonators claiming to be police and AMLO officials allege money laundering and demand valuables for “inspection.” Pattaya Mail, citing cyber police, reported an alleged courier’s arrest; organizers and participants’ roles remain under investigation.",
+        "th": "ตำรวจไซเบอร์กำลังสอบสวนกลโกงที่ผู้โทรแอบอ้างเป็นเจ้าหน้าที่โรงพยาบาล ก่อนพาเป้าหมายไปยังบัญชี LINE ปลอมของสถานีตำรวจ ผู้แอบอ้างเป็นตำรวจและเจ้าหน้าที่ ปปง. กล่าวหาว่าเกี่ยวข้องกับการฟอกเงินและขอให้ส่งมอบทรัพย์สินเพื่อ “ตรวจสอบ” Pattaya Mail รายงานโดยอ้างตำรวจไซเบอร์ว่ามีการจับกุมผู้ต้องสงสัยว่าเป็นผู้รับทรัพย์แล้ว ส่วนผู้จัดการขบวนการและบทบาทของผู้เกี่ยวข้องยังอยู่ระหว่างการสอบสวน"
       },
       "do": {
-        "ru": "Проверяйте работодателя, не отдавайте паспорт и сообщайте маршрут близким; при угрозе звоните в полицию или консульство.",
-        "en": "Verify employers, keep your passport and share plans; if threatened, contact police or your consulate.",
-        "th": "ตรวจนายจ้าง เก็บหนังสือเดินทาง แจ้งแผนแก่คนไว้ใจ และติดต่อตำรวจหรือกงสุลเมื่อมีภัย"
+        "ru": "Не передавайте деньги, золото или другие ценности для доказательства невиновности. Завершите звонок и самостоятельно свяжитесь с ведомством по официальному номеру; консультация киберполиции — 1441.",
+        "en": "Never hand over money, gold or other valuables to prove innocence. End the call and contact the agency through an independently verified official number; Thailand’s cybercrime hotline is 1441.",
+        "th": "อย่าส่งมอบเงิน ทองคำ หรือทรัพย์สินเพื่อพิสูจน์ความบริสุทธิ์ วางสายแล้วติดต่อหน่วยงานผ่านหมายเลขทางการที่ตรวจสอบเอง หากต้องการคำปรึกษาเรื่องอาชญากรรมออนไลน์ โทร 1441"
       },
-      "status": "official-warning",
+      "status": "reported-investigation",
       "sources": [
-        "https://th.china-embassy.gov.cn/sgxw/202610/t20261016_12042063.html"
+        "https://www.pattayamail.com/news/teen-posing-as-police-officer-arrested-in-bangkok-gold-scam-sting-572783"
       ],
-      "verifiedAt": "2026-10-18"
+      "verifiedAt": "2026-11-24"
     },
     {
       "id": "face-scan-for-cash-thailand-2026-10",
@@ -367,5 +367,5 @@
       "verifiedAt": "2026-11-16"
     }
   ],
-  "selection": "Reviewed 2026-11-25 Asia/Bangkok: exactly one non-war world story, two Thailand and two Pattaya stories, all published on the previous Bangkok calendar date and within the allowed freshness window. Publisher-local view/comment counters were recorded where exposed; Reuters and the official TMD bulletin exposed no comparable public engagement totals, and the stated limitations do not establish global, national or citywide popularity. The single anti-scam search batch found no distinct new official warning or reliably corroborated investigation dated 24–25 November beyond the active schemes already represented; a secondary report claiming official backing was not treated as sufficient evidence. All 12 active warnings and their original verification dates are preserved. No Telegram sending."
+  "selection": "Reviewed 2026-11-26 Asia/Bangkok: exactly one non-war world story, two Thailand and two Pattaya stories. Four were published on the current Bangkok calendar date and the world report on the previous date, all within the required window. Same-publisher view/comment counters were compared where exposed; Reuters exposed no comparable public engagement totals, so the stated limitation does not establish global, national or citywide popularity. One new clearly attributed cyber-police investigation was added with its honest 2026-11-24 source date and reported-investigation status; the oldest October warning was retired to keep 12 active cards. No Telegram sending."
 }
