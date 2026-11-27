@@ -1,90 +1,90 @@
 {
-  "verifiedAt": "2026-11-27",
+  "verifiedAt": "2026-11-28",
   "news": [
     {
       "category": "world",
-      "when": "26.11 · Мир",
-      "href": "https://www.reuters.com/world/china/five-takeaways-trumps-new-tariffs-2026-11-26/",
-      "publishedAt": "2026-11-26",
-      "ru": "США предложили новые пошлины на импорт из 14 торговых партнёров. Для Китая ставка составит 20%, а для Таиланда, Малайзии, Индонезии, Камбоджи и Бангладеш предусмотрен предел 18%; меры смогут вступить в силу только после публичных слушаний 25 января.",
-      "en": "The United States proposed new tariffs on imports from 14 trading partners. China would face a 20% rate, while Thailand, Malaysia, Indonesia, Cambodia and Bangladesh would have an 18% cap; the measures cannot take effect until after a public hearing on 25 January.",
-      "th": "สหรัฐฯ เสนอเก็บภาษีนำเข้ารอบใหม่จากคู่ค้า 14 ประเทศ โดยจีนอาจถูกเก็บในอัตรา 20% ส่วนไทย มาเลเซีย อินโดนีเซีย กัมพูชา และบังกลาเทศกำหนดเพดานไว้ที่ 18% มาตรการจะยังไม่เริ่มก่อนการรับฟังความคิดเห็นสาธารณะวันที่ 25 มกราคม",
+      "when": "27.11 · Мир",
+      "href": "https://www.reuters.com/world/asia-pacific/south-korea-november-exports-seen-posting-fastest-growth-over-50-years-ai-chip-2026-11-27/",
+      "publishedAt": "2026-11-27",
+      "ru": "Экспорт Южной Кореи в ноябре, по медианной оценке восьми экономистов Reuters, может вырасти на 96,8% год к году — максимальными темпами с января 1974 года. Рост поддерживает спрос на микросхемы памяти для систем ИИ; официальные данные ожидаются 1 декабря.",
+      "en": "South Korean exports may rise 96.8% year on year in November, according to the median estimate of eight economists polled by Reuters—the fastest pace since January 1974. Demand for memory chips used in AI systems is driving the increase; official data are due on 1 December.",
+      "th": "ผลสำรวจนักเศรษฐศาสตร์ 8 คนของ Reuters มีค่ากลางคาดว่าการส่งออกเกาหลีใต้เดือนพฤศจิกายนอาจเพิ่มขึ้น 96.8% จากปีก่อน ซึ่งจะเป็นอัตราสูงสุดนับตั้งแต่มกราคม 2517 โดยแรงหนุนมาจากความต้องการชิปหน่วยความจำสำหรับระบบ AI และตัวเลขทางการจะประกาศวันที่ 1 ธันวาคม",
       "sources": [
-        "https://www.reuters.com/world/china/five-takeaways-trumps-new-tariffs-2026-11-26/"
+        "https://www.reuters.com/world/asia-pacific/south-korea-november-exports-seen-posting-fastest-growth-over-50-years-ai-chip-2026-11-27/"
       ],
       "nonWar": true,
       "discussionEvidence": {
-        "observedAt": "2026-11-27T06:55:00+07:00",
-        "sourceUrl": "https://www.reuters.com/world/china/five-takeaways-trumps-new-tariffs-2026-11-26/",
-        "summary": "Reuters exposed no public view, share or comment totals, and the single review batch provided no directly comparable cross-outlet engagement metric. Selection reflects the policy’s direct effect on 14 trading partners, including Thailand, and does not claim a global popularity ranking."
-      }
-    },
-    {
-      "category": "thailand",
-      "when": "26.11 · Таиланд",
-      "href": "https://www.pattayamail.com/latestnews/news/thailand-cuts-petrol-and-gasohol-e10-prices-by-70-satang-e20-by-50-satang-from-thursday-573056",
-      "publishedAt": "2026-11-26",
-      "ru": "В Таиланде с 26 ноября снизили розничные цены на бензин и Gasohol E10 на 70 сатангов за литр, а E20 — на 50 сатангов. Цены на E85 и дизель не изменились; решение комитета топливного фонда связано со снижением мировых цен на нефть.",
-      "en": "Thailand cut retail petrol and Gasohol E10 prices by 70 satang per litre and E20 by 50 satang from 26 November. E85 and diesel prices were unchanged; the Fuel Fund committee linked the decision to lower global oil prices.",
-      "th": "ไทยปรับลดราคาขายปลีกน้ำมันเบนซินและแก๊สโซฮอล์ E10 ลงลิตรละ 70 สตางค์ และ E20 ลง 50 สตางค์ ตั้งแต่วันที่ 26 พฤศจิกายน ส่วน E85 และดีเซลคงราคาเดิม โดยคณะกรรมการกองทุนน้ำมันเชื้อเพลิงระบุว่าปัจจัยหลักคือราคาน้ำมันโลกที่ลดลง",
-      "sources": [
-        "https://www.pattayamail.com/latestnews/news/thailand-cuts-petrol-and-gasohol-e10-prices-by-70-satang-e20-by-50-satang-from-thursday-573056"
-      ],
-      "discussionEvidence": {
-        "observedAt": "2026-11-27T06:55:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/latestnews/news/thailand-cuts-petrol-and-gasohol-e10-prices-by-70-satang-e20-by-50-satang-from-thursday-573056",
-        "summary": "The publisher page displayed 1,081 views and 0 comments, compared with 55 views and 0 comments for the selected Bang Pakong bridge report. These same-site counters are locally comparable only and do not establish a nationwide popularity ranking."
+        "observedAt": "2026-11-28T06:30:00+07:00",
+        "sourceUrl": "https://www.reuters.com/world/asia-pacific/south-korea-november-exports-seen-posting-fastest-growth-over-50-years-ai-chip-2026-11-27/",
+        "summary": "Reuters exposed no public view, share or comment totals, and the single review batch provided no directly comparable cross-outlet engagement metric. Selection reflects the story’s relevance to global AI demand and trade, and does not claim a global popularity ranking."
       }
     },
     {
       "category": "thailand",
       "when": "27.11 · Таиланд",
-      "href": "https://www.pattayamail.com/news/cargo-barges-swept-into-historic-bang-pakong-bridge-causing-collapse-573202",
+      "href": "https://www.pattayamail.com/thailandnews/southern-thailand-faces-severe-rain-threat-with-flash-floods-forecast-through-november-30-573159",
       "publishedAt": "2026-11-27",
-      "ru": "Четыре гружёные рисом баржи сорвало с места сильным приливом на реке Банг Паконг в Чаченгсау. Они повредили сохранившуюся часть исторического моста 1949 года и оборудование мониторинга; действующий автомобильный мост после первичного осмотра оставили открытым.",
-      "en": "A strong incoming tide swept four rice-laden barges into the remaining section of a historic 1949 bridge over the Bang Pakong River in Chachoengsao. The collision damaged monitoring equipment, while the active road bridge remained open after an initial inspection.",
-      "th": "กระแสน้ำขึ้นแรงพัดเรือบรรทุกข้าว 4 ลำชนส่วนที่เหลือของสะพานประวัติศาสตร์ปี 2492 เหนือแม่น้ำบางปะกง จังหวัดฉะเชิงเทรา ทำให้อุปกรณ์ตรวจวัดเสียหาย ส่วนสะพานถนนที่ใช้งานอยู่ยังเปิดได้หลังการตรวจสอบเบื้องต้น",
+      "ru": "Правительство Таиланда предупредило о сильных и очень сильных дождях на юге страны до 30 ноября. В низинах, предгорьях и у водоёмов возможны внезапные паводки и быстрый сток, а волны у обоих побережий могут превышать три метра.",
+      "en": "Thailand’s government warned of heavy to very heavy rain across the south through 30 November. Flash floods and rapid runoff are possible in low-lying, foothill and waterside areas, while waves off both coasts may exceed three metres.",
+      "th": "รัฐบาลไทยเตือนภาคใต้อาจมีฝนตกหนักถึงหนักมากต่อเนื่องถึงวันที่ 30 พฤศจิกายน พื้นที่ลุ่ม เชิงเขา และใกล้ทางน้ำเสี่ยงน้ำท่วมฉับพลันและน้ำป่าไหลหลาก ส่วนคลื่นทั้งสองฝั่งอาจสูงเกิน 3 เมตร",
       "sources": [
-        "https://www.pattayamail.com/news/cargo-barges-swept-into-historic-bang-pakong-bridge-causing-collapse-573202"
+        "https://www.pattayamail.com/thailandnews/southern-thailand-faces-severe-rain-threat-with-flash-floods-forecast-through-november-30-573159"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-27T06:55:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/cargo-barges-swept-into-historic-bang-pakong-bridge-causing-collapse-573202",
-        "summary": "The publisher page displayed 55 views and 0 comments, compared with 1,081 views and 0 comments for the selected national fuel-price report. These same-site counters are locally comparable only and do not establish a nationwide popularity ranking."
+        "observedAt": "2026-11-28T06:30:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/thailandnews/southern-thailand-faces-severe-rain-threat-with-flash-floods-forecast-through-november-30-573159",
+        "summary": "The publisher page displayed 436 views and 0 comments, compared with 396 views and 0 comments for the selected northern river-contamination report. These same-site counters are locally comparable only and do not establish a nationwide popularity ranking."
+      }
+    },
+    {
+      "category": "thailand",
+      "when": "27.11 · Таиланд",
+      "href": "https://www.pattayamail.com/thailandnews/northern-villagers-serve-river-fish-outside-parliament-demand-action-on-toxic-contamination-573162",
+      "publishedAt": "2026-11-27",
+      "ru": "Жители бассейнов шести северных рек провели акцию у парламента и потребовали сделать трансграничное загрязнение воды национальной повесткой. Они просят обеспечить чистую воду, обозначить безопасные зоны и добиваться совместного контроля качества воды с соседними странами.",
+      "en": "Residents from six northern river basins rallied outside parliament, asking the government to make cross-border water contamination a national priority. They called for clean water, clearly marked safe zones and joint water-quality oversight with neighbouring countries.",
+      "th": "ชาวบ้านจากลุ่มน้ำ 6 สายในภาคเหนือจัดกิจกรรมนอกอาคารรัฐสภา เรียกร้องให้รัฐบาลยกระดับปัญหามลพิษทางน้ำข้ามพรมแดนเป็นวาระแห่งชาติ พร้อมขอน้ำสะอาด การระบุพื้นที่ปลอดภัยให้ชัดเจน และความร่วมมือกับประเทศเพื่อนบ้านในการตรวจคุณภาพน้ำ",
+      "sources": [
+        "https://www.pattayamail.com/thailandnews/northern-villagers-serve-river-fish-outside-parliament-demand-action-on-toxic-contamination-573162"
+      ],
+      "discussionEvidence": {
+        "observedAt": "2026-11-28T06:30:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/thailandnews/northern-villagers-serve-river-fish-outside-parliament-demand-action-on-toxic-contamination-573162",
+        "summary": "The publisher page displayed 396 views and 0 comments, compared with 436 views and 0 comments for the selected southern weather warning. These same-site counters are locally comparable only and do not establish a nationwide popularity ranking."
       }
     },
     {
       "category": "pattaya",
       "when": "27.11 · Паттайя",
-      "href": "https://www.pattayamail.com/news/pattaya-launches-1-84-billion-baht-flood-prevention-project-in-2027-573199",
+      "href": "https://www.pattayamail.com/latestnews/news/five-countries-confirm-readiness-for-pattaya-fireworks-festival-on-november-27-28-573237",
       "publishedAt": "2026-11-27",
-      "ru": "Паттайя готовит четырёхэтапное расширение ливневой системы. Первые два этапа стоимостью около 1,84 млрд бат должны начаться в начале 2027 года и отводить воду через канал Южной Паттайи; завершение этой части планируется к 2029 году.",
-      "en": "Pattaya is preparing a four-phase drainage expansion. The first two phases, budgeted at about 1.84 billion baht, are expected to start in early 2027 and direct stormwater through the South Pattaya Canal, with completion targeted for 2029.",
-      "th": "พัทยาเตรียมขยายระบบระบายน้ำ 4 ระยะ โดยสองระยะแรกใช้งบประมาณรวมราว 1.84 พันล้านบาท คาดว่าจะเริ่มต้นต้นปี 2570 และระบายน้ำผ่านคลองพัทยาใต้ ตั้งเป้าเสร็จในปี 2572",
+      "ru": "Команды из Японии, Финляндии, Малайзии, Италии и Филиппин подтвердили готовность к международному фестивалю фейерверков 27–28 ноября на Центральном пляже Паттайи. На оба вечера Beach Road закрывают для транспорта с 15:00 из-за ожидаемого наплыва зрителей.",
+      "en": "Teams from Japan, Finland, Malaysia, Italy and the Philippines confirmed their readiness for Pattaya’s international fireworks festival on 27–28 November at Central Pattaya Beach. Beach Road will close to traffic from 3 p.m. on both days because large crowds are expected.",
+      "th": "ทีมจากญี่ปุ่น ฟินแลนด์ มาเลเซีย อิตาลี และฟิลิปปินส์ยืนยันความพร้อมสำหรับเทศกาลพลุนานาชาติพัทยา วันที่ 27–28 พฤศจิกายน ที่ชายหาดพัทยากลาง โดยถนนเลียบชายหาดจะปิดการจราจรตั้งแต่ 15.00 น. ทั้งสองวันเพื่อรองรับผู้ชมจำนวนมาก",
       "sources": [
-        "https://www.pattayamail.com/news/pattaya-launches-1-84-billion-baht-flood-prevention-project-in-2027-573199"
+        "https://www.pattayamail.com/latestnews/news/five-countries-confirm-readiness-for-pattaya-fireworks-festival-on-november-27-28-573237"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-27T06:55:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/news/pattaya-launches-1-84-billion-baht-flood-prevention-project-in-2027-573199",
-        "summary": "The publisher page displayed 209 views and 0 comments, compared with 199 views and 0 comments for the selected South Pattaya Pier inspection. These same-site counters are locally comparable only and do not establish a citywide popularity ranking."
+        "observedAt": "2026-11-28T06:30:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/latestnews/news/five-countries-confirm-readiness-for-pattaya-fireworks-festival-on-november-27-28-573237",
+        "summary": "The publisher page displayed 1,587 views and 0 comments, compared with 561 views and 0 comments for the selected Nong Prue helmet handover. These same-site counters are locally comparable only and do not establish a citywide popularity ranking."
       }
     },
     {
       "category": "pattaya",
       "when": "27.11 · Паттайя",
-      "href": "https://www.pattayamail.com/latestnews/news/pattaya-checks-boat-safety-before-a-day-at-sea-turns-into-regret-573209",
+      "href": "https://www.pattayamail.com/news/rotary-global-pattaya-and-ladies-circle-give-100-helmets-to-nong-prue-pupils-573289",
       "publishedAt": "2026-11-27",
-      "ru": "В Южной Паттайе морские службы проверили пассажирские суда перед выходом в море. Инспекторы сверяли документы операторов и регистрацию, состояние судов, двигатели и спасательное оборудование; перевозчикам напомнили выдавать всем пассажирам спасательные жилеты.",
-      "en": "Marine authorities inspected passenger boats at South Pattaya Pier before departure. Officers checked operator documents, registration, vessel condition, engines and safety equipment, and reminded carriers that every passenger must wear a life jacket.",
-      "th": "หน่วยงานทางทะเลตรวจเรือโดยสารที่ท่าเรือพัทยาใต้ก่อนออกเดินทาง เจ้าหน้าที่ตรวจใบอนุญาตผู้ควบคุมเรือ ทะเบียน สภาพเรือ เครื่องยนต์ และอุปกรณ์ความปลอดภัย พร้อมย้ำให้ผู้โดยสารทุกคนสวมเสื้อชูชีพ",
+      "ru": "Rotary Club Global Pattaya и Rayong–Pattaya Ladies Circle передали 100 мотошлемов ученикам школы Chumchon Ban Nong Prue. Раздачу дополнили практическим уроком безопасности на дороге для детей и их семей.",
+      "en": "Rotary Club Global Pattaya and the Rayong–Pattaya Ladies Circle gave 100 motorcycle helmets to pupils at Chumchon Ban Nong Prue School. The handover included a practical road-safety lesson for children and their families.",
+      "th": "Rotary Club Global Pattaya และ Rayong–Pattaya Ladies Circle มอบหมวกกันน็อก 100 ใบให้แก่นักเรียนโรงเรียนชุมชนบ้านหนองปรือ พร้อมจัดกิจกรรมสาธิตความปลอดภัยทางถนนให้เด็กและครอบครัวนำไปใช้จริง",
       "sources": [
-        "https://www.pattayamail.com/latestnews/news/pattaya-checks-boat-safety-before-a-day-at-sea-turns-into-regret-573209"
+        "https://www.pattayamail.com/news/rotary-global-pattaya-and-ladies-circle-give-100-helmets-to-nong-prue-pupils-573289"
       ],
       "discussionEvidence": {
-        "observedAt": "2026-11-27T06:55:00+07:00",
-        "sourceUrl": "https://www.pattayamail.com/latestnews/news/pattaya-checks-boat-safety-before-a-day-at-sea-turns-into-regret-573209",
-        "summary": "The publisher page displayed 199 views and 0 comments, compared with 209 views and 0 comments for the selected flood-prevention project. These same-site counters are locally comparable only and do not establish a citywide popularity ranking."
+        "observedAt": "2026-11-28T06:30:00+07:00",
+        "sourceUrl": "https://www.pattayamail.com/news/rotary-global-pattaya-and-ladies-circle-give-100-helmets-to-nong-prue-pupils-573289",
+        "summary": "The publisher page displayed 561 views and 0 comments, compared with 1,587 views and 0 comments for the selected fireworks-festival report. These same-site counters are locally comparable only and do not establish a citywide popularity ranking."
       }
     }
   ],
