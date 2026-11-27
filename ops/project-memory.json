@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "project": "OK-OK.click",
-  "updatedAt": "2026-11-24",
+  "updatedAt": "2026-11-27",
   "decisions": [
     {
       "id": "hosting",
@@ -268,7 +268,7 @@
         "content",
         "threads"
       ],
-      "next": "13 Nov: first lightweight check found14 missing slots. Added only20–26 Nov12:30/19:00 Bangkok; all30 existing objects/media preserved. Confirm exact PR deploy and token health. IMAGE support exists; book public URL validation and delivery-status GET blocked by environment403. No named campaign ads/direct publishing. Fortnight metrics review due20 Nov.",
+      "next": "Use actual live feature/threads-auto-replies source, not older main. Daily lightweight media-status:stop at>=7 full future days;below7 append missing slots to14 full future days with unique reviewed IMAGE/GIPHY.27Nov refill in progress; original author campaign texts unrecovered, separate verified-text book discussions queued. No site/runtime/schedule changes.",
       "sources": [
         "docs/THREADS_BUFFER_20261106.md",
         "workers/threads-auth/queue.json",
@@ -327,7 +327,7 @@
       "tags": [
         "threads"
       ],
-      "next": "Owner26Nov: two unsent posts now reviewed IMAGE/GIF; native GIPHY publishing, future visual guard and23 tests implemented. Isolated deployment pending. Main and website unchanged.",
+      "next": "27Nov: first live check found six full future days.16 reviewed IMAGE posts extend4–11Dec;58 existing objects unchanged.23 worker tests pass. Confirm isolated feature-branch deployment and live28Nov–11Dec14-full-day stock.26Nov IMAGE and GIF actual mediaVerified receipts confirmed. See dated checkpoint in media task.",
       "sources": [
         "docs/THREADS_MEDIA_TASK.md"
       ]
