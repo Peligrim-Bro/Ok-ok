@@ -1,4 +1,6 @@
 import queue from "./queue.json";
+import { ThreadsReplies } from "./replies.mjs";
+export { ThreadsReplies };
 
 const API = "https://graph.threads.net/v1.0";
 
@@ -29,9 +31,18 @@ export class ThreadsQueue {
       return Response.json(Array.from(receipts, ([key, value]) => ({
         slot: key.slice(5), id: value.id ?? null, permalink: value.permalink ?? null,
         pending: !value.id,
+        attachment: value.attachment ?? null, mediaVerified: value.mediaVerified ?? null,
       })));
     }
     const { post } = await request.json();
+    const gif = post.gifAttachment;
+    if (gif && (post.imageUrl || !post.gifReviewed || !post.altText ||
+        gif.provider !== "GIPHY" || !/^[A-Za-z0-9]+$/.test(gif.gif_id || ""))) {
+      return Response.json({ error: "Unreviewed or invalid GIF" }, { status: 400 });
+    }
+    if (Date.parse(post.publishAt) >= Date.parse("2026-11-26T00:00:00+07:00") && !post.imageUrl && !gif) {
+      return Response.json({ error: "Visual required for new Threads posts" }, { status: 400 });
+    }
     if (post.imageUrl && (!post.imageReviewed || !post.altText ||
         !post.imageUrl.startsWith("https://raw.githubusercontent.com/Peligrim-Bro/Ok-ok/"))) {
       return Response.json({ error: "Unreviewed or invalid image" }, { status: 400 });
@@ -57,13 +68,15 @@ export class ThreadsQueue {
       return Response.json({ error: "Previous attempt awaits reconciliation" }, { status: 409 });
     }
 
+    const containerMedia = Boolean(post.imageUrl || gif);
     const query = new URLSearchParams(post.imageUrl
       ? { media_type: "IMAGE", text: post.text, image_url: post.imageUrl, alt_text: post.altText }
+      : gif ? { media_type: "TEXT", text: post.text, gif_attachment: JSON.stringify(gif) }
       : { media_type: "TEXT", text: post.text, auto_publish_text: "true" });
     let published;
     try {
       published = await threads(this.env, `/me/threads?${query}`, "POST");
-      if (post.imageUrl) {
+      if (containerMedia) {
         if (!published.id) throw new Error("Threads returned no image container ID");
         await this.storage.put(key, { attemptedAt: new Date().toISOString(), containerId: published.id });
         // Poll readiness without creating a second container or falling back to text.
@@ -79,15 +92,16 @@ export class ThreadsQueue {
         published = await threads(this.env, `/me/threads_publish?${publish}`, "POST");
       }
     } catch (error) {
-      if (!post.imageUrl && error.status >= 400 && error.status < 500) await this.storage.delete(key);
+      if (!containerMedia && error.status >= 400 && error.status < 500) await this.storage.delete(key);
       throw error;
     }
     if (!published.id) throw new Error("Threads returned no post ID");
 
-    const receipt = { id: published.id };
+    const receipt = { id: published.id, attachment: post.imageUrl ? "IMAGE" : gif ? "GIF" : "TEXT" };
     await this.storage.put(key, receipt);
     try {
-      const details = await threads(this.env, `/${encodeURIComponent(published.id)}?fields=permalink`);
+      const details = await threads(this.env, `/${encodeURIComponent(published.id)}?fields=permalink,media_type,media_url,gif_url`);
+      receipt.mediaVerified = Boolean(post.imageUrl ? details.media_type === "IMAGE" && details.media_url : gif ? details.gif_url : true);
       if (details.permalink) {
         receipt.permalink = details.permalink;
         await this.storage.put(key, receipt);
@@ -100,7 +114,17 @@ export class ThreadsQueue {
 }
 
 export default {
-  async scheduled(controller, env) {
+  async scheduled(controller, env, ctx) {
+    // Independent failure domain: reply processing cannot stop the post queue.
+    // Owner21Nov: comments only at09:00,15:00,21:00 Asia/Bangkok.
+    // Retain the quarter-hour cron for the independent publication queue.
+    const time = new Date(controller.scheduledTime);
+    if ([2, 8, 14].includes(time.getUTCHours()) && time.getUTCMinutes() === 0) {
+      ctx.waitUntil((async () => {
+        const result = await env.THREADS_REPLIES.getByName("production").fetch("https://replies.internal/tick", { method: "POST" });
+        if (!result.ok) console.warn("Threads reply tick failed", result.status);
+      })());
+    }
     const due = queue.filter((post) => {
       const age = controller.scheduledTime - Date.parse(post.publishAt);
       return age >= 0 && age < 8 * 60 * 60 * 1000;
@@ -120,6 +144,32 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     const headers = { "Cache-Control": "no-store", "Referrer-Policy": "no-referrer" };
+
+    if (request.method === "GET" && url.pathname === "/media-status") {
+      return Response.json({ visualRequired: true, upcoming: queue.filter(p => Date.parse(p.publishAt) > Date.now()).map(p => ({
+        id: p.id, publishAt: p.publishAt, attachment: p.imageUrl ? "IMAGE" : p.gifAttachment ? "GIF" : "TEXT",
+      })) }, { headers });
+    }
+
+    if (["/telegram-review", "/reply-setup"].includes(url.pathname) && request.method === "POST") {
+      const expected = env.THREADS_REVIEW_WEBHOOK_SECRET;
+      const supplied = request.headers.get("X-Telegram-Bot-Api-Secret-Token") || "";
+      if (!expected || supplied.length !== expected.length) return new Response("Forbidden", { status: 403, headers });
+      let difference = 0;
+      for (let i = 0; i < expected.length; i++) difference |= expected.charCodeAt(i) ^ supplied.charCodeAt(i);
+      if (difference) return new Response("Forbidden", { status: 403, headers });
+      if (url.pathname === "/reply-setup") {
+        return env.THREADS_REPLIES.getByName("production").fetch("https://replies.internal/activate", { method: "POST" });
+      }
+      const body = await request.text();
+      if (body.length > 65536) return new Response("Too large", { status: 413, headers });
+      return env.THREADS_REPLIES.getByName("production").fetch("https://replies.internal/update", { method: "POST", body });
+    }
+
+    if (request.method === "GET" && url.pathname === "/reply-status") {
+      const result = await env.THREADS_REPLIES.getByName("production").fetch("https://replies.internal/status");
+      return new Response(result.body, { status: result.status, headers: { ...headers, "Content-Type": "application/json" } });
+    }
 
     if (url.pathname === "/callback") {
       if (url.searchParams.has("error")) {
