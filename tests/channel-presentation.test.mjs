@@ -34,14 +34,14 @@ test('malformed or conflicting copy actions are rejected before sending',()=>{
 });
 test('reviewed queue has thirty-nine purpose buttons in thirty-seven entries and preserves topic footers',()=>{
  const entries=POSTS.filter(p=>p.copyButtons);
- assert.equal(entries.length,37);assert.equal(entries.flatMap(p=>p.copyButtons).length,39);
+ assert.equal(entries.length,40);assert.equal(entries.flatMap(p=>p.copyButtons).length,42);
  for(const p of entries){const r=channelPresentation(p);assert.equal(r.reply_markup.inline_keyboard.filter(row=>row[0].copy_text).length,p.copyButtons.length);assert(r.entities.some(e=>e.type==='hashtag'));}
  const spice=entries.find(p=>p.id==='okok-english-spice-20261023');
  assert.deepEqual(spice.copyButtons.map(b=>b.text),['No chilli, please.','Not too spicy, please.']);
 });
 
 test('all reviewed entries have short, explicit topics; universal restaurant phrases are not meal-specific',()=>{
- assert.equal(POSTS.length,179);
+ assert.equal(POSTS.length,191);
  for(const post of POSTS)assert(post.topics.length>=2&&post.topics.length<=3);
  const spice=POSTS.find(p=>p.id==='okok-english-spice-20261023');
  assert.deepEqual(spice.topics,['Фразы','Английский','Ресторан']);
