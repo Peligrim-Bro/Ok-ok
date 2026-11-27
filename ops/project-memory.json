@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "project": "OK-OK.click",
-  "updatedAt": "2026-11-24",
+  "updatedAt": "2026-11-27",
   "decisions": [
     {
       "id": "hosting",
@@ -128,7 +128,7 @@
       "tags": [
         "channel"
       ],
-      "next": "24 Nov: existing PR preserves reviewed 26–28 Nov entries; eight new reviewed entries and distinct images add 29–30 Nov, targeting seven complete days through 30 Nov. Run offline audit, mandatory project checks, PR CI and exact production deployment verification. Runtime delivery remains unknown.",
+      "next": "27 Nov: twelve reviewed entries and distinct images add only missing 1–3 Dec slots, targeting seven complete days through 3 Dec. Run offline audit, mandatory project checks, PR CI and exact production deployment verification. Runtime delivery remains unknown.",
       "sources": [
         "CHANNEL_PUBLISHING.md",
         "scripts/audit-channel-queue.mjs",
@@ -141,7 +141,8 @@
         "docs/CHANNEL_BUFFER_20261116.md",
         "docs/CHANNEL_BUFFER_20261119.md",
         "docs/CHANNEL_BUFFER_20261121.md",
-        "docs/CHANNEL_BUFFER_20261124.md"
+        "docs/CHANNEL_BUFFER_20261124.md",
+        "docs/CHANNEL_BUFFER_20261127.md"
       ]
     },
     {

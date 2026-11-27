@@ -1730,6 +1730,129 @@ export const POSTS = [{
   "topics": ["Оки", "Комиксы"],
   "brandCTA": "share",
   "text": "Приключения Оки #42 · Кокосовый лифт\n\nКраб подал Оки самый маленький лифт — и пикник наконец спустился на первый этаж.\n\nВымышленная история с маскотом Оки; изображение создано с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_coconut_lift_042"
+},
+{
+  "id": "okok-identify-luggage-20261201",
+  "approved": true,
+  "publishAt": "2026-12-01T09:00:00+07:00",
+  "expiresAt": "2026-12-01T12:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-private-luggage-tag-20261201.jpg",
+  "topics": ["Безопасность", "Советы", "Маршруты"],
+  "brandCTA": "share",
+  "text": "Похожий чемодан — ещё не твой\n\nПеред тем как забрать багаж, сверь цвет, заметные детали и собственную метку. Не полагайся только на похожую ручку. Снимок вещи до поездки и сохранённая квитанция помогут проверить, что ты забираешь именно свой чемодан.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=identify_luggage_20261201"
+},
+{
+  "id": "okok-write-place-name-20261201",
+  "approved": true,
+  "publishAt": "2026-12-01T14:00:00+07:00",
+  "expiresAt": "2026-12-01T17:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-write-address-card-20261201.jpg",
+  "topics": ["Фразы", "Английский", "Карты"],
+  "brandCTA": "share",
+  "text": "Когда название проще записать\n\nCould you write the place name here, please?\nНапишите, пожалуйста, название места здесь.\n\nПокажи экран или карточку, куда нужно записать название, затем сверь его до поиска маршрута или бронирования.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=write_place_name_20261201",
+  "copyButtons": [{"label": "Попросить записать название", "text": "Could you write the place name here, please?"}]
+},
+{
+  "id": "okok-parking-landmark-20261201",
+  "approved": true,
+  "publishAt": "2026-12-01T19:30:00+07:00",
+  "expiresAt": "2026-12-01T22:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-parking-landmark-20261201.jpg",
+  "topics": ["Байки", "Карты", "Советы"],
+  "brandCTA": "share",
+  "text": "Парковку лучше отметить до прогулки\n\nСфотографируй ряд, уровень и заметный ориентир у входа, не снимая чужие номера крупным планом. Если площадка большая, сохрани точку на карте — один кадр с байком без окружения может не помочь найти нужное место.\n\nСюжетная иллюстрация создана с помощью ИИ; парковка вымышленная.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=parking_landmark_20261201"
+},
+{
+  "id": "okok-oki-comic-043-banana-phone-20261201",
+  "approved": true,
+  "publishAt": "2026-12-01T20:30:00+07:00",
+  "expiresAt": "2026-12-01T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-043-banana-phone-20261201.jpg",
+  "topics": ["Оки", "Комиксы"],
+  "brandCTA": "share",
+  "text": "Приключения Оки #43 · Банановый телефон\n\nБанан зазвонил, Оки ответил, а попугай быстро объяснил: линия была тропическая, но номер — не тот.\n\nВымышленная история с маскотом Оки; изображение создано с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_banana_phone_043"
+},
+{
+  "id": "okok-laundry-item-count-20261202",
+  "approved": true,
+  "publishAt": "2026-12-02T09:00:00+07:00",
+  "expiresAt": "2026-12-02T12:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-laundry-item-count-20261202.jpg",
+  "topics": ["Бюджет", "Безопасность", "Советы"],
+  "brandCTA": "share",
+  "text": "Прачечная начинается с подсчёта\n\nПеред передачей вещей пересчитай их вместе с сотрудником и сохрани квитанцию. Отдельно покажи пятна или деликатные вещи, если они есть. При получении сначала сверь количество, а уже потом убирай всё в сумку.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=laundry_item_count_20261202"
+},
+{
+  "id": "okok-less-sweet-20261202",
+  "approved": true,
+  "publishAt": "2026-12-02T14:00:00+07:00",
+  "expiresAt": "2026-12-02T17:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-less-sweet-20261202.jpg",
+  "topics": ["Фразы", "Английский", "Еда"],
+  "brandCTA": "share",
+  "text": "Если напиток хочется менее сладким\n\nCould you make it less sweet, please?\nСделайте, пожалуйста, менее сладко.\n\nПокажи конкретный напиток и произнеси фразу до приготовления. Это просьба, а не гарантия точного количества сахара — результат лучше уточнить у продавца.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=less_sweet_20261202",
+  "copyButtons": [{"label": "Попросить менее сладко", "text": "Could you make it less sweet, please?"}]
+},
+{
+  "id": "okok-fallback-meeting-point-20261202",
+  "approved": true,
+  "publishAt": "2026-12-02T19:30:00+07:00",
+  "expiresAt": "2026-12-02T22:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-fallback-meeting-point-20261202.jpg",
+  "topics": ["Маршруты", "Безопасность", "Советы"],
+  "brandCTA": "share",
+  "text": "Точка встречи нужна до того, как вы потерялись\n\nПеред большой прогулкой выберите один заметный ориентир и точное время возврата к нему. Отправьте друг другу точку на карте. Если связь пропадёт, у каждого останется понятный запасной план без бесконечных поисков по району.\n\nСюжетная иллюстрация создана с помощью ИИ; место вымышленное.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=fallback_meeting_point_20261202"
+},
+{
+  "id": "okok-oki-comic-044-shell-alarm-20261202",
+  "approved": true,
+  "publishAt": "2026-12-02T20:30:00+07:00",
+  "expiresAt": "2026-12-02T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-044-shell-alarm-20261202.jpg",
+  "topics": ["Оки", "Комиксы"],
+  "brandCTA": "share",
+  "text": "Приключения Оки #44 · Ракушка-будильник\n\nРакушка разбудила Оки шумом моря — и утро неожиданно началось с пляжного концерта.\n\nВымышленная история с маскотом Оки; изображение создано с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_shell_alarm_044"
+},
+{
+  "id": "okok-pickup-side-20261203",
+  "approved": true,
+  "publishAt": "2026-12-03T09:00:00+07:00",
+  "expiresAt": "2026-12-03T12:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-pickup-side-20261203.jpg",
+  "topics": ["Такси", "Карты", "Безопасность"],
+  "brandCTA": "share",
+  "text": "Точка подачи должна быть на твоей стороне дороги\n\nПеред заказом увеличь карту и выбери безопасное место у заметного входа. Сверь сторону улицы и направление машины до посадки. Если точка оказалась неудобной, измени её в приложении, а не переходи дорогу в спешке.\n\nСюжетная иллюстрация создана с помощью ИИ; место вымышленное.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=pickup_side_20261203"
+},
+{
+  "id": "okok-speak-slowly-20261203",
+  "approved": true,
+  "publishAt": "2026-12-03T14:00:00+07:00",
+  "expiresAt": "2026-12-03T17:00:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-speak-slowly-20261203.jpg",
+  "topics": ["Фразы", "Английский", "Советы"],
+  "brandCTA": "share",
+  "text": "Если собеседник говорит слишком быстро\n\nCould you speak more slowly, please?\nГоворите, пожалуйста, медленнее.\n\nПосле просьбы повтори главное своими словами или покажи записанное число, имя либо адрес. Так проще заметить недопонимание до оплаты или поездки.\n\nСюжетная иллюстрация создана с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=speak_slowly_20261203",
+  "copyButtons": [{"label": "Попросить говорить медленнее", "text": "Could you speak more slowly, please?"}]
+},
+{
+  "id": "okok-choice-wheel-start-20261203",
+  "approved": true,
+  "publishAt": "2026-12-03T19:30:00+07:00",
+  "expiresAt": "2026-12-03T22:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/okok-choice-wheel-start-20261203.jpg",
+  "topics": ["Места", "Прогулки", "Советы"],
+  "brandCTA": "share",
+  "text": "Рулетка выбирает старт, а не весь маршрут\n\nЕсли не хочется долго решать, запусти «Выбор дня» на OK-OK и возьми результат как первую идею. Затем проверь карточку места, дорогу и актуальные условия — случайный выбор добавляет настроение, но не отменяет обычную подготовку.\n\nСюжетная иллюстрация создана с помощью ИИ; экран не является снимком интерфейса.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=channel&utm_campaign=choice_wheel_start_20261203"
+},
+{
+  "id": "okok-oki-comic-045-leaf-map-20261203",
+  "approved": true,
+  "publishAt": "2026-12-03T20:30:00+07:00",
+  "expiresAt": "2026-12-03T23:30:00+07:00",
+  "photo": "https://www.ok-ok.click/assets/channel/oki-comic-045-leaf-map-20261203.jpg",
+  "topics": ["Оки", "Комиксы"],
+  "brandCTA": "share",
+  "text": "Приключения Оки #45 · Карта из листа\n\nВетер принёс Оки зелёную карту, а маршрут оказался коротким и очень кокосовым.\n\nВымышленная история с маскотом Оки; изображение создано с помощью ИИ.\n\nhttps://ok-ok.click/?utm_source=telegram&utm_medium=comic&utm_campaign=oki_leaf_map_045"
 }
 ];
 
